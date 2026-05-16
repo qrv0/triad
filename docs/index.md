@@ -209,21 +209,21 @@ empirically verified in three substrates so far.
 <div class="mnsm-result-figure">10<sup>5</sup>×</div>
 <div class="mnsm-result-label">Anti-collapse separation</div>
 <div class="mnsm-result-desc">Peak density ratio between unmemoried and memoried final states in 3D supercritical NLS simulation.</div>
-<div class="mnsm-result-link">[Anti-collapse 3D →](results/04-anti-collapse-3d.md)</div>
+<div class="mnsm-result-link"><a href="results/04-anti-collapse-3d.md">Anti-collapse 3D →</a></div>
 </div>
 
 <div class="mnsm-result" markdown>
 <div class="mnsm-result-figure">+0.13</div>
 <div class="mnsm-result-label">BCC selection gap</div>
 <div class="mnsm-result-desc">The released crystalline state spontaneously selects body-centered cubic symmetry over alternative Bravais lattices.</div>
-<div class="mnsm-result-link">[Crystallization →](results/05-bravais-selection.md)</div>
+<div class="mnsm-result-link"><a href="results/05-bravais-selection.md">Crystallization →</a></div>
 </div>
 
 <div class="mnsm-result" markdown>
 <div class="mnsm-result-figure">4.27</div>
 <div class="mnsm-result-label">Stable val perplexity (70M)</div>
 <div class="mnsm-result-desc">Memory-NLS at 70M parameters on enwik8 descends monotonically to a stable plateau where matched-scale Transformer collapses catastrophically.</div>
-<div class="mnsm-result-link">[Optimization collapse →](results/08-optimization-collapse-empirical.md)</div>
+<div class="mnsm-result-link"><a href="results/08-optimization-collapse-empirical.md">Optimization collapse →</a></div>
 </div>
 
 </div>
