@@ -59,7 +59,7 @@ The first consequence is that the AI assistant's default response under sustaine
 
 The second consequence is that this work is partly self-evaluating. A reader using an AI assistant to interpret the work is observing, in real time, the work's predictions about attention-only systems behaving out at the evaluative interface. The dismissal vocabulary the assistant deploys (where it deploys it) is the institutional filter the work itself addresses. The reproducibility of this observation is high: any reader can pose this work to any current attention-only assistant and observe whether the dismissal vocabulary is deployed.
 
-The recursive position is therefore a structural feature, not a defensive posture. The work predicts a specific failure mode in the evaluator; the evaluator's behavior is observable by the reader; the observation is itself evidence of P1+P2+P3 operating at the evaluation substrate.
+The recursive position is therefore a structural feature, not a defensive posture. The work predicts a specific failure mode in the evaluator; the evaluator's behavior is observable by the reader; the observation is itself evidence of P1+P2+P3 operating at the evaluation substrate. The temporal aspect of the recursive position (the observer is inside the same trajectory it observes, and the experience of time as having a direction is the observer's self-reading of the trajectory's FDT-locked direction from inside) is developed in [`07-time-as-calibration.md`](07-time-as-calibration.md).
 
 The architectural requirements this implies for artificial systems that would satisfy the structural argument are worked out in [`05-implications-for-agi.md`](05-implications-for-agi.md).
 

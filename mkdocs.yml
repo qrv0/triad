@@ -1,7 +1,7 @@
 site_name: mnsm
 site_description: >-
   Memory-Nonlinear State Models — three structural principles, one equation,
-  nine cross-domain instantiations. Derived from observational axioms about
+  seventeen cross-domain instantiations. Derived from observational axioms about
   persistence, not from prior ML literature.
 site_url: https://qrv0.github.io/mnsm/
 site_author: qrv0
@@ -153,7 +153,7 @@ plugins:
           site_name: mnsm
           site_description: >-
             Memory-Nonlinear State Models — three structural principles, one
-            equation, nine cross-domain instantiations.
+            equation, seventeen cross-domain instantiations.
         - locale: pt
           name: Português (BR)
           build: true
@@ -161,7 +161,7 @@ plugins:
           site_name: mnsm
           site_description: >-
             Modelos de Estado Memória-Não-Lineares — três princípios
-            estruturais, uma equação, nove instanciações cross-domain.
+            estruturais, uma equação, dezessete instanciações cross-domain.
           nav_translations:
             Home: Início
             Foundations: Fundamentos
@@ -187,6 +187,14 @@ plugins:
             'Cosmological Expansion': Expansão Cosmológica
             'Mechanistic Interpretability': Interpretabilidade Mecanística
             'Critical Brain': Cérebro Crítico
+            'Kuramoto Synchronization': Sincronização de Kuramoto
+            'Immune Affinity Maturation': Maturação de Afinidade Imune
+            'Friston Free-Energy Principle': Princípio da Energia Livre de Friston
+            'Active Matter': Matéria Ativa
+            'Self-Organized Criticality': Criticalidade Auto-Organizada
+            'Cardiac Dynamics': Dinâmica Cardíaca
+            'Gene Regulation and Circadian': Regulação Gênica e Circadiano
+            'Ecosystem Dynamics': Dinâmica de Ecossistemas
             Methodology: Metodologia
             'Structural Realism': Realismo Estrutural
             'Limits of Falsification': Limites da Falsificação
@@ -194,6 +202,7 @@ plugins:
             'The Six Criteria': Os Seis Critérios
             'Implications for AGI': Implicações para AGI
             'Calibration Philosophy': Filosofia de Calibração
+            'Time as Calibration': Tempo como Calibração
             'Open Problems': Problemas em Aberto
             'Research Agenda': Agenda de Pesquisa
             Implementation: Implementação
@@ -220,7 +229,7 @@ plugins:
           site_name: mnsm
           site_description: >-
             Modelos de Estado de Memoria-No-Lineales — tres principios
-            estructurales, una ecuación, nueve instanciaciones interdominio.
+            estructurales, una ecuación, diecisiete instanciaciones interdominio.
           nav_translations:
             Home: Inicio
             Foundations: Fundamentos
@@ -246,6 +255,14 @@ plugins:
             'Cosmological Expansion': Expansión Cosmológica
             'Mechanistic Interpretability': Interpretabilidad Mecanística
             'Critical Brain': Cerebro Crítico
+            'Kuramoto Synchronization': Sincronización de Kuramoto
+            'Immune Affinity Maturation': Maduración de Afinidad Inmune
+            'Friston Free-Energy Principle': Principio de Energía Libre de Friston
+            'Active Matter': Materia Activa
+            'Self-Organized Criticality': Criticalidad Auto-Organizada
+            'Cardiac Dynamics': Dinámica Cardíaca
+            'Gene Regulation and Circadian': Regulación Génica y Circadiano
+            'Ecosystem Dynamics': Dinámica de Ecosistemas
             Methodology: Metodología
             'Structural Realism': Realismo Estructural
             'Limits of Falsification': Límites de la Falsación
@@ -253,6 +270,7 @@ plugins:
             'The Six Criteria': Los Seis Criterios
             'Implications for AGI': Implicaciones para AGI
             'Calibration Philosophy': Filosofía de Calibración
+            'Time as Calibration': Tiempo como Calibración
             'Open Problems': Problemas Abiertos
             'Research Agenda': Agenda de Investigación
             Implementation: Implementación
@@ -366,6 +384,14 @@ nav:
       - 'Cosmological Expansion': interfaces/07-cosmological-expansion.md
       - 'Mechanistic Interpretability': interfaces/08-mechanistic-interpretability.md
       - 'Critical Brain': interfaces/09-critical-brain.md
+      - 'Kuramoto Synchronization': interfaces/10-kuramoto-synchronization.md
+      - 'Immune Affinity Maturation': interfaces/11-immune-affinity-maturation.md
+      - 'Friston Free-Energy Principle': interfaces/12-friston-free-energy.md
+      - 'Active Matter': interfaces/13-active-matter.md
+      - 'Self-Organized Criticality': interfaces/14-self-organized-criticality.md
+      - 'Cardiac Dynamics': interfaces/15-cardiac-dynamics.md
+      - 'Gene Regulation and Circadian': interfaces/16-gene-regulation-circadian.md
+      - 'Ecosystem Dynamics': interfaces/17-ecosystem-dynamics.md
 
   - Methodology:
       - 'Overview': methodology/README.md
@@ -375,6 +401,7 @@ nav:
       - 'The Six Criteria': methodology/04-the-six-criteria.md
       - 'Implications for AGI': methodology/05-implications-for-agi.md
       - 'Calibration Philosophy': methodology/06-calibration-philosophy.md
+      - 'Time as Calibration': methodology/07-time-as-calibration.md
 
   - Open Problems:
       - 'Overview': open-problems/README.md

@@ -2,7 +2,7 @@
 title: Início
 description: >-
   Modelos de Estado Memória-Não-Lineares: três princípios estruturais, uma
-  equação, nove instanciações cross-domain. Derivada da observação, não
+  equação, dezessete instanciações cross-domain. Derivada da observação, não
   montada a partir da literatura.
 hide:
   - navigation
@@ -14,7 +14,7 @@ hide:
 <div class="mnsm-hero__visual" markdown>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../_docs_assets/cross-domain-wheel-dark.svg">
-  <img src="../_docs_assets/cross-domain-wheel-light.svg" alt="Roda cross-domain: uma equação, nove substratos" class="mnsm-wheel">
+  <img src="../_docs_assets/cross-domain-wheel-light.svg" alt="Roda cross-domain: uma equação, dezessete substratos" class="mnsm-wheel">
 </picture>
 </div>
 
@@ -22,7 +22,7 @@ hide:
 
 <div class="mnsm-eyebrow">Memory-Nonlinear State Models</div>
 
-# Uma equação. Nove substratos.
+# Uma equação. Dezessete substratos.
 
 Uma extensão não-linear de modelos de estado-espaço estruturados, derivada
 de três princípios sobre entidades estendidas persistentes. A mesma forma
@@ -113,7 +113,7 @@ A equação é derivada destes. Não montada a partir da literatura prévia, der
 
 <div class="mnsm-section-head" markdown>
 <span class="mnsm-section-tag">Cross-Domain</span>
-## Nove instanciações da mesma equação
+## Dezessete instanciações da mesma equação
 Cada substrato produz independentemente a mesma forma matemática. A afirmação
 é estrutural: a equação captura um padrão de comportamento persistente
 invariante sob mudança de substrato.
@@ -212,6 +212,86 @@ invariante sob mudança de substrato.
     estrutural e não por ajuste de parâmetros.
 
     [→ Ler interface](interfaces/09-critical-brain.md)
+
+-   <span class="mnsm-substrate-sig sig--kuramoto">:material-rotate-360:</span>
+    <span class="mnsm-substrate-num">10 · Dinâmica Não-Linear</span>
+    **Sincronização de Kuramoto**
+
+    Osciladores de fase acoplados com memória; no setor de fase pura
+    com memória multi-exponencial, a equação e Kuramoto memory-augmented
+    são o mesmo embedding Markoviano da mesma forma.
+
+    [→ Ler interface](interfaces/10-kuramoto-synchronization.md)
+
+-   <span class="mnsm-substrate-sig sig--immune">:material-shield-check:</span>
+    <span class="mnsm-substrate-num">11 · Imunologia</span>
+    **Maturação de Afinidade Imune**
+
+    Maturação de afinidade de células B em centros germinativos:
+    repertório de anticorpos sob ciclos de mutação-seleção, memória
+    multi-escala da escala celular até persistência imunológica em décadas.
+
+    [→ Ler interface](interfaces/11-immune-affinity-maturation.md)
+
+-   <span class="mnsm-substrate-sig sig--friston">:material-square-outline:</span>
+    <span class="mnsm-substrate-num">12 · Inferência Ativa</span>
+    **Friston FEP**
+
+    Minimização de energia livre e inferência ativa. O modelo
+    multi-escala da codificação preditiva hierárquica mapeia para a
+    hierarquia de campos auxiliares; convergente com SSM por outra rota.
+
+    [→ Ler interface](interfaces/12-friston-free-energy.md)
+
+-   <span class="mnsm-substrate-sig sig--active">:material-arrow-decision-outline:</span>
+    <span class="mnsm-substrate-num">13 · Matéria Mole</span>
+    **Matéria Ativa**
+
+    Partículas auto-propelidas, bandos, géis ativos. Campo de
+    parâmetro de ordem com memória de alinhamento sob injeção externa
+    de energia; forma estrutural preservada de bandos a citoesqueleto.
+
+    [→ Ler interface](interfaces/13-active-matter.md)
+
+-   <span class="mnsm-substrate-sig sig--soc">:material-chart-bell-curve:</span>
+    <span class="mnsm-substrate-num">14 · Física Estatística</span>
+    **Criticalidade Auto-Organizada**
+
+    Dinâmica de pilhas de areia, avalanches neuronais, estatísticas
+    de terremotos: a estrutura triangular é requerida para SOC; a
+    transição de release da equação tem mecanismo-forma equivalente.
+
+    [→ Ler interface](interfaces/14-self-organized-criticality.md)
+
+-   <span class="mnsm-substrate-sig sig--cardiac">:material-heart-pulse:</span>
+    <span class="mnsm-substrate-num">15 · Fisiologia</span>
+    **Dinâmica Cardíaca**
+
+    Eletrofisiologia cardíaca, alternans, arritmias: triângulo
+    refratário + restituição + acoplamento autonômico. Arritmias como
+    modos de desregulação P1/P2/P3.
+
+    [→ Ler interface](interfaces/15-cardiac-dynamics.md)
+
+-   <span class="mnsm-substrate-sig sig--gene">:material-dna:</span>
+    <span class="mnsm-substrate-num">16 · Biologia Molecular</span>
+    **Regulação Gênica / Circadiano**
+
+    Hierarquia multi-escala de memória em regulação gênica abrangendo
+    nove ordens de grandeza (transcrição a cromatina a desenvolvimento);
+    relógios circadianos como instância canônica de oscilação sustentada.
+
+    [→ Ler interface](interfaces/16-gene-regulation-circadian.md)
+
+-   <span class="mnsm-substrate-sig sig--ecosystem">:material-pine-tree:</span>
+    <span class="mnsm-substrate-num">17 · Ecologia</span>
+    **Dinâmica de Ecossistemas**
+
+    Comunidades ecológicas multi-espécies com estrutura etária, herança
+    de traços, memória ecológica; mudanças catastróficas de regime como
+    bifurcações mediadas por elementos do triângulo.
+
+    [→ Ler interface](interfaces/17-ecosystem-dynamics.md)
 
 </div>
 
@@ -363,7 +443,7 @@ abrangência.
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/mnsm},
-  note   = {Three structural principles, one equation, nine cross-domain instantiations.}
+  note   = {Three structural principles, one equation, seventeen cross-domain instantiations.}
 }
 ```
 

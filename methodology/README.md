@@ -10,6 +10,7 @@ This folder articulates the methodological frame under which this work is to be 
 | [`04-the-six-criteria.md`](04-the-six-criteria.md) | The six criteria, internal consistency, reproducibility, generative scope, cross-domain coherence, parsimony, comprehensiveness, and how the work performs on each. |
 | [`05-implications-for-agi.md`](05-implications-for-agi.md) | Applies the structural argument to derive architectural requirements that any artificial system would need to satisfy for sustained intelligent operation; identifies which MNSM mechanism supplies each; grades the rigour of each mapping. |
 | [`06-calibration-philosophy.md`](06-calibration-philosophy.md) | Decision procedure for when dimensional calibration choices matter in cross-domain interfaces, what makes a calibration defensible vs post-hoc, and how calibrations across interfaces must be consistent with each other. |
+| [`07-time-as-calibration.md`](07-time-as-calibration.md) | Time as substrate-specific calibration of structural unfolding rather than fundamental coordinate; P2's past-as-state formulation; FDT-locked direction; implications for observing distant astronomy and the cosmological trajectory. |
 
 ## Why a methodology folder
 

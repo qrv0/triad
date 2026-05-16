@@ -16,7 +16,9 @@ Local-falsifiable predictions remain locally falsifiable per [`methodology/02-li
 
 - **Critical brain hypothesis engagement.** [`interfaces/09-critical-brain.md`](interfaces/09-critical-brain.md). Structural mapping between MNSM's broadband-absorbing crystalline regime and the observable phenomenology the critical-brain literature documents in cortex (Beggs-Plenz 2003 neuronal avalanches, Chialvo 2010, Mora-Bialek 2011, Linkenkaer-Hansen 2001 long-range temporal correlations). The match is at the observable level (broadband multi-timescale dynamics, phase-transition-like robustness without parameter tuning); the relationship to technical self-organized criticality is left open as a research question.
 
-The two interfaces extend the cross-domain coherence ledger from seven to nine substrates and operationalize the Phase 6 deliverable of the active-expansion plan.
+The two interfaces extended the cross-domain coherence ledger from seven to nine substrates and operationalized the Phase 6 deliverable.
+
+- **Phase 3: cross-domain expansion + temporal-implications integration.** Eight new interface documents (interfaces 10 through 17) added in logic-led style (structural prediction first, substrate identification second, citations as credit). New methodology document [`methodology/07-time-as-calibration.md`](methodology/07-time-as-calibration.md) formalizing time as substrate-specific calibration of structural unfolding. Wheel SVG redesigned from 9 to 17 nodes. The eight new interfaces cover: coupled phase oscillators (Kuramoto with memory), B-cell affinity maturation, Friston free-energy principle and active inference, active matter, self-organized criticality, cardiac dynamics, gene regulation and circadian, ecosystem dynamics. The cross-domain coherence ledger now stands at seventeen substrates across three evidentiary classes (mathematical equivalence, calibration-dependent structural correspondence, mechanism-shape and convergent-program correspondence).
 
 ## Six-month horizon
 
@@ -30,7 +32,7 @@ Items at this horizon are tractable with focused effort. They strengthen the exi
 
 - **Calibration philosophy formalized** ([`open-problems/08-calibration-philosophy.md`](open-problems/08-calibration-philosophy.md), promoted to `methodology/06-calibration-philosophy.md`). A decision procedure for when calibrations matter and how cross-interface consistency operates. Constitutes progress: the methodology document is written and the case-by-case treatment in interfaces 04 and 05 is referenced to the formalization.
 
-- **Two additional cross-domain interfaces** ([`open-problems/07-additional-substrates.md`](open-problems/07-additional-substrates.md)). The two highest-priority candidates are Friston Free Energy Principle (potentially mathematical-equivalence tier) and Kuramoto synchronization (mathematically tight; clean mapping). Constitutes progress: two new interface documents following the standard template.
+- **Sharpening the predictions named in interfaces 10 through 17.** The Phase-3 interfaces each name three locally-testable predictions. Sharpening these into experimental protocols (vaccine timing for immune, alternans threshold for cardiac, chimera-state stability for Kuramoto, etc.) is the next work on those interfaces. Constitutes progress: at least one prediction from each interface moved from "untested" to "partially tested" or "tested" status.
 
 ## Twelve-month horizon
 
@@ -38,7 +40,7 @@ Items at this horizon are substantial work requiring sustained effort.
 
 - **Renormalization-group analysis** ([`open-problems/04-continuum-rg.md`](open-problems/04-continuum-rg.md)). One-loop beta functions for the principal couplings; fixed-point structure; identification of universal vs non-universal features. Constitutes progress: a derivation in standard field-theoretic format with cross-references to the established universality-class catalogue (Hohenberg-Halperin Models A-J).
 
-- **Three additional cross-domain interfaces.** Beyond the two at the six-month horizon, the remaining three candidates (immune affinity maturation, active matter, self-organized criticality) developed into interface documents. Constitutes progress: cross-domain coherence criterion 4 supported by fourteen documented interfaces instead of the current nine.
+- **Additional cross-domain interfaces beyond the current seventeen.** Candidates that the structural argument predicts but are not yet documented: plate tectonics and earthquake-cycle dynamics; glassy systems and aging; granular matter; open quantum systems beyond the NLS family; market dynamics in econophysics; plant signaling. Each requires literature review and the standard logic-led interface template. Constitutes progress: cross-domain coherence supported by twenty or more documented interfaces; the wheel either expands further or splits into core + extensions.
 
 - **Engineering pattern for moderate AGI requirements** ([`open-problems/06-engineering-moderate-requirements.md`](open-problems/06-engineering-moderate-requirements.md)). Concrete architectural patterns satisfying methodology/05 requirements 7 and 8 (environmental coupling without identity loss; stable self-modification), demonstrated at small scale. Constitutes progress: implementable patterns documented in [`implementation/neural/`](implementation/neural/) with reproducible code and explicit structural-mechanism isolation.
 
@@ -62,7 +64,7 @@ The following active research programs are working on questions that share struc
 
 - **Anthropic interpretability** (Olah, Elhage, Bricken). Sparse autoencoders, superposition, polysemantic neurons. Convergent observation: attention-only systems have substrate-specific representational structure that the MNSM structural argument predicts as the absence of the multi-timescale memory hierarchy. Structural mapping documented in [`interfaces/08-mechanistic-interpretability.md`](interfaces/08-mechanistic-interpretability.md); further engagement at the level of empirical testing the predictions named in that document is the next direction.
 
-- **Friston Free Energy Principle and active inference** (Friston, Parr, Pezzulo). Living systems minimize variational free energy via environmental coupling. Mapping to MNSM has the same triangle structure (field + memory + coupling); the connection has not been formalized.
+- **Friston Free Energy Principle and active inference** (Friston, Parr, Pezzulo). Living systems minimize variational free energy via environmental coupling. Structural mapping documented in [`interfaces/12-friston-free-energy.md`](interfaces/12-friston-free-energy.md); the convergence between FEP and MNSM as triangle-structure frameworks is now explicit.
 
 - **Critical brain hypothesis** (Beggs, Plenz, Chialvo, Mora-Bialek). Brain operates at edge of phase transition; observable signatures include neuronal avalanches, power-law distributions, broadband response. Structural mapping documented in [`interfaces/09-critical-brain.md`](interfaces/09-critical-brain.md); the SOC-vs-mechanism-shape question (whether MNSM's release transition is technically SOC) is left as open work.
 

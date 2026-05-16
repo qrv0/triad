@@ -173,6 +173,12 @@ the connection.
 - View [`../assets/anti_collapse_hero.gif`](../assets/anti_collapse_hero.gif)
   for the visual instance of the release mechanism.
 
+## Time as calibration in the cosmological case
+
+Under the time-as-calibration framework developed in [`../methodology/07-time-as-calibration.md`](../methodology/07-time-as-calibration.md), the cosmological trajectory is not laid out along a Time coordinate that the universe traverses. The trajectory is the unfolding itself. The phases (concentrated initial state, release, structure formation, sustained expansion) are structural positions within the trajectory, not points on a separate time axis. The cosmic-time coordinate as conventionally used is the substrate-specific calibration that lets observers within the trajectory register the unfolding from inside; the FDT-locked direction of the trajectory (operative at cosmological scale as the second law of thermodynamics and the increasing entropy of the universe) gives it its arrow without requiring an external Time.
+
+The "seeing the past" observation in extragalactic astronomy is structurally not a view backward along Time. The light propagating across the electromagnetic substrate carries the structural state at the emission point as state, because P2 (in the propagation of the EM field through its own substrate) retains history as state. When this light arrives at an observer, the observer is reading the structural state of the trajectory at the (location, calibration-time) of emission, conveyed by the substrate's own propagation. The past is here, in the signal; it is not somewhere else to which we are looking. This sharpens the structural reading of cosmological observation in a way standard physics formulations note relationally (general relativity, Wheeler-DeWitt, Page-Wootters) but the calibration-philosophy treatment makes operationally explicit.
+
 ## Honest caveats
 
 The cosmological reading is the most speculative interface in this

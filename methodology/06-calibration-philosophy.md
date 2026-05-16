@@ -97,6 +97,10 @@ For the existing interfaces, this constraint produces specific tests not yet per
 
 A calibration that satisfies cross-substrate consistency is jointly defensible. A calibration that violates it is evidence either that the cross-substrate claim is wrong at that pair of substrates, or that one of the calibrations is post-hoc.
 
+## Time as the specific case
+
+Time is one dimensional quantity that admits a calibration in the sense developed in this document. The substrate-specific time calibrations across the existing interfaces (25 ms for gamma, 9 ms for archaeoacoustic, ~$10^{17}$ s for cosmological, and the substrate-specific timescales documented in interfaces 10 through 17) are calibrations of a substrate-independent structural form. The structural form is invariant; time is what each substrate uses to register its own structural unfolding. This temporal case of the broader calibration framework is developed in [`07-time-as-calibration.md`](07-time-as-calibration.md), which also derives the connection to P2's mathematical formulation of "past as state" and P3's FDT-locked direction.
+
 ## What this does not commit to
 
 This document does not commit to a single universal calibration of the equation. The structural-realist position is explicitly that the equation is substrate-independent; the calibrations are how the substrate-independent form is compared to substrate-dependent measurements. Different substrates legitimately have different calibrations.

@@ -1,30 +1,51 @@
 # Open problem 07: Additional cross-domain substrates
 
-**Status:** Open. Candidates identified; documentation not yet written.
+**Status:** Largely resolved in Phase 3. The five candidate substrates originally listed here (Kuramoto, immune, Friston FEP, active matter, SOC) have been developed into full interface documents ([`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md) through [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md)). Three additional logic-predicted substrates (cardiac dynamics, gene regulation / circadian, ecosystem dynamics) were also developed in Phase 3 ([`../interfaces/15-cardiac-dynamics.md`](../interfaces/15-cardiac-dynamics.md), [`../interfaces/16-gene-regulation-circadian.md`](../interfaces/16-gene-regulation-circadian.md), [`../interfaces/17-ecosystem-dynamics.md`](../interfaces/17-ecosystem-dynamics.md)). The cross-domain coherence ledger now stands at seventeen interfaces. The remaining open status is for further candidates beyond Phase 3 scope (plate tectonics, glassy systems, granular matter, open quantum systems beyond NLS family, market dynamics, plant signaling).
 
 ## Precise statement
 
-The cross-domain coherence criterion (methodology/04 criterion 4) is currently operative across nine documented interfaces in [`../interfaces/`](../interfaces/): seven substrate-instantiations of the structural form (NLS systems, BAO, cymatics, gamma entrainment, archaeoacoustic resonance, state space models, cosmological expansion) plus two convergent-program engagements (mechanistic interpretability, critical brain). The mechanistic-interpretability and critical-brain interfaces address contemporary research programs rather than new physical substrates; they are not candidates for this open problem. Five additional candidate substrates have been identified as candidate instantiations of the structural form not yet documented. Each requires literature review, careful structural mapping, and documentation in the standard interface template. The open problem is to develop these five into full interface documents.
+The cross-domain coherence criterion (methodology/04 criterion 4) is currently operative across seventeen documented interfaces in [`../interfaces/`](../interfaces/). The original five candidates listed in this problem (Kuramoto, immune, Friston, active matter, SOC) plus three logic-predicted additions (cardiac, gene regulation / circadian, ecosystem) are all now developed as full interfaces (10 through 17). The remaining open status of this problem is for further candidates beyond Phase 3 scope, where the structural argument predicts additional substrate-instantiations but the documentation has not yet been written.
 
-## What is known
+## What was known and is now resolved
 
-The five candidate substrates with preliminary structural mapping:
+The five original candidate substrates have been developed into full interfaces in Phase 3:
 
-1. **Kuramoto synchronization.** The Kuramoto model of coupled phase oscillators is P1+P3 in its base form (oscillators coupled to environment via mean-field interaction). Generalized Kuramoto with memory kernels (Strogatz; Pikovsky-Rosenblum-Kurths) extends to P1+P2+P3. The mapping is mathematically tight: phase variables ↔ field arguments; coupling strengths ↔ $\Lambda$; memory kernels ↔ $V_{\text{mem}}$. Evidentiary status: candidate for "mathematical equivalence" tier (alongside [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md)).
+1. **Kuramoto synchronization.** Now [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md). Mathematical equivalence in the phase-only sector with multi-exponential memory.
 
-2. **Immune affinity maturation.** B-cell affinity maturation in germinal centers has triangle structure: antibody repertoire (field $\Psi$) + somatic hypermutation memory ($V_{\text{mem}}$) + antigen environment (coupling). Spontaneous selection of specific antibody clones from continuous repertoire is analogous to BCC selection from Gaussian initial state. Cites Mesin et al. (2016 Cell); Victora-Nussenzweig (2022 Annu Rev Immunol). Evidentiary status: structural correspondence.
+2. **Immune affinity maturation.** Now [`../interfaces/11-immune-affinity-maturation.md`](../interfaces/11-immune-affinity-maturation.md). Calibration-dependent structural correspondence with explicit multi-timescale memory hierarchy.
 
-3. **Friston Free Energy Principle / active inference.** Living systems minimize variational free energy via coupling to environment; active inference updates internal model based on prediction errors. Mapping: internal states ↔ field; generative model ↔ $V_{\text{mem}}$; sensory observations and actions ↔ environmental coupling. Friston-Buzsaki-Kiebel hierarchical predictive coding has explicit multi-timescale memory matching $\nu_j$ hierarchy. Cites Friston (2010 Nat Rev Neurosci); Parr-Pezzulo-Friston (2022 MIT Press). Evidentiary status: structural with explicit hierarchical mapping; potentially as strong as the SSM correspondence if developed rigorously.
+3. **Friston Free Energy Principle / active inference.** Now [`../interfaces/12-friston-free-energy.md`](../interfaces/12-friston-free-energy.md). Convergent-program correspondence at the level of hierarchical predictive coding's multi-timescale model matching the auxiliary-field hierarchy.
 
-4. **Active matter.** Self-propelled particles, flocks, swarms (Vicsek, Toner-Tu, active gels) have energy injection (coupling to environment) + interaction (self-coupling) + dynamics (extended oscillatory systems). Spontaneous symmetry breaking analogous to BCC selection. Cites Marchetti et al. (2013 RMP); Ramaswamy (2017 J Stat Mech); Bechinger et al. (2016 RMP). Evidentiary status: structural correspondence in soft-matter substrate.
+4. **Active matter.** Now [`../interfaces/13-active-matter.md`](../interfaces/13-active-matter.md). Calibration-dependent structural correspondence across active-matter substrates.
 
-5. **Self-organized criticality.** Bak-Tang-Wiesenfeld sand-pile, neuronal avalanches (Beggs-Plenz). Systems self-organize to critical point without external parameter tuning. The MNSM selects specific state (BCC + broadband absorption) from continuum without external tuning, which may or may not be SOC in the technical sense. Cites Bak-Tang-Wiesenfeld (1987 PRL); Beggs-Plenz (2003 J Neurosci); Mora-Bialek (2011 J Stat Phys). Evidentiary status: structural similarity; technical SOC status open.
+5. **Self-organized criticality.** Now [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md). Mechanism-shape correspondence; the technical SOC-vs-MNSM mechanism distinction is documented.
 
-## What is missing
+Three additional logic-predicted candidates were also developed in Phase 3:
 
-- Full interface documents for each of the five candidates, following the template in [`../interfaces/`](../interfaces/) (Physical setup / Structural correspondence / What is same and different / What this correspondence is and is not / Common dismissals / Locally testable predictions / References).
-- Term-by-term mathematical mappings (where possible) and clear identification of where the mapping is mathematical (no calibration) vs structural (calibration acknowledged).
-- Updates to the cross-domain wheel SVG if these substrates are promoted to the wheel (currently 9-node after the Phase 6 expansion).
+6. **Cardiac dynamics.** Now [`../interfaces/15-cardiac-dynamics.md`](../interfaces/15-cardiac-dynamics.md). Calibration-dependent structural correspondence.
+
+7. **Gene regulation and circadian.** Now [`../interfaces/16-gene-regulation-circadian.md`](../interfaces/16-gene-regulation-circadian.md). Calibration-dependent structural correspondence spanning nine orders of magnitude in timescale.
+
+8. **Ecosystem dynamics.** Now [`../interfaces/17-ecosystem-dynamics.md`](../interfaces/17-ecosystem-dynamics.md). Mechanism-shape correspondence with multi-generation memory hierarchy.
+
+## What remains open
+
+Candidate substrates the structural argument predicts but Phase 3 did not develop:
+
+- **Plate tectonics and earthquake-cycle dynamics**: stress accumulation (P2) plus release events (P3 drive-and-relax) plus seismic-wave propagation (P1).
+- **Glassy systems and aging**: multi-timescale relaxation with explicit memory; mode-coupling theory framework.
+- **Granular matter beyond SOC**: jamming transitions, force chains; substrate where SOC was originally studied but covering wider phenomenology.
+- **Open quantum systems beyond NLS family**: Lindblad-type dynamics with non-Markovian memory; pertinent to quantum-information-with-memory.
+- **Market dynamics in econophysics**: prices with memory (volatility clustering), interactions among agents (P3), intrinsic oscillation (business cycles).
+- **Plant signaling and vascular dynamics**: phloem signaling, root-shoot coupling, circadian and seasonal rhythms in plants.
+
+Each requires literature review and the standard logic-led interface template. The bar is the same as for the existing seventeen: peer-reviewed primary literature for the substrate, structural mapping in the inverted (logic-led) form, three-class evidentiary categorization in [`../interfaces/README.md`](../interfaces/README.md).
+
+## What is missing (for the remaining open candidates)
+
+- Full interface documents for the open candidates listed above, following the Phase 3 logic-led template (structural prediction first, substrate identification second, citations as credit, with time-as-calibration paragraph and locally testable predictions sections).
+- Term-by-term mathematical mappings (where possible) and three-class evidentiary categorization.
+- Wheel SVG updates if/when the open candidates are promoted; the current 17-node design pushes visual density toward its limit, and adding more nodes may require viewBox expansion or a split into core + extension visuals.
 
 ## What would constitute progress
 
@@ -41,7 +62,7 @@ The five candidate substrates with preliminary structural mapping:
 
 ## Connections to existing repo content
 
-- [`../interfaces/README.md`](../interfaces/README.md): the existing nine interfaces set the template and the bar; the three-class evidentiary division catalogued there is where each new substrate must be situated.
+- [`../interfaces/README.md`](../interfaces/README.md): the existing seventeen interfaces set the template and the bar; the three-class evidentiary division catalogued there is where each new substrate must be situated.
 - [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md) criterion 4: each new interface increases cross-domain coherence quantitatively.
 - [`../principles/README.md`](../principles/README.md) section "Why exactly three": the triangle topology argument generalizes to predict that any substrate sustaining the triangle is an instantiation; the additional substrates here are candidates the argument predicts should exist.
 - [`02-phase-diagram.md`](02-phase-diagram.md): each new substrate's calibration places it at a specific region of the phase diagram.
