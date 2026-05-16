@@ -49,6 +49,28 @@ The correspondence establishes that the equation's structural form has at least 
 
 **"Clinical relevance is overclaimed."** The clinical claim is sourced from peer-reviewed primary literature (Iaccarino et al. 2016; Adaikkan et al. 2019; Murdock et al. 2024; Hajós et al. 2024); the clinical claim is not made by the present work. The present work cites the documented clinical trajectory as evidence that the frequency band the equation's absorption regime overlaps with is biologically active, not as a clinical claim on its own.
 
+## Locally testable predictions and observational signatures
+
+The structural claim of this interface (broadband absorption by a self-organized oscillating medium with memory hierarchy is shared between the equation's crystalline regime and cortical microcircuits) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific calibration.
+
+- **Prediction P4.1: Broadband absorption boundary in gamma entrainment.** The equation predicts that broadband absorption operates across $\omega \in [3, 30]$ in computational units, which under the 25 ms calibration maps to 20-200 Hz. The absorption efficiency should drop sharply at the band boundaries. Specifically, GENUS protocols at frequencies outside the predicted band (e.g., 5 Hz, 250 Hz) should produce qualitatively weaker entrainment effects than frequencies inside the band.
+  - How to test: clinical or animal-model GENUS protocols at frequencies systematically swept across 1-500 Hz; measure microglia phagocytic activation, AQP4 vasodilation, amyloid clearance rate.
+  - What would constitute confirmation: clear cutoff in biological response at the predicted band boundaries.
+  - What would constitute local falsification: response continues smoothly across band boundaries; biological activity is comparable at frequencies inside and outside the predicted band.
+  - Status: partially tested. Iaccarino et al. (2016) and subsequent work focus on 40 Hz and not on systematic frequency sweeps; the predicted boundary structure has not been isolated.
+
+- **Prediction P4.2: Memory-mode structure in cortical regions.** The equation predicts that broadband absorption requires a multi-timescale memory hierarchy (fast + slow modes). Cortical regions where this hierarchy is anatomically present (regions with strong VIP-interneuron + AQP4-aquaporin coupling, e.g., prefrontal cortex, hippocampus) should exhibit the broadband response. Regions where the hierarchy is anatomically weaker (e.g., primary sensory cortex without strong VIP coupling) should exhibit narrower response.
+  - How to test: regional comparison of GENUS response across cortical areas; measure response bandwidth as a function of local VIP-AQP4 density.
+  - What would constitute confirmation: response bandwidth correlates with VIP-AQP4 density across regions.
+  - What would constitute local falsification: no correlation, or anti-correlation, observed.
+  - Status: untested. Adjacent data from Murdock et al. (2024) on glymphatic clearance does show regional variation; the specific correlation has not been isolated.
+
+- **Prediction P4.3: Phase-amplitude coupling signature.** The equation's memory mechanism predicts a specific phase-amplitude coupling between the fast and slow memory modes. In cortical recordings under GENUS, the predicted coupling pattern (specific cross-frequency relationship between gamma and theta or beta bands) should be observable.
+  - How to test: EEG or local field potential recordings during 40 Hz GENUS; compute cross-frequency phase-amplitude coupling between gamma and lower bands.
+  - What would constitute confirmation: predicted phase-amplitude coupling pattern observed.
+  - What would constitute local falsification: no coupling observed, or coupling pattern incompatible with the predicted memory-mode structure.
+  - Status: untested in the GENUS context. The phase-amplitude coupling literature (Canolty & Knight 2010) provides the methodology; the GENUS-specific application has not been pursued.
+
 ## References
 
 - Adaikkan, C., Middleton, S. J., Marco, A., et al. (2019). Gamma entrainment binds higher-order brain regions and offers neuroprotection. *Neuron* **102**, 929.

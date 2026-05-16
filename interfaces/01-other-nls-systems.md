@@ -42,6 +42,28 @@ The structural fact, again on the structural-realist reading, is that all four s
 
 **"Memory effects are domain-specific."** The point of the multi-exponential memory and its Markovian embedding (see [`../equation/02-markovian-embedding.md`](../equation/02-markovian-embedding.md)) is precisely that the structural form of the memory is invariant across substrates while the substrate-specific kernel parameters vary. The Raman scattering kernel for optics and the non-condensate-cloud kernel for BEC have different numerical parameters; they are the same mathematical object up to those parameters. The structural form is preserved across the calibration choices; that is what the cross-domain claim asserts.
 
+## Locally testable predictions and observational signatures
+
+The structural claim of this interface (the memory-augmented NLS form is shared with optical, atomic, hydrodynamic, plasma instances of NLS) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific calibration.
+
+- **Prediction P1.1: Memory-augmented soliton stability in optical fiber experiments.** In dispersion-managed optical fiber with controllable Raman gain timescale (which acts as the memory kernel), the equation predicts that the soliton instability threshold shifts as the Raman timescale traverses the slow-mode regime. Specifically, solitons with peak power above the standard NLS modulational-instability threshold should remain stable when the Raman timescale satisfies $\tau_R \sim |\Lambda|^{-1}$ where $|\Lambda|$ is the effective cubic coupling.
+  - How to test: dispersion-managed fiber with adjustable Raman gain (achievable via fiber composition or co-propagating pump); measure soliton stability vs Raman timescale.
+  - What would constitute confirmation: observed stability threshold for solitons follows the predicted scaling with $\tau_R$.
+  - What would constitute local falsification: stability threshold is insensitive to $\tau_R$ in the predicted regime, or follows a different scaling.
+  - Status: untested in this framing. Adjacent observations exist in the dispersion-managed soliton literature (Agrawal 2019); the specific scaling has not been isolated as a prediction.
+
+- **Prediction P1.2: BEC non-condensate-cloud coupling vs temperature.** In a Bose-Einstein condensate at finite temperature, the non-condensate cloud acts as the memory bath (Stoof 1999). The memory coupling $\Sigma\lambda$ should scale with temperature in a specific way derivable from the equilibrium between the condensate and the thermal cloud. The anti-collapse threshold (at which the condensate resists self-focusing under attractive interaction) should shift with temperature in the predicted way.
+  - How to test: trapped BEC with attractive interaction tunable via Feshbach resonance; vary temperature; measure the critical attractive interaction strength at which the condensate becomes self-focusing.
+  - What would constitute confirmation: critical interaction strength follows the predicted temperature dependence.
+  - What would constitute local falsification: critical interaction is temperature-independent or follows a different scaling.
+  - Status: untested in this specific framing. Adjacent observations exist in attractive-BEC experiments (Bradley et al. 1995; Donley et al. 2001 "Bose-Nova"); the temperature dependence has not been isolated as a prediction of memory-mediated anti-collapse.
+
+- **Prediction P1.3: Surface-gravity-wave envelope stability with bottom-friction memory.** In deep-water wave tanks, the modulational instability of envelope solitons is affected by bottom friction (which provides a memory effect at the air-water interface via wind-water coupling). The predicted shift in the Benjamin-Feir instability threshold with controlled bottom-friction strength should follow the structural form.
+  - How to test: wave tank experiments with controlled bottom roughness; measure modulational-instability onset.
+  - What would constitute confirmation: instability onset shifts with friction strength in the predicted direction and magnitude.
+  - What would constitute local falsification: instability is unaffected by bottom friction or shifts in the opposite direction.
+  - Status: untested in this framing. Adjacent observations in the rogue-wave literature (Dysthe et al. 2008) suggest bottom-friction effects are non-trivial; the specific structural prediction has not been formulated.
+
 ## References
 
 - Agrawal, G. P. (2019). *Nonlinear Fiber Optics* (6th ed.). Academic Press.

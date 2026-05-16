@@ -86,6 +86,28 @@ This document is not a benchmark claim. The four extensions to the SSM baseline 
 
 **"ML does not need physics."** The work does not assert that ML needs physics. It asserts that an equation derived from physical structural axioms is, by mathematical identity, the same equation as the linear core of modern sequence models. Whether ML practitioners find this useful for their own work is for ML practitioners to decide. The structural fact, that the same equation arose independently, is established by the term-by-term identification and is not contingent on ML practitioners adopting the physics-side framing.
 
+## Locally testable predictions and observational signatures
+
+The structural claim of this interface (the auxiliary-field equation is term-by-term identical to the diagonal SSM update) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The equivalence at the level of the linear core is mathematical and requires no testing. The following are *local* predictions about the four extensions Memory-NLS makes to the SSM baseline, all of which are testable in standard sequence-modeling settings without scale-up or competitive benchmarking.
+
+- **Prediction P6.1: Training-trajectory signatures in nonlinear-SSM variants with vs without FDT lock.** The equation predicts that a nonlinear SSM (cubic state nonlinearity) with FDT-locked stochastic forcing in the optimization should exhibit smooth optimization-trajectory characteristics, while the same architecture without the FDT lock should exhibit higher optimization-trajectory variance and increased likelihood of catastrophic loss spikes.
+  - How to test: train two nonlinear-SSM variants on the same corpus and infrastructure, one with FDT-locked noise scheduling, one with empirically tuned noise; compare optimization-trajectory variance and incidence of loss spikes.
+  - What would constitute confirmation: FDT-locked variant has lower trajectory variance and fewer spikes at matched accuracy.
+  - What would constitute local falsification: no difference, or the FDT-locked variant has higher variance / more spikes.
+  - Status: partially tested. The empirical instance in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md) compares MemNLS (with anti-collapse) against Transformer (without anti-collapse) at 70M parameters and observes the predicted catastrophic spike in the Transformer. The specific FDT-lock vs empirically-tuned-noise comparison within nonlinear-SSM architectures has not been isolated.
+
+- **Prediction P6.2: Scaling of the optimization-collapse boundary with model size.** The equation predicts that the boundary at which optimization-collapse becomes likely (in an attention-only architecture without anti-collapse) scales with model size in a specific way derivable from the focal-region geometry argument (analogous to the dimensional rescaling $\Sigma\lambda / |\Lambda| \sim 1/d$ in the field-theoretic case). Specifically, the parameter-space dimension of the optimization landscape acts as the effective dimension; collapse-boundary parameters should scale accordingly.
+  - How to test: repeat the optimization-collapse experiment at a range of model scales (1.5M, 7M, 30M, 70M, 140M, 700M); identify the parameter regime at which the spike becomes likely vs unlikely; compare scaling to the predicted form.
+  - What would constitute confirmation: collapse-boundary parameters scale with model size in the predicted way.
+  - What would constitute local falsification: collapse-boundary parameters do not scale with size, or scale in a different functional form.
+  - Status: untested. The 70M run in results/08 is one data point; the scaling prediction requires multiple scales. (Note: this is not "scaling to test if it beats baselines"; it is "scaling to test a specific structural prediction about the boundary location.")
+
+- **Prediction P6.3: Cubic-nonlinearity in SSM state suppresses representation collapse.** The equation predicts that adding cubic nonlinearity ($\Lambda |\Psi|^2 \Psi$) to the SSM state update suppresses representation collapse modes documented in self-supervised learning (SimSiam without stop-gradient, BYOL without predictor network) without requiring the architectural tricks those frameworks deploy.
+  - How to test: implement a nonlinear-SSM-state variant of SimSiam without stop-gradient; train on standard SSL benchmarks; measure representation collapse signatures (representation-space rank, alignment-uniformity loss).
+  - What would constitute confirmation: nonlinear-SSM SSL without stop-gradient does not collapse; rank and uniformity remain healthy.
+  - What would constitute local falsification: nonlinear-SSM SSL still collapses without stop-gradient; the cubic nonlinearity does not provide the protection.
+  - Status: untested. The structural prediction is clean; the experimental realization is feasible at small scale.
+
 ## Recommended further reading
 
 The state space model literature relevant to this correspondence:

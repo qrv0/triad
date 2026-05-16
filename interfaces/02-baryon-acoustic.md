@@ -49,6 +49,28 @@ The dimensional identification under which the present equation maps onto the co
 
 **"This is metaphor."** The term-by-term mapping in section `## The structural correspondence` is mathematical, not metaphorical: the wave operator of the photon-baryon plasma maps to the kinetic operator of the equation, the gravitational self-coupling maps to the nonlinearity, the dark-matter coupling maps to the memory, the Silk damping maps to the dissipation, and the inflationary perturbations map to the stochastic forcing. The mapping is at the level of the mathematical objects, not at the level of analogy.
 
+## Locally testable predictions and observational signatures
+
+The structural claim of this interface (the form of early-universe acoustic dynamics matches the equation form) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific calibration.
+
+- **Prediction P2.1: Memory-modulated correction to the BAO peak position.** The standard linear-perturbation analysis of the photon-baryon plasma predicts the BAO scale via the sound horizon integral. The memory-augmented form of the equation predicts a small correction to the peak position arising from the lag between the photon-pressure response and the baryon density. The correction is small (suppressed by the ratio of the relaxation timescale to the Hubble time at recombination) but may be detectable in next-generation surveys.
+  - How to test: precision galaxy-survey measurements of the BAO peak (DESI, Euclid, Roman) compared to the linear-perturbation prediction. The discrepancy, if it matches the predicted memory correction, supports the interface.
+  - What would constitute confirmation: measured peak position shifted by the predicted memory correction amount.
+  - What would constitute local falsification: measured peak position consistent with the linear-perturbation prediction to within the predicted memory-correction magnitude; the discrepancy is in the opposite direction; or the magnitude is wrong.
+  - Status: untested. Requires development of the analytical correction from open-problem 01 plus the calibration philosophy from methodology/06; the prediction is named here as a target for the analytical-theory work in `../open-problems/01-analytical-anti-collapse.md`.
+
+- **Prediction P2.2: Higher-order BAO substructure.** The memory-augmented dynamics predicts secondary peaks in the matter correlation function beyond the principal 150 Mpc peak, arising from harmonics of the acoustic oscillation that the memory term modulates. Standard analysis predicts harmonic peaks; the memory-modulated form predicts a specific amplitude and phase relation between harmonics that differs from the standard prediction.
+  - How to test: precision measurements of the matter correlation function at scales 30-150 Mpc; compare detected secondary peaks to predictions.
+  - What would constitute confirmation: secondary peaks consistent with the memory-modulated harmonic structure.
+  - What would constitute local falsification: secondary peaks consistent with the standard harmonic structure but not the memory-modulated one.
+  - Status: untested. Same calibration and analytical-theory prerequisites as P2.1.
+
+- **Prediction P2.3: Temperature-shift cross-correlation in the CMB.** The memory term in the equation, applied to the photon-baryon plasma, predicts a specific phase relationship between density fluctuations and temperature fluctuations at the moment of decoupling. Standard analysis predicts the relationship; the memory-modulated form predicts a small phase shift.
+  - How to test: cross-correlation of CMB temperature with galaxy survey density at the BAO scale.
+  - What would constitute confirmation: phase shift measured at the predicted magnitude.
+  - What would constitute local falsification: no phase shift detected or opposite-sign shift detected.
+  - Status: untested. Same prerequisites.
+
 ## References
 
 - Anderson, L., Aubourg, É., Bailey, S., et al. (2014). The clustering of galaxies in the SDSS-III Baryon Oscillation Spectroscopic Survey. *Monthly Notices of the Royal Astronomical Society* **441**, 24.
