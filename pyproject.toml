@@ -18,6 +18,12 @@ keywords = [
     "structural-realism",
     "sequence-modeling",
     "memory-augmented-dynamics",
+    "cross-domain",
+    "anti-collapse",
+    "bravais-selection",
+    "fluctuation-dissipation",
+    "cosmological-expansion",
+    "philosophy-of-science",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",

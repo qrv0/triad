@@ -4,6 +4,19 @@
 
 **Three structural principles. One equation. Seven cross-domain instantiations.**
 
+[![License: MIT](https://img.shields.io/badge/Code_License-MIT-blue.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/Docs_License-CC_BY_4.0-lightgrey.svg)](LICENSE-docs)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Memory-NLS on HuggingFace](https://img.shields.io/badge/🤗_Memory--NLS-70M-yellow)](https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8)
+[![Transformer baseline on HuggingFace](https://img.shields.io/badge/🤗_Transformer-70M-yellow)](https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8)
+[![Paper](https://img.shields.io/badge/paper-manuscript.md-green)](paper/manuscript.md)
+
+> The same equation appears in 3D nonlinear Schrödinger fields, baryon acoustic
+> oscillations, gamma-frequency neural entrainment, megalithic stone-chamber
+> resonance, structured state space models, cosmological expansion, and
+> stable neural-network optimization. Derived from three observational axioms
+> about persistence — not assembled from prior literature.
+
 ---
 
 A nonlinear extension of structured state space models, derived from three principles of self-referential field theory. The auxiliary-field memory architecture is mathematically equivalent to the state representation of S4, Mamba, and RWKV. The equation extends those architectures with four properties:
@@ -16,6 +29,18 @@ A nonlinear extension of structured state space models, derived from three princ
 ---
 
 > This is not a typical machine-learning repository. The structure of the repository itself reflects the structure of the equation: oscillating across registers (math, code, prose, visual), self-referential (it explains its own organization), coupled across disciplines (physics, machine learning, neuroscience, cosmology, philosophy of science). See [`STRUCTURE.md`](STRUCTURE.md) for why the repo is shaped this way.
+
+## How to read this work — methodological position
+
+Two principles govern how this repository asks to be read. They are documented in [`methodology/`](methodology/) and worth surfacing here:
+
+**1. Isolation is temporary; coupling is the default.**
+The third structural axiom of the equation (P3) asserts that perfect dynamical isolation does not occur — every persistent system is coupled to its environment, and isolation is a methodological tool rather than a property of the world. The repository takes this seriously: cross-domain interfaces are first-class content (not appendix), reader-paths thread through multiple disciplines, and the work invites coupling with whoever engages it. See [`principles/03-coupling.md`](principles/03-coupling.md).
+
+**2. Strict falsificationism is in tension with the content of P3.**
+A theory whose third axiom denies isolation cannot consistently be evaluated by an experimental methodology that presupposes the isolability of variables. The work is evaluated by the **six structural-realist criteria** in [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md): internal mathematical consistency, reproducibility, generative scope, cross-domain coherence, parsimony, and comprehensiveness. The argument for why strict falsificationism is the wrong lens here is in [`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md). Local falsifiable predictions remain locally falsifiable; the global structural claim is evaluated structurally.
+
+If you arrive at this work expecting a single-quantity numerical falsification test as the validation criterion, the methodology folder explains why this work answers a different question.
 
 ---
 
@@ -139,6 +164,37 @@ is mathematically identical to the diagonal state space model update of S4, S5, 
 
 ---
 
+## What the model produces
+
+The Memory-NLS 70M model trained on enwik8 generates byte-level output that
+preserves the structural grammar of the corpus while inventing novel content
+within that form. From the prompt `<page>\n  <title>` at training step 50,000:
+
+```
+<page>
+  <title>
+    </revision>
+  </page>
+  <page>
+    <title>Bistory of the Oringese Project]]
+
+==References==
+* [http://www.eurogline.com  All begal on the [[Maacheth of Conway|1200]]
+  [[United Kingdom]]. In September 2004)], 773,585
+|-
+|align=&quot;right&quot; | 397,413
+| align=&quot;center&quot; | Locuts and Fi
+```
+
+Nested XML, MediaWiki section headers, infobox table syntax with HTML
+alignment attributes, external link bracket format, year references — all
+preserved. Specific tokens (Bistory, Oringese, Maacheth, Locuts) are
+invented but follow the corpus's structural grammar correctly.
+
+The model has captured the **form** of the corpus, not its surface
+lexical content. This is the structural-realist signature in computational
+substrate.
+
 ## Pre-trained models on HuggingFace
 
 The 70M-parameter checkpoints from the optimization-collapse experiment are
@@ -228,4 +284,17 @@ expansion). Each interface is calibration-acknowledged where relevant.
 
 > The principle that isolation is temporary applies to this repository as well.
 > Issues, pull requests, and external mappings of the structure to further
-> domains are explicitly welcomed.
+> domains are explicitly welcomed. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+## A note on AI-assisted contribution
+
+This work was developed with substantial AI-assisted formalization. The
+methodological frame the work adopts has direct implications for how AI
+assistants engage with the codebase — particularly around avoiding
+competitive-benchmark framing, respecting the structural-realist evaluation
+criteria, and not dismissing cross-domain interfaces as "speculative." If
+you are using an AI assistant (Claude, GPT, etc.) to contribute to this
+repository, please read [`CLAUDE.md`](CLAUDE.md) first. It is a set of
+operational constraints that ensures the assistance aligns with what this
+work is, rather than the default frame an AI assistant trained on standard
+ML content would naturally adopt.

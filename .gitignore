@@ -66,3 +66,4 @@ paper/figures/*.pdf
 huggingface_token*
 github_token*
 scripts/
+outputs/*_run.log
