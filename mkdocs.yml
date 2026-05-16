@@ -372,6 +372,11 @@ nav:
       - 'Dimensional Rescaling': results/06-dimensional-rescaling.md
       - 'Temporal–Spatial Asymmetry': results/07-temporal-spatial-asymmetry.md
       - 'Optimization-Collapse Empirical': results/08-optimization-collapse-empirical.md
+      - 'Kuramoto Chimera Memory': results/09-kuramoto-chimera-memory.md
+      - 'Dimensional Rescaling Higher-D': results/10-dimensional-rescaling-higher-d.md
+      - 'FDT-Locked Noise Empirical': results/11-fdt-locked-noise-empirical.md
+      - 'Cubic SSM SimSiam': results/12-cubic-ssm-simsiam.md
+      - 'SOC vs MNSM Avalanches': results/13-soc-vs-mnsm-avalanches.md
 
   - Cross-Domain Interfaces:
       - 'Overview': interfaces/README.md

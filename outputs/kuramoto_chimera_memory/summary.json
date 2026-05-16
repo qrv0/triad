@@ -1,0 +1,79 @@
+{
+  "prediction": "P10.1 (interface 10)",
+  "parameters": {
+    "N": 256,
+    "T_final": 250.0,
+    "dt": 0.025,
+    "sigma_kernel": 12.0,
+    "K_coupling": 1.0,
+    "alpha": 1.45,
+    "seed": 42
+  },
+  "runs": [
+    {
+      "nu": 0.01,
+      "tau_mem": 100.0,
+      "chimera_lifetime_fraction": 0.372,
+      "mean_chimera_index": 0.09792900720864217,
+      "final_chimera_index": 0.04607786729222808,
+      "wall_time": 3.683342933654785
+    },
+    {
+      "nu": 0.03,
+      "tau_mem": 33.333333333333336,
+      "chimera_lifetime_fraction": 0.08,
+      "mean_chimera_index": 0.03658547974153849,
+      "final_chimera_index": 0.0032307559576076226,
+      "wall_time": 3.6151092052459717
+    },
+    {
+      "nu": 0.1,
+      "tau_mem": 10.0,
+      "chimera_lifetime_fraction": 0.068,
+      "mean_chimera_index": 0.019682487484679385,
+      "final_chimera_index": 1.653677138471921e-05,
+      "wall_time": 1.1705131530761719
+    },
+    {
+      "nu": 0.3,
+      "tau_mem": 3.3333333333333335,
+      "chimera_lifetime_fraction": 0.068,
+      "mean_chimera_index": 0.021869802068958406,
+      "final_chimera_index": 9.751081189257637e-05,
+      "wall_time": 1.7088828086853027
+    },
+    {
+      "nu": 1.0,
+      "tau_mem": 1.0,
+      "chimera_lifetime_fraction": 0.112,
+      "mean_chimera_index": 0.03515912494384566,
+      "final_chimera_index": 5.021586779766839e-05,
+      "wall_time": 1.1156537532806396
+    },
+    {
+      "nu": 3.0,
+      "tau_mem": 0.3333333333333333,
+      "chimera_lifetime_fraction": 0.556,
+      "mean_chimera_index": 0.13297322441809287,
+      "final_chimera_index": 0.0006487485500649238,
+      "wall_time": 1.0335001945495605
+    },
+    {
+      "nu": 10.0,
+      "tau_mem": 0.1,
+      "chimera_lifetime_fraction": 1.0,
+      "mean_chimera_index": 0.20952597742860365,
+      "final_chimera_index": 0.178644343751624,
+      "wall_time": 2.369072914123535
+    },
+    {
+      "nu": 30.0,
+      "tau_mem": 0.03333333333333333,
+      "chimera_lifetime_fraction": 1.0,
+      "mean_chimera_index": 0.19103587305010133,
+      "final_chimera_index": 0.15187819048153897,
+      "wall_time": 1.1301226615905762
+    }
+  ],
+  "wall_time_total_s": 15.83666205406189
+}
