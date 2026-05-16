@@ -255,16 +255,24 @@ body.long-form .md-typeset .highlight {
   margin-block: 1em;
 }
 
+/* hr is treated as a section divider rather than a line: three thin
+   dots with generous spacing above/below. The ornamental pattern reads
+   as editorial pause, not a horizontal cut. */
 .md-typeset hr {
   border: none;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--md-default-bg-color--lightest),
-    transparent
-  );
-  margin: 2.5rem 0;
+  height: 0;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.md-typeset hr::after {
+  content: "\00B7\00A0\00A0\00B7\00A0\00A0\00B7";
+  display: inline-block;
+  color: var(--md-default-fg-color--lightest);
+  font-size: 1.4em;
+  letter-spacing: 0.4em;
+  line-height: 1;
 }
 
 /* ---------- Blockquote refinement ------------------------------ */
@@ -1093,31 +1101,105 @@ body[data-md-color-scheme] .md-main__inner {
   --mnsm-border: rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- Hero (wheel dominant, text supporting) ---------- */
+/* ---------- Hero (wheel dominant, text supporting) ----------
+   Premium 2026 polish: subtle dot-grid background pattern behind the
+   hero, soft radial glow behind the wheel, larger breathing room. */
 
 .mnsm-hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto 5rem;
-  padding: 3rem 1.5rem 3rem;
+  padding: 4rem 1.5rem 3.5rem;
   gap: 0;
+  isolation: isolate;
+}
+
+/* Subtle dot grid only on landing-page hero. The grid is rendered as a
+   CSS background; opacity is very low so it reads as texture not noise.
+   Hidden in print and under reduced-motion (where the depth is wasted). */
+.mnsm-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(
+    circle at center,
+    var(--mnsm-g-5) 1px,
+    transparent 1.2px
+  );
+  background-size: 28px 28px;
+  background-position: 0 0;
+  opacity: 0.18;
+  mask-image: radial-gradient(ellipse at center,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.4) 55%,
+    transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse at center,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.4) 55%,
+    transparent 90%);
+  pointer-events: none;
+}
+
+[data-md-color-scheme="slate"] .mnsm-hero::before {
+  opacity: 0.12;
+}
+
+@media print {
+  .mnsm-hero::before { display: none; }
 }
 
 .mnsm-hero__visual {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
+  padding: 2rem 0;
 }
+
+/* Soft radial glow behind the wheel to lift it off the dot grid */
+.mnsm-hero__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at center,
+    var(--mnsm-accent-teal-soft) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
 .mnsm-wheel {
   width: 100%;
   max-width: 760px;
   height: auto;
   box-shadow: none !important;
   border-radius: 0 !important;
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.06))
+          drop-shadow(0 1px 2px rgba(0, 0, 0, 0.04));
+  transition: filter var(--dur-mid) var(--easing-smooth),
+              transform var(--dur-mid) var(--easing-smooth);
+}
+
+.mnsm-wheel:hover {
+  filter: drop-shadow(0 12px 36px rgba(13, 148, 136, 0.16))
+          drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+}
+
+[data-md-color-scheme="slate"] .mnsm-wheel {
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.4))
+          drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+[data-md-color-scheme="slate"] .mnsm-wheel:hover {
+  filter: drop-shadow(0 12px 40px rgba(94, 234, 212, 0.22))
+          drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .mnsm-hero__copy {
@@ -1163,25 +1245,45 @@ body[data-md-color-scheme] .md-main__inner {
 
 .mnsm-eq {
   background: var(--mnsm-eq-bg);
-  border-radius: 6px;
-  padding: 1rem 1.4rem;
-  margin: 1.6rem auto 1rem;
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin: 1.8rem auto 1.2rem;
   border-left: 2px solid var(--md-accent-fg-color);
   overflow-x: auto;
   max-width: 760px;
   text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03),
+              0 8px 24px rgba(0, 0, 0, 0.03);
+  transition: box-shadow var(--dur-mid) var(--easing-smooth);
 }
+
+.mnsm-eq:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04),
+              0 16px 40px rgba(13, 148, 136, 0.08);
+}
+
+[data-md-color-scheme="slate"] .mnsm-eq {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
+              0 8px 24px rgba(0, 0, 0, 0.3);
+}
+[data-md-color-scheme="slate"] .mnsm-eq:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4),
+              0 16px 40px rgba(94, 234, 212, 0.08);
+}
+
 .mnsm-eq mjx-container[display="true"] {
   margin: 0 !important;
   padding: 0 !important;
+  background: transparent !important;
+  border-left: none !important;
 }
 .mnsm-eq--coded {
   border-left-color: transparent;
   background: linear-gradient(
-    90deg,
-    rgba(99, 102, 241, 0.04),
-    rgba(20, 184, 166, 0.04),
-    rgba(245, 158, 11, 0.04)
+    135deg,
+    var(--mnsm-accent-iris-soft) 0%,
+    var(--mnsm-accent-teal-soft) 50%,
+    var(--mnsm-accent-amber-soft) 100%
   );
   position: relative;
 }
@@ -1190,8 +1292,11 @@ body[data-md-color-scheme] .md-main__inner {
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, #6366f1 0%, #14b8a6 50%, #f59e0b 100%);
-  border-radius: 6px 0 0 6px;
+  background: linear-gradient(180deg,
+              var(--mnsm-accent-iris) 0%,
+              var(--mnsm-accent-teal) 50%,
+              var(--mnsm-accent-amber) 100%);
+  border-radius: 8px 0 0 8px;
 }
 
 .eq-legend {
@@ -1374,22 +1479,47 @@ body[data-md-color-scheme] .md-main__inner {
 }
 
 .mnsm-section-head {
-  max-width: 720px;
-  margin: 0 auto 3rem;
+  max-width: 760px;
+  margin: 0 auto 3.5rem;
   text-align: center;
+  position: relative;
 }
+
+/* Subtle pattern divider above each section head, replacing default hr */
+.mnsm-section-head::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 0 auto 1.4rem;
+  background: linear-gradient(90deg,
+              transparent 0,
+              var(--mnsm-accent-teal) 50%,
+              transparent 100%);
+  opacity: 0.5;
+}
+
 .mnsm-section-head h2 {
-  margin: 0.5rem 0 0.8rem;
-  font-size: 1.85rem;
+  margin: 0.5rem 0 0.9rem;
+  font-size: 2.05rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.028em;
+  line-height: 1.2;
 }
 .mnsm-section-head h2::after { display: none; }
 .mnsm-section-head p {
   margin: 0;
-  font-size: 0.88rem;
-  line-height: 1.7;
-  opacity: 0.78;
+  font-size: 0.95rem;
+  line-height: 1.72;
+  opacity: 0.82;
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 760px) {
+  .mnsm-section-head h2 { font-size: 1.7rem; }
+  .mnsm-section-head p { font-size: 0.9rem; }
 }
 
 .mnsm-section-tag {
@@ -1431,14 +1561,31 @@ body[data-md-color-scheme] .md-main__inner {
 .mnsm-path-grid li {
   border: 1px solid var(--mnsm-border);
   background: var(--md-default-bg-color);
-  border-radius: 5px;
-  padding: 1.5rem 1.4rem;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  border-radius: 6px;
+  padding: 1.6rem 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: border-color var(--dur-quick) var(--easing-smooth),
+              transform var(--dur-quick) var(--easing-smooth),
+              box-shadow var(--dur-quick) var(--easing-smooth);
 }
 .mnsm-principle-grid li:hover,
 .mnsm-path-grid li:hover {
-  border-color: var(--md-accent-fg-color);
+  border-color: var(--mnsm-accent-teal-medium);
   transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04),
+              0 12px 28px rgba(0, 0, 0, 0.05),
+              0 0 0 1px var(--mnsm-accent-teal-medium);
+}
+
+[data-md-color-scheme="slate"] .mnsm-principle-grid li,
+[data-md-color-scheme="slate"] .mnsm-path-grid li {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+[data-md-color-scheme="slate"] .mnsm-principle-grid li:hover,
+[data-md-color-scheme="slate"] .mnsm-path-grid li:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4),
+              0 12px 28px rgba(0, 0, 0, 0.4),
+              0 0 0 1px var(--mnsm-accent-teal-light);
 }
 .mnsm-principle-grid li strong,
 .mnsm-path-grid li strong {
@@ -1519,13 +1666,43 @@ body[data-md-color-scheme] .md-main__inner {
   position: relative;
   background: var(--md-default-bg-color);
   border: 1px solid var(--mnsm-border);
-  border-radius: 5px;
-  padding: 1.4rem 1.4rem;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  border-radius: 6px;
+  padding: 1.5rem 1.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.025);
+  transition: border-color var(--dur-quick) var(--easing-smooth),
+              transform var(--dur-quick) var(--easing-smooth),
+              box-shadow var(--dur-quick) var(--easing-smooth);
+  overflow: hidden;
 }
+
+/* Subtle accent-tinted left edge using the substrate's signature color */
+.mnsm-substrate-grid li::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--substrate-accent, transparent);
+  opacity: 0;
+  transition: opacity var(--dur-quick) var(--easing-smooth);
+}
+
 .mnsm-substrate-grid li:hover {
-  border-color: var(--md-accent-fg-color);
-  transform: translateY(-2px);
+  border-color: var(--mnsm-accent-teal-medium);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04),
+              0 14px 32px rgba(0, 0, 0, 0.06);
+}
+
+.mnsm-substrate-grid li:hover::before {
+  opacity: 0.85;
+}
+
+[data-md-color-scheme="slate"] .mnsm-substrate-grid li {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+[data-md-color-scheme="slate"] .mnsm-substrate-grid li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+              0 14px 32px rgba(0, 0, 0, 0.4);
 }
 .mnsm-substrate-num {
   display: block;
@@ -1542,20 +1719,22 @@ body[data-md-color-scheme] .md-main__inner {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.95rem;
   background: var(--substrate-tint, rgba(20,184,166,0.1));
   color: var(--substrate-accent, var(--md-accent-fg-color));
-  transition: transform 0.2s ease;
+  transition: transform var(--dur-mid) var(--easing-bounce),
+              box-shadow var(--dur-quick) var(--easing-smooth);
 }
 .mnsm-substrate-sig .twemoji {
   width: 22px;
   height: 22px;
 }
 .mnsm-substrate-grid li:hover .mnsm-substrate-sig {
-  transform: scale(1.08);
+  transform: scale(1.10);
+  box-shadow: 0 4px 12px var(--substrate-tint, rgba(20, 184, 166, 0.2));
 }
 
 .sig--nls    { --substrate-tint: rgba(99, 102, 241, 0.14); --substrate-accent: #6366f1; }
