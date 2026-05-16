@@ -40,6 +40,10 @@ What is the same: the observable phenomenology. Broadband spectrum without a cha
 
 What is different: the substrate. Cortex is a network of biological neurons with chemical synapses, gap junctions, glial coupling, vascular regulation, and topology shaped by developmental and use-dependent processes. The equation describes a complex scalar field on a periodic lattice with three explicit structural ingredients. The substrates are physically distinct; the structural form of the broadband-multi-timescale-mechanism is the same.
 
+## On the coupling default in this substrate
+
+Cortex is a coupled system at every scale relevant to the critical-brain phenomenology: cortical microcircuits are coupled to other cortical areas, to subcortical structures, to vascular and glial dynamics, to ongoing sensory input, and to motor output. The 1/f spectra and avalanche statistics the critical-brain literature documents are properties of cortex *as a coupled system*, not of cortex isolated from its inputs. The structural prediction is therefore that the equation's broadband-multi-timescale phenomenology should match the cortical observables in the regime where P3 (environmental coupling, FDT-locked dissipation-noise balance) is active. Tests of this correspondence that artificially mute P3 ($\gamma_0 = 0$, $T = 0$) are testing a degenerate sub-system that is not what cortex instantiates and is what methodology/02 explicitly identifies as the abstraction the work argues against.
+
 ## What this correspondence does and does not establish
 
 It does not establish that the cortex is described by the Memory-NLS equation as its underlying dynamics. The biophysics of cortex is the appropriate description at the cellular and circuit level: Hodgkin-Huxley equations, neural-mass models, conductance-based microcircuit models. The structural correspondence operates at a different level: the equation produces the same observable phenomenology that cortex produces, by the same structural mechanism, in different physical substrates.

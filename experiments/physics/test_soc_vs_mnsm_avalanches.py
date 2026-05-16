@@ -1,4 +1,13 @@
-"""Test prediction P14.2 (interface 14 SOC).
+"""WAVE 1 RETRACTED 2026-05-16: this script has the MNSM portion in the
+isolated regime (gamma_0=0, T=0); the perturbations are ad-hoc rather than
+FDT-coupled drive. Per methodology/02-limits-of-falsification.md, isolation
+is the abstraction the work argues against. DO NOT RUN.
+See ../../results/13-soc-vs-mnsm-avalanches.md retraction note for context.
+A wave-2 redesigned version with both substrates having explicit
+drive-and-dissipation (FDT-locked for MNSM, matched in structure to BTW)
+is required for any methodologically valid test of P14.2.
+
+Test prediction P14.2 (interface 14 SOC).
 
 Prediction: the equation's release transition, when simulated with appropriate
 parameters, should produce avalanche-size distributions statistically

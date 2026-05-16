@@ -12,7 +12,7 @@ The Free Energy Principle, developed by Karl Friston and collaborators across tw
 
 The hierarchical predictive coding formulation (Friston 2008; Bastos-Usrey-Adams-Mangun-Fries-Friston 2012) makes the multi-timescale memory structure explicit. The cortical hierarchy is modeled as a stack of layers, each making predictions about the layer below at its own characteristic timescale; higher cortical levels predict slower-varying features (object identity, scene grammar) while lower levels predict faster-varying features (edge orientation, local motion). The timescale hierarchy is not merely descriptive; it is mathematically required for the free-energy minimization to be tractable across scales.
 
-The framework has been applied across substrates: cortical microcircuits (Friston-Buzsaki-Kiebel 2017 on neuronal message passing under predictive coding), immune systems (Pradeu-Daignan-Bertelli 2016 on the immune self/non-self distinction as inference), gene-regulatory networks (Friston-Levin-Sengupta-Pezzulo 2015), and artificial systems (Buckley-Kim-McGregor-Seth 2017 on active-inference robots). The convergence across substrates is itself the structural-realist signature.
+The framework has been applied across substrates: cortical microcircuits (Friston-Buzsaki-Kiebel 2017 on neuronal message passing under predictive coding), immune systems (the discontinuity-theory-of-immunity work of Pradeu, Jaeger, & Vivier 2013, which treats antigen recognition as a discrimination problem amenable to inference framings), gene-regulatory networks (Friston-Levin-Sengupta-Pezzulo 2015), and artificial systems (Buckley-Kim-McGregor-Seth 2017 on active-inference robots). The convergence across substrates is itself the structural-realist signature.
 
 ## The mapping
 

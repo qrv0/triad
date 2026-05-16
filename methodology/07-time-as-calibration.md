@@ -58,7 +58,7 @@ Structural-reading interpretation: the propagating light is part of the structur
 
 The past is not "back there in time." The past is encoded in the propagating signal as the signal's current state. P2 is what makes the past propagatable. P3 (the EM substrate as one instantiation of the triangle) is what carries the propagation. The structural reading of "seeing the past" is "reading the trajectory's state at the (location, calibration-time) of the emission point, conveyed to us by the EM substrate's structural propagation."
 
-This does not modify the empirical content of astronomy. The light arrived. It carries information about the emission state. What changes is the framing: there is no separate Past coordinate that "we are looking back to." There is one trajectory, with the past held as state in the propagating signal, and we are reading it.
+This does not contradict the empirical content of astronomy. The light arrived. It carries information about the emission state. The empirical predictions are identical to the standard reading. What differs is the ontological status of "the past": rather than a separate Past coordinate that we are looking back to, the past is structurally retained as state in the propagating signal, and we are reading that state. The empirical content is the same; the framing differs in what counts as the substrate of the past.
 
 ### The cosmological trajectory
 
@@ -70,7 +70,7 @@ The trajectory has internal direction (FDT-locked irreversibility at the cosmolo
 
 ### The experience of time for sufficiently complex entities
 
-[`../principles/03-coupling.md`](../principles/03-coupling.md) section "A logical consequence of P3" derives that a sufficiently complex sustained instantiation of the triangle has the structural form of an entity that represents itself. Under this reading, "consciousness" is the structural property of self-representation at the relevant complexity threshold.
+[`../principles/03-coupling.md`](../principles/03-coupling.md) section "A logical consequence of P3" derives that a sufficiently complex sustained instantiation of the triangle has the structural form of an entity that represents itself. Under this *structural reading*, what is conventionally called "consciousness" picks out the structural property of self-representation at the relevant complexity threshold; the claim does not commit to a specific metaphysics of subjective experience (see the "What this does not commit to" section below for the explicit bracketing).
 
 For such an entity inside a trajectory with FDT-locked direction, the entity's self-representation reads its own trajectory's direction from inside the trajectory. The reading registers as the experience of time passing: the entity finds itself at a moving point within an unfolding that has structural direction. The experience is real. The external Time coordinate it would seem to require to be real is not needed; the experience is the entity's self-reading of the trajectory's direction.
 

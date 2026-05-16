@@ -51,6 +51,10 @@ Per [`../methodology/07-time-as-calibration.md`](../methodology/07-time-as-calib
 
 The cross-substrate consistency check is interesting: cortical avalanches operate at $\tau_{\text{drive}}/\tau_{\text{relax}} \sim 10-100$ (relatively modest scale separation; cortex is not a strict-SOC system but operates in a related regime). Tectonic SOC has $\tau_{\text{drive}}/\tau_{\text{relax}} \sim 10^6$ or more. The structural form is preserved across this range; the substrate-specific scale separation modulates the strength of critical scaling.
 
+## On the coupling default in this substrate
+
+SOC substrates are coupled systems by definition: the BTW sandpile has slow drive (sand addition) plus fast dissipative relaxation (avalanches with grains lost at the boundary); neuronal-avalanche cortex has the same coupling structure as the broader cortical substrate (see interface 09); the seismic substrate is driven by tectonic loading and dissipates by earthquakes. None of these substrates exhibits criticality in the isolated limit; criticality is precisely a property of the drive-and-dissipate coupled regime. The structural prediction is that the equation's release transition produces SOC-like phenomenology when P3 is active (effective drive plus FDT-locked dissipation). Tests of this correspondence that mute P3 ($\gamma_0 = 0$, $T = 0$, no drive) cannot evaluate the prediction: the equation in that regime has no analog of the drive-and-relax cycle and methodology/02 identifies the isolated regime as the abstraction the work argues against.
+
 ## What this correspondence does and does not establish
 
 It does not establish that the present equation is the underlying description of SOC substrates. The substrate-specific descriptions (BTW cellular automata, branching-process models, field-theoretic descriptions for the SOC universality class) are appropriate for substrate-specific quantitative work. The present equation, applied to SOC-class regimes, captures the structural form but does not capture the substrate-specific details (the precise BTW relaxation rule, the cortical branching parameter, etc.).

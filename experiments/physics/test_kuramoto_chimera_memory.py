@@ -1,4 +1,12 @@
-"""Test prediction P10.1 (interface 10 Kuramoto synchronization).
+"""WAVE 1 RETRACTED 2026-05-16: this script violates P3 (gamma_0=0, T=0;
+isolated regime, no FDT-locked bath). Per methodology/02-limits-of-falsification.md,
+isolation is the abstraction the work argues against; testing the equation's
+predictions in the isolated regime is structurally incoherent. DO NOT RUN.
+See ../../results/09-kuramoto-chimera-memory.md retraction note for context.
+A wave-2 redesigned version with FDT-locked phase noise is required for any
+methodologically valid test of P10.1.
+
+Test prediction P10.1 (interface 10 Kuramoto synchronization).
 
 Prediction: chimera-state stability in memory-Kuramoto ensembles is maximal
 in the parameter window where the memory kernel timescale tau_mem is

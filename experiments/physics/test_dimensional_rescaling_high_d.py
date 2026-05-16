@@ -1,4 +1,11 @@
-"""Test the dimensional-rescaling scaling Sigma_lambda/|Lambda| in d=4 and d=5.
+"""WAVE 1 RETRACTED 2026-05-16: this script violates P3 (gamma_0=0, T=0;
+isolated regime, no FDT-locked field noise). Per methodology/02-limits-of-falsification.md,
+isolation is the abstraction the work argues against. DO NOT RUN.
+See ../../results/10-dimensional-rescaling-higher-d.md retraction note for context.
+A wave-2 redesigned version with FDT-locked stochastic forcing on the field
+is required for any methodologically valid test of the dimensional scaling.
+
+Test the dimensional-rescaling scaling Sigma_lambda/|Lambda| in d=4 and d=5.
 
 Extends results/06-dimensional-rescaling.md from 2D and 3D to 4D and 5D.
 

@@ -1,4 +1,12 @@
-"""Test prediction P6.3 (interface 06 state space models).
+"""WAVE 1 RETRACTED 2026-05-16: this script does not inject FDT-locked
+noise; the only stochasticity comes from SGD batch sampling. Per
+methodology/02-limits-of-falsification.md, isolation is the abstraction the
+work argues against. DO NOT RUN as a test of P6.3 in this form.
+See ../../results/12-cubic-ssm-simsiam.md retraction note for context.
+A wave-2 redesigned version with FDT-locked noise injection into the SSM
+state is required for any methodologically valid test of P6.3.
+
+Test prediction P6.3 (interface 06 state space models).
 
 Prediction: cubic-nonlinearity in SSM state (the structural feature the
 Memory-NLS equation adds to the bare diagonal-state SSM) should suppress

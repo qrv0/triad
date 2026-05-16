@@ -14,6 +14,10 @@ Three findings from the Anthropic mechanistic interpretability program and adjac
 
 The empirical picture: the categorical structure of language exists in the model's representations, but it is not held as state in addressable architectural components. It is recoverable, but recovery requires a separate decomposition step that is not part of the architecture's forward pass.
 
+## Evidentiary class
+
+This correspondence sits in the third class of the three-class division catalogued in [`README.md`](README.md): mechanism-shape and convergent-program correspondence. Specifically, it is a *convergent-program correspondence*: the structural argument advanced by P1+P2+P3 and an independent empirical research program (Anthropic mechanistic interpretability, plus adjacent work in superposition and sparse-feature decomposition) reach the same conclusion about the encoding format of attention-only architectures. Neither program has been adjusted to fit the other; the convergence is the structural-realist signature this correspondence rests on.
+
 ## The structural reading
 
 The present equation contains the auxiliary fields $\{y_j(t)\}$ with timescales $\{\nu_j\}$ as explicit dynamical state, governed by
