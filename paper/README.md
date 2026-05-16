@@ -22,7 +22,7 @@ The repository documents are designed to be self-contained; a reader who works t
 6. **Two-Dimensional Phenomenology**, Anti-collapse, crystallization, vibration.
 7. **Three-Dimensional Extension**, Supercritical anti-collapse, BCC selection, dimensional rescaling.
 8. **Methodological Position**, Structural realism, limits of falsification.
-9. **Cross-Domain Structural Correspondences**, Six interfaces, including §8.6 on state space models.
+9. **Cross-Domain Structural Correspondences**, Nine interfaces (see [`../interfaces/`](../interfaces/)), including the mathematical SSM equivalence and the convergent-program engagements with mechanistic interpretability and the critical-brain literature.
 10. **Discussion**, Structure as the invariant.
 11. **Limits and Open Questions**, What is not claimed; what is next.
 12. **References**, Full bibliography.
@@ -50,6 +50,6 @@ The figures referenced in the paper are output by the experiment scripts in [`..
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/mnsm},
-  note   = {Three structural principles, one equation, seven cross-domain instantiations.}
+  note   = {Three structural principles, one equation, nine cross-domain instantiations.}
 }
 ```

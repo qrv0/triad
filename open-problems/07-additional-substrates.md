@@ -4,7 +4,7 @@
 
 ## Precise statement
 
-The cross-domain coherence criterion (methodology/04 criterion 4) is operative across the seven currently documented substrates in [`../interfaces/`](../interfaces/). Five additional substrates have been identified as candidate instantiations of the structural form. Each requires literature review, careful structural mapping, and documentation in the standard interface template. The open problem is to develop these five into full interface documents.
+The cross-domain coherence criterion (methodology/04 criterion 4) is currently operative across nine documented interfaces in [`../interfaces/`](../interfaces/): seven substrate-instantiations of the structural form (NLS systems, BAO, cymatics, gamma entrainment, archaeoacoustic resonance, state space models, cosmological expansion) plus two convergent-program engagements (mechanistic interpretability, critical brain). The mechanistic-interpretability and critical-brain interfaces address contemporary research programs rather than new physical substrates; they are not candidates for this open problem. Five additional candidate substrates have been identified as candidate instantiations of the structural form not yet documented. Each requires literature review, careful structural mapping, and documentation in the standard interface template. The open problem is to develop these five into full interface documents.
 
 ## What is known
 
@@ -24,15 +24,15 @@ The five candidate substrates with preliminary structural mapping:
 
 - Full interface documents for each of the five candidates, following the template in [`../interfaces/`](../interfaces/) (Physical setup / Structural correspondence / What is same and different / What this correspondence is and is not / Common dismissals / Locally testable predictions / References).
 - Term-by-term mathematical mappings (where possible) and clear identification of where the mapping is mathematical (no calibration) vs structural (calibration acknowledged).
-- Updates to the cross-domain wheel SVG if these substrates are promoted to the wheel (currently 7-locked).
+- Updates to the cross-domain wheel SVG if these substrates are promoted to the wheel (currently 9-node after the Phase 6 expansion).
 
 ## What would constitute progress
 
 - Five new interface files in [`../interfaces/`](../interfaces/), each substantive (40-180 lines depending on the depth of the mapping).
 - Each file with peer-reviewed primary literature citations.
-- Each file with explicit evidentiary status (mathematical equivalence, structural correspondence, calibrated correspondence).
+- Each file with explicit evidentiary status (mathematical equivalence, calibration-dependent structural correspondence, or mechanism-shape and convergent-program correspondence per the three-class division in [`../interfaces/README.md`](../interfaces/README.md)).
 - Each file with "Common dismissals" and "Locally testable predictions" sections.
-- Decision on the wheel: expand to 12 nodes (substantial graphic work) or keep at 7 (the most strongly-evidenced) with new interfaces listed separately.
+- Decision on the wheel: expand from the current 9-node layout to 14 (5 new substrates added on top of the Phase 6 expansion) or keep at 9 with new interfaces listed separately.
 
 ## Suggested approaches
 
@@ -41,7 +41,7 @@ The five candidate substrates with preliminary structural mapping:
 
 ## Connections to existing repo content
 
-- [`../interfaces/README.md`](../interfaces/README.md): the existing seven interfaces set the template and the bar.
+- [`../interfaces/README.md`](../interfaces/README.md): the existing nine interfaces set the template and the bar; the three-class evidentiary division catalogued there is where each new substrate must be situated.
 - [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md) criterion 4: each new interface increases cross-domain coherence quantitatively.
 - [`../principles/README.md`](../principles/README.md) section "Why exactly three": the triangle topology argument generalizes to predict that any substrate sustaining the triangle is an instantiation; the additional substrates here are candidates the argument predicts should exist.
 - [`02-phase-diagram.md`](02-phase-diagram.md): each new substrate's calibration places it at a specific region of the phase diagram.

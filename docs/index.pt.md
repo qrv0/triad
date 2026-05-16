@@ -2,7 +2,7 @@
 title: Início
 description: >-
   Modelos de Estado Memória-Não-Lineares: três princípios estruturais, uma
-  equação, sete instanciações cross-domain. Derivada da observação, não
+  equação, nove instanciações cross-domain. Derivada da observação, não
   montada a partir da literatura.
 hide:
   - navigation
@@ -14,7 +14,7 @@ hide:
 <div class="mnsm-hero__visual" markdown>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../_docs_assets/cross-domain-wheel-dark.svg">
-  <img src="../_docs_assets/cross-domain-wheel-light.svg" alt="Roda cross-domain: uma equação, sete substratos" class="mnsm-wheel">
+  <img src="../_docs_assets/cross-domain-wheel-light.svg" alt="Roda cross-domain: uma equação, nove substratos" class="mnsm-wheel">
 </picture>
 </div>
 
@@ -22,7 +22,7 @@ hide:
 
 <div class="mnsm-eyebrow">Memory-Nonlinear State Models</div>
 
-# Uma equação. Sete substratos.
+# Uma equação. Nove substratos.
 
 Uma extensão não-linear de modelos de estado-espaço estruturados, derivada
 de três princípios sobre entidades estendidas persistentes. A mesma forma
@@ -113,7 +113,7 @@ A equação é derivada destes. Não montada a partir da literatura prévia, der
 
 <div class="mnsm-section-head" markdown>
 <span class="mnsm-section-tag">Cross-Domain</span>
-## Sete instanciações da mesma equação
+## Nove instanciações da mesma equação
 Cada substrato produz independentemente a mesma forma matemática. A afirmação
 é estrutural: a equação captura um padrão de comportamento persistente
 invariante sob mudança de substrato.
@@ -189,6 +189,29 @@ invariante sob mudança de substrato.
     acoplamento de memória de longo prazo na formulação de campo auxiliar.
 
     [→ Ler interface](interfaces/07-cosmological-expansion.md)
+
+-   <span class="mnsm-substrate-sig sig--interp">:material-magnify-scan:</span>
+    <span class="mnsm-substrate-num">08 · ML / Interp</span>
+    **Interpretabilidade Mecanística**
+
+    Sistemas só de atenção não possuem a hierarquia de memória multi-escala
+    de P2; o argumento estrutural prevê que devem codificar estrutura
+    categórica como projeções superpostas, exatamente o que o programa de
+    interpretabilidade da Anthropic recupera por decomposição esparsa.
+
+    [→ Ler interface](interfaces/08-mechanistic-interpretability.md)
+
+-   <span class="mnsm-substrate-sig sig--critical">:material-graph-outline:</span>
+    <span class="mnsm-substrate-num">09 · Neuro / Criticalidade</span>
+    **Cérebro Crítico**
+
+    Avalanches neuronais, espectros 1/f, resposta de banda larga sem
+    escala característica: a fenomenologia que a literatura do cérebro
+    crítico documenta no córtex é a fenomenologia que a equação produz
+    em seu regime cristalino de absorção banda larga, por forma
+    estrutural e não por ajuste de parâmetros.
+
+    [→ Ler interface](interfaces/09-critical-brain.md)
 
 </div>
 
@@ -340,7 +363,7 @@ abrangência.
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/mnsm},
-  note   = {Three structural principles, one equation, seven cross-domain instantiations.}
+  note   = {Three structural principles, one equation, nine cross-domain instantiations.}
 }
 ```
 

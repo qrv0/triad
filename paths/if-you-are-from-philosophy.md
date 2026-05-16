@@ -103,28 +103,33 @@ The work treats the **cross-domain co-occurrence** of a specific mathematical
 structure as the principal evidence for the structural-realist claim about
 that structure.
 
-The seven cross-domain interfaces in
+The nine cross-domain interfaces in
 [`../interfaces/`](../interfaces/README.md) are presented as **independent
-instances** of the same mathematical form, drawn from physically and
-computationally distinct domains:
+instances** of the same mathematical form, drawn from physically,
+biologically, and computationally distinct domains:
 
 | Interface | Type of correspondence | Evidentiary weight |
 |---|---|---|
 | Other NLS systems (BEC, optics) | Mathematical (same equation) | Highest, no calibration |
 | State space models (S4, Mamba, RWKV) | Mathematical (exact equivalence) | Highest, no calibration |
-| Baryon acoustic oscillations | Mathematical (memory-modulated wave eq.) | High, derived form |
-| Cosmological expansion | Mathematical (memory-coupled Friedmann) | High, derived form |
-| Chladni cymatics | Structural (same selection mechanism) | Medium, same dynamics, different scale |
-| Gamma neural entrainment | Calibrated (band match under unit choice) | Lower, depends on identification |
-| Archaeoacoustic resonance | Calibrated (specific frequency match) | Lowest, most calibration-sensitive |
+| Baryon acoustic oscillations | Calibration-dependent (memory-modulated wave eq.) | High, derived form |
+| Chladni cymatics | Calibration-dependent (same selection mechanism) | Medium, same dynamics, different scale |
+| Gamma neural entrainment | Calibration-dependent (band match under unit choice) | Lower, depends on identification |
+| Archaeoacoustic resonance | Calibration-dependent (specific frequency match) | Lowest of the four, most calibration-sensitive |
+| Cosmological expansion | Mechanism-shape (trajectory of equation = trajectory of cosmos) | Medium, structural at mechanism level |
+| Mechanistic interpretability | Convergent-program (predicted absence of P2 ↔ observed superposition) | Medium, two independent programs converge |
+| Critical brain | Convergent-program (broadband phenomenology matches both substrates) | Medium, two independent programs converge |
 
-The work distinguishes carefully between correspondences that are
-**mathematical** (no calibration required) and those that are **structural-
-but-calibrated** (the form is the same but specific numerical values
-require a choice of dimensional units). It **does not treat all seven as
-equally weighty evidence**; the discussion of evidentiary weight is in
-[`../interfaces/README.md`](../interfaces/README.md) and the individual
-interface documents.
+The work distinguishes carefully between three classes of correspondence:
+**mathematical equivalence** (no calibration required), **calibration-
+dependent structural correspondence** (the form is the same but specific
+numerical values require a choice of dimensional units), and **mechanism-
+shape or convergent-program correspondence** (the trajectory or
+phenomenology matches between independent substrates without committing
+to a specific calibration). It **does not treat all nine as equally weighty
+evidence**; the discussion of the three-class division and the per-mapping
+evidentiary weight is in [`../interfaces/README.md`](../interfaces/README.md)
+and the individual interface documents.
 
 ## The reflexive consistency of the work
 
@@ -265,7 +270,7 @@ taking the observation seriously rather than ignoring it.
 <div class="path-reading-card" markdown>
 <span class="step">05 · Evidence</span>
 <p class="title">[Cross-domain interfaces](../interfaces/README.md)</p>
-<p class="blurb">The seven independent instances of the structure. Calibrated and uncalibrated correspondences distinguished.</p>
+<p class="blurb">The nine independent instances of the structure, divided into three evidentiary classes (mathematical equivalence, calibration-dependent structural correspondence, mechanism-shape and convergent-program correspondence).</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">06 · Strongest evidence</span>

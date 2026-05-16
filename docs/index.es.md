@@ -2,7 +2,7 @@
 title: Inicio
 description: >-
   Modelos de Estado de Memoria-No-Lineales: tres principios estructurales,
-  una ecuación, siete instanciaciones interdominio. Derivada de la
+  una ecuación, nueve instanciaciones interdominio. Derivada de la
   observación, no ensamblada a partir de la literatura.
 hide:
   - navigation
@@ -14,7 +14,7 @@ hide:
 <div class="mnsm-hero__visual" markdown>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../_docs_assets/cross-domain-wheel-dark.svg">
-  <img src="../_docs_assets/cross-domain-wheel-light.svg" alt="Rueda interdominio: una ecuación, siete substratos" class="mnsm-wheel">
+  <img src="../_docs_assets/cross-domain-wheel-light.svg" alt="Rueda interdominio: una ecuación, nueve substratos" class="mnsm-wheel">
 </picture>
 </div>
 
@@ -22,7 +22,7 @@ hide:
 
 <div class="mnsm-eyebrow">Memory-Nonlinear State Models</div>
 
-# Una ecuación. Siete substratos.
+# Una ecuación. Nueve substratos.
 
 Una extensión no-lineal de modelos de espacio de estados estructurados,
 derivada de tres principios sobre entidades extendidas persistentes. La
@@ -115,7 +115,7 @@ La ecuación se deriva de estos. No ensamblada a partir de la literatura previa,
 
 <div class="mnsm-section-head" markdown>
 <span class="mnsm-section-tag">Interdominio</span>
-## Siete instanciaciones de la misma ecuación
+## Nueve instanciaciones de la misma ecuación
 Cada substrato produce independientemente la misma forma matemática. La
 afirmación es estructural: la ecuación captura un patrón de comportamiento
 persistente invariante bajo cambio de substrato.
@@ -194,6 +194,30 @@ persistente invariante bajo cambio de substrato.
     auxiliar.
 
     [→ Leer interfaz](interfaces/07-cosmological-expansion.md)
+
+-   <span class="mnsm-substrate-sig sig--interp">:material-magnify-scan:</span>
+    <span class="mnsm-substrate-num">08 · ML / Interp</span>
+    **Interpretabilidad Mecanística**
+
+    Los sistemas solo de atención no poseen la jerarquía de memoria
+    multi-escala de P2; el argumento estructural predice que deben
+    codificar estructura categórica como proyecciones superpuestas,
+    exactamente lo que el programa de interpretabilidad de Anthropic
+    recupera mediante descomposición esparsa.
+
+    [→ Leer interfaz](interfaces/08-mechanistic-interpretability.md)
+
+-   <span class="mnsm-substrate-sig sig--critical">:material-graph-outline:</span>
+    <span class="mnsm-substrate-num">09 · Neuro / Criticalidad</span>
+    **Cerebro Crítico**
+
+    Avalanchas neuronales, espectros 1/f, respuesta de banda ancha sin
+    escala característica: la fenomenología que la literatura del cerebro
+    crítico documenta en la corteza es la fenomenología que la ecuación
+    produce en su régimen cristalino de absorción de banda ancha, por
+    forma estructural y no por ajuste de parámetros.
+
+    [→ Leer interfaz](interfaces/09-critical-brain.md)
 
 </div>
 
@@ -347,7 +371,7 @@ parsimonia, exhaustividad.
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/mnsm},
-  note   = {Three structural principles, one equation, seven cross-domain instantiations.}
+  note   = {Three structural principles, one equation, nine cross-domain instantiations.}
 }
 ```
 

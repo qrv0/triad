@@ -54,7 +54,7 @@ None of these is an axiom. Each follows from the dynamics of the equation that t
 
 **Statement.** The structural form of the theory must appear in independently documented domains. The appearance must be at the level of mathematical form and not merely at the level of metaphor. Cross-domain coherence is the principal test of structural realism: a structural theory that does not exhibit its form elsewhere is not structurally robust.
 
-**Assessment for this work.** The six interfaces in [`../interfaces/`](../interfaces/) document the structural form's appearance in:
+**Assessment for this work.** The nine interfaces in [`../interfaces/`](../interfaces/) document the structural form's appearance in:
 
 1. Other instances of nonlinear Schrödinger dynamics (BEC, optics, oceanography, plasma), mathematical form identical at the level of the bare NLS plus the natural domain-specific extensions.
 2. Baryon acoustic oscillations in cosmological structure formation, structural form (wave propagation in a self-interacting coupled medium) identical at the relevant level of abstraction.
@@ -62,10 +62,13 @@ None of these is an axiom. Each follows from the dynamics of the equation that t
 4. Gamma-frequency neural entrainment, structural form (broadband absorption by a self-organized oscillating medium with memory hierarchy) identical, with one specific frequency in the band documented as biologically active.
 5. Low-frequency acoustic resonance in megalithic chambers, under one specific dimensional identification, the equation's two principal frequency modes correspond to measured resonance bands.
 6. Structured state space models, auxiliary-field equation is mathematically identical, term by term, to the diagonal SSM update.
+7. Cosmological expansion as anti-collapse release, the trajectory the equation produces in laboratory anti-collapse simulation (concentrated state, lag, overshoot, release, structure formation, sustained expansion) has the same mechanism shape as the cosmological trajectory.
+8. Mechanistic interpretability of attention-based language models, the structural prediction that an architecture lacking P2's auxiliary-field memory hierarchy must encode categorical structure as superposed projections is what the Anthropic mech interp program independently recovers via sparse-dictionary decomposition.
+9. Critical brain dynamics, the broadband-multi-timescale phenomenology that the critical-brain literature documents in cortex (neuronal avalanches, 1/f spectra, scale-free response) is the phenomenology the equation produces in its broadband-absorbing crystalline regime.
 
-The six mappings are independent: each is sourced from a separate body of peer-reviewed literature and does not depend on the others. The state space model correspondence is the mathematically exact one; the others vary in calibration sensitivity. The full set is the cross-domain evidence.
+The nine mappings are independent: each is sourced from a separate body of peer-reviewed literature and does not depend on the others. The state space model correspondence is the mathematically exact one; the others vary in evidentiary type, falling into three classes catalogued in [`../interfaces/README.md`](../interfaces/README.md): mathematical equivalence, calibration-dependent structural correspondence, and mechanism-shape or convergent-program correspondence. The full set is the cross-domain evidence.
 
-**Verdict.** The criterion is satisfied at strength varying across the six interfaces. The state space model interface alone would be sufficient to establish that the structural form appears elsewhere; the accumulation of the other five increases the structural coherence claim.
+**Verdict.** The criterion is satisfied at strength varying across the nine interfaces. The state space model interface alone would be sufficient to establish that the structural form appears elsewhere; the accumulation of the other eight increases the structural coherence claim.
 
 ## Criterion 5: Parsimony
 

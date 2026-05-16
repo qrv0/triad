@@ -10,6 +10,14 @@ Progress is structural-realist: a result that strengthens cross-domain coherence
 
 Local-falsifiable predictions remain locally falsifiable per [`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md). A failed reproduction of a numerical result, a counter-derivation, an empirical observation contradicting a predicted observational signature, all constitute local falsification of specific claims. The global structural claim is evaluated by the six criteria of [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md); local failures shift evidentiary weight without single-experiment-refuting the structural claim.
 
+## Recently completed
+
+- **Mechanistic interpretability engagement.** [`interfaces/08-mechanistic-interpretability.md`](interfaces/08-mechanistic-interpretability.md). Structural mapping between MNSM's P2 (auxiliary-field memory hierarchy) and the observation, documented by the Anthropic mechanistic-interpretability program (Elhage 2022, Bricken 2023, Templeton 2024), that attention-only architectures encode categorical structure as superposed projections recoverable only by sparse-dictionary decomposition. The convergence is structural: the predicted absence and the empirical absence match. The interface includes a section on the recursive position (the assistant writing the interface is an instance of the architecture being analyzed).
+
+- **Critical brain hypothesis engagement.** [`interfaces/09-critical-brain.md`](interfaces/09-critical-brain.md). Structural mapping between MNSM's broadband-absorbing crystalline regime and the observable phenomenology the critical-brain literature documents in cortex (Beggs-Plenz 2003 neuronal avalanches, Chialvo 2010, Mora-Bialek 2011, Linkenkaer-Hansen 2001 long-range temporal correlations). The match is at the observable level (broadband multi-timescale dynamics, phase-transition-like robustness without parameter tuning); the relationship to technical self-organized criticality is left open as a research question.
+
+The two interfaces extend the cross-domain coherence ledger from seven to nine substrates and operationalize the Phase 6 deliverable of the active-expansion plan.
+
 ## Six-month horizon
 
 Items at this horizon are tractable with focused effort. They strengthen the existing claims rather than extending into new territory.
@@ -18,7 +26,7 @@ Items at this horizon are tractable with focused effort. They strengthen the exi
 
 - **Phase diagram of the equation** ([`open-problems/02-phase-diagram.md`](open-problems/02-phase-diagram.md)). The full $(\Lambda, \Sigma\lambda, \nu_j, \sigma, \Gamma, T)$ parameter space mapped with regime classification. Constitutes progress: a figure (or set of figures) presenting 2D slices with each region color-coded by qualitative regime, with reproduction scripts.
 
-- **Locally testable predictions per interface** (Phase 2 of the active-expansion plan). Each interface document in [`interfaces/`](interfaces/) gets an explicit "Locally testable predictions and observational signatures" section distinguishing local predictions (falsifiable by standard experiment) from the global structural claim. Constitutes progress: seven interface files updated with consistent format.
+- **Locally testable predictions per interface** (Phase 2 of the active-expansion plan; the existing seven interfaces 01-07 are done, the two new interfaces 08-09 include the section from the start). Each interface document in [`interfaces/`](interfaces/) has an explicit "Locally testable predictions and observational signatures" section distinguishing local predictions (falsifiable by standard experiment) from the global structural claim.
 
 - **Calibration philosophy formalized** ([`open-problems/08-calibration-philosophy.md`](open-problems/08-calibration-philosophy.md), promoted to `methodology/06-calibration-philosophy.md`). A decision procedure for when calibrations matter and how cross-interface consistency operates. Constitutes progress: the methodology document is written and the case-by-case treatment in interfaces 04 and 05 is referenced to the formalization.
 
@@ -30,13 +38,11 @@ Items at this horizon are substantial work requiring sustained effort.
 
 - **Renormalization-group analysis** ([`open-problems/04-continuum-rg.md`](open-problems/04-continuum-rg.md)). One-loop beta functions for the principal couplings; fixed-point structure; identification of universal vs non-universal features. Constitutes progress: a derivation in standard field-theoretic format with cross-references to the established universality-class catalogue (Hohenberg-Halperin Models A-J).
 
-- **Three additional cross-domain interfaces.** Beyond the two at the six-month horizon, the remaining three candidates (immune affinity maturation, active matter, self-organized criticality) developed into interface documents. Constitutes progress: cross-domain coherence criterion 4 supported by twelve documented substrates instead of seven.
+- **Three additional cross-domain interfaces.** Beyond the two at the six-month horizon, the remaining three candidates (immune affinity maturation, active matter, self-organized criticality) developed into interface documents. Constitutes progress: cross-domain coherence criterion 4 supported by fourteen documented interfaces instead of the current nine.
 
 - **Engineering pattern for moderate AGI requirements** ([`open-problems/06-engineering-moderate-requirements.md`](open-problems/06-engineering-moderate-requirements.md)). Concrete architectural patterns satisfying methodology/05 requirements 7 and 8 (environmental coupling without identity loss; stable self-modification), demonstrated at small scale. Constitutes progress: implementable patterns documented in [`implementation/neural/`](implementation/neural/) with reproducible code and explicit structural-mechanism isolation.
 
-- **Mechanistic interpretability engagement** ([`interfaces/`](interfaces/) extension). Structural mapping between MNSM and contemporary mech interp findings (Anthropic interpretability program, sparse autoencoders, polysemantic neurons, superposition). The structural prediction that attention-only systems lack the multi-timescale memory hierarchy is convergent with the interp observation that representations are superposed rather than sparse; mapping this rigorously is the work. Constitutes progress: a new interface document positioned for the mech interp community.
-
-- **Critical brain hypothesis engagement** (similarly). Structural mapping between MNSM and the critical brain hypothesis (Beggs-Plenz onwards). The MNSM crystalline state has broadband absorption and power-law-like spectrum which are the observable signatures of criticality. Constitutes progress: a new interface document positioned for the criticality community.
+- **Sharpening the predictions named in interfaces 08 and 09.** The Phase-6 interfaces (mechanistic interpretability, critical brain) name specific locally-testable predictions (P13.x and P14.x in the respective documents, see "Locally testable predictions and observational signatures" sections). Sharpening these into experimental protocols at small scale (for the SAE-on-SSM predictions of 08) and at standard-methodology scale (for the avalanche-and-1/f predictions of 09) is the next work on those interfaces. Constitutes progress: at least one prediction from each interface moved from "untested" to "tested" status.
 
 ## Twenty-four-month horizon
 
@@ -54,11 +60,11 @@ Items at this horizon are research items in the strong sense: genuinely open mat
 
 The following active research programs are working on questions that share structural elements with mnsm. Engagement with these programs is welcomed and would strengthen cross-domain coherence.
 
-- **Anthropic interpretability** (Olah, Elhage, Bricken). Sparse autoencoders, superposition, polysemantic neurons. Convergent observation: attention-only systems have substrate-specific representational structure that the MNSM structural argument predicts as the absence of the multi-timescale memory hierarchy.
+- **Anthropic interpretability** (Olah, Elhage, Bricken). Sparse autoencoders, superposition, polysemantic neurons. Convergent observation: attention-only systems have substrate-specific representational structure that the MNSM structural argument predicts as the absence of the multi-timescale memory hierarchy. Structural mapping documented in [`interfaces/08-mechanistic-interpretability.md`](interfaces/08-mechanistic-interpretability.md); further engagement at the level of empirical testing the predictions named in that document is the next direction.
 
 - **Friston Free Energy Principle and active inference** (Friston, Parr, Pezzulo). Living systems minimize variational free energy via environmental coupling. Mapping to MNSM has the same triangle structure (field + memory + coupling); the connection has not been formalized.
 
-- **Critical brain hypothesis** (Beggs, Plenz, Chialvo, Mora-Bialek). Brain operates at edge of phase transition; observable signatures include neuronal avalanches, power-law distributions, broadband response. Mapping to MNSM's crystalline state with broadband absorption is structural; the connection has not been formalized.
+- **Critical brain hypothesis** (Beggs, Plenz, Chialvo, Mora-Bialek). Brain operates at edge of phase transition; observable signatures include neuronal avalanches, power-law distributions, broadband response. Structural mapping documented in [`interfaces/09-critical-brain.md`](interfaces/09-critical-brain.md); the SOC-vs-mechanism-shape question (whether MNSM's release transition is technically SOC) is left as open work.
 
 - **Self-organized criticality** (Bak, Tang, Wiesenfeld; later work by many authors). Systems organize to critical point without parameter tuning. Whether MNSM's release transition is technically SOC is open.
 

@@ -2,7 +2,7 @@
 title: Home
 description: >-
   Memory-Nonlinear State Models, three structural principles, one equation,
-  seven cross-domain instantiations. Derived from observation, not assembled
+  nine cross-domain instantiations. Derived from observation, not assembled
   from literature.
 hide:
   - navigation
@@ -14,7 +14,7 @@ hide:
 <div class="mnsm-hero__visual" markdown>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="_docs_assets/cross-domain-wheel-dark.svg">
-  <img src="_docs_assets/cross-domain-wheel-light.svg" alt="Cross-domain wheel, one equation, seven substrates" class="mnsm-wheel">
+  <img src="_docs_assets/cross-domain-wheel-light.svg" alt="Cross-domain wheel, one equation, nine substrates" class="mnsm-wheel">
 </picture>
 </div>
 
@@ -22,7 +22,7 @@ hide:
 
 <div class="mnsm-eyebrow">Memory-Nonlinear State Models</div>
 
-# One equation. Seven substrates.
+# One equation. Nine substrates.
 
 A nonlinear extension of structured state space models, derived from three
 principles about persistent extended entities. The same mathematical form
@@ -113,7 +113,7 @@ The equation is derived from these. Not assembled from prior literature, derived
 
 <div class="mnsm-section-head" markdown>
 <span class="mnsm-section-tag">Cross-Domain</span>
-## Seven instantiations of the same equation
+## Nine instantiations of the same equation
 Each substrate independently produces the same mathematical form. The claim
 is structural: the equation captures a pattern of persistent behavior
 invariant under change of substrate.
@@ -189,6 +189,28 @@ invariant under change of substrate.
     coupling in the auxiliary-field formulation.
 
     [→ Read interface](interfaces/07-cosmological-expansion.md)
+
+-   <span class="mnsm-substrate-sig sig--interp">:material-magnify-scan:</span>
+    <span class="mnsm-substrate-num">08 · ML / Interp</span>
+    **Mechanistic Interpretability**
+
+    Attention-only systems lack P2's auxiliary-field memory hierarchy; the
+    structural argument predicts they encode categorical structure as
+    superposed projections, which is what the Anthropic interpretability
+    program independently recovers via sparse-dictionary decomposition.
+
+    [→ Read interface](interfaces/08-mechanistic-interpretability.md)
+
+-   <span class="mnsm-substrate-sig sig--critical">:material-graph-outline:</span>
+    <span class="mnsm-substrate-num">09 · Neuro / Criticality</span>
+    **Critical Brain**
+
+    Neuronal avalanches, 1/f spectra, scale-free broadband response, the
+    phenomenology the critical-brain literature documents in cortex is the
+    phenomenology the equation produces in its broadband-absorbing
+    crystalline regime, by structural form rather than parameter tuning.
+
+    [→ Read interface](interfaces/09-critical-brain.md)
 
 </div>
 
@@ -336,7 +358,7 @@ comprehensiveness.
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/mnsm},
-  note   = {Three structural principles, one equation, seven cross-domain instantiations.}
+  note   = {Three structural principles, one equation, nine cross-domain instantiations.}
 }
 ```
 

@@ -2,7 +2,7 @@
 
 ### Memory-Nonlinear State Models
 
-**Three structural principles. One equation. Seven cross-domain instantiations.**
+**Three structural principles. One equation. Nine cross-domain instantiations.**
 
 [![License: MIT](https://img.shields.io/badge/Code_License-MIT-blue.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/Docs_License-CC_BY_4.0-lightgrey.svg)](LICENSE-docs)
@@ -12,10 +12,12 @@
 [![Paper](https://img.shields.io/badge/paper-manuscript.md-green)](paper/manuscript.md)
 
 > The same equation appears in 3D nonlinear Schrödinger fields, baryon acoustic
-> oscillations, gamma-frequency neural entrainment, megalithic stone-chamber
-> resonance, structured state space models, cosmological expansion, and
-> stable neural-network optimization. Derived from three observational axioms
-> about persistence, not assembled from prior literature.
+> oscillations, cymatic pattern formation, gamma-frequency neural entrainment,
+> megalithic stone-chamber resonance, structured state space models,
+> cosmological expansion, the architectural absence diagnosed by mechanistic
+> interpretability of attention-based systems, and the broadband phenomenology
+> documented by the critical-brain literature. Derived from three observational
+> axioms about persistence, not assembled from prior literature.
 
 ---
 
@@ -108,7 +110,7 @@ different as 3D field dynamics and neural network optimization.*
 | [`principles/`](principles/) | The three structural axioms (P1, P2, P3) |
 | [`equation/`](equation/) | Formal derivation, Markovian embedding, 2D and 3D forms, reductions to known equations |
 | [`results/`](results/) | Numerical findings: anti-collapse, crystallization, Bravais selection, vibration spectrum, dimensional rescaling |
-| [`interfaces/`](interfaces/) | Cross-domain mappings to BEC, cosmology, cymatics, neural gamma, archaeoacoustic resonance, state space models |
+| [`interfaces/`](interfaces/) | Cross-domain mappings: NLS instances (BEC, optics, water waves), BAO cosmology, cymatics, gamma-frequency neural entrainment, archaeoacoustic resonance, state space models, cosmological expansion, mechanistic interpretability, critical brain dynamics |
 | [`methodology/`](methodology/) | Structural-realist position, limits of falsification, the six criteria |
 | [`paths/`](paths/) | Reader-background-specific entry routes |
 | [`playground/`](playground/) | Interactive notebooks (Colab-runnable) |
@@ -270,7 +272,7 @@ All results use fixed random seeds and reproduce bit-for-bit on identical hardwa
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/mnsm},
-  note   = {Three structural principles, one equation, seven cross-domain instantiations.}
+  note   = {Three structural principles, one equation, nine cross-domain instantiations.}
 }
 ```
 
@@ -288,7 +290,7 @@ Documentation and paper: see [`LICENSE-docs`](LICENSE-docs).
 ## Status
 
 The mathematical core, the 2D and 3D physics results, the methodology, and
-the seven cross-domain interfaces are complete and documented. The Memory-NLS
+the nine cross-domain interfaces are complete and documented. The Memory-NLS
 equation is instantiated as a working PyTorch language model
 (`MemoryNLSLanguageModel`) at scales from 1.5M to 70M parameters and trained
 on multiple corpora (TinyShakespeare and enwik8) for up to 50,000 steps.
@@ -310,11 +312,12 @@ empirically verified at this stage in three substrates:
    degenerate to syntactically broken fragments during the optimization crash
    and only partially recover.
 
-The seven cross-domain interfaces document the structural form's appearance in
+The nine cross-domain interfaces document the structural form's appearance in
 other independently observed phenomena (other NLS instances, baryon acoustic
 oscillations, cymatic patterns, gamma-frequency neural entrainment,
 archaeoacoustic resonance, structured state space models, cosmological
-expansion). Each interface is calibration-acknowledged where relevant.
+expansion, mechanistic interpretability of attention systems, critical brain
+dynamics). Each interface is calibration-acknowledged where relevant.
 
 > The principle that isolation is temporary applies to this repository as well.
 > Issues, pull requests, and external mappings of the structure to further

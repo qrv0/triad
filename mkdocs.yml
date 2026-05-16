@@ -1,7 +1,7 @@
 site_name: mnsm
 site_description: >-
   Memory-Nonlinear State Models — three structural principles, one equation,
-  seven cross-domain instantiations. Derived from observational axioms about
+  nine cross-domain instantiations. Derived from observational axioms about
   persistence, not from prior ML literature.
 site_url: https://qrv0.github.io/mnsm/
 site_author: qrv0
@@ -153,7 +153,7 @@ plugins:
           site_name: mnsm
           site_description: >-
             Memory-Nonlinear State Models — three structural principles, one
-            equation, seven cross-domain instantiations.
+            equation, nine cross-domain instantiations.
         - locale: pt
           name: Português (BR)
           build: true
@@ -161,7 +161,7 @@ plugins:
           site_name: mnsm
           site_description: >-
             Modelos de Estado Memória-Não-Lineares — três princípios
-            estruturais, uma equação, sete instanciações cross-domain.
+            estruturais, uma equação, nove instanciações cross-domain.
           nav_translations:
             Home: Início
             Foundations: Fundamentos
@@ -185,6 +185,8 @@ plugins:
             'Archaeoacoustic Resonance': Ressonância Arqueoacústica
             'State Space Models': Modelos de Estado-Espaço
             'Cosmological Expansion': Expansão Cosmológica
+            'Mechanistic Interpretability': Interpretabilidade Mecanística
+            'Critical Brain': Cérebro Crítico
             Methodology: Metodologia
             'Structural Realism': Realismo Estrutural
             'Limits of Falsification': Limites da Falsificação
@@ -218,7 +220,7 @@ plugins:
           site_name: mnsm
           site_description: >-
             Modelos de Estado de Memoria-No-Lineales — tres principios
-            estructurales, una ecuación, siete instanciaciones interdominio.
+            estructurales, una ecuación, nueve instanciaciones interdominio.
           nav_translations:
             Home: Inicio
             Foundations: Fundamentos
@@ -242,6 +244,8 @@ plugins:
             'Archaeoacoustic Resonance': Resonancia Arqueoacústica
             'State Space Models': Modelos de Espacio de Estados
             'Cosmological Expansion': Expansión Cosmológica
+            'Mechanistic Interpretability': Interpretabilidad Mecanística
+            'Critical Brain': Cerebro Crítico
             Methodology: Metodología
             'Structural Realism': Realismo Estructural
             'Limits of Falsification': Límites de la Falsación
@@ -360,6 +364,8 @@ nav:
       - 'Archaeoacoustic Resonance': interfaces/05-archaeoacoustic-resonance.md
       - 'State Space Models': interfaces/06-state-space-models.md
       - 'Cosmological Expansion': interfaces/07-cosmological-expansion.md
+      - 'Mechanistic Interpretability': interfaces/08-mechanistic-interpretability.md
+      - 'Critical Brain': interfaces/09-critical-brain.md
 
   - Methodology:
       - 'Overview': methodology/README.md

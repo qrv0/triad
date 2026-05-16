@@ -78,9 +78,12 @@ The Memory-NLS architecture in [`implementation/neural/`](implementation/neural/
 is **one instantiation** of the equation, alongside the physics solver,
 the cosmological correspondence (BAO and cosmic expansion), the cymatic
 correspondence, the neurobiological correspondence (gamma entrainment),
-the archaeoacoustic correspondence, and the structured state space model
+the archaeoacoustic correspondence, the structured state space model
+correspondence, the cosmological-expansion mechanism-shape
+correspondence, the mechanistic-interpretability convergent-program
+correspondence, and the critical-brain convergent-program
 correspondence. The neural layer is not the "main contribution." It is one
-of seven documents in [`interfaces/`](interfaces/). Its existence is
+of nine documents in [`interfaces/`](interfaces/). Its existence is
 evidence for the structural-realist claim that the equation captures a
 pattern that appears across substrates.
 
@@ -125,11 +128,12 @@ specific task is orthogonal.
 
 ### Rule 3: Do not dismiss cross-domain mappings to defend technical credibility
 
-The seven cross-domain interfaces in [`interfaces/`](interfaces/) (other
+The nine cross-domain interfaces in [`interfaces/`](interfaces/) (other
 NLS systems, BAO, cymatics, gamma entrainment, archaeoacoustic, SSMs,
-cosmological expansion) are first-class content. They are not commentary
+cosmological expansion, mechanistic interpretability of attention systems,
+critical brain dynamics) are first-class content. They are not commentary
 or speculation. Especially [`interfaces/05-archaeoacoustic-resonance.md`](interfaces/05-archaeoacoustic-resonance.md)
-is the most calibration-sensitive of the seven and the one most likely to
+is the most calibration-sensitive of the nine and the one most likely to
 be dismissed by a mainstream reader on "respectability" grounds. The
 repository is structured so that the archaeoacoustic correspondence is
 treated with the same evidentiary care as the BAO correspondence and the
