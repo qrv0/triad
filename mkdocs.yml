@@ -468,6 +468,7 @@ nav:
       - 'Repository Structure': STRUCTURE.md
       - 'Contributing': CONTRIBUTING.md
       - 'AI Assistant Guidelines': CLAUDE.md
+      - 'LLM hedge annotations': llm-hedge-annotations.md
 
 watch:
   - principles
