@@ -10,11 +10,20 @@ This is the wave-2 redesigned test. Wave 1 ([`11-fdt-locked-noise-empirical.md`]
 
 ## Method
 
-The script [`../experiments/neural/test_fdt_locked_noise.py`](../experiments/neural/test_fdt_locked_noise.py) trains three Memory-NLS variants on TinyShakespeare with identical architecture (1.5M parameters) and identical training (AdamW, cosine LR, bfloat16, 8000 steps), differing only in the bath coupling:
+> **Hedge cleanup (2026-05-16).** This document was originally
+> presented with three variants, the third being a "Variant C
+> (isolated): $\gamma_0 = 0$, $T = 0$ for comparison". Per
+> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
+> that variant was a Rule A violation. The variant has been removed
+> from the test script and from this result document; the comparison
+> is now Variant A (FDT high) vs Variant B (FDT low), both in the
+> coupled regime. The structural prediction (trajectory variance
+> decreases as $\gamma_0$ grows in the coupled regime) is unchanged.
+
+The script [`../experiments/neural/test_fdt_locked_noise.py`](../experiments/neural/test_fdt_locked_noise.py) trains two Memory-NLS variants on TinyShakespeare with identical architecture (1.5M parameters) and identical training (AdamW, cosine LR, bfloat16, 8000 steps), differing only in the bath coupling strength:
 
 - **Variant A (FDT high)**: $\gamma_0 = 0.02$, $T = 0.01$ (P3 active at moderate-strong coupling).
 - **Variant B (FDT low)**: $\gamma_0 = 0.005$, $T = 0.01$ (P3 active at weak coupling).
-- **Variant C (isolated)**: $\gamma_0 = 0$, $T = 0$ (P3 muted; degenerate, for comparison).
 
 Comparison metrics: val-loss standard deviation across checkpoints, max single-step loss jump, count of loss spikes above 0.1.
 
@@ -24,18 +33,18 @@ Hardware required: PyTorch + CUDA. Wall time on RTX 4060: approximately 30-50 mi
 
 **Status: pending GPU execution.** Script is ready to run.
 
-| Metric | Variant A (γ=0.02) | Variant B (γ=0.005) | Variant C (isolated) |
-|---|---|---|---|
-| Final val perplexity | _pending_ | _pending_ | _pending_ |
-| Val loss std | _pending_ | _pending_ | _pending_ |
-| Max loss jump | _pending_ | _pending_ | _pending_ |
-| Spike count (Δval>0.1) | _pending_ | _pending_ | _pending_ |
+| Metric | Variant A (γ=0.02) | Variant B (γ=0.005) |
+|---|---|---|
+| Final val perplexity | _pending_ | _pending_ |
+| Val loss std | _pending_ | _pending_ |
+| Max loss jump | _pending_ | _pending_ |
+| Spike count (Δval>0.1) | _pending_ | _pending_ |
 
-After execution, the prediction is supported if trajectory variance DECREASES monotonically with $\gamma_0$ (isolated > FDT low > FDT high).
+After execution, the prediction is supported if trajectory variance is LOWER in Variant A (stronger coupling) than in Variant B (weaker coupling), per the structural reading that bath coupling stabilizes training trajectories.
 
 ## Status assignment
 
-Status: **script ready, pending GPU execution**. P3 is explicitly active (in 2 of 3 variants) and swept; the isolated regime is the degenerate limit, not the baseline.
+Status: **script ready, pending GPU execution**. Both variants run in the coupled regime per principles/03-coupling.md (Rule A); the test compares trajectory variance across two coupling strengths.
 
 ## Honest caveats
 

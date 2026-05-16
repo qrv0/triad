@@ -10,15 +10,26 @@ Wave-1 ([`12-cubic-ssm-simsiam.md`](12-cubic-ssm-simsiam.md)) was retracted for 
 
 ## Method
 
-The script [`../experiments/neural/test_simsiam_cubic_ssm.py`](../experiments/neural/test_simsiam_cubic_ssm.py) trains three SimSiam-style SSL variants on a synthetic clustered-sequences dataset, all WITHOUT stop-gradient:
+> **Hedge cleanup (2026-05-16).** This document was originally
+> presented with three variants, the third being "Variant C
+> (cubic_iso): $\Lambda = -0.5$ + $\gamma_0 = 0$, $T = 0$" framed as
+> "shows what wave-1 tested". Per
+> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
+> that variant was a Rule A violation. The variant has been removed
+> from the test script and from this result document; the comparison
+> is now Variant A (cubic_p3) vs Variant B (linear_p3), both in the
+> coupled regime. The structural prediction P6.3 (cubic state
+> nonlinearity prevents SimSiam collapse in the coupled regime) is
+> evaluated on the cubic vs linear comparison alone.
+
+The script [`../experiments/neural/test_simsiam_cubic_ssm.py`](../experiments/neural/test_simsiam_cubic_ssm.py) trains two SimSiam-style SSL variants on a synthetic clustered-sequences dataset, both WITHOUT stop-gradient and both with P3 active:
 
 - **Variant A (cubic_p3)**: $\Lambda = -0.5$ (cubic state nonlinearity) + $\gamma_0 = 0.02$, $T = 0.01$ (P3 active).
 - **Variant B (linear_p3)**: $\Lambda = 0$ (linear state) + same P3 noise.
-- **Variant C (cubic_iso)**: $\Lambda = -0.5$ + $\gamma_0 = 0$, $T = 0$ (degenerate; shows what wave-1 tested).
 
-The prediction P6.3 is supported if cubic_p3 maintains higher representation rank than linear_p3 (the cubic nonlinearity's role in preventing collapse is independent of bath coupling). Variant C is the degenerate isolated baseline.
+The prediction P6.3 is supported if cubic_p3 maintains higher representation rank than linear_p3, isolating the structural role of the cubic nonlinearity in preventing collapse.
 
-Architecture: input proj → Memory-NLS layer (4 heads, $\nu_{\min}=0.5$, $\nu_{\max}=10$) → LayerNorm → temporal mean pool → projection head (128→256→64) → SimSiam predictor (64→32→64).
+Architecture: input proj : Memory-NLS layer (4 heads, $\nu_{\min}=0.5$, $\nu_{\max}=10$) : LayerNorm : temporal mean pool : projection head (128:256:64) : SimSiam predictor (64:32:64).
 
 Synthetic dataset: 8,192 train + 1,024 val sequences, length 32, dim 64, 16 clusters with additive noise.
 
@@ -30,17 +41,17 @@ Hardware required: PyTorch + CUDA. Wall time: 30-60 min on RTX 4060.
 
 **Status: pending GPU execution.** Script is ready to run.
 
-| Metric | cubic_p3 ($\Lambda=-0.5$, γ=0.02) | linear_p3 ($\Lambda=0$, γ=0.02) | cubic_iso ($\Lambda=-0.5$, γ=0) |
-|---|---|---|---|
-| Final effective rank | _pending_ | _pending_ | _pending_ |
-| Final uniformity | _pending_ | _pending_ | _pending_ |
-| Final loss | _pending_ | _pending_ | _pending_ |
+| Metric | cubic_p3 ($\Lambda=-0.5$, γ=0.02) | linear_p3 ($\Lambda=0$, γ=0.02) |
+|---|---|---|
+| Final effective rank | _pending_ | _pending_ |
+| Final uniformity | _pending_ | _pending_ |
+| Final loss | _pending_ | _pending_ |
 
-P6.3 supported if: cubic_p3 effective rank substantially higher than linear_p3, regardless of cubic_iso. The cubic_iso comparison reveals whether the wave-1 isolated test would have shown collapse (which the structural prediction expects to vary with P3 strength).
+P6.3 supported if: cubic_p3 effective rank substantially higher than linear_p3.
 
 ## Status assignment
 
-Status: **script ready, pending GPU execution**. P3 is explicitly active in 2 of 3 variants. The isolated variant C is included as the degenerate point, not as the baseline.
+Status: **script ready, pending GPU execution**. Both variants run with P3 active per principles/03-coupling.md (Rule A); the test isolates the structural role of cubic vs linear state nonlinearity within the coupled regime.
 
 ## Honest caveats
 

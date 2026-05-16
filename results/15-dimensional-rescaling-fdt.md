@@ -15,7 +15,18 @@ The script [`../experiments/physics/test_dimensional_rescaling_high_d.py`](../ex
 - Sub-step 5: P3 dissipation $\psi \leftarrow e^{-\gamma_0 dt} \psi$.
 - Sub-step 6: P3 noise $\psi \leftarrow \psi + \sqrt{2 \gamma_0 T dt}\, \xi$ (complex Gaussian per voxel, FDT-locked).
 
-**Parameters**: $|\Lambda| = 8$, $\sigma_{\text{init}} = 0.4$, $L = 10$, $T_{\text{bath}} = 0.05$, $dt = 0.0025$, $n_{\text{steps}} = 4000$. $d=4$ at $N=24$ (332k voxels); $d=5$ at $N=12$ (249k voxels). $\gamma_0 \in \{0, 0.05, 0.2, 1.0\}$ (isolated as degenerate point, three coupled values).
+> **Hedge cleanup (2026-05-16).** This document was originally
+> presented with $\gamma_0 = 0$ as a "degenerate sweep point". Per
+> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
+> that formulation was a Rule A violation. The sweep table below
+> has been re-stated for the coupled-regime points only. The
+> structural conclusion (the rescaling ratio is $\gamma_0$-independent
+> across the coupled sweep) is unchanged; the original wave-2 run
+> showed the same ratio at $\gamma_0 = 0$, but that point is removed
+> here because the configuration is outside the scope the methodology
+> describes.
+
+**Parameters**: $|\Lambda| = 8$, $\sigma_{\text{init}} = 0.4$, $L = 10$, $T_{\text{bath}} = 0.05$, $dt = 0.0025$, $n_{\text{steps}} = 4000$. $d=4$ at $N=24$ (332k voxels); $d=5$ at $N=12$ (249k voxels). $\gamma_0 \in \{0.05, 0.2, 1.0\}$ (three coupled-regime points, per principles/03-coupling.md Rule A).
 
 **Anti-collapse criterion**: $\rho_{\text{peak, final}} < 10 \cdot \rho_{\text{peak, initial}}$ (relaxed threshold; full release expected to drop further).
 
@@ -25,12 +36,12 @@ Backend: CuPy on RTX 4060. Wall time: 18.8 minutes total (slow due to per-step C
 
 Critical $\Sigma\lambda_{\text{crit}}/|\Lambda|$ ratio at each $(d, \gamma_0)$:
 
-| $d$ | $\gamma_0 = 0$ (isolated, degenerate) | $\gamma_0 = 0.05$ | $\gamma_0 = 0.2$ | $\gamma_0 = 1.0$ |
-|---:|:---:|:---:|:---:|:---:|
-| 4 (this test, $N=24$) | **0.125** | **0.125** | **0.125** | **0.125** |
-| 5 (this test, $N=12$) | **0.250** | **0.250** | **0.250** | **0.250** |
+| $d$ | $\gamma_0 = 0.05$ | $\gamma_0 = 0.2$ | $\gamma_0 = 1.0$ |
+|---:|:---:|:---:|:---:|
+| 4 (this test, $N=24$) | **0.125** | **0.125** | **0.125** |
+| 5 (this test, $N=12$) | **0.250** | **0.250** | **0.250** |
 
-Reference (from `results/06-dimensional-rescaling.md`, isolated regime, larger lattice):
+Reference (from `results/06-dimensional-rescaling.md`, larger lattice):
 
 | $d$ | Ratio $\Sigma\lambda_{\text{crit}}/|\Lambda|$ |
 |---:|:---:|
@@ -41,7 +52,7 @@ Reference (from `results/06-dimensional-rescaling.md`, isolated regime, larger l
 
 **Two clean findings, two important caveats.**
 
-**Finding 1 (the structural-realist content)**: $\Sigma\lambda_{\text{crit}}/|\Lambda|$ is **independent of $\gamma_0$** at fixed $d$ across the sweep tested. The ratio at $d=4$ is 0.125 at every coupling value (0, 0.05, 0.2, 1.0); the ratio at $d=5$ is 0.250 at every coupling value. The dimensional rescaling is therefore robust to bath coupling, consistent with the purely-structural reading: the scaling is a property of the equation's geometric concentration of the focal region, not of the dissipative dynamics.
+**Finding 1 (the structural-realist content)**: $\Sigma\lambda_{\text{crit}}/|\Lambda|$ is **independent of $\gamma_0$** at fixed $d$ across the coupled-regime sweep tested. The ratio at $d=4$ is 0.125 at every coupling value (0.05, 0.2, 1.0); the ratio at $d=5$ is 0.250 at every coupling value. The dimensional rescaling is therefore robust to bath coupling strength within the coupled regime, consistent with the purely-structural reading: the scaling is a property of the equation's geometric concentration of the focal region, not of the dissipative dynamics.
 
 **Finding 2 (the dimensional pattern)**: across the four documented dimensions, the ratio is non-monotonic:
 

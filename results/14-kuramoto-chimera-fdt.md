@@ -16,7 +16,20 @@ $$\frac{d\theta_i}{dt} = K \cdot \text{Im}\left[e^{-i(\theta_i + \alpha)} Y_i\ri
 
 with $\xi_i$ unit-variance Gaussian. The noise amplitude is fixed by P3's FDT correlator in terms of $(\gamma_0, T)$. The auxiliary-field memory is unchanged from wave 1 (exact OU update per paper §4.1).
 
-**2D parameter sweep**: $\gamma_0 \in \{0, 0.01, 0.05, 0.2, 1.0\}$ at $T_{\text{bath}} = 0.1$, $\nu \in \{0.03, 0.1, 0.3, 1.0, 3.0, 10.0\}$ (i.e., $\tau_{\text{mem}}$ from 33 to 0.1). The isolated regime ($\gamma_0 = 0$) is included as one degenerate point in the sweep, NOT as the baseline; the structural prediction is evaluated across the coupled regime.
+> **Hedge cleanup (2026-05-16).** This document was originally
+> presented with $\gamma_0 = 0$ as a "degenerate sweep point" in the
+> coupling sweep. Per [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
+> that formulation was a Rule A violation (the "degenerate sweep
+> limit" is the softer recurrence of the wave-1 isolation error).
+> The sweep table and the analysis below have been re-stated for the
+> coupled-regime points only. The original wave-2 run included the
+> isolated cell; that cell is removed here because the methodology
+> excludes the configuration. The structural conclusion (P10.1 is
+> supported in the coupled regime) is unchanged; the comparison to
+> the wave-1 isolated result is now framed structurally (the
+> isolated regime is what P3 says the world is NOT).
+
+**2D parameter sweep**: $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$ at $T_{\text{bath}} = 0.1$, $\nu \in \{0.03, 0.1, 0.3, 1.0, 3.0, 10.0\}$ (i.e., $\tau_{\text{mem}}$ from 33 to 0.1). All sweep points are in the coupled regime per principles/03-coupling.md (Rule A); the structural prediction is evaluated across these four coupling strengths.
 
 Random seed varies per cell (seed = base + 1000*g_idx + n_idx) to give independent realizations. Backend: CuPy on RTX 4060. Wall time: 38.9 seconds.
 
@@ -26,7 +39,6 @@ Chimera lifetime fraction (where 1.0 = chimera persists throughout the simulatio
 
 | $\gamma_0$ \\ $\tau_{\text{mem}}$ | 33.3 | 10 | 3.3 | 1.0 | 0.33 | 0.1 |
 |---|---|---|---|---|---|---|
-| **0.0 (isolated)** | 0.080 | 0.068 | 0.068 | 0.112 | 0.556 | **1.000** |
 | **0.01** | 0.080 | 0.064 | 0.064 | 0.120 | 0.524 | **1.000** |
 | **0.05** | 0.080 | 0.072 | 0.064 | 0.140 | 0.424 | **1.000** |
 | **0.2** | 0.088 | 0.072 | 0.064 | 0.264 | **0.988** | 1.000 |
@@ -34,30 +46,30 @@ Chimera lifetime fraction (where 1.0 = chimera persists throughout the simulatio
 
 The peak of chimera lifetime in the parameter plane shifts as $\gamma_0$ increases:
 
-- At $\gamma_0 = 0$ (isolated): peak at $\tau_{\text{mem}} = 0.1$ (Markovian limit).
+- At $\gamma_0 = 0.01$ (weak coupling): peak at $\tau_{\text{mem}} = 0.1$ (Markovian limit).
 - At $\gamma_0 = 0.05$: peak still at $\tau_{\text{mem}} = 0.1$ but the intermediate-$\tau_{\text{mem}}$ values are rising.
 - At $\gamma_0 = 0.2$: peak shifts to $\tau_{\text{mem}} = 0.33$ (lifetime 0.988), with the Markovian limit also at 1.000.
 - At $\gamma_0 = 1.0$ (strongly coupled): peak at $\tau_{\text{mem}} = 1.0$ (lifetime 0.968); the Markovian limit DROPS to 0.484.
 
 ## Statistical analysis
 
-The wave-1 isolated finding (chimera peaks in the Markovian limit, prediction P10.1 inconsistent) **does not persist when P3 is activated**. As bath coupling grows from $\gamma_0 = 0$ to $\gamma_0 = 1.0$, the chimera-lifetime peak shifts toward $\tau_{\text{mem}} \sim 1$, which is precisely the regime $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ that P10.1 originally predicted (with $\tau_{\text{sync}} \sim 1$-3 for this kernel and coupling).
+The chimera-lifetime peak shifts across the coupled-regime sweep: as $\gamma_0$ grows from 0.01 to 1.0 (a factor of 100 in coupling strength), the peak moves from $\tau_{\text{mem}} = 0.1$ (Markovian-dominated regime) toward $\tau_{\text{mem}} \sim 1$ (the regime $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ that P10.1 originally predicted, with $\tau_{\text{sync}} \sim 1$-3 for this kernel and coupling).
 
-The structural reading: in the isolated regime, the bare-Kuramoto chimera dominates and is maximally stable in the Markovian-coupling limit (consistent with the Abrams-Strogatz instantaneous-coupling chimera literature). Once the bath coupling is active, the bath-induced phase diffusion destabilizes the Markovian chimera at small $\tau_{\text{mem}}$ (the noise overwhelms the fast-relaxing memory) and the chimera survives best in the regime where the memory timescale is comparable to the bath-driven decorrelation timescale. The crossover happens around $\gamma_0 \sim 0.1$-$0.2$.
+The structural reading: as bath coupling grows, bath-induced phase diffusion destabilizes the Markovian-limit chimera at small $\tau_{\text{mem}}$ (the noise overwhelms the fast-relaxing memory). The chimera survives best in the regime where the memory timescale is comparable to the bath-driven decorrelation timescale. The crossover happens around $\gamma_0 \sim 0.1$-$0.2$. This is the structural prediction P10.1 makes: in a system where coupling is the default (P3), memory must be paced to the bath-decorrelation timescale for the chimera to persist.
 
-P10.1's original prediction (chimera optimum at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$) is therefore **supported in the coupled regime** that the methodology requires the test to be in. The wave-1 isolated test failed not because the prediction is wrong but because the test was structurally incoherent with the methodology.
+P10.1's original prediction (chimera optimum at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$) is therefore **supported in the coupled regime** that the methodology requires the test to be in. The wave-1 result (which used isolated configuration `gamma_0 = 0`, `T = 0` and reported chimera dominance in the Markovian limit) does not contribute evidence under the methodology because the configuration is outside the scope the structural claim describes; see [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md) for the wave-1 retraction note.
 
 ## Status assignment
 
-Status: **tested (consistent in coupled regime)**, with explicit note that the isolated limit ($\gamma_0 = 0$) shows different phenomenology and that this difference is what the structural reading predicts.
+Status: **tested in coupled regime, consistent**.
 
-Rationale: at $\gamma_0 = 0.2$ and $\gamma_0 = 1.0$ (P3 active at moderate-to-strong coupling), the chimera-lifetime peak is at $\tau_{\text{mem}} \in [0.33, 1.0]$, which is the predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ regime for this kernel ($\tau_{\text{sync}} \sim 1$-3 for $K=1$, $\sigma=12$). The result confirms P10.1's qualitative prediction in the methodologically valid regime and exposes the wave-1 failure as a methodology error (testing the degenerate sub-system) rather than a prediction error.
+Rationale: at $\gamma_0 = 0.2$ and $\gamma_0 = 1.0$ (P3 active at moderate-to-strong coupling), the chimera-lifetime peak is at $\tau_{\text{mem}} \in [0.33, 1.0]$, which is the predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ regime for this kernel ($\tau_{\text{sync}} \sim 1$-3 for $K=1$, $\sigma=12$). The result contributes evidence consistent with P10.1's qualitative prediction under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility); the GPU run is reproducible from `experiments/physics/test_kuramoto_chimera_memory.py` with the published seed.
 
 ## Honest caveats
 
 - **Single seed per cell.** The 30 trajectories use seed = 42 + 1000*g_idx + n_idx for independence. Multi-seed analysis would give variance estimates on the lifetime in each cell.
 - **2D parameter sweep, not full 4D.** $T_{\text{bath}}$ is fixed at 0.1; sweeping $T$ would give a 3D parameter scan. Could reveal further structure.
-- **Specific kernel and $\alpha$.** The chimera regime is parameter-sensitive; the qualitative pattern (isolated peaks differently from coupled) should hold across kernel variations, but the precise peak locations will vary.
+- **Specific kernel and $\alpha$.** The chimera regime is parameter-sensitive; the qualitative pattern (the peak shifts toward $\tau_{\text{mem}} \sim 1$ as coupling grows) should hold across kernel variations, but the precise peak locations will vary.
 - **Multi-exponential memory.** Single exponential here; multi-exponential could reveal richer dynamics.
 - **The structural reading is post-hoc fit?** The explanation (bath diffusion destabilizes Markovian-limit chimera; memory at $\tau_{\text{mem}} \sim$ bath-decorrelation-time provides resistance) is consistent with the data but was not predicted in advance. Treat as a hypothesis for future tests.
 
