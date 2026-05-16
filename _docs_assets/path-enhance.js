@@ -90,6 +90,49 @@ document$.subscribe(() => {
     revealTargets.forEach((el) => observer.observe(el));
   }
 
+  /* ----- 5. Prediction status chips on interface pages ----- */
+  if (path.includes('/interfaces/')) {
+    // Find every <li> whose text starts with "Status:" and contains a
+    // bolded state phrase. Wrap the state in a styled chip span. The
+    // status taxonomy follows the structural-research-mode skill:
+    //   "tested (consistent in coupled regime)"  -> consistent
+    //   "tested (inconsistent in coupled regime)" -> inconsistent
+    //   "untested" or "not yet tested" or "pending" -> untested
+    //   "partially tested" -> partial
+    const STATUS_PATTERNS = [
+      { re: /\btested\s*\([^)]*consistent[^)]*\)/i, cls: 'pred-status--consistent' },
+      { re: /\btested\s*\([^)]*inconsistent[^)]*\)/i, cls: 'pred-status--inconsistent' },
+      { re: /\btested in coupled regime,\s*consistent/i, cls: 'pred-status--consistent' },
+      { re: /\btested in coupled regime,\s*inconsistent/i, cls: 'pred-status--inconsistent' },
+      { re: /\bpartially tested\b/i, cls: 'pred-status--partial' },
+      { re: /\b(?:untested|not yet tested|pending)\b/i, cls: 'pred-status--untested' },
+    ];
+
+    const predictionLists = document.querySelectorAll(
+      'h2[id^="locally-testable"] + blockquote + p + ul > li'
+    );
+
+    predictionLists.forEach((li) => {
+      // The status line is a <li> inside the inner <ul> that starts with
+      // "Status:". The text after "Status:" carries a bolded state.
+      const statusLi = Array.from(li.querySelectorAll('ul > li'))
+        .find((sub) => sub.textContent.trim().startsWith('Status:'));
+      if (!statusLi) return;
+
+      const strong = statusLi.querySelector('strong');
+      if (!strong) return;
+
+      const text = strong.textContent;
+      for (const { re, cls } of STATUS_PATTERNS) {
+        if (re.test(text)) {
+          strong.classList.add('pred-status', cls);
+          return;
+        }
+      }
+      strong.classList.add('pred-status', 'pred-status--untested');
+    });
+  }
+
   /* ----- 2. Reading-time for path pages ----- */
   const pathHero = document.querySelector('.path-hero');
   if (pathHero && !pathHero.querySelector('.reading-time')) {

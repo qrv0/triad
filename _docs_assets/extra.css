@@ -2609,3 +2609,345 @@ body[data-md-color-scheme] .md-main .md-content article.md-content__inner {
   margin-right: auto;
 }
 .inline-diagram-caption strong { color: var(--md-accent-fg-color); }
+
+/* ============================================================
+   INTERFACE PAGES (site restructure commit 1)
+   Visual unification across the 17 cross-domain interfaces.
+   The current 17 markdown files have heterogeneous section
+   headings (interfaces 01-09 from earlier work, 10-17 from
+   Phase 3 with the standard template). Rather than re-impose a
+   uniform skeleton on the markdown, this commit unifies the
+   VISUAL identity of what's already there: prediction blocks
+   get card treatment, status lines get color-coded chips,
+   dismissals get a collapsed-by-default treatment, mapping
+   tables get P1/P2/P3 row stripes. Commit 2 adds the hero
+   block at the top of every interface via a frontmatter-driven
+   partial.
+   ============================================================ */
+
+/* ---------- Prediction blocks ------------------------------ */
+
+/* The h2 "Locally testable predictions and observational signatures"
+   is followed by a hedge-cleanup blockquote, an opening paragraph,
+   and a UL of prediction bullets. Style the UL items as cards. */
+
+.md-typeset h2[id^="locally-testable"] + blockquote {
+  border-left-color: var(--mnsm-accent-iris);
+  background: var(--mnsm-accent-iris-soft);
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.md-typeset h2[id^="locally-testable"] + blockquote + p + ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.md-typeset h2[id^="locally-testable"] + blockquote + p + ul > li {
+  display: block;
+  background: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-bg-color--lightest);
+  border-left: 3px solid var(--mnsm-accent-amber);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  margin: 0 0 1rem 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.025);
+  transition: box-shadow var(--dur-quick) var(--easing-smooth),
+              border-left-color var(--dur-quick) var(--easing-smooth);
+}
+
+.md-typeset h2[id^="locally-testable"] + blockquote + p + ul > li:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04),
+              0 8px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* Prediction title (first strong in the bullet) gets eyebrow treatment */
+.md-typeset h2[id^="locally-testable"] + blockquote + p + ul > li > strong:first-child {
+  display: block;
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+  color: var(--mnsm-accent-amber-darker);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--md-default-bg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2[id^="locally-testable"] + blockquote + p + ul > li > strong:first-child {
+  color: var(--mnsm-accent-amber-light);
+}
+
+/* Sub-bullets inside each prediction get compact treatment */
+.md-typeset h2[id^="locally-testable"] + blockquote + p + ul > li > ul {
+  margin: 0.4rem 0 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.92em;
+  line-height: 1.65;
+}
+
+.md-typeset h2[id^="locally-testable"] + blockquote + p + ul > li > ul > li {
+  margin-bottom: 0.3rem;
+}
+
+/* Status chip styling: applied by path-enhance.js based on text content.
+   The JS finds "Status: **<state>**" patterns and wraps the bold text
+   with a .pred-status class plus a state-specific modifier. */
+
+.md-typeset .pred-status {
+  display: inline-block;
+  padding: 0.18rem 0.6rem;
+  margin: 0 0.2em;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  vertical-align: middle;
+  background: var(--md-default-bg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  border: 1px solid transparent;
+}
+
+.md-typeset .pred-status--consistent {
+  background: var(--mnsm-accent-teal-soft);
+  color: var(--mnsm-accent-teal-darker);
+  border-color: var(--mnsm-accent-teal-medium);
+}
+[data-md-color-scheme="slate"] .md-typeset .pred-status--consistent {
+  color: var(--mnsm-accent-teal-light);
+}
+
+.md-typeset .pred-status--inconsistent {
+  background: var(--mnsm-accent-retract-soft);
+  color: var(--mnsm-accent-retract);
+  border-color: var(--mnsm-accent-retract);
+}
+
+.md-typeset .pred-status--untested {
+  background: var(--mnsm-accent-iris-soft);
+  color: var(--mnsm-accent-iris-darker);
+  border-color: var(--mnsm-accent-iris-medium);
+}
+[data-md-color-scheme="slate"] .md-typeset .pred-status--untested {
+  color: var(--mnsm-accent-iris-light);
+}
+
+.md-typeset .pred-status--partial {
+  background: var(--mnsm-accent-amber-soft);
+  color: var(--mnsm-accent-amber-darker);
+  border-color: var(--mnsm-accent-amber-medium);
+}
+[data-md-color-scheme="slate"] .md-typeset .pred-status--partial {
+  color: var(--mnsm-accent-amber-light);
+}
+
+/* ---------- Common dismissals collapsed by default ---------- */
+
+/* h2 "Common dismissals and why they do not apply" followed by paragraph
+   and bulleted list. Convert visually into a collapsible-feeling section
+   via CSS (the JS doesn't need to convert it to <details>; CSS-only
+   indicates "this is supplementary"). */
+
+.md-typeset h2[id^="common-dismissals"] {
+  font-size: 1.1rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--md-default-bg-color--lightest);
+}
+
+.md-typeset h2[id^="common-dismissals"] + p,
+.md-typeset h2[id^="common-dismissals"] ~ p,
+.md-typeset h2[id^="common-dismissals"] ~ ul {
+  font-size: 0.92em;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.7;
+}
+
+/* The h2 right after dismissals (References, or Locally testable...) breaks the cascade */
+.md-typeset h2[id^="common-dismissals"] ~ h2 {
+  font-size: revert;
+  color: revert;
+  margin-top: revert;
+  padding-top: revert;
+  border-top: revert;
+}
+.md-typeset h2[id^="common-dismissals"] ~ h2 ~ p,
+.md-typeset h2[id^="common-dismissals"] ~ h2 ~ ul {
+  font-size: revert;
+  color: revert;
+  line-height: revert;
+}
+
+/* ---------- Mapping tables (P1/P2/P3 row stripes) ---------- */
+
+/* When a section uses { .mapping-table } attr, the table gets P1/P2/P3
+   color stripes per row. The mapping always has 3-4 rows (kinetic → P1,
+   memory + cubic → P2, dissipation + noise + external → P3). For now
+   the styling applies to any table inside a "Mapping" section if the
+   author adds the class. Commit 2 may auto-apply via build hook. */
+
+.md-typeset .mapping-table {
+  font-feature-settings: "tnum", "lnum";
+}
+
+.md-typeset .mapping-table tbody tr:nth-child(1) td:first-child {
+  border-left: 3px solid var(--eq-p1, var(--mnsm-accent-iris));
+  padding-left: 0.9rem;
+}
+.md-typeset .mapping-table tbody tr:nth-child(2) td:first-child,
+.md-typeset .mapping-table tbody tr:nth-child(3) td:first-child {
+  border-left: 3px solid var(--eq-p2, var(--mnsm-accent-teal));
+  padding-left: 0.9rem;
+}
+.md-typeset .mapping-table tbody tr:nth-child(n+4) td:first-child {
+  border-left: 3px solid var(--eq-p3, var(--mnsm-accent-amber));
+  padding-left: 0.9rem;
+}
+
+/* ---------- Related interfaces grid (commit 2 will populate) ---------- */
+
+.md-typeset .mnsm-related {
+  margin: 2.5rem 0;
+}
+
+.md-typeset .mnsm-related h2,
+.md-typeset .mnsm-related h3 {
+  margin-bottom: 1rem;
+}
+
+.md-typeset .mnsm-related ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.md-typeset .mnsm-related ul > li {
+  background: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-bg-color--lightest);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  transition: border-color var(--dur-quick) var(--easing-smooth),
+              transform var(--dur-quick) var(--easing-smooth),
+              box-shadow var(--dur-quick) var(--easing-smooth);
+}
+
+.md-typeset .mnsm-related ul > li:hover {
+  border-color: var(--mnsm-accent-teal-medium);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03),
+              0 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+.md-typeset .mnsm-related ul > li > a {
+  display: block;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--md-typeset-color);
+  border-bottom: none;
+  margin-bottom: 0.3rem;
+}
+
+.md-typeset .mnsm-related ul > li > span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.55;
+}
+
+/* ---------- Interface hero (commit 2 will populate the partial) ---------- */
+
+.interface-hero {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) 1fr;
+  gap: 1.6rem;
+  align-items: center;
+  margin: 0 0 2.8rem;
+  padding: 1.4rem 0 2rem;
+  border-bottom: 1px solid var(--md-default-bg-color--lightest);
+}
+
+@media (max-width: 720px) {
+  .interface-hero {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    text-align: center;
+  }
+}
+
+.interface-hero__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--md-default-bg-color--light);
+  border-radius: 8px;
+  border: 1px solid var(--md-default-bg-color--lightest);
+  min-height: 180px;
+}
+
+.interface-hero__visual svg,
+.interface-hero__visual img {
+  max-width: 100%;
+  height: auto;
+}
+
+.interface-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.interface-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mnsm-accent-teal-darker);
+}
+[data-md-color-scheme="slate"] .interface-hero__eyebrow {
+  color: var(--mnsm-accent-teal-light);
+}
+
+.interface-hero__triangle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interface-hero__triangle li {
+  border-left: 3px solid var(--mnsm-accent-teal);
+  padding: 0.2rem 0.7rem;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.interface-hero__triangle li.t-p1 { border-left-color: var(--mnsm-accent-iris); }
+.interface-hero__triangle li.t-p2 { border-left-color: var(--mnsm-accent-teal); }
+.interface-hero__triangle li.t-p3 { border-left-color: var(--mnsm-accent-amber); }
+
+.interface-hero__triangle li strong {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  opacity: 0.78;
+}
+
+@media (max-width: 600px) {
+  .interface-hero__triangle {
+    grid-template-columns: 1fr;
+  }
+}
