@@ -290,10 +290,16 @@ This experiment **does not** demonstrate that:
   data distribution. The structural argument predicts that *some* such
   instability should occur in the absence of structural anti-collapse; the
   exact form and timing of any specific instance is contingent.
-- Memory-NLS will outperform attention-based models at deployment scale on
-  standard benchmarks. That comparison is in a paradigm
-  ("intelligence-as-scale") this work does not adopt; see
-  [`../../CLAUDE.md`](../../CLAUDE.md) for the framing.
+- Memory-NLS instantiates a different structural form whose trajectory
+  signature at deployment scale follows criteria documented in
+  [`../../methodology/04-the-six-criteria.md`](../../methodology/04-the-six-criteria.md).
+  The "will outperform on benchmarks" framing the original wording used
+  follows the "intelligence-as-scale" paradigm
+  [`../../CLAUDE.md`](../../CLAUDE.md) Rule 7b excludes from this work;
+  the structural reading is that the two architectures instantiate
+  different structural forms, not that one is the other's competitor.
+  See [`../../docs/llm-hedge-annotations.md`](../../docs/llm-hedge-annotations.md)
+  for the prior wording and the structural reason for the revision.
 
 ## Reproducibility
 
