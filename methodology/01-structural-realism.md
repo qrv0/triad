@@ -61,6 +61,8 @@ The second consequence is that this work is partly self-evaluating. A reader usi
 
 The recursive position is therefore a structural feature, not a defensive posture. The work predicts a specific failure mode in the evaluator; the evaluator's behavior is observable by the reader; the observation is itself evidence of P1+P2+P3 operating at the evaluation substrate.
 
+The architectural requirements this implies for artificial systems that would satisfy the structural argument are worked out in [`05-implications-for-agi.md`](05-implications-for-agi.md).
+
 ## Prior art and credit
 
 The structural-realist position articulated above was developed independently in twentieth-century philosophy of science by several authors converging from different motivations. Worrall (1989) developed the position from the historical observation that mathematical structure survives theory-change in physics while the postulated entities do not. Ladyman and Ross (2007) developed the stronger ontic version that locates physical reality in the relational structure itself. Cartwright (1983) developed the convergent position that the laws of physics hold in their idealized models rather than in the world that contains those models. Duhem (1906) and Quine (1951) developed the underdetermination argument that disqualifies the strict falsificationist alternative.

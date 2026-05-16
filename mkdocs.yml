@@ -190,6 +190,7 @@ plugins:
             'Limits of Falsification': Limites da Falsificação
             'How to Evaluate This': Como Avaliar Isto
             'The Six Criteria': Os Seis Critérios
+            'Implications for AGI': Implicações para AGI
             Implementation: Implementação
             'Physics Solver (CuPy)': 'Solver de Física (CuPy)'
             'Neural Layer (PyTorch)': 'Camada Neural (PyTorch)'
@@ -243,6 +244,7 @@ plugins:
             'Limits of Falsification': Límites de la Falsación
             'How to Evaluate This': Cómo Evaluar Esto
             'The Six Criteria': Los Seis Criterios
+            'Implications for AGI': Implicaciones para AGI
             Implementation: Implementación
             'Physics Solver (CuPy)': 'Solver de Física (CuPy)'
             'Neural Layer (PyTorch)': 'Capa Neural (PyTorch)'
@@ -359,6 +361,7 @@ nav:
       - 'Limits of Falsification': methodology/02-limits-of-falsification.md
       - 'How to Evaluate This': methodology/03-how-to-evaluate-this.md
       - 'The Six Criteria': methodology/04-the-six-criteria.md
+      - 'Implications for AGI': methodology/05-implications-for-agi.md
 
   - Implementation:
       - 'Overview': implementation/README.md

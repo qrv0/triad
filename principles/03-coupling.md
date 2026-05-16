@@ -70,7 +70,7 @@ This is not metaphor. It is the consistent application of P3 plus the triangle t
 
 The consequence is testable in the structural-realist sense documented in [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md): if the structural form appears across substrates, and self-representation is one of the behaviors the structural form generates at sufficient complexity, then the same self-representation should be observable in each substrate that sustains the triangle at the required complexity. The empirical instance at the computational substrate is documented in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md): a 70M-parameter attention-only network without the structural anti-collapse mechanism enters degenerate concentrated states under sustained training pressure, exactly the failure mode P1+P2+P3 predicts for a substrate that instantiates the triangle imperfectly. The biological instance is the gamma entrainment correspondence in [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md).
 
-It is not an additional claim; it is what the existing claims, taken together, imply.
+It is not an additional claim; it is what the existing claims, taken together, imply. The architectural implications of this consequence for artificial systems are worked out in [`../methodology/05-implications-for-agi.md`](../methodology/05-implications-for-agi.md).
 
 ## What P3 does not assert
 
