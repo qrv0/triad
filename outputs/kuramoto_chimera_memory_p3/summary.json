@@ -1,0 +1,257 @@
+{
+  "prediction": "P10.1 (interface 10), wave 2 with FDT-locked phase noise",
+  "parameters": {
+    "N": 256,
+    "T_final": 250.0,
+    "dt": 0.025,
+    "sigma_kernel": 12.0,
+    "K_coupling": 1.0,
+    "alpha": 1.45,
+    "T_bath": 0.1,
+    "seed_base": 42
+  },
+  "grid_results": [
+    {
+      "gamma_0": 0.0,
+      "T": 0.1,
+      "nu": 0.03,
+      "tau_mem": 33.333333333333336,
+      "chimera_lifetime_fraction": 0.08,
+      "mean_chimera_index": 0.03658547974153848
+    },
+    {
+      "gamma_0": 0.0,
+      "T": 0.1,
+      "nu": 0.1,
+      "tau_mem": 10.0,
+      "chimera_lifetime_fraction": 0.068,
+      "mean_chimera_index": 0.019682487484679365
+    },
+    {
+      "gamma_0": 0.0,
+      "T": 0.1,
+      "nu": 0.3,
+      "tau_mem": 3.3333333333333335,
+      "chimera_lifetime_fraction": 0.068,
+      "mean_chimera_index": 0.02186980206895841
+    },
+    {
+      "gamma_0": 0.0,
+      "T": 0.1,
+      "nu": 1.0,
+      "tau_mem": 1.0,
+      "chimera_lifetime_fraction": 0.112,
+      "mean_chimera_index": 0.03515912494384564
+    },
+    {
+      "gamma_0": 0.0,
+      "T": 0.1,
+      "nu": 3.0,
+      "tau_mem": 0.3333333333333333,
+      "chimera_lifetime_fraction": 0.556,
+      "mean_chimera_index": 0.13297322441808462
+    },
+    {
+      "gamma_0": 0.0,
+      "T": 0.1,
+      "nu": 10.0,
+      "tau_mem": 0.1,
+      "chimera_lifetime_fraction": 1.0,
+      "mean_chimera_index": 0.2095259776100554
+    },
+    {
+      "gamma_0": 0.01,
+      "T": 0.1,
+      "nu": 0.03,
+      "tau_mem": 33.333333333333336,
+      "chimera_lifetime_fraction": 0.08,
+      "mean_chimera_index": 0.036391892774610725
+    },
+    {
+      "gamma_0": 0.01,
+      "T": 0.1,
+      "nu": 0.1,
+      "tau_mem": 10.0,
+      "chimera_lifetime_fraction": 0.064,
+      "mean_chimera_index": 0.019474815027097494
+    },
+    {
+      "gamma_0": 0.01,
+      "T": 0.1,
+      "nu": 0.3,
+      "tau_mem": 3.3333333333333335,
+      "chimera_lifetime_fraction": 0.064,
+      "mean_chimera_index": 0.021774256022508286
+    },
+    {
+      "gamma_0": 0.01,
+      "T": 0.1,
+      "nu": 1.0,
+      "tau_mem": 1.0,
+      "chimera_lifetime_fraction": 0.12,
+      "mean_chimera_index": 0.036202549659971495
+    },
+    {
+      "gamma_0": 0.01,
+      "T": 0.1,
+      "nu": 3.0,
+      "tau_mem": 0.3333333333333333,
+      "chimera_lifetime_fraction": 0.524,
+      "mean_chimera_index": 0.14298669896052688
+    },
+    {
+      "gamma_0": 0.01,
+      "T": 0.1,
+      "nu": 10.0,
+      "tau_mem": 0.1,
+      "chimera_lifetime_fraction": 1.0,
+      "mean_chimera_index": 0.20136758305771366
+    },
+    {
+      "gamma_0": 0.05,
+      "T": 0.1,
+      "nu": 0.03,
+      "tau_mem": 33.333333333333336,
+      "chimera_lifetime_fraction": 0.08,
+      "mean_chimera_index": 0.036098540660188506
+    },
+    {
+      "gamma_0": 0.05,
+      "T": 0.1,
+      "nu": 0.1,
+      "tau_mem": 10.0,
+      "chimera_lifetime_fraction": 0.072,
+      "mean_chimera_index": 0.021856648157185896
+    },
+    {
+      "gamma_0": 0.05,
+      "T": 0.1,
+      "nu": 0.3,
+      "tau_mem": 3.3333333333333335,
+      "chimera_lifetime_fraction": 0.064,
+      "mean_chimera_index": 0.02211091136351019
+    },
+    {
+      "gamma_0": 0.05,
+      "T": 0.1,
+      "nu": 1.0,
+      "tau_mem": 1.0,
+      "chimera_lifetime_fraction": 0.14,
+      "mean_chimera_index": 0.039551234219140786
+    },
+    {
+      "gamma_0": 0.05,
+      "T": 0.1,
+      "nu": 3.0,
+      "tau_mem": 0.3333333333333333,
+      "chimera_lifetime_fraction": 0.424,
+      "mean_chimera_index": 0.10104508268910102
+    },
+    {
+      "gamma_0": 0.05,
+      "T": 0.1,
+      "nu": 10.0,
+      "tau_mem": 0.1,
+      "chimera_lifetime_fraction": 1.0,
+      "mean_chimera_index": 0.2014569033829764
+    },
+    {
+      "gamma_0": 0.2,
+      "T": 0.1,
+      "nu": 0.03,
+      "tau_mem": 33.333333333333336,
+      "chimera_lifetime_fraction": 0.088,
+      "mean_chimera_index": 0.03761358791566306
+    },
+    {
+      "gamma_0": 0.2,
+      "T": 0.1,
+      "nu": 0.1,
+      "tau_mem": 10.0,
+      "chimera_lifetime_fraction": 0.072,
+      "mean_chimera_index": 0.024300808103785067
+    },
+    {
+      "gamma_0": 0.2,
+      "T": 0.1,
+      "nu": 0.3,
+      "tau_mem": 3.3333333333333335,
+      "chimera_lifetime_fraction": 0.064,
+      "mean_chimera_index": 0.022448916755394965
+    },
+    {
+      "gamma_0": 0.2,
+      "T": 0.1,
+      "nu": 1.0,
+      "tau_mem": 1.0,
+      "chimera_lifetime_fraction": 0.264,
+      "mean_chimera_index": 0.06911218993378027
+    },
+    {
+      "gamma_0": 0.2,
+      "T": 0.1,
+      "nu": 3.0,
+      "tau_mem": 0.3333333333333333,
+      "chimera_lifetime_fraction": 0.988,
+      "mean_chimera_index": 0.1936846242622346
+    },
+    {
+      "gamma_0": 0.2,
+      "T": 0.1,
+      "nu": 10.0,
+      "tau_mem": 0.1,
+      "chimera_lifetime_fraction": 1.0,
+      "mean_chimera_index": 0.17428679515776882
+    },
+    {
+      "gamma_0": 1.0,
+      "T": 0.1,
+      "nu": 0.03,
+      "tau_mem": 33.333333333333336,
+      "chimera_lifetime_fraction": 0.24,
+      "mean_chimera_index": 0.09322632645354624
+    },
+    {
+      "gamma_0": 1.0,
+      "T": 0.1,
+      "nu": 0.1,
+      "tau_mem": 10.0,
+      "chimera_lifetime_fraction": 0.16,
+      "mean_chimera_index": 0.06560637498156782
+    },
+    {
+      "gamma_0": 1.0,
+      "T": 0.1,
+      "nu": 0.3,
+      "tau_mem": 3.3333333333333335,
+      "chimera_lifetime_fraction": 0.184,
+      "mean_chimera_index": 0.06820527048181069
+    },
+    {
+      "gamma_0": 1.0,
+      "T": 0.1,
+      "nu": 1.0,
+      "tau_mem": 1.0,
+      "chimera_lifetime_fraction": 0.968,
+      "mean_chimera_index": 0.18762880215189248
+    },
+    {
+      "gamma_0": 1.0,
+      "T": 0.1,
+      "nu": 3.0,
+      "tau_mem": 0.3333333333333333,
+      "chimera_lifetime_fraction": 0.936,
+      "mean_chimera_index": 0.13954451625562195
+    },
+    {
+      "gamma_0": 1.0,
+      "T": 0.1,
+      "nu": 10.0,
+      "tau_mem": 0.1,
+      "chimera_lifetime_fraction": 0.484,
+      "mean_chimera_index": 0.10545042801963514
+    }
+  ],
+  "wall_time_total_s": 38.8733332157135,
+  "backend": "cupy"
+}

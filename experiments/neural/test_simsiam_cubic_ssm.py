@@ -1,38 +1,27 @@
-"""WAVE 1 RETRACTED 2026-05-16: this script does not inject FDT-locked
-noise; the only stochasticity comes from SGD batch sampling. Per
-methodology/02-limits-of-falsification.md, isolation is the abstraction the
-work argues against. DO NOT RUN as a test of P6.3 in this form.
-See ../../results/12-cubic-ssm-simsiam.md retraction note for context.
-A wave-2 redesigned version with FDT-locked noise injection into the SSM
-state is required for any methodologically valid test of P6.3.
+"""Wave-2 test: cubic-state SimSiam without stop-gradient, with FDT-locked
+noise injection (P3 active).
 
-Test prediction P6.3 (interface 06 state space models).
+Targets prediction P6.3 (interface 06 state space models), redesigned to
+respect P3 per the post-retraction methodology.
 
-Prediction: cubic-nonlinearity in SSM state (the structural feature the
-Memory-NLS equation adds to the bare diagonal-state SSM) should suppress
-representation collapse modes documented in self-supervised learning
-(SimSiam without stop-gradient, BYOL without predictor network), without
-requiring the architectural tricks those frameworks deploy.
+Wave 1 was retracted (commit c11666b) for not injecting FDT-locked noise
+(only SGD stochasticity, which is not the same as the equation's P3 bath).
+This wave-2 redesign adds explicit FDT-correlated noise to the SSM state
+at each forward pass, structurally matching the equation's P3 instantiation.
 
-Method: SimSiam-style SSL training of two encoder variants on a synthetic
-clustered dataset (small enough for consumer GPU). Both variants use the
-SSM-class memory layer; one variant adds cubic state nonlinearity (the
-Memory-NLS extension), the other is linear (standard diagonal SSM).
-Both trained WITHOUT stop-gradient (the architectural patch that normally
-prevents representation collapse in SimSiam).
+Three variants compared, all trained WITHOUT stop-gradient in SimSiam loss:
+  A. cubic_p3:    Lambda<0 (cubic state nonlinearity) + FDT-locked noise
+  B. linear_p3:   Lambda=0 (linear state) + FDT-locked noise
+  C. cubic_iso:   Lambda<0 + no FDT noise (degenerate isolated, for comparison)
 
-Measure:
-  - Representation-space rank (effective rank via eigenvalue analysis).
-  - Alignment-uniformity loss (Wang-Isola 2020).
-  - Standard collapse signature: how many representation dimensions collapse
-    to near-zero variance.
+The structural prediction P6.3 is that cubic-state SSM with P3 active
+maintains higher representation rank than linear-state SSM with P3
+active. The isolated variant C is included as the degenerate limit
+to make explicit what the wave-1 (incorrect) test was testing.
 
-Hardware: requires PyTorch + CUDA. Wall time: approximately 30-60 minutes
-on RTX 4060.
+Hardware: requires PyTorch + CUDA. Wall time: ~30-60 min on RTX 4060.
 
-Output: outputs/simsiam_cubic_ssm/
-
-This test does not duplicate any existing experiment.
+Output: outputs/simsiam_cubic_ssm_p3/
 """
 
 from __future__ import annotations
@@ -52,48 +41,41 @@ sys.path.insert(0, str(REPO_ROOT))
 from implementation.neural.layer import MemoryNLSLayer
 
 
-OUTPUT_DIR = REPO_ROOT / "outputs" / "simsiam_cubic_ssm"
+OUTPUT_DIR = REPO_ROOT / "outputs" / "simsiam_cubic_ssm_p3"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# Configuration
-D_INPUT = 64           # synthetic feature dimension
+# Config
+D_INPUT = 64
 D_MODEL = 128
 SEQ_LEN = 32
 PROJECTION_DIM = 64
-PREDICTOR_DIM = 32     # bottleneck in predictor (SimSiam standard)
+PREDICTOR_DIM = 32
 BATCH_SIZE = 256
 N_STEPS = 4000
 LR = 1e-3
 SEED = 42
 
-# Memory-NLS parameters (cubic variant)
-LAMBDA_CUBIC = -0.5     # cubic state nonlinearity (the structural feature being tested)
-LAMBDA_LINEAR = 0.0     # baseline: linear state (no cubic nonlinearity)
+# Memory-NLS structural parameters
+LAMBDA_CUBIC = -0.5
+LAMBDA_LINEAR = 0.0
 SIGMA_LAMBDA = 0.3
 NU_MIN = 0.5
 NU_MAX = 10.0
 DT = 0.05
 
+# P3 parameters
+GAMMA_0_FDT = 0.02
+T_FDT = 0.01
+GAMMA_0_ISO = 0.0
+T_ISO = 0.0
 
-# ----- Synthetic dataset -----
 
-def generate_clustered_sequences(n_samples: int, d_input: int, seq_len: int, n_clusters: int = 16,
-                                  noise: float = 0.3, seed: int = SEED) -> torch.Tensor:
-    """Generate synthetic clustered sequences.
-
-    Each sample is a sequence of vectors drawn from one of n_clusters Gaussian
-    clusters. Within a sequence, all vectors are from the same cluster (with
-    added noise). Sequences from different clusters are well-separated.
-
-    Returns: (n_samples, seq_len, d_input).
-    """
+def generate_clustered_sequences(n_samples: int, d_input: int, seq_len: int,
+                                  n_clusters: int = 16, noise: float = 0.3, seed: int = SEED) -> torch.Tensor:
     rng = torch.Generator().manual_seed(seed)
-    # Cluster centers
     centers = torch.randn(n_clusters, d_input, generator=rng) * 3.0
-    # Assign each sample to a cluster
     assignments = torch.randint(0, n_clusters, (n_samples,), generator=rng)
-    # Build sequences
     seqs = torch.zeros(n_samples, seq_len, d_input)
     for i in range(n_samples):
         center = centers[assignments[i]]
@@ -102,34 +84,27 @@ def generate_clustered_sequences(n_samples: int, d_input: int, seq_len: int, n_c
 
 
 def augment(x: torch.Tensor, noise: float = 0.1) -> torch.Tensor:
-    """Simple augmentation: additive Gaussian noise + random temporal shift."""
     B, L, D = x.shape
     x = x + noise * torch.randn_like(x)
-    # Random shift by 0..L/4
     shift = torch.randint(0, max(1, L // 4), (1,)).item()
     if shift > 0:
         x = torch.cat([x[:, shift:], x[:, :shift]], dim=1)
     return x
 
 
-# ----- Model -----
-
 class SimSiamEncoder(nn.Module):
-    """SimSiam encoder using Memory-NLS layer with controllable cubic nonlinearity."""
-
     def __init__(self, d_input: int, d_model: int, n_heads: int = 4,
                  lambda_cubic: float = -0.5, sigma_lambda: float = 0.3,
+                 gamma_0: float = 0.0, fdt_T: float = 0.0,
                  projection_dim: int = 64):
         super().__init__()
         self.input_proj = nn.Linear(d_input, d_model)
-        # Memory-NLS layer: cubic nonlinearity controlled by lambda_cubic argument
         self.memnls = MemoryNLSLayer(
-            d_model=d_model,
-            n_heads=n_heads,
+            d_model=d_model, n_heads=n_heads,
             nonlinearity_strength=lambda_cubic,
             memory_coupling_total=sigma_lambda,
-            nu_min=NU_MIN, nu_max=NU_MAX, dt=DT,
-            fast_bias=3.0, dissipation=0.0, fdt_temperature=0.0,
+            nu_min=NU_MIN, nu_max=NU_MAX, dt=DT, fast_bias=3.0,
+            dissipation=gamma_0, fdt_temperature=fdt_T,
         )
         self.norm = nn.LayerNorm(d_model)
         self.projection_head = nn.Sequential(
@@ -138,45 +113,34 @@ class SimSiamEncoder(nn.Module):
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        """x: (B, L, d_input) -> (B, projection_dim)"""
         h = self.input_proj(x)
         h = h + self.memnls(h)
         h = self.norm(h)
-        h = h.mean(dim=1)  # temporal average pool
+        h = h.mean(dim=1)
         z = self.projection_head(h)
         return z
 
 
 class Predictor(nn.Module):
-    """SimSiam predictor head (bottleneck MLP)."""
-
     def __init__(self, dim: int, hidden: int):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(dim, hidden),
-            nn.BatchNorm1d(hidden), nn.ReLU(),
+            nn.Linear(dim, hidden), nn.BatchNorm1d(hidden), nn.ReLU(),
             nn.Linear(hidden, dim),
         )
 
-    def forward(self, z: torch.Tensor) -> torch.Tensor:
+    def forward(self, z):
         return self.net(z)
 
 
-def simsiam_loss(p_a: torch.Tensor, z_b: torch.Tensor) -> torch.Tensor:
-    """Negative cosine similarity. NO stop-gradient (the key feature being tested).
-
-    Standard SimSiam uses: -F.cosine_similarity(p_a, z_b.detach()).mean()
-    Here: NO .detach() — this should normally lead to representation collapse
-    unless the architecture has built-in structural protection (the prediction
-    being tested for cubic Memory-NLS).
-    """
+def simsiam_loss(p_a, z_b):
+    """Negative cosine similarity. NO stop-gradient (key feature)."""
     p_a = F.normalize(p_a, dim=-1)
     z_b = F.normalize(z_b, dim=-1)
     return -(p_a * z_b).sum(dim=-1).mean()
 
 
 def effective_rank(features: torch.Tensor) -> float:
-    """Effective rank (Roy-Vetterli 2007): exp(entropy of normalized eigenvalues)."""
     f = features - features.mean(dim=0, keepdim=True)
     cov = f.T @ f / max(f.shape[0] - 1, 1)
     eigvals = torch.linalg.eigvalsh(cov.float())
@@ -186,30 +150,25 @@ def effective_rank(features: torch.Tensor) -> float:
     return float(torch.exp(entropy))
 
 
-def alignment_uniformity_loss(features: torch.Tensor) -> dict:
-    """Wang-Isola (2020) alignment-uniformity decomposition (positive-pairs version).
-
-    Uniformity: log E_{x,y} exp(-2 ||x - y||^2) (lower-is-better, more spread).
-    """
+def alignment_uniformity(features: torch.Tensor) -> dict:
     f = F.normalize(features, dim=-1)
     n = f.shape[0]
-    sq_dist = torch.cdist(f, f) ** 2  # (n, n)
+    sq_dist = torch.cdist(f, f) ** 2
     mask = ~torch.eye(n, dtype=torch.bool, device=f.device)
     uniformity = torch.log(torch.exp(-2.0 * sq_dist[mask]).mean())
-    return {
-        "uniformity": float(uniformity),
-        "effective_rank": effective_rank(features.detach().cpu()),
-    }
+    return {"uniformity": float(uniformity),
+            "effective_rank": effective_rank(features.detach().cpu())}
 
 
-def train_variant(name: str, lambda_cubic: float, train_data: torch.Tensor,
-                   val_data: torch.Tensor, device: str) -> dict:
-    print(f"\n{'=' * 70}")
-    print(f"  Variant: {name} (lambda_cubic = {lambda_cubic})")
-    print(f"{'=' * 70}")
+def train_variant(name: str, lambda_cubic: float, gamma_0: float, fdt_T: float,
+                   train_data: torch.Tensor, val_data: torch.Tensor, device: str) -> dict:
+    print(f"\n{'='*70}")
+    print(f"  Variant: {name} (Lambda={lambda_cubic}, gamma_0={gamma_0}, T={fdt_T})")
+    print(f"{'='*70}")
 
     encoder = SimSiamEncoder(D_INPUT, D_MODEL, n_heads=4,
                               lambda_cubic=lambda_cubic, sigma_lambda=SIGMA_LAMBDA,
+                              gamma_0=gamma_0, fdt_T=fdt_T,
                               projection_dim=PROJECTION_DIM).to(device)
     predictor = Predictor(PROJECTION_DIM, PREDICTOR_DIM).to(device)
     n_params = sum(p.numel() for p in encoder.parameters()) + sum(p.numel() for p in predictor.parameters())
@@ -222,10 +181,8 @@ def train_variant(name: str, lambda_cubic: float, train_data: torch.Tensor,
 
     t0 = time.time()
     for step in range(N_STEPS):
-        # Random minibatch
         idx = torch.randint(0, n_train, (BATCH_SIZE,))
         x = train_data[idx].to(device)
-        # Two augmented views
         x_a = augment(x, noise=0.1)
         x_b = augment(x, noise=0.1)
 
@@ -233,41 +190,32 @@ def train_variant(name: str, lambda_cubic: float, train_data: torch.Tensor,
         z_b = encoder(x_b)
         p_a = predictor(z_a)
         p_b = predictor(z_b)
-
-        # NO stop-gradient. This is the key feature being tested.
         loss = 0.5 * (simsiam_loss(p_a, z_b) + simsiam_loss(p_b, z_a))
 
         opt.zero_grad()
         loss.backward()
         torch.nn.utils.clip_grad_norm_(
-            list(encoder.parameters()) + list(predictor.parameters()), max_norm=1.0
-        )
+            list(encoder.parameters()) + list(predictor.parameters()), max_norm=1.0)
         opt.step()
 
         if step % 100 == 0 or step == N_STEPS - 1:
             encoder.eval()
             with torch.no_grad():
                 val_z = encoder(val_data.to(device))
-                metrics = alignment_uniformity_loss(val_z)
+                metrics = alignment_uniformity(val_z)
             encoder.train()
             history["steps"].append(step)
             history["loss"].append(float(loss))
             history["effective_rank"].append(metrics["effective_rank"])
             history["uniformity"].append(metrics["uniformity"])
-            print(f"  step {step:>5}: loss = {float(loss):>7.4f}, "
-                  f"effective_rank = {metrics['effective_rank']:>6.2f} / {PROJECTION_DIM}, "
-                  f"uniformity = {metrics['uniformity']:>7.4f}")
+            print(f"  step {step:>5}: loss={float(loss):>7.4f}  "
+                  f"eff_rank={metrics['effective_rank']:>6.2f}/{PROJECTION_DIM}  "
+                  f"uniformity={metrics['uniformity']:>7.4f}")
 
     wall = time.time() - t0
-    print(f"  Wall time: {wall:.1f}s")
-
-    return {
-        "name": name,
-        "lambda_cubic": lambda_cubic,
-        "n_params": n_params,
-        "history": history,
-        "wall_time": wall,
-    }
+    print(f"  Wall: {wall:.1f}s")
+    return {"name": name, "lambda_cubic": lambda_cubic, "gamma_0": gamma_0,
+            "fdt_T": fdt_T, "n_params": n_params, "history": history, "wall_time": wall}
 
 
 def main():
@@ -275,48 +223,44 @@ def main():
     if device == "cpu":
         print("WARNING: CUDA not available; this test requires GPU.")
         return
-
-    print(f"Phase 9 Test D: cubic-state SimSiam without stop-gradient (P6.3)")
+    print(f"Wave 2 Test D: cubic-state SimSiam without stop-gradient, with FDT noise (P6.3)")
     print(f"Using device: {torch.cuda.get_device_name(0)}")
 
     torch.manual_seed(SEED)
-    print(f"\nGenerating synthetic clustered dataset...")
-    train_data = generate_clustered_sequences(n_samples=8192, d_input=D_INPUT, seq_len=SEQ_LEN)
-    val_data = generate_clustered_sequences(n_samples=1024, d_input=D_INPUT, seq_len=SEQ_LEN, seed=SEED + 1)
-    print(f"  train shape: {train_data.shape}")
-    print(f"  val shape: {val_data.shape}")
+    train_data = generate_clustered_sequences(8192, D_INPUT, SEQ_LEN)
+    val_data = generate_clustered_sequences(1024, D_INPUT, SEQ_LEN, seed=SEED+1)
 
     t_total = time.time()
-
-    variant_cubic = train_variant("cubic", LAMBDA_CUBIC, train_data, val_data, device)
-    variant_linear = train_variant("linear", LAMBDA_LINEAR, train_data, val_data, device)
-
+    variants = []
+    # A: cubic + P3 active
+    variants.append(train_variant("cubic_p3", LAMBDA_CUBIC, GAMMA_0_FDT, T_FDT,
+                                   train_data, val_data, device))
+    # B: linear + P3 active
+    variants.append(train_variant("linear_p3", LAMBDA_LINEAR, GAMMA_0_FDT, T_FDT,
+                                   train_data, val_data, device))
+    # C: cubic + isolated (degenerate; for comparison)
+    variants.append(train_variant("cubic_iso", LAMBDA_CUBIC, GAMMA_0_ISO, T_ISO,
+                                   train_data, val_data, device))
     t_total = time.time() - t_total
 
-    print(f"\n{'=' * 70}")
-    print(f"  Comparison summary")
-    print(f"{'=' * 70}")
-    print(f"  Variant cubic (Lambda = {LAMBDA_CUBIC}):")
-    print(f"    Final effective rank: {variant_cubic['history']['effective_rank'][-1]:.2f}")
-    print(f"    Final uniformity: {variant_cubic['history']['uniformity'][-1]:.4f}")
-    print(f"  Variant linear (Lambda = {LAMBDA_LINEAR}):")
-    print(f"    Final effective rank: {variant_linear['history']['effective_rank'][-1]:.2f}")
-    print(f"    Final uniformity: {variant_linear['history']['uniformity'][-1]:.4f}")
-    print(f"  Wall time total: {t_total:.1f}s")
-    print()
-    print(f"Prediction P6.3 check: cubic variant should maintain higher effective rank")
-    print(f"  (less representation collapse) than linear variant when trained")
-    print(f"  WITHOUT stop-gradient. Both should be compared to the standard SimSiam")
-    print(f"  with stop-gradient which is known to maintain high rank.")
+    print(f"\n{'='*70}\n  Comparison summary\n{'='*70}")
+    for v in variants:
+        print(f"  {v['name']:>10}: final eff_rank = {v['history']['effective_rank'][-1]:.2f}, "
+              f"final uniformity = {v['history']['uniformity'][-1]:.4f}, "
+              f"wall = {v['wall_time']:.1f}s")
+    print(f"  Total wall: {t_total:.1f}s")
+
+    print(f"\nPrediction P6.3 (with P3 active) check: cubic_p3 should maintain higher")
+    print(f"  effective rank than linear_p3. cubic_iso shows what the wave-1 (degenerate) ran.")
 
     summary = {
-        "prediction": "P6.3 (interface 06)",
-        "variants": [variant_cubic, variant_linear],
+        "prediction": "P6.3 (interface 06), wave 2 with FDT noise injection",
+        "variants": variants,
         "wall_time_total_s": t_total,
     }
     with open(OUTPUT_DIR / "summary.json", "w") as f:
         json.dump(summary, f, indent=2)
-    print(f"\nSummary written to {OUTPUT_DIR}/summary.json")
+    print(f"\nSummary: {OUTPUT_DIR}/summary.json")
 
 
 if __name__ == "__main__":

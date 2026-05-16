@@ -1,258 +1,235 @@
-"""WAVE 1 RETRACTED 2026-05-16: this script violates P3 (gamma_0=0, T=0;
-isolated regime, no FDT-locked bath). Per methodology/02-limits-of-falsification.md,
-isolation is the abstraction the work argues against; testing the equation's
-predictions in the isolated regime is structurally incoherent. DO NOT RUN.
-See ../../results/09-kuramoto-chimera-memory.md retraction note for context.
-A wave-2 redesigned version with FDT-locked phase noise is required for any
-methodologically valid test of P10.1.
+"""Wave-2 test: memory-Kuramoto chimera stability under FDT-locked phase noise.
 
-Test prediction P10.1 (interface 10 Kuramoto synchronization).
+Targets prediction P10.1 (interface 10 Kuramoto synchronization), redesigned
+to respect P3 per the post-retraction methodology committed to by the work.
 
-Prediction: chimera-state stability in memory-Kuramoto ensembles is maximal
-in the parameter window where the memory kernel timescale tau_mem is
-comparable to the synchronization timescale tau_sync of the synchronized
-cluster.
+Wave 1 was retracted (commit c11666b) because it tested the P1+P2 degenerate
+sub-system (gamma_0=0, T=0; no FDT-locked bath) rather than the full
+P1+P2+P3 triangle. methodology/02-limits-of-falsification.md identifies
+isolation as the abstraction the work argues against. This wave-2 script
+makes the bath coupling (gamma_0, T) a primary sweep variable; isolation
+is one degenerate point in the sweep, not the baseline.
 
-Method: simulate a 1D ring of N coupled phase oscillators with Gaussian
-spatial coupling kernel, phase lag alpha near pi/2 (the Abrams-Strogatz
-chimera regime), and a single-exponential coupling memory in the form of
-the auxiliary-field Markovian embedding (the same construction documented
-in ../../equation/02-markovian-embedding.md). Sweep the memory decay rate
-nu (so tau_mem = 1/nu) across several decades. Measure chimera lifetime
-at each tau_mem and check the predicted peak near tau_mem/tau_sync ~ 1.
+Equation simulated:
+    d theta_i / dt = K_coupling * Im[exp(-i(theta_i + alpha)) * Y_i]
+                     + sqrt(2 * gamma_0 * T / dt) * xi_i
 
-Backend: numpy (CPU) at N=256. The dynamics is cheap enough to run on CPU
-in minutes; a CuPy GPU version would be unnecessarily heavy for this scale.
+with the Markovian-embedded memory auxiliary field:
+    Y_i(t+dt) = exp(-nu * dt) * Y_i(t) + (1 - exp(-nu * dt)) * Z_i(t)
+where Z_i = sum_j K_kernel[i,j] exp(i theta_j) is the local order parameter.
 
-Expected wall time: approximately 10 minutes on a modern CPU.
+The Langevin noise term represents environmental coupling to a bath at
+temperature T with effective phase-dissipation rate gamma_0. The FDT lock
+fixes the noise amplitude in terms of (gamma_0, T) per principle P3 and
+the canonical FDT correlator stated in paper section 3.3.
 
-Output: outputs/kuramoto_chimera_memory/
+Method: sweep (gamma_0, tau_mem) in a 2D grid; measure chimera lifetime
+fraction in each (gamma_0, tau_mem) cell. The result is a 2D landscape
+identifying where chimera structure persists under the full triangle vs
+where it dissolves.
 
-This test does not duplicate any existing experiment in this folder.
+Backend: CuPy if available (GPU), otherwise NumPy. At N=256 the 1D ring is
+inexpensive; full sweep (5 gamma_0 x 8 tau_mem = 40 trajectories) runs in
+~1 minute on RTX 4060 or ~3 minutes on CPU.
+
+Output: outputs/kuramoto_chimera_memory_p3/
 """
 
 from __future__ import annotations
 import json
-import sys
 import time
 from pathlib import Path
 
 import numpy as np
 
+# GPU/CPU backend abstraction
+try:
+    import cupy as cp
+    xp = cp
+    USING_GPU = True
+except ImportError:
+    xp = np
+    USING_GPU = False
+
 
 REPO_ROOT = Path(__file__).parent.parent.parent
-OUTPUT_DIR = REPO_ROOT / "outputs" / "kuramoto_chimera_memory"
+OUTPUT_DIR = REPO_ROOT / "outputs" / "kuramoto_chimera_memory_p3"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# Simulation parameters (held constant across the sweep)
-N = 256                  # ring size
-T_FINAL = 250.0          # dimensionless time
-DT = 0.025               # time step (CFL-stable for the kernel and lag)
-SAMPLE_EVERY = 40        # observable sampling stride (every 1.0 time unit)
-SIGMA_KERNEL = 12.0      # Gaussian kernel width (in units of oscillator index)
-K_COUPLING = 1.0         # coupling strength
-ALPHA = 1.45             # phase lag (rad); near pi/2 for chimera regime
-OMEGA_SPREAD = 0.0       # zero spread: identical natural frequencies
+# Simulation parameters
+N = 256
+T_FINAL = 250.0
+DT = 0.025
+SAMPLE_EVERY = 40
+SIGMA_KERNEL = 12.0
+K_COUPLING = 1.0
+ALPHA = 1.45
 SEED = 42
 
-# Sweep: nu = 1/tau_mem in a decade-spanning range.
-# tau_sync at K=1 on this kernel/lag is empirically ~1-3 units.
-NU_VALUES = [0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0, 30.0]  # tau_mem = 100..0.033
+# Sweep specifications
+# P3 coupling: gamma_0 from very weak to strong; T fixed at 0.1 (FDT-locked noise
+# amplitude is sqrt(2 gamma_0 T dt) so gamma_0 controls both dissipation rate
+# and noise amplitude jointly per the FDT correlator). The isolated regime
+# (gamma_0 = 0) is included as one degenerate point in the sweep, NOT as the
+# baseline.
+GAMMA_0_VALUES = [0.0, 0.01, 0.05, 0.2, 1.0]   # P3 coupling strength
+T_BATH = 0.1                                     # bath temperature
+NU_VALUES = [0.03, 0.1, 0.3, 1.0, 3.0, 10.0]   # memory rates (tau_mem = 1/nu)
 
 
-def build_kernel(N: int, sigma: float) -> np.ndarray:
-    """Periodic Gaussian kernel matrix G[i,j] = exp(-d(i,j)^2/(2 sigma^2)).
+def to_cpu(arr):
+    if hasattr(arr, "get"):
+        return arr.get()
+    return arr
 
-    Distance d(i,j) is the periodic ring distance.
-    """
-    idx = np.arange(N)
+
+def build_kernel(N: int, sigma: float):
+    idx = xp.arange(N)
     diff = idx[:, None] - idx[None, :]
-    # Periodic distance: min(|d|, N - |d|)
-    periodic = np.minimum(np.abs(diff), N - np.abs(diff))
-    K = np.exp(-(periodic.astype(np.float64) ** 2) / (2.0 * sigma ** 2))
-    # Row-normalize so each row sums to 1 (proper kernel average)
+    periodic = xp.minimum(xp.abs(diff), N - xp.abs(diff))
+    K = xp.exp(-(periodic.astype(xp.float64) ** 2) / (2.0 * sigma ** 2))
     K /= K.sum(axis=1, keepdims=True)
     return K
 
 
-def initial_condition_chimera(N: int, seed: int) -> np.ndarray:
-    """Chimera-seed initial condition.
-
-    Half the ring is set to nearly-synchronized phases (small perturbation
-    around theta=0); the other half is set to uniformly random phases.
-    The dynamics either preserves this asymmetry (chimera survives) or
-    resolves to a uniform regime (chimera dissolves).
-    """
+def initial_condition_chimera(N: int, seed: int):
     rng = np.random.default_rng(seed)
     theta = np.zeros(N, dtype=np.float64)
     half = N // 2
-    # Synchronized half: small Gaussian noise around 0
     theta[:half] = 0.05 * rng.standard_normal(half)
-    # Desynchronized half: uniform on [0, 2pi)
     theta[half:] = 2 * np.pi * rng.random(N - half)
-    return theta
+    return xp.asarray(theta)
 
 
-def local_order_parameter(theta: np.ndarray, K: np.ndarray) -> np.ndarray:
-    """Local complex order parameter z_i = sum_j K_ij exp(i theta_j)."""
-    z_complex = K @ np.exp(1j * theta)
-    return z_complex
+def local_order_parameter(theta, K_kernel):
+    return K_kernel @ xp.exp(1j * theta)
 
 
-def chimera_index(theta: np.ndarray, K: np.ndarray) -> float:
-    """Quantitative chimera index: standard deviation of local |z| across ring.
+def chimera_index(theta, K_kernel) -> float:
+    z = local_order_parameter(theta, K_kernel)
+    r_local = xp.abs(z)
+    return float(xp.std(r_local))
 
-    For a fully synchronized state, |z_i| ≈ 1 everywhere, std ≈ 0.
-    For a fully desynchronized state, |z_i| ≈ 0 everywhere, std ≈ 0.
-    For a chimera, |z_i| ≈ 1 on one side and ≈ 0 on the other, std is large.
-    A robust threshold: index > 0.1 corresponds to a distinct chimera structure
-    on this scale; lower means the asymmetry has dissolved.
+
+def simulate(gamma_0: float, T: float, nu: float, K_kernel, theta0,
+             t_final: float, dt: float, sample_every: int, seed: int) -> dict:
+    """Memory-Kuramoto with FDT-locked phase noise (P3 active).
+
+    Equation:
+        d_theta = K * Im[exp(-i(theta + alpha)) * Y] dt + sqrt(2 gamma_0 T dt) xi
+        d_Y = nu * (Z - Y) dt       (Markovian-embedded memory)
+
+    where xi is unit-variance Gaussian, Z is the instantaneous local order
+    parameter, Y is the memory-integrated order.
     """
-    z = local_order_parameter(theta, K)
-    r_local = np.abs(z)
-    return float(np.std(r_local))
-
-
-def simulate(nu: float, K_kernel: np.ndarray, theta0: np.ndarray,
-             t_final: float, dt: float, sample_every: int) -> dict:
-    """Simulate memory-Kuramoto on the ring.
-
-    Equation (Markovian embedding of single-exponential memory):
-        d theta_i / dt = K_coupling * Im[ exp(-i(theta_i + alpha)) * Y_i ]
-        d Y_i / dt = nu * (Z_i - Y_i)
-    where:
-        Z_i = sum_j K_kernel[i,j] exp(i theta_j(t))    (instantaneous local order)
-        Y_i(t) = nu * integral_0^t exp(-nu*(t-t')) Z_i(t') dt'   (memory-integrated)
-    """
-    N = len(theta0)
+    N = theta0.shape[0]
     theta = theta0.copy()
-    # Initialize auxiliary field to the instantaneous order at t=0
     Y = local_order_parameter(theta, K_kernel)
+
+    # OU decay factor for memory (exact per paper §4.1)
+    decay = float(xp.exp(xp.asarray(-nu * dt)))
+    accumulator = 1.0 - decay
+
+    # FDT noise amplitude per Langevin discretization
+    noise_amp = float(np.sqrt(2.0 * gamma_0 * T * dt))
 
     n_steps = int(t_final / dt)
     samples = []
-    # Exact OU update factor (independent of dt; paper §4.1 specifies this is exact):
-    # Y(t+dt) = exp(-nu dt) Y(t) + (1 - exp(-nu dt)) Z   (frozen-Z over step)
-    decay = np.exp(-nu * dt)
-    accumulator = 1.0 - decay
+    rng = np.random.default_rng(seed)
 
     for step in range(n_steps):
-        # Instantaneous local order parameter
         Z = local_order_parameter(theta, K_kernel)
-        # Memory auxiliary field update (Markovian embedding; exact per paper §4.1)
         Y = decay * Y + accumulator * Z
-        # Phase update using memory-integrated order Y
-        coupling = K_COUPLING * np.imag(np.exp(-1j * (theta + ALPHA)) * Y)
-        theta = theta + dt * coupling
-        # Wrap to [0, 2pi)
-        theta = np.mod(theta, 2 * np.pi)
+        coupling = K_COUPLING * xp.imag(xp.exp(-1j * (theta + ALPHA)) * Y)
 
-        # Sample observables periodically
+        # Phase update with FDT-locked noise
+        if noise_amp > 0:
+            xi = xp.asarray(rng.standard_normal(N))
+            theta = theta + dt * coupling + noise_amp * xi
+        else:
+            theta = theta + dt * coupling
+        theta = xp.mod(theta, 2 * xp.pi)
+
         if step % sample_every == 0:
             ci = chimera_index(theta, K_kernel)
             samples.append({"t": step * dt, "chimera_index": ci})
 
-    return {
-        "nu": nu,
-        "tau_mem": 1.0 / nu,
-        "samples": samples,
-        "final_theta": theta,
-    }
+    return {"gamma_0": gamma_0, "T": T, "nu": nu, "tau_mem": 1.0 / nu, "samples": samples}
 
 
 def chimera_lifetime(samples: list, threshold: float = 0.1) -> float:
-    """Compute chimera lifetime: time spent above the chimera-index threshold.
-
-    Defined as the fraction of sampled time during which the chimera index
-    exceeds the threshold. A value near 1.0 means the chimera persists
-    throughout the simulation; a value near 0.0 means the chimera dissolves
-    quickly.
-    """
-    above = [s for s in samples if s["chimera_index"] > threshold]
     if not samples:
         return 0.0
-    return len(above) / len(samples)
+    above = sum(1 for s in samples if s["chimera_index"] > threshold)
+    return above / len(samples)
 
 
 def main():
-    print(f"Phase 9 Test A: memory-Kuramoto chimera stability (P10.1)")
+    print(f"Wave 2 Test A: Memory-Kuramoto chimera stability with FDT-locked phase noise (P10.1)")
+    print(f"Backend: {'cupy (GPU)' if USING_GPU else 'numpy (CPU)'}")
     print(f"N = {N}, T_final = {T_FINAL}, dt = {DT}")
-    print(f"Sweep nu = {NU_VALUES}")
-    print(f"Output: {OUTPUT_DIR}")
+    print(f"P3 sweep: gamma_0 = {GAMMA_0_VALUES} at T_bath = {T_BATH}")
+    print(f"Memory sweep: nu = {NU_VALUES} (tau_mem = 1/nu)")
+    print(f"Total runs: {len(GAMMA_0_VALUES)} x {len(NU_VALUES)} = "
+          f"{len(GAMMA_0_VALUES) * len(NU_VALUES)} trajectories")
 
     K = build_kernel(N, SIGMA_KERNEL)
     theta0 = initial_condition_chimera(N, SEED)
 
     t_total = time.time()
-    runs = []
-    for nu in NU_VALUES:
-        t0 = time.time()
-        result = simulate(nu, K, theta0, T_FINAL, DT, SAMPLE_EVERY)
-        lifetime = chimera_lifetime(result["samples"], threshold=0.1)
-        run_time = time.time() - t0
-
-        run_summary = {
-            "nu": nu,
-            "tau_mem": result["tau_mem"],
-            "chimera_lifetime_fraction": lifetime,
-            "mean_chimera_index": float(np.mean([s["chimera_index"] for s in result["samples"]])),
-            "final_chimera_index": result["samples"][-1]["chimera_index"],
-            "wall_time": run_time,
-        }
-        runs.append(run_summary)
-
-        # Save trajectory
-        ci_series = np.array([s["chimera_index"] for s in result["samples"]])
-        ts = np.array([s["t"] for s in result["samples"]])
-        np.savez(
-            OUTPUT_DIR / f"nu_{nu:.3f}.npz",
-            ts=ts,
-            chimera_index=ci_series,
-            final_theta=result["final_theta"],
-            nu=nu,
-            tau_mem=result["tau_mem"],
-        )
-        print(f"  nu = {nu:>7.3f} (tau_mem = {result['tau_mem']:>7.3f}): "
-              f"lifetime = {lifetime:.3f}, mean CI = {run_summary['mean_chimera_index']:.4f}, "
-              f"t = {run_time:.1f}s")
+    grid_results = []
+    for g_idx, gamma_0 in enumerate(GAMMA_0_VALUES):
+        for n_idx, nu in enumerate(NU_VALUES):
+            run_seed = SEED + 1000 * g_idx + n_idx  # different seed per cell
+            result = simulate(gamma_0, T_BATH, nu, K, theta0,
+                              T_FINAL, DT, SAMPLE_EVERY, run_seed)
+            lifetime = chimera_lifetime(result["samples"], threshold=0.1)
+            mean_ci = float(np.mean([s["chimera_index"] for s in result["samples"]]))
+            grid_results.append({
+                "gamma_0": gamma_0,
+                "T": T_BATH,
+                "nu": nu,
+                "tau_mem": 1.0 / nu,
+                "chimera_lifetime_fraction": lifetime,
+                "mean_chimera_index": mean_ci,
+            })
+            print(f"  gamma_0={gamma_0:.3f}  nu={nu:>6.3f}  tau_mem={1/nu:>7.3f}: "
+                  f"lifetime={lifetime:.3f}  mean_CI={mean_ci:.4f}")
 
     t_total = time.time() - t_total
     print(f"\nTotal wall time: {t_total:.1f}s")
 
-    # Summary
+    # Identify peak and characterize the 2D landscape
+    peak = max(grid_results, key=lambda r: r["chimera_lifetime_fraction"])
+    print(f"\nPeak chimera lifetime: gamma_0 = {peak['gamma_0']}, "
+          f"tau_mem = {peak['tau_mem']:.3f}, "
+          f"lifetime = {peak['chimera_lifetime_fraction']:.3f}")
+
+    # Compare isolated baseline (gamma_0=0) with coupled regimes
+    isolated = [r for r in grid_results if r["gamma_0"] == 0]
+    coupled = [r for r in grid_results if r["gamma_0"] > 0]
+    if isolated and coupled:
+        iso_max = max(r["chimera_lifetime_fraction"] for r in isolated)
+        coup_max = max(r["chimera_lifetime_fraction"] for r in coupled)
+        print(f"\nIsolated (gamma_0=0) max lifetime: {iso_max:.3f}")
+        print(f"Coupled (gamma_0>0) max lifetime: {coup_max:.3f}")
+        print(f"Ratio (coupled/isolated) at maximum: {coup_max/iso_max if iso_max > 0 else 'inf':.3f}")
+
     summary = {
-        "prediction": "P10.1 (interface 10)",
+        "prediction": "P10.1 (interface 10), wave 2 with FDT-locked phase noise",
         "parameters": {
-            "N": N,
-            "T_final": T_FINAL,
-            "dt": DT,
-            "sigma_kernel": SIGMA_KERNEL,
-            "K_coupling": K_COUPLING,
-            "alpha": ALPHA,
-            "seed": SEED,
+            "N": N, "T_final": T_FINAL, "dt": DT,
+            "sigma_kernel": SIGMA_KERNEL, "K_coupling": K_COUPLING, "alpha": ALPHA,
+            "T_bath": T_BATH, "seed_base": SEED,
         },
-        "runs": runs,
+        "grid_results": grid_results,
         "wall_time_total_s": t_total,
+        "backend": "cupy" if USING_GPU else "numpy",
     }
     with open(OUTPUT_DIR / "summary.json", "w") as f:
         json.dump(summary, f, indent=2)
-
-    # Print finalized table
-    print()
-    print(f"{'nu':>10} | {'tau_mem':>10} | {'chimera_lifetime':>18} | {'mean_CI':>10}")
-    print("-" * 60)
-    for r in runs:
-        print(f"{r['nu']:>10.3f} | {r['tau_mem']:>10.3f} | {r['chimera_lifetime_fraction']:>18.3f} | "
-              f"{r['mean_chimera_index']:>10.4f}")
-
-    # Identify peak
-    peak_run = max(runs, key=lambda r: r["chimera_lifetime_fraction"])
-    print(f"\nPeak chimera lifetime: nu = {peak_run['nu']}, tau_mem = {peak_run['tau_mem']:.3f}, "
-          f"lifetime fraction = {peak_run['chimera_lifetime_fraction']:.3f}")
-    print()
-    print("Prediction check (P10.1): the peak should sit near tau_mem ~ tau_sync ~ 1-3 units")
-    print(f"  for the kernel and K used. Observed peak at tau_mem = {peak_run['tau_mem']:.3f}.")
+    print(f"\nFull data: {OUTPUT_DIR}/summary.json")
 
 
 if __name__ == "__main__":

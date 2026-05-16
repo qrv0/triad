@@ -68,11 +68,15 @@ NU_MAX = 10.0
 DT = 0.05
 FAST_BIAS = 3.0
 
-# Variant A: FDT-locked noise
-GAMMA_0_FDT = 0.02      # dissipation rate
-T_FDT = 0.01            # bath temperature (sets noise amplitude via FDT)
+# Variant A: FDT-locked noise (moderate)
+GAMMA_0_FDT_HIGH = 0.02
+T_FDT_HIGH = 0.01
 
-# Variant B: no built-in noise (only SGD/batch stochasticity)
+# Variant B: FDT-locked noise (weak; intermediate coupling)
+GAMMA_0_FDT_LOW = 0.005
+T_FDT_LOW = 0.01
+
+# Variant C: no built-in noise (degenerate isolated; for comparison only)
 GAMMA_0_NONE = 0.0
 T_NONE = 0.0
 
@@ -208,9 +212,11 @@ def main():
 
     t_total = time.time()
 
-    variant_A = run_variant("fdt_locked", GAMMA_0_FDT, T_FDT,
+    variant_A = run_variant("fdt_high", GAMMA_0_FDT_HIGH, T_FDT_HIGH,
                               train_data, val_data, tokenizer.vocab_size, device)
-    variant_B = run_variant("no_noise", GAMMA_0_NONE, T_NONE,
+    variant_B = run_variant("fdt_low", GAMMA_0_FDT_LOW, T_FDT_LOW,
+                              train_data, val_data, tokenizer.vocab_size, device)
+    variant_C = run_variant("isolated", GAMMA_0_NONE, T_NONE,
                               train_data, val_data, tokenizer.vocab_size, device)
 
     t_total = time.time() - t_total
@@ -218,30 +224,24 @@ def main():
     print(f"\n{'=' * 70}")
     print(f"  Comparison summary")
     print(f"{'=' * 70}")
-    print(f"  Variant A (FDT-locked, gamma_0={GAMMA_0_FDT}, T={T_FDT}):")
-    print(f"    Final val ppl: {variant_A['final_val_ppl']:.4f}")
-    print(f"    Val loss std: {variant_A['trajectory_variance']['val_loss_std']:.4f}")
-    print(f"    Max loss jump: {variant_A['trajectory_variance']['max_loss_jump']:.4f}")
-    print(f"    Spike count: {variant_A['trajectory_variance']['spike_count']}")
-    print(f"  Variant B (no FDT noise, gamma_0=0, T=0):")
-    print(f"    Final val ppl: {variant_B['final_val_ppl']:.4f}")
-    print(f"    Val loss std: {variant_B['trajectory_variance']['val_loss_std']:.4f}")
-    print(f"    Max loss jump: {variant_B['trajectory_variance']['max_loss_jump']:.4f}")
-    print(f"    Spike count: {variant_B['trajectory_variance']['spike_count']}")
+    for label, v in [("A (FDT high)", variant_A), ("B (FDT low)", variant_B), ("C (isolated)", variant_C)]:
+        print(f"  Variant {label} (gamma_0={v['gamma_0']}, T={v['fdt_temperature']}):")
+        print(f"    Final val ppl: {v['final_val_ppl']:.4f}")
+        print(f"    Val loss std: {v['trajectory_variance']['val_loss_std']:.4f}")
+        print(f"    Max loss jump: {v['trajectory_variance']['max_loss_jump']:.4f}")
+        print(f"    Spike count: {v['trajectory_variance']['spike_count']}")
     print(f"  Wall time total: {t_total:.1f}s")
     print()
-    print(f"Prediction P6.1 check: FDT-locked variant should have lower val_loss_std")
-    print(f"  and fewer spikes than no-FDT variant.")
+    print(f"Prediction P6.1 check: trajectory variance should DECREASE monotonically")
+    print(f"  as gamma_0 grows (isolated > fdt_low > fdt_high). Variant C is the")
+    print(f"  degenerate isolated regime; A and B are the P3-active regime.")
 
     # Write summary
+    variants = [variant_A, variant_B, variant_C]
     summary = {
-        "prediction": "P6.1 (interface 06)",
-        "variants": [variant_A, variant_B],
+        "prediction": "P6.1 (interface 06), with 3-variant sweep across P3 coupling",
+        "variants": variants,
         "wall_time_total_s": t_total,
-        "verdict": (
-            "consistent" if variant_A["trajectory_variance"]["val_loss_std"] < variant_B["trajectory_variance"]["val_loss_std"]
-            else "inconsistent"
-        ),
     }
     with open(OUTPUT_DIR / "summary.json", "w") as f:
         # history is large; truncate to summary points for the JSON
@@ -250,7 +250,7 @@ def main():
             if "history" in v:
                 v["history"] = {k: vv for k, vv in v["history"].items() if k != "samples_during_training"}
             return v
-        summary_trim = {**summary, "variants": [trim_history(v) for v in summary["variants"]]}
+        summary_trim = {**summary, "variants": [trim_history(v) for v in variants]}
         json.dump(summary_trim, f, indent=2)
     print(f"\nSummary written to {OUTPUT_DIR}/summary.json")
 

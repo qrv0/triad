@@ -1,0 +1,58 @@
+{
+  "prediction": "P14.2 (interface 14), wave 2 with FDT-coupled MNSM",
+  "btw": {
+    "n_avalanches": 3840,
+    "fit": {
+      "tau": 1.3678606205341597,
+      "n": 2533,
+      "x_min": 4.0
+    },
+    "wall_time": 3.031883716583252,
+    "size_min": 1,
+    "size_max": 14104,
+    "size_mean": 253.06692708333333
+  },
+  "mnsm_runs": [
+    {
+      "gamma_0": 0.0,
+      "T_bath": 0.05,
+      "n_avalanches": 18,
+      "fit": {
+        "tau": 1.1552498153501984,
+        "n": 18,
+        "x_min": 0.001
+      },
+      "median_peak": 0.020875342190265656,
+      "threshold_level": 0.02191910929977894,
+      "wall_time": 2.699270486831665
+    },
+    {
+      "gamma_0": 0.05,
+      "T_bath": 0.05,
+      "n_avalanches": 616,
+      "fit": {
+        "tau": 1.2296048850446886,
+        "n": 608,
+        "x_min": 0.001
+      },
+      "median_peak": 0.3614481985569,
+      "threshold_level": 0.37952060848474506,
+      "wall_time": 3.57796573638916
+    },
+    {
+      "gamma_0": 0.2,
+      "T_bath": 0.05,
+      "n_avalanches": 791,
+      "fit": {
+        "tau": 1.2402369209786996,
+        "n": 784,
+        "x_min": 0.001
+      },
+      "median_peak": 0.4273413419723511,
+      "threshold_level": 0.44870840907096865,
+      "wall_time": 3.393282175064087
+    }
+  ],
+  "wall_time_total_s": 12.934987306594849,
+  "backend": "cupy"
+}

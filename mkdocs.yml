@@ -377,6 +377,11 @@ nav:
       - 'FDT-Locked Noise Empirical': results/11-fdt-locked-noise-empirical.md
       - 'Cubic SSM SimSiam': results/12-cubic-ssm-simsiam.md
       - 'SOC vs MNSM Avalanches': results/13-soc-vs-mnsm-avalanches.md
+      - 'Wave-2 Kuramoto Chimera FDT': results/14-kuramoto-chimera-fdt.md
+      - 'Wave-2 Dimensional Rescaling FDT': results/15-dimensional-rescaling-fdt.md
+      - 'Wave-2 FDT-Locked Noise (P3)': results/16-fdt-locked-noise-empirical-p3.md
+      - 'Wave-2 Cubic SSM SimSiam FDT': results/17-cubic-ssm-simsiam-fdt.md
+      - 'Wave-2 SOC vs MNSM Matched Drive': results/18-soc-vs-mnsm-matched-drive.md
 
   - Cross-Domain Interfaces:
       - 'Overview': interfaces/README.md
