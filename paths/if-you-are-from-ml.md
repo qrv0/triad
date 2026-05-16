@@ -26,15 +26,24 @@ sub-quadratic sequence architecture. Memory-NLS is the same equation,
 FDT-locked stochastic regularization derived from physical first principles
 rather than fit empirically.
 
-<div class="path-eq" markdown>
+<div class="path-eq mnsm-eq--coded" markdown>
 $$
-\partial_t y_j = \nu_j(\rho - y_j) \quad\Leftrightarrow\quad \partial_t \mathbf{h} = \mathbf{A} \mathbf{h} + \mathbf{B} u
+\color{#14b8a6}{\partial_t y_j = \nu_j(\rho - y_j)}
+\quad\Longleftrightarrow\quad
+\color{#14b8a6}{\partial_t \mathbf{h} = \mathbf{A}\,\mathbf{h} + \mathbf{B}\,u}
 $$
+</div>
+
+<div class="eq-legend" markdown>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — the memory subsystem. Both sides are the same equation: Mori–Zwanzig projection on the left, diagonal-state SSM update on the right.</span>
+</div>
 
 with $\mathbf{A}$ diagonal, eigenvalues $-\nu_j$, $b_j = \nu_j$. The
 auxiliary-field memory update is **exactly** the diagonal-state SSM update;
-no calibration required.
-</div>
+no calibration required. The full equation embeds this $\color{#14b8a6}{P2}$
+subsystem inside a $\color{#6366f1}{P1}$ wave-equation kinetic and a
+$\color{#f59e0b}{P3}$ FDT-locked dissipation–noise pair — color-coded
+on the landing for orientation.
 
 </div>
 
@@ -61,6 +70,17 @@ representation — but they converged on the same equation.
 The auxiliary fields $y_j$ are exactly the hidden states $h_j$. The
 relaxation rates $\nu_j$ are exactly the (negative) SSM eigenvalues. Full
 correspondence: [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md).
+
+<div class="inline-diagram" markdown>
+![SSM diagonal state — Memory-NLS correspondence](../_docs_assets/diagrams/ssm-diagonal.svg)
+<p class="inline-diagram-caption">
+<strong>The correspondence at a glance.</strong> Same equation, two
+derivations, decoupled diagonal modes in the middle. The physics
+community got here by projecting an integro-differential memory kernel;
+the ML community got here by searching for a sub-quadratic alternative
+to attention.
+</p>
+</div>
 
 ## What Memory-NLS extends
 
@@ -99,6 +119,18 @@ principled solution to both. The mechanism produces three to five orders
 of magnitude separation between collapsed and released configurations in
 field dynamics; **the same mechanism has now been empirically observed to
 prevent catastrophic optimization collapse at 70M parameters on enwik8**.
+
+<div class="inline-diagram" markdown>
+![Memory lag — the mechanism behind anti-collapse](../_docs_assets/diagrams/memory-lag.svg)
+<p class="inline-diagram-caption">
+<strong>The principled alternative to architectural anti-collapse tricks.</strong>
+Stop-gradient, predictor networks, decorrelation regularizers — all
+prevent representation collapse by interrupting the gradient flow. The
+delayed-memory mechanism prevents it by **producing a repulsive overshoot
+exactly when collapse would occur**, with no engineering. The overshoot
+window is set by the slow relaxation rate.
+</p>
+</div>
 
 See [§5](#a-cross-substrate-empirical-instance-the-optimization-collapse-experiment) for
 the empirical observation; full detail at
@@ -215,6 +247,17 @@ The phenomenology is structurally identical to the field-theoretic case:
 the substrate without the structural anti-collapse mechanism enters a
 degenerate concentrated state; the substrate with the mechanism retains
 its extended configuration. **Same form, two substrates, same dynamics.**
+
+<div class="key-insight" markdown>
+<span class="key-insight-tag">What this means for sequence-model research</span>
+The anti-collapse mechanism is not a regularization trick to bolt onto
+existing architectures. **It's the structural consequence of having a
+multi-timescale memory hierarchy whose slow mode produces lagged
+repulsion.** Standard SSMs have memory but no nonlinearity in state; standard
+Transformers have nonlinearity but no temporal memory. The combination —
+nonlinearity *coupled to* lagged memory — is what prevents the collapse
+mode that empirically appeared in the matched Transformer run at step 28 000.
+</div>
 
 Full empirical detail:
 [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md)

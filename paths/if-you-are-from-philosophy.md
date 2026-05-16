@@ -213,6 +213,16 @@ What additional independent instances would be required to make the
 position empirically substantiated rather than merely plausible?**
 </div>
 
+<div class="key-insight" markdown>
+<span class="key-insight-tag">The position, in one line</span>
+**A theory whose third axiom denies the isolability of variables cannot
+consistently be evaluated by a methodology that presupposes their
+isolability.** This is not a defense against falsification; it is a
+**structural** observation about the relationship between content and
+method. The six criteria proposed are the operational consequence of
+taking the observation seriously rather than ignoring it.
+</div>
+
 <div class="path-refs" markdown>
 
 ### References cited

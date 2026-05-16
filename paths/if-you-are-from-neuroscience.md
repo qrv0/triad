@@ -24,16 +24,32 @@ produces a crystalline regime that, under a defensible dimensional
 calibration, exhibits broadband absorption across the **20–200 Hz** range
 — covering the neural gamma, beta, and lower high-gamma bands.
 
-<div class="path-eq" markdown>
+<div class="path-eq mnsm-eq--coded" markdown>
 $$
-i\hbar\, \partial_t \Psi = \big[\,-\tfrac{\hbar^2}{2m}\nabla^2 + V_{\text{ext}} + \Lambda|\Psi|^2 + V_{\text{mem}} + \alpha(-\Delta)^{\sigma/2} - i\Gamma\,\big]\Psi + \eta
+i\hbar\, \partial_t \Psi
+=
+\big[\,
+\color{#6366f1}{-\tfrac{\hbar^{2}}{2m}\nabla^{2}}
++ \color{#f59e0b}{V_{\text{ext}}}
++ \color{#14b8a6}{\Lambda|\Psi|^{2}}
++ \color{#14b8a6}{V_{\text{mem}}}
++ \color{#6366f1}{\alpha(-\Delta)^{\sigma/2}}
+- \color{#f59e0b}{i\Gamma}\,
+\big]\Psi
++ \color{#f59e0b}{\eta}
 $$
+</div>
+
+<div class="eq-legend" markdown>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1** — wave dynamics</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — memory hierarchy (working / short-term / long-term)</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3** — environmental coupling + noise</span>
+</div>
 
 with $V_{\text{mem}} = \sum_j \lambda_j y_j$ from auxiliary fields $y_j$
 relaxing at rates $\nu_j$ — a **multi-timescale memory hierarchy**
 structurally equivalent to the working / short-term / long-term integration
 pipeline of the hippocampal–cortical system.
-</div>
 
 </div>
 
@@ -61,6 +77,17 @@ underlying structural pattern**: broadband absorption by a self-organized
 oscillating medium with hierarchical temporal memory. The mechanism is
 dimension-independent and substrate-independent; specific frequencies
 depend on substrate-specific calibration.
+
+<div class="inline-diagram" markdown>
+![Neural frequency bands and Memory-NLS modes](../_docs_assets/diagrams/frequency-bands.svg)
+<p class="inline-diagram-caption">
+<strong>Where the equation's modes fall on the EEG frequency map.</strong>
+The four teal markers are the equation's principal modes under three
+different but each independently defensible dimensional calibrations.
+They land on (or near) frequencies that the clinical and experimental
+literature has independently identified as physiologically active.
+</p>
+</div>
 
 Full interface: [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md).
 
@@ -113,6 +140,17 @@ hippocampal–cortical consolidation pipeline (Squire & Alvarez 1995;
 McClelland, McNaughton & O'Reilly 1995): rapid encoding in hippocampus
 (fast mode) followed by gradual transfer to neocortical long-term storage
 (slow mode).
+
+<div class="inline-diagram" markdown>
+![Memory timescale hierarchy](../_docs_assets/diagrams/timescale-hierarchy.svg)
+<p class="inline-diagram-caption">
+<strong>The two structural memory modes mapped onto the biological pipeline.</strong>
+The equation's fast and slow relaxation rates fall in exactly the bands
+where the brain's working-memory / long-term-consolidation systems
+operate. This is a structural correspondence, not a fit — neither set of
+timescales was chosen with the other in mind.
+</p>
+</div>
 
 The equation does not model neural microcircuit biophysics. It models the
 **structural pattern** of hierarchical memory that biological memory
@@ -178,6 +216,18 @@ mechanism** — and it is dimension-independent and substrate-independent.
 The neuroscience reader interested in mechanism-level accounts of mental
 disorders may find the cross-substrate observation suggestive as a model
 for what hierarchical memory failure looks like as a dynamical signature.
+
+<div class="key-insight" markdown>
+<span class="key-insight-tag">Why the multi-Hz convergence is interesting</span>
+**Four predicted modes of the equation — 22 Hz, 40 Hz, 66 Hz, 110 Hz —
+fall on or near frequencies that the literature has independently
+identified as physiologically active**: 40 Hz (clinical GENUS protocol),
+110 Hz (Cook-Pajot-Leuchter EEG response, Newgrange resonance), 22 Hz
+(high beta), 66 Hz (mid-gamma). None of those clinical/experimental
+frequencies was used to set the equation's parameters. The convergence
+is what the structural-realist methodology calls **independent cross-domain
+recurrence of the same form**.
+</div>
 
 ## What the equation does not do
 

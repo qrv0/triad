@@ -166,6 +166,17 @@ The work's claim is not that one of these domains is "really" the work's
 subject and the others are analogies. The claim is that **the structure is
 the thing, and each of the seven is a faithful instance** of it.
 
+<div class="key-insight" markdown>
+<span class="key-insight-tag">The whole work in one line</span>
+**Three observations about how things last are turned into an equation,
+and the equation appears — independently — in seven different places in
+nature.** That recurrence is the evidence that the equation is real, not
+just a formula that happens to fit one dataset. The work is the
+documentation of those seven appearances and the methodological
+argument for why "recurring across substrates" should count as evidence
+at all.
+</div>
+
 ## What you should read next
 
 If you have read this far, the most useful next document is the

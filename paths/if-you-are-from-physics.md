@@ -22,13 +22,29 @@ L²-critical/supercritical NLS collapse, fractional Laplacians. The work in
 this repository sits in the intersection of these. This page gives you the
 fast route through it, with the equation written the way you'd write it.
 
-<div class="path-eq" markdown>
+<div class="path-eq mnsm-eq--coded" markdown>
 $$
-i\hbar\, \partial_t \Psi \;=\; \left[\,-\frac{\hbar^2}{2m}\nabla^2 \;+\; V_{\text{ext}} \;+\; \Lambda |\Psi|^2 \;+\; V_{\text{mem}} \;+\; \alpha (-\Delta)^{\sigma/2} \;-\; i\Gamma\,\right]\Psi \;+\; \eta
+i\hbar\, \partial_t \Psi
+\;=\;
+\Big[\,
+\color{#6366f1}{-\tfrac{\hbar^{2}}{2m}\nabla^{2}}
+\;+\; \color{#f59e0b}{V_{\text{ext}}}
+\;+\; \color{#14b8a6}{\Lambda |\Psi|^{2}}
+\;+\; \color{#14b8a6}{V_{\text{mem}}}
+\;+\; \color{#6366f1}{\alpha\,(-\Delta)^{\sigma/2}}
+\;-\; \color{#f59e0b}{i\Gamma}\,
+\Big]\Psi
+\;+\; \color{#f59e0b}{\eta}
 $$
+</div>
+
+<div class="eq-legend" markdown>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1** — wave-equation kinetic + fractional dispersion</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — cubic self-interaction + auxiliary-field memory</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3** — external potential + FDT-locked $(\Gamma, \eta)$</span>
+</div>
 
 with $V_{\text{mem}} = \sum_j \lambda_j y_j$, $\partial_t y_j = \nu_j(\rho - y_j)$, $\rho = |\Psi|^2$, and $\eta$ Gaussian-white obeying the classical fluctuation–dissipation relation $\langle \eta(\mathbf{x}, t)\, \eta^*(\mathbf{x}', t')\rangle = 4\Gamma T\, \delta(\mathbf{x}-\mathbf{x}')\, \delta(t - t')$.
-</div>
 
 </div>
 
@@ -63,6 +79,15 @@ a minimal set of axioms about persistent extended entities (P1, P2, P3 in
 phenomenology** the equation exhibits when all three are present that is
 absent from any single-term reduction.
 
+<div class="key-insight" markdown>
+<span class="key-insight-tag">The structural claim</span>
+The novelty is not "we added a memory term to NLS". It is that **three
+structural axioms about persistent extended entities — P1, P2, P3 — jointly
+select this particular form of memory-augmented NLS**, and the form produces
+phenomena (anti-collapse, BCC selection, broadband absorption) that no single
+reduction captures. The equation is what those three axioms add up to.
+</div>
+
 Full derivation: [`../equation/01-derivation.md`](../equation/01-derivation.md). &nbsp;
 Mori–Zwanzig embedding: [`../equation/02-markovian-embedding.md`](../equation/02-markovian-embedding.md).
 
@@ -80,6 +105,18 @@ $y_j$ relaxes toward $\rho$ at rate $\nu_j$, so the memory potential
 $V_{\text{mem}}$ peaks **after** the focal density does. The overshoot
 provides a transient repulsive contribution that exceeds the cubic
 attraction at the focal point, releasing the field outward.
+
+<div class="inline-diagram" markdown>
+![Memory lag — the mechanism behind anti-collapse](../_docs_assets/diagrams/memory-lag.svg)
+<p class="inline-diagram-caption">
+<strong>The mechanism in one picture.</strong> The memory potential
+$V_{\text{mem}}(t)$ (teal) is a low-pass-filtered echo of the field
+density $\rho(t)$ (red). It peaks **later** than the density by the slow
+relaxation timescale $1/\nu_{\text{slow}}$. In the overshoot window the
+memory exceeds the cubic attraction, producing a transient net repulsion
+that releases the field.
+</p>
+</div>
 
 The slow memory mode ($\nu = 0.5$, $\tau = 2$) is structurally essential —
 the fast mode alone cannot produce the lag. Effect size: three orders of

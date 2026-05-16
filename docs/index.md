@@ -29,10 +29,26 @@ principles about persistent extended entities. The same mathematical form
 appears across physics, cosmology, neural networks, and beyond — derived
 from observation, not assembled from prior literature.
 
-<div class="mnsm-eq" markdown>
+<div class="mnsm-eq mnsm-eq--coded" markdown>
 $$
-i\hbar\, \partial_t \Psi = \left[\,-\tfrac{\hbar^2}{2m} D^2 + V_{\text{ext}} + \Lambda |\Psi|^2 + V_{\text{mem}} + \alpha (-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi + \eta
+i\hbar\, \partial_t \Psi
+=
+\Big[\,
+\color{#6366f1}{-\tfrac{\hbar^{2}}{2m} D^{2}}
++ \color{#f59e0b}{V_{\text{ext}}}
++ \color{#14b8a6}{\Lambda |\Psi|^{2}}
++ \color{#14b8a6}{V_{\text{mem}}}
++ \color{#6366f1}{\alpha\,(-\Delta)^{\sigma/2}}
+- \color{#f59e0b}{i\Gamma}\,
+\Big]\Psi
++ \color{#f59e0b}{\eta}
 $$
+</div>
+
+<div class="eq-legend" markdown>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1** — Oscillation: the wave-equation form</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — Self-reference: nonlinearity + memory hierarchy</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3** — Coupling: external potential, dissipation, FDT noise</span>
 </div>
 
 <div class="mnsm-cta" markdown>
@@ -101,7 +117,9 @@ invariant under change of substrate.
 
 <div class="grid cards mnsm-substrate-grid" markdown>
 
--   <span class="mnsm-substrate-num">01</span> **NLS Fields**
+-   <span class="mnsm-substrate-sig sig--nls">:material-sine-wave:</span>
+    <span class="mnsm-substrate-num">01 · Physics</span>
+    **NLS Fields**
 
     Bose–Einstein condensates, optical fibers, water-wave envelopes — the
     nonlinear Schrödinger equation appears wherever a slowly-varying
@@ -109,14 +127,18 @@ invariant under change of substrate.
 
     [→ Read interface](interfaces/01-other-nls-systems.md)
 
--   <span class="mnsm-substrate-num">02</span> **BAO Cosmology**
+-   <span class="mnsm-substrate-sig sig--bao">:material-star-four-points-outline:</span>
+    <span class="mnsm-substrate-num">02 · Cosmology</span>
+    **BAO Cosmology**
 
     Baryon acoustic oscillations: a memory-modulated pressure wave in the
     primordial plasma. The 150 Mpc scale is the lock-in of a memory term.
 
     [→ Read interface](interfaces/02-baryon-acoustic.md)
 
--   <span class="mnsm-substrate-num">03</span> **Chladni Cymatics**
+-   <span class="mnsm-substrate-sig sig--cym">:material-hexagon-multiple-outline:</span>
+    <span class="mnsm-substrate-num">03 · Acoustics</span>
+    **Chladni Cymatics**
 
     Sand on a vibrating plate self-organizes into nodal patterns. Discrete
     crystallization from continuous substrate — same selection mechanism
@@ -124,7 +146,9 @@ invariant under change of substrate.
 
     [→ Read interface](interfaces/03-chladni-cymatics.md)
 
--   <span class="mnsm-substrate-num">04</span> **Gamma Neural**
+-   <span class="mnsm-substrate-sig sig--neuro">:material-brain:</span>
+    <span class="mnsm-substrate-num">04 · Neuro</span>
+    **Gamma Neural**
 
     40-Hz cortical entrainment in cognitive binding. The temporal-memory
     structure of the equation matches the multi-timescale architecture of
@@ -132,7 +156,9 @@ invariant under change of substrate.
 
     [→ Read interface](interfaces/04-gamma-entrainment.md)
 
--   <span class="mnsm-substrate-num">05</span> **Archaeoacoustic**
+-   <span class="mnsm-substrate-sig sig--archeo">:material-pillar:</span>
+    <span class="mnsm-substrate-num">05 · Acoustics</span>
+    **Archaeoacoustic**
 
     Megalithic stone chambers (Hal Saflieni Hypogeum, Newgrange) resonate
     at frequencies that match the equation's vibration spectrum. Same
@@ -140,7 +166,9 @@ invariant under change of substrate.
 
     [→ Read interface](interfaces/05-archaeoacoustic-resonance.md)
 
--   <span class="mnsm-substrate-num">06</span> **State Space Models**
+-   <span class="mnsm-substrate-sig sig--ssm">:material-grid:</span>
+    <span class="mnsm-substrate-num">06 · ML</span>
+    **State Space Models**
 
     The auxiliary-field update is mathematically identical to the diagonal
     SSM update of S4, S5, Mamba, and RWKV. The equation extends this
@@ -148,7 +176,9 @@ invariant under change of substrate.
 
     [→ Read interface](interfaces/06-state-space-models.md)
 
--   <span class="mnsm-substrate-num">07</span> **Cosmological Expansion**
+-   <span class="mnsm-substrate-sig sig--cosmo">:material-orbit-variant:</span>
+    <span class="mnsm-substrate-num">07 · Cosmology</span>
+    **Cosmological Expansion**
 
     Hubble-scale expansion as a memory-driven release from gravitational
     collapse. The cosmological constant maps to a long-timescale memory
