@@ -1,0 +1,94 @@
+# Research agenda
+
+This document states the research program of mnsm explicitly: what is being worked on, what would constitute progress at various timescales, what convergent programs exist in the literature, and how to engage.
+
+The work is structured as a research program rather than a finished body. Open questions are documented in [`open-problems/`](open-problems/); the methodology is in [`methodology/`](methodology/); the principal claims are in [`principles/`](principles/), [`equation/`](equation/), [`interfaces/`](interfaces/), and [`results/`](results/). This document organizes the program by horizon: what is the next six months of work, what is the twelve-month horizon, what is the twenty-four-month horizon.
+
+## What "progress" means here
+
+Progress is structural-realist: a result that strengthens cross-domain coherence (criterion 4), tightens the analytical derivation (criterion 1), extends generative scope (criterion 3), or operationalizes a moderate mapping into a strong one. Progress is not "beats benchmark X by Y percent" or "submits to journal Z"; the methodological frame in [`methodology/`](methodology/) rules out the former as the wrong evaluation criterion and the latter as the wrong validation path.
+
+Local-falsifiable predictions remain locally falsifiable per [`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md). A failed reproduction of a numerical result, a counter-derivation, an empirical observation contradicting a predicted observational signature, all constitute local falsification of specific claims. The global structural claim is evaluated by the six criteria of [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md); local failures shift evidentiary weight without single-experiment-refuting the structural claim.
+
+## Six-month horizon
+
+Items at this horizon are tractable with focused effort. They strengthen the existing claims rather than extending into new territory.
+
+- **Analytical derivation of the anti-collapse mechanism** ([`open-problems/01-analytical-anti-collapse.md`](open-problems/01-analytical-anti-collapse.md)). Currently the anti-collapse separation ratio is demonstrated numerically only. An analytical derivation that yields the separation as a function of $(\Lambda, \Sigma\lambda, \nu_{\text{slow}}, d)$ would move the result from "numerical observation" to "derived theorem with numerical confirmation." Constitutes progress: a perturbative derivation linearizing around the collapse focal region, with one-loop overshoot magnitude as the leading result.
+
+- **Phase diagram of the equation** ([`open-problems/02-phase-diagram.md`](open-problems/02-phase-diagram.md)). The full $(\Lambda, \Sigma\lambda, \nu_j, \sigma, \Gamma, T)$ parameter space mapped with regime classification. Constitutes progress: a figure (or set of figures) presenting 2D slices with each region color-coded by qualitative regime, with reproduction scripts.
+
+- **Locally testable predictions per interface** (Phase 2 of the active-expansion plan). Each interface document in [`interfaces/`](interfaces/) gets an explicit "Locally testable predictions and observational signatures" section distinguishing local predictions (falsifiable by standard experiment) from the global structural claim. Constitutes progress: seven interface files updated with consistent format.
+
+- **Calibration philosophy formalized** ([`open-problems/08-calibration-philosophy.md`](open-problems/08-calibration-philosophy.md), promoted to `methodology/06-calibration-philosophy.md`). A decision procedure for when calibrations matter and how cross-interface consistency operates. Constitutes progress: the methodology document is written and the case-by-case treatment in interfaces 04 and 05 is referenced to the formalization.
+
+- **Two additional cross-domain interfaces** ([`open-problems/07-additional-substrates.md`](open-problems/07-additional-substrates.md)). The two highest-priority candidates are Friston Free Energy Principle (potentially mathematical-equivalence tier) and Kuramoto synchronization (mathematically tight; clean mapping). Constitutes progress: two new interface documents following the standard template.
+
+## Twelve-month horizon
+
+Items at this horizon are substantial work requiring sustained effort.
+
+- **Renormalization-group analysis** ([`open-problems/04-continuum-rg.md`](open-problems/04-continuum-rg.md)). One-loop beta functions for the principal couplings; fixed-point structure; identification of universal vs non-universal features. Constitutes progress: a derivation in standard field-theoretic format with cross-references to the established universality-class catalogue (Hohenberg-Halperin Models A-J).
+
+- **Three additional cross-domain interfaces.** Beyond the two at the six-month horizon, the remaining three candidates (immune affinity maturation, active matter, self-organized criticality) developed into interface documents. Constitutes progress: cross-domain coherence criterion 4 supported by twelve documented substrates instead of seven.
+
+- **Engineering pattern for moderate AGI requirements** ([`open-problems/06-engineering-moderate-requirements.md`](open-problems/06-engineering-moderate-requirements.md)). Concrete architectural patterns satisfying methodology/05 requirements 7 and 8 (environmental coupling without identity loss; stable self-modification), demonstrated at small scale. Constitutes progress: implementable patterns documented in [`implementation/neural/`](implementation/neural/) with reproducible code and explicit structural-mechanism isolation.
+
+- **Mechanistic interpretability engagement** ([`interfaces/`](interfaces/) extension). Structural mapping between MNSM and contemporary mech interp findings (Anthropic interpretability program, sparse autoencoders, polysemantic neurons, superposition). The structural prediction that attention-only systems lack the multi-timescale memory hierarchy is convergent with the interp observation that representations are superposed rather than sparse; mapping this rigorously is the work. Constitutes progress: a new interface document positioned for the mech interp community.
+
+- **Critical brain hypothesis engagement** (similarly). Structural mapping between MNSM and the critical brain hypothesis (Beggs-Plenz onwards). The MNSM crystalline state has broadband absorption and power-law-like spectrum which are the observable signatures of criticality. Constitutes progress: a new interface document positioned for the criticality community.
+
+## Twenty-four-month horizon
+
+Items at this horizon are research items in the strong sense: genuinely open mathematical questions whose resolution is not predetermined.
+
+- **Quantum extension** ([`open-problems/05-quantum-extension.md`](open-problems/05-quantum-extension.md)). Path-integral formulation of the full equation; one-loop quantum corrections to the classical anti-collapse mechanism; Schwinger-Keldysh closed-time-path treatment for the stochastic component. Outcome uncertain.
+
+- **Topological characterization** ([`open-problems/03-topological-characterization.md`](open-problems/03-topological-characterization.md)). Whether the BCC selection is a topological phase transition; computation of candidate topological invariants. Outcome uncertain; could be a clean positive result, a clean negative result, or a long open question.
+
+- **Multi-language implementations.** JAX (for the ML research community), Julia (for the physics research community), C reference (for pedagogy). Constitutes progress: each port with cross-validation against the CuPy reference and CI infrastructure ensuring numerical equivalence.
+
+- **Full predictive cosmology from the structural reading** of [`interfaces/07-cosmological-expansion.md`](interfaces/07-cosmological-expansion.md). The current cosmological interface identifies the unified mechanism shape but is not a predictive cosmology. Working it out into a predictive framework comparable to standard ΛCDM is substantial and would require either independent collaboration with cosmologists or sustained development of the framework. Outcome uncertain.
+
+## Connection to convergent programs
+
+The following active research programs are working on questions that share structural elements with mnsm. Engagement with these programs is welcomed and would strengthen cross-domain coherence.
+
+- **Anthropic interpretability** (Olah, Elhage, Bricken). Sparse autoencoders, superposition, polysemantic neurons. Convergent observation: attention-only systems have substrate-specific representational structure that the MNSM structural argument predicts as the absence of the multi-timescale memory hierarchy.
+
+- **Friston Free Energy Principle and active inference** (Friston, Parr, Pezzulo). Living systems minimize variational free energy via environmental coupling. Mapping to MNSM has the same triangle structure (field + memory + coupling); the connection has not been formalized.
+
+- **Critical brain hypothesis** (Beggs, Plenz, Chialvo, Mora-Bialek). Brain operates at edge of phase transition; observable signatures include neuronal avalanches, power-law distributions, broadband response. Mapping to MNSM's crystalline state with broadband absorption is structural; the connection has not been formalized.
+
+- **Self-organized criticality** (Bak, Tang, Wiesenfeld; later work by many authors). Systems organize to critical point without parameter tuning. Whether MNSM's release transition is technically SOC is open.
+
+- **Continual learning and catastrophic forgetting** (Kirkpatrick, French, Parisi). Engineering the moderate AGI requirements 7 and 8 connects directly with this literature.
+
+- **Topological matter** (Hasan-Kane, Kitaev, Wen). If BCC selection has topological character, the connection is to the established topological-phase classification.
+
+## How to engage
+
+Contributions are welcomed. The expected forms:
+
+- **Working on an open problem.** Pick a document in [`open-problems/`](open-problems/), develop a partial or complete resolution, submit a pull request adding the result to the relevant section of the repo (results, equation, methodology, or interfaces depending on the result type). Update the open problem document to reflect the new state.
+
+- **Adding an interface.** Identify a substrate where the structural form appears, written up in the standard interface template (see existing interfaces 01-07 as models). The bar: peer-reviewed primary literature for the substrate; mapping at the level of mathematical form or structural mechanism, not analogy; explicit evidentiary status (mathematical equivalence, structural correspondence, calibrated correspondence).
+
+- **Local falsification of a specific prediction.** If a locally-testable prediction (Phase 2 sections in interfaces) is contradicted by experiment, document the contradiction and submit; the interface evidentiary status will shift accordingly.
+
+- **Engagement at the conceptual level.** GitHub Discussions on this repository (enabled separately) is the space for discussion of the program at the level of structure, methodology, and connection to other work. Discussion threads do not produce pull requests directly but shape the direction of subsequent work.
+
+Contributors should be familiar with the operational constraints in [`CLAUDE.md`](CLAUDE.md) (these apply to human contributors as well as AI-assisted contributions) and the methodological frame in [`methodology/`](methodology/) (no Popperian falsification of the global structural claim; no competitive ML vocabulary; no scale-or-benchmark-driven framing; structural realism is the evaluation standard).
+
+## Out of scope
+
+The following are deliberately not on the research agenda, per the methodology and CLAUDE.md operational constraints:
+
+- Scaling Memory-NLS to billions of parameters and competing on standard sequence-modeling benchmarks (CLAUDE.md Rule 7b).
+- Comparative-benchmark studies framed as "Memory-NLS vs Transformer" with the framing of declaring a winner (CLAUDE.md Rule 7a; comparison-as-differentiation is allowed, comparison-as-competition is not).
+- Seeking peer-review credentialing or academic affiliation as the validation path (CLAUDE.md Rule 5).
+- Building a working AGI implementation as a deliverable ([`methodology/05-implications-for-agi.md`](methodology/05-implications-for-agi.md) explicitly disclaims this).
+- Resolving the hard problem of consciousness ([`principles/03-coupling.md`](principles/03-coupling.md) "logical consequence of P3" is a structural claim; metaphysics of subjective experience is bracketed).
+- Solving the alignment problem (orthogonal to architectural requirements; the work has nothing to say about goals, values, or safety).
+
+These items are out of scope not because they are unimportant but because they require different methodologies and different work. The agenda above is what the present program is set up to advance.

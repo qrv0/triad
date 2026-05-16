@@ -117,6 +117,8 @@ different as 3D field dynamics and neural network optimization.*
 | [`paper/`](paper/) | The full manuscript |
 | [`tests/`](tests/) | Conservation, FDT, anti-collapse sanity tests |
 | [`assets/`](assets/) | Visual assets referenced in documentation (GIFs, plots) |
+| [`open-problems/`](open-problems/) | Catalogue of open research problems with uniform template (precise statement, what is known, what is missing, what would constitute progress) |
+| [`RESEARCH-AGENDA.md`](RESEARCH-AGENDA.md) | 6/12/24-month research horizons; convergent programs; how to contribute |
 
 ---
 

@@ -191,6 +191,9 @@ plugins:
             'How to Evaluate This': Como Avaliar Isto
             'The Six Criteria': Os Seis Critérios
             'Implications for AGI': Implicações para AGI
+            'Calibration Philosophy': Filosofia de Calibração
+            'Open Problems': Problemas em Aberto
+            'Research Agenda': Agenda de Pesquisa
             Implementation: Implementação
             'Physics Solver (CuPy)': 'Solver de Física (CuPy)'
             'Neural Layer (PyTorch)': 'Camada Neural (PyTorch)'
@@ -245,6 +248,9 @@ plugins:
             'How to Evaluate This': Cómo Evaluar Esto
             'The Six Criteria': Los Seis Criterios
             'Implications for AGI': Implicaciones para AGI
+            'Calibration Philosophy': Filosofía de Calibración
+            'Open Problems': Problemas Abiertos
+            'Research Agenda': Agenda de Investigación
             Implementation: Implementación
             'Physics Solver (CuPy)': 'Solver de Física (CuPy)'
             'Neural Layer (PyTorch)': 'Capa Neural (PyTorch)'
@@ -362,6 +368,20 @@ nav:
       - 'How to Evaluate This': methodology/03-how-to-evaluate-this.md
       - 'The Six Criteria': methodology/04-the-six-criteria.md
       - 'Implications for AGI': methodology/05-implications-for-agi.md
+      - 'Calibration Philosophy': methodology/06-calibration-philosophy.md
+
+  - Open Problems:
+      - 'Overview': open-problems/README.md
+      - 'Analytical Anti-Collapse': open-problems/01-analytical-anti-collapse.md
+      - 'Phase Diagram': open-problems/02-phase-diagram.md
+      - 'Topological Characterization': open-problems/03-topological-characterization.md
+      - 'Continuum RG': open-problems/04-continuum-rg.md
+      - 'Quantum Extension': open-problems/05-quantum-extension.md
+      - 'Engineering Moderate Requirements': open-problems/06-engineering-moderate-requirements.md
+      - 'Additional Substrates': open-problems/07-additional-substrates.md
+      - 'Calibration Philosophy (Open)': open-problems/08-calibration-philosophy.md
+
+  - Research Agenda: RESEARCH-AGENDA.md
 
   - Implementation:
       - 'Overview': implementation/README.md

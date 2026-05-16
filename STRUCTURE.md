@@ -10,9 +10,9 @@ This repository hosts work of the second kind. The code is real and runs; reprod
 
 The shape of this repository is, therefore, a structural argument in its own right. The choices made below are deliberate.
 
-## The eleven first-order folders
+## The twelve first-order folders
 
-There are eleven folders at the top level: `principles/`, `equation/`, `results/`, `interfaces/`, `methodology/`, `paths/`, `playground/`, `implementation/`, `experiments/`, `paper/`, `tests/`.
+There are twelve folders at the top level: `principles/`, `equation/`, `results/`, `interfaces/`, `methodology/`, `paths/`, `playground/`, `implementation/`, `experiments/`, `paper/`, `tests/`, `open-problems/`. The repository root also contains `RESEARCH-AGENDA.md`, which sits beside `README.md`, `CLAUDE.md`, `STRUCTURE.md`, and `CONTRIBUTING.md`.
 
 `principles/` comes first because the work begins in axioms, not in code. Putting the three structural principles into a top-level folder, rather than burying them in the introduction of a README, is a declaration that this work is foundational rather than incremental. Anyone who reads the file tree before reading any prose sees that the entry point is mathematical principles.
 
@@ -35,6 +35,10 @@ There are eleven folders at the top level: `principles/`, `equation/`, `results/
 `paper/` contains the full manuscript. The decision to keep it as a single file rather than splitting into chapters is to preserve its readability as a paper rather than a wiki.
 
 `tests/` contains the sanity tests that validate the solver. The decision to include conservation tests, FDT thermalization tests, and anti-collapse signature tests is standard practice for numerical work where reproducibility is asserted.
+
+`open-problems/` catalogues the work's open research questions in uniform template (precise statement, what is known, what is missing, what would constitute progress, suggested approaches, repo connections). The folder makes the program visibly active rather than finished. Eight problems currently catalogued: analytical anti-collapse, full phase diagram, topological characterization, continuum RG, quantum extension, engineering moderate AGI requirements, additional cross-domain substrates, calibration philosophy. New problems are added as they are recognized; resolved problems are kept (marked closed) as the historical record.
+
+`RESEARCH-AGENDA.md` at the repository root organizes the open problems by horizon (6 / 12 / 24 months) and identifies convergent research programs (Anthropic interpretability, Friston Free Energy Principle, critical brain hypothesis, self-organized criticality literature) where engagement would strengthen the cross-domain coherence claim.
 
 ## What the structure encodes about the work
 
