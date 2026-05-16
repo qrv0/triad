@@ -19,55 +19,132 @@
                      "Source Serif 4", Cambria, Georgia, serif;
 }
 
+/* ---------- 12-stop OKLCH graphite scale ---------------------------------
+   Each stop tuned for perceptual evenness in OKLCH space. Hex fallbacks
+   are sRGB approximations of oklch(L C h) values. The scale has a subtle
+   warm bias (h close to 80, low chroma 0.005-0.012) so surfaces feel like
+   paper and charcoal rather than printer gray.
+   --------------------------------------------------------------------- */
+
+:root {
+  /* Light-mode anchor: warm paper to deep graphite */
+  --mnsm-g-0:  #FCFBF8;   /* paper-white,  ~oklch(98.5% 0.005 80) */
+  --mnsm-g-1:  #F7F5F1;   /* soft surface, ~oklch(96.4% 0.006 80) */
+  --mnsm-g-2:  #EFEDE7;   /* card surface, ~oklch(93.0% 0.007 80) */
+  --mnsm-g-3:  #E3E0DA;   /* divider,      ~oklch(88.8% 0.008 80) */
+  --mnsm-g-4:  #CFCBC4;   /* muted,        ~oklch(82.0% 0.008 80) */
+  --mnsm-g-5:  #A8A39C;   /* mid-light,    ~oklch(70.0% 0.010 80) */
+  --mnsm-g-6:  #797470;   /* mid-dark,     ~oklch(54.0% 0.010 80) */
+  --mnsm-g-7:  #4E4A47;   /* text-muted,   ~oklch(38.0% 0.010 80) */
+  --mnsm-g-8:  #2E2C2A;   /* text,         ~oklch(24.8% 0.008 80) */
+  --mnsm-g-9:  #1B1A19;   /* deep,         ~oklch(16.5% 0.006 80) */
+  --mnsm-g-10: #121110;   /* deeper,       ~oklch(11.5% 0.005 80) */
+  --mnsm-g-11: #0B0A09;   /* deepest,      ~oklch(7.5% 0.004 80) */
+
+  /* Accents
+     teal: primary accent, kept from prior scheme
+     amber: emphasis, warning notes, predictions
+     iris: methodology callouts, structural-realist links */
+  --mnsm-accent-teal:        #0d9488;
+  --mnsm-accent-teal-soft:   rgba(13, 148, 136, 0.10);
+  --mnsm-accent-teal-medium: rgba(13, 148, 136, 0.18);
+  --mnsm-accent-teal-strong: rgba(13, 148, 136, 0.32);
+  --mnsm-accent-teal-light:  #5EEAD4;
+  --mnsm-accent-teal-darker: #0F766E;
+
+  --mnsm-accent-amber:        #D97706;
+  --mnsm-accent-amber-soft:   rgba(217, 119, 6, 0.10);
+  --mnsm-accent-amber-medium: rgba(217, 119, 6, 0.18);
+  --mnsm-accent-amber-light:  #FBBF24;
+  --mnsm-accent-amber-darker: #B45309;
+
+  --mnsm-accent-iris:        #4F46E5;
+  --mnsm-accent-iris-soft:   rgba(79, 70, 229, 0.10);
+  --mnsm-accent-iris-medium: rgba(79, 70, 229, 0.18);
+  --mnsm-accent-iris-light:  #818CF8;
+  --mnsm-accent-iris-darker: #3730A3;
+
+  /* Retraction red, used sparingly for retraction banners */
+  --mnsm-accent-retract:       #B91C1C;
+  --mnsm-accent-retract-soft:  rgba(185, 28, 28, 0.10);
+}
+
 /* ---------- Light mode: graphite on warm paper ---------------- */
 
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color:        #1c1c1c;
-  --md-primary-fg-color--light: #404040;
-  --md-primary-fg-color--dark:  #000000;
-  --md-primary-bg-color:        #fafaf9;
-  --md-primary-bg-color--light: #f4f4f3;
+  --md-primary-fg-color:        var(--mnsm-g-9);
+  --md-primary-fg-color--light: var(--mnsm-g-7);
+  --md-primary-fg-color--dark:  var(--mnsm-g-11);
+  --md-primary-bg-color:        var(--mnsm-g-0);
+  --md-primary-bg-color--light: var(--mnsm-g-1);
 
-  --md-accent-fg-color:         #0d9488;
-  --md-accent-fg-color--transparent: rgba(13, 148, 136, 0.1);
+  --md-accent-fg-color:         var(--mnsm-accent-teal);
+  --md-accent-fg-color--transparent: var(--mnsm-accent-teal-soft);
 
-  --md-default-bg-color:        #fafaf9;
-  --md-default-bg-color--light:  #f4f4f3;
-  --md-default-bg-color--lighter: #ededec;
-  --md-default-bg-color--lightest: #e7e7e6;
+  --md-default-fg-color:        var(--mnsm-g-8);
+  --md-default-fg-color--light: var(--mnsm-g-7);
+  --md-default-fg-color--lighter: var(--mnsm-g-6);
+  --md-default-fg-color--lightest: var(--mnsm-g-5);
 
-  --md-typeset-color:           #1f1f1f;
-  --md-typeset-a-color:         #0d9488;
+  --md-default-bg-color:         var(--mnsm-g-0);
+  --md-default-bg-color--light:  var(--mnsm-g-1);
+  --md-default-bg-color--lighter: var(--mnsm-g-2);
+  --md-default-bg-color--lightest: var(--mnsm-g-3);
 
-  --md-code-bg-color:           #f0efed;
-  --md-code-fg-color:           #2d2d2d;
+  --md-typeset-color:           var(--mnsm-g-8);
+  --md-typeset-a-color:         var(--mnsm-accent-teal-darker);
 
-  --md-footer-bg-color:         #1c1c1c;
-  --md-footer-bg-color--dark:   #0d0d0d;
+  --md-code-bg-color:           var(--mnsm-g-2);
+  --md-code-fg-color:           var(--mnsm-g-9);
+
+  --md-footer-bg-color:         var(--mnsm-g-9);
+  --md-footer-bg-color--dark:   var(--mnsm-g-11);
 }
 
-/* ---------- Dark mode: deep charcoal, warm white text --------- */
+/* ---------- Dark mode: warm charcoal, warm white text -------------------
+   Premium dark sites avoid pitch black; a warm anchor at oklch(14%) reads
+   like paper-in-low-light rather than monitor-off. Text is warm-white to
+   match. --------------------------------------------------------------- */
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #1a1a1a;
-  --md-primary-fg-color--light: #2d2d2d;
-  --md-primary-fg-color--dark:  #000000;
+  --mnsm-g-0:  #FBF9F4;   /* near-paper, used as text on dark */
+  --mnsm-g-1:  #EAE6DE;   /* warm-white text */
+  --mnsm-g-2:  #D2CEC6;   /* slightly muted body */
+  --mnsm-g-3:  #A8A39C;
+  --mnsm-g-4:  #797470;
+  --mnsm-g-5:  #4E4A47;
+  --mnsm-g-6:  #38353300;  /* unused */
+  --mnsm-g-7:  #2C2A28;   /* divider on dark */
+  --mnsm-g-8:  #1F1D1B;   /* card surface */
+  --mnsm-g-9:  #16140F;   /* code surface */
+  --mnsm-g-10: #100E0C;   /* page surface */
+  --mnsm-g-11: #0B0A08;   /* deepest, used for footer */
 
-  --md-accent-fg-color:         #5eead4;
+  --md-primary-fg-color:        var(--mnsm-g-10);
+  --md-primary-fg-color--light: var(--mnsm-g-9);
+  --md-primary-fg-color--dark:  var(--mnsm-g-11);
+
+  /* In dark mode, teal-light reads better than darker teal */
+  --md-accent-fg-color:         var(--mnsm-accent-teal-light);
   --md-accent-fg-color--transparent: rgba(94, 234, 212, 0.12);
 
-  --md-default-bg-color:        #0d0d0d;
-  --md-default-bg-color--light:  #161616;
-  --md-default-bg-color--lighter: #1f1f1f;
-  --md-default-bg-color--lightest: #2a2a2a;
+  --md-default-fg-color:        var(--mnsm-g-1);
+  --md-default-fg-color--light: var(--mnsm-g-2);
+  --md-default-fg-color--lighter: var(--mnsm-g-3);
+  --md-default-fg-color--lightest: var(--mnsm-g-4);
 
-  --md-typeset-color:           #e7e5e4;
-  --md-typeset-a-color:         #5eead4;
+  --md-default-bg-color:        var(--mnsm-g-10);
+  --md-default-bg-color--light:  var(--mnsm-g-9);
+  --md-default-bg-color--lighter: var(--mnsm-g-8);
+  --md-default-bg-color--lightest: var(--mnsm-g-7);
 
-  --md-code-bg-color:           #1a1a1a;
-  --md-code-fg-color:           #e7e5e4;
+  --md-typeset-color:           var(--mnsm-g-1);
+  --md-typeset-a-color:         var(--mnsm-accent-teal-light);
 
-  --md-footer-bg-color:         #0a0a0a;
+  --md-code-bg-color:           var(--mnsm-g-9);
+  --md-code-fg-color:           var(--mnsm-g-1);
+
+  --md-footer-bg-color:         var(--mnsm-g-11);
   --md-footer-bg-color--dark:   #000000;
 }
 
@@ -448,16 +525,24 @@ body.long-form mjx-container {
   vertical-align: middle;
 }
 
-/* ---------- Selection styling --------------------------------- */
+/* ---------- Selection styling ---------------------------------
+   Selection uses the accent color at low alpha; the body color is kept
+   for readability instead of the high-contrast white-on-teal default. */
 
 ::selection {
-  background: var(--md-accent-fg-color);
-  color: #ffffff;
+  background: var(--mnsm-accent-teal-medium);
+  color: var(--mnsm-g-9);
 }
 
 [data-md-color-scheme="slate"] ::selection {
-  background: var(--md-accent-fg-color);
-  color: #0a0a0a;
+  background: rgba(94, 234, 212, 0.28);
+  color: var(--mnsm-g-1);
+}
+
+/* Code selection has a separate, slightly stronger treatment */
+.md-typeset code ::selection,
+.md-typeset pre ::selection {
+  background: var(--mnsm-accent-teal-strong);
 }
 
 /* ---------- Responsive --------------------------------------- */
@@ -499,15 +584,37 @@ body.long-form mjx-container {
 }
 
 [data-md-color-scheme="slate"] * {
-  scrollbar-color: #2a2a2a #0d0d0d;
+  scrollbar-color: var(--mnsm-g-7) var(--mnsm-g-10);
 }
 
 [data-md-color-scheme="default"] * {
-  scrollbar-color: #d4d4d3 #fafaf9;
+  scrollbar-color: var(--mnsm-g-4) var(--mnsm-g-0);
+}
+
+/* Webkit scrollbar refinement: thinner, with hover state */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-md-color-scheme="slate"] *::-webkit-scrollbar-thumb {
+  background: var(--mnsm-g-7);
+  border-radius: 4px;
+}
+[data-md-color-scheme="default"] *::-webkit-scrollbar-thumb {
+  background: var(--mnsm-g-4);
+  border-radius: 4px;
+}
+
+[data-md-color-scheme="slate"] *::-webkit-scrollbar-thumb:hover {
+  background: var(--mnsm-g-6);
+}
+[data-md-color-scheme="default"] *::-webkit-scrollbar-thumb:hover {
+  background: var(--mnsm-g-5);
 }
 
 /* ============================================================
-   LANDING PAGE — Premium lab layout
+   LANDING PAGE : Premium lab layout
    ============================================================ */
 
 /* Make the landing page full-width (remove inner padding) */
@@ -521,7 +628,7 @@ body[data-md-color-scheme] .md-main__inner {
   margin-right: auto;
 }
 
-/* Subtle alt-section bg in light/dark — defined here to share */
+/* Subtle alt-section bg in light/dark, defined here to share */
 :root {
   --mnsm-alt-bg: #f4f3f1;
   --mnsm-quiet-bg: #efeeec;
@@ -537,7 +644,7 @@ body[data-md-color-scheme] .md-main__inner {
   --mnsm-border: rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- Hero — wheel dominant, text supporting ---------- */
+/* ---------- Hero (wheel dominant, text supporting) ---------- */
 
 .mnsm-hero {
   display: flex;
@@ -1191,7 +1298,7 @@ body[data-md-color-scheme] .md-main .md-content article.md-content__inner {
 .md-content__inner > .md-content__button { display: none; }
 
 /* ============================================================
-   READER PATHS — audience-specific landings
+   READER PATHS : audience-specific landings
    Each path gets a distinct accent + hero treatment so the
    reader feels "this was made for me", not generic doc.
    ============================================================ */
@@ -1268,13 +1375,13 @@ body[data-md-color-scheme] .md-main .md-content article.md-content__inner {
 .path-breadcrumb a { border-bottom: none; }
 
 /* Per-audience accents */
-.path-hero.path--physics    { --path-accent: #14b8a6; }    /* teal — matches default */
+.path-hero.path--physics    { --path-accent: #14b8a6; }    /* teal (matches default) */
 .path-hero.path--ml         { --path-accent: #8b5cf6; }    /* violet */
 .path-hero.path--neuro      { --path-accent: #ec4899; }    /* pink */
 .path-hero.path--philosophy { --path-accent: #f59e0b; }    /* amber */
 .path-hero.path--new        { --path-accent: #06b6d4; }    /* cyan */
 
-/* Section headers inside paths — chapter divider treatment */
+/* Section headers inside paths: chapter divider treatment */
 .md-typeset .path-body {
   counter-reset: chapter;
 }
