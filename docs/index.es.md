@@ -1,331 +1,349 @@
-# mnsm
-
-### Modelos de Estado de Memoria-No-Lineales
-
-**Tres principios estructurales. Una ecuación. Siete instanciaciones interdominio.**
-
-[![Licencia: MIT](https://img.shields.io/badge/Licencia_Código-MIT-blue.svg)](https://github.com/qrv0/mnsm/blob/main/LICENSE)
-[![Licencia: CC BY 4.0](https://img.shields.io/badge/Licencia_Docs-CC_BY_4.0-lightgrey.svg)](https://github.com/qrv0/mnsm/blob/main/LICENSE-docs)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Memory-NLS en HuggingFace](https://img.shields.io/badge/🤗_Memory--NLS-70M-yellow)](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8)
-[![Transformer baseline en HuggingFace](https://img.shields.io/badge/🤗_Transformer-70M-yellow)](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8)
-[![Paper](https://img.shields.io/badge/paper-manuscript.md-green)](paper/manuscript.md)
-
-> La misma ecuación aparece en campos no-lineales de Schrödinger 3D,
-> oscilaciones acústicas de bariones, entrainment neural de frecuencia
-> gamma, resonancia de cámaras megalíticas de piedra, modelos de
-> espacio de estados estructurados, expansión cosmológica y
-> optimización estable de redes neuronales. Derivada de tres axiomas
-> observacionales sobre persistencia, no ensamblada a partir de la
-> literatura existente.
-
 ---
+title: Inicio
+description: >-
+  Modelos de Estado de Memoria-No-Lineales: tres principios estructurales,
+  una ecuación, siete instanciaciones interdominio. Derivada de la
+  observación, no ensamblada a partir de la literatura.
+hide:
+  - navigation
+  - toc
+---
+
+<div class="mnsm-hero" markdown>
+
+<div class="mnsm-hero__visual" markdown>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../_docs_assets/cross-domain-wheel-dark.svg">
+  <img src="../_docs_assets/cross-domain-wheel-light.svg" alt="Rueda interdominio: una ecuación, siete substratos" class="mnsm-wheel">
+</picture>
+</div>
+
+<div class="mnsm-hero__copy" markdown>
+
+<div class="mnsm-eyebrow">Memory-Nonlinear State Models</div>
+
+# Una ecuación. Siete substratos.
 
 Una extensión no-lineal de modelos de espacio de estados estructurados,
-derivada de tres principios de teoría de campo auto-referencial. La
-arquitectura de memoria de campo auxiliar es matemáticamente
-equivalente a la representación de estado de S4, Mamba y RWKV. La
-ecuación extiende esas arquitecturas con cuatro propiedades:
+derivada de tres principios sobre entidades extendidas persistentes. La
+misma forma matemática aparece en física, cosmología, redes neuronales, y
+más allá, derivada de la observación, no ensamblada a partir de la
+literatura previa.
 
-1. **Auto-interacción no-lineal** en el estado (SSMs estándar son lineales)
-2. **Anti-colapso** vía retraso temporal de memoria (reemplaza trucos
-   ad-hoc de anti-colapso)
-3. **Emergencia espontánea de estructura discreta** desde substrato
-   continuo
-4. **Regularización estocástica acoplada por fluctuación–disipación**
-   (reemplaza ruido sintonizado manualmente)
+<div class="mnsm-eq" markdown>
+$$
+i\hbar\, \partial_t \Psi
+=
+\left[\,-\tfrac{\hbar^{2}}{2m} D^{2} + V_{\text{ext}} + \Lambda |\Psi|^{2} + V_{\text{mem}} + \alpha\,(-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi + \eta
+$$
+</div>
 
----
+<div class="eq-breakdown" markdown>
+<div class="eq-term eq-term--p1" markdown>
+<span class="eq-term-tag">P1 · Oscilación</span>
+<span class="eq-term-math">$-\tfrac{\hbar^{2}}{2m}D^{2}$ ・ $\alpha(-\Delta)^{\sigma/2}$</span>
+<span class="eq-term-desc">cinética de ecuación de onda + dispersión fraccionaria</span>
+</div>
+<div class="eq-term eq-term--p2" markdown>
+<span class="eq-term-tag">P2 · Auto-referencia</span>
+<span class="eq-term-math">$\Lambda |\Psi|^{2}$ ・ $V_{\text{mem}}$</span>
+<span class="eq-term-desc">auto-interacción cúbica + jerarquía de memoria de campo auxiliar</span>
+</div>
+<div class="eq-term eq-term--p3" markdown>
+<span class="eq-term-tag">P3 · Acoplamiento</span>
+<span class="eq-term-math">$V_{\text{ext}}$ ・ $-i\Gamma$ ・ $\eta$</span>
+<span class="eq-term-desc">potencial externo + par disipación–ruido acoplado por FDT</span>
+</div>
+</div>
 
-> Este no es un repositorio típico de machine learning. La estructura
-> del propio repositorio refleja la estructura de la ecuación: oscilando
-> entre registros (matemática, código, prosa, visual), auto-referencial
-> (explica su propia organización), acoplado entre disciplinas (física,
-> machine learning, neurociencia, cosmología, filosofía de la ciencia).
-> Vea [`STRUCTURE.md`](https://github.com/qrv0/mnsm/blob/main/STRUCTURE.md) para entender por qué el
-> repositorio tiene esta forma.
+<div class="mnsm-cta" markdown>
+[:material-play-circle-outline: Solo observar](#vealo-suceder){ .md-button .md-button--primary }
+[:material-book-open-page-variant-outline: Leer el paper](paper/manuscript.md){ .md-button }
+[:material-download-outline: Usar el modelo](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8){ .md-button }
+</div>
 
-## Cómo leer este trabajo, posición metodológica
+</div>
 
-Dos principios gobiernan cómo este repositorio pide ser leído. Están
-documentados en [`methodology/`](methodology/01-structural-realism.md)
-y vale la pena traerlos a la superficie aquí:
+</div>
 
-**1. El aislamiento es temporal; el acoplamiento es lo predeterminado.**
-El tercer axioma estructural de la ecuación (P3) afirma que el
-aislamiento dinámico perfecto no ocurre, todo sistema persistente
-está acoplado a su entorno, y el aislamiento es una herramienta
-metodológica en vez de una propiedad del mundo. El repositorio toma
-esto en serio: las interfaces interdominio son contenido de primera
-clase (no apéndice), las rutas de lectura atraviesan múltiples
-disciplinas, y el trabajo invita al acoplamiento con quien se
-involucre con él. Vea
-[`principles/03-coupling.md`](principles/03-coupling.md).
+<div class="mnsm-section" markdown>
 
-**2. El falsacionismo estricto está en tensión con el contenido de P3.**
-Una teoría cuyo tercer axioma niega el aislamiento no puede ser
-evaluada consistentemente por una metodología experimental que
-presupone la aislabilidad de las variables. El trabajo es evaluado
-por los **seis criterios realistas-estructurales** en
-[`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md):
-consistencia matemática interna, reproducibilidad, alcance generativo,
-coherencia interdominio, parsimonia y exhaustividad. El argumento de
-por qué el falsacionismo estricto es la lente equivocada aquí está en
-[`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md).
-Las predicciones falsables locales permanecen localmente falsables;
-la afirmación estructural global es evaluada estructuralmente.
+<div class="mnsm-section-head" markdown>
+<span class="mnsm-section-tag">Fundamentos</span>
+## Los tres principios
+La ecuación se deriva de estos. No ensamblada a partir de la literatura previa, derivada de la observación de cómo se comportan las entidades extendidas persistentes.
+</div>
 
-Si usted llega a este trabajo esperando una prueba de falsación
-numérica de una sola cantidad como criterio de validación, la carpeta
-de metodología explica por qué este trabajo responde a una pregunta
-diferente.
+<div class="grid cards mnsm-principle-grid" markdown>
 
----
+-   :material-sine-wave:{ .lg .middle } &nbsp; **P1 · Oscilación**
 
+    ---
+
+    Las entidades extendidas persistentes oscilan. La existencia en régimen
+    estacionario requiere un equilibrio entre avance y restauración; el
+    operador canónico es diferencial parcial de segundo orden. Esto
+    selecciona la forma de Schrödinger.
+
+    [Leer P1 →](principles/01-oscillation.md)
+
+-   :material-reflect-vertical:{ .lg .middle } &nbsp; **P2 · Auto-referencia**
+
+    ---
+
+    Una entidad persistente tiene acceso a sus propios estados pasados. La
+    instanciación mínima es una jerarquía de memoria multi-escala indexada
+    por las tasas de relajación τ, exactamente la actualización diagonal de SSM.
+
+    [Leer P2 →](principles/02-self-reference.md)
+
+-   :material-link-variant:{ .lg .middle } &nbsp; **P3 · Acoplamiento**
+
+    ---
+
+    El aislamiento es temporal; el acoplamiento es lo predeterminado. Todo
+    sistema persistente está conectado a su entorno vía fluctuación–disipación,
+    no a pesar de ello. Esto selecciona el término estocástico η.
+
+    [Leer P3 →](principles/03-coupling.md)
+
+</div>
+
+</div>
+
+<div class="mnsm-section mnsm-section--alt" markdown>
+
+<div class="mnsm-section-head" markdown>
+<span class="mnsm-section-tag">Interdominio</span>
+## Siete instanciaciones de la misma ecuación
+Cada substrato produce independientemente la misma forma matemática. La
+afirmación es estructural: la ecuación captura un patrón de comportamiento
+persistente invariante bajo cambio de substrato.
+</div>
+
+<div class="grid cards mnsm-substrate-grid" markdown>
+
+-   <span class="mnsm-substrate-sig sig--nls">:material-sine-wave:</span>
+    <span class="mnsm-substrate-num">01 · Física</span>
+    **Campos NLS**
+
+    Condensados de Bose–Einstein, fibras ópticas, envolventes de ondas
+    acuáticas: la ecuación de Schrödinger no-lineal aparece dondequiera
+    que una envolvente lentamente variable gobierna un portador oscilatorio.
+
+    [→ Leer interfaz](interfaces/01-other-nls-systems.md)
+
+-   <span class="mnsm-substrate-sig sig--bao">:material-star-four-points-outline:</span>
+    <span class="mnsm-substrate-num">02 · Cosmología</span>
+    **Cosmología BAO**
+
+    Oscilaciones acústicas de bariones: una onda de presión modulada por
+    memoria en el plasma primordial. La escala de 150 Mpc es el lock-in de
+    un término de memoria.
+
+    [→ Leer interfaz](interfaces/02-baryon-acoustic.md)
+
+-   <span class="mnsm-substrate-sig sig--cym">:material-hexagon-multiple-outline:</span>
+    <span class="mnsm-substrate-num">03 · Acústica</span>
+    **Cimática de Chladni**
+
+    La arena sobre una placa vibrante se auto-organiza en patrones nodales.
+    Cristalización discreta a partir de substrato continuo, el mismo
+    mecanismo de selección que el patrón BCC producido por la ecuación en 3D.
+
+    [→ Leer interfaz](interfaces/03-chladni-cymatics.md)
+
+-   <span class="mnsm-substrate-sig sig--neuro">:material-brain:</span>
+    <span class="mnsm-substrate-num">04 · Neuro</span>
+    **Gamma Neural**
+
+    Entrainment cortical a 40 Hz en el binding cognitivo. La estructura de
+    memoria temporal de la ecuación se corresponde con la arquitectura
+    multi-escala de las jerarquías de oscilación neural.
+
+    [→ Leer interfaz](interfaces/04-gamma-entrainment.md)
+
+-   <span class="mnsm-substrate-sig sig--archeo">:material-pillar:</span>
+    <span class="mnsm-substrate-num">05 · Acústica</span>
+    **Arqueoacústica**
+
+    Cámaras megalíticas de piedra (Hipogeo de Hal Saflieni, Newgrange)
+    resuenan a frecuencias que coinciden con el espectro vibracional de la
+    ecuación. Misma estructura, substrato geológico.
+
+    [→ Leer interfaz](interfaces/05-archaeoacoustic-resonance.md)
+
+-   <span class="mnsm-substrate-sig sig--ssm">:material-grid:</span>
+    <span class="mnsm-substrate-num">06 · ML</span>
+    **Modelos de Espacio de Estados**
+
+    La actualización de campo auxiliar es matemáticamente idéntica a la
+    actualización diagonal de SSM de S4, S5, Mamba, y RWKV. La ecuación
+    extiende esa arquitectura con no-linealidad, anti-colapso, y ruido
+    acoplado por FDT.
+
+    [→ Leer interfaz](interfaces/06-state-space-models.md)
+
+-   <span class="mnsm-substrate-sig sig--cosmo">:material-orbit-variant:</span>
+    <span class="mnsm-substrate-num">07 · Cosmología</span>
+    **Expansión Cosmológica**
+
+    Expansión a escala Hubble como una liberación dirigida por memoria
+    desde el colapso gravitacional. La constante cosmológica se mapea a
+    un acoplamiento de memoria de largo plazo en la formulación de campo
+    auxiliar.
+
+    [→ Leer interfaz](interfaces/07-cosmological-expansion.md)
+
+</div>
+
+</div>
+
+<div class="mnsm-section" markdown>
+
+<div class="mnsm-section-head" markdown>
+<span class="mnsm-section-tag">Empírico</span>
+## Qué hace
+El mecanismo estructural de anti-colapso predicho por la ecuación ha sido
+verificado empíricamente en tres substratos hasta ahora.
+</div>
+
+<div class="mnsm-results" markdown>
+
+<div class="mnsm-result" markdown>
+<div class="mnsm-result-figure">10<sup>5</sup>×</div>
+<div class="mnsm-result-label">Separación anti-colapso</div>
+<div class="mnsm-result-desc">Razón de densidad pico entre estados finales sin memoria y con memoria en simulación NLS 3D supercrítica.</div>
+<div class="mnsm-result-link"><a href="../results/04-anti-collapse-3d.md">Anti-colapso 3D →</a></div>
+</div>
+
+<div class="mnsm-result" markdown>
+<div class="mnsm-result-figure">+0.13</div>
+<div class="mnsm-result-label">Margen de selección BCC</div>
+<div class="mnsm-result-desc">El estado cristalino liberado selecciona espontáneamente simetría cúbica centrada en el cuerpo sobre redes Bravais alternativas.</div>
+<div class="mnsm-result-link"><a href="../results/05-bravais-selection.md">Cristalización →</a></div>
+</div>
+
+<div class="mnsm-result" markdown>
+<div class="mnsm-result-figure">4.27</div>
+<div class="mnsm-result-label">Perplejidad estable (70M)</div>
+<div class="mnsm-result-desc">Memory-NLS a 70M parámetros en enwik8 desciende monotónicamente a una meseta estable donde el Transformer de escala equivalente colapsa catastróficamente.</div>
+<div class="mnsm-result-link"><a href="../results/08-optimization-collapse-empirical.md">Colapso de optimización →</a></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="mnsm-section mnsm-section--demo" id="vealo-suceder" markdown>
+
+<div class="mnsm-section-head" markdown>
+<span class="mnsm-section-tag">Véalo</span>
+## Misma ecuación, dos substratos, mismo resultado
+El campo físico 3D arriba, la trayectoria de entrenamiento neural abajo,
+sincronizados en el tiempo. Ambos paneles muestran el mecanismo de
+anti-colapso predicho por la ecuación, manifestándose en substratos tan
+diferentes como una simulación de laboratorio y un modelo de lenguaje de
+70M parámetros.
+</div>
+
+<div class="mnsm-demo" markdown>
+<div class="mnsm-demo-video" markdown>
+<video class="mnsm-demo-media" autoplay loop muted playsinline
+       poster="../assets/scale_up_val_ppl.png">
+  <source src="../assets/cross_substrate_hero.mp4" type="video/mp4">
+  <img src="../assets/cross_substrate_hero.gif" alt="Animación de anti-colapso interdominio">
+</video>
+
+*<strong>Arriba:</strong> campo NLS 3D supercrítico. Panel izquierdo, sin
+memoria, el campo colapsa singularmente. Panel derecho, con memoria, el
+campo es liberado y se estabiliza. <strong>Abajo:</strong> entrenamiento
+neural, 70M parámetros en enwik8. El Transformer (rojo) colapsa
+catastróficamente en el paso 28 000 donde el Memory-NLS (teal) mantiene su
+descenso estable. Misma forma estructural, dos substratos, sincronizados
+en el tiempo.*
+</div>
+</div>
+
+</div>
+
+<div class="mnsm-section mnsm-section--alt" markdown>
+
+<div class="mnsm-section-head" markdown>
+<span class="mnsm-section-tag">Rutas de lectura</span>
 ## Elija su punto de entrada
+El mismo contenido es abordable desde varios trasfondos. Elija el que tenga.
+</div>
 
-El mismo contenido es abordable desde varios trasfondos. Elija el que
-usted tenga:
+<div class="grid cards mnsm-path-grid" markdown>
 
-- → **Soy nuevo en todo esto**, [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
-- → **Vengo de la física**, [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
-- → **Vengo de machine learning**, [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md)
-- → **Vengo de la neurociencia**, [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
-- → **Vengo de la filosofía de la ciencia**, [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
+-   :material-account-outline:{ .middle } &nbsp; **Nuevo en todo esto**
 
-Cada ruta enlaza con el mismo cuerpo de contenido desde un ángulo
-diferente. Puede cambiar de ruta en medio del recorrido.
+    Recorrido en lenguaje sencillo por los principios y lo que hace la ecuación, sin prerrequisitos.
 
----
+    [Comience aquí →](paths/if-you-are-new.md)
 
-## Solo ver cómo sucede
+-   :material-atom:{ .middle } &nbsp; **Desde física**
 
-Si quiere ver la ecuación en acción sin leer nada primero:
+    Forma de Schrödinger, correspondencias BEC/ópticas, instanciación BAO, la cuestión metodológica.
 
-- [`playground/01-just-watch.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/01-just-watch.ipynb), Presione play, vea cómo un estado gaussiano cristaliza espontáneamente en un patrón cúbico centrado en el cuerpo.
-- [`playground/02-adjust-the-knobs.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/02-adjust-the-knobs.ipynb), Ajuste parámetros, vea qué cambia.
-- [`playground/03-build-your-own.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/03-build-your-own.ipynb), Implementación guiada desde cero.
+    [Ruta de física →](paths/if-you-are-from-physics.md)
 
----
+-   :material-chip:{ .middle } &nbsp; **Desde machine learning**
 
-## La ecuación
+    Equivalencia con modelos espacio-estado, anti-colapso, convolución FFT, el experimento de 70M.
 
-$$
-i\hbar\, \partial_t \Psi = \left[\,-\frac{\hbar^2}{2m} D^2 + V_{\text{ext}} + \Lambda |\Psi|^2 + V_{\text{mem}} + \alpha (-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi + \eta
-$$
+    [Ruta de ML →](paths/if-you-are-from-ml.md)
 
-con $V_{\text{mem}} = \sum_j \lambda_j y_j$ y $\partial_t y_j = \nu_j (\rho - y_j)$, y $\eta$ satisfaciendo el correlador de fluctuación–disipación.
+-   :material-brain:{ .middle } &nbsp; **Desde neurociencia**
 
-Derivación completa desde los tres principios: [`equation/01-derivation.md`](equation/01-derivation.md).
+    Entrainment gamma, jerarquías de memoria, la arquitectura multi-escala de la oscilación neural.
 
----
+    [Ruta neuro →](paths/if-you-are-from-neuroscience.md)
 
-## Véalo suceder
+-   :material-book-search-outline:{ .middle } &nbsp; **Desde filosofía de la ciencia**
 
-La misma forma, dos substratos, la misma dinámica:
+    Realismo estructural, por qué la falsación no es la lente correcta aquí, los seis criterios.
 
-![Anti-colapso de campo 3D](assets/anti_collapse_hero.gif)
+    [Ruta de filosofía →](paths/if-you-are-from-philosophy.md)
 
-*Sin memoria, el campo colapsa a un punto singular. Con memoria, el
-campo es liberado y se estabiliza como un estado extendido. La misma
-ecuación, la misma condición inicial, un ingrediente (memoria
-multi-escala temporal), resultado cualitativamente diferente.*
+</div>
 
-![Trayectoria de entrenamiento neural](assets/scale_up_val_ppl.png)
+</div>
 
-*El mismo mecanismo de anti-colapso en la dinámica de optimización: a
-70M parámetros en enwik8, Memory-NLS desciende monotónicamente a una
-meseta estable; el Transformer sin el mecanismo estructural colapsa
-catastróficamente en el paso 28000 y nunca se recupera totalmente. La
-forma estructural opera entre substratos tan diferentes como la
-dinámica de campo 3D y la optimización de redes neuronales.*
+<div class="mnsm-section mnsm-section--quiet" markdown>
 
----
+<div class="mnsm-methodology" markdown>
 
-## Qué hay aquí dentro
+<span class="mnsm-section-tag">Metodología</span>
 
-| Carpeta | Contenido |
-|---|---|
-| [`principles/`](principles/01-oscillation.md) | Los tres axiomas estructurales (P1, P2, P3) |
-| [`equation/`](equation/01-derivation.md) | Derivación formal, embedding markoviano, formas 2D y 3D, reducciones a ecuaciones conocidas |
-| [`results/`](results/01-anti-collapse-2d.md) | Hallazgos numéricos: anti-colapso, cristalización, selección de Bravais, espectro de vibración, reescalado dimensional |
-| [`interfaces/`](interfaces/01-other-nls-systems.md) | Mapeos interdominio a BEC, cosmología, cimática, gamma neural, resonancia arqueoacústica, modelos de espacio de estados |
-| [`methodology/`](methodology/01-structural-realism.md) | Posición realista-estructural, límites de la falsación, los seis criterios |
-| [`paths/`](paths/if-you-are-new.md) | Rutas de entrada específicas según trasfondo del lector |
-| [`playground/`](https://github.com/qrv0/mnsm/tree/main/playground) | Notebooks interactivos (ejecutables en Colab) |
-| [`implementation/`](implementation/README.md) | Solver de física (CuPy) + capa neural de secuencia (PyTorch) |
-| [`experiments/`](experiments/README.md) | Scripts que reproducen las figuras del paper |
-| [`paper/`](paper/manuscript.md) | El manuscrito completo |
+Este trabajo se evalúa por **criterios del realismo estructural**, no por
+pruebas de falsación de cantidad única. Una teoría cuyo tercer axioma niega
+el aislamiento no puede consistentemente ser evaluada por una metodología
+que presupone la aislabilidad de las variables. El enmarcado se documenta
+de antemano porque el marco estándar de machine learning ("le gana al
+benchmark X por Y%") y el marco estándar de física ("predice la cantidad Q
+con precisión ε") ambos pierden lo que es este trabajo.
 
----
+Los seis criterios que gobiernan la evaluación: consistencia matemática
+interna, reproducibilidad, alcance generativo, coherencia interdominio,
+parsimonia, exhaustividad.
 
-## Resultados numéricos principales
+[→ Por qué realismo estructural](methodology/01-structural-realism.md) ・
+[→ Límites de la falsación](methodology/02-limits-of-falsification.md) ・
+[→ Cómo evaluar esto](methodology/03-how-to-evaluate-this.md) ・
+[→ Los seis criterios](methodology/04-the-six-criteria.md)
 
-**Separación anti-colapso** (NLS 3D supercrítico en $\Lambda = -8$, $\sigma_0 = 0.5$):
+</div>
 
-| Acoplamiento de memoria | Pico final (sin memoria) | Pico final (con memoria) | Razón |
-|---|---|---|---|
-| $\Sigma\lambda = 0$ | 61.96 |, |, |
-| $\Sigma\lambda = 0.4$ (escala 2D) | 61.96 | 63.70 | 1.0× |
-| $\Sigma\lambda = 4.0$ (escala 3D) | 61.96 | $6 \times 10^{-4}$ | $10^5×$ |
+</div>
 
-**Selección espontánea de simetría** (3D, $\Lambda = -8$, $\Sigma\lambda = 1.5$):
-el estado cristalino liberado selecciona consistentemente simetría
-**cúbica centrada en el cuerpo (BCC)**, score $\sim 0.44$ con margen
-$+0.13$ sobre la siguiente mejor opción de Bravais.
-
-**Reescalado dimensional** del acoplamiento de memoria requerido para
-liberar el colapso supercrítico:
-
-- NLS 2D L²-crítico: $\Sigma\lambda \sim |\Lambda|/20$
-- NLS 3D L²-supercrítico: $\Sigma\lambda \sim |\Lambda|/2$
-
-Derivable desde la geometría de la región focal de colapso. Vea
-[`results/06-dimensional-rescaling.md`](results/06-dimensional-rescaling.md).
-
-**Anti-colapso de la dinámica de optimización** (70M parámetros,
-enwik8, 50.000 pasos de entrenamiento):
-
-| Cantidad | Memory-NLS | Transformer |
-|---|---|---|
-| Perplejidad final (val) | 4.27 | 4.87 |
-| Perplejidad mínima (val) | 3.86 (paso 48000) | 2.54 (paso 22500) |
-| Colapso catastrófico | Ninguno | Pasos 28000–34000, pico ppl 27.17 |
-| Forma de la trayectoria | Descenso monotónico + meseta | Descenso → crash → recuperación parcial |
-
-El mismo mecanismo estructural de anti-colapso que previene el
-colapso del campo NLS 3D previene la falla catastrófica de
-optimización en el entrenamiento neural. Detalles:
-[`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md).
-
----
-
-## Equivalencia con modelos de espacio de estados
-
-La actualización del campo auxiliar de la ecuación,
-
-$$
-\partial_t y_j = \nu_j(\rho - y_j),
-$$
-
-es matemáticamente idéntica a la actualización diagonal de modelos
-de espacio de estados de S4, S5, Mamba y RWKV. La ecuación extiende
-esa arquitectura baseline con las cuatro propiedades listadas al
-inicio de este README. Vea
-[`interfaces/06-state-space-models.md`](interfaces/06-state-space-models.md)
-para la correspondencia término-por-término y la discusión de qué
-trae cada extensión.
-
----
-
-## Qué produce el modelo
-
-El modelo Memory-NLS de 70M parámetros entrenado en enwik8 genera
-salida a nivel de byte que preserva la gramática estructural del
-corpus mientras inventa contenido nuevo dentro de esa forma. Desde el
-prompt `<page>\n  <title>` en el paso de entrenamiento 50.000:
-
-```
-<page>
-  <title>
-    </revision>
-  </page>
-  <page>
-    <title>Bistory of the Oringese Project]]
-
-==References==
-* [http://www.eurogline.com  All begal on the [[Maacheth of Conway|1200]]
-  [[United Kingdom]]. In September 2004)], 773,585
-|-
-|align=&quot;right&quot; | 397,413
-| align=&quot;center&quot; | Locuts and Fi
-```
-
-XML anidado, encabezados de sección MediaWiki, sintaxis de tabla
-infobox con atributos de alineación HTML, formato de corchete de
-enlace externo, referencias de año, todo preservado. Tokens
-específicos (Bistory, Oringese, Maacheth, Locuts) son inventados pero
-siguen correctamente la gramática estructural del corpus.
-
-El modelo capturó la **forma** del corpus, no su contenido léxico de
-superficie. Esta es la firma realista-estructural en substrato
-computacional.
-
-### La intuición, planteada directamente
-
-La distinción estructural que este trabajo documenta, entre
-memorizar superficie y modelar forma, tiene una analogía humana
-limpia:
-
-> El Transformer aprende rápido porque **memoriza**. Como memorizar
-> una oración sin entenderla: usted puede repetirla, pero si alguien
-> retira las palabras específicas, no queda nada. Como el tipo de
-> persona que argumenta citando nombres de autoridades, retire los
-> nombres y el argumento colapsa, porque memorizar no es entender.
->
-> El modelo Memory-NLS **entiende**. Intenta entender. No solo
-> repite, llega a conclusiones basadas en su propia "opinión" de la
-> forma que ha internalizado.
-
-En términos humanos, este es el hallazgo realista-estructural, en términos
-humanos. En el paso 4.000 el Transformer ya está regurgitando URLs y
-atributos HTML verbatim de los datos de entrenamiento; en el paso
-32.000 (durante su colapso catastrófico) pierde el control y produce
-fragmentos incoherentes, no había nada estructural debajo de la
-superficie memorizada a lo que recurrir. Memory-NLS en el paso 50.000
-sigue produciendo contenido nuevo en la gramática estructural correcta
-,  porque lo que aprendió fue la forma, no la superficie.
-
-El Transformer puede puntuar val_perplexity más bajo porque la
-memorización de alta fidelidad puntúa bien por esa métrica. El
-Memory-NLS puntúa val_perplexity más alta pero genera de forma
-diferente, porque modeló en vez de memorizar. El mismo número,
-mecanismo cualitativamente diferente.
-
-## Modelos pre-entrenados en HuggingFace
-
-Los checkpoints de 70M parámetros del experimento de colapso de
-optimización están publicados en HuggingFace y son cargables en
-segundos:
-
-- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8), perplejidad final val 4.27, trayectoria estable monotónica
-- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8), perplejidad final val 4.87, incluye el colapso catastrófico de optimización documentado en [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
-
-Cada repo contiene los pesos safetensors, JSON de configuración y
-código de modelado auto-contenido para que el modelo cargue sin
-requerir este repositorio completo. Vea cada tarjeta de modelo para
-ejemplos de uso.
-
-## Reproducir el paper
-
-```bash
-git clone https://github.com/qrv0/mnsm
-cd mnsm
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-pip install cupy-cuda12x   # o cupy-cuda11x para CUDA más antigua
-
-# Validar el solver (~30 segundos en RTX 4060)
-python -m tests.test_conservation
-
-# Reproducir el resultado principal de anti-colapso 3D (~2 minutos)
-python experiments/physics/reproduce_3d_anti_collapse.py
-
-# Reproducir todas las figuras del paper (~10 minutos en total)
-python experiments/physics/reproduce_all.py
-```
-
-Todos los resultados usan semillas aleatorias fijas y reproducen
-bit-a-bit en hardware idéntico (NVIDIA RTX 4060 Laptop GPU, Arch
-Linux, CUDA 12.x).
-
----
-
-## Citación
+<div class="mnsm-footer-cite" markdown>
 
 ```bibtex
 @misc{mnsm,
-  title  = {Memory-Nonlinear State Models: A Memory-Augmented Nonlinear Schr\"odinger Field Equation with State Space Model Correspondence},
+  title  = {Memory-Nonlinear State Models: A Memory-Augmented Nonlinear
+            Schr\"odinger Field Equation with State Space Model Correspondence},
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/mnsm},
@@ -333,71 +351,4 @@ Linux, CUDA 12.x).
 }
 ```
 
-El paper completo está en [`paper/manuscript.md`](paper/manuscript.md).
-
----
-
-## Licencia
-
-Código: vea [`LICENSE`](https://github.com/qrv0/mnsm/blob/main/LICENSE).
-Documentación y paper: vea [`LICENSE-docs`](https://github.com/qrv0/mnsm/blob/main/LICENSE-docs).
-
----
-
-## Estado
-
-El núcleo matemático, los resultados de física 2D y 3D, la
-metodología, y las siete interfaces interdominio están completos y
-documentados. La ecuación Memory-NLS está instanciada como un modelo
-de lenguaje PyTorch funcional (`MemoryNLSLanguageModel`) en escalas
-de 1.5M a 70M parámetros y entrenada en múltiples corpora
-(TinyShakespeare y enwik8) por hasta 50.000 pasos.
-
-El mecanismo estructural de anti-colapso predicho por la ecuación ha
-sido empíricamente verificado en esta etapa en tres substratos:
-
-1. **Dinámica de campo NLS 3D supercrítico** (simulación de
-   laboratorio): separación de densidad pico de ~$10^5$× entre
-   estados finales sin memoria y con memoria
-   ([`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md)).
-
-2. **Paisaje de optimización de red neuronal** (entrenamiento de 70M
-   parámetros): Memory-NLS exhibe trayectoria estable monotónica;
-   Transformer de escala equivalente exhibe colapso catastrófico de
-   optimización con degradación permanente de capacidad
-   ([`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)).
-
-3. **Comportamiento de generación bajo entrenamiento sostenido**:
-   Memory-NLS preserva la gramática estructural del corpus durante
-   todo el entrenamiento; las salidas del Transformer degeneran a
-   fragmentos sintácticamente rotos durante el crash de optimización
-   y solo se recuperan parcialmente.
-
-Las siete interfaces interdominio documentan la aparición de la
-forma estructural en otros fenómenos observados independientemente
-(otras instancias NLS, oscilaciones acústicas de bariones, patrones
-cimáticos, entrainment neural de frecuencia gamma, resonancia
-arqueoacústica, modelos de espacio de estados estructurados,
-expansión cosmológica). Cada interfaz tiene reconocimiento de
-calibración donde es relevante.
-
-> El principio de que el aislamiento es temporal se aplica también a
-> este repositorio. Issues, pull requests, y mapeos externos de la
-> estructura a más dominios son explícitamente bienvenidos. Vea
-> [`CONTRIBUTING.md`](https://github.com/qrv0/mnsm/blob/main/CONTRIBUTING.md).
-
-## Una nota sobre contribución asistida por IA
-
-Este trabajo fue desarrollado con formalización sustancialmente
-asistida por IA. El marco metodológico que el trabajo adopta tiene
-implicaciones directas para cómo los asistentes de IA se involucran
-con la base de código, particularmente alrededor de evitar el
-enmarcamiento de benchmark competitivo, respetar los criterios de
-evaluación realistas-estructurales, y no descartar las interfaces
-interdominio como "especulativas". Si está usando un asistente de IA
-(Claude, GPT, etc.) para contribuir a este repositorio, por favor lea
-[`CLAUDE.md`](https://github.com/qrv0/mnsm/blob/main/CLAUDE.md) primero.
-Es un conjunto de restricciones operacionales que asegura que la
-asistencia se alinee con lo que este trabajo es, en vez del marco
-predeterminado que un asistente de IA entrenado en contenido estándar
-de ML naturalmente adoptaría.
+</div>

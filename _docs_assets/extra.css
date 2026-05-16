@@ -837,15 +837,47 @@ body[data-md-color-scheme] .md-main__inner {
   color: var(--md-accent-fg-color);
 }
 
-/* ---------- Substrate grid (7 cards) ------------------------- */
+/* ---------- Substrate grid (7 cards: 4-on-top, 3-below) ------- */
 
 .mnsm-substrate-grid {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto !important;
 }
+/* 12-col grid:
+   - row 1: 4 cards, each span 3 cols (4×3 = 12)
+   - row 2: 3 cards, each span 4 cols (3×4 = 12)
+   Both rows fill the full width; row-2 cards are 33% wider than row-1,
+   which works because the bottom row visually frames the wheel below. */
 .mnsm-substrate-grid ul {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 0.9rem;
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr) !important;
+  gap: 0.9rem !important;
+}
+.mnsm-substrate-grid ul > li:nth-child(-n+4) {
+  grid-column: span 3;
+}
+.mnsm-substrate-grid ul > li:nth-child(n+5) {
+  grid-column: span 4;
+}
+
+@media (max-width: 1100px) {
+  /* 3-col fallback: natural 3-3-1 flow */
+  .mnsm-substrate-grid ul {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .mnsm-substrate-grid ul > li {
+    grid-column: span 1 !important;
+  }
+}
+@media (max-width: 760px) {
+  .mnsm-substrate-grid ul {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 500px) {
+  .mnsm-substrate-grid ul {
+    grid-template-columns: 1fr !important;
+  }
 }
 .mnsm-substrate-grid li {
   position: relative;
