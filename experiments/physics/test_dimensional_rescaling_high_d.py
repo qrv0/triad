@@ -172,8 +172,10 @@ def main():
     T_bath = 0.05  # bath temperature
 
     # Sweep Sigma_lambda x gamma_0 at d=4 and d=5.
-    # gamma_0 spans isolation (0) to moderate coupling; gamma_0=0 included as degenerate point only.
-    GAMMA_0_VALUES = [0.0, 0.05, 0.2, 1.0]  # P3 sweep
+    # gamma_0 spans small positive (weak coupling) to moderate coupling; the
+    # isolated regime (gamma_0 = 0) is excluded per principles/03-coupling.md
+    # (Rule A in the structural-research-mode skill).
+    GAMMA_0_VALUES = [0.05, 0.2, 1.0]  # P3 sweep
     # Sigma_lambda spans both candidate scaling predictions:
     # 1/d formula: ratio ~0.25 at d=4 (Sigma_lambda ~2); ~0.20 at d=5
     # factor-10 formula: ratio ~5 at d=4 (Sigma_lambda ~40); ~50 at d=5

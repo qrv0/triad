@@ -68,17 +68,20 @@ NU_MAX = 10.0
 DT = 0.05
 FAST_BIAS = 3.0
 
-# Variant A: FDT-locked noise (moderate)
+# Variant A: FDT-locked noise (moderate coupling)
 GAMMA_0_FDT_HIGH = 0.02
 T_FDT_HIGH = 0.01
 
-# Variant B: FDT-locked noise (weak; intermediate coupling)
+# Variant B: FDT-locked noise (weak coupling)
 GAMMA_0_FDT_LOW = 0.005
 T_FDT_LOW = 0.01
 
-# Variant C: no built-in noise (degenerate isolated; for comparison only)
-GAMMA_0_NONE = 0.0
-T_NONE = 0.0
+# The isolated variant (gamma_0 = 0, T = 0) that the original draft
+# included as "for comparison only" has been removed per principles/
+# 03-coupling.md (Rule A in the structural-research-mode skill).
+# Isolation is not a configuration the methodology permits, even as
+# a comparison case; see docs/llm-hedge-annotations.md for the
+# revision rationale.
 
 # Training: 8000 steps at 1.5M params (small enough to cycle two variants)
 TRAIN_CFG_TEMPLATE = TrainConfig(
@@ -216,15 +219,13 @@ def main():
                               train_data, val_data, tokenizer.vocab_size, device)
     variant_B = run_variant("fdt_low", GAMMA_0_FDT_LOW, T_FDT_LOW,
                               train_data, val_data, tokenizer.vocab_size, device)
-    variant_C = run_variant("isolated", GAMMA_0_NONE, T_NONE,
-                              train_data, val_data, tokenizer.vocab_size, device)
 
     t_total = time.time() - t_total
 
     print(f"\n{'=' * 70}")
     print(f"  Comparison summary")
     print(f"{'=' * 70}")
-    for label, v in [("A (FDT high)", variant_A), ("B (FDT low)", variant_B), ("C (isolated)", variant_C)]:
+    for label, v in [("A (FDT high)", variant_A), ("B (FDT low)", variant_B)]:
         print(f"  Variant {label} (gamma_0={v['gamma_0']}, T={v['fdt_temperature']}):")
         print(f"    Final val ppl: {v['final_val_ppl']:.4f}")
         print(f"    Val loss std: {v['trajectory_variance']['val_loss_std']:.4f}")
@@ -232,12 +233,12 @@ def main():
         print(f"    Spike count: {v['trajectory_variance']['spike_count']}")
     print(f"  Wall time total: {t_total:.1f}s")
     print()
-    print(f"Prediction P6.1 check: trajectory variance should DECREASE monotonically")
-    print(f"  as gamma_0 grows (isolated > fdt_low > fdt_high). Variant C is the")
-    print(f"  degenerate isolated regime; A and B are the P3-active regime.")
+    print(f"Prediction P6.1 check: trajectory variance should DECREASE as")
+    print(f"  gamma_0 grows in the coupled regime (fdt_low > fdt_high).")
+    print(f"  Both variants run with gamma_0 > 0 per principles/03-coupling.md.")
 
     # Write summary
-    variants = [variant_A, variant_B, variant_C]
+    variants = [variant_A, variant_B]
     summary = {
         "prediction": "P6.1 (interface 06), with 3-variant sweep across P3 coupling",
         "variants": variants,

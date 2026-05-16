@@ -68,12 +68,14 @@ ALPHA = 1.45
 SEED = 42
 
 # Sweep specifications
-# P3 coupling: gamma_0 from very weak to strong; T fixed at 0.1 (FDT-locked noise
-# amplitude is sqrt(2 gamma_0 T dt) so gamma_0 controls both dissipation rate
-# and noise amplitude jointly per the FDT correlator). The isolated regime
-# (gamma_0 = 0) is included as one degenerate point in the sweep, NOT as the
-# baseline.
-GAMMA_0_VALUES = [0.0, 0.01, 0.05, 0.2, 1.0]   # P3 coupling strength
+# P3 coupling: gamma_0 from small positive (weak coupling) to large positive
+# (strong coupling); T fixed at 0.1. Noise amplitude is sqrt(2 gamma_0 T dt)
+# so gamma_0 controls both dissipation rate and noise amplitude jointly per
+# the FDT correlator. The sweep starts at gamma_0 = 0.01: the isolated regime
+# (gamma_0 = 0) is excluded per principles/03-coupling.md (Rule A in the
+# structural-research-mode skill); it is not a configuration the methodology
+# permits, even as a sweep endpoint.
+GAMMA_0_VALUES = [0.01, 0.05, 0.2, 1.0]         # P3 coupling strength
 T_BATH = 0.1                                     # bath temperature
 NU_VALUES = [0.03, 0.1, 0.3, 1.0, 3.0, 10.0]   # memory rates (tau_mem = 1/nu)
 

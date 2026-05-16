@@ -64,11 +64,10 @@ NU_MIN = 0.5
 NU_MAX = 10.0
 DT = 0.05
 
-# P3 parameters
+# P3 parameters (coupled regime only; isolated constants removed per
+# principles/03-coupling.md and docs/llm-hedge-annotations.md).
 GAMMA_0_FDT = 0.02
 T_FDT = 0.01
-GAMMA_0_ISO = 0.0
-T_ISO = 0.0
 
 
 def generate_clustered_sequences(n_samples: int, d_input: int, seq_len: int,
@@ -95,7 +94,7 @@ def augment(x: torch.Tensor, noise: float = 0.1) -> torch.Tensor:
 class SimSiamEncoder(nn.Module):
     def __init__(self, d_input: int, d_model: int, n_heads: int = 4,
                  lambda_cubic: float = -0.5, sigma_lambda: float = 0.3,
-                 gamma_0: float = 0.0, fdt_T: float = 0.0,
+                 gamma_0: float = 0.02, fdt_T: float = 0.01,
                  projection_dim: int = 64):
         super().__init__()
         self.input_proj = nn.Linear(d_input, d_model)
@@ -238,9 +237,11 @@ def main():
     # B: linear + P3 active
     variants.append(train_variant("linear_p3", LAMBDA_LINEAR, GAMMA_0_FDT, T_FDT,
                                    train_data, val_data, device))
-    # C: cubic + isolated (degenerate; for comparison)
-    variants.append(train_variant("cubic_iso", LAMBDA_CUBIC, GAMMA_0_ISO, T_ISO,
-                                   train_data, val_data, device))
+    # The isolated variant (cubic + gamma_0 = 0, T = 0) that the original
+    # draft included as "for comparison" has been removed per principles/
+    # 03-coupling.md (Rule A in the structural-research-mode skill).
+    # The test now compares cubic+P3 vs linear+P3, both in the coupled
+    # regime; see docs/llm-hedge-annotations.md for the revision rationale.
     t_total = time.time() - t_total
 
     print(f"\n{'='*70}\n  Comparison summary\n{'='*70}")
