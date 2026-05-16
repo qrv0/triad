@@ -68,24 +68,26 @@ It does establish that the equation's structural form recurs at the level of car
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (cardiac dynamics instantiates the same triangle as the present equation) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (cardiac dynamics instantiates the same triangle as the present equation) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P15.1: Alternans-onset threshold scales with memory-mode hierarchy depth.** The structural prediction is that cardiac alternans onset (the bifurcation that precedes ventricular fibrillation) occurs at a threshold that depends on the depth of the multi-timescale memory hierarchy in the cardiac tissue. Tissues with more pronounced multi-timescale memory (multiple memory modes spanning hundreds of ms to tens of seconds) should exhibit alternans at higher pacing rates than tissues with simpler memory structure.
   - How to test: comparative alternans-threshold measurement across cardiac tissue substrates with characterized memory-mode structure (atrial vs ventricular tissue; healthy vs diseased; pharmacologically modulated memory).
   - What would constitute confirmation: alternans threshold correlates positively with memory-hierarchy depth.
-  - What would constitute local falsification: no correlation, or anti-correlation.
+  - What would constitute evidence inconsistent with this calibration: no correlation, or anti-correlation.
   - Status: untested in this framing. Alternans literature documents threshold variation across substrates; the specific structural correlation has not been isolated.
 
 - **Prediction P15.2: Arrhythmia categories partition by triangle-element dysregulation.** The structural prediction is that cardiac arrhythmias can be mapped to dysregulation of specific triangle elements: P1 dysregulation (sinus node dysfunction, ectopic foci; intrinsic-oscillation failures); P2 dysregulation (alternans, T-wave alternans, restitution-mediated arrhythmias; memory-state failures); P3 dysregulation (atrioventricular block, autonomic-coupling failures, electrolyte-induced arrhythmias; environmental-coupling failures). Each category should align with predominant dysregulation of one or two triangle elements.
   - How to test: review of clinical arrhythmia taxonomies; classify by structural-element dysregulation; check alignment with traditional clinical categories.
   - What would constitute confirmation: substantial alignment between clinical taxonomy and structural-element partition.
-  - What would constitute local falsification: clinical categories are orthogonal to the structural partition.
+  - What would constitute evidence inconsistent with this calibration: clinical categories are orthogonal to the structural partition.
   - Status: untested in this framing. The clinical literature is mature; the structural-element re-classification has not been undertaken.
 
 - **Prediction P15.3: Heart-rate variability spectrum reflects auxiliary-field hierarchy.** The structural prediction is that the heart-rate variability spectrum (the power-spectral density of inter-beat-interval fluctuations) reflects the cardiac substrate's multi-timescale memory hierarchy in a structurally predictable way. Specifically, the spectral peaks (LF, HF bands) should correspond to specific memory-mode timescales, and the spectrum should exhibit the broadband 1/f-like structure characteristic of multi-timescale auxiliary-field response.
   - How to test: re-analyze HRV datasets with explicit decomposition into memory-mode contributions; compare to the structural prediction.
   - What would constitute confirmation: HRV spectrum decomposes into auxiliary-field-mode contributions with the predicted structure.
-  - What would constitute local falsification: HRV spectrum is incompatible with the structural decomposition.
+  - What would constitute evidence inconsistent with this calibration: HRV spectrum is incompatible with the structural decomposition.
   - Status: partially analyzed. HRV literature documents 1/f-like behavior and multiple spectral peaks; the specific structural correspondence has not been formalized.
 
 ## References

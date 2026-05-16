@@ -210,22 +210,24 @@ explicit acknowledgement of its current state of theoretical development.
 
 ## Locally testable predictions and observational signatures
 
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
 The structural claim of this interface (the full cosmic trajectory has the same shape as the equation's laboratory anti-collapse release) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The structural reading does not yet substitute for the standard cosmological framework as a predictive theory; therefore quantitative predictions at the level of standard ΛCDM are not currently available. The following are *local* predictions about specific observational signatures the structural reading implies, listed for the next-generation surveys and CMB programs.
 
 - **Prediction P7.1: Late-time deviation from pure cosmological-constant equation of state.** The structural reading identifies dark energy as the continued action of $V_{\text{mem}}$ at cosmological scale. Since $V_{\text{mem}}$ is the memory potential of the universe's release event, it evolves with time according to the auxiliary-field dynamics; specifically, it does not stay perfectly constant. The structural reading predicts a small deviation of the dark-energy equation of state $w(z)$ from the constant-$\Lambda$ value $w = -1$, with the deviation having a specific time-dependence derivable from the memory dynamics.
   - How to test: precision measurements of $w(z)$ as a function of redshift from DESI, Euclid, Roman Space Telescope, LSST.
   - What would constitute confirmation: measured $w(z)$ deviation matches the predicted time-dependence.
-  - What would constitute local falsification: $w(z)$ is consistent with $w = -1$ to within the predicted memory-deviation magnitude; or the deviation is in the opposite direction; or the time-dependence is different.
+  - What would constitute evidence inconsistent with this calibration: $w(z)$ is consistent with $w = -1$ to within the predicted memory-deviation magnitude; or the deviation is in the opposite direction; or the time-dependence is different.
   - Status: untested. Requires development of the analytical form of the deviation from the structural reading, which is open work named in [`../open-problems/`](../open-problems/) under additional substrates and the cosmological development.
 
 - **Prediction P7.2: Small-scale BAO substructure from memory-modulated oscillation.** The structural reading predicts that the BAO peak has substructure arising from the harmonics of the memory-modulated acoustic oscillation. The harmonics are present in the standard analysis but the memory modulation predicts specific amplitude and phase relations between them that differ from the standard prediction.
   - How to test: precision galaxy-survey measurements of the matter correlation function at sub-BAO scales (30-150 Mpc).
   - What would constitute confirmation: substructure consistent with memory-modulated harmonic predictions.
-  - What would constitute local falsification: substructure consistent with standard harmonic predictions and inconsistent with memory-modulated.
+  - What would constitute evidence inconsistent with this calibration: substructure consistent with standard harmonic predictions and inconsistent with memory-modulated.
   - Status: untested. Linked to [`../interfaces/02-baryon-acoustic.md`](02-baryon-acoustic.md) prediction P2.2 (same phenomenon at the BAO interface; the cosmological interface adds the structural reading that this is one phase of a single trajectory).
 
 - **Prediction P7.3: Inflationary-perturbation amplitude as function of memory-mode structure.** The structural reading places the inflation field as the accumulated memory potential. The amplitude of the primordial scalar perturbations should therefore have a specific scale-dependence reflecting the memory-mode hierarchy, distinguishable from the scale-free form predicted by simplest single-field slow-roll inflation.
   - How to test: precision CMB measurements of the scalar perturbation power spectrum (Planck-class data plus next-generation experiments like LiteBIRD, CMB-S4).
   - What would constitute confirmation: measured spectrum has small running consistent with the memory-mode predicted structure.
-  - What would constitute local falsification: spectrum is consistent with simplest slow-roll prediction to within the predicted memory-mode-deviation magnitude.
+  - What would constitute evidence inconsistent with this calibration: spectrum is consistent with simplest slow-roll prediction to within the predicted memory-mode-deviation magnitude.
   - Status: untested. Linked to open-problem 05 (quantum extension) which would be needed to derive the perturbation spectrum quantitatively from the structural reading.

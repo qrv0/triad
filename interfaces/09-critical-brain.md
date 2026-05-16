@@ -64,24 +64,26 @@ It does establish that the equation's released-crystalline state and the cortex 
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (cortex in its broadband-responsive state and the equation in its released-crystalline state are instances of the same structural form producing the same observable phenomenology) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (cortex in its broadband-responsive state and the equation in its released-crystalline state are instances of the same structural form producing the same observable phenomenology) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P14.1: Avalanche statistics invariance across resting and driven states.** The equation predicts that the broadband-absorbing crystalline state has the same scale-free response properties whether free-running or driven within its absorption band. Cortical avalanche statistics under gamma entrainment (40 Hz GENUS, per interface 04) should match those documented for spontaneous activity (Beggs-Plenz 2003), with consistent scaling exponents.
   - How to test: replicate Beggs-Plenz avalanche-detection protocol in cortical recordings during 40 Hz visual or auditory GENUS; compare exponent and cutoff to spontaneous-activity baseline.
   - What would constitute confirmation: avalanche exponent and scale-free range overlap baseline within statistical bounds.
-  - What would constitute local falsification: entrainment systematically shifts the exponent or removes the scale-free range.
+  - What would constitute evidence inconsistent with this calibration: entrainment systematically shifts the exponent or removes the scale-free range.
   - Status: untested in the GENUS context. The methodology is established; the GENUS-specific application has not been pursued.
 
 - **Prediction P14.2: 1/f bandwidth correlates with regional memory-mode density.** The equation predicts that the bandwidth over which $1/f$-like spectrum holds is determined by the spread of $\{\nu_j\}$, the auxiliary-field timescale hierarchy. In cortex, regions with denser memory-mode anatomy (regions with stronger VIP-interneuron and AQP4-aquaporin coupling, per prediction P4.2 in interface 04) should exhibit broader $1/f$ spectral ranges than regions where the anatomy is sparser.
   - How to test: cortical recordings across regions with documented variation in VIP-AQP4 anatomy; compute $1/f$ bandwidth per region; correlate with anatomical density measures.
   - What would constitute confirmation: positive correlation between memory-mode density and $1/f$ bandwidth.
-  - What would constitute local falsification: no correlation, or anti-correlation.
+  - What would constitute evidence inconsistent with this calibration: no correlation, or anti-correlation.
   - Status: untested. The anatomical data exist; the regional spectral comparison with this specific correlation has not been pursued.
 
 - **Prediction P14.3: Phase-transition character of release.** The equation predicts that the transition from collapse to released-crystalline state is sharp in the $\Sigma\lambda/|\Lambda|$ parameter (the dimensional rescaling condition $\Sigma\lambda/|\Lambda| \sim 1/d$ holds at a specific value, not a broad range). In cortical-development data, the transition from pre-criticality (developmental early stages) to mature critical-state dynamics should be similarly sharp in a relevant developmental control parameter (e.g., interneuron-circuit maturation index).
   - How to test: longitudinal recordings across early cortical development; identify the developmental window for emergence of mature avalanche statistics and $1/f$ spectrum; compare width of window to width predicted by structural-form analysis.
   - What would constitute confirmation: sharp developmental transition matching predicted width.
-  - What would constitute local falsification: gradual emergence over a long developmental window, inconsistent with the predicted sharp transition.
+  - What would constitute evidence inconsistent with this calibration: gradual emergence over a long developmental window, inconsistent with the predicted sharp transition.
   - Status: untested. Developmental criticality data exist (Tetzlaff et al. 2010); the specific sharpness analysis has not been pursued.
 
 ## References

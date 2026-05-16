@@ -46,24 +46,26 @@ It does establish the historical continuity of the structural argument. The obse
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (cymatic pattern formation and the equation's BCC selection are instances of the same spontaneous-geometric-order mechanism) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific calibration.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (cymatic pattern formation and the equation's BCC selection are instances of the same spontaneous-geometric-order mechanism) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P3.1: Symmetry-selection probability in Faraday-wave experiments with controlled memory.** In Faraday wave experiments where the driving has an adjustable decay time (introducing an effective memory kernel), the equation predicts that the probability of selecting specific symmetry classes (square, hexagonal, quasi-periodic) shifts as the memory timescale crosses a critical value related to the natural pattern-formation timescale.
   - How to test: vertically-driven fluid layer with adjustable drive memory (achieved via controllable forcing amplitude profile); measure pattern statistics over many initial conditions; compute selection-probability histograms across symmetry classes.
   - What would constitute confirmation: selection probability of specific symmetries shifts with memory timescale in the predicted direction.
-  - What would constitute local falsification: selection probability is insensitive to memory timescale, or shifts in a different direction.
+  - What would constitute evidence inconsistent with this calibration: selection probability is insensitive to memory timescale, or shifts in a different direction.
   - Status: untested. The Faraday-wave literature (Edwards & Fauve 1994; Kudrolli et al. 1998) extensively documents symmetry selection but has not isolated memory-kernel effects as the controlled variable.
 
 - **Prediction P3.2: Pattern stability under continuous drive perturbation.** Once a cymatic pattern has formed, the equation predicts that the pattern resists perturbation in proportion to the strength of the memory potential that produced it. Specifically, perturbations smaller than $V_{\text{mem}}$ at the pattern peaks should be absorbed without pattern transition; perturbations larger should trigger transitions to alternative pattern classes.
   - How to test: established cymatic pattern in granular medium on Chladni plate; introduce controlled perturbation (small impulse, frequency shift); measure pattern response.
   - What would constitute confirmation: perturbation threshold for pattern transition follows the predicted scaling with drive amplitude.
-  - What would constitute local falsification: pattern stability is independent of drive amplitude or follows different scaling.
+  - What would constitute evidence inconsistent with this calibration: pattern stability is independent of drive amplitude or follows different scaling.
   - Status: untested.
 
 - **Prediction P3.3: Multi-modal pattern coexistence at memory-timescale boundary.** Near the critical memory timescale where the symmetry-selection probability shifts, the equation predicts a regime of multi-modal coexistence: different regions of the same medium select different symmetries, with domain walls between them.
   - How to test: Faraday-wave experiment tuned to the predicted critical memory timescale; image full medium; identify coexisting domains.
   - What would constitute confirmation: spatial coexistence of distinct symmetry classes observed at the predicted parameter values.
-  - What would constitute local falsification: no coexistence observed; the system selects a single global symmetry at all parameter values.
+  - What would constitute evidence inconsistent with this calibration: no coexistence observed; the system selects a single global symmetry at all parameter values.
   - Status: untested.
 
 ## References

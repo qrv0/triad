@@ -70,24 +70,26 @@ The accumulation of these instances at compatible structural form, across indepe
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (the equation's two principal vibrational modes correspond, under one calibration, to the bands measured at megalithic chambers and the band documented in Cook-Pajot-Leuchter 2008) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific calibration.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (the equation's two principal vibrational modes correspond, under one calibration, to the bands measured at megalithic chambers and the band documented in Cook-Pajot-Leuchter 2008) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P5.1: Resonance frequencies at unmeasured megalithic chambers.** The structural claim, under the $L = 20$ m, $dt = 9$ ms calibration, predicts that other megalithic chambers of similar physical dimensions should exhibit resonance peaks in the 65-125 Hz band, with the principal peaks in approximately the 0.6:1.0 ratio (giving 66 Hz and 110 Hz at this calibration). Chambers significantly larger or smaller should exhibit proportionally shifted frequencies according to the dimensional scaling.
   - How to test: acoustic survey of additional megalithic sites not in the current literature (e.g., the chambered tombs of Mont Saint-Michel, the Mnajdra temples in Malta, smaller chambers at Tarxien). Use the same impulse-response methodology as Jahn-Devereux-Ibison 1996 or the Debertolis 2015 protocol.
   - What would constitute confirmation: measured resonances in the predicted band with the predicted ratio structure.
-  - What would constitute local falsification: resonances clearly outside the predicted band, or with a different ratio structure, or at frequencies inconsistent with the dimensional scaling.
+  - What would constitute evidence inconsistent with this calibration: resonances clearly outside the predicted band, or with a different ratio structure, or at frequencies inconsistent with the dimensional scaling.
   - Status: untested. The current literature covers four sites (Newgrange, Hypogeum, Cairn de Gavrinis, Cairn of Maeshowe partially); additional sites would shift evidentiary weight.
 
 - **Prediction P5.2: EEG response at chamber-resonance frequencies vs nearby frequencies.** The structural claim predicts a narrow band of biological activity at the equation's vibrational modes (66 Hz, 110 Hz under the calibration). The Cook-Pajot-Leuchter 2008 study reports significant EEG response at 110 Hz but not at 90, 100, 120, or 130 Hz. Extending the protocol to systematically sweep frequencies near 66 Hz should reveal a similar narrow-band response.
   - How to test: replicate the Cook-Pajot-Leuchter qEEG protocol with acoustic stimulation systematically swept across 50-130 Hz; measure left-temporal lobe deactivation and prefrontal lateralization shifts.
   - What would constitute confirmation: narrow-band EEG response centered at 66 Hz in addition to the documented 110 Hz response.
-  - What would constitute local falsification: no specific response at 66 Hz; or response that follows a broader frequency-independent pattern rather than the predicted narrow-band structure.
+  - What would constitute evidence inconsistent with this calibration: no specific response at 66 Hz; or response that follows a broader frequency-independent pattern rather than the predicted narrow-band structure.
   - Status: untested. The Cook-Pajot-Leuchter study did not include a comparable sweep around 66 Hz; the protocol replication is feasible.
 
 - **Prediction P5.3: Frequency-ratio invariance across chamber sizes.** The 0.6:1.0 ratio between the two principal modes is structural (dimension-independent in the equation). Chambers of different physical dimensions, under appropriate dimensional rescaling, should preserve this ratio even when the absolute frequencies shift.
   - How to test: comparison of frequency-ratio measurements across chambers of significantly different size; correlate ratio with chamber dimensions.
   - What would constitute confirmation: ratio remains within tight bounds of 0.6:1.0 across chamber size variation.
-  - What would constitute local falsification: ratio varies systematically with chamber dimensions, indicating a substrate-specific (rather than structural) origin.
+  - What would constitute evidence inconsistent with this calibration: ratio varies systematically with chamber dimensions, indicating a substrate-specific (rather than structural) origin.
   - Status: untested. Existing measurements at multiple sites show ratios consistent with 0.6:1.0 but the systematic ratio-vs-size study has not been performed.
 
 ## References

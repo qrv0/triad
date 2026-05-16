@@ -69,24 +69,26 @@ It does establish that the equation's structural form recurs at the level of gen
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (gene regulation instantiates the same triangle as the present equation across multiple molecular timescales) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (gene regulation instantiates the same triangle as the present equation across multiple molecular timescales) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P16.1: Circadian-clock period robustness scales with memory-hierarchy depth.** The structural prediction is that the circadian-clock period's robustness to perturbations (temperature, metabolic state, signaling perturbations) scales with the depth of the auxiliary-field hierarchy in the clock network. Substrates with multiple feedback loops at different timescales (mammalian per-cry-clock-bmal1 system) should exhibit greater period robustness than substrates with a single feedback loop (simplified network models).
   - How to test: comparative robustness measurement across circadian-clock substrates with characterized network topology; correlate with the number and timescale-distribution of feedback loops.
   - What would constitute confirmation: robustness correlates positively with hierarchy depth.
-  - What would constitute local falsification: no correlation, or anti-correlation.
+  - What would constitute evidence inconsistent with this calibration: no correlation, or anti-correlation.
   - Status: partially tested. Circadian-network literature documents robustness across substrates; the specific structural correlation has not been isolated.
 
 - **Prediction P16.2: Cell-fate transitions are triangle-element-mediated bifurcations.** The structural prediction is that cell-fate transitions during development (differentiation, reprogramming, dedifferentiation) are bifurcations of the gene-regulatory-network dynamics that can be characterized by which triangle element drives the transition: P1 (intrinsic-dynamics-driven, e.g., cell-cycle-coupled differentiation), P2 (memory-driven, e.g., chromatin-remodeling-driven), or P3 (signaling-driven, e.g., morphogen-gradient-driven). Each transition type should have distinct dynamical signatures.
   - How to test: classify documented cell-fate transitions by which triangle element drives them; compare with the dynamical signatures predicted for each type.
   - What would constitute confirmation: transitions partition by triangle element and exhibit predicted signatures.
-  - What would constitute local falsification: transitions do not partition, or signatures are orthogonal to the structural categorization.
+  - What would constitute evidence inconsistent with this calibration: transitions do not partition, or signatures are orthogonal to the structural categorization.
   - Status: untested in this framing. The cell-fate literature has compatible structure but has not isolated this specific partition.
 
 - **Prediction P16.3: Chromatin-mediated long-term memory provides the slowest auxiliary-field timescale.** The structural prediction is that chromatin-mark dynamics (DNA methylation, histone modification turnover) provides the slowest auxiliary-field timescale in the gene-regulation hierarchy, with $\nu_{\text{chromatin}}$ measurable as the inverse mark-removal rate. Experimental perturbation of chromatin-mark stability (e.g., DNMT inhibitors, HDAC inhibitors) should affect the predicted long-timescale dynamics in measurable ways.
   - How to test: chromatin-mark turnover measurements paired with long-timescale gene-expression dynamics; pharmacological perturbation of chromatin-mark enzymes to modify the slow-mode timescale.
   - What would constitute confirmation: long-timescale dynamics correlate with chromatin-mark stability as predicted.
-  - What would constitute local falsification: no correlation, or chromatin-mark dynamics are too fast or too slow to provide the predicted timescale.
+  - What would constitute evidence inconsistent with this calibration: no correlation, or chromatin-mark dynamics are too fast or too slow to provide the predicted timescale.
   - Status: partially anticipated. Epigenetics literature (Bird 2007 review; Reik 2007) documents chromatin-mark turnover timescales; the structural connection to gene-regulation auxiliary fields has not been formalized.
 
 ## References

@@ -51,24 +51,26 @@ The dimensional identification under which the present equation maps onto the co
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (the form of early-universe acoustic dynamics matches the equation form) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific calibration.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (the form of early-universe acoustic dynamics matches the equation form) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P2.1: Memory-modulated correction to the BAO peak position.** The standard linear-perturbation analysis of the photon-baryon plasma predicts the BAO scale via the sound horizon integral. The memory-augmented form of the equation predicts a small correction to the peak position arising from the lag between the photon-pressure response and the baryon density. The correction is small (suppressed by the ratio of the relaxation timescale to the Hubble time at recombination) but may be detectable in next-generation surveys.
   - How to test: precision galaxy-survey measurements of the BAO peak (DESI, Euclid, Roman) compared to the linear-perturbation prediction. The discrepancy, if it matches the predicted memory correction, supports the interface.
   - What would constitute confirmation: measured peak position shifted by the predicted memory correction amount.
-  - What would constitute local falsification: measured peak position consistent with the linear-perturbation prediction to within the predicted memory-correction magnitude; the discrepancy is in the opposite direction; or the magnitude is wrong.
+  - What would constitute evidence inconsistent with this calibration: measured peak position consistent with the linear-perturbation prediction to within the predicted memory-correction magnitude; the discrepancy is in the opposite direction; or the magnitude is wrong.
   - Status: untested. Requires development of the analytical correction from open-problem 01 plus the calibration philosophy from methodology/06; the prediction is named here as a target for the analytical-theory work in `../open-problems/01-analytical-anti-collapse.md`.
 
 - **Prediction P2.2: Higher-order BAO substructure.** The memory-augmented dynamics predicts secondary peaks in the matter correlation function beyond the principal 150 Mpc peak, arising from harmonics of the acoustic oscillation that the memory term modulates. Standard analysis predicts harmonic peaks; the memory-modulated form predicts a specific amplitude and phase relation between harmonics that differs from the standard prediction.
   - How to test: precision measurements of the matter correlation function at scales 30-150 Mpc; compare detected secondary peaks to predictions.
   - What would constitute confirmation: secondary peaks consistent with the memory-modulated harmonic structure.
-  - What would constitute local falsification: secondary peaks consistent with the standard harmonic structure but not the memory-modulated one.
+  - What would constitute evidence inconsistent with this calibration: secondary peaks consistent with the standard harmonic structure but not the memory-modulated one.
   - Status: untested. Same calibration and analytical-theory prerequisites as P2.1.
 
 - **Prediction P2.3: Temperature-shift cross-correlation in the CMB.** The memory term in the equation, applied to the photon-baryon plasma, predicts a specific phase relationship between density fluctuations and temperature fluctuations at the moment of decoupling. Standard analysis predicts the relationship; the memory-modulated form predicts a small phase shift.
   - How to test: cross-correlation of CMB temperature with galaxy survey density at the BAO scale.
   - What would constitute confirmation: phase shift measured at the predicted magnitude.
-  - What would constitute local falsification: no phase shift detected or opposite-sign shift detected.
+  - What would constitute evidence inconsistent with this calibration: no phase shift detected or opposite-sign shift detected.
   - Status: untested. Same prerequisites.
 
 ## References

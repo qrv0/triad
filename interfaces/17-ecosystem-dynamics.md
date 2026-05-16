@@ -70,24 +70,26 @@ It does establish that the equation's structural form recurs at the level of eco
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (ecosystem dynamics instantiates the same triangle as the present equation in a population-level biological substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (ecosystem dynamics instantiates the same triangle as the present equation in a population-level biological substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P17.1: Ecosystem stability correlates with memory-hierarchy depth.** The structural prediction is that ecosystem stability under perturbation correlates with the depth of the multi-timescale memory hierarchy in the community. Ecosystems with deeper memory hierarchies (multiple age classes per species, substantial trait inheritance, strong ecological memory in substrate properties) should be more stable than ecosystems with shallow hierarchies, all other things being equal.
   - How to test: comparative stability analysis across ecosystems with characterized memory structure (boreal forest with long-lived trees vs grassland with short-lived perennials vs annual-dominated communities); correlate stability metrics with memory-hierarchy depth measures.
   - What would constitute confirmation: stability correlates positively with hierarchy depth.
-  - What would constitute local falsification: no correlation, or anti-correlation.
+  - What would constitute evidence inconsistent with this calibration: no correlation, or anti-correlation.
   - Status: partially anticipated. Stability-diversity literature documents diversity-stability relationships; the specific memory-hierarchy correlation has not been isolated.
 
 - **Prediction P17.2: Catastrophic regime shifts are triangle-element-mediated bifurcations.** The structural prediction is that catastrophic ecosystem regime shifts (Scheffer et al.) can be characterized by which triangle element drives the shift: P1 (intrinsic-dynamics-driven; e.g., predator-prey collapse), P2 (memory-driven; e.g., legacy effects in soil chemistry that bias regeneration), or P3 (coupling-driven; e.g., climate-shift-induced reorganization). Each shift type should have distinct early-warning signatures.
   - How to test: classify documented regime shifts by triangle-element driving mechanism; compare with early-warning-signal taxonomies (variance increase, autocorrelation increase, critical-slowing-down).
   - What would constitute confirmation: shift categories partition by triangle element and align with distinct early-warning signatures.
-  - What would constitute local falsification: shifts do not partition cleanly, or signatures are orthogonal to the partition.
+  - What would constitute evidence inconsistent with this calibration: shifts do not partition cleanly, or signatures are orthogonal to the partition.
   - Status: untested in this framing. The regime-shifts literature (Scheffer-Carpenter-Foley-Folke-Walker 2001; Dakos et al. 2012) has compatible structure but has not isolated this specific structural-element partition.
 
 - **Prediction P17.3: Biodiversity-stability relationship reflects auxiliary-field structure.** The structural prediction is that the empirical biodiversity-stability relationship (Tilman et al. 2006) reflects the structural connection between the number of species (effectively the number of distinct $y_j$ in the auxiliary-field hierarchy of the community) and the dimensional rescaling of the present equation. Specifically, the variance-reduction property of biodiversity (more species, lower variance) should scale with the effective dimensionality of the species-interaction space in a manner consistent with the dimensional rescaling $\Sigma\lambda/|\Lambda| \sim 1/d$.
   - How to test: re-analysis of biodiversity-stability datasets with explicit characterization of effective interaction dimensionality; compare empirical variance-reduction scaling to the structurally-predicted dimensional scaling.
   - What would constitute confirmation: empirical scaling matches the structural prediction.
-  - What would constitute local falsification: empirical scaling is different, or no clean scaling observed.
+  - What would constitute evidence inconsistent with this calibration: empirical scaling is different, or no clean scaling observed.
   - Status: untested in this framing. Biodiversity-stability empirical work is mature; the specific structural-dimensional connection has not been formalized.
 
 ## References

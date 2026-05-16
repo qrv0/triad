@@ -62,24 +62,26 @@ It does establish that the empirical phenomenology the interpretability program 
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (the absence of P2 from an attention-only architecture forces categorical structure into superposed activation space, recoverable only by post-hoc decomposition) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (the absence of P2 from an attention-only architecture forces categorical structure into superposed activation space, recoverable only by post-hoc decomposition) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P13.1: Auxiliary-field directness in P2-instantiating architectures.** In an SSM-class architecture (S4, Mamba, RWKV, or the Memory-NLS layer in [`../implementation/neural/`](../implementation/neural/)), the auxiliary-field state directions $\{y_j\}$ should correspond to monosemantic feature directions at a much higher rate than the residual-stream directions in an attention-only architecture of comparable scale.
   - How to test: apply the same sparse-autoencoder decomposition methodology to (a) the activations of an attention-only model and (b) the auxiliary-field activations of a P2-instantiating model trained on the same data; compute the fraction of dictionary features that align with single state directions versus require linear combinations.
   - What would constitute confirmation: P2-instantiating models show substantially higher single-direction alignment.
-  - What would constitute local falsification: no difference in alignment between architectures, or attention-only models show comparable single-direction alignment.
+  - What would constitute evidence inconsistent with this calibration: no difference in alignment between architectures, or attention-only models show comparable single-direction alignment.
   - Status: untested. The Memory-NLS layer in this repository provides a testbed; the experiment requires running SAE decomposition on its auxiliary-field activations and comparing to baseline attention-only models.
 
 - **Prediction P13.2: Feature direction stability under fine-tuning.** In P2-instantiating architectures, the dictionary of monosemantic features should be more stable under task-specific fine-tuning than in attention-only architectures, because the features correspond to addressable state with intrinsic time evolution rather than to emergent projections that can be reshaped by gradient updates.
   - How to test: apply SAE to architecture A and architecture B before fine-tuning on task T; apply SAE again after fine-tuning; compute feature dictionary overlap; compare overlap across architecture families.
   - What would constitute confirmation: P2-instantiating architectures show higher feature dictionary preservation.
-  - What would constitute local falsification: equal or lower preservation.
+  - What would constitute evidence inconsistent with this calibration: equal or lower preservation.
   - Status: untested.
 
 - **Prediction P13.3: Memory-mode hierarchy structure.** In P2-instantiating architectures with multi-timescale auxiliary fields ($\nu_1 \ll \nu_2 \ll \ldots$), the recovered sparse features should partition by timescale: fast features (short-context dependencies) align with fast-$\nu_j$ fields, slow features (long-range structure, document-level coherence, persona) align with slow-$\nu_j$ fields.
   - How to test: train a P2-architecture with a known hierarchy $\{\nu_j\}$; apply SAE; categorize recovered features by which $y_j$ they predominantly load on; categorize features independently by context-length sensitivity; check whether the two categorizations correlate.
   - What would constitute confirmation: timescale hierarchy in auxiliary fields predicts context-length-sensitivity hierarchy in features.
-  - What would constitute local falsification: no correlation between auxiliary-field timescale and feature context-length sensitivity.
+  - What would constitute evidence inconsistent with this calibration: no correlation between auxiliary-field timescale and feature context-length sensitivity.
   - Status: untested.
 
 ## References

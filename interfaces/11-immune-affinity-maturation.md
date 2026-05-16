@@ -62,24 +62,26 @@ It does establish that the equation's structural form recurs at the level of imm
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (immune affinity maturation instantiates the same triangle as the present equation in a discrete-cell biological substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (immune affinity maturation instantiates the same triangle as the present equation in a discrete-cell biological substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P11.1: Vaccine booster timing optimum corresponds to the memory-mode decay timescale.** The structural prediction is that vaccine boosters administered at $t \sim 1/\nu_{\text{slow}}$ after the primary dose (where $\nu_{\text{slow}}$ is the slowest memory-mode decay rate) produce the strongest secondary response. Boosters administered too early (before the memory mode has stabilized) or too late (after it has decayed substantially) produce weaker responses. The optimum should be derivable from the auxiliary-field hierarchy under the substrate-specific calibration.
   - How to test: clinical-trial data on vaccine booster timing and response magnitude; correlate with measured immunological memory decay timescales.
   - What would constitute confirmation: booster response magnitude peaks at the predicted timing, given measured memory decay.
-  - What would constitute local falsification: response magnitude is insensitive to timing within the predicted range, or peaks at a different timing.
+  - What would constitute evidence inconsistent with this calibration: response magnitude is insensitive to timing within the predicted range, or peaks at a different timing.
   - Status: untested in this framing. Vaccine-timing literature (Plotkin 2018 review) documents booster-timing effects but has not isolated this specific scaling.
 
 - **Prediction P11.2: Autoimmune disease onset corresponds to triangle breakdown modes.** The structural argument predicts that autoimmune onset corresponds to one of three structural breakdowns: (i) P1 dysregulation (intrinsic cell-cycle abnormalities producing autoreactive clones at high frequency), (ii) P2 dysregulation (memory of self-antigens incorrectly preserved), or (iii) P3 dysregulation (failure of environmental signaling that would normally clear autoreactive cells). Each should produce a distinguishable autoimmune signature.
   - How to test: classify documented autoimmune diseases by which structural element is dysregulated; compare with the clinical and molecular taxonomy.
   - What would constitute confirmation: autoimmune disease categories partition by structural-element failure modes.
-  - What would constitute local falsification: autoimmune classification is orthogonal to the structural partition.
+  - What would constitute evidence inconsistent with this calibration: autoimmune classification is orthogonal to the structural partition.
   - Status: untested in this framing. The autoimmunity literature (Goodnow et al. 2005; Pelanda-Torres 2012) has compatible structure but has not isolated this specific partition.
 
 - **Prediction P11.3: Repertoire diversity correlates with memory-mode hierarchy depth.** The structural prediction is that the depth of the multi-timescale memory hierarchy (number of distinct $\nu_j$ scales over which selection memory operates) sets an upper bound on repertoire diversity. Substrates with shallower memory hierarchies (fewer effective timescales) should exhibit narrower repertoires than substrates with deeper hierarchies.
   - How to test: cross-species comparison of immune repertoire diversity correlated with the number of distinct B-cell memory subpopulations and their persistence timescales.
   - What would constitute confirmation: repertoire diversity correlates with hierarchy depth across species.
-  - What would constitute local falsification: no correlation, or anti-correlation, observed.
+  - What would constitute evidence inconsistent with this calibration: no correlation, or anti-correlation, observed.
   - Status: untested. Cross-species repertoire data exist (Briney-Inderbitzin-Joyce-Burton 2019); the specific structural correlation has not been isolated.
 
 ## References

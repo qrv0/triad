@@ -69,24 +69,26 @@ It does establish that the equation's structural form recurs at the level of act
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (active matter substrates instantiate the same triangle as the present equation) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (active matter substrates instantiate the same triangle as the present equation) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P13.1: Spontaneous symmetry selection in active crystals follows the BCC-selection pattern.** The structural prediction is that dense active suspensions with sufficient interaction memory should spontaneously select a specific Bravais symmetry in three dimensions, analogous to the BCC selection documented for the present equation ([`../results/05-bravais-selection.md`](../results/05-bravais-selection.md)). The selection should be substrate-independent at the structural level; the specific lattice (BCC, FCC, HCP) should depend on the substrate's particular alignment-memory structure.
   - How to test: 3D dense active-suspension simulations or experiments with controllable interaction memory; characterize the spontaneously selected crystalline order across substrates.
   - What would constitute confirmation: spontaneous Bravais selection observed; the selected lattice correlates with memory structure in the predicted way.
-  - What would constitute local falsification: no spontaneous symmetry selection observed in regimes where the structural prediction expects it; or selection is uncorrelated with memory structure.
+  - What would constitute evidence inconsistent with this calibration: no spontaneous symmetry selection observed in regimes where the structural prediction expects it; or selection is uncorrelated with memory structure.
   - Status: untested. Active-crystal literature (Briand-Schindler-Dauchot 2018; Petroff-Wu-Libchaber 2015 on bacterial crystals) documents symmetry selection in 2D; the 3D structural-prediction test has not been performed systematically.
 
 - **Prediction P13.2: Flock-to-no-flock transition has the same structural form as the anti-collapse transition.** The structural prediction is that the order-disorder transition in flocking systems (Vicsek phase transition; Toner-Tu condensation) has the same structural form as the anti-collapse-vs-collapse transition in the present equation. Specifically, both transitions should exhibit (i) a critical coupling/density at which the transition occurs, (ii) hysteresis between the ordered and disordered phases when memory is operative, and (iii) a characteristic structural-rescaling relationship between the critical parameters and the substrate's effective dimensionality.
   - How to test: characterize the Vicsek-class transition with controlled memory; compare critical-parameter scaling to the dimensional-rescaling result $\Sigma\lambda/|\Lambda| \sim 1/d$.
   - What would constitute confirmation: critical parameters scale with effective dimensionality in the predicted way.
-  - What would constitute local falsification: scaling is different, or no scaling observed.
+  - What would constitute evidence inconsistent with this calibration: scaling is different, or no scaling observed.
   - Status: untested in this framing. The Vicsek-transition literature documents the critical phenomena; the structural-rescaling prediction has not been isolated.
 
 - **Prediction P13.3: Active-matter aging dynamics exhibit broadband absorption.** The structural prediction is that aging active-matter systems (where the active driving slowly weakens over time) should exhibit broadband absorption of external driving in the regime just before the active-to-passive transition, analogous to the broadband absorption documented in the equation's crystalline regime ([`../results/03-vibrational-modes.md`](../results/03-vibrational-modes.md)).
   - How to test: aging active-matter substrates with controllable driving decay; characterize the absorption spectrum as the system approaches the passive limit.
   - What would constitute confirmation: broadband absorption observed in the predicted regime.
-  - What would constitute local falsification: no broadband absorption observed; the response is narrow-band or monotonically declining.
+  - What would constitute evidence inconsistent with this calibration: no broadband absorption observed; the response is narrow-band or monotonically declining.
   - Status: untested.
 
 ## References

@@ -62,24 +62,26 @@ It does establish that the equation's structural form recurs at the level of FEP
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (free-energy minimization and active inference instantiate the same triangle as the present equation in a variational-dynamics substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that could be tested by standard methods. Their failure would not falsify the structural claim; it would shift evidentiary weight against this interface's specific reading.
+> **Hedge cleanup (2026-05-16).** Each prediction's "What would constitute evidence inconsistent with this calibration" subsection previously used Popperian falsification framing ("would constitute local falsification") inserted in Phase 2 (commit 26e96ee) and propagated by Phase 3 to interfaces 10-17. The hedge contradicted the section's own opening sentence (the structural claim is evaluated by cross-domain coherence, not by single-experiment refutation). See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog of prior wordings and the structural reason for revision.
+
+The structural claim of this interface (free-energy minimization and active inference instantiate the same triangle as the present equation in a variational-dynamics substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P12.1: Predictive-coding timescale separation matches the dimensional rescaling.** The structural prediction is that the cortical predictive-coding hierarchy's timescale separation across levels follows the same scaling as the dimensional rescaling result $\Sigma\lambda/|\Lambda| \sim 1/d$ ([`../results/06-dimensional-rescaling.md`](../results/06-dimensional-rescaling.md)), where $d$ is the effective dimensionality of the perceptual feature being integrated. Higher-level cortical areas integrating over more abstract features (higher effective $d$) should have proportionally slower timescales.
   - How to test: comparative analysis of cortical timescales across regions (existing electrophysiology and fMRI data); correlate with the effective dimensionality of the features each region encodes.
   - What would constitute confirmation: timescale and effective dimensionality correlate as predicted.
-  - What would constitute local falsification: no correlation, or anti-correlation.
+  - What would constitute evidence inconsistent with this calibration: no correlation, or anti-correlation.
   - Status: partially tested. The intrinsic-timescale-hierarchy literature (Murray et al. 2014; Honey et al. 2012) documents cortical timescale heterogeneity; the specific structural correlation has not been isolated.
 
 - **Prediction P12.2: Active-inference agents with multi-timescale memory exhibit anti-collapse in optimization.** The structural prediction is that active-inference agents implemented with explicit hierarchical predictive-coding memory will exhibit the same anti-collapse property in their internal-model optimization dynamics that Memory-NLS exhibits in neural-network training ([`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md)). Active-inference agents with only flat (single-timescale) models should be susceptible to catastrophic-failure modes during sustained training, while hierarchical agents should not.
   - How to test: train two active-inference agents on the same task, one with flat model and one with hierarchical multi-timescale model; compare training-trajectory stability and incidence of model collapse.
   - What would constitute confirmation: hierarchical agent shows monotonic descent and stability; flat agent exhibits catastrophic events.
-  - What would constitute local falsification: no difference, or hierarchical agent is less stable.
+  - What would constitute evidence inconsistent with this calibration: no difference, or hierarchical agent is less stable.
   - Status: untested. The active-inference robotics literature (Lanillos-Cheng 2020; Pio-Lopez et al. 2016) provides the experimental infrastructure; the specific anti-collapse prediction has not been isolated.
 
 - **Prediction P12.3: Psychiatric-disorder categories partition by triangle-element dysregulation.** The structural prediction is that psychiatric disorders (schizophrenia, depression, OCD, autism spectrum) can be mapped to dysregulation of specific triangle elements: P1 dysregulation (intrinsic dynamics aberrant; tracking abnormalities, hallucination), P2 dysregulation (memory and model integrity compromised; rumination, fixed false beliefs), P3 dysregulation (sensory or active coupling abnormal; sensory hypersensitivity, action paralysis). Each disorder should align with predominant dysregulation of one or two triangle elements.
   - How to test: comparison of disorder taxonomies (DSM-5 or RDoC categories) with the predicted partition.
   - What would constitute confirmation: substantial alignment of disorder categories with triangle-element dysregulation patterns.
-  - What would constitute local falsification: no systematic alignment.
+  - What would constitute evidence inconsistent with this calibration: no systematic alignment.
   - Status: partially anticipated. Friston's computational-psychiatry program (Friston-Stephan-Montague-Dolan 2014) has compatible framing; the specific structural-element partition has not been formalized.
 
 ## References
