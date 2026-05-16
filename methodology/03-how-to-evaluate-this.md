@@ -27,7 +27,7 @@ Run the reproduction scripts in [`../experiments/physics/`](../experiments/physi
 
 If any of these reproductions fail, the work has a problem. Specifically: it has a problem with the numerical implementation, the auxiliary assumptions of the run (precision, lattice, time step), or with the equation as such. The Duhem–Quine point (see [`02-limits-of-falsification.md`](02-limits-of-falsification.md)) applies; localizing the source of the failure requires further work.
 
-If the reproductions succeed, the locally-falsifiable predictions of the work are confirmed.
+If the reproductions succeed, the locally-testable quantitative predictions contribute evidence under criterion 2 (reproducibility) in [`04-the-six-criteria.md`](04-the-six-criteria.md), and the specific predicted magnitudes (anti-collapse separation, dimensional rescaling, BCC selection) become confirmed observations that the structural claim's evaluation against the six criteria can reference.
 
 ## Step 4: Test the cross-domain claims
 

@@ -14,9 +14,23 @@ P3 asserts that perfect dynamical isolation does not occur (see [`../principles/
 
 A theory whose third axiom is "isolation does not occur" cannot be evaluated by methodology that presupposes isolation. The methodology contradicts the content of the theory before any experiment is performed. This is not a stylistic point and not a defensive maneuver; it is the structural consequence of accepting P3 as content.
 
-The constructive consequence is that the work is evaluated by criteria appropriate to a theory whose content is anti-isolation. The criteria are documented in [`04-the-six-criteria.md`](04-the-six-criteria.md); the procedure for applying them is in [`03-how-to-evaluate-this.md`](03-how-to-evaluate-this.md). Locally-isolable predictions remain locally testable (the lab numerics in [`../experiments/physics/`](../experiments/physics/)) and remain locally falsifiable in the standard sense. The global structural claim is evaluated structurally.
+> **Hedge cleanup (2026-05-16).** The two paragraphs immediately
+> below previously contained a "global vs local falsification"
+> carve-out ("Locally-isolable predictions remain locally falsifiable
+> in the standard sense"; "Each individual test admits falsification").
+> That carve-out was a concession to readers committed to
+> falsificationism and contradicted the structural argument the rest
+> of this document establishes. The argument applies at every level:
+> there is no level at which "local falsification" is a valid
+> evaluation method for this work, because both the P3 argument above
+> and the Duhem-Quine argument below apply at every level. See
+> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md)
+> for the prior wording, the assistant Phase that propagated it
+> across 17 interfaces, and the structural reason for revision.
 
-This applies to the present work as follows. The numerical experiments in [`../experiments/physics/`](../experiments/physics/) test specific local predictions of the equation within isolated computational models. Each individual test admits falsification: the anti-collapse separation should be approximately five orders of magnitude in three dimensions; if it were not, the prediction would be false. But the *global content* of the work, the structural claim that the equation captures the form of persistent extended entities in coupled environments, is not the kind of claim that can be falsified by any single test. It is evaluated by the criteria in [`04-the-six-criteria.md`](04-the-six-criteria.md): internal consistency, reproducibility, generative scope, cross-domain coherence, parsimony, comprehensiveness.
+The constructive consequence is that the work is evaluated by criteria appropriate to a theory whose content is anti-isolation. The criteria are documented in [`04-the-six-criteria.md`](04-the-six-criteria.md); the procedure for applying them is in [`03-how-to-evaluate-this.md`](03-how-to-evaluate-this.md). Locally-isolable predictions remain locally testable (the lab numerics in [`../experiments/physics/`](../experiments/physics/)); their numerics either reproduce (contributing evidence under criterion 2, reproducibility) or do not (prompting investigation of calibration, auxiliary numerical assumptions per Duhem-Quine, or implementation). Reproduction or non-reproduction contributes evidence under criteria 1 (consistency), 2 (reproducibility), 3 (generative scope), and 4 (cross-domain coherence); it does not constitute falsification in the Popperian sense.
+
+This applies to the present work as follows. The numerical experiments in [`../experiments/physics/`](../experiments/physics/) test specific quantitative predictions of the equation using coupled-regime configurations (gamma_0 > 0, T > 0, FDT-locked noise correlator), per P3. Each test contributes evidence under criteria 1, 2, and 3: the anti-collapse separation should be approximately five orders of magnitude in three dimensions; the numerics either reproduce that magnitude (criterion 2 evidence in favor) or do not (prompting investigation of which auxiliary assumption or calibration choice the inconsistent evidence implicates). The *global content* of the work, the structural claim that the equation captures the form of persistent extended entities in coupled environments, is evaluated by all six criteria in [`04-the-six-criteria.md`](04-the-six-criteria.md): internal consistency, reproducibility, generative scope, cross-domain coherence, parsimony, comprehensiveness.
 
 ## The Duhem–Quine point
 
@@ -40,11 +54,11 @@ We have not adopted strict Popperian falsificationism as the methodological fram
 
 The cost is that the work does not produce a single decisive experiment whose outcome would refute it. A reader committed to strict falsificationism may therefore find the work unsatisfying: there is no "if this experiment fails the theory dies" moment. The reasons we have not provided such a moment are structural, P3 forbids it, and not stylistic.
 
-What the work provides instead is a body of locally-falsifiable predictions (the anti-collapse separation magnitudes, the BCC selection, the dimensional rescaling) embedded in a larger structural claim evaluated by cross-domain coherence. The locally-falsifiable predictions can be tested in the standard way; they pass or fail on the numerics. The larger structural claim is evaluated by whether the same form appears in independently documented domains, which is the structural-realist test.
+What the work provides instead is a body of locally-testable quantitative predictions (the anti-collapse separation magnitudes, the BCC selection, the dimensional rescaling) embedded in a larger structural claim evaluated by cross-domain coherence. The locally-testable predictions are evaluated by coupled-regime numerical reproduction: reproduction contributes evidence under criterion 2, non-reproduction prompts investigation of calibration / auxiliary assumptions / implementation under the Duhem-Quine point. The larger structural claim is evaluated by whether the same form appears in independently documented domains, which is the structural-realist test.
 
 ## What this entails for engagement with the work
 
-A reader committed to strict falsificationism is invited to test the locally-falsifiable predictions. The reproduction scripts in [`../experiments/`](../experiments/) execute the relevant numerical tests. If the predictions fail to reproduce, the work has a problem. If they reproduce, the local predictions are confirmed in the standard sense.
+A reader committed to strict falsificationism is invited to test the locally-testable predictions on their own terms. The reproduction scripts in [`../experiments/`](../experiments/) execute the relevant numerical tests in coupled-regime configurations. Non-reproduction implicates one of (a) the calibration, (b) the auxiliary numerical assumptions, or (c) the implementation; the reader can examine each. Reproduction contributes evidence under criterion 2 in [`04-the-six-criteria.md`](04-the-six-criteria.md).
 
 A reader committed to structural realism is invited to test the cross-domain coherence claim. The mappings in [`../interfaces/`](../interfaces/) are the principal evidence. The state space model equivalence is the strongest (mathematically exact); the archaeoacoustic correspondence is the weakest (calibration-dependent). The cumulative weight of the six mappings is the test.
 
