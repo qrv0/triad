@@ -1,3 +1,30 @@
+---
+title: "Interface 01: Other instances of NLS dynamics"
+description: >-
+  Optical solitons, BECs, surface gravity waves, plasma Langmuir
+  oscillations all instantiate the memory-augmented NLS form.
+domain: physics
+triangle:
+  p1: "envelope oscillation of the underlying carrier wave"
+  p2: "nonlinear self-interaction plus dispersive / memory kernel"
+  p3: "loss + gain (Raman, thermal cloud, bottom friction, electron-ion collisions)"
+signature_icon: wave
+hero_tier: B
+related: [2, 3, 7]
+predictions:
+  - id: P1.1
+    short: "Memory-augmented soliton stability scales with Raman timescale ratio"
+    status: not_yet_tested
+    result_doc: null
+  - id: P1.2
+    short: "BEC anti-collapse threshold scales with non-condensate-cloud temperature"
+    status: not_yet_tested
+    result_doc: null
+  - id: P1.3
+    short: "Surface-wave Benjamin-Feir threshold shifts with bottom-friction memory"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: other nonlinear Schrödinger systems
 
 The cubic nonlinear Schrödinger equation, in its bare form (no memory, no dissipation, no noise), is the leading-order envelope equation for a wide class of weakly nonlinear, weakly dispersive wave systems. Its appearance across physical substrates that are otherwise unrelated is the historical paradigm case of cross-domain mathematical structure in physics. The equation derived in this work, the bare NLS extended with memory, dissipation, and FDT-locked noise, places this paradigm case in the company of the other cross-domain mappings documented in this folder.

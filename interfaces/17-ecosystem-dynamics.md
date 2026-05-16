@@ -1,3 +1,31 @@
+---
+title: "Interface 17: Ecosystem dynamics (multi-species)"
+description: >-
+  Sustained multi-species communities instantiate the triangle; age
+  structure + trait inheritance are P2 memory; interspecies + abiotic
+  coupling is P3.
+domain: biology
+triangle:
+  p1: "intrinsic population-density dynamics (Lotka-Volterra-like)"
+  p2: "age structure + trait inheritance + ecological memory"
+  p3: "interspecies competition + abiotic environmental forcing"
+signature_icon: trophic
+hero_tier: B
+related: [13, 11, 16]
+predictions:
+  - id: P17.1
+    short: "Ecosystem diversity-stability tracks the predicted memory-coupling pattern"
+    status: not_yet_tested
+    result_doc: null
+  - id: P17.2
+    short: "Age-structured populations show predicted memory-modulated stability vs unstructured"
+    status: not_yet_tested
+    result_doc: null
+  - id: P17.3
+    short: "Regime-shift indicators correlate with the structural failure-mode predictions"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: ecosystem dynamics
 
 ## The structural prediction

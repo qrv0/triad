@@ -1,3 +1,31 @@
+---
+title: "Interface 12: Friston free-energy and active inference"
+description: >-
+  Predictive coding / free-energy minimization instantiates the triangle
+  in a variational-dynamics substrate; the hierarchical generative model
+  is P2's memory hierarchy.
+domain: complex-systems
+triangle:
+  p1: "internal-state inferential dynamics"
+  p2: "hierarchical generative model + precision weights memory"
+  p3: "sensory observation + motor action coupling"
+signature_icon: nested
+hero_tier: C
+related: [4, 8, 10]
+predictions:
+  - id: P12.1
+    short: "Predictive-coding hierarchy depth correlates with structural memory-mode count"
+    status: not_yet_tested
+    result_doc: null
+  - id: P12.2
+    short: "Hierarchical active-inference agent more stable than non-hierarchical equivalent"
+    status: not_yet_tested
+    result_doc: null
+  - id: P12.3
+    short: "Cortical hierarchy structurally aligns with the equation's auxiliary-field hierarchy"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: free-energy minimization and active inference
 
 ## The structural prediction

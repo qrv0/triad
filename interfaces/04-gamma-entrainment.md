@@ -1,3 +1,31 @@
+---
+title: "Interface 04: Gamma entrainment and broadband absorption"
+description: >-
+  Cortical 40 Hz GENUS protocol and broadband neural absorption match
+  the equation's released crystalline regime with multi-timescale
+  memory.
+domain: neuro
+triangle:
+  p1: "neuronal-population gamma-band oscillation"
+  p2: "multi-timescale synaptic + glial memory hierarchy"
+  p3: "thalamocortical + vascular + glial environmental coupling"
+signature_icon: brain-wave
+hero_tier: B
+related: [9, 8, 12]
+predictions:
+  - id: P4.1
+    short: "Broadband absorption bandwidth scales with memory-mode hierarchy depth"
+    status: not_yet_tested
+    result_doc: null
+  - id: P4.2
+    short: "Cortical regions with multi-timescale glia show stronger GENUS response"
+    status: not_yet_tested
+    result_doc: null
+  - id: P4.3
+    short: "GENUS amyloid-clearance kinetics follows the predicted memory-coupling pattern"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: gamma-frequency neural entrainment
 
 The crystalline regime of the present equation, in its absorbing mode (see [`../results/`](../results/)), exhibits broadband absorption of external periodic driving across a high-frequency band. Independent neuroscience research has documented that biological neural systems exhibit frequency-specific responses in a band that overlaps with this absorption regime under one defensible dimensional identification. The structural correspondence is treated here.

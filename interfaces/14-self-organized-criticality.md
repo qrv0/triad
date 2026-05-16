@@ -1,3 +1,31 @@
+---
+title: "Interface 14: Self-organized criticality (avalanches)"
+description: >-
+  Drive-and-release systems organizing to a critical state instantiate
+  the triangle; MNSM produces matching avalanche-statistics exponents in
+  the coupled regime.
+domain: complex-systems
+triangle:
+  p1: "stress / activity field accumulating toward threshold"
+  p2: "memory of past events tuning local stability"
+  p3: "external drive + dissipative release coupling"
+signature_icon: avalanche-tumble
+hero_tier: A
+related: [9, 13, 10]
+predictions:
+  - id: P14.1
+    short: "BTW-style critical exponents emerge in MNSM coupled-regime sweeps"
+    status: tested_consistent
+    result_doc: results/18-soc-vs-mnsm-matched-drive.md
+  - id: P14.2
+    short: "MNSM avalanche-size distribution matches BTW reference under matched drive"
+    status: tested_consistent
+    result_doc: results/18-soc-vs-mnsm-matched-drive.md
+  - id: P14.3
+    short: "Neuronal-avalanche universality class shared between cortex and MNSM critical regime"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: self-organized criticality
 
 ## The structural prediction

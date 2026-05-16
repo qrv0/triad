@@ -1,3 +1,31 @@
+---
+title: "Interface 09: Critical brain (neuronal avalanches, 1/f)"
+description: >-
+  Cortical phase-transition phenomenology (power-law avalanches, 1/f
+  spectra, broadband sensitivity) matches the equation's released
+  crystalline regime.
+domain: neuro
+triangle:
+  p1: "neuronal-population spiking oscillation"
+  p2: "multi-timescale synaptic / cellular / network memory"
+  p3: "sensory input + neuromodulatory + vascular coupling"
+signature_icon: avalanche
+hero_tier: B
+related: [14, 4, 8]
+predictions:
+  - id: P14.1
+    short: "Cortex shows multi-timescale memory hierarchy matching equation predictions"
+    status: not_yet_tested
+    result_doc: null
+  - id: P14.2
+    short: "Neuronal avalanche statistics match equation predictions in matched-drive conditions"
+    status: tested_consistent
+    result_doc: results/18-soc-vs-mnsm-matched-drive.md
+  - id: P14.3
+    short: "VIP-AQP4 cortical regions show predicted broadband absorption signature"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: critical brain dynamics
 
 A research program in computational neuroscience interprets cortical dynamics as operating near a phase transition: neuronal-avalanche size distributions follow power laws, local field potentials exhibit 1/f-like spectra over multiple decades, and the cortex responds with broadband sensitivity across a wide frequency band. This document treats the structural reading: the observable signatures are signatures the equation produces in its broadband-absorption crystalline regime, by the structural form $\mathrm{P1}+\mathrm{P2}+\mathrm{P3}$, not by parameter-tuning to a critical point.

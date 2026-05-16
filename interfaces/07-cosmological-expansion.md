@@ -1,3 +1,31 @@
+---
+title: "Interface 07: Cosmological expansion as mechanism-shape"
+description: >-
+  The full cosmic expansion trajectory (inflation, release, structure
+  formation, late acceleration) instantiates the equation's
+  anti-collapse mechanism shape.
+domain: cosmology
+triangle:
+  p1: "scale-factor oscillation around expansion trajectory"
+  p2: "vacuum-energy / dark-energy memory of inflationary state"
+  p3: "radiation + matter coupling to the metric"
+signature_icon: expansion
+hero_tier: B
+related: [2, 1, 14]
+predictions:
+  - id: P7.1
+    short: "Late-time dark-energy equation of state shows V_mem-induced deviation from cosmological constant"
+    status: not_yet_tested
+    result_doc: null
+  - id: P7.2
+    short: "Small-scale BAO substructure follows the equation's memory-modulated spectrum"
+    status: not_yet_tested
+    result_doc: null
+  - id: P7.3
+    short: "Inflationary-era residual signal in tensor-to-scalar ratio matches anti-collapse profile"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: cosmological expansion as anti-collapse release
 
 This interface extends the baryon-acoustic correspondence in

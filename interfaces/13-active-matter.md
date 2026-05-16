@@ -1,3 +1,31 @@
+---
+title: "Interface 13: Active matter (self-propelled particles, flocks)"
+description: >-
+  Self-propelled ensembles maintained by external energy injection
+  instantiate the triangle; orientation memory is P2, energy injection
+  is P3.
+domain: complex-systems
+triangle:
+  p1: "individual particle motility-orientation dynamics"
+  p2: "alignment / orientation memory across particles"
+  p3: "external energy injection compensating dissipation"
+signature_icon: flock
+hero_tier: B
+related: [10, 14, 17]
+predictions:
+  - id: P13.1
+    short: "Active-crystal symmetry selection follows the equation's BCC pattern in the predicted regime"
+    status: not_yet_tested
+    result_doc: null
+  - id: P13.2
+    short: "Flock-correlation length scales with predicted memory-coupling strength"
+    status: not_yet_tested
+    result_doc: null
+  - id: P13.3
+    short: "Motility-induced phase separation shows broadband-absorption response in coupled regime"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: active matter
 
 ## The structural prediction

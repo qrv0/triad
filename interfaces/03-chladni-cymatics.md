@@ -1,3 +1,30 @@
+---
+title: "Interface 03: Chladni cymatics and Faraday waves"
+description: >-
+  Sand-on-plate nodal patterns and Faraday-wave surface patterns
+  instantiate the equation's spontaneous symmetry selection.
+domain: acoustics
+triangle:
+  p1: "driven elastic plate or fluid-surface oscillation"
+  p2: "nonlinear mode-coupling plus pattern memory"
+  p3: "driving piston + air damping + viscous dissipation"
+signature_icon: pattern
+hero_tier: B
+related: [5, 2, 1]
+predictions:
+  - id: P3.1
+    short: "Symmetry selection probability scales with memory timescale at fixed drive"
+    status: not_yet_tested
+    result_doc: null
+  - id: P3.2
+    short: "Pattern stability scales with drive amplitude in the predicted regime"
+    status: not_yet_tested
+    result_doc: null
+  - id: P3.3
+    short: "Multiple symmetries coexist in the bistable regime predicted by memory hysteresis"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: Chladni cymatics
 
 When a continuous medium is excited at a specific acoustic frequency, the medium self-organizes into a periodic geometric pattern. This is the most direct mechanical instance of the kind of spontaneous spatial structure that [`../results/02-spontaneous-crystallization.md`](../results/02-spontaneous-crystallization.md) documents in the present equation.

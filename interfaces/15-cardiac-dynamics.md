@@ -1,3 +1,30 @@
+---
+title: "Interface 15: Cardiac dynamics (pacemaker, alternans)"
+description: >-
+  Sustained cardiac rhythm instantiates the triangle; refractory-state
+  memory is P2, autonomic + metabolic input is P3.
+domain: biology
+triangle:
+  p1: "intrinsic depolarization-repolarization oscillation"
+  p2: "refractory-state and ion-channel memory"
+  p3: "ANS + hormonal + metabolic environmental coupling"
+signature_icon: ecg
+hero_tier: C
+related: [10, 11, 16]
+predictions:
+  - id: P15.1
+    short: "Cardiac alternans threshold scales with predicted memory-hierarchy depth"
+    status: not_yet_tested
+    result_doc: null
+  - id: P15.2
+    short: "Clinical arrhythmia categories map to triangle structural failure modes"
+    status: not_yet_tested
+    result_doc: null
+  - id: P15.3
+    short: "Heart rate variability spectrum matches the predicted multi-timescale decomposition"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: cardiac dynamics
 
 ## The structural prediction

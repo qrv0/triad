@@ -1,3 +1,31 @@
+---
+title: "Interface 06: State space models (Mamba, RWKV, S4)"
+description: >-
+  The diagonal SSM update of S4 / Mamba / RWKV is term-by-term identical
+  to the equation's auxiliary-field memory; the equation adds cubic +
+  anti-collapse + FDT-locked noise.
+domain: engineering
+triangle:
+  p1: "hidden-state oscillation across timesteps"
+  p2: "auxiliary-field memory hierarchy (diagonal SSM update)"
+  p3: "input projection + FDT-locked training noise"
+signature_icon: ssm
+hero_tier: A
+related: [8, 10, 9]
+predictions:
+  - id: P6.1
+    short: "FDT-locked noise reduces training trajectory variance vs ad-hoc noise schedules"
+    status: not_yet_tested
+    result_doc: results/16-fdt-locked-noise-empirical-p3.md
+  - id: P6.2
+    short: "Optimization collapse boundary scales with model size as the cubic term predicts"
+    status: not_yet_tested
+    result_doc: null
+  - id: P6.3
+    short: "Cubic state nonlinearity prevents SimSiam collapse without stop-gradient in coupled regime"
+    status: not_yet_tested
+    result_doc: results/17-cubic-ssm-simsiam-fdt.md
+---
 # Interface: structured state space models
 
 This is the mathematically tightest of the six cross-domain mappings. The auxiliary-field memory equation derived in [`../equation/02-markovian-embedding.md`](../equation/02-markovian-embedding.md) is identical, term by term, to the hidden-state update of the structured state space model architectures that have become a leading approach to sequence modeling in machine learning since 2021.

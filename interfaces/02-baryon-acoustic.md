@@ -1,3 +1,31 @@
+---
+title: "Interface 02: Baryon acoustic oscillations"
+description: >-
+  Pre-recombination plasma acoustic waves froze a 150 Mpc characteristic
+  scale into matter distribution; the equation's memory-modulated wave
+  dynamics predicts specific corrections.
+domain: cosmology
+triangle:
+  p1: "photon-baryon plasma sound waves"
+  p2: "baryon inertia plus radiation pressure memory"
+  p3: "photon-baryon Thomson scattering coupling"
+signature_icon: horizon
+hero_tier: B
+related: [7, 1, 3]
+predictions:
+  - id: P2.1
+    short: "BAO peak position correction scales with memory-kernel timescale at recombination"
+    status: not_yet_tested
+    result_doc: null
+  - id: P2.2
+    short: "Secondary BAO peaks show memory-modulated harmonic structure"
+    status: not_yet_tested
+    result_doc: null
+  - id: P2.3
+    short: "Phase shift in BAO ringing detectable in DESI/LSST data"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: baryon acoustic oscillations
 
 The largest-scale documented instance of acoustic structuring of matter under self-interaction and environmental coupling occurred in the early universe. The mathematical structure that governed this period, wave propagation in a self-interacting medium coupled to a relaxing background, is the same structural form that the present equation describes at vastly smaller scales.

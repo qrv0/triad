@@ -1,3 +1,31 @@
+---
+title: "Interface 11: Immune affinity maturation"
+description: >-
+  B-cell affinity maturation in germinal centers instantiates the
+  triangle in a discrete-cell biological substrate with somatic
+  hypermutation as the memory trace.
+domain: biology
+triangle:
+  p1: "B-cell division-cycle plus clonal dynamics"
+  p2: "somatic hypermutation + clonal selection memory"
+  p3: "antigen environment + T-cell help coupling"
+signature_icon: antibody
+hero_tier: B
+related: [15, 16, 17]
+predictions:
+  - id: P11.1
+    short: "Memory-B-cell response amplitude scales with predicted timing of antigen exposure"
+    status: not_yet_tested
+    result_doc: null
+  - id: P11.2
+    short: "Autoimmune disease classification maps to the triangle's structural failure modes"
+    status: not_yet_tested
+    result_doc: null
+  - id: P11.3
+    short: "Affinity maturation kinetics correlates with memory-kernel timescale predictions"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: immune affinity maturation
 
 ## The structural prediction

@@ -138,6 +138,9 @@ extra:
     new: Recently added
     deprecated: Deprecated
 
+hooks:
+  - hooks/build_index.py
+
 plugins:
   - search:
       lang: [en, pt, es]

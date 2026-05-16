@@ -1,3 +1,32 @@
+---
+title: "Interface 08: Mechanistic interpretability (attention)"
+description: >-
+  The empirical observation that attention-only architectures encode
+  categorical structure as linear superpositions requiring post-hoc
+  dictionary learning is what the equation predicts for an architecture
+  instantiating P1 and P3 but missing P2's memory hierarchy.
+domain: engineering
+triangle:
+  p1: "token-position attention oscillation"
+  p2: "MISSING in attention-only: no auxiliary-field memory hierarchy"
+  p3: "input embedding + residual stream coupling"
+signature_icon: attention
+hero_tier: C
+related: [6, 9, 4]
+predictions:
+  - id: P8.1
+    short: "Sparse autoencoder recovery rate scales with auxiliary-field count in modified architectures"
+    status: not_yet_tested
+    result_doc: null
+  - id: P8.2
+    short: "Superposition density correlates inversely with explicit memory hierarchy depth"
+    status: not_yet_tested
+    result_doc: null
+  - id: P8.3
+    short: "Polysemanticity decreases when Memory-NLS auxiliary fields are added to attention layers"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: mechanistic interpretability of attention-based systems
 
 The empirical program of mechanistic interpretability has independently documented a specific phenomenology in attention-based language models: latent categorical structure is not held in addressable architectural components, but is encoded as linear superpositions across activations whose decomposition requires post-hoc dictionary learning. This document treats the structural reading: the phenomenology is what the present equation predicts for an architecture instantiating P1 and P3 but not P2.

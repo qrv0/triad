@@ -1,3 +1,31 @@
+---
+title: "Interface 05: Archaeoacoustic resonance at megalithic sites"
+description: >-
+  110 Hz and 70 Hz resonance across Hypogeum, Newgrange, Gobekli Tepe
+  and the Pyramid King's Chamber match the equation's two principal
+  vibrational modes.
+domain: archaeo
+triangle:
+  p1: "chamber-mode acoustic oscillation"
+  p2: "stone-fluid resonance memory + acoustic boundary impedance"
+  p3: "air absorption + ground coupling + voice / drum drive"
+signature_icon: chamber
+hero_tier: C
+related: [3, 4, 9]
+predictions:
+  - id: P5.1
+    short: "Additional megalithic chambers resonate in the predicted 70-110 Hz band"
+    status: not_yet_tested
+    result_doc: null
+  - id: P5.2
+    short: "EEG response outside 110 Hz predicted by the second principal mode at 66 Hz"
+    status: not_yet_tested
+    result_doc: null
+  - id: P5.3
+    short: "Ratio of the two principal frequencies stays in the predicted band across chambers"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: low-frequency acoustic resonance in megalithic chambers
 
 This is the most calibration-sensitive of the cross-domain mappings in this folder. The equation's two principal vibrational frequencies, under a specific dimensional identification, correspond to bands measured at several archaeological sites by peer-reviewed acoustic surveys. The structural correspondence is treated here with the caveats it requires.

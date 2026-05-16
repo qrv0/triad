@@ -1,3 +1,31 @@
+---
+title: "Interface 16: Gene regulation and circadian clocks"
+description: >-
+  Multi-timescale gene-expression patterns maintaining identity across
+  cell division instantiate the triangle; chromatin + autoregulation are
+  P2 memory.
+domain: biology
+triangle:
+  p1: "transcriptional oscillation (circadian + others)"
+  p2: "chromatin-mark and autoregulatory-loop memory"
+  p3: "metabolic + hormonal + neural signaling coupling"
+signature_icon: clock-helix
+hero_tier: C
+related: [11, 15, 17]
+predictions:
+  - id: P16.1
+    short: "Circadian period robustness scales with regulatory hierarchy depth"
+    status: not_yet_tested
+    result_doc: null
+  - id: P16.2
+    short: "Temperature compensation strength tracks the predicted memory-kernel pattern"
+    status: not_yet_tested
+    result_doc: null
+  - id: P16.3
+    short: "Cell-cycle-circadian coupling follows the triangle's two-level integration"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: gene regulation and circadian dynamics
 
 ## The structural prediction

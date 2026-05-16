@@ -1,3 +1,31 @@
+---
+title: "Interface 10: Kuramoto synchronization with memory"
+description: >-
+  Memory-coupled phase oscillator ensembles instantiate the equation in
+  its phase-only sector; chimera-state stability tracks the
+  memory-timescale ratio.
+domain: complex-systems
+triangle:
+  p1: "individual phase oscillator dynamics"
+  p2: "coupling-history memory kernel between oscillators"
+  p3: "FDT-locked phase noise + external drive"
+signature_icon: phase-circle
+hero_tier: A
+related: [13, 15, 12]
+predictions:
+  - id: P10.1
+    short: "Chimera-state lifetime peaks at tau_mem / tau_sync ~ 1 in coupled regime"
+    status: tested_consistent
+    result_doc: results/14-kuramoto-chimera-fdt.md
+  - id: P10.2
+    short: "Cardiac arrhythmia onset corresponds to the triangle's structural breakdown"
+    status: not_yet_tested
+    result_doc: null
+  - id: P10.3
+    short: "Power-grid stability correlates with effective coupling memory in the predicted regime"
+    status: not_yet_tested
+    result_doc: null
+---
 # Interface: coupled phase oscillators with memory
 
 ## The structural prediction
