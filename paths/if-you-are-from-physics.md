@@ -27,14 +27,14 @@ $$
 i\hbar\, \partial_t \Psi
 \;=\;
 \Big[\,
-\color{#6366f1}{-\tfrac{\hbar^{2}}{2m}\nabla^{2}}
-\;+\; \color{#f59e0b}{V_{\text{ext}}}
-\;+\; \color{#14b8a6}{\Lambda |\Psi|^{2}}
-\;+\; \color{#14b8a6}{V_{\text{mem}}}
-\;+\; \color{#6366f1}{\alpha\,(-\Delta)^{\sigma/2}}
-\;-\; \color{#f59e0b}{i\Gamma}\,
+\color[HTML]{6366f1}{-\tfrac{\hbar^{2}}{2m}\nabla^{2}}
+\;+\; \color[HTML]{f59e0b}{V_{\text{ext}}}
+\;+\; \color[HTML]{14b8a6}{\Lambda |\Psi|^{2}}
+\;+\; \color[HTML]{14b8a6}{V_{\text{mem}}}
+\;+\; \color[HTML]{6366f1}{\alpha\,(-\Delta)^{\sigma/2}}
+\;-\; \color[HTML]{f59e0b}{i\Gamma}\,
 \Big]\Psi
-\;+\; \color{#f59e0b}{\eta}
+\;+\; \color[HTML]{f59e0b}{\eta}
 $$
 </div>
 

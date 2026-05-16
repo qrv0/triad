@@ -28,9 +28,9 @@ rather than fit empirically.
 
 <div class="path-eq mnsm-eq--coded" markdown>
 $$
-\color{#14b8a6}{\partial_t y_j = \nu_j(\rho - y_j)}
+\color[HTML]{14b8a6}{\partial_t y_j = \nu_j(\rho - y_j)}
 \quad\Longleftrightarrow\quad
-\color{#14b8a6}{\partial_t \mathbf{h} = \mathbf{A}\,\mathbf{h} + \mathbf{B}\,u}
+\color[HTML]{14b8a6}{\partial_t \mathbf{h} = \mathbf{A}\,\mathbf{h} + \mathbf{B}\,u}
 $$
 </div>
 
@@ -40,9 +40,9 @@ $$
 
 with $\mathbf{A}$ diagonal, eigenvalues $-\nu_j$, $b_j = \nu_j$. The
 auxiliary-field memory update is **exactly** the diagonal-state SSM update;
-no calibration required. The full equation embeds this $\color{#14b8a6}{P2}$
-subsystem inside a $\color{#6366f1}{P1}$ wave-equation kinetic and a
-$\color{#f59e0b}{P3}$ FDT-locked dissipation–noise pair — color-coded
+no calibration required. The full equation embeds this $\color[HTML]{14b8a6}{P2}$
+subsystem inside a $\color[HTML]{6366f1}{P1}$ wave-equation kinetic and a
+$\color[HTML]{f59e0b}{P3}$ FDT-locked dissipation–noise pair — color-coded
 on the landing for orientation.
 
 </div>
