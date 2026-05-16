@@ -4,7 +4,14 @@ This document specifies the protocol for the prediction-tests that operationaliz
 
 ## Purpose
 
-Each interface in [`../interfaces/`](../interfaces/) names locally testable predictions (P{N}.{n}) in a uniform format. The structural-realist methodology (see [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)) commits to the two-level structure: the global structural claim is evaluated by cross-domain coherence (criterion 4); the local predictions are evaluated by standard falsification (they pass or fail on the numerics). This document specifies how the local-prediction tests are run, what data they produce, and how their outcomes are published in repo.
+> **Hedge cleanup (2026-05-16).** This document was originally
+> written with a "local predictions are evaluated by standard
+> falsification" frame in the introduction and status taxonomy.
+> Per [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
+> that frame was a Rule B violation. The revised text below uses
+> six-criteria framing per the cleaned methodology.
+
+Each interface in [`../interfaces/`](../interfaces/) names locally testable predictions (P{N}.{n}) in a uniform format. The structural-realist methodology (see [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)) commits to the two-level structure: the global structural claim is evaluated by cross-domain coherence (criterion 4); the local predictions are evaluated by coupled-regime numerical reproduction (reproduction contributes evidence under criterion 2; non-reproduction prompts investigation of calibration, auxiliary numerical assumptions per Duhem-Quine, or implementation). This document specifies how the local-prediction tests are run, what data they produce, and how their outcomes are published in repo.
 
 The repository is set up as active live research: each completed test publishes its results in repo, updates the prediction status in the relevant interface, and updates [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md) "Recently completed" section.
 
@@ -15,7 +22,7 @@ Each prediction has a status. The taxonomy is:
 - **untested**: no targeted experiment has been run; the prediction is named but its observable has not been measured.
 - **partially tested**: an experiment compatible with the prediction has been run, but with limitations (small sample, specific parameter regime, weak statistical power). The result shifts evidentiary weight but does not fully resolve the prediction.
 - **tested (consistent)**: an experiment targeting the prediction has been run, and the result matches the predicted observable within statistical bounds.
-- **tested (inconsistent)**: an experiment targeting the prediction has been run, and the result does not match the predicted observable. Per methodology/02, this is a local falsification of the specific prediction; it shifts evidentiary weight against this interface's specific reading but does not falsify the global structural claim.
+- **tested in coupled regime, inconsistent**: an experiment targeting the prediction has been run with P3 active (gamma_0 > 0, T > 0, FDT-locked noise), and the result does not match the predicted observable. Per methodology/02 in its cleaned form, the inconsistent evidence shifts evidentiary weight against this interface's specific calibration under criterion 4 and prompts investigation of (a) the calibration of the prediction, (b) the auxiliary numerical assumptions (Duhem-Quine), or (c) the implementation. It does not falsify the global structural claim.
 - **disputed**: the experiment has been run but the result is contested (interpretation depends on choices that are themselves under debate); requires further work to resolve.
 
 ## Naming convention
@@ -114,7 +121,7 @@ Future waves are planned in [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md).
 
 ## Honest disclosure of test outcomes
 
-If a test produces a result that locally falsifies the prediction (status "tested (inconsistent)"), the result is published with the same prominence as a consistent result. The interface's evidentiary weight is moderated honestly per methodology/02; the structural claim's global status is updated to reflect the local falsification; the entry in RESEARCH-AGENDA notes the falsification.
+If a test produces results inconsistent with a prediction (status "tested in coupled regime, inconsistent"), the result is published with the same prominence as a consistent result. The interface's evidentiary weight under criterion 4 is updated honestly per methodology/02; the structural claim's global status reflects the cumulative evidence across all interfaces, evaluated by the six criteria; the entry in RESEARCH-AGENDA notes the inconsistent evidence and the investigation paths it prompts.
 
 This disclosure commitment is what makes the work active research rather than advocacy. The structural-realist position commits to evaluating the form by cross-domain coherence (criterion 4), which requires honest reporting of which interfaces survive local tests and which do not.
 

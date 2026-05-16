@@ -26,7 +26,7 @@ Both requirements are forced by the structural argument; both have a clean mathe
 
 - For requirement 7: a small-scale demonstration that a MNSM-instantiating architecture undergoing continual learning across distribution shifts does not exhibit catastrophic forgetting at the level standard architectures do. The demonstration should isolate the structural mechanism (multi-timescale memory + FDT-locked coupling) as the source of the difference.
 - For requirement 8: a small-scale demonstration that a MNSM-instantiating architecture undergoing self-modification (e.g., learned modification of its own update rule) maintains structural identity across the modification. The demonstration should identify which features of the system are preserved (triangle structure, principal eigenmodes, anti-collapse property) and which are allowed to change.
-- For both: clear identification of what would constitute local falsification (a specific experimental observation that would shift the engineering claim, distinct from the global structural claim which is evaluated by methodology/04 criteria).
+- For both: clear identification of what evidence would be inconsistent with this engineering calibration (a specific experimental observation that would shift the engineering claim under criterion 4, distinct from the global structural claim which is evaluated by all six criteria in methodology/04).
 - Documentation of the engineering pattern in `implementation/neural/` or a follow-up location, with reproducible code and explicit connection to the structural framework.
 
 ## Suggested approaches
