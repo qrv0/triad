@@ -78,19 +78,19 @@ theme:
     - announce.dismiss
 
   palette:
-    # Light mode
+    # Light mode — graphite on paper
     - media: '(prefers-color-scheme: light)'
       scheme: default
-      primary: indigo
+      primary: black
       accent: teal
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
 
-    # Dark mode
+    # Dark mode — charcoal with warm white text
     - media: '(prefers-color-scheme: dark)'
       scheme: slate
-      primary: indigo
+      primary: black
       accent: teal
       toggle:
         icon: material/weather-sunny
@@ -124,10 +124,10 @@ extra:
       link: https://github.com/qrv0/mnsm
       name: GitHub repository
     - icon: simple/huggingface
-      link: https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8
+      link: https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8
       name: Memory-NLS 70M on HuggingFace
     - icon: simple/huggingface
-      link: https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8
+      link: https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8
       name: Transformer baseline 70M on HuggingFace
 
   # Status badge for announce bar (optional)
@@ -137,8 +137,128 @@ extra:
 
 plugins:
   - search:
-      lang: en
+      lang: [en, pt, es]
       separator: '[\s​\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+  - i18n:
+      docs_structure: suffix
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          site_name: mnsm
+          site_description: >-
+            Memory-Nonlinear State Models — three structural principles, one
+            equation, seven cross-domain instantiations.
+        - locale: pt
+          name: Português (BR)
+          build: true
+          link: /pt/
+          site_name: mnsm
+          site_description: >-
+            Modelos de Estado Memória-Não-Lineares — três princípios
+            estruturais, uma equação, sete instanciações cross-domain.
+          nav_translations:
+            Home: Início
+            Foundations: Fundamentos
+            'Three Principles': Os Três Princípios
+            'Overview': Visão Geral
+            'P1 — Oscillation': 'P1 — Oscilação'
+            'P2 — Self-Reference': 'P2 — Auto-Referência'
+            'P3 — Coupling': 'P3 — Acoplamento'
+            'The Equation': A Equação
+            'Derivation from Axioms': Derivação a partir dos Axiomas
+            'Markovian Embedding': Embedding Markoviano
+            'Two-Dimensional Form': Forma Bidimensional
+            'Three-Dimensional Form': Forma Tridimensional
+            'Reductions to Known Equations': Reduções a Equações Conhecidas
+            Results: Resultados
+            'Cross-Domain Interfaces': Interfaces Cross-Domain
+            'Other NLS Systems': Outros Sistemas NLS
+            'Baryon Acoustic Oscillations': Oscilações Acústicas de Bárions
+            'Chladni Cymatics': Cymatica de Chladni
+            'Gamma-Frequency Entrainment': Entrainment de Frequência Gama
+            'Archaeoacoustic Resonance': Ressonância Arqueoacústica
+            'State Space Models': Modelos de Estado-Espaço
+            'Cosmological Expansion': Expansão Cosmológica
+            Methodology: Metodologia
+            'Structural Realism': Realismo Estrutural
+            'Limits of Falsification': Limites da Falsificação
+            'How to Evaluate This': Como Avaliar Isto
+            'The Six Criteria': Os Seis Critérios
+            Implementation: Implementação
+            'Physics Solver (CuPy)': 'Solver de Física (CuPy)'
+            'Neural Layer (PyTorch)': 'Camada Neural (PyTorch)'
+            Experiments: Experimentos
+            'Physics Experiments': Experimentos de Física
+            'Neural Experiments': Experimentos Neurais
+            'Reader Paths': Trilhas de Leitura
+            'If you are new': Se você é novo nisso
+            'If you are from physics': Se você vem da física
+            'If you are from machine learning': Se você vem de machine learning
+            'If you are from neuroscience': Se você vem da neurociência
+            'If you are from philosophy of science': Se você vem da filosofia da ciência
+            Paper: Paper
+            About: Sobre
+            'Repository Structure': Estrutura do Repositório
+            'Contributing': Contribuindo
+            'AI Assistant Guidelines': Diretrizes para Assistentes de IA
+        - locale: es
+          name: Español
+          build: true
+          link: /es/
+          site_name: mnsm
+          site_description: >-
+            Modelos de Estado de Memoria-No-Lineales — tres principios
+            estructurales, una ecuación, siete instanciaciones interdominio.
+          nav_translations:
+            Home: Inicio
+            Foundations: Fundamentos
+            'Three Principles': Los Tres Principios
+            'Overview': Visión General
+            'P1 — Oscillation': 'P1 — Oscilación'
+            'P2 — Self-Reference': 'P2 — Auto-Referencia'
+            'P3 — Coupling': 'P3 — Acoplamiento'
+            'The Equation': La Ecuación
+            'Derivation from Axioms': Derivación desde Axiomas
+            'Markovian Embedding': Embedding Markoviano
+            'Two-Dimensional Form': Forma Bidimensional
+            'Three-Dimensional Form': Forma Tridimensional
+            'Reductions to Known Equations': Reducciones a Ecuaciones Conocidas
+            Results: Resultados
+            'Cross-Domain Interfaces': Interfaces Interdominio
+            'Other NLS Systems': Otros Sistemas NLS
+            'Baryon Acoustic Oscillations': Oscilaciones Acústicas de Bariones
+            'Chladni Cymatics': Cimática de Chladni
+            'Gamma-Frequency Entrainment': Entrainment de Frecuencia Gamma
+            'Archaeoacoustic Resonance': Resonancia Arqueoacústica
+            'State Space Models': Modelos de Espacio de Estados
+            'Cosmological Expansion': Expansión Cosmológica
+            Methodology: Metodología
+            'Structural Realism': Realismo Estructural
+            'Limits of Falsification': Límites de la Falsación
+            'How to Evaluate This': Cómo Evaluar Esto
+            'The Six Criteria': Los Seis Criterios
+            Implementation: Implementación
+            'Physics Solver (CuPy)': 'Solver de Física (CuPy)'
+            'Neural Layer (PyTorch)': 'Capa Neural (PyTorch)'
+            Experiments: Experimentos
+            'Physics Experiments': Experimentos de Física
+            'Neural Experiments': Experimentos Neurales
+            'Reader Paths': Rutas de Lectura
+            'If you are new': Si eres nuevo
+            'If you are from physics': Si vienes de la física
+            'If you are from machine learning': Si vienes de machine learning
+            'If you are from neuroscience': Si vienes de la neurociencia
+            'If you are from philosophy of science': Si vienes de la filosofía de la ciencia
+            Paper: Paper
+            About: Acerca de
+            'Repository Structure': Estructura del Repositorio
+            'Contributing': Contribuir
+            'AI Assistant Guidelines': Directrices para Asistentes de IA
 
   - minify:
       minify_html: true

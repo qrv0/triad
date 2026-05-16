@@ -8,6 +8,7 @@ build/
 dist/
 *.egg-info/
 .venv/
+.venv-docs/
 venv/
 
 # Outputs (regenerable training outputs are ignored, but result reports kept)

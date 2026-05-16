@@ -7,8 +7,8 @@
 [![License: MIT](https://img.shields.io/badge/Code_License-MIT-blue.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/Docs_License-CC_BY_4.0-lightgrey.svg)](LICENSE-docs)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Memory-NLS on HuggingFace](https://img.shields.io/badge/🤗_Memory--NLS-70M-yellow)](https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8)
-[![Transformer baseline on HuggingFace](https://img.shields.io/badge/🤗_Transformer-70M-yellow)](https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8)
+[![Memory-NLS on HuggingFace](https://img.shields.io/badge/🤗_Memory--NLS-70M-yellow)](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8)
+[![Transformer baseline on HuggingFace](https://img.shields.io/badge/🤗_Transformer-70M-yellow)](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8)
 [![Paper](https://img.shields.io/badge/paper-manuscript.md-green)](paper/manuscript.md)
 
 > The same equation appears in 3D nonlinear Schrödinger fields, baryon acoustic
@@ -232,8 +232,8 @@ for the qualitative side-by-side.
 The 70M-parameter checkpoints from the optimization-collapse experiment are
 published on HuggingFace and loadable in seconds:
 
-- **Memory-NLS**: [`qvr0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8) — final val perplexity 4.27, monotonic stable trajectory
-- **Transformer**: [`qvr0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8) — final val perplexity 4.87, includes the catastrophic optimization collapse documented in [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
+- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8) — final val perplexity 4.27, monotonic stable trajectory
+- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8) — final val perplexity 4.87, includes the catastrophic optimization collapse documented in [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
 
 Each repo contains the safetensors weights, configuration JSON, and self-contained modeling code so the model loads without requiring this full repository. See each model card for usage examples.
 
