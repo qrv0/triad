@@ -68,7 +68,17 @@ Status: **tested (inconsistent)**.
 
 Rationale: prediction P10.1 as originally stated in [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md) is not supported by this test. Chimera lifetime does not peak at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$; it peaks in the Markovian limit. The intermediate-memory regime, far from being optimal for chimera, is empirically destabilizing.
 
-Per [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), this is a local falsification of P10.1 in the specific implementation tested. It shifts evidentiary weight against this particular reading of memory-Kuramoto chimera dynamics. It does not falsify the global structural claim of [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md) that memory-Kuramoto is a mathematically tight instance of the equation's structural form; that mapping is exact at the equation level and is independent of P10.1.
+> **Hedge cleanup (2026-05-16).** The paragraph below previously
+> framed this result as "a local falsification of P10.1". Per
+> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
+> that framing was a Rule B violation: the test ran in the isolated
+> regime (gamma_0 = 0, T = 0) that the methodology rejects, so the
+> numerics it produced are outside the scope the structural claim
+> describes. The revised wording below frames the result as
+> numerics the methodology does not interpret (Rule A configuration
+> excluded by P3) rather than as "local falsification".
+
+This test, run with `gamma_0 = 0` and `T = 0` (isolated regime), produced numerics that the methodology of [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md) does not interpret. Isolation contradicts P3 ([`../principles/03-coupling.md`](../principles/03-coupling.md)); numerics produced in the isolated regime contribute no evidence under any of the six criteria because the configuration is outside the scope the structural claim describes. The interface 10 mapping ([`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md)) is unaffected: that mapping is exact at the equation level and is independent of any isolated-regime numerics.
 
 The interface document's prediction P10.1 will be updated to:
 1. Reflect the inconsistent status with a pointer to this result.
@@ -112,7 +122,7 @@ The script is self-contained; it does not depend on the CuPy GPU solver or the P
 
 ## What this result implies for the program
 
-A locally-inconsistent result is part of active research, not a setback. Per [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), the global structural claim of the work (the equation's form recurs across substrates) is evaluated by cross-domain coherence across the seventeen documented interfaces; the local-prediction failures within specific interfaces shift evidentiary weight against specific readings without falsifying the global claim. The interface 10 mapping (memory-Kuramoto is mathematically the same Markovian embedding as the equation's auxiliary-field memory) is unaffected by this result; what is affected is the specific quantitative prediction P10.1 about chimera stability as a function of memory timescale.
+A result that does not match a prediction is part of active research, not a setback. Per [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), the global structural claim of the work (the equation's form recurs across substrates) is evaluated by cross-domain coherence across the seventeen documented interfaces; inconsistent evidence within specific interfaces shifts evidentiary weight against specific calibrations under criterion 4 without bearing on the global claim. In this particular case, the inconsistent evidence is from an isolated-regime configuration the methodology excludes; under the cleaned methodology, the result simply does not contribute evidence under any criterion. The interface 10 mapping (memory-Kuramoto is mathematically the same Markovian embedding as the equation's auxiliary-field memory) is unaffected. The wave-2 redesign in [`14-kuramoto-chimera-fdt.md`](14-kuramoto-chimera-fdt.md) tests P10.1 in the coupled regime per Rule A.
 
 Future work that could clarify the picture:
 - Multi-seed statistical analysis of chimera lifetime vs $\tau_{\text{mem}}$.

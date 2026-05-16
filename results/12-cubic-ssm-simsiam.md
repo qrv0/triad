@@ -49,7 +49,7 @@ Hardware required: PyTorch + CUDA. Wall time: approximately 30-60 minutes on RTX
 
 Prediction P6.3 supported if: cubic variant maintains effective rank substantially higher than linear variant (e.g., cubic stays > 30, linear collapses to < 5).
 
-Prediction P6.3 locally falsified if: cubic and linear variants both collapse, or cubic shows no significant rank advantage.
+Prediction P6.3 would be inconsistent with the interface 06 calibration if: cubic and linear variants both collapse, or cubic shows no significant rank advantage.
 
 ## Status assignment
 
@@ -88,6 +88,6 @@ The result has substantial implications either way:
 
 - If cubic variant maintains rank: the structural argument that cubic state nonlinearity prevents collapse is empirically supported. The result strengthens the interface 06 claim that the Memory-NLS extensions over bare SSM (specifically the cubic part) are not arbitrary additions but structurally productive. This would also be of interest to the SSL community independent of the structural-realist framing.
 
-- If cubic and linear both collapse: the cubic nonlinearity by itself is not sufficient to prevent SimSiam collapse without the stop-gradient. The interface 06 prediction P6.3 is locally falsified. The structural claim of interface 06 (mathematical equivalence with diagonal SSM) is unaffected.
+- If cubic and linear both collapse: the cubic nonlinearity by itself is not sufficient to prevent SimSiam collapse without the stop-gradient. The interface 06 prediction P6.3 would be inconsistent with this specific calibration, prompting investigation of (a) the calibration of P6.3 in the SimSiam substrate, (b) the auxiliary numerical assumptions (Duhem-Quine), or (c) the implementation. The structural claim of interface 06 (mathematical equivalence with diagonal SSM) is unaffected; that mapping is exact at the equation level.
 
 Either outcome is informative; the structural-realist methodology commits to honest reporting (methodology/02).
