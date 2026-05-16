@@ -900,3 +900,244 @@ body[data-md-color-scheme] .md-main .md-content article.md-content__inner {
 
 /* When on home, hide the breadcrumb edit button */
 .md-content__inner > .md-content__button { display: none; }
+
+/* ============================================================
+   READER PATHS — audience-specific landings
+   Each path gets a distinct accent + hero treatment so the
+   reader feels "this was made for me", not generic doc.
+   ============================================================ */
+
+.path-hero {
+  position: relative;
+  padding: 4rem 2rem 3rem;
+  margin: -1.25rem -1.25rem 3rem;
+  background: linear-gradient(180deg, var(--mnsm-alt-bg) 0%, var(--md-default-bg-color) 100%);
+  border-bottom: 1px solid var(--mnsm-border);
+  text-align: left;
+}
+.path-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 56px;
+  height: 4px;
+  background: var(--path-accent, var(--md-accent-fg-color));
+}
+
+.path-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--path-accent, var(--md-accent-fg-color));
+  margin-bottom: 1.1rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+}
+
+.path-hero h1 {
+  font-size: 2.6rem;
+  line-height: 1.1;
+  letter-spacing: -0.028em;
+  font-weight: 700;
+  margin: 0 0 1rem !important;
+  max-width: 22ch;
+}
+.path-hero h1::after { display: none !important; }
+
+.path-hero p.path-subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 45em;
+  margin: 0 0 1.6rem;
+}
+
+.path-hero .path-eq {
+  background: var(--mnsm-eq-bg);
+  border-left: 2px solid var(--path-accent, var(--md-accent-fg-color));
+  padding: 1rem 1.4rem;
+  border-radius: 4px;
+  max-width: 720px;
+  margin: 1.4rem 0 0;
+  overflow-x: auto;
+}
+.path-hero .path-eq mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
+.path-breadcrumb {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+  opacity: 0.6;
+}
+.path-breadcrumb a { border-bottom: none; }
+
+/* Per-audience accents */
+.path-hero.path--physics    { --path-accent: #14b8a6; }    /* teal — matches default */
+.path-hero.path--ml         { --path-accent: #8b5cf6; }    /* violet */
+.path-hero.path--neuro      { --path-accent: #ec4899; }    /* pink */
+.path-hero.path--philosophy { --path-accent: #f59e0b; }    /* amber */
+.path-hero.path--new        { --path-accent: #06b6d4; }    /* cyan */
+
+/* Section headers inside paths */
+.md-typeset .path-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 3.5rem;
+  margin-bottom: 0.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--mnsm-border);
+}
+.md-typeset .path-body h2:first-of-type { border-top: none; padding-top: 0; }
+
+/* Pull quote / callout block per path */
+.path-callout {
+  background: var(--mnsm-alt-bg);
+  border-left: 3px solid var(--path-accent, var(--md-accent-fg-color));
+  padding: 1.2rem 1.4rem;
+  border-radius: 4px;
+  margin: 1.8rem 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.path-callout strong { color: var(--path-accent, var(--md-accent-fg-color)); }
+
+/* Reference list / bibliography */
+.path-refs {
+  background: var(--mnsm-quiet-bg);
+  border-radius: 6px;
+  padding: 1.4rem 1.6rem;
+  margin: 2rem 0;
+}
+.path-refs h3 {
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  margin: 0 0 1rem !important;
+  color: var(--mnsm-section-tag);
+}
+.path-refs ol {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  padding-left: 1.4rem;
+  margin: 0;
+  font-feature-settings: "tnum";
+}
+.path-refs li { margin-bottom: 0.5rem; }
+.path-refs cite { font-style: italic; color: var(--md-accent-fg-color); }
+
+/* Reading-flow cards: replaces ordered list of "next reading" */
+.path-reading {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+  margin: 2rem 0;
+}
+.path-reading-card {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--mnsm-border);
+  border-left: 2px solid var(--path-accent, var(--md-accent-fg-color));
+  border-radius: 4px;
+  padding: 1.1rem 1.2rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.path-reading-card:hover {
+  border-color: var(--path-accent, var(--md-accent-fg-color));
+  transform: translateY(-2px);
+}
+.path-reading-card .step {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--path-accent, var(--md-accent-fg-color));
+  margin-bottom: 0.4rem;
+}
+.path-reading-card .title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+.path-reading-card .title a {
+  color: var(--md-typeset-color);
+  border-bottom: none;
+}
+.path-reading-card .title a:hover {
+  color: var(--path-accent, var(--md-accent-fg-color));
+}
+.path-reading-card .blurb {
+  font-size: 0.76rem;
+  line-height: 1.65;
+  opacity: 0.78;
+  margin: 0;
+}
+
+/* Switch-path footer: lets readers move between audiences mid-journey */
+.path-switch {
+  background: var(--mnsm-alt-bg);
+  border-radius: 6px;
+  padding: 1.4rem 1.6rem;
+  margin: 3rem 0 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.path-switch strong { color: var(--md-accent-fg-color); }
+.path-switch .switch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+.path-switch .switch-grid a {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--mnsm-border);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--mnsm-border);
+}
+.path-switch .switch-grid a:hover {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+
+/* Code blocks inline in paths get extra polish */
+.path-body .highlight {
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  border: 1px solid var(--mnsm-border);
+  overflow: hidden;
+}
+
+/* Comparison table inside paths */
+.path-body table:not([class]) {
+  margin: 1.5rem 0;
+  font-size: 0.84rem;
+}
+.path-body table:not([class]) th {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  background: var(--mnsm-alt-bg);
+}
+
+/* Mobile responsive for path hero */
+@media screen and (max-width: 760px) {
+  .path-hero {
+    padding: 2.5rem 1.25rem 2rem;
+    margin: -1.25rem -1.25rem 2rem;
+  }
+  .path-hero h1 { font-size: 1.9rem; }
+}
