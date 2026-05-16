@@ -60,6 +60,7 @@ theme:
 
     # Table of contents
     - toc.follow
+    - toc.integrate
 
     # Search
     - search.suggest
@@ -73,6 +74,7 @@ theme:
     - content.tooltips
     - content.action.edit
     - content.action.view
+    - content.footnote.tooltips
 
     # Announce bar
     - announce.dismiss
@@ -222,6 +224,7 @@ plugins:
             'Repository Structure': Estrutura do Repositório
             'Contributing': Contribuindo
             'AI Assistant Guidelines': Diretrizes para Assistentes de IA
+            Glossary: Glossário
         - locale: es
           name: Español
           build: true
@@ -290,6 +293,17 @@ plugins:
             'Repository Structure': Estructura del Repositorio
             'Contributing': Contribuir
             'AI Assistant Guidelines': Directrices para Asistentes de IA
+            Glossary: Glosario
+
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: date
+      fallback_to_build_date: true
+      enabled: true
+      exclude:
+        - CLAUDE.md
+        - CONTRIBUTING.md
+        - "index*.md"
 
   - minify:
       minify_html: true
@@ -447,6 +461,8 @@ nav:
       - 'If you are from philosophy of science': paths/if-you-are-from-philosophy.md
 
   - Paper: paper/manuscript.md
+
+  - Glossary: glossary.md
 
   - About:
       - 'Repository Structure': STRUCTURE.md
