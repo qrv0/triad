@@ -116,6 +116,7 @@ extra_javascript:
   - _docs_assets/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - _docs_assets/path-enhance.js
+  - _docs_assets/wheel-interactive.js
 
 extra:
   # Remove "Made with Material" notice
@@ -183,6 +184,13 @@ plugins:
             'Reductions to Known Equations': Reduções a Equações Conhecidas
             Results: Resultados
             'Cross-Domain Interfaces': Interfaces Cross-Domain
+            'Compare two interfaces': Comparar duas interfaces
+            'Predictions status board': Quadro de status das predições
+            'Physics and cosmology': Física e cosmologia
+            'Neural and brain': Neural e cérebro
+            'Complex systems': Sistemas complexos
+            'Biological': Biológicos
+            'Engineering and archaeology': Engenharia e arqueologia
             'Other NLS Systems': Outros Sistemas NLS
             'Baryon Acoustic Oscillations': Oscilações Acústicas de Bárions
             'Chladni Cymatics': Cimática de Chladni
@@ -252,6 +260,13 @@ plugins:
             'Reductions to Known Equations': Reducciones a Ecuaciones Conocidas
             Results: Resultados
             'Cross-Domain Interfaces': Interfaces Interdominio
+            'Compare two interfaces': Comparar dos interfaces
+            'Predictions status board': Tablero de estado de predicciones
+            'Physics and cosmology': Física y cosmología
+            'Neural and brain': Neural y cerebro
+            'Complex systems': Sistemas complejos
+            'Biological': Biológicos
+            'Engineering and archaeology': Ingeniería y arqueología
             'Other NLS Systems': Otros Sistemas NLS
             'Baryon Acoustic Oscillations': Oscilaciones Acústicas de Bariones
             'Chladni Cymatics': Cimática de Chladni
@@ -402,23 +417,30 @@ nav:
 
   - Cross-Domain Interfaces:
       - 'Overview': interfaces/README.md
-      - 'Other NLS Systems': interfaces/01-other-nls-systems.md
-      - 'Baryon Acoustic Oscillations': interfaces/02-baryon-acoustic.md
-      - 'Chladni Cymatics': interfaces/03-chladni-cymatics.md
-      - 'Gamma-Frequency Entrainment': interfaces/04-gamma-entrainment.md
-      - 'Archaeoacoustic Resonance': interfaces/05-archaeoacoustic-resonance.md
-      - 'State Space Models': interfaces/06-state-space-models.md
-      - 'Cosmological Expansion': interfaces/07-cosmological-expansion.md
-      - 'Mechanistic Interpretability': interfaces/08-mechanistic-interpretability.md
-      - 'Critical Brain': interfaces/09-critical-brain.md
-      - 'Kuramoto Synchronization': interfaces/10-kuramoto-synchronization.md
-      - 'Immune Affinity Maturation': interfaces/11-immune-affinity-maturation.md
-      - 'Friston Free-Energy Principle': interfaces/12-friston-free-energy.md
-      - 'Active Matter': interfaces/13-active-matter.md
-      - 'Self-Organized Criticality': interfaces/14-self-organized-criticality.md
-      - 'Cardiac Dynamics': interfaces/15-cardiac-dynamics.md
-      - 'Gene Regulation and Circadian': interfaces/16-gene-regulation-circadian.md
-      - 'Ecosystem Dynamics': interfaces/17-ecosystem-dynamics.md
+      - 'Compare two interfaces': interfaces/compare.md
+      - 'Predictions status board': interfaces/predictions.md
+      - 'Physics and cosmology':
+          - 'Other NLS Systems': interfaces/01-other-nls-systems.md
+          - 'Baryon Acoustic Oscillations': interfaces/02-baryon-acoustic.md
+          - 'Chladni Cymatics': interfaces/03-chladni-cymatics.md
+          - 'Cosmological Expansion': interfaces/07-cosmological-expansion.md
+      - 'Neural and brain':
+          - 'Gamma-Frequency Entrainment': interfaces/04-gamma-entrainment.md
+          - 'Mechanistic Interpretability': interfaces/08-mechanistic-interpretability.md
+          - 'Critical Brain': interfaces/09-critical-brain.md
+      - 'Complex systems':
+          - 'Kuramoto Synchronization': interfaces/10-kuramoto-synchronization.md
+          - 'Friston Free-Energy Principle': interfaces/12-friston-free-energy.md
+          - 'Active Matter': interfaces/13-active-matter.md
+          - 'Self-Organized Criticality': interfaces/14-self-organized-criticality.md
+      - 'Biological':
+          - 'Immune Affinity Maturation': interfaces/11-immune-affinity-maturation.md
+          - 'Cardiac Dynamics': interfaces/15-cardiac-dynamics.md
+          - 'Gene Regulation and Circadian': interfaces/16-gene-regulation-circadian.md
+          - 'Ecosystem Dynamics': interfaces/17-ecosystem-dynamics.md
+      - 'Engineering and archaeology':
+          - 'Archaeoacoustic Resonance': interfaces/05-archaeoacoustic-resonance.md
+          - 'State Space Models': interfaces/06-state-space-models.md
 
   - Methodology:
       - 'Overview': methodology/README.md
