@@ -6,7 +6,7 @@ of the physics warmup/record protocol used in the R1 vibration
 experiment (see `../../results/03-vibrational-modes.md` and
 `../../results/04-anti-collapse-3d.md`). The short 4,000-step
 training run is the training-dynamics analog of stopping the physics
-solver during its initial transient — before the auxiliary-field
+solver during its initial transient, before the auxiliary-field
 memory has cycled enough times to produce its stable regime. This
 longer run continues past the transient to see what regime each
 architecture stabilizes into.
@@ -61,7 +61,7 @@ min validation loss is at step 44,000, near the end of training, with
 the trajectory still slowly improving at the very end.
 
 **Transformer exhibits the textbook overfitting curve.** Training loss
-decreases monotonically all the way to 0.21 — the model is memorizing
+decreases monotonically all the way to 0.21, the model is memorizing
 the training corpus. But validation loss has a U-shape: it reaches its
 minimum (1.53) at step 5,000, then climbs steadily, finishing at 5.33
 (val perplexity 206) at step 50,000. The model has lost generalization;
@@ -79,7 +79,7 @@ different, structurally non-degenerate configuration.
 
 The same pattern appears here. The Transformer (no structural memory
 mechanism beyond attention's content-based lookup) collapses onto the
-training-set distribution — a degenerate configuration, in the sense
+training-set distribution, a degenerate configuration, in the sense
 that it is the maximally specific representation possible. The
 Memory-NLS architecture (structural multi-timescale memory with
 hierarchical relaxation) passes through the same initial transient

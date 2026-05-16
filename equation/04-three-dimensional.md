@@ -12,7 +12,7 @@ with $\mathbf{x} = (x, y, z) \in \mathbb{R}^3$, periodic boundary conditions on 
 
 ## Three-dimensional supercriticality
 
-The L² norm in three dimensions does not provide a critical threshold below which the field is protected. For any nonzero attractive coupling $\Lambda < 0$ and any initial state with sufficient peak density, the unmemoried equation drives finite-time blow-up. The collapse rate and the prefactors depend on the specific initial conditions, but the structural fact — that collapse is generic — is dimension-independent.
+The L² norm in three dimensions does not provide a critical threshold below which the field is protected. For any nonzero attractive coupling $\Lambda < 0$ and any initial state with sufficient peak density, the unmemoried equation drives finite-time blow-up. The collapse rate and the prefactors depend on the specific initial conditions, but the structural fact, that collapse is generic, is dimension-independent.
 
 This has the practical consequence that the choice of initial Gaussian width $\sigma_0$ for three-dimensional anti-collapse experiments must place the initial peak density above the dimensional collapse threshold. For $\Lambda = -8$ and box length $L = 20$ in standard units, the collapse threshold is approximately $\sigma_0 \approx 0.68$ (derived from the dimensional analysis of the virial-like kinetic–nonlinear energy balance). Initial widths $\sigma_0 \le 0.6$ collapse; widths $\sigma_0 \ge 0.7$ disperse without collapsing. The headline 3D results use $\sigma_0 = 0.5$ to ensure a clean collapse signal.
 
@@ -28,7 +28,7 @@ The full derivation and the numerical evidence are in [`../results/06-dimensiona
 
 ## Bravais symmetry selection
 
-In three dimensions, the post-release crystalline configuration must choose among more lattice options than in two dimensions. The four canonical Bravais lattices — simple cubic (SC), body-centered cubic (BCC), face-centered cubic (FCC), and hexagonal close-packed (HCP) — provide structurally distinct candidates. The equation, integrated from an unstructured Gaussian initial state, consistently selects **body-centered cubic (BCC)** symmetry. The selection is robust across the swept range of memory couplings $\Sigma\lambda \in [0.5, 1.5]$ at $\Lambda = -8$.
+In three dimensions, the post-release crystalline configuration must choose among more lattice options than in two dimensions. The four canonical Bravais lattices, simple cubic (SC), body-centered cubic (BCC), face-centered cubic (FCC), and hexagonal close-packed (HCP), provide structurally distinct candidates. The equation, integrated from an unstructured Gaussian initial state, consistently selects **body-centered cubic (BCC)** symmetry. The selection is robust across the swept range of memory couplings $\Sigma\lambda \in [0.5, 1.5]$ at $\Lambda = -8$.
 
 The detection algorithm, implemented in [`../implementation/physics/observables.py`](../implementation/physics/observables.py), computes the angular distribution of power on a thin spherical shell in $k$-space at the dominant radial wavenumber $k^*$, and scores the shell-integrated power against the canonical Bravais signatures. The full results are in [`../results/05-bravais-selection.md`](../results/05-bravais-selection.md).
 

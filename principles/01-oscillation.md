@@ -1,4 +1,4 @@
-# P1 — Persistent extended entities oscillate
+# P1, Persistent extended entities oscillate
 
 ## Statement
 
@@ -6,7 +6,7 @@ Every spatially extended entity that persists in time exhibits intrinsic oscilla
 
 ## Motivation
 
-A literally static extended structure, free of internal oscillation, is unstable. Any perturbation either decays — in which case the structure was not persistent except as an external constraint imposed upon it — or grows, in which case the structure undergoes phase transition and is replaced by something else. Permanence of form requires permanent internal motion.
+A literally static extended structure, free of internal oscillation, is unstable. Any perturbation either decays, in which case the structure was not persistent except as an external constraint imposed upon it, or grows, in which case the structure undergoes phase transition and is replaced by something else. Permanence of form requires permanent internal motion.
 
 This is not a metaphysical claim; it is a structural observation. The atoms of any solid are in continuous thermal motion. The electrons in any atom occupy states that are stationary only in the time-averaged probability density and not in the underlying quantum amplitude. The galaxies of any cluster orbit each other under gravity; even a virialized cluster has nonzero internal velocity dispersion. The cells of any tissue exchange ions across membranes continuously; absolute electrochemical stasis is death. At every scale at which we observe persistent extended structure, we observe oscillation. We do not observe persistent extended structure without oscillation.
 
@@ -22,7 +22,7 @@ This is why the equation in [`../equation/`](../equation/) is built on a complex
 
 ## Optional internal structure
 
-For systems with internal degrees of freedom — spin, polarization, two-band electronic structure, or any other binary internal label — the field generalizes from a scalar to a two-component spinor:
+For systems with internal degrees of freedom, spin, polarization, two-band electronic structure, or any other binary internal label, the field generalizes from a scalar to a two-component spinor:
 
 $$
 \Psi(t, \mathbf{x}) = \begin{pmatrix} \psi_\uparrow(t, \mathbf{x}) \\ \psi_\downarrow(t, \mathbf{x}) \end{pmatrix},

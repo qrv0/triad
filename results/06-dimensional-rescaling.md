@@ -70,7 +70,7 @@ The factor-of-ten scaling between the two ratios is the prediction the structura
 
 ## Why this finding matters structurally
 
-The dimensional rescaling is a derivable consequence of the equation's geometry, not an arbitrary tuning. The mechanism — delayed repulsion from a memory potential — is dimension-independent. The calibration of the coupling that activates the mechanism scales with the dimensional concentration of the focal region in a way that follows from elementary geometry.
+The dimensional rescaling is a derivable consequence of the equation's geometry, not an arbitrary tuning. The mechanism, delayed repulsion from a memory potential, is dimension-independent. The calibration of the coupling that activates the mechanism scales with the dimensional concentration of the focal region in a way that follows from elementary geometry.
 
 This is a concrete instance of a class of predictions that the equation can produce: not single-quantity numerical predictions (which depend on dimensional calibration choices), but scaling relations between configurations that share the underlying structural mechanism. Scaling relations are the kind of prediction that survives recalibration; they are the prediction-type most natural to a structural-realist evaluation of the equation.
 

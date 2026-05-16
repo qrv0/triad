@@ -16,7 +16,7 @@
 > gamma, resonancia de cámaras megalíticas de piedra, modelos de
 > espacio de estados estructurados, expansión cosmológica y
 > optimización estable de redes neuronales. Derivada de tres axiomas
-> observacionales sobre persistencia — no ensamblada a partir de la
+> observacionales sobre persistencia, no ensamblada a partir de la
 > literatura existente.
 
 ---
@@ -32,7 +32,7 @@ ecuación extiende esas arquitecturas con cuatro propiedades:
    ad-hoc de anti-colapso)
 3. **Emergencia espontánea de estructura discreta** desde substrato
    continuo
-4. **Regularización estocástica fijada por fluctuación–disipación**
+4. **Regularización estocástica acoplada por fluctuación–disipación**
    (reemplaza ruido sintonizado manualmente)
 
 ---
@@ -45,7 +45,7 @@ ecuación extiende esas arquitecturas con cuatro propiedades:
 > Vea [`STRUCTURE.md`](https://github.com/qrv0/mnsm/blob/main/STRUCTURE.md) para entender por qué el
 > repositorio tiene esta forma.
 
-## Cómo leer este trabajo — posición metodológica
+## Cómo leer este trabajo, posición metodológica
 
 Dos principios gobiernan cómo este repositorio pide ser leído. Están
 documentados en [`methodology/`](methodology/01-structural-realism.md)
@@ -53,7 +53,7 @@ y vale la pena traerlos a la superficie aquí:
 
 **1. El aislamiento es temporal; el acoplamiento es lo predeterminado.**
 El tercer axioma estructural de la ecuación (P3) afirma que el
-aislamiento dinámico perfecto no ocurre — todo sistema persistente
+aislamiento dinámico perfecto no ocurre, todo sistema persistente
 está acoplado a su entorno, y el aislamiento es una herramienta
 metodológica en vez de una propiedad del mundo. El repositorio toma
 esto en serio: las interfaces interdominio son contenido de primera
@@ -87,11 +87,11 @@ diferente.
 El mismo contenido es abordable desde varios trasfondos. Elija el que
 usted tenga:
 
-- → **Soy nuevo en todo esto** — [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
-- → **Vengo de la física** — [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
-- → **Vengo de machine learning** — [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md)
-- → **Vengo de la neurociencia** — [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
-- → **Vengo de la filosofía de la ciencia** — [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
+- → **Soy nuevo en todo esto**, [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
+- → **Vengo de la física**, [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
+- → **Vengo de machine learning**, [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md)
+- → **Vengo de la neurociencia**, [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
+- → **Vengo de la filosofía de la ciencia**, [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
 
 Cada ruta enlaza con el mismo cuerpo de contenido desde un ángulo
 diferente. Puede cambiar de ruta en medio del recorrido.
@@ -102,9 +102,9 @@ diferente. Puede cambiar de ruta en medio del recorrido.
 
 Si quiere ver la ecuación en acción sin leer nada primero:
 
-- [`playground/01-just-watch.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/01-just-watch.ipynb) — Presione play, vea cómo un estado gaussiano cristaliza espontáneamente en un patrón cúbico centrado en el cuerpo.
-- [`playground/02-adjust-the-knobs.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/02-adjust-the-knobs.ipynb) — Ajuste parámetros, vea qué cambia.
-- [`playground/03-build-your-own.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/03-build-your-own.ipynb) — Implementación guiada desde cero.
+- [`playground/01-just-watch.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/01-just-watch.ipynb), Presione play, vea cómo un estado gaussiano cristaliza espontáneamente en un patrón cúbico centrado en el cuerpo.
+- [`playground/02-adjust-the-knobs.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/02-adjust-the-knobs.ipynb), Ajuste parámetros, vea qué cambia.
+- [`playground/03-build-your-own.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/03-build-your-own.ipynb), Implementación guiada desde cero.
 
 ---
 
@@ -129,7 +129,7 @@ La misma forma, dos substratos, la misma dinámica:
 *Sin memoria, el campo colapsa a un punto singular. Con memoria, el
 campo es liberado y se estabiliza como un estado extendido. La misma
 ecuación, la misma condición inicial, un ingrediente (memoria
-multi-escala temporal) — resultado cualitativamente diferente.*
+multi-escala temporal), resultado cualitativamente diferente.*
 
 ![Trayectoria de entrenamiento neural](assets/scale_up_val_ppl.png)
 
@@ -165,7 +165,7 @@ dinámica de campo 3D y la optimización de redes neuronales.*
 
 | Acoplamiento de memoria | Pico final (sin memoria) | Pico final (con memoria) | Razón |
 |---|---|---|---|
-| $\Sigma\lambda = 0$ | 61.96 | — | — |
+| $\Sigma\lambda = 0$ | 61.96 |, |, |
 | $\Sigma\lambda = 0.4$ (escala 2D) | 61.96 | 63.70 | 1.0× |
 | $\Sigma\lambda = 4.0$ (escala 3D) | 61.96 | $6 \times 10^{-4}$ | $10^5×$ |
 
@@ -243,7 +243,7 @@ prompt `<page>\n  <title>` en el paso de entrenamiento 50.000:
 
 XML anidado, encabezados de sección MediaWiki, sintaxis de tabla
 infobox con atributos de alineación HTML, formato de corchete de
-enlace externo, referencias de año — todo preservado. Tokens
+enlace externo, referencias de año, todo preservado. Tokens
 específicos (Bistory, Oringese, Maacheth, Locuts) son inventados pero
 siguen correctamente la gramática estructural del corpus.
 
@@ -253,33 +253,33 @@ computacional.
 
 ### La intuición, planteada directamente
 
-La distinción estructural que este trabajo documenta — entre
-memorizar superficie y modelar forma — tiene una analogía humana
+La distinción estructural que este trabajo documenta, entre
+memorizar superficie y modelar forma, tiene una analogía humana
 limpia:
 
 > El Transformer aprende rápido porque **memoriza**. Como memorizar
 > una oración sin entenderla: usted puede repetirla, pero si alguien
 > retira las palabras específicas, no queda nada. Como el tipo de
-> persona que argumenta citando nombres de autoridades — retire los
+> persona que argumenta citando nombres de autoridades, retire los
 > nombres y el argumento colapsa, porque memorizar no es entender.
 >
 > El modelo Memory-NLS **entiende**. Intenta entender. No solo
-> repite — llega a conclusiones basadas en su propia "opinión" de la
+> repite, llega a conclusiones basadas en su propia "opinión" de la
 > forma que ha internalizado.
 
-Esto es lo que el hallazgo realista-estructural es, en términos
+En términos humanos, este es el hallazgo realista-estructural, en términos
 humanos. En el paso 4.000 el Transformer ya está regurgitando URLs y
 atributos HTML verbatim de los datos de entrenamiento; en el paso
 32.000 (durante su colapso catastrófico) pierde el control y produce
-fragmentos incoherentes — no había nada estructural debajo de la
+fragmentos incoherentes, no había nada estructural debajo de la
 superficie memorizada a lo que recurrir. Memory-NLS en el paso 50.000
 sigue produciendo contenido nuevo en la gramática estructural correcta
-— porque lo que aprendió fue la forma, no la superficie.
+,  porque lo que aprendió fue la forma, no la superficie.
 
 El Transformer puede puntuar val_perplexity más bajo porque la
 memorización de alta fidelidad puntúa bien por esa métrica. El
 Memory-NLS puntúa val_perplexity más alta pero genera de forma
-diferente — porque modeló en vez de memorizar. El mismo número,
+diferente, porque modeló en vez de memorizar. El mismo número,
 mecanismo cualitativamente diferente.
 
 ## Modelos pre-entrenados en HuggingFace
@@ -288,8 +288,8 @@ Los checkpoints de 70M parámetros del experimento de colapso de
 optimización están publicados en HuggingFace y son cargables en
 segundos:
 
-- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8) — perplejidad final val 4.27, trayectoria estable monotónica
-- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8) — perplejidad final val 4.87, incluye el colapso catastrófico de optimización documentado en [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
+- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8), perplejidad final val 4.27, trayectoria estable monotónica
+- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8), perplejidad final val 4.87, incluye el colapso catastrófico de optimización documentado en [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
 
 Cada repo contiene los pesos safetensors, JSON de configuración y
 código de modelado auto-contenido para que el modelo cargue sin
@@ -391,7 +391,7 @@ calibración donde es relevante.
 Este trabajo fue desarrollado con formalización sustancialmente
 asistida por IA. El marco metodológico que el trabajo adopta tiene
 implicaciones directas para cómo los asistentes de IA se involucran
-con el codebase — particularmente alrededor de evitar el
+con la base de código, particularmente alrededor de evitar el
 enmarcamiento de benchmark competitivo, respetar los criterios de
 evaluación realistas-estructurales, y no descartar las interfaces
 interdominio como "especulativas". Si está usando un asistente de IA

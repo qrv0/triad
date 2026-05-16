@@ -35,14 +35,14 @@ $$
 </div>
 
 <div class="eq-legend" markdown>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — the memory subsystem. Both sides are the same equation: Mori–Zwanzig projection on the left, diagonal-state SSM update on the right.</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2**, the memory subsystem. Both sides are the same equation: Mori–Zwanzig projection on the left, diagonal-state SSM update on the right.</span>
 </div>
 
 with $\mathbf{A}$ diagonal, eigenvalues $-\nu_j$, $b_j = \nu_j$. The
 auxiliary-field memory update is **exactly** the diagonal-state SSM update;
 no calibration required. The full equation embeds this $\color[HTML]{14b8a6}{P2}$
 subsystem inside a $\color[HTML]{6366f1}{P1}$ wave-equation kinetic and a
-$\color[HTML]{f59e0b}{P3}$ FDT-locked dissipation–noise pair — color-coded
+$\color[HTML]{f59e0b}{P3}$ FDT-locked dissipation–noise pair, color-coded
 on the landing for orientation.
 
 </div>
@@ -63,16 +63,16 @@ and RWKV (Peng et al. 2023). The Mori–Zwanzig projection of an integro-
 differential memory kernel into Markovian auxiliary fields is the same
 mathematical operation as the diagonalization of the SSM transition
 matrix into eigenmodes. The two communities derived the same object under
-different motivations — physics: projection-operator reduction of an
+different motivations, physics: projection-operator reduction of an
 integro-differential field equation; ML: efficient long-sequence
-representation — but they converged on the same equation.
+representation, but they converged on the same equation.
 
 The auxiliary fields $y_j$ are exactly the hidden states $h_j$. The
 relaxation rates $\nu_j$ are exactly the (negative) SSM eigenvalues. Full
 correspondence: [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md).
 
 <div class="inline-diagram" markdown>
-![SSM diagonal state — Memory-NLS correspondence](../_docs_assets/diagrams/ssm-diagonal.svg)
+![SSM diagonal state, Memory-NLS correspondence](../_docs_assets/diagrams/ssm-diagonal.svg)
 <p class="inline-diagram-caption">
 <strong>The correspondence at a glance.</strong> Same equation, two
 derivations, decoupled diagonal modes in the middle. The physics
@@ -98,13 +98,13 @@ variable. This is the "nonlinear SSM" direction being investigated by
 neural ODEs (Chen et al. 2018), Hyena (Massaroli et al. 2023), Liquid
 S4 (Hasani et al. 2023), and others.
 
-The nonlinearity here is not added empirically — it's **derived from P1**
+The nonlinearity here is not added empirically, it's **derived from P1**
 (see [`../principles/01-oscillation.md`](../principles/01-oscillation.md)):
 oscillation in a self-coupled medium requires a nonlinear restoring term,
 and the lowest-order one consistent with U(1) symmetry of the field is
 exactly $|\Psi|^2 \Psi$.
 
-### 2. Anti-collapse via memory lag — a principled solution to rank/representational collapse
+### 2. Anti-collapse via memory lag, a principled solution to rank/representational collapse
 
 Representation collapse in self-supervised learning is currently prevented
 by **architectural tricks**: stop-gradient (SimSiam; Chen & He 2021),
@@ -113,18 +113,18 @@ predictor networks (BYOL; Grill et al. 2020), explicit decorrelation
 transformers requires careful initialization + skip connections +
 normalization (Dong, Cordonnier & Loukas 2021).
 
-The Memory-NLS anti-collapse mechanism — **delayed repulsive feedback from
-a temporal memory that lags the rising signal** — is structurally a
+The Memory-NLS anti-collapse mechanism, **delayed repulsive feedback from
+a temporal memory that lags the rising signal**, is structurally a
 principled solution to both. The mechanism produces three to five orders
 of magnitude separation between collapsed and released configurations in
 field dynamics; **the same mechanism has now been empirically observed to
 prevent catastrophic optimization collapse at 70M parameters on enwik8**.
 
 <div class="inline-diagram" markdown>
-![Memory lag — the mechanism behind anti-collapse](../_docs_assets/diagrams/memory-lag.svg)
+![Memory lag, the mechanism behind anti-collapse](../_docs_assets/diagrams/memory-lag.svg)
 <p class="inline-diagram-caption">
 <strong>The principled alternative to architectural anti-collapse tricks.</strong>
-Stop-gradient, predictor networks, decorrelation regularizers — all
+Stop-gradient, predictor networks, decorrelation regularizers, all
 prevent representation collapse by interrupting the gradient flow. The
 delayed-memory mechanism prevents it by **producing a repulsive overshoot
 exactly when collapse would occur**, with no engineering. The overshoot
@@ -141,7 +141,7 @@ the empirical observation; full detail at
 In 3D, the equation spontaneously selects body-centered cubic (BCC) Bravais
 symmetry from a continuous Gaussian initial state. In ML vocabulary: this
 is a **dynamical model of how categorical structure emerges from
-continuous neural representations** — the grounding problem of how symbols
+continuous neural representations**, the grounding problem of how symbols
 arise from connectionist representations remains open, and the equation
 provides a concrete dynamical mechanism (continuous → spontaneous-symmetry-
 breaking → discrete lattice). Detail:
@@ -159,7 +159,7 @@ but not built into architectures by construction.
 In Memory-NLS the noise term is FDT-locked by construction: $\Gamma$ (the
 imaginary potential coefficient) and the noise variance $4\Gamma T$ share
 the same coupling. This is **principled rather than tuned** noise
-scheduling — the same equation governs both dissipation and fluctuation,
+scheduling, the same equation governs both dissipation and fluctuation,
 inheriting equilibrium properties automatically.
 
 ## A testable scaling prediction
@@ -184,7 +184,7 @@ representation instability or collapse.** Detail:
 </div>
 
 This is the kind of testable empirical prediction that makes the SSM
-correspondence non-trivial — not merely an observation that two equations
+correspondence non-trivial, not merely an observation that two equations
 look alike, but a structural claim that produces a specific empirical
 expectation about ML architectures.
 
@@ -254,8 +254,8 @@ The anti-collapse mechanism is not a regularization trick to bolt onto
 existing architectures. **It's the structural consequence of having a
 multi-timescale memory hierarchy whose slow mode produces lagged
 repulsion.** Standard SSMs have memory but no nonlinearity in state; standard
-Transformers have nonlinearity but no temporal memory. The combination —
-nonlinearity *coupled to* lagged memory — is what prevents the collapse
+Transformers have nonlinearity but no temporal memory. The combination , 
+nonlinearity *coupled to* lagged memory, is what prevents the collapse
 mode that empirically appeared in the matched Transformer run at step 28 000.
 </div>
 
@@ -313,7 +313,7 @@ consistent with treating those as orthogonal.
 <div class="path-reading-card" markdown>
 <span class="step">01 · Equivalence</span>
 <p class="title">[SSM ↔ Memory-NLS](../interfaces/06-state-space-models.md)</p>
-<p class="blurb">The mathematical correspondence, term-by-term. Start here — this is what justifies treating the rest as relevant to your field.</p>
+<p class="blurb">The mathematical correspondence, term-by-term. Start here, this is what justifies treating the rest as relevant to your field.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">02 · Derivation</span>
@@ -323,7 +323,7 @@ consistent with treating those as orthogonal.
 <div class="path-reading-card" markdown>
 <span class="step">03 · Mechanism</span>
 <p class="title">[Anti-collapse 2D](../results/01-anti-collapse-2d.md)</p>
-<p class="blurb">The lagging-memory mechanism — the candidate principled solution to representation collapse, with 3-orders-of-magnitude effect size.</p>
+<p class="blurb">The lagging-memory mechanism, the candidate principled solution to representation collapse, with 3-orders-of-magnitude effect size.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">04 · Prediction</span>
@@ -338,16 +338,16 @@ consistent with treating those as orthogonal.
 <div class="path-reading-card" markdown>
 <span class="step">06 · Emergence</span>
 <p class="title">[BCC selection](../results/05-bravais-selection.md)</p>
-<p class="blurb">Discrete structure from continuous substrate — the dynamical grounding mechanism.</p>
+<p class="blurb">Discrete structure from continuous substrate, the dynamical grounding mechanism.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">07 · Foundations</span>
 <p class="title">[The three principles](../principles/README.md)</p>
-<p class="blurb">P1, P2, P3 — the axioms that derive the form of the equation. Reverse-engineering the SSM form from observation.</p>
+<p class="blurb">P1, P2, P3, the axioms that derive the form of the equation. Reverse-engineering the SSM form from observation.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">08 · Code</span>
-<p class="title">[MemoryNLSLayer source](https://github.com/qrv0/mnsm/blob/mahttps://github.com/qrv0/mnsm/blob/main/implementation/neural/layer.py)</p>
+<p class="title">[MemoryNLSLayer source](https://github.com/qrv0/mnsm/blob/main/implementation/neural/layer.py)</p>
 <p class="blurb">PyTorch implementation. FFT-convolution at O(N log N). Drop-in for SSM-block experiments.</p>
 </div>
 <div class="path-reading-card" markdown>

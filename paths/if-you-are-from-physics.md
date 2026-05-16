@@ -39,9 +39,9 @@ $$
 </div>
 
 <div class="eq-legend" markdown>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1** — wave-equation kinetic + fractional dispersion</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — cubic self-interaction + auxiliary-field memory</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3** — external potential + FDT-locked $(\Gamma, \eta)$</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1**, wave-equation kinetic + fractional dispersion</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2**, cubic self-interaction + auxiliary-field memory</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3**, external potential + FDT-locked $(\Gamma, \eta)$</span>
 </div>
 
 with $V_{\text{mem}} = \sum_j \lambda_j y_j$, $\partial_t y_j = \nu_j(\rho - y_j)$, $\rho = |\Psi|^2$, and $\eta$ Gaussian-white obeying the classical fluctuation–dissipation relation $\langle \eta(\mathbf{x}, t)\, \eta^*(\mathbf{x}', t')\rangle = 4\Gamma T\, \delta(\mathbf{x}-\mathbf{x}')\, \delta(t - t')$.
@@ -54,26 +54,26 @@ with $V_{\text{mem}} = \sum_j \lambda_j y_j$, $\partial_t y_j = \nu_j(\rho - y_j
 
 The form is a cubic NLS with three structural additions:
 
-1. **Auxiliary-field integral memory** $V_{\text{mem}}$ — Markovian embedding
+1. **Auxiliary-field integral memory** $V_{\text{mem}}$, Markovian embedding
    of an integro-differential kernel $K(t-t')$ via Mori–Zwanzig projection.
    Each $y_j$ is a relaxation mode with rate $\nu_j$; the memory potential
    couples to the density $\rho = |\Psi|^2$. This is the standard projection-
    operator reduction (Zwanzig 1973; Mori 1965), but treated here as
    structurally necessary rather than as a convenient simplification.
 
-2. **FDT-locked dissipation–noise pair** $(i\Gamma, \eta)$ — the Wiener noise
+2. **FDT-locked dissipation–noise pair** $(i\Gamma, \eta)$, the Wiener noise
    $\eta$ satisfies the classical FDT correlator with the same coefficient
    $\Gamma$ that appears in the imaginary potential. This is the stochastic-
    field-theory prescription for thermalization in open systems
    (Hohenberg & Halperin 1977; Kardar 2007).
 
-3. **Optional structural extensions** — fractional Laplacian $(-\Delta)^{\sigma/2}$
+3. **Optional structural extensions**, fractional Laplacian $(-\Delta)^{\sigma/2}$
    for anomalous dispersion (Lévy walks; Laskin 2002), Rashba spinor structure
    for two-component generalizations. Both are optional and recover
    well-studied limits when $\sigma\to 2$ or the spinor coupling vanishes.
 
-What is structurally new is not any individual term — each is established in
-its respective sub-field — but the **joint requirement** of all three terms by
+What is structurally new is not any individual term, each is established in
+its respective sub-field, but the **joint requirement** of all three terms by
 a minimal set of axioms about persistent extended entities (P1, P2, P3 in
 [`../principles/`](../principles/README.md)), together with the **qualitative
 phenomenology** the equation exhibits when all three are present that is
@@ -82,7 +82,7 @@ absent from any single-term reduction.
 <div class="key-insight" markdown>
 <span class="key-insight-tag">The structural claim</span>
 The novelty is not "we added a memory term to NLS". It is that **three
-structural axioms about persistent extended entities — P1, P2, P3 — jointly
+structural axioms about persistent extended entities, P1, P2, P3, jointly
 select this particular form of memory-augmented NLS**, and the form produces
 phenomena (anti-collapse, BCC selection, broadband absorption) that no single
 reduction captures. The equation is what those three axioms add up to.
@@ -107,7 +107,7 @@ provides a transient repulsive contribution that exceeds the cubic
 attraction at the focal point, releasing the field outward.
 
 <div class="inline-diagram" markdown>
-![Memory lag — the mechanism behind anti-collapse](../_docs_assets/diagrams/memory-lag.svg)
+![Memory lag, the mechanism behind anti-collapse](../_docs_assets/diagrams/memory-lag.svg)
 <p class="inline-diagram-caption">
 <strong>The mechanism in one picture.</strong> The memory potential
 $V_{\text{mem}}(t)$ (teal) is a low-pass-filtered echo of the field
@@ -118,7 +118,7 @@ that releases the field.
 </p>
 </div>
 
-The slow memory mode ($\nu = 0.5$, $\tau = 2$) is structurally essential —
+The slow memory mode ($\nu = 0.5$, $\tau = 2$) is structurally essential , 
 the fast mode alone cannot produce the lag. Effect size: three orders of
 magnitude separation in final peak density between memoried and
 unmemoried runs at $\Sigma\lambda \sim |\Lambda|/20$.
@@ -149,7 +149,7 @@ Full result: [`../results/06-dimensional-rescaling.md`](../results/06-dimensiona
 The released crystalline state in 3D consistently selects body-centered
 cubic (BCC) symmetry across the swept memory coupling range, with detection
 score $0.44$ and gap $+0.13$ over the next-best Bravais option (FCC). The
-selection emerges from a continuous, isotropic Gaussian initial state — no
+selection emerges from a continuous, isotropic Gaussian initial state, no
 discrete symmetry is input, no lattice is imposed.
 
 The structure-factor detection algorithm is in
@@ -204,8 +204,8 @@ Three aspects of the work depart from the standard form a physics paper
 takes.
 
 **The structural-realist methodology.** The work places its methodological
-position — structural realism in the sense of Worrall (1989) and Ladyman &
-Ross (2007) — at the same documentary level as the equation derivation. The
+position, structural realism in the sense of Worrall (1989) and Ladyman &
+Ross (2007), at the same documentary level as the equation derivation. The
 reason: P3 (coupling is the default; isolation is temporary) is in direct
 structural tension with the Popperian-falsificationist methodology that
 presupposes the isolability of variables. A theory whose third axiom denies
@@ -219,7 +219,7 @@ evidence for the structural-realist claim. The strongest of the cross-domain
 correspondences is the **exact mathematical equivalence** between the
 auxiliary-field memory equation and the diagonal-state structured state
 space model used in modern sequence-modeling architectures (S4, Mamba,
-RWKV) — same equation, derived twice by communities that did not coordinate.
+RWKV), same equation, derived twice by communities that did not coordinate.
 Detail: [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md).
 
 **The temporal–spatial asymmetry.** The memory kernel can be non-local in

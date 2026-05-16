@@ -22,7 +22,7 @@ You work on neural oscillations, gamma rhythms, EEG, glymphatic clearance,
 or stress-mediated dysregulation. The equation derived in this work
 produces a crystalline regime that, under a defensible dimensional
 calibration, exhibits broadband absorption across the **20–200 Hz** range
-— covering the neural gamma, beta, and lower high-gamma bands.
+,  covering the neural gamma, beta, and lower high-gamma bands.
 
 <div class="path-eq mnsm-eq--coded" markdown>
 $$
@@ -41,13 +41,13 @@ $$
 </div>
 
 <div class="eq-legend" markdown>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1** — wave dynamics</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — memory hierarchy (working / short-term / long-term)</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3** — environmental coupling + noise</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1**, wave dynamics</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2**, memory hierarchy (working / short-term / long-term)</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3**, environmental coupling + noise</span>
 </div>
 
 with $V_{\text{mem}} = \sum_j \lambda_j y_j$ from auxiliary fields $y_j$
-relaxing at rates $\nu_j$ — a **multi-timescale memory hierarchy**
+relaxing at rates $\nu_j$, a **multi-timescale memory hierarchy**
 structurally equivalent to the working / short-term / long-term integration
 pipeline of the hippocampal–cortical system.
 
@@ -55,7 +55,7 @@ pipeline of the hippocampal–cortical system.
 
 <div class="path-body" markdown>
 
-## The 40 Hz correspondence — gamma entrainment
+## The 40 Hz correspondence, gamma entrainment
 
 Under a dimensional identification where one unit of computational time
 maps to 25 milliseconds, the equation's broadband absorption band ($\omega
@@ -91,7 +91,7 @@ literature has independently identified as physiologically active.
 
 Full interface: [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md).
 
-## The 110 Hz correspondence — vibrational modes
+## The 110 Hz correspondence, vibrational modes
 
 A separate dimensional identification ($L = 20$ m, $dt = 9$ ms) places the
 equation's two principal vibrational modes at approximately **66 Hz and
@@ -99,8 +99,8 @@ equation's two principal vibrational modes at approximately **66 Hz and
 
 <div class="path-callout" markdown>
 **Cook, Pajot & Leuchter (2008)**, using quantitative electroencephalography,
-report that acoustic stimulation at **110 Hz** — but not at 90, 100, 120, or
-130 Hz — produces:
+report that acoustic stimulation at **110 Hz**, but not at 90, 100, 120, or
+130 Hz, produces:
 
 - measurable left-temporal lobe deactivation,
 - a shift of prefrontal cortex laterality from baseline left-dominance to
@@ -147,7 +147,7 @@ McClelland, McNaughton & O'Reilly 1995): rapid encoding in hippocampus
 <strong>The two structural memory modes mapped onto the biological pipeline.</strong>
 The equation's fast and slow relaxation rates fall in exactly the bands
 where the brain's working-memory / long-term-consolidation systems
-operate. This is a structural correspondence, not a fit — neither set of
+operate. This is a structural correspondence, not a fit, neither set of
 timescales was chosen with the other in mind.
 </p>
 </div>
@@ -165,7 +165,7 @@ and a sharp secondary mode at **1.0 c/u.t.**. Under the 9-ms-unit-time
 calibration, these map to 66 Hz and 111 Hz.
 
 In the **three-dimensional** crystalline regime, the median dominant
-frequency drops to **0.20 c/u.t.** — corresponding to 22 Hz (high beta)
+frequency drops to **0.20 c/u.t.**, corresponding to 22 Hz (high beta)
 under the same calibration. The factor-of-three shift is consistent with
 the dimensional rescaling of the memory coupling discussed in
 [`../results/06-dimensional-rescaling.md`](../results/06-dimensional-rescaling.md):
@@ -174,7 +174,7 @@ memory mode against spatial dispersion, which changes with dimensionality.
 
 Full result: [`../results/03-vibrational-modes.md`](../results/03-vibrational-modes.md).
 
-## A connection to mental breakdown — what the cross-substrate experiment shows
+## A connection to mental breakdown, what the cross-substrate experiment shows
 
 A recent empirical observation in this work may interest neuroscientists
 working on stress-related disorders, dissociative phenomena, and acute
@@ -182,8 +182,8 @@ psychological breakdown.
 
 The optimization-collapse experiment
 ([`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md))
-compared two 70M-parameter neural sequence models — one with the multi-
-timescale memory hierarchy that the equation requires, one without — under
+compared two 70M-parameter neural sequence models, one with the multi-
+timescale memory hierarchy that the equation requires, one without, under
 identical training conditions on enwik8. The model **without** the
 structural memory mechanism exhibited a catastrophic collapse event
 mid-training:
@@ -210,7 +210,7 @@ this hierarchy is absent or disrupted**.
 This is a structural correspondence, not a clinical claim. But the formal
 mechanism by which a system loses representational coherence under
 sustained pressure when its memory hierarchy is insufficient is **the same
-mechanism** — and it is dimension-independent and substrate-independent.
+mechanism**, and it is dimension-independent and substrate-independent.
 </div>
 
 The neuroscience reader interested in mechanism-level accounts of mental
@@ -219,7 +219,7 @@ for what hierarchical memory failure looks like as a dynamical signature.
 
 <div class="key-insight" markdown>
 <span class="key-insight-tag">Why the multi-Hz convergence is interesting</span>
-**Four predicted modes of the equation — 22 Hz, 40 Hz, 66 Hz, 110 Hz —
+**Four predicted modes of the equation, 22 Hz, 40 Hz, 66 Hz, 110 Hz , 
 fall on or near frequencies that the literature has independently
 identified as physiologically active**: 40 Hz (clinical GENUS protocol),
 110 Hz (Cook-Pajot-Leuchter EEG response, Newgrange resonance), 22 Hz
@@ -232,7 +232,7 @@ recurrence of the same form**.
 ## What the equation does not do
 
 **It does not describe neural dynamics directly.** The appropriate
-description of cortical microcircuits is biophysical neural modeling —
+description of cortical microcircuits is biophysical neural modeling , 
 Hodgkin–Huxley, neural mass models, mean-field cortical models, conductance-
 based simulations. The equation here is a different mathematical object;
 its connection to the neuroscience case is **structural**, at the level of
@@ -281,22 +281,22 @@ left as an open question.
 <div class="path-reading-card" markdown>
 <span class="step">02 · Interface</span>
 <p class="title">[Archaeoacoustic resonance](../interfaces/05-archaeoacoustic-resonance.md)</p>
-<p class="blurb">The 110 Hz correspondence treated carefully — three independent measurement traditions converging on one number.</p>
+<p class="blurb">The 110 Hz correspondence treated carefully, three independent measurement traditions converging on one number.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">03 · Result</span>
 <p class="title">[Vibrational modes](../results/03-vibrational-modes.md)</p>
-<p class="blurb">The actual frequency spectrum of the equation's crystalline regime — 66 Hz, 111 Hz, 22 Hz across dimensions.</p>
+<p class="blurb">The actual frequency spectrum of the equation's crystalline regime, 66 Hz, 111 Hz, 22 Hz across dimensions.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">04 · Result</span>
 <p class="title">[Dimensional rescaling](../results/06-dimensional-rescaling.md)</p>
-<p class="blurb">Why 2D and 3D frequencies differ — the structural argument for the factor-of-three shift.</p>
+<p class="blurb">Why 2D and 3D frequencies differ, the structural argument for the factor-of-three shift.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">05 · Principle</span>
 <p class="title">[Self-reference (P2)](../principles/02-self-reference.md)</p>
-<p class="blurb">Hierarchical memory as a structural principle — why multi-timescale relaxation is structurally required.</p>
+<p class="blurb">Hierarchical memory as a structural principle, why multi-timescale relaxation is structurally required.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">06 · Cross-substrate</span>

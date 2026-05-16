@@ -2,7 +2,7 @@
 
 ## Headline finding
 
-Two 70M-parameter sequence models — Memory-NLS and Transformer — were trained on
+Two 70M-parameter sequence models, Memory-NLS and Transformer, were trained on
 enwik8 byte-level language modeling for 50,000 steps with identical training
 infrastructure (AdamW, cosine schedule, gradient clipping, bfloat16, batch size
 8, sequence length 1024). The training trajectories exhibit qualitatively
@@ -19,12 +19,12 @@ and stabilized into a plateau. Final perplexity 4.27.
 **Transformer** (without structural anti-collapse mechanism) descended rapidly
 to a low minimum (perplexity 2.54 at step 22,500, 45% through training), then
 exhibited a **catastrophic optimization collapse** between steps 28,000 and
-34,000 — validation perplexity spiked from 3.10 to 27.17 in approximately 5,000
+34,000, validation perplexity spiked from 3.10 to 27.17 in approximately 5,000
 steps, an 8.8× degradation. Training loss simultaneously spiked from 0.92 to
 2.65, indicating that the failure was not classical overfitting (which would
 show train continuing to descend while val rises) but **catastrophic loss of
 representational capacity**. After the collapse, the Transformer recovered
-slowly through the remaining 16,000 steps, ending at perplexity 4.87 — worse
+slowly through the remaining 16,000 steps, ending at perplexity 4.87, worse
 than its pre-crash minimum and worse than Memory-NLS's monotonic plateau.
 
 The same mathematical structure that produces anti-collapse in 3D NLS field
@@ -70,9 +70,9 @@ The four-panel figure shows the full structural difference:
    crash-induced positive excursion.
 
 5. **Bottom-right (trajectory derivative)**: Δval per evaluation interval.
-   Memory-NLS derivative oscillates tightly around zero — characteristic of
+   Memory-NLS derivative oscillates tightly around zero, characteristic of
    stable plateau. Transformer derivative shows large positive excursions
-   during the crash region — characteristic of trajectory instability.
+   during the crash region, characteristic of trajectory instability.
 
 ## Why this matters across disciplines
 
@@ -88,7 +88,7 @@ releases outward through the action of the lagging memory potential
 (see [`../../results/04-anti-collapse-3d.md`](../../results/04-anti-collapse-3d.md)
 and the hero animation [`../../assets/anti_collapse_hero.gif`](../../assets/anti_collapse_hero.gif)).
 The training experiment shows the same anti-collapse mechanism operating in
-the optimization landscape — a different substrate at vastly different scale,
+the optimization landscape, a different substrate at vastly different scale,
 but with the same dynamical form. This is the structural-realist prediction
 materialized: the form is invariant across substrates that were not
 coordinated to share it.
@@ -105,7 +105,7 @@ expected failure mode of an architecture that lacks structural anti-collapse.
 In production training of frontier-scale models (10B–1T parameters), this
 class of catastrophic event is widely encountered and managed through
 checkpoint rollback, learning rate adjustment, and human intervention. The
-Memory-NLS structure makes the failure mode architecturally impossible — the
+Memory-NLS structure makes the failure mode architecturally impossible, the
 multi-timescale auxiliary memory provides continuous structural pressure
 against drift into degenerate parameter regions. **Architectural anti-collapse
 removes a class of failure that is currently treated as engineering reality.**
@@ -122,7 +122,7 @@ $y_j$ with relaxation rates $\nu_{\min}$ to $\nu_{\max}$.
 The Transformer's catastrophic collapse during training is structurally
 analogous to acute psychological breakdown phenomena: a system whose memory
 integration mechanism fails enters a regime where coherent representational
-identity cannot be maintained. The recovery is partial and incomplete — the
+identity cannot be maintained. The recovery is partial and incomplete, the
 "scar" of the collapse persists in the form of degraded final capability,
 analogous to the persistent effects of acute psychological trauma on
 post-recovery cognitive function. The structural mechanism that prevents
@@ -131,9 +131,9 @@ mechanism Memory-NLS implements computationally.
 
 ### For consciousness research
 
-The "continuity + memory" structural prerequisite for consciousness — discussed
+The "continuity + memory" structural prerequisite for consciousness, discussed
 in [`../../interfaces/04-gamma-entrainment.md`](../../interfaces/04-gamma-entrainment.md)
-in the context of neural oscillation — is exhibited empirically here in the
+in the context of neural oscillation, is exhibited empirically here in the
 contrast between the two architectures. The Memory-NLS system maintained
 continuity of representational form throughout training; the Transformer system
 lost continuity during the crash event, with its outputs degenerating to
@@ -172,7 +172,7 @@ The Memory-NLS auxiliary field structure functionally implements a form of
 expectation maintenance: the $y_j$ accumulate density history, providing an
 internal "expected configuration" against which deviations generate
 restoring force. This is structurally what variational free energy
-minimization describes in active inference frameworks — the system resists
+minimization describes in active inference frameworks, the system resists
 states that deviate from expectation. The Transformer, lacking this
 structure, has no analogous expectation-maintenance mechanism; its
 catastrophic collapse is the failure mode predicted when surprise-resistance
@@ -312,10 +312,10 @@ Random seed is fixed at 42; reproduction is deterministic on identical hardware.
 
 ## Related documents
 
-- [`../../results/08-optimization-collapse-empirical.md`](../../results/08-optimization-collapse-empirical.md) — structural finding documentation
-- [`../../results/04-anti-collapse-3d.md`](../../results/04-anti-collapse-3d.md) — physics anti-collapse demonstration
-- [`../../results/06-dimensional-rescaling.md`](../../results/06-dimensional-rescaling.md) — geometric scaling argument
-- [`../../interfaces/06-state-space-models.md`](../../interfaces/06-state-space-models.md) — SSM correspondence
-- [`../../interfaces/07-cosmological-expansion.md`](../../interfaces/07-cosmological-expansion.md) — cosmological reading
-- [`../long_training/long_training_results.md`](../long_training/long_training_results.md) — earlier 1.5M-parameter run
-- [`../../assets/anti_collapse_hero.gif`](../../assets/anti_collapse_hero.gif) — physics anti-collapse animation
+- [`../../results/08-optimization-collapse-empirical.md`](../../results/08-optimization-collapse-empirical.md), structural finding documentation
+- [`../../results/04-anti-collapse-3d.md`](../../results/04-anti-collapse-3d.md), physics anti-collapse demonstration
+- [`../../results/06-dimensional-rescaling.md`](../../results/06-dimensional-rescaling.md), geometric scaling argument
+- [`../../interfaces/06-state-space-models.md`](../../interfaces/06-state-space-models.md), SSM correspondence
+- [`../../interfaces/07-cosmological-expansion.md`](../../interfaces/07-cosmological-expansion.md), cosmological reading
+- [`../long_training/long_training_results.md`](../long_training/long_training_results.md), earlier 1.5M-parameter run
+- [`../../assets/anti_collapse_hero.gif`](../../assets/anti_collapse_hero.gif), physics anti-collapse animation

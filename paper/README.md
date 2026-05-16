@@ -14,18 +14,18 @@ The repository documents are designed to be self-contained; a reader who works t
 
 ## Sections
 
-1. **Abstract** — Four-paragraph overview.
-2. **Introduction** — Why this work exists.
-3. **Three Structural Principles** — P1, P2, P3 stated.
-4. **The Equation: Formal Derivation** — Math from axioms to equation.
-5. **Computational Methodology** — Strang split-step, validation.
-6. **Two-Dimensional Phenomenology** — Anti-collapse, crystallization, vibration.
-7. **Three-Dimensional Extension** — Supercritical anti-collapse, BCC selection, dimensional rescaling.
-8. **Methodological Position** — Structural realism, limits of falsification.
-9. **Cross-Domain Structural Correspondences** — Six interfaces, including §8.6 on state space models.
-10. **Discussion** — Structure as the invariant.
-11. **Limits and Open Questions** — What is not claimed; what is next.
-12. **References** — Full bibliography.
+1. **Abstract**, Four-paragraph overview.
+2. **Introduction**, Why this work exists.
+3. **Three Structural Principles**, P1, P2, P3 stated.
+4. **The Equation: Formal Derivation**, Math from axioms to equation.
+5. **Computational Methodology**, Strang split-step, validation.
+6. **Two-Dimensional Phenomenology**, Anti-collapse, crystallization, vibration.
+7. **Three-Dimensional Extension**, Supercritical anti-collapse, BCC selection, dimensional rescaling.
+8. **Methodological Position**, Structural realism, limits of falsification.
+9. **Cross-Domain Structural Correspondences**, Six interfaces, including §8.6 on state space models.
+10. **Discussion**, Structure as the invariant.
+11. **Limits and Open Questions**, What is not claimed; what is next.
+12. **References**, Full bibliography.
 
 ## Building a PDF (optional)
 
@@ -37,7 +37,7 @@ pandoc paper/manuscript.md -o paper/manuscript.pdf --pdf-engine=xelatex \
     --mathjax \
     -V geometry:margin=1in -V fontsize=11pt
 
-# Or via Typst, LaTeX, etc. — any markdown-to-PDF tool will work.
+# Or via Typst, LaTeX, etc., any markdown-to-PDF tool will work.
 ```
 
 The figures referenced in the paper are output by the experiment scripts in [`../experiments/physics/`](../experiments/physics/) and are not committed to the repository; the build process should generate them locally.

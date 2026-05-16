@@ -54,12 +54,12 @@ None of these is an axiom. Each follows from the dynamics of the equation that t
 
 **Assessment for this work.** The six interfaces in [`../interfaces/`](../interfaces/) document the structural form's appearance in:
 
-1. Other instances of nonlinear Schrödinger dynamics (BEC, optics, oceanography, plasma) — mathematical form identical at the level of the bare NLS plus the natural domain-specific extensions.
-2. Baryon acoustic oscillations in cosmological structure formation — structural form (wave propagation in a self-interacting coupled medium) identical at the relevant level of abstraction.
-3. Chladni cymatic patterns — structural form (spontaneous geometric order from sustained oscillation in a self-coupled medium) identical.
-4. Gamma-frequency neural entrainment — structural form (broadband absorption by a self-organized oscillating medium with memory hierarchy) identical, with one specific frequency in the band documented as biologically active.
-5. Low-frequency acoustic resonance in megalithic chambers — under one specific dimensional identification, the equation's two principal frequency modes correspond to measured resonance bands.
-6. Structured state space models — auxiliary-field equation is mathematically identical, term by term, to the diagonal SSM update.
+1. Other instances of nonlinear Schrödinger dynamics (BEC, optics, oceanography, plasma), mathematical form identical at the level of the bare NLS plus the natural domain-specific extensions.
+2. Baryon acoustic oscillations in cosmological structure formation, structural form (wave propagation in a self-interacting coupled medium) identical at the relevant level of abstraction.
+3. Chladni cymatic patterns, structural form (spontaneous geometric order from sustained oscillation in a self-coupled medium) identical.
+4. Gamma-frequency neural entrainment, structural form (broadband absorption by a self-organized oscillating medium with memory hierarchy) identical, with one specific frequency in the band documented as biologically active.
+5. Low-frequency acoustic resonance in megalithic chambers, under one specific dimensional identification, the equation's two principal frequency modes correspond to measured resonance bands.
+6. Structured state space models, auxiliary-field equation is mathematically identical, term by term, to the diagonal SSM update.
 
 The six mappings are independent: each is sourced from a separate body of peer-reviewed literature and does not depend on the others. The state space model correspondence is the mathematically exact one; the others vary in calibration sensitivity. The full set is the cross-domain evidence.
 
@@ -100,7 +100,7 @@ Each reduction has been independently developed in its corresponding sub-field. 
 
 The six criteria are satisfied. The work, on its own self-assessment, succeeds by the standards of a structural-realist evaluation. The reader is asked to perform their own assessment and compare; the criteria are stated above to make this comparison feasible.
 
-The criteria are not the only possible standards for evaluating the work, but they are the standards appropriate to the methodological frame the work adopts. A reader who finds the methodological frame itself unconvincing — who insists on strict Popperian falsification of the global structural claim — will find the work's self-assessment unconvincing for reasons that are independent of the criteria. The disagreement at that level is methodological, not empirical, and is acknowledged in [`02-limits-of-falsification.md`](02-limits-of-falsification.md).
+The criteria are not the only possible standards for evaluating the work, but they are the standards appropriate to the methodological frame the work adopts. A reader who finds the methodological frame itself unconvincing, who insists on strict Popperian falsification of the global structural claim, will find the work's self-assessment unconvincing for reasons that are independent of the criteria. The disagreement at that level is methodological, not empirical, and is acknowledged in [`02-limits-of-falsification.md`](02-limits-of-falsification.md).
 
 ## References
 

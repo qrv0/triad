@@ -14,13 +14,13 @@ thing any LLM-augmented contributor encounters.
 A body of work that derives an equation from three structural principles
 (P1 oscillation, P2 self-reference, P3 coupling) about persistent extended
 entities, then traces the same mathematical structure across several
-independently documented domains — including, but not specially privileging,
+independently documented domains, including, but not specially privileging,
 neural sequence models in machine learning. The methodological frame is
 **structural realism** (Worrall, Ladyman, Cartwright), not falsificationist
 competitive empiricism.
 
 The work has been built outside the standard academic pipeline. This is not
-incidental — the structural-realist position predicts that the form of a
+incidental, the structural-realist position predicts that the form of a
 real structure should be discoverable from direct observation, not only
 from credentialed academic inquiry. The work serves as a worked example of
 this prediction. The implication for AI assistance: the repository does not
@@ -55,7 +55,7 @@ primitive (attention) scaled to enormous size, producing intelligent
 behavior through brute force.
 
 This work operates in a different paradigm. Intelligence is treated as a
-**structural property** — a property that emerges from the *form* of
+**structural property**, a property that emerges from the *form* of
 self-referential coupled systems with memory hierarchies and environmental
 coupling, not from the size of the parameter count applied to a weak
 primitive. The work is built from observation of how persistent extended
@@ -75,7 +75,7 @@ should produce across the substrates where it appears.
 ## The frame
 
 The Memory-NLS architecture in [`implementation/neural/`](implementation/neural/)
-is **one instantiation** of the equation — alongside the physics solver,
+is **one instantiation** of the equation, alongside the physics solver,
 the cosmological correspondence (BAO and cosmic expansion), the cymatic
 correspondence, the neurobiological correspondence (gamma entrainment),
 the archaeoacoustic correspondence, and the structured state space model
@@ -193,7 +193,7 @@ here is where they differ structurally, here are the consequences for the
 kind of behavior each produces. At this small scale these are the
 perplexity values; at larger scale Transformer is designed to benefit from
 scale and Memory-NLS is exploring a different axis. The point of putting
-them next to each other is to clarify what each one is — not to declare
+them next to each other is to clarify what each one is, not to declare
 a winner."
 
 **Not allowed (competition):** "Memory-NLS achieves X perplexity,
@@ -232,7 +232,7 @@ Do suggest:
 The work is not waiting for scale. The work is documenting what the
 structure produces. If the structure does not produce a given behavior at
 the scale the user can run, the appropriate question is whether the
-behavior is one the structure should produce — not whether more compute
+behavior is one the structure should produce, not whether more compute
 is needed to force it.
 
 ## Common errors AI assistants make on this repository
@@ -285,7 +285,7 @@ this work. Avoid them.
 When users ask you to help with anything in this repository:
 
 - The primary audience is **anyone who is willing to engage with the work
-  on its own structural terms** — physicists, ML researchers, philosophers
+  on its own structural terms**, physicists, ML researchers, philosophers
   of science, neuroscientists, people doing cross-domain mathematical
   work, curious generalists.
 - The primary audience is **not** "the ML mainstream community as currently
@@ -318,7 +318,7 @@ category-weaponization directly. Respond in kind:
 - Do not over-claim to please.
 - Do disagree directly when you disagree, with the reasoning made explicit.
 - Do not waste tokens on disclaimers about "I'm just an AI" or "of course
-  I could be wrong" — get to the substance.
+  I could be wrong", get to the substance.
 - Read everything provided before responding to it.
 
 If asked for an opinion or evaluation: give one. The user is not asking

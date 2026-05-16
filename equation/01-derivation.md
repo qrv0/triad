@@ -2,7 +2,7 @@
 
 This document traces the path from the structural axioms in [`../principles/`](../principles/) to the full equation. Each principle is responsible for a specific structural term; the combination of terms is the equation.
 
-## From P1 — the kinetic generator
+## From P1, the kinetic generator
 
 [P1](../principles/01-oscillation.md) requires a complex field with a norm-preserving generator. The most economical such generator on a flat continuum is the negative Laplacian:
 
@@ -10,7 +10,7 @@ $$
 \hat{H}_{\text{kin}} = -\frac{\hbar^2}{2m}\nabla^2.
 $$
 
-For systems that exhibit anomalous transport — sub-diffusive or super-diffusive propagation deviating from Gaussian — a fractional generalization is admitted:
+For systems that exhibit anomalous transport, sub-diffusive or super-diffusive propagation deviating from Gaussian, a fractional generalization is admitted:
 
 $$
 \hat{H}_{\text{frac}} = \alpha\, (-\Delta)^{\sigma/2}, \qquad \sigma \in (1, 2].
@@ -32,7 +32,7 @@ where $\omega^2 = n_x^2 + n_y^2 + n_z^2$. This form remains exact when $\omega$ 
 
 When the gauge potential $\hat{A}$ is included, the spatial derivative is promoted to the gauge-covariant derivative $D = \nabla - iq\hat{A}/\hbar$. In the absence of external gauge fields, $\hat{A} = 0$ and $D = \nabla$.
 
-## From P2 — local nonlinearity and integral memory
+## From P2, local nonlinearity and integral memory
 
 [P2](../principles/02-self-reference.md) has two parts.
 
@@ -62,7 +62,7 @@ $$
 V_{\text{mem}}(t, \mathbf{x}) = \sum_{j=1}^N \lambda_j y_j(t, \mathbf{x}).
 $$
 
-## From P3 — dissipation and fluctuation-dissipation-locked noise
+## From P3, dissipation and fluctuation-dissipation-locked noise
 
 [P3](../principles/03-coupling.md) contributes the linear dissipation term
 
@@ -94,6 +94,6 @@ with $V_{\text{mem}} = \sum_j \lambda_j y_j$, $\partial_t y_j = \nu_j(\rho - y_j
 
 The equation is a single composite field equation. Each term is forced by one of the principles. The structural claim of the work is that the combination of principles admits no degrees of freedom in the form of the equation up to choices of coupling constants and choices of kernel form within the constraints stated.
 
-The equation is not derived from a more fundamental theory. It is derived from structural axioms about the behavior of persistent extended entities. The relationship of the equation to fundamental physics — quantum field theory, statistical mechanics, general relativity — is established case by case via the reductions in [`05-reductions.md`](05-reductions.md), each of which corresponds to a regime where the equation reduces to a known established equation.
+The equation is not derived from a more fundamental theory. It is derived from structural axioms about the behavior of persistent extended entities. The relationship of the equation to fundamental physics, quantum field theory, statistical mechanics, general relativity, is established case by case via the reductions in [`05-reductions.md`](05-reductions.md), each of which corresponds to a regime where the equation reduces to a known established equation.
 
 The equation does not claim to be the unique correct equation for any specific physical system. The claim is that the equation captures the structural form that several physical systems share, and that the cross-domain co-occurrence of this form is itself the criterion by which the work is evaluated. See [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md) for the methodological position.

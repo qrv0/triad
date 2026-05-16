@@ -1,7 +1,7 @@
 ---
 title: Home
 description: >-
-  Memory-Nonlinear State Models — three structural principles, one equation,
+  Memory-Nonlinear State Models, three structural principles, one equation,
   seven cross-domain instantiations. Derived from observation, not assembled
   from literature.
 hide:
@@ -14,7 +14,7 @@ hide:
 <div class="mnsm-hero__visual" markdown>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="_docs_assets/cross-domain-wheel-dark.svg">
-  <img src="_docs_assets/cross-domain-wheel-light.svg" alt="Cross-domain wheel — one equation, seven substrates" class="mnsm-wheel">
+  <img src="_docs_assets/cross-domain-wheel-light.svg" alt="Cross-domain wheel, one equation, seven substrates" class="mnsm-wheel">
 </picture>
 </div>
 
@@ -26,7 +26,7 @@ hide:
 
 A nonlinear extension of structured state space models, derived from three
 principles about persistent extended entities. The same mathematical form
-appears across physics, cosmology, neural networks, and beyond — derived
+appears across physics, cosmology, neural networks, and beyond, derived
 from observation, not assembled from prior literature.
 
 <div class="mnsm-eq mnsm-eq--coded" markdown>
@@ -46,9 +46,9 @@ $$
 </div>
 
 <div class="eq-legend" markdown>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1** — Oscillation: the wave-equation form</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2** — Self-reference: nonlinearity + memory hierarchy</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3** — Coupling: external potential, dissipation, FDT noise</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1**, Oscillation: the wave-equation form</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2**, Self-reference: nonlinearity + memory hierarchy</span>
+<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3**, Coupling: external potential, dissipation, FDT noise</span>
 </div>
 
 <div class="mnsm-cta" markdown>
@@ -66,12 +66,12 @@ $$
 <div class="mnsm-section-head" markdown>
 <span class="mnsm-section-tag">Foundations</span>
 ## The three principles
-The equation is derived from these. Not assembled from prior literature — derived from observation about how persistent extended entities behave.
+The equation is derived from these. Not assembled from prior literature, derived from observation about how persistent extended entities behave.
 </div>
 
 <div class="grid cards mnsm-principle-grid" markdown>
 
--   :material-sine-wave:{ .lg .middle } &nbsp; **P1 — Oscillation**
+-   :material-sine-wave:{ .lg .middle } &nbsp; **P1, Oscillation**
 
     ---
 
@@ -81,17 +81,17 @@ The equation is derived from these. Not assembled from prior literature — deri
 
     [Read P1 →](principles/01-oscillation.md)
 
--   :material-reflect-vertical:{ .lg .middle } &nbsp; **P2 — Self-Reference**
+-   :material-reflect-vertical:{ .lg .middle } &nbsp; **P2, Self-Reference**
 
     ---
 
     A persistent entity has access to its own past states. The minimal
     instantiation is a multi-timescale memory hierarchy indexed by relaxation
-    rates τ — exactly the diagonal SSM update.
+    rates τ, exactly the diagonal SSM update.
 
     [Read P2 →](principles/02-self-reference.md)
 
--   :material-link-variant:{ .lg .middle } &nbsp; **P3 — Coupling**
+-   :material-link-variant:{ .lg .middle } &nbsp; **P3, Coupling**
 
     ---
 
@@ -121,7 +121,7 @@ invariant under change of substrate.
     <span class="mnsm-substrate-num">01 · Physics</span>
     **NLS Fields**
 
-    Bose–Einstein condensates, optical fibers, water-wave envelopes — the
+    Bose–Einstein condensates, optical fibers, water-wave envelopes, the
     nonlinear Schrödinger equation appears wherever a slowly-varying
     envelope governs an oscillatory carrier.
 
@@ -141,7 +141,7 @@ invariant under change of substrate.
     **Chladni Cymatics**
 
     Sand on a vibrating plate self-organizes into nodal patterns. Discrete
-    crystallization from continuous substrate — same selection mechanism
+    crystallization from continuous substrate, same selection mechanism
     as the BCC pattern produced by the equation in 3D.
 
     [→ Read interface](interfaces/03-chladni-cymatics.md)
@@ -231,7 +231,7 @@ empirically verified in three substrates so far.
 <div class="mnsm-section-head" markdown>
 <span class="mnsm-section-tag">See it</span>
 ## Same equation, two substrates, same outcome
-The 3D physics field on top, the neural training trajectory on the bottom — synchronized in time. Both panels show the anti-collapse mechanism predicted by the equation, manifesting in substrates as different as a laboratory simulation and a 70M-parameter language model.
+The 3D physics field on top, the neural training trajectory on the bottom, synchronized in time. Both panels show the anti-collapse mechanism predicted by the equation, manifesting in substrates as different as a laboratory simulation and a 70M-parameter language model.
 </div>
 
 <div class="mnsm-demo" markdown>
@@ -242,8 +242,8 @@ The 3D physics field on top, the neural training trajectory on the bottom — sy
   <img src="assets/cross_substrate_hero.gif" alt="Cross-substrate anti-collapse animation">
 </video>
 
-*<strong>Top:</strong> 3D supercritical NLS field. Left panel — no memory, the
-field collapses singularly. Right panel — with memory, the field is released
+*<strong>Top:</strong> 3D supercritical NLS field. Left panel, no memory, the
+field collapses singularly. Right panel, with memory, the field is released
 and stabilizes. <strong>Bottom:</strong> neural training, 70M parameters on
 enwik8. The Transformer (red) crashes catastrophically at step 28 000 where
 Memory-NLS (teal) maintains its stable descent. Same structural form, two

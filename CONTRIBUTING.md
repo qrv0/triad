@@ -1,7 +1,7 @@
 # Contributing
 
 This work is licensed open (MIT for code, CC BY 4.0 for documentation).
-Contributions across the entire range of the repository are welcomed —
+Contributions across the entire range of the repository are welcomed , 
 from typo fixes to new cross-domain interfaces, from numerical
 reproducibility verification to extensions of the equation into new
 substrates. Three structural notes about the kind of contribution that
@@ -13,14 +13,14 @@ fits this repository:
 
 - New cross-domain interfaces (`interfaces/08-...`, `interfaces/09-...`).
   If you observe the same structural form in a domain not yet documented
-  here — economic, biological, ecological, social — and can articulate
+  here, economic, biological, ecological, social, and can articulate
   the correspondence with peer-reviewed citations, that is exactly what
   the repository is for. The structural-realist methodology requires
   cross-domain coverage; more substrates strengthen the structural claim.
 
 - Empirical replications of the documented results on different
   hardware, different random seeds, different software stacks. Confirming
-  bit-for-bit reproducibility — or identifying specific deviations — is
+  bit-for-bit reproducibility, or identifying specific deviations, is
   valuable.
 
 - Extensions of the physics solver to new regimes (higher dimensions,
@@ -40,7 +40,7 @@ fits this repository:
 
 - Major architectural changes to the neural implementation.
 - Deletion or significant restructuring of existing documents.
-- Changes to the methodology framework (`methodology/`) — these touch
+- Changes to the methodology framework (`methodology/`), these touch
   the load-bearing position of the work.
 
 **Generally does not fit:**
@@ -61,10 +61,10 @@ The repository operates under a specific methodological frame
 Contributions that respect this frame are easier to integrate. The frame
 is documented in:
 
-- [`methodology/01-structural-realism.md`](methodology/01-structural-realism.md) — the position.
-- [`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md) — why strict falsificationism is in tension with the work's content.
-- [`methodology/03-how-to-evaluate-this.md`](methodology/03-how-to-evaluate-this.md) — the procedure.
-- [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md) — the evaluation criteria.
+- [`methodology/01-structural-realism.md`](methodology/01-structural-realism.md), the position.
+- [`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md), why strict falsificationism is in tension with the work's content.
+- [`methodology/03-how-to-evaluate-this.md`](methodology/03-how-to-evaluate-this.md), the procedure.
+- [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md), the evaluation criteria.
 
 If you find the frame compelling, your contributions will land cleanly. If
 you find the frame unconvincing, the methodology folder explains why the

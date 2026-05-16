@@ -2,7 +2,7 @@
 
 ## What is observed
 
-In three spatial dimensions, where the cubic nonlinear Schrödinger equation is L²-supercritical and finite-time collapse is generic for any sufficiently concentrated initial state, the memory potential — at appropriately rescaled coupling — produces a four-to-five-orders-of-magnitude separation between the unmemoried and memoried final states across the supercritical $\Lambda$ range.
+In three spatial dimensions, where the cubic nonlinear Schrödinger equation is L²-supercritical and finite-time collapse is generic for any sufficiently concentrated initial state, the memory potential, at appropriately rescaled coupling, produces a four-to-five-orders-of-magnitude separation between the unmemoried and memoried final states across the supercritical $\Lambda$ range.
 
 | $\Lambda$ | No-memory final peak | With-memory final peak | Ratio |
 |---|---|---|---|
@@ -19,7 +19,7 @@ Two qualitatively different dynamical signatures appear, depending on $\Lambda$:
 
 **Regime A: Λ near the collapse boundary** ($\Lambda \approx -8$ at the parameters chosen). The memoried run aborts the collapse before it reaches lattice scale. The maximum peak during the integration is approximately 6.88, only five times the initial peak (compared to 45 times in the unmemoried baseline). The field then disperses to peak $\sim 10^{-3}$. The final FWHM expands to approximately 19.69, essentially the full box. This is the "abort the collapse before it locks" dynamic.
 
-**Regime B: Strongly supercritical Λ** ($\Lambda \le -10$). The memoried run permits the collapse to reach lattice scale first — the maximum peak reaches $\sim 57$ in the $\Lambda = -10$ case and $\sim 37$ in the $\Lambda = -12$ case — before the memory overshoots and unwinds the configuration. The field releases later in the trajectory and ends at the same peak $\sim 10^{-3}$. This is the "collapse to lattice, then release" dynamic.
+**Regime B: Strongly supercritical Λ** ($\Lambda \le -10$). The memoried run permits the collapse to reach lattice scale first, the maximum peak reaches $\sim 57$ in the $\Lambda = -10$ case and $\sim 37$ in the $\Lambda = -12$ case, before the memory overshoots and unwinds the configuration. The field releases later in the trajectory and ends at the same peak $\sim 10^{-3}$. This is the "collapse to lattice, then release" dynamic.
 
 Both regimes terminate at the same final peak ($\sim 10^{-3}$), demonstrating that the anti-collapse mechanism is robust independent of which dynamical path the trajectory takes.
 

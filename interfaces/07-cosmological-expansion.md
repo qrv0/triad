@@ -112,8 +112,8 @@ features explicitly. A direct application of the present equation to
 cosmology would require non-trivial extension.
 
 What is claimed is the **structural correspondence**: the same
-mathematical shape — concentrated state with memory-mediated anti-collapse
-releasing into expanding structured pattern — appears at the level of
+mathematical shape, concentrated state with memory-mediated anti-collapse
+releasing into expanding structured pattern, appears at the level of
 mechanism in both the laboratory anti-collapse experiment and the
 cosmological expansion. The form is the same; the dimensional calibration
 and the specific physical substrate differ by approximately 60 orders of
@@ -166,8 +166,8 @@ anti-collapse release pattern and cosmological expansion is exact at the
 level of dynamical shape, and the structural-realist methodology
 requires that such correspondences be reported when observed rather than
 dismissed. A reader from cosmology will reasonably want to see this
-reading developed quantitatively — specific predictions, dimensional
-identifications, comparison to ΛCDM observable consequences — before
+reading developed quantitatively, specific predictions, dimensional
+identifications, comparison to ΛCDM observable consequences, before
 treating it as a working cosmological proposal. That development is
 substantial future work; this document is the structural identification,
 not the developed cosmology.

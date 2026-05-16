@@ -29,7 +29,7 @@ The conservative regime is essential: with dissipation or noise active, the temp
 
 ## Time-frequency separation: 0.6 and 1.0
 
-The two distinguished frequencies — the median 0.6 and the secondary locked 1.0 — are not the result of arbitrary cuts in the spectrum. They are robust features that survive multiple sweep choices.
+The two distinguished frequencies, the median 0.6 and the secondary locked 1.0, are not the result of arbitrary cuts in the spectrum. They are robust features that survive multiple sweep choices.
 
 The 0.6 median is the most common dominant frequency across the spatial points of the crystal. It does not correspond to a single global oscillation of the whole pattern; it is the typical frequency of the per-pixel oscillation, averaged across pixels.
 
@@ -37,7 +37,7 @@ The 1.0 secondary mode is a structurally distinct feature. It appears as a sharp
 
 ## Spatial structure of the vibration
 
-The dominant frequency per pixel is not uniform across the crystalline pattern. A spatial map of the dominant frequency reveals that certain regions of the crystal — typically those between adjacent lattice maxima — oscillate at lower frequencies (around 0.3), while other regions — typically the lattice maxima themselves — oscillate at higher frequencies (above 1.0). The spatial pattern of the dominant frequency thus inherits the spatial periodicity of the crystal, but with a different geometry.
+The dominant frequency per pixel is not uniform across the crystalline pattern. A spatial map of the dominant frequency reveals that certain regions of the crystal, typically those between adjacent lattice maxima, oscillate at lower frequencies (around 0.3), while other regions, typically the lattice maxima themselves, oscillate at higher frequencies (above 1.0). The spatial pattern of the dominant frequency thus inherits the spatial periodicity of the crystal, but with a different geometry.
 
 This is structurally analogous to phonon modes in a real crystal: different sublattices vibrate at different frequencies, with the overall pattern of vibration determined by the symmetry of the lattice and the local coupling. The present equation's crystal has an analogous structure, with the auxiliary memory fields playing the role of internal coupling.
 
@@ -59,6 +59,6 @@ This is not a generic feature of NLS-class equations. The bare cubic NLS does no
 
 ## Structural significance
 
-Discrete vibrational modes in a self-organized crystalline state are characteristic of systems with hierarchical temporal structure — fast oscillations of individual modes superimposed on slow oscillations of the collective configuration. This is the same hierarchical structure that appears in molecular vibrations (high-frequency intra-molecular modes on top of low-frequency intra-cluster modes), in neural oscillations (gamma on top of beta on top of alpha), and in solid-state phonons (optical on top of acoustic). The present equation produces this hierarchy from purely classical field dynamics with multi-mode memory.
+Discrete vibrational modes in a self-organized crystalline state are characteristic of systems with hierarchical temporal structure, fast oscillations of individual modes superimposed on slow oscillations of the collective configuration. This is the same hierarchical structure that appears in molecular vibrations (high-frequency intra-molecular modes on top of low-frequency intra-cluster modes), in neural oscillations (gamma on top of beta on top of alpha), and in solid-state phonons (optical on top of acoustic). The present equation produces this hierarchy from purely classical field dynamics with multi-mode memory.
 
-The dimensional identification used in [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md), under which one cycle per unit time maps to approximately 111 Hz, places the median dominant frequency at 66 Hz and the secondary at 110 Hz. These values are within the bands measured at the archaeoacoustic sites discussed there. The structural fact — two principal frequency modes in approximately 0.6:1.0 ratio — is dimension-independent; the absolute frequency values are calibration-dependent. The three-dimensional case has different absolute values (median 0.20 in 3D, mapping to 22 Hz under the same calibration), but the same hierarchical structure.
+The dimensional identification used in [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md), under which one cycle per unit time maps to approximately 111 Hz, places the median dominant frequency at 66 Hz and the secondary at 110 Hz. These values are within the bands measured at the archaeoacoustic sites discussed there. The structural fact, two principal frequency modes in approximately 0.6:1.0 ratio, is dimension-independent; the absolute frequency values are calibration-dependent. The three-dimensional case has different absolute values (median 0.20 in 3D, mapping to 22 Hz under the same calibration), but the same hierarchical structure.

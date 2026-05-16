@@ -26,7 +26,7 @@ Norm conservation is excellent in all four cases ($\sim 10^{-13}$); the differen
 
 ## The mechanism of asymmetry
 
-The anti-collapse mechanism (see [`01-anti-collapse-2d.md`](01-anti-collapse-2d.md)) requires that the repulsive memory potential build up at the precise spatial location where the density is rising — so that the delayed outward force is applied exactly at the focal point of the collapse.
+The anti-collapse mechanism (see [`01-anti-collapse-2d.md`](01-anti-collapse-2d.md)) requires that the repulsive memory potential build up at the precise spatial location where the density is rising, so that the delayed outward force is applied exactly at the focal point of the collapse.
 
 In the spatially local case, this is automatic. The auxiliary fields $y_j(\mathbf{x})$ accumulate at the same spatial point $\mathbf{x}$ where $\rho(\mathbf{x})$ is rising. The memory potential rises sharply at the focal point with the density, lags by $\tau_j = 1/\nu_j$, and overshoots locally at the focal point to release the field.
 
@@ -42,11 +42,11 @@ The collapse wins because the trigger of collapse is geometrically localized and
 
 ## What this says about the third principle
 
-P3 — coupling is the default — has internal structure. The principle prescribes that the entity cannot be fully isolated; environmental coupling is mandatory. But it does not, as a structural principle, specify whether the coupling should be temporal, spatial, or both. The numerical asymmetry documented here says that the equation has a definite answer to this question: temporal coupling preserves localization; spatial coupling dissolves it.
+P3, coupling is the default, has internal structure. The principle prescribes that the entity cannot be fully isolated; environmental coupling is mandatory. But it does not, as a structural principle, specify whether the coupling should be temporal, spatial, or both. The numerical asymmetry documented here says that the equation has a definite answer to this question: temporal coupling preserves localization; spatial coupling dissolves it.
 
 This is not what would be expected by symmetry alone. Time and space appear in the equation in approximately parallel ways: the wave operator has time derivatives and Laplacians, the memory kernel has temporal and (optional) spatial parts. Naive symmetry would suggest that the two non-localities should be approximately interchangeable. The numerical experiment refutes this expectation: the two are not interchangeable; they have opposite effects on the anti-collapse mechanism.
 
-The structural fact is that the anti-collapse mechanism is geometrically focused. The focal point of the collapse is a single spatial point. The defense against the focal point must be applied at the focal point. Smearing the defense — by any means, including spatially non-local memory — defeats it.
+The structural fact is that the anti-collapse mechanism is geometrically focused. The focal point of the collapse is a single spatial point. The defense against the focal point must be applied at the focal point. Smearing the defense, by any means, including spatially non-local memory, defeats it.
 
 ## Implications for cross-domain mappings
 

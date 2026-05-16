@@ -3,7 +3,7 @@
 ## What was observed
 
 During the scale-up training experiment ([`../experiments/neural/scale_up_dynamics.py`](../experiments/neural/scale_up_dynamics.py)),
-two 70M-parameter sequence models — Memory-NLS and Transformer — were trained
+two 70M-parameter sequence models, Memory-NLS and Transformer, were trained
 on enwik8 byte-level language modeling for 50,000 steps with identical training
 infrastructure (AdamW, cosine schedule lr $3 \times 10^{-4} \to 3 \times 10^{-5}$,
 gradient clip 1.0, bfloat16 mixed precision, batch size 8, sequence length 1024).
@@ -23,13 +23,13 @@ The two trajectories exhibit qualitatively different dynamics:
   validation perplexity jumps from 3.10 to 27.17 (a peak in the trajectory),
   with train loss spiking from 0.92 to 2.65 in parallel. After the collapse,
   the model recovers slowly through the remaining 16,000 steps, ending at
-  validation perplexity 4.87 — worse than its pre-crash minimum and worse
+  validation perplexity 4.87, worse than its pre-crash minimum and worse
   than Memory-NLS's monotonic plateau.
 
 The catastrophic event happens 56% of the way through training, well past the
 warmup phase, with the learning rate at a stable value ($\sim 1.4 \times 10^{-4}$).
 The crash is not attributable to learning rate transient or numerical
-underflow — it is an emergent instability of the optimization trajectory.
+underflow, it is an emergent instability of the optimization trajectory.
 
 ## Comprehensive trajectory analysis
 
@@ -59,7 +59,7 @@ Transformer will end with degraded capability compared to its pre-crash
 minimum."*
 
 **Confirmed**: Transformer pre-crash minimum was val_ppl 2.54. Final post-recovery
-val_ppl is 4.87 — a 91% degradation from the achievable minimum. The "scar"
+val_ppl is 4.87, a 91% degradation from the achievable minimum. The "scar"
 of the catastrophic event is permanent within the training horizon.
 
 **Prediction 2**: *"With structural anti-collapse mechanism, training trajectory
@@ -84,8 +84,8 @@ region, and releases the field outward into a stable post-transient regime.
 The mechanism is dimension-independent. The dimensional rescaling result
 in [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md) shows that
 the threshold coupling rescales geometrically with spatial dimension, but
-the mechanism — delayed repulsion from memory accumulation preventing
-degenerate concentration — is preserved across dimensions.
+the mechanism, delayed repulsion from memory accumulation preventing
+degenerate concentration, is preserved across dimensions.
 
 The observation above demonstrates that the same mechanism operates in a
 different substrate: **the optimization landscape of a neural network's
@@ -132,7 +132,7 @@ analog of that contrast in a completely different substrate:
 | 3D supercritical NLS field | Peak $\rho \to 25$ (collapsed) | Peak $\rho \to 0.005$ (released) |
 | Neural optimization trajectory | val_ppl spike to 27 (collapsed) | val_ppl plateau at 4.27 (stable) |
 
-The numerical magnitudes are coincidental — the substrates are dimensionally
+The numerical magnitudes are coincidental, the substrates are dimensionally
 and ontologically different, and the units are not directly comparable. What
 is structural is the **shape of the dynamics**: the substrate without the
 memory mechanism exhibits catastrophic concentration into a degenerate
@@ -160,7 +160,7 @@ flow that determines the model's parameters.
 ## Cross-disciplinary implications
 
 The same structural mechanism that prevented the Transformer's optimization
-collapse — and that the Memory-NLS architecture provides natively — manifests
+collapse, and that the Memory-NLS architecture provides natively, manifests
 in multiple independently studied phenomena:
 
 - **Cosmology**: anti-collapse via memory-mediated repulsion is the

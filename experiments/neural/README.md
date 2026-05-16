@@ -49,12 +49,12 @@ python experiments/neural/verify_training_infra.py
 In the Memory-NLS training (`train_tinyshakespeare.py`):
 
 1. **The model trains.** Loss decreases monotonically from random initialization (~4.17 for a 65-character vocabulary) to a substantially lower value.
-2. **The model learns character-level structure.** Generation samples include character names with colons ("ROMEO:", "MERCUTIO:"), line breaks, and approximate English-like spelling — not random characters and not unchanged from initialization.
+2. **The model learns character-level structure.** Generation samples include character names with colons ("ROMEO:", "MERCUTIO:"), line breaks, and approximate English-like spelling, not random characters and not unchanged from initialization.
 3. **The structural parameters carry the physical meaning they have in the equation.** $\Lambda < 0$ is attractive self-interaction; positive $\Sigma\lambda$ is repulsive memory feedback; $\nu_\text{min}$ and $\nu_\text{max}$ control the slow and fast memory timescales. These are not separate hyperparameters fit to the language-modeling task; they are the same parameters that appear in the physics solver.
 
 In the side-by-side comparison (`compare_architectures.py`):
 
-1. **Both train, both produce structured output** — but via different mechanisms.
+1. **Both train, both produce structured output**, but via different mechanisms.
 2. **The numerical metrics differ.** At this small scale, attention reaches lower perplexity. This is the expected outcome for a primitive specifically engineered for content-based retrieval, with substantial prior research and capital invested in it. The number is not the test the work is asking to be evaluated on; see the methodology folder.
 3. **The samples differ qualitatively.** Memory-NLS produces phonologically-coherent invented words; Transformer produces more real English vocabulary via copy-paste from training. These are different inductive biases producing different kinds of intelligent behavior.
 
@@ -66,7 +66,7 @@ This is the experiment where the structural difference between Memory-NLS and Tr
 
 1. **Memory-NLS produces a monotonic descent + plateau.** Final val perplexity 4.27, no catastrophic events, train-val gap stays small. The structural anti-collapse mechanism that the equation predicts manifests as optimization trajectory stability.
 
-2. **Transformer exhibits catastrophic optimization collapse.** Reaches a low minimum (val perplexity 2.54) at step 22500, then crashes catastrophically at step 28000–34000 (peak val perplexity 27.17, an 8.8× degradation). Recovers partially through the remaining steps to final val perplexity 4.87 — worse than Memory-NLS's plateau, despite reaching a lower minimum mid-training.
+2. **Transformer exhibits catastrophic optimization collapse.** Reaches a low minimum (val perplexity 2.54) at step 22500, then crashes catastrophically at step 28000–34000 (peak val perplexity 27.17, an 8.8× degradation). Recovers partially through the remaining steps to final val perplexity 4.87, worse than Memory-NLS's plateau, despite reaching a lower minimum mid-training.
 
 3. **Generation samples confirm the qualitative difference.** Memory-NLS preserves Wikipedia structural grammar (XML hierarchy, infobox tables, references) throughout training; Transformer outputs degenerate to syntactically broken fragments during the crash and only partially recover.
 
@@ -76,11 +76,11 @@ See [`../../results/08-optimization-collapse-empirical.md`](../../results/08-opt
 
 ## Related documents
 
-- [`../../interfaces/06-state-space-models.md`](../../interfaces/06-state-space-models.md) — mathematical correspondence with state space models.
-- [`../../implementation/neural/`](../../implementation/neural/) — layer and model implementations.
-- [`../../methodology/03-how-to-evaluate-this.md`](../../methodology/03-how-to-evaluate-this.md) — evaluation procedure.
-- [`../../results/08-optimization-collapse-empirical.md`](../../results/08-optimization-collapse-empirical.md) — structural finding from scale-up.
-- [`../../outputs/tinyshakespeare/training_results.md`](../../outputs/tinyshakespeare/training_results.md) — small-scale Memory-NLS report.
-- [`../../outputs/tinyshakespeare_compare/comparison_results.md`](../../outputs/tinyshakespeare_compare/comparison_results.md) — small-scale comparison report.
-- [`../../outputs/long_training/long_training_results.md`](../../outputs/long_training/long_training_results.md) — 50,000-step run at 1.5M parameters.
-- [`../../outputs/scale_up/scale_up_results.md`](../../outputs/scale_up/scale_up_results.md) — 50,000-step run at 70M parameters with structural collapse observation.
+- [`../../interfaces/06-state-space-models.md`](../../interfaces/06-state-space-models.md), mathematical correspondence with state space models.
+- [`../../implementation/neural/`](../../implementation/neural/), layer and model implementations.
+- [`../../methodology/03-how-to-evaluate-this.md`](../../methodology/03-how-to-evaluate-this.md), evaluation procedure.
+- [`../../results/08-optimization-collapse-empirical.md`](../../results/08-optimization-collapse-empirical.md), structural finding from scale-up.
+- [`../../outputs/tinyshakespeare/training_results.md`](../../outputs/tinyshakespeare/training_results.md), small-scale Memory-NLS report.
+- [`../../outputs/tinyshakespeare_compare/comparison_results.md`](../../outputs/tinyshakespeare_compare/comparison_results.md), small-scale comparison report.
+- [`../../outputs/long_training/long_training_results.md`](../../outputs/long_training/long_training_results.md), 50,000-step run at 1.5M parameters.
+- [`../../outputs/scale_up/scale_up_results.md`](../../outputs/scale_up/scale_up_results.md), 50,000-step run at 70M parameters with structural collapse observation.

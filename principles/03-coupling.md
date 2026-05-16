@@ -1,4 +1,4 @@
-# P3 — Coupling is the default
+# P3, Coupling is the default
 
 ## Statement
 
@@ -24,7 +24,7 @@ $$
 
 with $\Gamma = \gamma_0 \mathbb{1}$ in the simplest case (homogeneous dissipation at rate $\gamma_0$) and optionally $\Gamma = \gamma_0 \mathbb{1} + i\gamma_s(\mathbf{k})\sigma_z$ if momentum-dependent non-Hermitian effects are desired (Yao & Wang 2018; Bergholtz, Budich & Kunst 2021). The dissipation removes amplitude from the field at a rate controlled by $\gamma_0$.
 
-The stochastic forcing term $\eta(t, \mathbf{x})$ injects amplitude. To prevent the equation from violating the second law of thermodynamics — by either decaying unphysically toward vacuum (dissipation without compensation) or heating without bound (noise without dissipation) — the noise correlator is required to satisfy:
+The stochastic forcing term $\eta(t, \mathbf{x})$ injects amplitude. To prevent the equation from violating the second law of thermodynamics, by either decaying unphysically toward vacuum (dissipation without compensation) or heating without bound (noise without dissipation), the noise correlator is required to satisfy:
 
 $$
 \langle \eta(t, \mathbf{x}) \eta^*(t', \mathbf{x}') \rangle = 2\gamma_0 k_B T\, \delta(t - t')\, \delta^{(n)}(\mathbf{x} - \mathbf{x}')

@@ -15,7 +15,7 @@
 > oscillations, gamma-frequency neural entrainment, megalithic stone-chamber
 > resonance, structured state space models, cosmological expansion, and
 > stable neural-network optimization. Derived from three observational axioms
-> about persistence — not assembled from prior literature.
+> about persistence, not assembled from prior literature.
 
 ---
 
@@ -30,12 +30,12 @@ A nonlinear extension of structured state space models, derived from three princ
 
 > This is not a typical machine-learning repository. The structure of the repository itself reflects the structure of the equation: oscillating across registers (math, code, prose, visual), self-referential (it explains its own organization), coupled across disciplines (physics, machine learning, neuroscience, cosmology, philosophy of science). See [`STRUCTURE.md`](STRUCTURE.md) for why the repo is shaped this way.
 
-## How to read this work — methodological position
+## How to read this work, methodological position
 
 Two principles govern how this repository asks to be read. They are documented in [`methodology/`](methodology/) and worth surfacing here:
 
 **1. Isolation is temporary; coupling is the default.**
-The third structural axiom of the equation (P3) asserts that perfect dynamical isolation does not occur — every persistent system is coupled to its environment, and isolation is a methodological tool rather than a property of the world. The repository takes this seriously: cross-domain interfaces are first-class content (not appendix), reader-paths thread through multiple disciplines, and the work invites coupling with whoever engages it. See [`principles/03-coupling.md`](principles/03-coupling.md).
+The third structural axiom of the equation (P3) asserts that perfect dynamical isolation does not occur, every persistent system is coupled to its environment, and isolation is a methodological tool rather than a property of the world. The repository takes this seriously: cross-domain interfaces are first-class content (not appendix), reader-paths thread through multiple disciplines, and the work invites coupling with whoever engages it. See [`principles/03-coupling.md`](principles/03-coupling.md).
 
 **2. Strict falsificationism is in tension with the content of P3.**
 A theory whose third axiom denies isolation cannot consistently be evaluated by an experimental methodology that presupposes the isolability of variables. The work is evaluated by the **six structural-realist criteria** in [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md): internal mathematical consistency, reproducibility, generative scope, cross-domain coherence, parsimony, and comprehensiveness. The argument for why strict falsificationism is the wrong lens here is in [`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md). Local falsifiable predictions remain locally falsifiable; the global structural claim is evaluated structurally.
@@ -48,11 +48,11 @@ If you arrive at this work expecting a single-quantity numerical falsification t
 
 The same content is approachable from several backgrounds. Pick whichever you have:
 
-- → **I'm new to all this** — [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
-- → **I'm from physics** — [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
-- → **I'm from machine learning** — [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md)
-- → **I'm from neuroscience** — [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
-- → **I'm from philosophy of science** — [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
+- → **I'm new to all this**, [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
+- → **I'm from physics**, [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
+- → **I'm from machine learning**, [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md)
+- → **I'm from neuroscience**, [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
+- → **I'm from philosophy of science**, [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
 
 Each path links into the same body of content from a different angle. You can switch paths mid-journey.
 
@@ -62,9 +62,9 @@ Each path links into the same body of content from a different angle. You can sw
 
 If you want to see the equation in action without reading anything first:
 
-- [`playground/01-just-watch.ipynb`](playground/01-just-watch.ipynb) — Press play, watch a Gaussian state spontaneously crystallize into a body-centered cubic pattern.
-- [`playground/02-adjust-the-knobs.ipynb`](playground/02-adjust-the-knobs.ipynb) — Tune parameters, see what changes.
-- [`playground/03-build-your-own.ipynb`](playground/03-build-your-own.ipynb) — Guided implementation from scratch.
+- [`playground/01-just-watch.ipynb`](playground/01-just-watch.ipynb), Press play, watch a Gaussian state spontaneously crystallize into a body-centered cubic pattern.
+- [`playground/02-adjust-the-knobs.ipynb`](playground/02-adjust-the-knobs.ipynb), Tune parameters, see what changes.
+- [`playground/03-build-your-own.ipynb`](playground/03-build-your-own.ipynb), Guided implementation from scratch.
 
 ---
 
@@ -88,7 +88,7 @@ The same form, two substrates, same dynamics:
 
 *Without memory, the field collapses to a singular point. With memory, the
 field is released and stabilizes as an extended state. Same equation, same
-initial condition, one ingredient (multi-timescale memory) — qualitatively
+initial condition, one ingredient (multi-timescale memory), qualitatively
 different outcome.*
 
 ![Neural training trajectory](assets/scale_up_val_ppl.png)
@@ -126,7 +126,7 @@ different as 3D field dynamics and neural network optimization.*
 
 | Memory coupling | Final peak (no memory) | Final peak (with memory) | Ratio |
 |---|---|---|---|
-| $\Sigma\lambda = 0$ | 61.96 | — | — |
+| $\Sigma\lambda = 0$ | 61.96 |, |, |
 | $\Sigma\lambda = 0.4$ (2D scale) | 61.96 | 63.70 | 1.0× |
 | $\Sigma\lambda = 4.0$ (3D scale) | 61.96 | $6 \times 10^{-4}$ | $10^5×$ |
 
@@ -187,7 +187,7 @@ within that form. From the prompt `<page>\n  <title>` at training step 50,000:
 ```
 
 Nested XML, MediaWiki section headers, infobox table syntax with HTML
-alignment attributes, external link bracket format, year references — all
+alignment attributes, external link bracket format, year references, all
 preserved. Specific tokens (Bistory, Oringese, Maacheth, Locuts) are
 invented but follow the corpus's structural grammar correctly.
 
@@ -197,30 +197,30 @@ substrate.
 
 ### The intuition, plainly stated
 
-The structural distinction this work documents — between memorizing
-surface and modeling form — has a clean human analogy:
+The structural distinction this work documents, between memorizing
+surface and modeling form, has a clean human analogy:
 
 > Transformer learns fast because it **memorizes**. Like memorizing a sentence
 > without understanding it: you can repeat it, but if someone removes the
 > specific words, nothing is left. Like the kind of person who argues by
-> citing names of authorities — remove the names and the argument collapses,
+> citing names of authorities, remove the names and the argument collapses,
 > because memorizing isn't understanding.
 >
 > The Memory-NLS model **understands**. It tries to understand. It doesn't
-> just repeat — it reaches conclusions based on its own "opinion" of the
+> just repeat, it reaches conclusions based on its own "opinion" of the
 > form it has internalized.
 
 This is what the structural-realist finding is, in human terms. At step
 4,000 the Transformer is already regurgitating verbatim URLs and HTML
 attributes from training data; at step 32,000 (during its catastrophic
-collapse) it loses its grip and produces incoherent fragments — there
+collapse) it loses its grip and produces incoherent fragments, there
 was nothing structural underneath the memorized surface to fall back on.
 Memory-NLS at step 50,000 is still producing novel content in the correct
-structural grammar — because what it learned was the form, not the surface.
+structural grammar, because what it learned was the form, not the surface.
 
 The Transformer can score lower on val_perplexity because high-fidelity
 memorization scores well by that metric. The Memory-NLS scores higher
-val_perplexity but generates differently — because it modeled rather than
+val_perplexity but generates differently, because it modeled rather than
 memorized. Same number, qualitatively different mechanism. See
 [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
 for the full empirical trajectory and
@@ -232,8 +232,8 @@ for the qualitative side-by-side.
 The 70M-parameter checkpoints from the optimization-collapse experiment are
 published on HuggingFace and loadable in seconds:
 
-- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8) — final val perplexity 4.27, monotonic stable trajectory
-- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8) — final val perplexity 4.87, includes the catastrophic optimization collapse documented in [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
+- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8), final val perplexity 4.27, monotonic stable trajectory
+- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8), final val perplexity 4.87, includes the catastrophic optimization collapse documented in [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
 
 Each repo contains the safetensors weights, configuration JSON, and self-contained modeling code so the model loads without requiring this full repository. See each model card for usage examples.
 
@@ -322,7 +322,7 @@ expansion). Each interface is calibration-acknowledged where relevant.
 
 This work was developed with substantial AI-assisted formalization. The
 methodological frame the work adopts has direct implications for how AI
-assistants engage with the codebase — particularly around avoiding
+assistants engage with the codebase, particularly around avoiding
 competitive-benchmark framing, respecting the structural-realist evaluation
 criteria, and not dismissing cross-domain interfaces as "speculative." If
 you are using an AI assistant (Claude, GPT, etc.) to contribute to this

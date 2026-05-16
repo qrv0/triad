@@ -44,7 +44,7 @@ The structural feature is that the equation selects a specific scale from a feat
 | Integration | 4000 steps |
 | Initial state | Gaussian, $\sigma_0 = 1.2$, $\mathbf{k}_0 = (1.0, 0.5)$ |
 | Nonlinearity | $\Lambda = -8$ |
-| Memory | $(\nu, \lambda) = (10, 1)$ — single mode, larger coupling than the anti-collapse regime |
+| Memory | $(\nu, \lambda) = (10, 1)$, single mode, larger coupling than the anti-collapse regime |
 | Conservative regime | $\gamma_0 = 0$, $T = 0$ |
 | Precision | fp64 |
 

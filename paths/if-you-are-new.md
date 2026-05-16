@@ -46,8 +46,8 @@ on surfaces, in dust on speaker membranes. The phenomenon is general:
 spatial geometry**.
 
 This work is about an equation that does the same thing in three-
-dimensional fields. From an initially featureless state — like sand spread
-evenly on a drum before it is struck — the equation produces a definite
+dimensional fields. From an initially featureless state, like sand spread
+evenly on a drum before it is struck, the equation produces a definite
 three-dimensional crystalline geometry, with a specific spacing and a
 specific symmetry. **The geometry is not put in; it emerges from the
 dynamics.**
@@ -73,8 +73,8 @@ a 70-million-parameter language model being trained. The Memory-NLS model
 (teal) descends smoothly and stably. The Transformer (red) crashes
 catastrophically at step 28 000.</strong>*
 
-*The two things shown are happening in completely different substrates — one
-is a physics simulation, the other is a neural network — and yet both show
+*The two things shown are happening in completely different substrates, one
+is a physics simulation, the other is a neural network, and yet both show
 **the same pattern**: with the memory hierarchy, things stay stable; without
 it, they collapse. The work in this repository is about why that's the case.*
 </div>
@@ -100,7 +100,7 @@ things last. The observations are stated plainly in
 
 These three observations are turned into a precise mathematical equation.
 The equation, when you run it on a computer, produces a number of behaviors
-that match what we see in nature at very different scales — from the
+that match what we see in nature at very different scales, from the
 large-scale clustering of galaxies, to the patterns of brainwaves in your
 own head, to the way recent machine-learning models process sequences of
 language.
@@ -115,14 +115,14 @@ Starting from a smooth, featureless initial state, the equation produces:
 When the field tries to concentrate into a single point (the way attractive
 forces would push a swarm of particles together), **the memory of past
 states produces a delayed counter-force that releases the field outward**,
-preventing the collapse. This is a structural mechanism, not a hack — it
+preventing the collapse. This is a structural mechanism, not a hack, it
 follows from the three principles directly.
 
 ### Spontaneous crystallization
 
 The field, after the initial transient, organizes itself into a periodic
 spatial pattern. In two dimensions, the pattern is hexagonal. **In three
-dimensions, the pattern selects body-centered cubic symmetry** — one of
+dimensions, the pattern selects body-centered cubic symmetry**, one of
 the standard crystal lattice types. The system chooses this symmetry from
 a continuous initial condition; no symmetry was put in.
 
@@ -135,8 +135,8 @@ mode as approximately **110 Hz**.
 
 <div class="path-callout" markdown>
 If those last two numbers seem suspiciously specific: yes, they are. There
-are **stone chambers in Malta, Ireland, Turkey, and Egypt** — some of them
-built nearly 12 000 years ago — that have been independently measured to
+are **stone chambers in Malta, Ireland, Turkey, and Egypt**, some of them
+built nearly 12 000 years ago, that have been independently measured to
 resonate at frequencies in those same two bands. There is a published
 **2008 EEG study** showing that exposure to 110 Hz acoustic tones
 (specifically 110 Hz, not 100 Hz or 120 Hz) produces a measurable shift
@@ -155,7 +155,7 @@ structure appears. They are catalogued in
 
 ## The cross-domain wheel
 
-The image on the homepage shows this at a glance — one equation in the
+The image on the homepage shows this at a glance, one equation in the
 centre, seven instantiations around it. Each instantiation is a different
 substrate where the same mathematical pattern appears: Bose–Einstein
 condensates, baryon acoustic oscillations from the early universe, sand
@@ -169,7 +169,7 @@ the thing, and each of the seven is a faithful instance** of it.
 <div class="key-insight" markdown>
 <span class="key-insight-tag">The whole work in one line</span>
 **Three observations about how things last are turned into an equation,
-and the equation appears — independently — in seven different places in
+and the equation appears, independently, in seven different places in
 nature.** That recurrence is the evidence that the equation is real, not
 just a formula that happens to fit one dataset. The work is the
 documentation of those seven appearances and the methodological
@@ -203,7 +203,7 @@ After that, you have a choice.
 <div class="path-reading-card" markdown>
 <span class="step">B · Visual</span>
 <p class="title">[Playground notebooks](https://github.com/qrv0/mnsm/tree/main/playground)</p>
-<p class="blurb">Press play, watch the equation evolve. No installation needed — runs in your browser via Colab.</p>
+<p class="blurb">Press play, watch the equation evolve. No installation needed, runs in your browser via Colab.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">C · Mathematical</span>

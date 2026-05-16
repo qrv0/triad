@@ -85,6 +85,6 @@ A typical production run (4000 steps at $128^3$) takes approximately 2.5 minutes
 
 ## Where to find the results this code produces
 
-- [`../../experiments/physics/`](../../experiments/physics/) — Scripts that reproduce the paper figures.
-- [`../../results/`](../../results/) — Documentation of the numerical findings.
-- [`../../tests/`](../../tests/) — Validation tests.
+- [`../../experiments/physics/`](../../experiments/physics/), Scripts that reproduce the paper figures.
+- [`../../results/`](../../results/), Documentation of the numerical findings.
+- [`../../tests/`](../../tests/), Validation tests.

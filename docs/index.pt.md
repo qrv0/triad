@@ -13,9 +13,9 @@
 
 > A mesma equação aparece em campos não-lineares de Schrödinger em 3D,
 > oscilações acústicas de bárions, entrainment neural de frequência gama,
-> ressonância de câmaras megalíticas de pedra, modelos de estado-espaço
+> ressonância em câmaras de pedra megalíticas, modelos de estado-espaço
 > estruturados, expansão cosmológica e otimização estável de redes neurais.
-> Derivada de três axiomas observacionais sobre persistência — não montada
+> Derivada de três axiomas observacionais sobre persistência, não montada
 > a partir da literatura existente.
 
 ---
@@ -31,7 +31,7 @@ quatro propriedades:
    ad-hoc de anti-colapso)
 3. **Emergência espontânea de estrutura discreta** a partir de substrato
    contínuo
-4. **Regularização estocástica trancada por flutuação–dissipação**
+4. **Regularização estocástica acoplada por flutuação–dissipação**
    (substitui ruído ajustado manualmente)
 
 ---
@@ -44,7 +44,7 @@ quatro propriedades:
 > Veja [`STRUCTURE.md`](https://github.com/qrv0/mnsm/blob/main/STRUCTURE.md) para entender por que o repositório é
 > moldado dessa forma.
 
-## Como ler este trabalho — posição metodológica
+## Como ler este trabalho, posição metodológica
 
 Dois princípios governam como este repositório pede para ser lido. Estão
 documentados em [`methodology/`](methodology/01-structural-realism.md) e
@@ -52,7 +52,7 @@ vale a pena trazê-los à superfície aqui:
 
 **1. Isolamento é temporário; acoplamento é o padrão.**
 O terceiro axioma estrutural da equação (P3) afirma que isolamento
-dinâmico perfeito não ocorre — todo sistema persistente é acoplado ao
+dinâmico perfeito não ocorre, todo sistema persistente é acoplado ao
 seu ambiente, e isolamento é uma ferramenta metodológica em vez de uma
 propriedade do mundo. O repositório leva isso a sério: interfaces
 cross-domain são conteúdo de primeira classe (não apêndice), trilhas
@@ -64,7 +64,7 @@ acoplamento com quem quer que se engaje com ele. Veja
 Uma teoria cujo terceiro axioma nega o isolamento não pode ser
 consistentemente avaliada por uma metodologia experimental que
 pressupõe a isolabilidade das variáveis. O trabalho é avaliado pelos
-**seis critérios realistas-estruturais** em
+**seis critérios do realismo estrutural** em
 [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md):
 consistência matemática interna, reprodutibilidade, escopo gerativo,
 coerência cross-domain, parcimônia e abrangência. O argumento para
@@ -85,24 +85,24 @@ diferente.
 O mesmo conteúdo é abordável a partir de várias bases. Escolha a que
 você tiver:
 
-- → **Sou novo nisso tudo** — [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
-- → **Sou da física** — [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
-- → **Sou de machine learning** — [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md)
-- → **Sou da neurociência** — [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
-- → **Sou da filosofia da ciência** — [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
+- → **Sou novo nisso tudo**, [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
+- → **Sou da física**, [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
+- → **Sou de machine learning**, [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md)
+- → **Sou da neurociência**, [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
+- → **Sou da filosofia da ciência**, [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
 
 Cada trilha conecta-se ao mesmo corpo de conteúdo a partir de um ângulo
 diferente. Você pode trocar de trilha no meio do caminho.
 
 ---
 
-## Só assistir acontecer
+## Apenas observe
 
 Se você quiser ver a equação em ação sem ler nada antes:
 
-- [`playground/01-just-watch.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/01-just-watch.ipynb) — Aperte play, assista a um estado gaussiano cristalizar espontaneamente em um padrão cúbico de corpo centrado.
-- [`playground/02-adjust-the-knobs.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/02-adjust-the-knobs.ipynb) — Ajuste parâmetros, veja o que muda.
-- [`playground/03-build-your-own.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/03-build-your-own.ipynb) — Implementação guiada do zero.
+- [`playground/01-just-watch.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/01-just-watch.ipynb), Aperte play, assista a um estado gaussiano cristalizar espontaneamente em um padrão cúbico de corpo centrado.
+- [`playground/02-adjust-the-knobs.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/02-adjust-the-knobs.ipynb), Ajuste parâmetros, veja o que muda.
+- [`playground/03-build-your-own.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/03-build-your-own.ipynb), Implementação guiada do zero.
 
 ---
 
@@ -126,7 +126,7 @@ A mesma forma, dois substratos, mesma dinâmica:
 
 *Sem memória, o campo colapsa para um ponto singular. Com memória, o
 campo é liberado e estabiliza como um estado estendido. Mesma equação,
-mesma condição inicial, um único ingrediente (memória multi-escala) —
+mesma condição inicial, um único ingrediente (memória multi-escala) , 
 resultado qualitativamente diferente.*
 
 ![Trajetória de treinamento neural](assets/scale_up_val_ppl.png)
@@ -147,7 +147,7 @@ de campo 3D e otimização de redes neurais.*
 | [`principles/`](principles/01-oscillation.md) | Os três axiomas estruturais (P1, P2, P3) |
 | [`equation/`](equation/01-derivation.md) | Derivação formal, embedding markoviano, formas 2D e 3D, reduções a equações conhecidas |
 | [`results/`](results/01-anti-collapse-2d.md) | Achados numéricos: anti-colapso, cristalização, seleção de Bravais, espectro de vibração, rescaling dimensional |
-| [`interfaces/`](interfaces/01-other-nls-systems.md) | Mapeamentos cross-domain para BEC, cosmologia, cymatica, gama neural, ressonância arqueoacústica, modelos de estado-espaço |
+| [`interfaces/`](interfaces/01-other-nls-systems.md) | Mapeamentos cross-domain para BEC, cosmologia, cimática, gama neural, ressonância arqueoacústica, modelos de estado-espaço |
 | [`methodology/`](methodology/01-structural-realism.md) | Posição realista-estrutural, limites da falsificação, os seis critérios |
 | [`paths/`](paths/if-you-are-new.md) | Rotas de entrada específicas para diferentes backgrounds |
 | [`playground/`](https://github.com/qrv0/mnsm/tree/main/playground) | Notebooks interativos (executáveis no Colab) |
@@ -163,7 +163,7 @@ de campo 3D e otimização de redes neurais.*
 
 | Acoplamento de memória | Pico final (sem memória) | Pico final (com memória) | Razão |
 |---|---|---|---|
-| $\Sigma\lambda = 0$ | 61.96 | — | — |
+| $\Sigma\lambda = 0$ | 61.96 |, |, |
 | $\Sigma\lambda = 0.4$ (escala 2D) | 61.96 | 63.70 | 1.0× |
 | $\Sigma\lambda = 4.0$ (escala 3D) | 61.96 | $6 \times 10^{-4}$ | $10^5×$ |
 
@@ -189,7 +189,7 @@ Derivável a partir da geometria da região focal de colapso. Veja
 | Perplexidade final (val) | 4.27 | 4.87 |
 | Perplexidade mínima (val) | 3.86 (passo 48000) | 2.54 (passo 22500) |
 | Colapso catastrófico | Nenhum | Passos 28000–34000, pico ppl 27.17 |
-| Forma da trajetória | Descenso monotônico + platô | Descenso → crash → recuperação parcial |
+| Forma da trajetória | Descida monotônica + platô | Descida → crash → recuperação parcial |
 
 O mesmo mecanismo estrutural de anti-colapso que previne o colapso do
 campo NLS 3D previne falha catastrófica de otimização no treinamento
@@ -239,7 +239,7 @@ enquanto inventa conteúdo novo dentro dessa forma. A partir do prompt
 
 XML aninhado, cabeçalhos de seção MediaWiki, sintaxe de tabela infobox
 com atributos de alinhamento HTML, formato de colchete de link externo,
-referências de ano — tudo preservado. Tokens específicos (Bistory,
+referências de ano, tudo preservado. Tokens específicos (Bistory,
 Oringese, Maacheth, Locuts) são inventados mas seguem corretamente a
 gramática estrutural do corpus.
 
@@ -249,31 +249,31 @@ computacional.
 
 ### A intuição, posta de forma direta
 
-A distinção estrutural que este trabalho documenta — entre memorizar
-superfície e modelar forma — tem uma analogia humana limpa:
+A distinção estrutural que este trabalho documenta, entre memorizar
+superfície e modelar forma, tem uma analogia humana limpa:
 
 > Transformer aprende rápido porque **memoriza**. Como decorar uma frase
 > sem entendê-la: você pode repetir, mas se alguém tirar as palavras
 > específicas, nada sobra. Como o tipo de pessoa que argumenta citando
-> nomes de autoridades — tire os nomes e o argumento colapsa, porque
+> nomes de autoridades, tire os nomes e o argumento colapsa, porque
 > memorizar não é entender.
 >
 > O modelo Memory-NLS **entende**. Ele tenta entender. Ele não apenas
-> repete — ele chega a conclusões baseadas em sua própria "opinião" da
+> repete, ele chega a conclusões baseadas em sua própria "opinião" da
 > forma que internalizou.
 
 É isso que o achado realista-estrutural é, em termos humanos. No passo
 4.000 o Transformer já está regurgitando URLs e atributos HTML verbatim
 dos dados de treinamento; no passo 32.000 (durante seu colapso
-catastrófico) ele perde o controle e produz fragmentos incoerentes —
+catastrófico) ele perde o controle e produz fragmentos incoerentes , 
 não havia nada estrutural por baixo da superfície memorizada para
 recorrer. Memory-NLS no passo 50.000 ainda está produzindo conteúdo
-novo na gramática estrutural correta — porque o que aprendeu foi a
+novo na gramática estrutural correta, porque o que aprendeu foi a
 forma, não a superfície.
 
 O Transformer pode pontuar val_perplexity mais baixo porque
 memorização de alta fidelidade pontua bem por essa métrica. O
-Memory-NLS pontua val_perplexity mais alta mas gera diferentemente —
+Memory-NLS pontua val_perplexity mais alta mas gera diferentemente , 
 porque modelou em vez de memorizar. Mesmo número, mecanismo
 qualitativamente diferente.
 
@@ -283,8 +283,8 @@ Os checkpoints de 70M parâmetros do experimento de colapso de
 otimização estão publicados no HuggingFace e são carregáveis em
 segundos:
 
-- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8) — perplexidade final de val 4.27, trajetória estável monotônica
-- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8) — perplexidade final de val 4.87, inclui o colapso catastrófico de otimização documentado em [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
+- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8), perplexidade final de val 4.27, trajetória estável monotônica
+- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8), perplexidade final de val 4.87, inclui o colapso catastrófico de otimização documentado em [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
 
 Cada repo contém os pesos safetensors, JSON de configuração e código
 de modelagem auto-contido para que o modelo carregue sem requerer este
@@ -385,9 +385,9 @@ interface tem reconhecimento de calibração onde relevante.
 Este trabalho foi desenvolvido com formalização substancialmente
 assistida por IA. O frame metodológico que o trabalho adota tem
 implicações diretas para como assistentes de IA se engajam com a
-codebase — particularmente em torno de evitar enquadramento de
+base de código, particularmente em torno de evitar enquadramento de
 benchmark competitivo, respeitar os critérios de avaliação
-realistas-estruturais, e não dispensar interfaces cross-domain como
+do realismo estrutural, e não dispensar interfaces cross-domain como
 "especulativas". Se você está usando um assistente de IA (Claude,
 GPT, etc.) para contribuir com este repositório, por favor leia
 [`CLAUDE.md`](https://github.com/qrv0/mnsm/blob/main/CLAUDE.md) primeiro. É um conjunto

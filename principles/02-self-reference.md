@@ -1,4 +1,4 @@
-# P2 — Existence is self-referential
+# P2, Existence is self-referential
 
 ## Statement
 

@@ -49,7 +49,7 @@ The slow mode is essential. Without it, the fast memory mode would track $\rho$ 
 
 ## What is not observed
 
-The unmemoried run does not exhibit true singular blow-up. It exhibits lattice-clipped collapse: the field concentrates onto a single grid cell and remains there. The "peak density $\sim 100$" is the value at the single bright pixel; the rest of the lattice contains essentially zero density. True singular blow-up — peak density diverging continuously to infinity — would require a continuum limit and lattice refinement; what is observed at finite lattice is the regularized version of this singular behavior, where the lattice itself imposes a cutoff.
+The unmemoried run does not exhibit true singular blow-up. It exhibits lattice-clipped collapse: the field concentrates onto a single grid cell and remains there. The "peak density $\sim 100$" is the value at the single bright pixel; the rest of the lattice contains essentially zero density. True singular blow-up, peak density diverging continuously to infinity, would require a continuum limit and lattice refinement; what is observed at finite lattice is the regularized version of this singular behavior, where the lattice itself imposes a cutoff.
 
 This caveat is important for interpretation. The structural claim is not that the memory prevents a mathematically singular blow-up; the structural claim is that the memory prevents the field from locking into the lattice-cell concentration that is the numerical signature of supercritical collapse. The two are consistent but not identical.
 

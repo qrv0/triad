@@ -72,13 +72,13 @@ the six criteria of structural evaluation.
 
 The equation is derived from three structural axioms (P1, P2, P3,
 articulated in [`../principles/`](../principles/README.md)). The third axiom
-— **coupling is the default; isolation is temporary** — has direct
+,  **coupling is the default; isolation is temporary**, has direct
 implications for how the equation should be evaluated.
 
 <div class="path-callout" markdown>
 A theory whose third axiom asserts that perfect dynamical isolation does
 not occur **cannot consistently be evaluated** by an experimental methodology
-that **presupposes the isolability of variables** — which is what strict
+that **presupposes the isolability of variables**, which is what strict
 Popperian falsificationism requires (and what the entire experimental
 tradition of controlled-variable inference inherits from it).
 
@@ -110,13 +110,13 @@ computationally distinct domains:
 
 | Interface | Type of correspondence | Evidentiary weight |
 |---|---|---|
-| Other NLS systems (BEC, optics) | Mathematical (same equation) | Highest — no calibration |
-| State space models (S4, Mamba, RWKV) | Mathematical (exact equivalence) | Highest — no calibration |
-| Baryon acoustic oscillations | Mathematical (memory-modulated wave eq.) | High — derived form |
-| Cosmological expansion | Mathematical (memory-coupled Friedmann) | High — derived form |
-| Chladni cymatics | Structural (same selection mechanism) | Medium — same dynamics, different scale |
-| Gamma neural entrainment | Calibrated (band match under unit choice) | Lower — depends on identification |
-| Archaeoacoustic resonance | Calibrated (specific frequency match) | Lowest — most calibration-sensitive |
+| Other NLS systems (BEC, optics) | Mathematical (same equation) | Highest, no calibration |
+| State space models (S4, Mamba, RWKV) | Mathematical (exact equivalence) | Highest, no calibration |
+| Baryon acoustic oscillations | Mathematical (memory-modulated wave eq.) | High, derived form |
+| Cosmological expansion | Mathematical (memory-coupled Friedmann) | High, derived form |
+| Chladni cymatics | Structural (same selection mechanism) | Medium, same dynamics, different scale |
+| Gamma neural entrainment | Calibrated (band match under unit choice) | Lower, depends on identification |
+| Archaeoacoustic resonance | Calibrated (specific frequency match) | Lowest, most calibration-sensitive |
 
 The work distinguishes carefully between correspondences that are
 **mathematical** (no calibration required) and those that are **structural-
@@ -140,7 +140,7 @@ attempts **reflexive consistency** between its content and its presentation.
   it documents.
 - The first principle (oscillation, P1) is enacted in how the prose moves
   between mathematical, computational, and conceptual registers within
-  each major document — the prose itself oscillates rather than settling
+  each major document, the prose itself oscillates rather than settling
   into a single register.
 
 Whether this reflexive consistency is **methodologically required** or
@@ -160,12 +160,12 @@ like in practice. The **six criteria** in
 [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md)
 attempt an operational version:
 
-1. **Internal mathematical consistency** — the equation is well-posed
-2. **Reproducibility** — bit-for-bit reproduction on fixed hardware
-3. **Generative scope** — non-trivial behavior unattainable from reductions
-4. **Cross-domain coherence** — structure recurs across substrates
-5. **Parsimony** — minimal axiomatic base (P1, P2, P3)
-6. **Comprehensiveness** — the equation accommodates the cases it should
+1. **Internal mathematical consistency**, the equation is well-posed
+2. **Reproducibility**, bit-for-bit reproduction on fixed hardware
+3. **Generative scope**, non-trivial behavior unattainable from reductions
+4. **Cross-domain coherence**, structure recurs across substrates
+5. **Parsimony**, minimal axiomatic base (P1, P2, P3)
+6. **Comprehensiveness**, the equation accommodates the cases it should
 
 The work's **self-assessment against each criterion** is provided as a
 worked example. This is the kind of concrete methodological instantiation
@@ -177,9 +177,9 @@ Several of the cross-domain mappings (gamma entrainment, archaeoacoustic
 resonance) depend on a **choice of dimensional units** to compare the
 equation's frequencies to physical Hz. The work is explicit that this is
 a choice. The philosophical question of how much evidentiary weight a
-**calibration-dependent** cross-domain correspondence carries — and whether
+**calibration-dependent** cross-domain correspondence carries, and whether
 the structural-realist position can absorb such correspondences as
-evidence — is a substantive issue that the work brings **into the open**
+evidence, is a substantive issue that the work brings **into the open**
 rather than concealing.
 
 ### 3. The recursive structure of P3
@@ -245,7 +245,7 @@ taking the observation seriously rather than ignoring it.
 <div class="path-reading-card" markdown>
 <span class="step">01 · Axioms</span>
 <p class="title">[The three principles](../principles/README.md)</p>
-<p class="blurb">P1, P2, P3 — the axiomatic base from which everything else is derived. The structural commitments stated baldly.</p>
+<p class="blurb">P1, P2, P3, the axiomatic base from which everything else is derived. The structural commitments stated baldly.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">02 · Position</span>
@@ -270,12 +270,12 @@ taking the observation seriously rather than ignoring it.
 <div class="path-reading-card" markdown>
 <span class="step">06 · Strongest evidence</span>
 <p class="title">[SSM equivalence](../interfaces/06-state-space-models.md)</p>
-<p class="blurb">The mathematically exact correspondence with machine-learning SSMs. The clean case — no calibration.</p>
+<p class="blurb">The mathematically exact correspondence with machine-learning SSMs. The clean case, no calibration.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">07 · Most contested</span>
 <p class="title">[Archaeoacoustic resonance](../interfaces/05-archaeoacoustic-resonance.md)</p>
-<p class="blurb">The most calibration-sensitive correspondence — the case where the dimensional-identification problem is most pointed.</p>
+<p class="blurb">The most calibration-sensitive correspondence, the case where the dimensional-identification problem is most pointed.</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">08 · Empirical instance</span>

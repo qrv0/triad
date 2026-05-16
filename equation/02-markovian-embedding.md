@@ -62,7 +62,7 @@ $$
 
 This is the central reduction. The integro-differential equation for $\Psi$ coupled to its full history has been replaced by a system of local ordinary differential equations: $\Psi$ evolves under the equation of [`01-derivation.md`](01-derivation.md), and each auxiliary field $y_j$ evolves under its own local first-order equation, driven by the instantaneous density $\rho$.
 
-The memory cost is now $O(N_x \cdot N)$ where $N$ is the number of memory modes. Typical values are $N = 1$ or $N = 2$. The computational cost per time step is reduced to $O(N_x \cdot N)$ for the auxiliary-field updates plus the cost of the field equation itself, both of which are independent of $N_t$. The non-Markovian character of the original equation is preserved — the auxiliary fields encode the memory — but the implementation is now local in time and computationally feasible.
+The memory cost is now $O(N_x \cdot N)$ where $N$ is the number of memory modes. Typical values are $N = 1$ or $N = 2$. The computational cost per time step is reduced to $O(N_x \cdot N)$ for the auxiliary-field updates plus the cost of the field equation itself, both of which are independent of $N_t$. The non-Markovian character of the original equation is preserved, the auxiliary fields encode the memory, but the implementation is now local in time and computationally feasible.
 
 ## Derivation of the local ODE
 
@@ -110,7 +110,7 @@ The choice of $N$ and the spectrum $\{\nu_j, \lambda_j\}$ determines the tempora
 
 The Markovian embedding derived here is a special case of the Mori–Zwanzig projection-operator method (Mori 1965; Zwanzig 1961) used in statistical mechanics to reduce systems with many degrees of freedom to systems with few. In the Mori–Zwanzig framework, the elimination of "fast" degrees of freedom produces an integro-differential equation for the "slow" ones with a memory kernel encoding the eliminated dynamics. When the eliminated dynamics has a multi-exponential autocorrelation structure, the memory kernel has the multi-exponential form assumed above, and the resulting integro-differential equation admits the auxiliary-field reduction.
 
-The connection is not merely formal. The multi-exponential kernel is the most general kernel that admits exact Markovian embedding via a finite number of auxiliary fields. Other kernel forms — power laws, stretched exponentials, fractional derivatives — do not admit finite-dimensional embedding and require fundamentally different computational strategies.
+The connection is not merely formal. The multi-exponential kernel is the most general kernel that admits exact Markovian embedding via a finite number of auxiliary fields. Other kernel forms, power laws, stretched exponentials, fractional derivatives, do not admit finite-dimensional embedding and require fundamentally different computational strategies.
 
 ## Numerical update of the auxiliary fields
 

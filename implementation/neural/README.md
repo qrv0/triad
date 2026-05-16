@@ -8,9 +8,9 @@ This folder contains the instantiation of the Memory-NLS equation as a neural se
 
 | File | Content |
 |---|---|
-| `layer.py` | `MemoryNLSLayer` — the sequence layer. FFT-convolution implementation of the auxiliary-field recurrence (O(N log N) per call). |
-| `model.py` | `MemoryNLSLanguageModel` — full autoregressive LM (embedding + stack of MemNLS blocks + tied output head). |
-| `baselines.py` | `TransformerLanguageModel` — same-architecture-shape causal-attention LM, for verifying training infrastructure (not a competitive comparison). |
+| `layer.py` | `MemoryNLSLayer`, the sequence layer. FFT-convolution implementation of the auxiliary-field recurrence (O(N log N) per call). |
+| `model.py` | `MemoryNLSLanguageModel`, full autoregressive LM (embedding + stack of MemNLS blocks + tied output head). |
+| `baselines.py` | `TransformerLanguageModel`, same-architecture-shape causal-attention LM, for verifying training infrastructure (not a competitive comparison). |
 | `training.py` | Training infrastructure (AdamW + cosine schedule + gradient clipping + AMP). |
 | `generation.py` | Char-level tokenizer and autoregressive sampling helpers. |
 
@@ -32,11 +32,11 @@ The auxiliary fields $y_j$ of the physics formulation and the hidden state compo
 
 The full layer extends the linear baseline with the cubic self-interaction $\Lambda |\Psi|^2 \Psi$ (P2 instantaneous part), the multi-mode coupling $V_\text{mem} = \sum_j \lambda_j y_j$, and optional FDT-locked stochastic forcing ($\gamma_0, T$). The parameters carry physical meaning derived from the principles:
 
-- $\Lambda$ — strength and sign of the cubic self-interaction.
-- $\Sigma\lambda$ — total memory coupling.
-- $\nu_\text{min}, \nu_\text{max}$ — spectrum of relaxation timescales.
-- fast_bias — partition of $\lambda$ between fast and slow memory modes.
-- $\gamma_0, T$ — dissipation rate and bath temperature for the FDT noise.
+- $\Lambda$, strength and sign of the cubic self-interaction.
+- $\Sigma\lambda$, total memory coupling.
+- $\nu_\text{min}, \nu_\text{max}$, spectrum of relaxation timescales.
+- fast_bias, partition of $\lambda$ between fast and slow memory modes.
+- $\gamma_0, T$, dissipation rate and bath temperature for the FDT noise.
 
 These are not hyperparameters tuned for benchmark scores; they are the structural parameters of the equation, the same ones that appear in the 2D and 3D physics solver.
 
