@@ -11,11 +11,18 @@ hide:
 
 <div class="mnsm-hero" markdown>
 
+<div class="mnsm-hero__visual" markdown>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="_docs_assets/cross-domain-wheel-dark.svg">
+  <img src="_docs_assets/cross-domain-wheel-light.svg" alt="Cross-domain wheel — one equation, seven substrates" class="mnsm-wheel">
+</picture>
+</div>
+
 <div class="mnsm-hero__copy" markdown>
 
 <div class="mnsm-eyebrow">Memory-Nonlinear State Models</div>
 
-# One equation. <br>Seven substrates.
+# One equation. Seven substrates.
 
 A nonlinear extension of structured state space models, derived from three
 principles about persistent extended entities. The same mathematical form
@@ -34,13 +41,6 @@ $$
 [:material-download-outline: Use the model](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8){ .md-button }
 </div>
 
-</div>
-
-<div class="mnsm-hero__visual" markdown>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="_docs_assets/cross-domain-wheel-dark.svg">
-  <img src="_docs_assets/cross-domain-wheel-light.svg" alt="Cross-domain wheel — one equation, seven substrates" class="mnsm-wheel">
-</picture>
 </div>
 
 </div>
