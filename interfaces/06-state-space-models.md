@@ -78,6 +78,14 @@ This document is the most concrete of the cross-domain mappings because the math
 
 This document is not a benchmark claim. The four extensions to the SSM baseline outlined above are structural claims about the equation; whether they translate into empirical performance improvements on standard sequence-modeling benchmarks (Long Range Arena, language modeling perplexity, etc.) is a question for the empirical work outlined in [`../experiments/neural/README.md`](../experiments/neural/README.md). That empirical work is the natural next direction.
 
+## Common dismissals and why they do not apply
+
+**"Trivial mathematical coincidence."** The auxiliary-field update $\partial_t y_j = \nu_j(\rho - y_j)$ and the diagonal SSM update $\partial_t \mathbf{h} = \mathbf{A}\mathbf{h} + \mathbf{B} u$ with $\mathbf{A}$ diagonal and eigenvalues $-\nu_j$ are not similar equations; they are the same equation written with different notation. Sections `## The equivalence` and `## No calibration is required` give the term-by-term identification. Calling a term-by-term identity a "coincidence" addresses the appearance of the equations rather than their content; the content is identical.
+
+**"Different motivations, same equation by accident."** Two communities converging on the same mathematical object from different motivations is exactly the structural-realist signature (see [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md), criterion of cross-domain coherence). The physics community arrived at this equation by Mori–Zwanzig projection of an integro-differential field equation; the ML community arrived at it by search for efficient long-sequence representation. The convergence is informative because it is unmotivated by either community in terms of the other; if the mathematical form were arbitrary, this convergence would not have occurred.
+
+**"ML does not need physics."** The work does not assert that ML needs physics. It asserts that an equation derived from physical structural axioms is, by mathematical identity, the same equation as the linear core of modern sequence models. Whether ML practitioners find this useful for their own work is for ML practitioners to decide. The structural fact, that the same equation arose independently, is established by the term-by-term identification and is not contingent on ML practitioners adopting the physics-side framing.
+
 ## Recommended further reading
 
 The state space model literature relevant to this correspondence:

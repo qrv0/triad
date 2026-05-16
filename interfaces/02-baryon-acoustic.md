@@ -41,6 +41,14 @@ This is structurally significant because cosmology is the most distant-from-labo
 
 The dimensional identification under which the present equation maps onto the cosmological case is highly nontrivial and not attempted here. The BAO scale, the time of recombination, the photon-baryon coupling rate, and the present equation's parameters live at scales separated by approximately 60 orders of magnitude in length and 17 orders of magnitude in time. What is preserved across that scale gap is the structural form, not the numerical values.
 
+## Common dismissals and why they do not apply
+
+**"The standard ΛCDM already explains BAO."** Correct; the structural correspondence is not a competing predictive cosmology. The claim is that the form of the early-universe dynamics, oscillation in a self-interacting medium coupled to a relaxing background, is the form of the equation, and that this co-occurrence is structurally informative even where ΛCDM is the appropriate predictive framework for the cosmological substrate. The two frameworks operate at different levels: ΛCDM gives quantitative predictions in the cosmological substrate, the structural reading identifies the mechanism shape that the cosmological substrate shares with other substrates.
+
+**"The scales are not comparable."** The 60-orders-of-magnitude scale gap between the laboratory equation and the cosmological BAO is the point, not the objection. The structural-realist methodology (see [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md)) asserts that the form is what persists across substrates; the absolute scale is a calibration. The structural correspondence requires that the form be preserved across the scale gap; the absolute numerical values are not expected to match.
+
+**"This is metaphor."** The term-by-term mapping in section `## The structural correspondence` is mathematical, not metaphorical: the wave operator of the photon-baryon plasma maps to the kinetic operator of the equation, the gravitational self-coupling maps to the nonlinearity, the dark-matter coupling maps to the memory, the Silk damping maps to the dissipation, and the inflationary perturbations map to the stochastic forcing. The mapping is at the level of the mathematical objects, not at the level of analogy.
+
 ## References
 
 - Anderson, L., Aubourg, É., Bailey, S., et al. (2014). The clustering of galaxies in the SDSS-III Baryon Oscillation Spectroscopic Survey. *Monthly Notices of the Royal Astronomical Society* **441**, 24.

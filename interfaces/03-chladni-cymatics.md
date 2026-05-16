@@ -36,6 +36,14 @@ It does not establish that the present equation describes cymatic patterns. The 
 
 It does establish the historical continuity of the structural argument. The observation that periodic spatial structure emerges spontaneously from sustained oscillation in continuous media is two and a half centuries old. The present equation places memory-augmented NLS dynamics in this lineage as another instance of the same structural type. The structural realist reading of the cross-domain correspondence is that the underlying mechanism is independent of the substrate.
 
+## Common dismissals and why they do not apply
+
+**"Cymatic patterns are classical mechanics; the equation is not."** The substrates differ. The structural mechanism, spontaneous geometric order from sustained oscillation in a self-coupled medium, is the same and is well-established as a general dynamical pattern (Chladni 1787; Jenny 1967; Faraday-wave literature). The equation places the memory-augmented NLS instance in the same structural family. The correspondence is at the level of the pattern-formation mechanism, not at the level of the specific elastic or quantum substrate.
+
+**"Modulational instability is generic."** Generic structural mechanisms are exactly what cross-domain structural realism is designed to identify. The argument is not that the mechanism is unique to the equation; the argument is that the equation, derived from P1+P2+P3, instantiates this generic mechanism, and that the mechanism's appearance across cymatic, Faraday, and present-equation substrates is structural evidence rather than coincidence.
+
+**"This is decoration, not evidence."** The interfaces folder [`../interfaces/`](../interfaces/) is first-class content under the structural-realist methodology (see [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md)). Cross-domain coherence is the principal evaluation criterion [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md) applies; the cymatic instance is one entry in that evaluation.
+
 ## References
 
 - Chladni, E. F. F. (1787). *Entdeckungen über die Theorie des Klanges*. Weidmanns Erben und Reich, Leipzig.

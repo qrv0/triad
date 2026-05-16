@@ -41,6 +41,14 @@ The correspondence is not the strongest of the six in this folder. Unlike the st
 
 The correspondence establishes that the equation's structural form has at least one instance in living biological tissue. The broadband absorption of the crystalline state, under a reasonable dimensional identification, overlaps with a band in which independent neuroscience has documented frequency-specific biological responses with clinical relevance. The accumulation of structural correspondences across domains, physics (NLS instances), cosmology (BAO), pattern formation (cymatics), neurobiology (gamma), archaeoacoustics, machine learning (SSMs), is what the structural-realist criterion is designed to detect. This is one entry in that accumulation.
 
+## Common dismissals and why they do not apply
+
+**"The equation does not predict 40 Hz."** Correct, and acknowledged in section `## What this correspondence is not`. The structural claim is that the equation has a broadband absorption regime which, under one dimensional identification, overlaps with the gamma band in which documented frequency-specific biological effects occur. The calibration-dependent overlap is structural evidence; the absolute specification of 40 Hz comes from biology (parvalbumin-fast-spiking interneuron resonance, VIP-AQP4 glymphatic pathway), not from the equation.
+
+**"This is bringing physics into neuroscience."** Structural realism operates by identifying invariant form across substrates (see [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md)); the work is not bringing physics into neuroscience but identifying that the structural form already documented in cortical microcircuit neuroscience (broadband absorption by a self-organized oscillating medium with memory hierarchy) is the same structural form the equation produces. The bringing-together is at the level of structural identification, not at the level of mechanism substitution.
+
+**"Clinical relevance is overclaimed."** The clinical claim is sourced from peer-reviewed primary literature (Iaccarino et al. 2016; Adaikkan et al. 2019; Murdock et al. 2024; Hajós et al. 2024); the clinical claim is not made by the present work. The present work cites the documented clinical trajectory as evidence that the frequency band the equation's absorption regime overlaps with is biologically active, not as a clinical claim on its own.
+
 ## References
 
 - Adaikkan, C., Middleton, S. J., Marco, A., et al. (2019). Gamma entrainment binds higher-order brain regions and offers neuroprotection. *Neuron* **102**, 929.

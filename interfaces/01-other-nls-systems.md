@@ -36,6 +36,12 @@ The cross-domain status of the bare cubic NLS, its appearance across optical, at
 
 The structural fact, again on the structural-realist reading, is that all four substrates exhibit oscillation (P1), self-interaction with memory (P2), and environmental coupling (P3). They differ only in the physical interpretation of the field $\Psi$ and the values of the coupling constants. The mathematical form is the same.
 
+## Common dismissals and why they do not apply
+
+**"NLS is well known; this is not new."** The claim here is not novelty of NLS. The claim is that the equation derived from P1+P2+P3 reduces to NLS in the appropriate limit, that NLS in turn appears across the listed substrates, and that the appearance is structural rather than coincidental. The well-known status of NLS is the evidence supporting cross-domain coherence (criterion 4 in [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md)), not the counterargument; NLS is one substrate-specific calibration of the structural form the equation derives.
+
+**"Memory effects are domain-specific."** The point of the multi-exponential memory and its Markovian embedding (see [`../equation/02-markovian-embedding.md`](../equation/02-markovian-embedding.md)) is precisely that the structural form of the memory is invariant across substrates while the substrate-specific kernel parameters vary. The Raman scattering kernel for optics and the non-condensate-cloud kernel for BEC have different numerical parameters; they are the same mathematical object up to those parameters. The structural form is preserved across the calibration choices; that is what the cross-domain claim asserts.
+
 ## References
 
 - Agrawal, G. P. (2019). *Nonlinear Fiber Optics* (6th ed.). Academic Press.

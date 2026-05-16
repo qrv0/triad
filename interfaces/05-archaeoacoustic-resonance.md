@@ -58,6 +58,16 @@ The mapping is included because it is structurally informative even with all the
 
 The accumulation of these instances at compatible structural form, across independent measurement traditions, is what the structural-realist criterion is designed to detect. Whether the calibration is the right one for the cross-domain correspondence to be more than structural, whether there is some deeper mechanism by which megalithic acoustic engineering, neurophysiological resonance, and the equation's intrinsic modes are connected, is left as an open question. The structural fact is documented; the deeper interpretation is for the reader to weigh.
 
+## Common dismissals and why they do not apply
+
+**"Archaeoacoustic correspondence is fringe."** The peer-reviewed sources for the acoustic measurements are stated explicitly in section `## The acoustic measurements` and rated by evidentiary tier in section `## The careful framing`. The Jahn, Devereux & Ibison (1996) Princeton-PEAR survey appeared in the *Journal of the Acoustical Society of America*, a tier-1 venue. The categorical dismissal "fringe" addresses the topic category rather than the source quality. The structural-realist methodology (see [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md), section "The recursive position") forbids category-weaponization dismissals; the relevant question is whether the cited measurements are accurate, not whether the topic is categorically respectable.
+
+**"Post-hoc calibration."** The dimensional identification ($L = 20$ m, $dt = 9$ ms) is explicitly acknowledged in section `## The careful framing` as a choice. The structural fact, that the equation has two principal frequency modes in approximately a 0.6 : 1.0 ratio, is dimension-independent. The choice of calibration places those modes at 66 Hz and 111 Hz, within the bands measured at the megalithic sites. The post-hoc objection applies if the calibration is unique or unmotivated; in fact the calibration is one defensible choice and is labeled as such. The structural correspondence remains structural under the calibration; the calibration does not produce the correspondence.
+
+**"This is anthropomorphic."** The interface makes no anthropomorphic claim. It documents that an equation derived from abstract structural principles produces two principal frequency modes that, under one calibration, overlap with bands measured at megalithic sites by peer-reviewed acoustic surveys and with a band at which a peer-reviewed EEG study reports a documented neurological effect. The claim is structural co-occurrence; intentional design or human-significance claims are explicitly disclaimed in section `## The careful framing`.
+
+**"Speculative."** The structural correspondence is documented with acknowledged calibration sensitivity; the deeper interpretation (why the correspondence exists) is left as an open question, also explicitly. Labeling the documented structural correspondence as "speculative" addresses the open interpretive question rather than the documented correspondence. The two are distinguished in the source; the dismissal collapses them.
+
 ## References
 
 - Cook, I. A., Pajot, S. K., & Leuchter, A. F. (2008). Ancient architectural acoustic resonance patterns and regional brain activity. *Time and Mind* **1**, 95.
