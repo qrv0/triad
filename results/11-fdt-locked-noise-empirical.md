@@ -1,5 +1,9 @@
 # Result 11: FDT-locked vs no-built-in noise in Memory-NLS training dynamics
 
+> **METHODOLOGICAL NOTE (2026-05-16, wave 1 partial retraction).** This test is the least affected by the wave-1 methodological flaw because it specifically varies the FDT lock ($\gamma_0 > 0, T > 0$ vs $\gamma_0=0, T=0$). The variant A (FDT-locked) respects P3; variant B (no built-in noise) is the isolated degenerate. As such this test is structurally coherent with the methodology. The script is still pending GPU execution; when run, the result is interpretable per the original design.
+
+---
+
 ## Prediction tested
 
 Interface: [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md), prediction **P6.1**.

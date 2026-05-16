@@ -39,32 +39,46 @@ from pathlib import Path
 
 import numpy as np
 
+# GPU acceleration: use CuPy if available; fall back to NumPy.
+try:
+    import cupy as cp
+    xp = cp
+    USING_GPU = True
+    print("Backend: cupy (GPU)")
+except ImportError:
+    xp = np
+    USING_GPU = False
+    print("Backend: numpy (CPU) — install cupy-cuda12x for GPU acceleration")
+
 
 REPO_ROOT = Path(__file__).parent.parent.parent
 OUTPUT_DIR = REPO_ROOT / "outputs" / "dimensional_rescaling_high_d"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def fft_kinetic_kernel(N: int, L: float, d: int, hbar: float = 1.0, mass: float = 1.0) -> np.ndarray:
-    """Return the FFT-space kinetic kernel exp(-i * hbar^2/(2m) * k^2 * dt).
+def to_cpu(arr):
+    """Move array to CPU regardless of backend."""
+    if hasattr(arr, "get"):
+        return arr.get()
+    return arr
 
-    This is the K-step of the Strang splitting. The caller multiplies by dt
-    before exponentiation.
-    """
-    k_axis = 2 * np.pi * np.fft.fftfreq(N, d=L / N)
-    grids = np.meshgrid(*[k_axis] * d, indexing="ij")
+
+def fft_kinetic_kernel(N: int, L: float, d: int, hbar: float = 1.0, mass: float = 1.0):
+    """Return the FFT-space kinetic kernel -i * hbar^2/(2m) * k^2 (exp applied with dt)."""
+    k_axis = 2 * xp.pi * xp.fft.fftfreq(N, d=L / N)
+    grids = xp.meshgrid(*[k_axis] * d, indexing="ij")
     k_squared = sum(g ** 2 for g in grids)
-    return -1j * (hbar ** 2 / (2 * mass)) * k_squared  # exp(this * dt) is applied
+    return -1j * (hbar ** 2 / (2 * mass)) * k_squared
 
 
-def initial_gaussian(N: int, L: float, d: int, sigma_init: float) -> np.ndarray:
+def initial_gaussian(N: int, L: float, d: int, sigma_init: float):
     """Concentrated Gaussian initial condition centered at the box center."""
-    coord = np.linspace(-L / 2, L / 2, N, endpoint=False)
-    grids = np.meshgrid(*[coord] * d, indexing="ij")
+    coord = xp.linspace(-L / 2, L / 2, N, endpoint=False)
+    grids = xp.meshgrid(*[coord] * d, indexing="ij")
     r_squared = sum(g ** 2 for g in grids)
-    psi = (1.0 / (sigma_init * np.sqrt(2 * np.pi))) ** (d / 2)
-    psi = psi * np.exp(-r_squared / (2 * sigma_init ** 2))
-    return psi.astype(np.complex64)
+    psi = (1.0 / (sigma_init * float(xp.sqrt(xp.asarray(2 * xp.pi))))) ** (d / 2)
+    psi = psi * xp.exp(-r_squared / (2 * sigma_init ** 2))
+    return psi.astype(xp.complex64)
 
 
 def run_anti_collapse(d: int, N: int, L: float, Lambda: float, Sigma_lambda: float,
@@ -79,25 +93,25 @@ def run_anti_collapse(d: int, N: int, L: float, Lambda: float, Sigma_lambda: flo
     """
     psi = initial_gaussian(N, L, d, sigma_init)
     kinetic_phase = fft_kinetic_kernel(N, L, d)
-    propagator_half_step = np.exp(kinetic_phase * dt / 2)
+    propagator_half_step = xp.exp(kinetic_phase * dt / 2)
 
     # Memory auxiliary fields (two modes)
     if Sigma_lambda > 0:
         lambda_fast = Sigma_lambda * 0.75
         lambda_slow = Sigma_lambda * 0.25
-        y_fast = np.zeros_like(psi.real, dtype=np.float32)
-        y_slow = np.zeros_like(psi.real, dtype=np.float32)
+        y_fast = xp.zeros_like(psi.real, dtype=xp.float32)
+        y_slow = xp.zeros_like(psi.real, dtype=xp.float32)
         memory_active = True
         # Exact OU decay factors (paper §4.1: "exact, independent of dt")
-        decay_fast = np.exp(-nu_fast * dt)
-        decay_slow = np.exp(-nu_slow * dt)
+        decay_fast = float(xp.exp(xp.asarray(-nu_fast * dt)))
+        decay_slow = float(xp.exp(xp.asarray(-nu_slow * dt)))
         accum_fast = 1.0 - decay_fast
         accum_slow = 1.0 - decay_slow
     else:
         memory_active = False
 
-    initial_norm = float(np.sum(np.abs(psi) ** 2) * (L / N) ** d)
-    initial_peak = float(np.max(np.abs(psi) ** 2))
+    initial_norm = float(xp.sum(xp.abs(psi) ** 2) * (L / N) ** d)
+    initial_peak = float(xp.max(xp.abs(psi) ** 2))
 
     peaks = [initial_peak]
     norms = [initial_norm]
@@ -105,27 +119,27 @@ def run_anti_collapse(d: int, N: int, L: float, Lambda: float, Sigma_lambda: flo
     t0 = time.time()
     for step in range(n_steps):
         # V/2: nonlinear + memory potential half-step
-        rho = (psi.real ** 2 + psi.imag ** 2).astype(np.float32)
+        rho = (psi.real ** 2 + psi.imag ** 2).astype(xp.float32)
         if memory_active:
             V_mem = lambda_fast * y_fast + lambda_slow * y_slow
         else:
             V_mem = 0.0
         V_total = Lambda * rho + V_mem
-        psi = psi * np.exp(-1j * V_total * dt / 2)
+        psi = psi * xp.exp(-1j * V_total * dt / 2)
 
         # K: kinetic full-step (FFT)
-        psi_k = np.fft.fftn(psi)
+        psi_k = xp.fft.fftn(psi)
         psi_k = psi_k * propagator_half_step * propagator_half_step
-        psi = np.fft.ifftn(psi_k)
+        psi = xp.fft.ifftn(psi_k)
 
         # V/2: nonlinear + memory potential half-step
-        rho = (psi.real ** 2 + psi.imag ** 2).astype(np.float32)
+        rho = (psi.real ** 2 + psi.imag ** 2).astype(xp.float32)
         if memory_active:
             V_mem = lambda_fast * y_fast + lambda_slow * y_slow
         else:
             V_mem = 0.0
         V_total = Lambda * rho + V_mem
-        psi = psi * np.exp(-1j * V_total * dt / 2)
+        psi = psi * xp.exp(-1j * V_total * dt / 2)
 
         # OU update for memory fields (Markovian embedding; exact per paper §4.1)
         if memory_active:
@@ -134,8 +148,8 @@ def run_anti_collapse(d: int, N: int, L: float, Lambda: float, Sigma_lambda: flo
 
         # Sample peak occasionally
         if step % 50 == 0:
-            cur_peak = float(np.max(rho))
-            cur_norm = float(np.sum(rho) * (L / N) ** d)
+            cur_peak = float(xp.max(rho))
+            cur_norm = float(xp.sum(rho) * (L / N) ** d)
             peaks.append(cur_peak)
             norms.append(cur_norm)
 
@@ -214,11 +228,12 @@ def main():
     # d=5: predicted ratio range 0.20 (1/d) to ~50 (factor-10)
     # Range chosen to discriminate between the two scaling hypotheses
 
+    # GPU enables larger grids — closer to the 3D reference resolution
     configs = [
-        # d=4 at N=24 (332k voxels per field; ~15 MB total)
-        {"d": 4, "N": 24, "Lambda": Lambda, "sigma_lambdas": [0.0, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 40.0]},
-        # d=5 at N=16 (1M voxels per field; ~50 MB total)
-        {"d": 5, "N": 16, "Lambda": Lambda, "sigma_lambdas": [0.0, 1.0, 2.0, 5.0, 10.0, 25.0, 50.0, 100.0]},
+        # d=4 at N=32 (1M voxels per field; ~50 MB total on GPU)
+        {"d": 4, "N": 32, "Lambda": Lambda, "sigma_lambdas": [0.0, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 40.0]},
+        # d=5 at N=20 (3.2M voxels per field; ~150 MB total)
+        {"d": 5, "N": 20, "Lambda": Lambda, "sigma_lambdas": [0.0, 1.0, 2.0, 5.0, 10.0, 25.0, 50.0, 100.0]},
     ]
 
     t_total = time.time()

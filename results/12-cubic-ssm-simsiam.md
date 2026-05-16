@@ -1,5 +1,9 @@
 # Result 12: cubic-state SimSiam without stop-gradient
 
+> **METHODOLOGICAL RETRACTION (2026-05-16, same Phase 9 wave).** This test uses synthetic clustered data without environmental coupling (no FDT-locked noise; only SGD batch stochasticity). The structural prediction it tests (cubic-nonlinearity-prevents-collapse) is about a property that may itself be sensitive to bath coupling. The test as designed isolates P3. A wave-2 redesign adds explicit noise injection respecting FDT correlator. Until that runs, the script's outcome is not a methodologically valid test of P6.3.
+
+---
+
 ## Prediction tested
 
 Interface: [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md), prediction **P6.3**.

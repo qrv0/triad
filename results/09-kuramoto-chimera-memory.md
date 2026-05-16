@@ -1,5 +1,16 @@
 # Result 09: memory-Kuramoto chimera stability vs memory timescale
 
+> **METHODOLOGICAL RETRACTION (2026-05-16, added in same Phase 9 wave).**
+> The test as published below is **structurally incoherent with the methodology of this repository**. It evaluates a degenerate P1+P2 sub-system ($\gamma_0=0$, $T=0$; P3 muted) instead of the full P1+P2+P3 triangle that the work's structural argument is about. The "tested (inconsistent)" status assignment for P10.1 is therefore **not a valid local falsification**; it is at most a finding about the isolated subsystem, which [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md) explicitly identifies as the abstraction the work argues against. P3 (coupling is the default; isolation is methodological) requires the bath to be active in any test that purports to evaluate the triangle's predictions. This test failed that requirement.
+>
+> The error was the AI assistant's (not a contributor's). The methodology was correctly identified in the repo; the assistant violated it by importing a default-isolation testing pattern without checking against the work's own commitments.
+>
+> The prediction P10.1 status is reverted from "tested (inconsistent)" to "**pending methodologically valid test (wave 1 retracted)**". A wave-2 redesigned test with $\gamma_0 > 0$ and $T > 0$ (FDT-locked bath active) is required. Until that test runs, P10.1 remains untested in any methodologically meaningful sense.
+>
+> The numerical content of this document is retained below for transparency about what was run, but its conclusions about P10.1 are withdrawn.
+
+---
+
 ## Prediction tested
 
 Interface: [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md), prediction **P10.1**.
