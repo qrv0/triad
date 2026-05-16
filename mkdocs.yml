@@ -40,6 +40,9 @@ exclude_docs: |
 theme:
   name: material
   language: en
+  custom_dir: _docs_assets/overrides
+  favicon: _docs_assets/favicon.svg
+  logo: _docs_assets/favicon.svg
 
   features:
     # Navigation

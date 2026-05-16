@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{# Social card / Open Graph image for rich link previews on Twitter, LinkedIn,
+   Reddit, Discord, etc. Uses the scale-up trajectory plot as the visual hook. #}
+{% block extrahead %}
+  {% set page_title = (page and page.title) or config.site_name %}
+  {% set page_url = (page and page.canonical_url) or config.site_url %}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page_title }} — {{ config.site_name }}">
+  <meta property="og:description" content="{{ config.site_description }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:image" content="{{ config.site_url }}assets/scale_up_val_ppl.png">
+  <meta property="og:image:width" content="1320">
+  <meta property="og:image:height" content="720">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ config.site_description }}">
+  <meta name="twitter:image" content="{{ config.site_url }}assets/scale_up_val_ppl.png">
+
+  {# Theme color for mobile browser chrome #}
+  <meta name="theme-color" content="#3949ab" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a237e" media="(prefers-color-scheme: dark)">
+{% endblock %}
+
+{# Announcement bar highlighting the most recent significant finding.
+   Dismissible via the announce.dismiss feature. #}
+{% block announce %}
+  <strong>New empirical finding:</strong>
+  at 70M parameters on enwik8, the structural anti-collapse mechanism prevented catastrophic optimization failure
+  — &nbsp;<a href="{{ config.site_url }}results/08-optimization-collapse-empirical/" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">read the cross-substrate empirical instance →</a>
+{% endblock %}
