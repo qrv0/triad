@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "mnsm: Memory-Nonlinear State Models"
+abstract: >-
+  A nonlinear extension of structured state space models, derived from three
+  principles of self-referential field theory. The auxiliary-field memory
+  architecture is mathematically equivalent to the state representation of
+  S4, Mamba, and RWKV. The equation extends those architectures with nonlinear
+  self-interaction in the state, anti-collapse via temporal memory lag,
+  spontaneous emergence of discrete structure from continuous substrate, and
+  fluctuation-dissipation-locked stochastic regularization.
+authors:
+  - alias: "qrv0"
+type: software
+version: "0.1.0"
+date-released: 2026-05-15
+license: MIT
+keywords:
+  - nonlinear-schrodinger
+  - state-space-models
+  - structural-realism
+  - sequence-modeling
+  - memory-augmented-dynamics
+  - anti-collapse
+  - bravais-selection
+  - fluctuation-dissipation
+  - cross-domain
+  - cosmological-expansion
+url: "https://github.com/qrv0/mnsm"
+repository-code: "https://github.com/qrv0/mnsm"
