@@ -91,7 +91,6 @@ different as 3D field dynamics and neural network optimization.*
 | [`experiments/`](experiments/) | Scripts that reproduce paper figures |
 | [`paper/`](paper/) | The full manuscript |
 | [`tests/`](tests/) | Conservation, FDT, anti-collapse sanity tests |
-| [`scripts/`](scripts/) | Asset generation: hero animation, trajectory plots |
 | [`assets/`](assets/) | Visual assets referenced in documentation (GIFs, plots) |
 
 ---

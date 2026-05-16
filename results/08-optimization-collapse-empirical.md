@@ -261,11 +261,4 @@ training histories are written incrementally to:
 - `outputs/scale_up/memnls/history.json`
 - `outputs/scale_up/xformer/history.json`
 
-Plots can be regenerated with:
-
-```bash
-python scripts/generate_trajectory_plots.py
-```
-
-Random seed is fixed at 42; reproduction is deterministic on identical
-hardware.
+Random seed is fixed at 42; reproduction is deterministic on identical hardware.
