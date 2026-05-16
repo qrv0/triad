@@ -1,6 +1,8 @@
 # The six criteria
 
-This document states the six criteria by which structural theories are evaluated and presents the work's self-assessment against each. The criteria are drawn from structural realism (Worrall 1989; Ladyman & Ross 2007), process metaphysics (Whitehead 1929), and the broader literature on theory evaluation outside strict falsificationism (Cartwright 1983; Lakatos 1970).
+This document states the six criteria by which the work is evaluated and presents the self-assessment against each. The criteria are derived from the methodological frame in [`01-structural-realism.md`](01-structural-realism.md): the work makes a structural claim, the structural claim is evaluated by criteria appropriate to a structural theory, and the criteria are the minimum set sufficient to determine whether the structural form is internally consistent, externally reproducible, generatively productive, cross-domain coherent, parsimonious, and comprehensive.
+
+Each criterion is stated as a structural requirement, then the work is assessed against it. The criteria themselves are derived from what a structural theory must satisfy in order to count as a structural theory at all; the prior-art credit (Worrall 1989; Ladyman & Ross 2007; Cartwright 1983; Lakatos 1970; Whitehead 1929) is acknowledged at the References block. The criteria do not rest on the authority of those authors.
 
 ## Criterion 1: Internal mathematical consistency
 
@@ -101,6 +103,14 @@ Each reduction has been independently developed in its corresponding sub-field. 
 The six criteria are satisfied. The work, on its own self-assessment, succeeds by the standards of a structural-realist evaluation. The reader is asked to perform their own assessment and compare; the criteria are stated above to make this comparison feasible.
 
 The criteria are not the only possible standards for evaluating the work, but they are the standards appropriate to the methodological frame the work adopts. A reader who finds the methodological frame itself unconvincing, who insists on strict Popperian falsification of the global structural claim, will find the work's self-assessment unconvincing for reasons that are independent of the criteria. The disagreement at that level is methodological, not empirical, and is acknowledged in [`02-limits-of-falsification.md`](02-limits-of-falsification.md).
+
+## Why these criteria and not others
+
+The six criteria are not arbitrary. Each addresses a distinct structural property that a non-trivial theory must satisfy.
+
+Internal mathematical consistency is non-negotiable; without it the theory is mathematically defective and no further evaluation matters. Reproducibility is the externalization of internal consistency: without it, the work cannot be evaluated by anyone other than its author. Generative scope distinguishes a productive theory from a stipulation: a stipulation predicts what it was told to predict; a generative theory predicts more than its inputs demand. Cross-domain coherence is what makes structural realism operational: a structural form that appears only in the system it was designed for is not structurally robust; a form that appears across multiple substrates is. Parsimony rules out theories that derive too little from too many axioms. Comprehensiveness rules out theories that fail to recover known behavior in the limits where established equations apply.
+
+Removing any one criterion produces a recognizable failure mode of theory. Removing internal consistency permits mathematically broken work. Removing reproducibility permits private results. Removing generative scope permits sterile restatement. Removing cross-domain coherence permits substrate-locked metaphor. Removing parsimony permits unconstrained model-fitting. Removing comprehensiveness permits theories that contradict established physics in regimes where established physics is reliable. The six together are the minimum set that admits none of those failure modes; the work is evaluated against this minimum.
 
 ## References
 
