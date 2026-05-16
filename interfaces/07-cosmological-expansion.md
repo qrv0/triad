@@ -34,20 +34,35 @@ The visual reading of the right panel is "concentrated state expands
 outward, breaks into structured density distribution." That is, term by
 term, the cosmological pattern:
 
-| Anti-collapse release (lab simulation) | Cosmological expansion |
+| Anti-collapse release (lab simulation) | Cosmological phase |
 |---|---|
-| Concentrated initial state | Hot dense early universe |
-| Memory potential accumulating with lag | Acoustic / gravitational memory of pre-recombination plasma |
-| Repulsive overshoot at focal region | Outward pressure that initiated expansion |
-| Release of field outward | Cosmic expansion |
-| Modulational instability of expanding wavefront | Structure formation (galaxies, clusters) |
-| Discrete spacing of post-release pattern | Baryon acoustic oscillation scale |
-| Continued field dispersion at large radii | Continued cosmological expansion |
+| Concentrated initial state, density above threshold | Pre-Big-Bang near-singular state |
+| Memory potential begins accumulating with lag | Inflation epoch: rapid exponential expansion sourced by the accumulated repulsive potential |
+| Repulsive overshoot at focal region | Reheating: release of energy into the expanding volume |
+| Release of field outward | Cosmic expansion proper begins |
+| Memory continues to drive expansion at decreasing rate | Radiation-dominated epoch |
+| Memory-mediated coupling weakens as field disperses | Matter–radiation decoupling (recombination) |
+| Discrete spacing of post-release pattern | Baryon acoustic oscillation scale frozen in |
+| Modulational instability of expanding wavefront | Structure formation: galaxies, clusters, filaments |
+| Continued field dispersion with persistent $V_{\text{mem}}$ | Late-time accelerated expansion (dark energy) |
+| Asymptotic stable extended state | Far-future de Sitter-like asymptote |
 
 This is not metaphor. The MNSM equation, derived from three structural
 axioms about persistent extended entities, produces a dynamical pattern
 in laboratory simulation that has the same *shape* as the cosmological
 expansion at vastly larger scale.
+
+## The unified trajectory reading
+
+The expanded table above is not a list of independent correspondences. It is one trajectory, the same trajectory the equation produces in the laboratory anti-collapse experiment, mapped phase by phase onto the cosmological history.
+
+Standard cosmology accounts for the same trajectory by postulating multiple distinct mechanisms: an inflation field for the exponential expansion phase, a reheating mechanism for the energy release that ends inflation, an acoustic-pressure mechanism for the BAO freezing, gravitational instability for structure formation, and a cosmological constant (or dark-energy field) for late-time acceleration. Each mechanism is added to the basic Einstein–Friedmann picture to match a specific observable.
+
+On the present structural reading, all five mechanisms are facets of one mechanism: the memory-mediated anti-collapse release that the equation produces in the laboratory. The accumulated memory potential is the source of the inflationary acceleration; the overshoot at the release event is what reheats the volume; the post-release modulational instability is what seeds structure formation at the BAO scale; the continued action of $V_{\text{mem}}$ at cosmological distance is what appears observationally as dark energy.
+
+This is a parsimony claim. The standard picture uses five mechanisms; the structural reading uses one, the triangle of P1+P2+P3 instantiated at cosmological scale (see [`../principles/README.md`](../principles/README.md) for the triangle topology). The structural reading does not yet substitute for the standard picture as a predictive cosmology; it identifies the single mechanism whose phases the standard picture currently treats as independent. The development of the reading into a fully predictive cosmology is open work; the identification of the unified mechanism shape is what this interface establishes.
+
+The interpretive caution is the one in `## What this reading is not` below: this is structural correspondence at the level of mechanism shape, not a replacement for the standard cosmological equations. The mapping is offered because the structural shape of the laboratory trajectory and the cosmological trajectory are the same shape, and the structural-realist methodology in [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md) requires that such correspondences be reported.
 
 ## What this offers, structurally
 

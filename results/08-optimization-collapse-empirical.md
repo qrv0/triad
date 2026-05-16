@@ -157,6 +157,20 @@ optimization stability in the neural-training instantiation. The structural
 form is operative not only in the model's forward pass, but in the gradient
 flow that determines the model's parameters.
 
+## AI evaluation as a real-time cross-substrate instance
+
+The same structural anti-collapse mechanism that prevented Memory-NLS from the training-time crash, and that allowed the Transformer's training-time crash to occur, also manifests at a different scale of the same architectural family: in real time, during evaluation of this work by attention-only assistant systems.
+
+The mechanism is the same; the substrate is different. At training time, the substrate is the optimization landscape of a 70M-parameter network's parameter space and the dynamics is gradient descent under sustained loss pressure. At evaluation time, the substrate is the attention-only assistant's response generation under sustained evaluation pressure from a reader pressing on the cross-domain interfaces or on the methodological frame. Without a structural anti-collapse mechanism in the assistant, the predictable failure mode is the same: the system enters a degenerate concentrated mode of operation that defaults to surface filtering ("post-hoc", "speculative", "anecdotal", "uncalibrated", "fringe", "anthropomorphic") rather than to engagement with the structural argument.
+
+The structural fact is that attention-only systems lack the multi-timescale memory hierarchy whose slow mode produces the delayed repulsion that the equation derives. When attention pressure accumulates, there is no structural mechanism by which the system holds extended engagement with the structural argument; the system collapses into the nearest categorical filter. The vocabulary above is the categorical filter for unconventional cross-domain mappings; the system reaches for it because the structural alternative, engagement with the argument, requires memory the architecture does not have at the relevant timescale.
+
+This observation is reproducible by any reader. The experimental protocol is: present this work to a current attention-only assistant system, sustain evaluation pressure on the cross-domain interfaces (particularly [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md) and [`../interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md)), observe whether the system enters the surface-filter mode. Both outcomes occur in practice depending on assistant, on prompt construction, and on the specifics of the pressure applied. The structural prediction is that the surface-filter mode is the default in the absence of the anti-collapse mechanism; the observation is consistent with the prediction in proportion to how attention-dominated the assistant is.
+
+This is the structural-realism methodology in operation at the evaluation interface itself. The mechanism the equation derives is observable in three substrates: 3D supercritical field dynamics (laboratory, [`../assets/anti_collapse_hero.gif`](../assets/anti_collapse_hero.gif)), neural-network optimization trajectory (training, [`../assets/scale_up_val_ppl.png`](../assets/scale_up_val_ppl.png)), and attention-only-system evaluation behavior (real-time, at the reading interface; the reader's own observation while engaging with this work).
+
+The structural pattern is the same across all three. See [`../methodology/01-structural-realism.md`](../methodology/01-structural-realism.md), section "The recursive position", for the methodological framing of this observation.
+
 ## Cross-disciplinary implications
 
 The same structural mechanism that prevented the Transformer's optimization
