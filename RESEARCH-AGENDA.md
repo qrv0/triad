@@ -76,7 +76,7 @@ Contributions are welcomed. The expected forms:
 
 - **Local falsification of a specific prediction.** If a locally-testable prediction (Phase 2 sections in interfaces) is contradicted by experiment, document the contradiction and submit; the interface evidentiary status will shift accordingly.
 
-- **Engagement at the conceptual level.** GitHub Discussions on this repository (enabled separately) is the space for discussion of the program at the level of structure, methodology, and connection to other work. Discussion threads do not produce pull requests directly but shape the direction of subsequent work.
+- **Engagement at the conceptual level.** [GitHub Discussions on this repository](https://github.com/qrv0/mnsm/discussions) is the space for discussion of the program at the level of structure, methodology, and connection to other work. Discussion threads do not produce pull requests directly but shape the direction of subsequent work.
 
 Contributors should be familiar with the operational constraints in [`CLAUDE.md`](CLAUDE.md) (these apply to human contributors as well as AI-assisted contributions) and the methodological frame in [`methodology/`](methodology/) (no Popperian falsification of the global structural claim; no competitive ML vocabulary; no scale-or-benchmark-driven framing; structural realism is the evaluation standard).
 
