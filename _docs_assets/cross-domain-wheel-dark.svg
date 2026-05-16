@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 0 720 600" role="img" aria-labelledby="wheel-title wheel-desc">
+  <title id="wheel-title">Cross-domain wheel — one equation, seven instantiations</title>
+  <desc id="wheel-desc">A radial diagram with the Memory-NLS equation at the centre and seven cross-domain substrates around it: NLS fields, baryon acoustic oscillations, cymatics, gamma neural entrainment, archaeoacoustic resonance, state space models, and cosmological expansion.</desc>
+
+  <defs>
+    <style>
+      .text-color  { fill:   #e7e5e4; }
+      .stroke-color { stroke: #e7e5e4; }
+      .accent       { stroke: #5eead4; fill: none; }
+      .accent-fill  { fill:   #5eead4; }
+      .bg-color     { fill:   #0d0d0d; }
+      .spoke        { stroke: #e7e5e4; stroke-width: 0.9; opacity: 0.22; fill: none; }
+      .ring-outer   { stroke: #e7e5e4; stroke-width: 0.7; opacity: 0.12; fill: none; }
+      .ring-inner   { stroke: #5eead4; stroke-width: 1.5; opacity: 0.55; fill: none; }
+      .pulse        { stroke: #5eead4; stroke-width: 1.1; fill: none; }
+      .node-bg      { fill: #0d0d0d; stroke: #e7e5e4; stroke-width: 1.5; }
+      .node-hover-bg { fill: #5eead4; opacity: 0; transition: opacity 0.22s ease; }
+      .node-icon    { stroke: #e7e5e4; stroke-width: 1.6; fill: none;
+                       stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.22s ease; }
+      .node-icon.filled { fill: #e7e5e4; stroke: none; transition: fill 0.22s ease; }
+      .label        { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                       font-size: 11px; font-weight: 600; letter-spacing: 0.10em;
+                       text-transform: uppercase; fill: #e7e5e4; opacity: 0.78;
+                       dominant-baseline: middle; transition: fill 0.22s ease, opacity 0.22s ease; }
+      .core-glyph   { font-family: "STIX Two Math", "Latin Modern Math", "Cambria Math", "Times New Roman", serif;
+                       font-size: 88px; font-style: italic; font-weight: 400; fill: #5eead4;
+                       text-anchor: middle; dominant-baseline: central; }
+      .node         { cursor: pointer; }
+      .node:hover .node-hover-bg { opacity: 1; }
+      .node:hover .node-icon     { stroke: #0d0d0d; }
+      .node:hover .node-icon.filled { fill: #0d0d0d; }
+      .node:hover .label         { fill: #5eead4; opacity: 1; }
+    </style>
+  </defs>
+
+  <!-- background reference rings -->
+  <circle class="ring-outer" cx="300" cy="300" r="200"/>
+  <circle class="ring-inner" cx="300" cy="300" r="72"/>
+
+  <!-- expanding pulse rings: visual metaphor for cross-substrate propagation -->
+  <circle class="pulse" cx="300" cy="300" opacity="0">
+    <animate attributeName="r"       from="74"   to="200" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.45;0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="pulse" cx="300" cy="300" opacity="0">
+    <animate attributeName="r"       from="74"   to="200" dur="6s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.45;0" dur="6s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="pulse" cx="300" cy="300" opacity="0">
+    <animate attributeName="r"       from="74"   to="200" dur="6s" begin="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.45;0" dur="6s" begin="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- spokes: inner ring (r=72) to node inner edge (r=166) -->
+  <line class="spoke" x1="300.0" y1="228.0" x2="300.0" y2="134.0"/>
+  <line class="spoke" x1="356.3" y1="255.1" x2="429.8" y2="196.6"/>
+  <line class="spoke" x1="370.2" y1="316.0" x2="461.8" y2="336.9"/>
+  <line class="spoke" x1="331.3" y1="364.9" x2="372.0" y2="449.5"/>
+  <line class="spoke" x1="268.7" y1="364.9" x2="228.0" y2="449.5"/>
+  <line class="spoke" x1="229.8" y1="316.0" x2="138.2" y2="336.9"/>
+  <line class="spoke" x1="243.7" y1="255.1" x2="170.2" y2="196.6"/>
+
+  <!-- centre glyph -->
+  <text class="core-glyph" x="300" y="304">Ψ</text>
+
+  <!-- ============================================================ -->
+  <!-- NODES                                                        -->
+  <!-- Each node at radius 200 from centre, in a circle of r=34.    -->
+  <!-- Labels positioned per-quadrant: middle (top/bottom),         -->
+  <!-- start (right side), end (left side).                         -->
+  <!-- ============================================================ -->
+
+  <!-- 1. NLS Fields — top (θ=-90°), node (300, 100) -->
+  <a class="node" href="interfaces/01-other-nls-systems/" aria-label="NLS fields">
+    <circle class="node-bg" cx="300" cy="100" r="34"/>
+    <circle class="node-hover-bg" cx="300" cy="100" r="34"/>
+    <g transform="translate(300 100)">
+      <path class="node-icon" d="M -15 0 C -10 -11 -5 -11 0 0 C 5 11 10 11 15 0"/>
+    </g>
+    <text class="label" x="300" y="50" text-anchor="middle">NLS FIELDS</text>
+  </a>
+
+  <!-- 2. BAO Cosmology — top-right (θ≈-38.6°), node (456, 175) -->
+  <a class="node" href="interfaces/02-bao-cosmology/" aria-label="Baryon acoustic oscillations">
+    <circle class="node-bg" cx="456" cy="175" r="34"/>
+    <circle class="node-hover-bg" cx="456" cy="175" r="34"/>
+    <g transform="translate(456 175)">
+      <path class="node-icon filled" d="M 0 -14 L 3.6 -3.6 L 14 0 L 3.6 3.6 L 0 14 L -3.6 3.6 L -14 0 L -3.6 -3.6 Z"/>
+      <line class="node-icon" x1="0" y1="-17" x2="0" y2="-20"/>
+      <line class="node-icon" x1="0" y1="17" x2="0" y2="20"/>
+      <line class="node-icon" x1="-17" y1="0" x2="-20" y2="0"/>
+      <line class="node-icon" x1="17" y1="0" x2="20" y2="0"/>
+    </g>
+    <text class="label" x="500" y="168" text-anchor="start">BAO</text>
+    <text class="label" x="500" y="184" text-anchor="start">COSMOLOGY</text>
+  </a>
+
+  <!-- 3. Cymatics — right (θ≈12.9°), node (495, 345) -->
+  <a class="node" href="interfaces/03-chladni-cymatics/" aria-label="Chladni cymatics">
+    <circle class="node-bg" cx="495" cy="345" r="34"/>
+    <circle class="node-hover-bg" cx="495" cy="345" r="34"/>
+    <g transform="translate(495 345)">
+      <path class="node-icon" d="M 0 -13 L 11.3 -6.5 L 11.3 6.5 L 0 13 L -11.3 6.5 L -11.3 -6.5 Z"/>
+      <path class="node-icon" d="M 0 -6.5 L 5.6 -3.3 L 5.6 3.3 L 0 6.5 L -5.6 3.3 L -5.6 -3.3 Z"/>
+      <circle class="node-icon filled" cx="0" cy="0" r="1.5"/>
+    </g>
+    <text class="label" x="539" y="345" text-anchor="start">CYMATICS</text>
+  </a>
+
+  <!-- 4. Gamma Neural — bottom-right (θ≈64.3°), node (387, 480) -->
+  <a class="node" href="interfaces/04-gamma-entrainment/" aria-label="Gamma frequency neural entrainment">
+    <circle class="node-bg" cx="387" cy="480" r="34"/>
+    <circle class="node-hover-bg" cx="387" cy="480" r="34"/>
+    <g transform="translate(387 480)">
+      <path class="node-icon" d="M -14 0 Q -11.5 -8 -9 0 Q -6.5 8 -4 0 Q -1.5 -8 1 0 Q 3.5 8 6 0 Q 8.5 -8 11 0 Q 13 4 14 0"/>
+    </g>
+    <text class="label" x="387" y="528" text-anchor="middle">GAMMA</text>
+    <text class="label" x="387" y="544" text-anchor="middle">NEURAL</text>
+  </a>
+
+  <!-- 5. Archaeoacoustic — bottom-left (θ≈115.7°), node (213, 480) -->
+  <a class="node" href="interfaces/05-archaeoacoustic-resonance/" aria-label="Archaeoacoustic resonance">
+    <circle class="node-bg" cx="213" cy="480" r="34"/>
+    <circle class="node-hover-bg" cx="213" cy="480" r="34"/>
+    <g transform="translate(213 480)">
+      <!-- lintel -->
+      <path class="node-icon filled" d="M -14 -6 L 14 -6 L 14 -2 L -14 -2 Z"/>
+      <!-- three columns -->
+      <path class="node-icon filled" d="M -11 -2 L -7 -2 L -7 12 L -11 12 Z"/>
+      <path class="node-icon filled" d="M -2 -2 L 2 -2 L 2 12 L -2 12 Z"/>
+      <path class="node-icon filled" d="M 7 -2 L 11 -2 L 11 12 L 7 12 Z"/>
+      <!-- ground -->
+      <line class="node-icon" x1="-14" y1="13" x2="14" y2="13"/>
+    </g>
+    <text class="label" x="213" y="528" text-anchor="middle">ARCHAEO-</text>
+    <text class="label" x="213" y="544" text-anchor="middle">ACOUSTIC</text>
+  </a>
+
+  <!-- 6. State Space Models — left (θ≈167.1°), node (105, 345) -->
+  <a class="node" href="interfaces/06-state-space-models/" aria-label="State space models">
+    <circle class="node-bg" cx="105" cy="345" r="34"/>
+    <circle class="node-hover-bg" cx="105" cy="345" r="34"/>
+    <g transform="translate(105 345)">
+      <rect class="node-icon" x="-11" y="-11" width="22" height="22" rx="1"/>
+      <line class="node-icon" x1="-11" y1="-3.66" x2="11" y2="-3.66"/>
+      <line class="node-icon" x1="-11" y1="3.66"  x2="11" y2="3.66"/>
+      <line class="node-icon" x1="-3.66" y1="-11" x2="-3.66" y2="11"/>
+      <line class="node-icon" x1="3.66"  y1="-11" x2="3.66"  y2="11"/>
+    </g>
+    <text class="label" x="61" y="338" text-anchor="end">STATE SPACE</text>
+    <text class="label" x="61" y="354" text-anchor="end">MODELS</text>
+  </a>
+
+  <!-- 7. Cosmological Expansion — top-left (θ≈218.6°), node (144, 175) -->
+  <a class="node" href="interfaces/07-cosmological-expansion/" aria-label="Cosmological expansion">
+    <circle class="node-bg" cx="144" cy="175" r="34"/>
+    <circle class="node-hover-bg" cx="144" cy="175" r="34"/>
+    <g transform="translate(144 175)">
+      <circle class="node-icon filled" cx="0" cy="0" r="2"/>
+      <circle class="node-icon" cx="0" cy="0" r="6.5"/>
+      <circle class="node-icon" cx="0" cy="0" r="11" opacity="0.5"/>
+    </g>
+    <text class="label" x="100" y="168" text-anchor="end">COSMOLOGICAL</text>
+    <text class="label" x="100" y="184" text-anchor="end">EXPANSION</text>
+  </a>
+
+</svg>
