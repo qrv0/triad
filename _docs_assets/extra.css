@@ -614,6 +614,437 @@ body.long-form mjx-container {
 }
 
 /* ============================================================
+   DESIGNED COMPONENTS
+   Custom callouts, reference cards, pull quotes, tags, buttons.
+   Each component is opt-in via class; nothing here overrides
+   default Material rendering unless the class is present.
+   ============================================================ */
+
+/* ---------- Custom admonition types ---------------------------
+   Material renders `!!! methodology "title"` as
+     <div class="admonition methodology"><p class="admonition-title">...</p>
+   These rules style five domain-specific types:
+     methodology      : iris    : methodology-section pages
+     structural-claim : iris    : structural-realist claims (with weight)
+     prediction       : amber   : locally-testable predictions
+     recursive-position: teal   : the recursive-position discussion
+     retraction       : red     : methodological retraction notes
+   The amber/iris/red are tuned for sufficient contrast in both light
+   and dark mode without altering the body color of the callout. */
+
+.md-typeset .admonition.methodology,
+.md-typeset details.methodology {
+  border-color: var(--mnsm-accent-iris);
+  background: var(--mnsm-accent-iris-soft);
+}
+.md-typeset .admonition.methodology > .admonition-title,
+.md-typeset details.methodology > summary {
+  background: var(--mnsm-accent-iris-medium);
+  color: var(--mnsm-g-9);
+  border-bottom: 1px solid var(--mnsm-accent-iris);
+}
+[data-md-color-scheme="slate"] .md-typeset .admonition.methodology > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset details.methodology > summary {
+  color: var(--mnsm-g-1);
+}
+.md-typeset .admonition.methodology > .admonition-title::before,
+.md-typeset details.methodology > summary::before {
+  background-color: var(--mnsm-accent-iris);
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h11v12zM3 6v14c0 1.1.9 2 2 2h14v-2H5V6H3zm12-3v2h-5V3h5z'/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h11v12zM3 6v14c0 1.1.9 2 2 2h14v-2H5V6H3zm12-3v2h-5V3h5z'/></svg>");
+}
+
+.md-typeset .admonition.structural-claim,
+.md-typeset details.structural-claim {
+  border-color: var(--mnsm-accent-iris);
+  background: var(--mnsm-accent-iris-soft);
+  box-shadow: 0 0 0 1px var(--mnsm-accent-iris-medium) inset;
+}
+.md-typeset .admonition.structural-claim > .admonition-title,
+.md-typeset details.structural-claim > summary {
+  background: linear-gradient(to right, var(--mnsm-accent-iris-medium), var(--mnsm-accent-iris-soft));
+  color: var(--mnsm-g-9);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+[data-md-color-scheme="slate"] .md-typeset .admonition.structural-claim > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset details.structural-claim > summary {
+  color: var(--mnsm-g-1);
+}
+.md-typeset .admonition.structural-claim > .admonition-title::before,
+.md-typeset details.structural-claim > summary::before {
+  background-color: var(--mnsm-accent-iris);
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2L1 12h3v9h7v-6h2v6h7v-9h3L12 2z'/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2L1 12h3v9h7v-6h2v6h7v-9h3L12 2z'/></svg>");
+}
+
+.md-typeset .admonition.prediction,
+.md-typeset details.prediction {
+  border-color: var(--mnsm-accent-amber);
+  background: var(--mnsm-accent-amber-soft);
+}
+.md-typeset .admonition.prediction > .admonition-title,
+.md-typeset details.prediction > summary {
+  background: var(--mnsm-accent-amber-medium);
+  color: var(--mnsm-g-9);
+}
+[data-md-color-scheme="slate"] .md-typeset .admonition.prediction > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset details.prediction > summary {
+  color: var(--mnsm-g-1);
+}
+.md-typeset .admonition.prediction > .admonition-title::before,
+.md-typeset details.prediction > summary::before {
+  background-color: var(--mnsm-accent-amber);
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z'/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z'/></svg>");
+}
+
+.md-typeset .admonition.recursive-position,
+.md-typeset details.recursive-position {
+  border-color: var(--mnsm-accent-teal);
+  background: var(--mnsm-accent-teal-soft);
+}
+.md-typeset .admonition.recursive-position > .admonition-title,
+.md-typeset details.recursive-position > summary {
+  background: var(--mnsm-accent-teal-medium);
+  color: var(--mnsm-g-9);
+}
+[data-md-color-scheme="slate"] .md-typeset .admonition.recursive-position > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset details.recursive-position > summary {
+  color: var(--mnsm-g-1);
+}
+.md-typeset .admonition.recursive-position > .admonition-title::before,
+.md-typeset details.recursive-position > summary::before {
+  background-color: var(--mnsm-accent-teal);
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z'/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z'/></svg>");
+}
+
+.md-typeset .admonition.retraction,
+.md-typeset details.retraction {
+  border-color: var(--mnsm-accent-retract);
+  background: var(--mnsm-accent-retract-soft);
+  box-shadow: 0 0 0 1px var(--mnsm-accent-retract) inset;
+}
+.md-typeset .admonition.retraction > .admonition-title,
+.md-typeset details.retraction > summary {
+  background: var(--mnsm-accent-retract);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+.md-typeset .admonition.retraction > .admonition-title::before,
+.md-typeset details.retraction > summary::before {
+  background-color: #fff;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z'/></svg>");
+          mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z'/></svg>");
+}
+
+/* ---------- Reference card -----------------------------------
+   Inline reference treatment for citations:
+     <aside class="ref-card">
+       <strong>Eddington 1928</strong>
+       <span>The Nature of the Physical World</span>
+     </aside>
+   Or, when wrapped around an inline citation marker, shows as a
+   side-floated card on hover. */
+
+.md-typeset .ref-card {
+  display: block;
+  margin: 1.2rem 0;
+  padding: 0.85rem 1rem;
+  background: var(--md-default-bg-color--light);
+  border-left: 3px solid var(--md-default-fg-color--lighter);
+  border-radius: 2px;
+  font-size: 0.88em;
+  line-height: 1.55;
+  transition: border-left-color 0.22s cubic-bezier(0.32, 0.72, 0, 1),
+              background 0.22s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.md-typeset .ref-card:hover {
+  border-left-color: var(--mnsm-accent-teal);
+  background: var(--md-default-bg-color--lighter);
+}
+.md-typeset .ref-card strong {
+  display: block;
+  font-family: var(--md-text-font);
+  font-weight: 600;
+  font-size: 0.98em;
+  letter-spacing: -0.005em;
+  color: var(--md-typeset-color);
+  margin-bottom: 0.2rem;
+}
+.md-typeset .ref-card span,
+.md-typeset .ref-card em {
+  display: block;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+}
+.md-typeset .ref-card cite {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--lighter);
+  font-style: normal;
+}
+
+/* ---------- Pull quote with drop-cap -------------------------
+   Editorial pull-quote treatment. Use:
+     <blockquote class="pull-quote">First-letter is dropped...</blockquote>
+   The drop-cap applies only to the first character of the first
+   paragraph inside the blockquote. */
+
+.md-typeset blockquote.pull-quote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 2rem 1.5rem 2.5rem;
+  border-left: 4px solid var(--mnsm-accent-teal);
+  background: var(--md-default-bg-color--light);
+  font-family: var(--mnsm-serif-font);
+  font-size: 1.18em;
+  line-height: 1.65;
+  font-style: italic;
+  color: var(--md-typeset-color);
+  position: relative;
+  font-feature-settings: "onum";
+}
+
+.md-typeset blockquote.pull-quote::before {
+  content: "\201C";   /* left double-quote */
+  position: absolute;
+  top: -0.2em;
+  left: 0.4rem;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--mnsm-accent-teal);
+  font-style: normal;
+  font-family: var(--mnsm-serif-font);
+  opacity: 0.4;
+}
+
+.md-typeset blockquote.pull-quote p:first-of-type::first-letter {
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.95;
+  padding: 0.15rem 0.6rem 0 0;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--mnsm-accent-teal-darker);
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote.pull-quote p:first-of-type::first-letter {
+  color: var(--mnsm-accent-teal-light);
+}
+
+.md-typeset blockquote.pull-quote cite,
+.md-typeset blockquote.pull-quote footer {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.85em;
+  font-style: normal;
+  font-family: var(--md-text-font);
+  color: var(--md-default-fg-color--light);
+  letter-spacing: 0.02em;
+}
+.md-typeset blockquote.pull-quote cite::before,
+.md-typeset blockquote.pull-quote footer::before {
+  content: "\2014\00A0";   /* em-dash, escaped in CSS so no U+2014 in source */
+  opacity: 0.5;
+}
+
+/* ---------- Tag / chip system --------------------------------
+   Small inline chips used for status, classification, prediction IDs.
+     <span class="tag tag--prediction">P14.2</span>
+     <span class="tag tag--methodology">methodology</span>
+     <span class="tag tag--accent">tested</span>
+     <span class="tag tag--retract">retracted</span> */
+
+.md-typeset .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  margin: 0 0.15em;
+  border-radius: 999px;
+  font-size: 0.74em;
+  font-weight: 600;
+  font-family: var(--md-text-font);
+  font-feature-settings: "tnum";
+  letter-spacing: 0.02em;
+  background: var(--md-default-bg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  border: 1px solid var(--md-default-bg-color--lightest);
+  transition: background 0.22s cubic-bezier(0.32, 0.72, 0, 1);
+  vertical-align: middle;
+  text-decoration: none;
+}
+.md-typeset .tag:hover {
+  background: var(--md-default-bg-color--lighter);
+}
+
+.md-typeset .tag--accent {
+  background: var(--mnsm-accent-teal-soft);
+  color: var(--mnsm-accent-teal-darker);
+  border-color: var(--mnsm-accent-teal-medium);
+}
+[data-md-color-scheme="slate"] .md-typeset .tag--accent {
+  color: var(--mnsm-accent-teal-light);
+}
+
+.md-typeset .tag--methodology {
+  background: var(--mnsm-accent-iris-soft);
+  color: var(--mnsm-accent-iris-darker);
+  border-color: var(--mnsm-accent-iris-medium);
+}
+[data-md-color-scheme="slate"] .md-typeset .tag--methodology {
+  color: var(--mnsm-accent-iris-light);
+}
+
+.md-typeset .tag--prediction {
+  background: var(--mnsm-accent-amber-soft);
+  color: var(--mnsm-accent-amber-darker);
+  border-color: var(--mnsm-accent-amber-medium);
+  font-family: var(--md-code-font);
+  letter-spacing: 0;
+}
+[data-md-color-scheme="slate"] .md-typeset .tag--prediction {
+  color: var(--mnsm-accent-amber-light);
+}
+
+.md-typeset .tag--retract {
+  background: var(--mnsm-accent-retract-soft);
+  color: var(--mnsm-accent-retract);
+  border-color: var(--mnsm-accent-retract);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.7em;
+}
+
+/* ---------- Generic premium card -----------------------------
+   Reusable card surface used for explorer panels, suggested-next,
+   sidebar-feature blocks. Subtle elevation that lifts on hover. */
+
+.md-typeset .mnsm-card {
+  display: block;
+  padding: 1.2rem 1.4rem;
+  border-radius: 6px;
+  background: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-bg-color--lightest);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02),
+              0 0 0 0 rgba(0, 0, 0, 0);
+  transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1),
+              box-shadow 0.28s cubic-bezier(0.32, 0.72, 0, 1),
+              border-color 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  text-decoration: none;
+  color: var(--md-typeset-color);
+}
+
+.md-typeset .mnsm-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-default-fg-color--lightest);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04),
+              0 12px 24px rgba(0, 0, 0, 0.04),
+              0 0 0 1px var(--mnsm-accent-teal-medium);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .mnsm-card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
+              0 0 0 0 rgba(0, 0, 0, 0);
+}
+[data-md-color-scheme="slate"] .md-typeset .mnsm-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5),
+              0 12px 24px rgba(0, 0, 0, 0.4),
+              0 0 0 1px var(--mnsm-accent-teal-medium);
+}
+
+.md-typeset .mnsm-card > h3,
+.md-typeset .mnsm-card > h4 {
+  margin-top: 0;
+}
+
+.md-typeset .mnsm-card__eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mnsm-accent-teal-darker);
+  margin-bottom: 0.5rem;
+}
+[data-md-color-scheme="slate"] .md-typeset .mnsm-card__eyebrow {
+  color: var(--mnsm-accent-teal-light);
+}
+
+/* ---------- Refined button styles ----------------------------
+   Polishes Material's .md-button with subtle gradient bg, refined
+   hover with shadow + transform, focus ring matching accent.
+   .md-button--primary stays the high-emphasis option; .md-button is
+   the secondary. */
+
+.md-typeset .md-button {
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  padding: 0.65em 1.3em;
+  border-radius: 4px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color--light);
+  color: var(--md-typeset-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.22s cubic-bezier(0.32, 0.72, 0, 1),
+              box-shadow 0.22s cubic-bezier(0.32, 0.72, 0, 1),
+              background 0.22s cubic-bezier(0.32, 0.72, 0, 1),
+              border-color 0.22s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.md-typeset .md-button:hover {
+  transform: translateY(-1px);
+  background: var(--md-default-bg-color--lighter);
+  border-color: var(--mnsm-accent-teal-medium);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06),
+              0 8px 16px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+}
+
+.md-typeset .md-button:focus-visible {
+  outline: 2px solid var(--mnsm-accent-teal);
+  outline-offset: 2px;
+}
+
+.md-typeset .md-button--primary {
+  background: linear-gradient(180deg,
+              var(--mnsm-accent-teal) 0%,
+              var(--mnsm-accent-teal-darker) 100%);
+  color: #fff;
+  border-color: var(--mnsm-accent-teal-darker);
+  box-shadow: 0 1px 2px rgba(13, 148, 136, 0.16),
+              0 4px 12px rgba(13, 148, 136, 0.06);
+}
+
+.md-typeset .md-button--primary:hover {
+  background: linear-gradient(180deg,
+              var(--mnsm-accent-teal-light) 0%,
+              var(--mnsm-accent-teal) 100%);
+  color: #fff;
+  border-color: var(--mnsm-accent-teal);
+  box-shadow: 0 2px 4px rgba(13, 148, 136, 0.24),
+              0 8px 20px rgba(13, 148, 136, 0.18);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary {
+  background: linear-gradient(180deg,
+              var(--mnsm-accent-teal-light) 0%,
+              var(--mnsm-accent-teal) 100%);
+  color: var(--mnsm-g-11);
+  border-color: var(--mnsm-accent-teal);
+}
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary:hover {
+  background: var(--mnsm-accent-teal-light);
+  color: var(--mnsm-g-11);
+}
+
+/* ============================================================
    LANDING PAGE : Premium lab layout
    ============================================================ */
 
