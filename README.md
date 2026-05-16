@@ -140,10 +140,20 @@ is mathematically identical to the diagonal state space model update of S4, S5, 
 
 ---
 
+## Pre-trained models on HuggingFace
+
+The 70M-parameter checkpoints from the optimization-collapse experiment are
+published on HuggingFace and loadable in seconds:
+
+- **Memory-NLS**: [`qvr0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8) — final val perplexity 4.27, monotonic stable trajectory
+- **Transformer**: [`qvr0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8) — final val perplexity 4.87, includes the catastrophic optimization collapse documented in [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
+
+Each repo contains the safetensors weights, configuration JSON, and self-contained modeling code so the model loads without requiring this full repository. See each model card for usage examples.
+
 ## Reproduce the paper
 
 ```bash
-git clone <this repo>
+git clone https://github.com/qrv0/mnsm
 cd mnsm
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt

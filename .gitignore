@@ -55,8 +55,9 @@ paper/figures/*.png
 paper/figures/*.pdf
 !paper/figures/.gitkeep
 
-# HuggingFace cache that may end up here
+# HuggingFace cache and staging
 .cache/
+.hf_staging/
 
 # Secrets — never commit these
 .env
