@@ -1,8 +1,10 @@
 /* ============================================================
    Path-page enhancements:
+   0. Long-form serif body class
    1. Scroll progress bar (fixed at top of viewport)
-   2. Reading-time computation (word count → minutes)
+   2. Reading-time computation (word count : minutes)
    3. Active-section scroll-spy on the TOC sidebar
+   4. Reveal-on-scroll via IntersectionObserver
    ============================================================ */
 
 document$.subscribe(() => {
@@ -35,11 +37,58 @@ document$.subscribe(() => {
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
     bar.style.width = `${pct}%`;
+    // Bar fades in once user has scrolled past 60px; hides again near top
+    if (scrollTop > 60) {
+      bar.classList.add('is-active');
+    } else {
+      bar.classList.remove('is-active');
+    }
   };
 
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress, { passive: true });
   updateProgress();
+
+  /* ----- 4. Reveal-on-scroll via IntersectionObserver -----
+     Targets section headings, large figures, callouts, and cards in
+     long-form content. Selection limited to long-form pages so that
+     the landing keeps its own bespoke animations. */
+
+  const prefersReducedMotion =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion && 'IntersectionObserver' in window && isLongForm) {
+    const revealTargets = document.querySelectorAll(
+      '.md-content h2, .md-content h3, ' +
+      '.md-content .admonition, .md-content details, ' +
+      '.md-content blockquote.pull-quote, .md-content .mnsm-card, ' +
+      '.md-content .ref-card, .md-content table, ' +
+      '.md-content mjx-container[display="true"], ' +
+      '.md-content figure'
+    );
+
+    revealTargets.forEach((el) => {
+      el.classList.add('reveal');
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.05,
+      }
+    );
+
+    revealTargets.forEach((el) => observer.observe(el));
+  }
 
   /* ----- 2. Reading-time for path pages ----- */
   const pathHero = document.querySelector('.path-hero');
@@ -47,7 +96,7 @@ document$.subscribe(() => {
     const body = document.querySelector('.path-body');
     if (body) {
       const text = body.innerText || body.textContent || '';
-      // strip code/math heuristically — count alphabetic word tokens only
+      // strip code/math heuristically: count alphabetic word tokens only
       const words = text.match(/[\p{L}]+/gu) || [];
       const wpm = 230;  // research-reading pace, includes pausing for equations
       const minutes = Math.max(1, Math.round(words.length / wpm));

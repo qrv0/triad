@@ -17,6 +17,24 @@
                   Consolas, monospace;
   --mnsm-serif-font: "Newsreader", Charter, "Iowan Old Style",
                      "Source Serif 4", Cambria, Georgia, serif;
+
+  /* Cubic-bezier easing system. Used across all transitions so the
+     site has a coherent motion language rather than mixing
+     ease/ease-in-out/linear ad-hoc.
+       snap   : quick attention-grabbing response (hover, click feedback)
+       smooth : default for most transitions, gentle deceleration
+       gentle : slower, used for entrance and large transforms
+       bounce : subtle overshoot for emphasis (limited use) */
+  --easing-snap:   cubic-bezier(0.32, 0.72, 0, 1);
+  --easing-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --easing-gentle: cubic-bezier(0.16, 1, 0.3, 1);
+  --easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Duration scale */
+  --dur-tap:   140ms;
+  --dur-quick: 220ms;
+  --dur-mid:   320ms;
+  --dur-slow:  520ms;
 }
 
 /* ---------- 12-stop OKLCH graphite scale ---------------------------------
@@ -2011,18 +2029,63 @@ body[data-md-color-scheme] .md-main .md-content article.md-content__inner {
   .path-hero h1 { font-size: 1.9rem; }
 }
 
-/* ---------- Scroll progress bar (all pages) ----------------- */
+/* ---------- Scroll progress bar (all pages) -----------------
+   Refined: a gradient using the accent triad (iris -> teal -> amber),
+   hidden when scrolling is at the top, smoother width transitions via
+   the snap easing, slightly thicker (3px) for visibility on retina. */
 
 .scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #6366f1, #14b8a6, #f59e0b);
+  height: 3px;
+  background: linear-gradient(90deg,
+              var(--mnsm-accent-iris),
+              var(--mnsm-accent-teal),
+              var(--mnsm-accent-amber));
   z-index: 9999;
   width: 0;
-  transition: width 0.06s linear;
+  opacity: 0;
+  transition: width 80ms linear,
+              opacity var(--dur-quick) var(--easing-smooth);
   pointer-events: none;
+  box-shadow: 0 0 10px rgba(13, 148, 136, 0.2);
+}
+
+.scroll-progress.is-active {
+  opacity: 1;
+}
+
+[data-md-color-scheme="slate"] .scroll-progress {
+  box-shadow: 0 0 14px rgba(94, 234, 212, 0.28);
+}
+
+/* ---------- Reveal-on-scroll utility -------------------------
+   Sections, cards, and large blocks fade and slide in slightly when
+   they enter the viewport. The .reveal class is added via
+   path-enhance.js using IntersectionObserver. Respects
+   prefers-reduced-motion (no animation). */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--dur-slow) var(--easing-gentle),
+              transform var(--dur-slow) var(--easing-gentle);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Reading-time chip injected by path-enhance.js */
