@@ -1,16 +1,22 @@
 /* ============================================================
-   mnsm — Graphite Premium theme override
+   mnsm : Graphite Premium theme override
    Refined dark/light palette, generous typography, subtle accents.
    Designed for serious reading. No visual noise.
    ============================================================ */
 
-/* ---------- Typography ----------------------------------------- */
+/* ---------- Font imports (Newsreader variable serif for long-form) -------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&display=swap');
+
+/* ---------- Typography variables ---------------------------------------- */
 
 :root {
   --md-text-font: "Inter", -apple-system, BlinkMacSystemFont,
                   "Segoe UI", Roboto, sans-serif;
   --md-code-font: "JetBrains Mono", "SF Mono", Menlo,
                   Consolas, monospace;
+  --mnsm-serif-font: "Newsreader", Charter, "Iowan Old Style",
+                     "Source Serif 4", Cambria, Georgia, serif;
 }
 
 /* ---------- Light mode: graphite on warm paper ---------------- */
@@ -65,44 +71,75 @@
   --md-footer-bg-color--dark:   #000000;
 }
 
-/* ---------- Body typography ------------------------------------ */
+/* ---------- Body typography (sans default, serif on long-form) --------- */
 
 .md-typeset {
-  font-size: 0.85rem;
-  line-height: 1.75;
-  font-feature-settings: "ss01", "cv11", "kern";
+  font-size: 1rem;
+  line-height: 1.78;
+  font-feature-settings: "ss01", "cv11", "kern", "tnum", "lnum";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Long-form pages use Newsreader serif body for editorial weight.
+   Applied via path-enhance.js to /methodology/, /paper/, /results/,
+   /interfaces/, /equation/, /principles/, /open-problems/ trees. */
+
+body.long-form .md-typeset {
+  font-family: var(--mnsm-serif-font);
+  font-size: 1.075rem;
+  line-height: 1.78;
+  font-feature-settings: "kern", "tnum", "onum", "ss01";
+  font-variation-settings: "opsz" 16;
+}
+
+body.long-form .md-typeset h1,
+body.long-form .md-typeset h2,
+body.long-form .md-typeset h3,
+body.long-form .md-typeset h4 {
+  font-family: var(--md-text-font);
+}
+
+/* Code stays sans-serif everywhere */
+body.long-form .md-typeset code,
+body.long-form .md-typeset pre,
+body.long-form .md-typeset .highlight {
+  font-family: var(--md-code-font);
 }
 
 /* Headings: refined weights and tracking, premium feel */
 
 .md-typeset h1 {
   font-weight: 700;
-  letter-spacing: -0.025em;
-  margin-bottom: 1.25rem;
-  font-size: 2.1rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.4rem;
+  font-size: 2.4rem;
+  line-height: 1.15;
 }
 
 .md-typeset h2 {
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  margin-top: 3.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.45rem;
+  font-weight: 650;
+  letter-spacing: -0.018em;
+  margin-top: 3.8rem;
+  margin-bottom: 1.1rem;
+  font-size: 1.62rem;
+  line-height: 1.25;
 }
 
 .md-typeset h3 {
   font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-top: 2.5rem;
-  font-size: 1.15rem;
+  letter-spacing: -0.012em;
+  margin-top: 2.7rem;
+  font-size: 1.25rem;
+  line-height: 1.35;
 }
 
 .md-typeset h4 {
   font-weight: 600;
-  margin-top: 2rem;
-  font-size: 1rem;
+  letter-spacing: -0.005em;
+  margin-top: 2.1rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
 }
 
 /* Subtle accent rule under page title */
@@ -146,17 +183,35 @@
   font-style: normal;
 }
 
-/* ---------- Math rendering ------------------------------------- */
+/* ---------- Math rendering (refined typography) ---------------- */
 
 mjx-container {
-  font-size: 105% !important;
+  font-size: 110% !important;
 }
 
 mjx-container[display="true"] {
-  margin: 1.5em 0 !important;
-  padding: 0.5rem 0;
+  margin: 1.8em auto !important;
+  padding: 1rem 1.2rem;
   overflow-x: auto;
   overflow-y: hidden;
+  background: var(--mnsm-eq-bg, transparent);
+  border-radius: 4px;
+  border-left: 2px solid transparent;
+  transition: border-left-color 0.22s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+mjx-container[display="true"]:hover {
+  border-left-color: var(--md-accent-fg-color);
+}
+
+/* Inline math: subtle background, no full block */
+mjx-container:not([display="true"]) {
+  padding: 0 0.15em;
+}
+
+/* Long-form body keeps math at the same proportional scaling */
+body.long-form mjx-container {
+  font-size: 108% !important;
 }
 
 /* ---------- Tables: refined ------------------------------------ */
@@ -408,11 +463,32 @@ mjx-container[display="true"] {
 /* ---------- Responsive --------------------------------------- */
 
 @media screen and (max-width: 76.1875em) {
+  .md-typeset {
+    font-size: 0.95rem;
+  }
+  body.long-form .md-typeset {
+    font-size: 1.025rem;
+  }
   .md-typeset h1:first-of-type {
-    font-size: 1.75rem;
+    font-size: 2.0rem;
   }
   .md-typeset h2 {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
+  }
+  .md-typeset h3 {
+    font-size: 1.18rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .md-typeset {
+    font-size: 0.92rem;
+  }
+  body.long-form .md-typeset {
+    font-size: 1rem;
+  }
+  .md-typeset h1:first-of-type {
+    font-size: 1.85rem;
   }
 }
 
@@ -503,16 +579,20 @@ body[data-md-color-scheme] .md-main__inner {
 }
 
 .mnsm-hero__copy h1 {
-  font-size: 3.4rem;
-  line-height: 1.05;
-  letter-spacing: -0.038em;
-  font-weight: 700;
-  margin: 0 0 1.4rem;
+  font-size: 4.2rem;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 750;
+  margin: 0 0 1.6rem;
+  font-feature-settings: "ss01", "kern";
 }
 .mnsm-hero__copy h1::after { display: none; }
 
+@media screen and (max-width: 960px) {
+  .mnsm-hero__copy h1 { font-size: 3.2rem; letter-spacing: -0.04em; }
+}
 @media screen and (max-width: 760px) {
-  .mnsm-hero__copy h1 { font-size: 2.3rem; }
+  .mnsm-hero__copy h1 { font-size: 2.5rem; letter-spacing: -0.035em; }
   .mnsm-hero__copy h1 br { display: none; }
 }
 

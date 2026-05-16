@@ -6,6 +6,22 @@
    ============================================================ */
 
 document$.subscribe(() => {
+  /* ----- 0. Long-form serif body class -----
+     Apply .long-form to <body> on pages where Newsreader serif body
+     improves long-form reading. Excludes landing index, the playground,
+     and the about/STRUCTURE/CONTRIBUTING/CLAUDE pages. */
+  const LONG_FORM_PREFIXES = [
+    '/methodology/', '/paper/', '/results/', '/interfaces/',
+    '/equation/', '/principles/', '/open-problems/',
+  ];
+  const path = window.location.pathname;
+  const isLongForm = LONG_FORM_PREFIXES.some(p => path.includes(p));
+  if (isLongForm) {
+    document.body.classList.add('long-form');
+  } else {
+    document.body.classList.remove('long-form');
+  }
+
   /* ----- 1. Scroll progress bar ----- */
   let bar = document.querySelector('.scroll-progress');
   if (!bar) {
