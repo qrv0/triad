@@ -195,6 +195,38 @@ The model has captured the **form** of the corpus, not its surface
 lexical content. This is the structural-realist signature in computational
 substrate.
 
+### The intuition, plainly stated
+
+The structural distinction this work documents — between memorizing
+surface and modeling form — has a clean human analogy:
+
+> Transformer learns fast because it **memorizes**. Like memorizing a sentence
+> without understanding it: you can repeat it, but if someone removes the
+> specific words, nothing is left. Like the kind of person who argues by
+> citing names of authorities — remove the names and the argument collapses,
+> because memorizing isn't understanding.
+>
+> The Memory-NLS model **understands**. It tries to understand. It doesn't
+> just repeat — it reaches conclusions based on its own "opinion" of the
+> form it has internalized.
+
+This is what the structural-realist finding is, in human terms. At step
+4,000 the Transformer is already regurgitating verbatim URLs and HTML
+attributes from training data; at step 32,000 (during its catastrophic
+collapse) it loses its grip and produces incoherent fragments — there
+was nothing structural underneath the memorized surface to fall back on.
+Memory-NLS at step 50,000 is still producing novel content in the correct
+structural grammar — because what it learned was the form, not the surface.
+
+The Transformer can score lower on val_perplexity because high-fidelity
+memorization scores well by that metric. The Memory-NLS scores higher
+val_perplexity but generates differently — because it modeled rather than
+memorized. Same number, qualitatively different mechanism. See
+[`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
+for the full empirical trajectory and
+[`outputs/scale_up/scale_up_results.md`](outputs/scale_up/scale_up_results.md)
+for the qualitative side-by-side.
+
 ## Pre-trained models on HuggingFace
 
 The 70M-parameter checkpoints from the optimization-collapse experiment are
