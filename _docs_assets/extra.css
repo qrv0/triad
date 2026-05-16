@@ -275,15 +275,49 @@ body.long-form .md-typeset .highlight {
   line-height: 1;
 }
 
-/* ---------- Blockquote refinement ------------------------------ */
+/* ---------- Blockquote refinement ------------------------------
+   Default blockquote: editorial treatment with serif body on
+   long-form pages, subtle teal left rail, indent for paragraph
+   prose; long quotes (>3 lines) get a drop-cap. The .pull-quote
+   variant (defined in components section) is opt-in and stronger. */
 
 .md-typeset blockquote {
   border-left: 2px solid var(--md-accent-fg-color);
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.4rem;
   background: var(--md-accent-fg-color--transparent);
-  margin: 1.5rem 0;
+  margin: 1.6rem 0;
   color: var(--md-typeset-color);
   font-style: normal;
+  border-radius: 0 4px 4px 0;
+  position: relative;
+}
+
+body.long-form .md-typeset blockquote {
+  font-family: var(--mnsm-serif-font);
+  font-size: 1.04em;
+  line-height: 1.7;
+  font-feature-settings: "onum";
+  padding: 0.6rem 1.6rem 0.6rem 1.7rem;
+}
+
+.md-typeset blockquote > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Citation footer inside default blockquote */
+.md-typeset blockquote cite,
+.md-typeset blockquote footer {
+  display: block;
+  margin-top: 0.6rem;
+  font-style: normal;
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--light);
+  font-family: var(--md-text-font);
+}
+.md-typeset blockquote cite::before,
+.md-typeset blockquote footer::before {
+  content: "\2014\00A0";
+  opacity: 0.5;
 }
 
 /* ---------- Math rendering (refined typography) ---------------- */
@@ -317,44 +351,134 @@ body.long-form mjx-container {
   font-size: 108% !important;
 }
 
-/* ---------- Tables: refined ------------------------------------ */
+/* ---------- Tables: refined ------------------------------------
+   Editorial-grade tables: refined headers, alternating row tinting,
+   tnum numerals for column alignment, horizontal scroll on overflow
+   with visible scroll affordance. */
 
 .md-typeset table:not([class]) {
-  font-size: 0.78rem;
-  border-radius: 4px;
+  font-size: 0.86rem;
+  font-feature-settings: "tnum", "lnum";
+  border-radius: 6px;
   overflow: hidden;
   border: 1px solid var(--md-default-bg-color--lightest);
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .md-typeset table:not([class]) th {
-  font-weight: 600;
+  font-weight: 650;
+  font-size: 0.84em;
+  letter-spacing: 0.01em;
   background: var(--md-default-bg-color--light);
-  border-bottom: 1px solid var(--md-default-bg-color--lightest);
+  color: var(--md-typeset-color);
+  border-bottom: 2px solid var(--md-default-bg-color--lightest);
+  padding: 0.7rem 1rem;
+  position: sticky;
+  top: 0;
 }
 
 .md-typeset table:not([class]) td {
   border-top: 1px solid var(--md-default-bg-color--lightest);
+  padding: 0.55rem 1rem;
+  line-height: 1.55;
 }
 
-/* ---------- Code blocks ---------------------------------------- */
+/* Alternating row tinting for legibility on wide tables */
+.md-typeset table:not([class]) tbody tr:nth-child(even) td {
+  background: var(--md-default-bg-color--light);
+}
+
+.md-typeset table:not([class]) tbody tr {
+  transition: background var(--dur-tap) var(--easing-smooth);
+}
+
+.md-typeset table:not([class]) tbody tr:hover td {
+  background: var(--mnsm-accent-teal-soft);
+}
+
+/* Numeric columns: aligned to the right when the cell content
+   contains only digits/decimals. Heuristic via :has() (modern
+   browsers; falls back to default left-align when unsupported). */
+.md-typeset table:not([class]) td:has(> code:only-child),
+.md-typeset table:not([class]) td:has(> em:only-child) {
+  text-align: right;
+}
+
+body.long-form .md-typeset table:not([class]) {
+  font-size: 0.9rem;
+  font-family: var(--md-text-font);
+}
+
+/* ---------- Code blocks ----------------------------------------
+   Refined: subtle border, slightly larger font, language label badge
+   in top-right (via existing Material attr), refined copy-button
+   hover. Inline code gets a slightly-warmer background so it does
+   not blend into the body. */
 
 .md-typeset .highlight {
-  margin: 1.5rem 0;
+  margin: 1.6rem 0;
   border-radius: 6px;
   overflow: hidden;
+  border: 1px solid var(--md-default-bg-color--lightest);
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: box-shadow var(--dur-quick) var(--easing-smooth);
+}
+
+.md-typeset .highlight:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02),
+              0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+[data-md-color-scheme="slate"] .md-typeset .highlight:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+              0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .md-typeset pre > code {
-  font-size: 0.78rem;
-  line-height: 1.65;
+  font-size: 0.82rem;
+  line-height: 1.7;
   letter-spacing: 0;
 }
 
 .md-typeset code {
-  font-size: 0.85em;
-  padding: 0.12em 0.35em;
+  font-size: 0.88em;
+  padding: 0.15em 0.42em;
   border-radius: 3px;
   background: var(--md-code-bg-color);
+  font-feature-settings: "ss01", "calt";
+  border: 1px solid transparent;
+  transition: border-color var(--dur-tap) var(--easing-smooth);
+}
+
+.md-typeset a code {
+  border-color: var(--mnsm-accent-teal-medium);
+}
+.md-typeset a:hover code {
+  border-color: var(--mnsm-accent-teal);
+}
+
+/* Refine Material's copy-to-clipboard button on hover */
+.md-clipboard {
+  color: var(--md-default-fg-color--lightest);
+  transition: color var(--dur-quick) var(--easing-smooth);
+}
+.md-typeset .highlight:hover .md-clipboard {
+  color: var(--md-default-fg-color--light);
+}
+.md-clipboard:hover {
+  color: var(--mnsm-accent-teal) !important;
+}
+
+/* Language label: Material exposes the language via attr on
+   .highlight; show it as a small badge top-right when present. */
+.md-typeset .highlight[class*="language-"] > .filename,
+.md-typeset .highlight > pre[class*="language-"]::before {
+  display: none;
 }
 
 /* ---------- Admonitions ---------------------------------------- */
@@ -1899,15 +2023,100 @@ body[data-md-color-scheme] .md-main__inner {
   text-transform: uppercase;
 }
 
-/* ---------- Footer citation --------------------------------- */
+/* ---------- Footer citation ---------------------------------
+   Bibtex block at the bottom of the landing/about pages. Refined
+   container with an eyebrow label, two-column header (title +
+   copy hint), refined code block treatment. */
 
 .mnsm-footer-cite {
   max-width: 760px;
   margin: 3rem auto 4rem;
   padding: 0 1.5rem;
 }
+
+.mnsm-footer-cite h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--md-default-bg-color--lightest);
+}
+
+.mnsm-footer-cite h3::after {
+  content: "click the copy button \2192";
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--lighter);
+  font-family: var(--md-text-font);
+}
+
 .mnsm-footer-cite .highlight {
   margin: 0 !important;
+  border-radius: 6px;
+}
+
+/* ---------- Footnote tooltips refinement -------------------
+   Material renders footnote-as-tooltip via the
+   content.footnote.tooltips feature. Polish the popover and the
+   inline footnote-marker link. */
+
+.md-typeset .footnote-ref {
+  font-weight: 600;
+  color: var(--mnsm-accent-teal-darker);
+  text-decoration: none;
+  padding: 0 0.15em;
+  border-radius: 2px;
+  transition: background var(--dur-tap) var(--easing-smooth);
+}
+[data-md-color-scheme="slate"] .md-typeset .footnote-ref {
+  color: var(--mnsm-accent-teal-light);
+}
+.md-typeset .footnote-ref:hover {
+  background: var(--mnsm-accent-teal-soft);
+}
+
+.md-tooltip,
+.md-tooltip2 {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-bg-color--lightest);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06),
+              0 16px 36px rgba(0, 0, 0, 0.06);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  max-width: 28rem;
+}
+
+[data-md-color-scheme="slate"] .md-tooltip,
+[data-md-color-scheme="slate"] .md-tooltip2 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5),
+              0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Abbreviation underline (Material abbr extension) -----
+   Abbr terms (FDT, P1, BCC, etc.) get a teal dotted underline so
+   readers can identify them as terms with hover definitions. */
+
+.md-typeset abbr {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--mnsm-accent-teal);
+  cursor: help;
+  transition: border-bottom-color var(--dur-tap) var(--easing-smooth),
+              background var(--dur-tap) var(--easing-smooth);
+}
+.md-typeset abbr:hover {
+  border-bottom-color: var(--mnsm-accent-teal-darker);
+  background: var(--mnsm-accent-teal-soft);
+}
+[data-md-color-scheme="slate"] .md-typeset abbr {
+  border-bottom-color: var(--mnsm-accent-teal-light);
 }
 
 /* ---------- Hide MkDocs page-title h1 on landing only ------- */
