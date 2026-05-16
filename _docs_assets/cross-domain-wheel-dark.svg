@@ -81,7 +81,7 @@
   </a>
 
   <!-- 2. BAO Cosmology — top-right (θ≈-38.6°), node (456, 175) -->
-  <a class="node" href="interfaces/02-bao-cosmology/" aria-label="Baryon acoustic oscillations">
+  <a class="node" href="interfaces/02-baryon-acoustic/" aria-label="Baryon acoustic oscillations">
     <circle class="node-bg" cx="456" cy="175" r="34"/>
     <circle class="node-hover-bg" cx="456" cy="175" r="34"/>
     <g transform="translate(456 175)">

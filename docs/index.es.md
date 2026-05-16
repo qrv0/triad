@@ -148,13 +148,13 @@ dinámica de campo 3D y la optimización de redes neuronales.*
 |---|---|
 | [`principles/`](principles/01-oscillation.md) | Los tres axiomas estructurales (P1, P2, P3) |
 | [`equation/`](equation/01-derivation.md) | Derivación formal, embedding markoviano, formas 2D y 3D, reducciones a ecuaciones conocidas |
-| [`results/`](results/01-conservation.md) | Hallazgos numéricos: anti-colapso, cristalización, selección de Bravais, espectro de vibración, reescalado dimensional |
+| [`results/`](results/01-anti-collapse-2d.md) | Hallazgos numéricos: anti-colapso, cristalización, selección de Bravais, espectro de vibración, reescalado dimensional |
 | [`interfaces/`](interfaces/01-other-nls-systems.md) | Mapeos interdominio a BEC, cosmología, cimática, gamma neural, resonancia arqueoacústica, modelos de espacio de estados |
 | [`methodology/`](methodology/01-structural-realism.md) | Posición realista-estructural, límites de la falsación, los seis criterios |
 | [`paths/`](paths/if-you-are-new.md) | Rutas de entrada específicas según trasfondo del lector |
 | [`playground/`](https://github.com/qrv0/mnsm/tree/main/playground) | Notebooks interactivos (ejecutables en Colab) |
-| [`implementation/`](implementation/01-physics-solver.md) | Solver de física (CuPy) + capa neural de secuencia (PyTorch) |
-| [`experiments/`](experiments/01-physics-experiments.md) | Scripts que reproducen las figuras del paper |
+| [`implementation/`](implementation/README.md) | Solver de física (CuPy) + capa neural de secuencia (PyTorch) |
+| [`experiments/`](experiments/README.md) | Scripts que reproducen las figuras del paper |
 | [`paper/`](paper/manuscript.md) | El manuscrito completo |
 
 ---

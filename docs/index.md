@@ -114,7 +114,7 @@ invariant under change of substrate.
     Baryon acoustic oscillations: a memory-modulated pressure wave in the
     primordial plasma. The 150 Mpc scale is the lock-in of a memory term.
 
-    [→ Read interface](interfaces/02-bao-cosmology.md)
+    [→ Read interface](interfaces/02-baryon-acoustic.md)
 
 -   <span class="mnsm-substrate-num">03</span> **Chladni Cymatics**
 
@@ -200,29 +200,25 @@ empirically verified in three substrates so far.
 
 <div class="mnsm-section-head" markdown>
 <span class="mnsm-section-tag">See it</span>
-## The same form, two substrates
+## Same equation, two substrates, same outcome
+The 3D physics field on top, the neural training trajectory on the bottom — synchronized in time. Both panels show the anti-collapse mechanism predicted by the equation, manifesting in substrates as different as a laboratory simulation and a 70M-parameter language model.
 </div>
 
 <div class="mnsm-demo" markdown>
+<div class="mnsm-demo-video" markdown>
+<video class="mnsm-demo-media" autoplay loop muted playsinline
+       poster="assets/scale_up_val_ppl.png">
+  <source src="assets/cross_substrate_hero.mp4" type="video/mp4">
+  <img src="assets/cross_substrate_hero.gif" alt="Cross-substrate anti-collapse animation">
+</video>
 
-<div class="mnsm-demo-row" markdown>
-![3D field anti-collapse — laboratory simulation](assets/anti_collapse_hero.gif){ .mnsm-demo-media }
-
-*Without memory, the 3D field collapses to a singular point. With memory,
-the field stabilizes as an extended state. Same equation, same initial
-condition, one ingredient (multi-timescale memory) — qualitatively
-different outcome.*
+*<strong>Top:</strong> 3D supercritical NLS field. Left panel — no memory, the
+field collapses singularly. Right panel — with memory, the field is released
+and stabilizes. <strong>Bottom:</strong> neural training, 70M parameters on
+enwik8. The Transformer (red) crashes catastrophically at step 28 000 where
+Memory-NLS (teal) maintains its stable descent. Same structural form, two
+substrates, time-synced.*
 </div>
-
-<div class="mnsm-demo-row" markdown>
-![Neural training trajectory — 70M parameters on enwik8](assets/scale_up_val_ppl.png){ .mnsm-demo-media }
-
-*The same anti-collapse mechanism in optimization dynamics: Memory-NLS
-descends monotonically to a stable plateau; Transformer without the
-structural mechanism crashes catastrophically at step 28 000 and never
-fully recovers. Same structural form, neural-substrate.*
-</div>
-
 </div>
 
 </div>
