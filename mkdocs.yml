@@ -1,0 +1,277 @@
+site_name: mnsm
+site_description: >-
+  Memory-Nonlinear State Models — three structural principles, one equation,
+  seven cross-domain instantiations. Derived from observational axioms about
+  persistence, not from prior ML literature.
+site_url: https://qrv0.github.io/mnsm/
+site_author: qrv0
+copyright: '© 2026 qrv0 — Code: <a href="LICENSE">MIT</a>, Documentation: <a href="LICENSE-docs">CC BY 4.0</a>'
+
+repo_url: https://github.com/qrv0/mnsm
+repo_name: qrv0/mnsm
+edit_uri: edit/main/
+
+# Read content from the repository root so the existing folder structure
+# (principles/, equation/, results/, interfaces/, methodology/, etc.) is
+# the single source of truth. Site-specific assets live in _docs_assets/.
+docs_dir: docs
+site_dir: site
+
+# Exclude things that shouldn't be served as pages
+exclude_docs: |
+  .venv/
+  .git/
+  .github/
+  .hf_staging/
+  __pycache__/
+  scripts/
+  experiments/neural/enwik8*
+  experiments/neural/tinyshakespeare.txt
+  outputs/**/*.pt
+  outputs/**/*.safetensors
+  outputs/**/history.json
+  outputs/**/raw_results.json
+  outputs/scale_up_run.log
+  requirements*.txt
+  pyproject.toml
+  CITATION.cff
+  paper/figures/
+
+theme:
+  name: material
+  language: en
+
+  features:
+    # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+
+    # Table of contents
+    - toc.follow
+
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - content.action.edit
+    - content.action.view
+
+    # Announce bar
+    - announce.dismiss
+
+  palette:
+    # Light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Custom CSS for polish
+extra_css:
+  - _docs_assets/extra.css
+
+# MathJax for equations (the work has heavy LaTeX content)
+extra_javascript:
+  - _docs_assets/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  # Remove "Made with Material" notice
+  generator: false
+
+  # Social links in footer
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/qrv0/mnsm
+      name: GitHub repository
+    - icon: simple/huggingface
+      link: https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8
+      name: Memory-NLS 70M on HuggingFace
+    - icon: simple/huggingface
+      link: https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8
+      name: Transformer baseline 70M on HuggingFace
+
+  # Status badge for announce bar (optional)
+  status:
+    new: Recently added
+    deprecated: Deprecated
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s​\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+
+markdown_extensions:
+  # Standard
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Anchor link to this section
+      toc_depth: 4
+
+  # PyMdown extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+
+  - Foundations:
+      - 'Three Principles':
+          - 'Overview': principles/README.md
+          - 'P1 — Oscillation': principles/01-oscillation.md
+          - 'P2 — Self-Reference': principles/02-self-reference.md
+          - 'P3 — Coupling': principles/03-coupling.md
+      - 'The Equation':
+          - 'Overview': equation/README.md
+          - 'Derivation from Axioms': equation/01-derivation.md
+          - 'Markovian Embedding': equation/02-markovian-embedding.md
+          - 'Two-Dimensional Form': equation/03-two-dimensional.md
+          - 'Three-Dimensional Form': equation/04-three-dimensional.md
+          - 'Reductions to Known Equations': equation/05-reductions.md
+
+  - Results:
+      - 'Overview': results/README.md
+      - 'Anti-Collapse · 2D': results/01-anti-collapse-2d.md
+      - 'Spontaneous Crystallization': results/02-spontaneous-crystallization.md
+      - 'Vibrational Modes': results/03-vibrational-modes.md
+      - 'Anti-Collapse · 3D': results/04-anti-collapse-3d.md
+      - 'Bravais Lattice Selection': results/05-bravais-selection.md
+      - 'Dimensional Rescaling': results/06-dimensional-rescaling.md
+      - 'Temporal–Spatial Asymmetry': results/07-temporal-spatial-asymmetry.md
+      - 'Optimization-Collapse Empirical': results/08-optimization-collapse-empirical.md
+
+  - Cross-Domain Interfaces:
+      - 'Overview': interfaces/README.md
+      - 'Other NLS Systems': interfaces/01-other-nls-systems.md
+      - 'Baryon Acoustic Oscillations': interfaces/02-baryon-acoustic.md
+      - 'Chladni Cymatics': interfaces/03-chladni-cymatics.md
+      - 'Gamma-Frequency Entrainment': interfaces/04-gamma-entrainment.md
+      - 'Archaeoacoustic Resonance': interfaces/05-archaeoacoustic-resonance.md
+      - 'State Space Models': interfaces/06-state-space-models.md
+      - 'Cosmological Expansion': interfaces/07-cosmological-expansion.md
+
+  - Methodology:
+      - 'Overview': methodology/README.md
+      - 'Structural Realism': methodology/01-structural-realism.md
+      - 'Limits of Falsification': methodology/02-limits-of-falsification.md
+      - 'How to Evaluate This': methodology/03-how-to-evaluate-this.md
+      - 'The Six Criteria': methodology/04-the-six-criteria.md
+
+  - Implementation:
+      - 'Overview': implementation/README.md
+      - 'Physics Solver (CuPy)': implementation/physics/README.md
+      - 'Neural Layer (PyTorch)': implementation/neural/README.md
+
+  - Experiments:
+      - 'Overview': experiments/README.md
+      - 'Physics Experiments': experiments/physics/README.md
+      - 'Neural Experiments': experiments/neural/README.md
+      - 'Scale-Up Results (70M, enwik8)': outputs/scale_up/scale_up_results.md
+      - 'Long-Horizon Run (1.5M)': outputs/long_training/long_training_results.md
+
+  - Reader Paths:
+      - 'Overview': paths/README.md
+      - 'If you are new': paths/if-you-are-new.md
+      - 'If you are from physics': paths/if-you-are-from-physics.md
+      - 'If you are from machine learning': paths/if-you-are-from-ml.md
+      - 'If you are from neuroscience': paths/if-you-are-from-neuroscience.md
+      - 'If you are from philosophy of science': paths/if-you-are-from-philosophy.md
+
+  - Paper: paper/manuscript.md
+
+  - About:
+      - 'Repository Structure': STRUCTURE.md
+      - 'Contributing': CONTRIBUTING.md
+      - 'AI Assistant Guidelines': CLAUDE.md
+
+watch:
+  - principles
+  - equation
+  - results
+  - interfaces
+  - methodology
+  - implementation
+  - experiments
+  - paths
+  - paper
+  - outputs
+  - _docs_assets

@@ -1,0 +1,221 @@
+/* ============================================================
+   mnsm — custom polish for MkDocs Material
+   Goals: cleaner typography, generous whitespace, refined math
+   rendering, subtle teal accents matching the trajectory plots.
+   ============================================================ */
+
+/* --- Typography --------------------------------------------- */
+
+:root {
+  --md-text-font: "Inter", -apple-system, BlinkMacSystemFont,
+                  "Segoe UI", Roboto, sans-serif;
+  --md-code-font: "JetBrains Mono", "SF Mono", Menlo,
+                  Consolas, monospace;
+}
+
+.md-typeset {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.md-typeset h1:first-of-type {
+  font-size: 2.1rem;
+}
+
+/* --- Blockquote refinement ---------------------------------- */
+
+.md-typeset blockquote {
+  border-left: 3px solid var(--md-accent-fg-color);
+  padding: 0.6rem 1.2rem;
+  background: rgba(94, 234, 212, 0.04);
+  font-style: normal;
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  background: rgba(94, 234, 212, 0.06);
+}
+
+/* --- Math rendering ----------------------------------------- */
+
+mjx-container {
+  font-size: 105% !important;
+}
+
+mjx-container[display="true"] {
+  margin: 1.5em 0 !important;
+}
+
+/* --- Tables: cleaner, denser -------------------------------- */
+
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  background: var(--md-default-fg-color--lightest);
+}
+
+/* --- Code blocks -------------------------------------------- */
+
+.md-typeset .highlight {
+  margin: 1.5rem 0;
+}
+
+.md-typeset pre > code {
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.md-typeset code {
+  font-size: 0.85em;
+  padding: 0.1em 0.3em;
+}
+
+/* --- Admonitions: subtle ------------------------------------ */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* --- Links: teal accent on hover ---------------------------- */
+
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--md-accent-fg-color);
+}
+
+/* --- Header: subtle shadow ---------------------------------- */
+
+.md-header {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.08),
+              0 0.2rem 0.4rem rgba(0, 0, 0, 0.04);
+}
+
+/* --- Tabs: refined ------------------------------------------ */
+
+.md-tabs__link {
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  opacity: 0.8;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  opacity: 1;
+}
+
+/* --- Sidebar: subtle separators ---------------------------- */
+
+.md-nav__title {
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-nav__item--section > .md-nav__link {
+  font-weight: 600;
+}
+
+/* --- Footer: less obtrusive --------------------------------- */
+
+.md-footer-meta {
+  background: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .md-footer-meta {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* --- Search: prominent -------------------------------------- */
+
+.md-search__input {
+  font-size: 0.78rem;
+}
+
+/* --- Hero image responsive ---------------------------------- */
+
+.md-typeset img {
+  border-radius: 6px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* GIFs and animations get a subtle shadow */
+.md-typeset img[src$=".gif"],
+.md-typeset img[src$=".png"] {
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset img[src$=".gif"],
+[data-md-color-scheme="slate"] .md-typeset img[src$=".png"] {
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
+}
+
+/* --- Badge images stay inline, no shadow ---------------------- */
+
+.md-typeset img[src*="img.shields.io"] {
+  box-shadow: none;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0 0.1rem;
+  vertical-align: middle;
+}
+
+/* --- Equation blocks: subtle border ------------------------- */
+
+.md-typeset mjx-container[display="true"] {
+  padding: 0.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* --- Reduce padding on smaller screens ---------------------- */
+
+@media screen and (max-width: 76.1875em) {
+  .md-typeset h1:first-of-type {
+    font-size: 1.7rem;
+  }
+}
+
+/* --- Subtle accent border on home page first heading -------- */
+
+.md-content article > h1:first-child::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.6rem;
+  background: var(--md-accent-fg-color);
+  border-radius: 2px;
+}

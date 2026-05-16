@@ -67,3 +67,6 @@ huggingface_token*
 github_token*
 scripts/
 outputs/*_run.log
+
+# MkDocs build output
+site/
