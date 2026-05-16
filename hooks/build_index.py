@@ -30,6 +30,14 @@ DOMAIN_LABELS = {
     "biology": "Biology",
 }
 
+# Tier A interfaces use existing numerical data via a Plotly spec
+# (resolved by plotly-loader.js to _docs_assets/plotly/<spec>.json).
+PLOTLY_SPEC_BY_NUM = {
+    "06": "ssm-trajectories",
+    "10": "kuramoto-chimera",
+    "14": "soc-avalanches",
+}
+
 
 def on_files(files, config, **kwargs):
     """Build interfaces-index.json + predictions-index.json from
@@ -98,7 +106,10 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     if not triangle:
         return markdown
 
-    hero_html = _render_hero(meta)
+    # Extract interface number from filename
+    num_match = re.match(r"^(\d+)", Path(src).stem)
+    num = num_match.group(1) if num_match else None
+    hero_html = _render_hero(meta, num=num)
 
     lines = markdown.split("\n")
     insert_at = 0
@@ -184,7 +195,7 @@ def _minimal_yaml_parse(raw):
     return result
 
 
-def _render_hero(meta):
+def _render_hero(meta, num=None):
     """Return the HTML block for the interface hero."""
     description = _escape(meta.get("description", ""))
     domain_key = meta.get("domain", "")
@@ -196,11 +207,25 @@ def _render_hero(meta):
     tier = meta.get("hero_tier", "B").upper()
     signature = _escape(meta.get("signature_icon", ""))
 
+    # Tier A : Plotly hero or image embed. Tier B/C : placeholder hexagon
+    # (commit 7 will inject substrate-specific SVGs).
+    plotly_spec = PLOTLY_SPEC_BY_NUM.get(num) if num else None
+    if tier == "A" and plotly_spec:
+        visual_html = (
+            f'    <div class="plotly-hero" data-spec="{_escape(plotly_spec)}">\n'
+            '      <p class="plotly-hero__loading">Loading visualization...</p>\n'
+            '    </div>'
+        )
+    else:
+        visual_html = (
+            f'    <div class="interface-hero__placeholder" aria-hidden="true"'
+            f' data-signature="{signature}">&#x2B22;</div>'
+        )
+
     return (
         '<div class="interface-hero" markdown="0">\n'
         '  <div class="interface-hero__visual">\n'
-        f'    <div class="interface-hero__placeholder" aria-hidden="true"'
-        f' data-signature="{signature}">&#x2B22;</div>\n'
+        f'{visual_html}\n'
         '  </div>\n'
         '  <div class="interface-hero__copy">\n'
         f'    <span class="interface-hero__eyebrow">{domain_label}'

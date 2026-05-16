@@ -3084,6 +3084,37 @@ body[data-md-color-scheme] .md-main .md-content article.md-content__inner {
   text-transform: uppercase;
 }
 
+/* ---------- Plotly hero (Tier A interfaces) ---------- */
+
+.plotly-hero {
+  width: 100%;
+  min-height: 280px;
+  position: relative;
+}
+
+.plotly-hero__loading,
+.plotly-hero__error {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.plotly-hero__img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.plotly-hero__caption {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+}
+
 /* ---------- Compare view ---------- */
 
 .compare-app__controls {

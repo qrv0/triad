@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "type": "heatmap",
+      "x": [
+        "0.10",
+        "0.33",
+        "1.00",
+        "3.33",
+        "10.00",
+        "33.33"
+      ],
+      "y": [
+        "0.01",
+        "0.05",
+        "0.20",
+        "1.00"
+      ],
+      "z": [
+        [
+          1.0,
+          0.524,
+          0.12,
+          0.064,
+          0.064,
+          0.08
+        ],
+        [
+          1.0,
+          0.424,
+          0.14,
+          0.064,
+          0.072,
+          0.08
+        ],
+        [
+          1.0,
+          0.988,
+          0.264,
+          0.064,
+          0.072,
+          0.088
+        ],
+        [
+          0.484,
+          0.936,
+          0.968,
+          0.184,
+          0.16,
+          0.24
+        ]
+      ],
+      "colorscale": [
+        [
+          0,
+          "#FBF9F4"
+        ],
+        [
+          0.4,
+          "#A8A39C"
+        ],
+        [
+          0.7,
+          "#0F766E"
+        ],
+        [
+          1,
+          "#0d9488"
+        ]
+      ],
+      "showscale": true,
+      "colorbar": {
+        "title": "lifetime",
+        "thickness": 12,
+        "len": 0.7
+      },
+      "hovertemplate": "\u03b3\u2080 %{y}<br>\u03c4_mem %{x}<br>lifetime %{z:.3f}<extra></extra>"
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Chimera lifetime fraction across (\u03b3\u2080, \u03c4_mem)",
+      "font": {
+        "size": 12,
+        "color": "#4E4A47"
+      }
+    },
+    "xaxis": {
+      "title": "\u03c4_mem (memory timescale)"
+    },
+    "yaxis": {
+      "title": "\u03b3\u2080 (P3 coupling)"
+    },
+    "margin": {
+      "l": 60,
+      "r": 30,
+      "t": 40,
+      "b": 50
+    },
+    "height": 320,
+    "paper_bgcolor": "transparent",
+    "plot_bgcolor": "transparent",
+    "font": {
+      "family": "Inter, sans-serif",
+      "size": 10,
+      "color": "#4E4A47"
+    }
+  },
+  "config": {
+    "responsive": true,
+    "displayModeBar": false
+  }
+}

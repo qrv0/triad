@@ -1,0 +1,5 @@
+{
+  "embed_image": "../../assets/scale_up_trajectories.png",
+  "alt": "70M-parameter Memory-NLS vs Transformer training trajectories on enwik8",
+  "caption": "Same training infrastructure, same data, same hyperparameters; the structural difference between attention-only (red) and memory-augmented (teal) is visible at training scale (results/08)."
+}

@@ -119,6 +119,7 @@ extra_javascript:
   - _docs_assets/wheel-interactive.js
   - _docs_assets/compare.js
   - _docs_assets/predictions-board.js
+  - _docs_assets/plotly-loader.js
 
 extra:
   # Remove "Made with Material" notice
