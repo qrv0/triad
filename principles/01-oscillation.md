@@ -12,6 +12,8 @@ This is not a metaphysical claim; it is a structural observation. The atoms of a
 
 The principle generalizes this observation to a structural axiom: in any mathematical model that aspires to describe a class of persistent extended entities, the state object must support intrinsic oscillation, and the absence of oscillation must correspond to absence of the entity rather than to a special case of its presence.
 
+P1 is one vertex of the three-element minimum stable structure documented in [`README.md`](README.md). Oscillation alone, without self-reference and without environmental coupling, gives a free harmonic mode that neither persists in a localized way nor admits structure. The persistence and the structure both require the other two vertices.
+
 ## Mathematical consequence
 
 The most economical state object that supports intrinsic oscillation without external forcing is a complex field $\Psi(t, \mathbf{x}) \in \mathbb{C}$ carrying a phase $\varphi = \arg\Psi$. The phase admits rotation at any frequency without modifying the modulus $|\Psi|$; the modulus admits modulation at any frequency without affecting the phase. The two degrees of freedom suffice to encode both amplitude oscillations and phase oscillations independently.

@@ -36,7 +36,7 @@ $$
 
 <div class="eq-breakdown" markdown>
 <div class="eq-term eq-term--p2" markdown>
-<span class="eq-term-tag">P2 — Self-reference</span>
+<span class="eq-term-tag">P2 · Self-reference</span>
 <span class="eq-term-math">Both sides are the same equation</span>
 <span class="eq-term-desc">Mori–Zwanzig projection (physics) ≡ diagonal-state SSM update (ML)</span>
 </div>

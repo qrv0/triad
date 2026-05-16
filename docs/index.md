@@ -39,17 +39,17 @@ $$
 
 <div class="eq-breakdown" markdown>
 <div class="eq-term eq-term--p1" markdown>
-<span class="eq-term-tag">P1 — Oscillation</span>
+<span class="eq-term-tag">P1 · Oscillation</span>
 <span class="eq-term-math">$-\tfrac{\hbar^{2}}{2m}D^{2}$ ・ $\alpha(-\Delta)^{\sigma/2}$</span>
 <span class="eq-term-desc">wave-equation kinetic + fractional dispersion</span>
 </div>
 <div class="eq-term eq-term--p2" markdown>
-<span class="eq-term-tag">P2 — Self-reference</span>
+<span class="eq-term-tag">P2 · Self-reference</span>
 <span class="eq-term-math">$\Lambda |\Psi|^{2}$ ・ $V_{\text{mem}}$</span>
 <span class="eq-term-desc">cubic self-interaction + auxiliary-field memory hierarchy</span>
 </div>
 <div class="eq-term eq-term--p3" markdown>
-<span class="eq-term-tag">P3 — Coupling</span>
+<span class="eq-term-tag">P3 · Coupling</span>
 <span class="eq-term-math">$V_{\text{ext}}$ ・ $-i\Gamma$ ・ $\eta$</span>
 <span class="eq-term-desc">external potential + FDT-locked dissipation–noise pair</span>
 </div>

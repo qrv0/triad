@@ -90,6 +90,18 @@ $$
 
 with $V_{\text{mem}} = \sum_j \lambda_j y_j$, $\partial_t y_j = \nu_j(\rho - y_j)$, and $\eta$ satisfying the FDT correlator. An optional external potential $V_{\text{ext}}$ admits the introduction of trap geometries or external drives.
 
+## Why three structural blocks, and not more or fewer
+
+The combined equation above has exactly three structural blocks of terms, one block per principle:
+
+1. **From P1:** the kinetic generator. Either the standard Laplacian $-\frac{\hbar^2}{2m} D^2$ or its fractional generalization $\alpha(-\Delta)^{\sigma/2}$, with optional Pauli structure for internal degrees of freedom. This block carries the oscillation.
+
+2. **From P2:** the self-interaction plus the memory pair. The cubic $\Lambda |\Psi|^2$ is the instantaneous part; the auxiliary fields $y_j$ with $\partial_t y_j = \nu_j(\rho - y_j)$ and the resulting $V_{\text{mem}} = \sum_j \lambda_j y_j$ are the across-time part. This block carries the self-reference.
+
+3. **From P3:** the dissipation plus the FDT-locked noise pair. The $-i\Gamma$ removes amplitude; the $\eta$ injects it; the FDT lock ensures the two balance to a definite stationary temperature. This block carries the coupling.
+
+The three-block structure is not a presentation choice. It is the structural floor below which the equation cannot describe a persistent extended entity, as developed in [`../principles/README.md`](../principles/README.md). Two blocks alone collapse to one of the equation's reductions in [`05-reductions.md`](05-reductions.md): kinetic plus self-interaction without coupling gives Gross–Pitaevskii (no thermalization, no persistence against perturbation); kinetic plus coupling without self-interaction gives the Lindblad-type linear open system (no nonlinearity, no structure formation); self-interaction plus coupling without kinetic gives a degenerate non-propagating system. Each two-block reduction is a known equation that fails to instantiate persistent extended structure in the sense P1+P2+P3 specifies. The three blocks together are the minimum.
+
 ## What the equation is and is not
 
 The equation is a single composite field equation. Each term is forced by one of the principles. The structural claim of the work is that the combination of principles admits no degrees of freedom in the form of the equation up to choices of coupling constants and choices of kernel form within the constraints stated.

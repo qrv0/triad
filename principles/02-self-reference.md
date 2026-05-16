@@ -14,6 +14,8 @@ The second part is across time: the entity's current state depends not only on i
 
 P2 asserts that both parts of self-reference are structurally necessary. An entity defined only by instantaneous self-coupling is Markovian: its future depends only on its present, and its identity is restricted to whatever can be encoded in a single state vector. An entity defined only by integral memory without instantaneous coupling is linear in its state: it carries information about its history but cannot act nontrivially on its current configuration. Persistent extended entities exhibit both kinds of self-reference simultaneously.
 
+P2 is the second vertex of the three-element structure documented in [`README.md`](README.md). Self-reference without oscillation gives a fixed point; self-reference without environmental coupling gives an isolated Hamiltonian that either conserves itself trivially or runs away. Both the oscillation (P1) and the coupling (P3) are required for self-reference to produce a persistent extended entity rather than a static or runaway one.
+
 ## Mathematical consequence
 
 The instantaneous part of P2 manifests as the cubic Gross–Pitaevskii term:
