@@ -3084,6 +3084,26 @@ body[data-md-color-scheme] .md-main .md-content article.md-content__inner {
   text-transform: uppercase;
 }
 
+/* ---------- Interface hero inline SVG (Tier B/C) ---------- */
+
+.interface-hero__diagram {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mnsm-g-7);
+}
+[data-md-color-scheme="slate"] .interface-hero__diagram {
+  color: var(--mnsm-g-2);
+}
+
+.interface-hero__diagram svg {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+}
+
 /* ---------- Plotly hero (Tier A interfaces) ---------- */
 
 .plotly-hero {

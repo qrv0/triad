@@ -38,6 +38,40 @@ PLOTLY_SPEC_BY_NUM = {
     "14": "soc-avalanches",
 }
 
+# Tier B/C interfaces use in-house SVG diagrams in _docs_assets/diagrams/.
+# Inlined into the hero so CSS currentColor flows through.
+SVG_SLUG_BY_NUM = {
+    "01": "01-nls",
+    "02": "02-bao",
+    "03": "03-cymatics",
+    "04": "04-gamma-entrainment",
+    "05": "05-archaeo",
+    "07": "07-cosmological",
+    "08": "08-mechinterp",
+    "09": "09-critical-brain",
+    "11": "11-immune",
+    "12": "12-friston",
+    "13": "13-active-matter",
+    "15": "15-cardiac",
+    "16": "16-gene-regulation-circadian",
+    "17": "17-ecosystem",
+}
+
+_SVG_CACHE = {}
+
+
+def _load_svg(slug, docs_dir):
+    """Load and cache the inline SVG content for a given diagram slug."""
+    if slug in _SVG_CACHE:
+        return _SVG_CACHE[slug]
+    svg_path = Path(docs_dir).parent / "_docs_assets" / "diagrams" / f"{slug}.svg"
+    if not svg_path.is_file():
+        _SVG_CACHE[slug] = None
+        return None
+    text = svg_path.read_text(encoding="utf-8")
+    _SVG_CACHE[slug] = text
+    return text
+
 
 def on_files(files, config, **kwargs):
     """Build interfaces-index.json + predictions-index.json from
@@ -109,7 +143,7 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     # Extract interface number from filename
     num_match = re.match(r"^(\d+)", Path(src).stem)
     num = num_match.group(1) if num_match else None
-    hero_html = _render_hero(meta, num=num)
+    hero_html = _render_hero(meta, num=num, docs_dir=config["docs_dir"])
 
     lines = markdown.split("\n")
     insert_at = 0
@@ -195,7 +229,7 @@ def _minimal_yaml_parse(raw):
     return result
 
 
-def _render_hero(meta, num=None):
+def _render_hero(meta, num=None, docs_dir=None):
     """Return the HTML block for the interface hero."""
     description = _escape(meta.get("description", ""))
     domain_key = meta.get("domain", "")
@@ -207,13 +241,23 @@ def _render_hero(meta, num=None):
     tier = meta.get("hero_tier", "B").upper()
     signature = _escape(meta.get("signature_icon", ""))
 
-    # Tier A : Plotly hero or image embed. Tier B/C : placeholder hexagon
-    # (commit 7 will inject substrate-specific SVGs).
+    # Tier A : Plotly hero or image embed.
+    # Tier B/C : inline in-house SVG diagram.
+    # Else : placeholder hexagon.
     plotly_spec = PLOTLY_SPEC_BY_NUM.get(num) if num else None
+    svg_slug = SVG_SLUG_BY_NUM.get(num) if num else None
+    svg_content = _load_svg(svg_slug, docs_dir) if (svg_slug and docs_dir) else None
+
     if tier == "A" and plotly_spec:
         visual_html = (
             f'    <div class="plotly-hero" data-spec="{_escape(plotly_spec)}">\n'
             '      <p class="plotly-hero__loading">Loading visualization...</p>\n'
+            '    </div>'
+        )
+    elif svg_content:
+        visual_html = (
+            '    <div class="interface-hero__diagram">\n'
+            f'{svg_content}\n'
             '    </div>'
         )
     else:
