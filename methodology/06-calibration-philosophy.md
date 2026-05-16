@@ -7,7 +7,7 @@ Cross-domain interfaces in this work range from mathematical equivalence (no cal
 The methodology in [`01-structural-realism.md`](01-structural-realism.md) and [`02-limits-of-falsification.md`](02-limits-of-falsification.md) commits to a two-level evaluation:
 
 - **Global structural claim:** evaluated by the six criteria in [`04-the-six-criteria.md`](04-the-six-criteria.md). Not subject to single-experiment refutation; tested by cross-domain coherence across multiple substrates.
-- **Local predictions:** specific numerical quantities (separation ratios, frequency overlaps, peak positions) testable by standard experimental methods in the substrate-specific way. Locally falsifiable in the standard sense.
+- **Local predictions:** specific numerical quantities (separation ratios, frequency overlaps, peak positions) testable by coupled-regime experimental methods in the substrate-specific way. Reproduction or non-reproduction contributes evidence under criterion 2 (reproducibility) and criterion 4 (cross-domain coherence) of [`04-the-six-criteria.md`](04-the-six-criteria.md); non-reproduction prompts investigation of the calibration, the auxiliary numerical assumptions (Duhem-Quine), or the implementation.
 
 Calibration sits between these two levels. A calibration is the choice of dimensional units that lets a specific numerical quantity in the equation be compared to a measurement in a specific substrate. Without calibration, the equation's $\omega \in [3, 30]$ broadband absorption regime is dimensionless; with calibration (1 unit of computational time = 25 ms), the regime maps onto 20-200 Hz, comparable to the neural gamma band.
 
@@ -112,7 +112,7 @@ This document does not relieve interfaces of the responsibility to acknowledge t
 ## References
 
 - [`01-structural-realism.md`](01-structural-realism.md): the two-level structure (global structural claim vs local predictions) the calibration philosophy operates within.
-- [`02-limits-of-falsification.md`](02-limits-of-falsification.md): local falsifiability of specific numerical predictions, including calibration-dependent ones.
+- [`02-limits-of-falsification.md`](02-limits-of-falsification.md): coupled-regime testability of specific quantitative predictions, including calibration-dependent ones, evaluated under criterion 2 (reproducibility) and criterion 4 (cross-domain coherence) of [`04-the-six-criteria.md`](04-the-six-criteria.md).
 - [`04-the-six-criteria.md`](04-the-six-criteria.md) criterion 4 (cross-domain coherence): the evaluation criterion whose operational test the calibration philosophy refines.
 - [`../open-problems/08-calibration-philosophy.md`](../open-problems/08-calibration-philosophy.md): the open work this document partially addresses; the cross-substrate consistency check across all current interfaces is named there as work to do.
 - [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md), [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md), [`../interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md): the worked examples.

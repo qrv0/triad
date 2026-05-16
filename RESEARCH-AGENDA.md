@@ -116,7 +116,7 @@ Contributions are welcomed. The expected forms:
 
 - **Adding an interface.** Identify a substrate where the structural form appears, written up in the standard interface template (see existing interfaces 01-07 as models). The bar: peer-reviewed primary literature for the substrate; mapping at the level of mathematical form or structural mechanism, not analogy; explicit evidentiary status (mathematical equivalence, structural correspondence, calibrated correspondence).
 
-- **Local falsification of a specific prediction.** If a locally-testable prediction (Phase 2 sections in interfaces) is contradicted by experiment, document the contradiction and submit; the interface evidentiary status will shift accordingly.
+- **Evidence inconsistent with a specific prediction calibration.** If a locally-testable prediction (in any interface's "Locally testable predictions" section) is not reproduced by a coupled-regime experiment, document the inconsistent evidence and submit; the interface evidentiary status shifts to "tested in coupled regime, inconsistent" under criterion 4, and the prompt becomes investigation of the calibration, auxiliary numerical assumptions (Duhem-Quine), or implementation. Inconsistent evidence does not falsify the structural claim.
 
 - **Engagement at the conceptual level.** [GitHub Discussions on this repository](https://github.com/qrv0/mnsm/discussions) is the space for discussion of the program at the level of structure, methodology, and connection to other work. Discussion threads do not produce pull requests directly but shape the direction of subsequent work.
 

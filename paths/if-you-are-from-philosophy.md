@@ -93,9 +93,11 @@ actually function, the work argues that the appropriate response is to
 evaluate the **global structural claim** by criteria appropriate to
 structures (the six criteria in
 [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md)),
-while continuing to evaluate **locally-falsifiable predictions** in the
-standard way. The two evaluation modes are not in competition; they
-operate on different levels of the theory.
+while continuing to evaluate **locally-testable quantitative predictions**
+by coupled-regime numerical reproduction, contributing evidence under
+criterion 2 and criterion 4 of the six-criteria framework. The two
+evaluation modes are not in competition; they operate on different
+levels of the theory.
 
 ## What the work does methodologically
 
