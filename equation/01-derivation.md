@@ -2,6 +2,25 @@
 
 This document traces the path from the structural axioms in [`../principles/`](../principles/) to the full equation. Each principle is responsible for a specific structural term; the combination of terms is the equation.
 
+<div class="equation-showpiece" markdown="0">
+  <p class="equation-showpiece__eyebrow">The equation, click a principle to see substrates</p>
+  <div class="equation-showpiece__eq" aria-label="MNSM equation with click-to-see substrates per principle">
+    <span class="eq-term-interactive" data-principle="p1" tabindex="0" role="button" aria-label="P1 oscillation: kinetic generator">
+      i&hbar;&part;<sub>t</sub>&Psi; = (-&hbar;&sup2;&nabla;&sup2;/2m + &alpha;(-&Delta;)<sup>&sigma;/2</sup>)&Psi;
+    </span>
+    +
+    <span class="eq-term-interactive" data-principle="p2" tabindex="0" role="button" aria-label="P2 self-reference: cubic + memory potential">
+      &Lambda;|&Psi;|&sup2;&Psi; + V<sub>mem</sub>&Psi;
+    </span>
+    +
+    <span class="eq-term-interactive" data-principle="p3" tabindex="0" role="button" aria-label="P3 coupling: dissipation + FDT-locked noise + external">
+      -i&Gamma;&Psi; + &eta; + V<sub>ext</sub>&Psi;
+    </span>
+  </div>
+  <p class="equation-showpiece__hint">Click any principle term to see the 17 substrate instantiations of that structural slot.</p>
+  <div class="equation-showpiece__panel" id="eq-panel" hidden></div>
+</div>
+
 ## From P1, the kinetic generator
 
 [P1](../principles/01-oscillation.md) requires a complex field with a norm-preserving generator. The most economical such generator on a flat continuum is the negative Laplacian:

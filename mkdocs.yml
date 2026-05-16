@@ -120,6 +120,7 @@ extra_javascript:
   - _docs_assets/compare.js
   - _docs_assets/predictions-board.js
   - _docs_assets/plotly-loader.js
+  - _docs_assets/equation-interactive.js
 
 extra:
   # Remove "Made with Material" notice
