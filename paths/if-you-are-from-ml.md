@@ -26,24 +26,27 @@ sub-quadratic sequence architecture. Memory-NLS is the same equation,
 FDT-locked stochastic regularization derived from physical first principles
 rather than fit empirically.
 
-<div class="path-eq mnsm-eq--coded" markdown>
+<div class="path-eq" markdown>
 $$
-\color[HTML]{14b8a6}{\partial_t y_j = \nu_j(\rho - y_j)}
+\partial_t y_j = \nu_j(\rho - y_j)
 \quad\Longleftrightarrow\quad
-\color[HTML]{14b8a6}{\partial_t \mathbf{h} = \mathbf{A}\,\mathbf{h} + \mathbf{B}\,u}
+\partial_t \mathbf{h} = \mathbf{A}\,\mathbf{h} + \mathbf{B}\,u
 $$
 </div>
 
-<div class="eq-legend" markdown>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2**, the memory subsystem. Both sides are the same equation: Mori–Zwanzig projection on the left, diagonal-state SSM update on the right.</span>
+<div class="eq-breakdown" markdown>
+<div class="eq-term eq-term--p2" markdown>
+<span class="eq-term-tag">P2 — Self-reference</span>
+<span class="eq-term-math">Both sides are the same equation</span>
+<span class="eq-term-desc">Mori–Zwanzig projection (physics) ≡ diagonal-state SSM update (ML)</span>
+</div>
 </div>
 
 with $\mathbf{A}$ diagonal, eigenvalues $-\nu_j$, $b_j = \nu_j$. The
 auxiliary-field memory update is **exactly** the diagonal-state SSM update;
-no calibration required. The full equation embeds this $\color[HTML]{14b8a6}{P2}$
-subsystem inside a $\color[HTML]{6366f1}{P1}$ wave-equation kinetic and a
-$\color[HTML]{f59e0b}{P3}$ FDT-locked dissipation–noise pair, color-coded
-on the landing for orientation.
+no calibration required. The full equation embeds this **P2** subsystem
+inside a **P1** wave-equation kinetic and a **P3** FDT-locked
+dissipation–noise pair (see the landing for the per-term breakdown).
 
 </div>
 

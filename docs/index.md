@@ -29,26 +29,30 @@ principles about persistent extended entities. The same mathematical form
 appears across physics, cosmology, neural networks, and beyond, derived
 from observation, not assembled from prior literature.
 
-<div class="mnsm-eq mnsm-eq--coded" markdown>
+<div class="mnsm-eq" markdown>
 $$
 i\hbar\, \partial_t \Psi
 =
-\Big[\,
-\color[HTML]{6366f1}{-\tfrac{\hbar^{2}}{2m} D^{2}}
-+ \color[HTML]{f59e0b}{V_{\text{ext}}}
-+ \color[HTML]{14b8a6}{\Lambda |\Psi|^{2}}
-+ \color[HTML]{14b8a6}{V_{\text{mem}}}
-+ \color[HTML]{6366f1}{\alpha\,(-\Delta)^{\sigma/2}}
-- \color[HTML]{f59e0b}{i\Gamma}\,
-\Big]\Psi
-+ \color[HTML]{f59e0b}{\eta}
+\left[\,-\tfrac{\hbar^{2}}{2m} D^{2} + V_{\text{ext}} + \Lambda |\Psi|^{2} + V_{\text{mem}} + \alpha\,(-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi + \eta
 $$
 </div>
 
-<div class="eq-legend" markdown>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#6366f1"></span>**P1**, Oscillation: the wave-equation form</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#14b8a6"></span>**P2**, Self-reference: nonlinearity + memory hierarchy</span>
-<span class="eq-legend-item"><span class="eq-legend-dot" style="background:#f59e0b"></span>**P3**, Coupling: external potential, dissipation, FDT noise</span>
+<div class="eq-breakdown" markdown>
+<div class="eq-term eq-term--p1" markdown>
+<span class="eq-term-tag">P1 — Oscillation</span>
+<span class="eq-term-math">$-\tfrac{\hbar^{2}}{2m}D^{2}$ ・ $\alpha(-\Delta)^{\sigma/2}$</span>
+<span class="eq-term-desc">wave-equation kinetic + fractional dispersion</span>
+</div>
+<div class="eq-term eq-term--p2" markdown>
+<span class="eq-term-tag">P2 — Self-reference</span>
+<span class="eq-term-math">$\Lambda |\Psi|^{2}$ ・ $V_{\text{mem}}$</span>
+<span class="eq-term-desc">cubic self-interaction + auxiliary-field memory hierarchy</span>
+</div>
+<div class="eq-term eq-term--p3" markdown>
+<span class="eq-term-tag">P3 — Coupling</span>
+<span class="eq-term-math">$V_{\text{ext}}$ ・ $-i\Gamma$ ・ $\eta$</span>
+<span class="eq-term-desc">external potential + FDT-locked dissipation–noise pair</span>
+</div>
 </div>
 
 <div class="mnsm-cta" markdown>
