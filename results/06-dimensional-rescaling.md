@@ -1,5 +1,48 @@
 # Dimensional rescaling of the memory coupling
 
+> **Methodological note (2026-05-17, post-hoc audit).** The boxed
+> formula below is a fit across DIFFERENT initial-state conventions
+> rather than a within-convention scaling. The d=2 anti-collapse
+> demonstration (Σλ/|Λ| ~ 0.05) cited below used a setup that is not
+> Convention A (the sigma=0.4 non-normalized convention later
+> standardized in the dimensional-rescaling series at d=4, d=5);
+> the d=3 demonstration ($\Sigma\lambda / |\Lambda| \sim 0.5$ at
+> [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md)) used Convention B
+> (sigma=0.5 normalized to total norm 1). The d=4, d=5 extensions in
+> [`10-dimensional-rescaling-higher-d.md`](10-dimensional-rescaling-higher-d.md)
+> and [`15-dimensional-rescaling-fdt.md`](15-dimensional-rescaling-fdt.md)
+> use Convention A. The 1/d formula therefore mixes data from
+> structurally different operating regimes; the dimensional scaling it
+> captures is partly real (different $d$ do behave differently under
+> the equation) and partly a convention-choice artifact.
+>
+> [`30-dimensional-rescaling-convention-audit.md`](30-dimensional-rescaling-convention-audit.md)
+> documents the two conventions and recommends that the analytical
+> theory characterize dimensional dependence in a convention-
+> independent amplitude-bridge form.
+> [`31-cross-convention-phase-diagram-comparison.md`](31-cross-convention-phase-diagram-comparison.md)
+> and [`32-convention-L-matrix.md`](32-convention-L-matrix.md) document
+> the cross-convention behavior at d=2, d=3: Convention A is not
+> focal-collapse-accessible at d=2 or d=3 under any tested parameter
+> regime (neither the phase-diagram series' nor the dimensional-
+> rescaling series' native parameter regime); Convention B is L-robust
+> and accessible at d=2, d=3. The 1/d formula's d=2 data point therefore
+> does NOT correspond to Convention A at all; it corresponds to the
+> 2D paper's anti-collapse demonstration which used a convention not
+> standardized in this repository.
+>
+> The boxed formula remains a useful empirical fit summarizing the
+> observed pattern across the four (d=2, d=3, d=4, d=5) data points,
+> but it is not a within-convention scaling and should not be used to
+> extrapolate predictions at other d without checking the convention
+> alignment first. See [`32-convention-L-matrix.md`](32-convention-L-matrix.md)
+> for the structural reading: the equation produces different regime
+> structures at different (convention, L, d, T_bath, n_steps) joint
+> choices, and the dimensional dependence in the convention-independent
+> form is what the analytical theory in
+> [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md)
+> needs to characterize.
+
 ## The finding
 
 The total memory coupling $\Sigma\lambda = \sum_j \lambda_j$ required to release supercritical collapse via the anti-collapse mechanism scales with the spatial dimension $d$ as:
