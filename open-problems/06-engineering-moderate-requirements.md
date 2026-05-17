@@ -27,12 +27,12 @@ Both requirements are forced by the structural argument; both have a clean mathe
 - For requirement 7: a small-scale demonstration that a MNSM-instantiating architecture undergoing continual learning across distribution shifts does not exhibit catastrophic forgetting at the level standard architectures do. The demonstration should isolate the structural mechanism (multi-timescale memory + FDT-locked coupling) as the source of the difference.
 - For requirement 8: a small-scale demonstration that a MNSM-instantiating architecture undergoing self-modification (e.g., learned modification of its own update rule) maintains structural identity across the modification. The demonstration should identify which features of the system are preserved (triangle structure, principal eigenmodes, anti-collapse property) and which are allowed to change.
 - For both: clear identification of what evidence would be inconsistent with this engineering calibration (a specific experimental observation that would shift the engineering claim under criterion 4, distinct from the global structural claim which is evaluated by all six criteria in methodology/04).
-- Documentation of the engineering pattern in `implementation/neural/` or a follow-up location, with reproducible code and explicit connection to the structural framework.
+- Documentation of the engineering pattern in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff or a follow-up location, with reproducible code and explicit connection to the structural framework.
 
 ## Suggested approaches
 
 - **Requirement 7 (continual learning).**
-  - Start from the MemoryNLSLayer in [`../implementation/neural/`](../implementation/neural/).
+  - Start from the MemoryNLSLayer in [`mnsm-ml`](https://github.com/qrv0/mnsm-ml).
   - Introduce a continual-learning benchmark (e.g., Split-MNIST, Permuted-MNIST, Continual-CIFAR) and compare MNSM vs attention-only baseline.
   - The structural prediction: MNSM should exhibit slower forgetting because the slow memory mode ($\nu_{\text{slow}}$) acts as a consolidation mechanism analogous to the biological hippocampal-cortical pipeline.
   - Engineering pattern to test: weight updates gated by the auxiliary-field state, such that updates contradicting the slow-memory representation are damped.
@@ -46,6 +46,6 @@ Both requirements are forced by the structural argument; both have a clean mathe
 
 - [`../methodology/05-implications-for-agi.md`](../methodology/05-implications-for-agi.md): the source of the moderate-grade requirements 7 and 8; this open problem is the explicit work-out the methodology document defers.
 - [`../principles/03-coupling.md`](../principles/03-coupling.md) sections on recursive P3 and on "A logical consequence of P3": the structural framework.
-- [`../implementation/neural/`](../implementation/neural/): the existing MemoryNLSLayer is the starting point for engineering demonstrations.
+- [`mnsm-ml`](https://github.com/qrv0/mnsm-ml): the existing MemoryNLSLayer is the starting point for engineering demonstrations.
 - [`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md): the empirical instance at 70M parameters; analogous experiments at smaller scale on continual-learning and self-modification benchmarks would extend this body of evidence.
 - [`../CLAUDE.md`](../CLAUDE.md) Rule 7b: this open problem must be approached without scale/benchmark-driven framing; the test is whether the structural mechanism produces the predicted behavior, not whether MNSM "beats" continual-learning baselines on standard metrics.

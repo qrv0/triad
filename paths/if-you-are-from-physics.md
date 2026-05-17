@@ -163,7 +163,7 @@ Full result: [`../results/05-bravais-selection.md`](../results/05-bravais-select
 ## Numerical validation, against the literature standards
 
 The Strang split-step solver in
-[`../implementation/physics/solver.py`](https://github.com/qrv0/mnsm/blob/main/implementation/physics/solver.py)
+[`../implementation/physics/solver_3d.py`](https://github.com/qrv0/mnsm/blob/main/implementation/physics/solver_3d.py)
 is implemented in CuPy on consumer GPU hardware (RTX 4060 Laptop). The
 validation suite covers the standards one expects of stochastic field theory
 codes:
@@ -312,7 +312,7 @@ The order that minimizes back-and-forth for a physics reader:
 </div>
 </div>
 
-To reproduce: scripts in [`../experiments/physics/`](../experiments/physics/README.md) execute the relevant computations. Wall-clock on RTX 4060 Laptop is on the order of minutes per experiment. The cross-substrate neural-network instance reproduces in [`../experiments/neural/scale_up_dynamics.py`](https://github.com/qrv0/mnsm/blob/main/experiments/neural/scale_up_dynamics.py) (~6.3 hours).
+To reproduce: scripts in [`../experiments/physics/`](../experiments/physics/README.md) execute the relevant computations. Wall-clock on RTX 4060 Laptop is on the order of minutes per experiment. The cross-substrate neural-network instance reproduces from the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff (~6.3 hours).
 
 <div class="path-switch" markdown>
 

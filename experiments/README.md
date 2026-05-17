@@ -1,11 +1,12 @@
 # Experiments
 
-This folder contains the scripts that reproduce the numerical findings of the work. The experiments are organized by domain:
+This folder contains the scripts that reproduce the numerical findings of the work.
 
 | Subfolder | Content |
 |---|---|
 | [`physics/`](physics/) | Scripts that reproduce the field-theory results documented in [`../results/`](../results/). |
-| [`neural/`](neural/) | Scripts for benchmarking the neural sequence layer. Currently in stub form pending the benchmark work outlined in [`neural/README.md`](neural/README.md). |
+
+ML-substrate experiments (Memory-NLS neural sequence layer training, optimization-collapse comparisons) live in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository.
 
 ## Reproduction guarantee
 

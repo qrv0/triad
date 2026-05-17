@@ -149,7 +149,7 @@ with careful acknowledgement that the specific dimensional identification
 used to compare the equation's frequencies to physical Hz is a choice.
 </div>
 
-There are **six other independently documented domains** where the equation's
+There are many other independently documented domains where the equation's
 structure appears. They are catalogued in
 [`../interfaces/`](../interfaces/README.md).
 
@@ -178,7 +178,7 @@ and the equation appears, independently, in many different places,
 across physics, biology, neuroscience, machine learning, ecology, and
 contemporary research programs.** That recurrence is the evidence that
 the equation is real, not just a formula that happens to fit one dataset.
-The work is the documentation of those the appearances and the
+The work is the documentation of those appearances and the
 methodological argument for why "recurring across substrates" should
 count as evidence at all.
 </div>

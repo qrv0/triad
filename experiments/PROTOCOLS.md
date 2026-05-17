@@ -15,14 +15,14 @@ Each prediction has a status. The taxonomy is:
 - **untested**: no targeted experiment has been run; the prediction is named but its observable has not been measured.
 - **partially tested**: an experiment compatible with the prediction has been run, but with limitations (small sample, specific parameter regime, weak statistical power). The result shifts evidentiary weight but does not fully resolve the prediction.
 - **tested (consistent)**: an experiment targeting the prediction has been run, and the result matches the predicted observable within statistical bounds.
-- **tested, inconsistent**: an experiment targeting the prediction has been run with P3 active (gamma_0 > 0, T > 0, FDT-locked noise), and the result does not match the predicted observable. Per methodology/02 in its cleaned form, the inconsistent evidence shifts evidentiary weight against this interface's specific calibration under criterion 4 and prompts investigation of (a) the calibration of the prediction, (b) the auxiliary numerical assumptions (Duhem-Quine), or (c) the implementation. It does not falsify the global structural claim.
+- **tested, inconsistent**: an experiment targeting the prediction has been run, and the result does not match the predicted observable. Per methodology/02, inconsistent evidence shifts evidentiary weight against this interface's specific calibration under criterion 4 and prompts investigation of (a) the calibration of the prediction, (b) the auxiliary numerical assumptions (Duhem-Quine), or (c) the implementation. It does not falsify the global structural claim.
 - **disputed**: the experiment has been run but the result is contested (interpretation depends on choices that are themselves under debate); requires further work to resolve.
 
 ## Naming convention
 
-Test scripts are named `test_<short-description>.py` and placed in either [`physics/`](physics/) or [`neural/`](neural/) depending on substrate.
+Test scripts are named `test_<short-description>.py` and placed in [`physics/`](physics/). ML-substrate test scripts live in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff.
 
-Result documents are named `<NN>-<short-description>.md` and placed in [`../results/`](../results/), continuing the existing sequence (results/01 through results/08 are the original physics+neural findings; results/09 onwards are prediction tests).
+Result documents are named `<NN>-<short-description>.md` and placed in [`../results/`](../results/), continuing the existing sequence (results/01 through results/07 are the original physics findings; results/09 onwards are prediction tests).
 
 ## Required structure of a test script
 
@@ -30,7 +30,7 @@ Every prediction test script must:
 
 1. **Start with a docstring** stating the prediction being tested (interface number and prediction code, e.g., `P10.1`), the prediction's content in one sentence, the expected wall time on RTX 4060, and the output directory.
 
-2. **Reuse existing implementation modules where possible.** For physics tests: `implementation/physics/` (SolverConfig3D, MemoryConfig, run, observables). For neural tests: `implementation/neural/` (the Memory-NLS layer, the training loop, the baselines).
+2. **Reuse existing implementation modules where possible.** For physics tests: `implementation/physics/` (SolverConfig3D, MemoryConfig, run, observables). ML-substrate implementation lives in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff.
 
 3. **Use fixed random seeds.** Reproducibility requires the same seed across reruns on the same hardware.
 
@@ -98,19 +98,17 @@ Example: in [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-ku
 
 ## Updating RESEARCH-AGENDA
 
-When a wave of tests completes, the "Recently completed" section of [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md) is updated with the wave description, the result documents added, and the prediction-status changes. This keeps the agenda accurate to the current state of the program.
+When a batch of tests completes, the [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md) is updated with the result documents added and the prediction-status changes. This keeps the agenda accurate to the current state of the program.
 
-## Wave structure
+## Batching
 
-Tests are grouped into waves for batched commits. Each wave commits a coherent set of test scripts + result documents + status updates as a single integrated change. The current first wave (after Phase 3 completion) targets:
+Tests are grouped into thematic batches for commits. Each batch commits a coherent set of test scripts + result documents + status updates as a single integrated change. Currently active prediction targets:
 
 - P10.1 (Kuramoto chimera stability vs memory timescale)
 - Dimensional rescaling Σλ/|Λ| ~ 1/d extended to 4D and 5D (extends results/06)
-- P6.1 (FDT-locked vs empirically-tuned noise in Memory-NLS training)
-- P6.3 (cubic-state nonlinearity SimSiam without stop-gradient)
 - P14.2 (SOC vs MNSM avalanche statistics comparison)
 
-Future waves are planned in [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md).
+Further targets are tracked in [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md).
 
 ## Honest disclosure of test outcomes
 
@@ -134,4 +132,4 @@ Some predictions span multiple interfaces (e.g., the broadband-absorption phenom
 - [`../methodology/03-how-to-evaluate-this.md`](../methodology/03-how-to-evaluate-this.md): the evaluation procedure that includes running reproduction scripts.
 - [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md): the criteria; criterion 4 is the principal test of the global claim, criterion 1 is the internal consistency that the local tests partly verify.
 - [`../CLAUDE.md`](../CLAUDE.md): operational constraints (no competitive benchmark framing; no scale-driven proposals).
-- [`README.md`](README.md): pre-existing reproduce scripts for the original physics+neural findings (results 01-08).
+- [`README.md`](README.md): pre-existing reproduce scripts for the original physics findings (results 01-07).
