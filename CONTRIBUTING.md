@@ -11,12 +11,12 @@ fits this repository:
 
 **Strongly fits:**
 
-- New cross-domain interfaces (`interfaces/08-...`, `interfaces/09-...`).
-  If you observe the same structural form in a domain not yet documented
-  here, economic, biological, ecological, social, and can articulate
-  the correspondence with peer-reviewed citations, that is exactly what
-  the repository is for. The structural-realist methodology requires
-  cross-domain coverage; more substrates strengthen the structural claim.
+- New cross-domain interfaces. If you observe the same structural form
+  in a domain not yet documented here — economic, biological, ecological,
+  social — and can articulate the correspondence with peer-reviewed
+  citations, that is exactly what the repository is for. The
+  structural-realist methodology requires cross-domain coverage; more
+  substrates strengthen the structural claim.
 
 - Empirical replications of the documented results on different
   hardware, different random seeds, different software stacks. Confirming
@@ -38,7 +38,6 @@ fits this repository:
 
 **Should be discussed first** (open an issue):
 
-- Major architectural changes to the neural implementation.
 - Deletion or significant restructuring of existing documents.
 - Changes to the methodology framework (`methodology/`), these touch
   the load-bearing position of the work.

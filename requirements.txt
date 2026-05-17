@@ -11,9 +11,9 @@ matplotlib>=3.7
 h5py>=3.8
 tqdm>=4.65
 
-# Neural sequence layer (PyTorch reference implementation)
-# torch>=2.0           # uncomment to enable implementation/neural/
-# einops>=0.7          # uncomment to enable implementation/neural/
+# Neural sequence layer — moved to https://github.com/qrv0/mnsm-ml
+# torch>=2.0
+# einops>=0.7
 
 # Testing
 pytest>=7.4
