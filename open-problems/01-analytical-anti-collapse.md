@@ -262,6 +262,31 @@ The remaining gaps:
 
 The variational Gaussian ansatz of this section advances Phase 4 in identifying the structural mechanism by which dimensional dependence enters (via the lag-dynamics correction to the equilibrium-tracking sufficiency), but does not produce a clean closed-form expression for the critical $\Sigma\lambda(d)$. The 1/d formula extracted from results/06 at d=2,3 should be treated as an empirical fit within the focal-collapse regime, not a fundamental analytical result.
 
+## The convention question and what it implies for the analytical theory (2026-05-17)
+
+The convention audit ([`../results/30-dimensional-rescaling-convention-audit.md`](../results/30-dimensional-rescaling-convention-audit.md), [`../results/31-cross-convention-phase-diagram-comparison.md`](../results/31-cross-convention-phase-diagram-comparison.md), [`../results/32-convention-L-matrix.md`](../results/32-convention-L-matrix.md)) revealed that the 1/d formula in results/06 was built across DIFFERENT initial-state conventions silently:
+
+- d=2 entry ($\Sigma\lambda / |\Lambda| \sim 0.05$): from the 2D anti-collapse demonstration with a setup that is NOT the Convention A (sigma=0.4 non-normalized) later standardized in the dimensional-rescaling series at d=4, d=5.
+- d=3 entry ($\Sigma\lambda / |\Lambda| \sim 0.5$): from canonical Convention B (sigma=0.5 normalized to discrete L2 norm 1) anti-collapse at [`../results/04-anti-collapse-3d.md`](../results/04-anti-collapse-3d.md).
+- d=4, d=5 entries: from Convention A at native parameter regime (T_bath=0.05, n_steps=4000) in [`../results/15-dimensional-rescaling-fdt.md`](../results/15-dimensional-rescaling-fdt.md).
+
+Convention A at d=2, d=3 was verified to NOT be focal-collapse-accessible under any tested parameter regime in [`../results/32-convention-L-matrix.md`](../results/32-convention-L-matrix.md). The d=2 entry of the 1/d formula does not correspond to Convention A; it corresponds to a separate (and not standardized in this repository) initial-state convention. The d=3 entry is in a yet different convention. Only the d=4, d=5 entries are within Convention A.
+
+This complicates the analytical theory's task. The dimensional dependence the analytical theory needs to recover is NOT a within-convention scaling but an across-convention pattern. Two options:
+
+**Option 1: Make the analytical theory convention-aware.** Derive the critical $\Sigma\lambda(d)$ as a function of the initial-state amplitude in some bridge form (e.g., the discrete L2 norm of the initial state on the lattice, or the peak $|\Psi(0)|^2$ relative to the cubic-kinetic balance $|\Lambda|^{-1}$). The analytical theory then needs to predict that:
+
+- For Convention B (peak $|\Psi(0)|^2 \sim 1$ at all d, L2 norm = 1), the critical $\Sigma\lambda(d)$ varies with d in some specific form.
+- For Convention A (peak $|\Psi(0)|^2 \sim 1$ at all d, L2 norm < 1), the critical $\Sigma\lambda(d)$ varies in a different form because the integrated cubic attraction is weaker.
+
+The cross-convention bridge would be a single $\Sigma\lambda_{\text{crit}}$ as a function of the amplitude-bridge invariant, with conventions appearing as different cross-sections of the same underlying surface.
+
+**Option 2: Derive the regime structure in amplitude space directly.** Skip the convention parameterization; characterize the (released, intermediate, dispersive, collapse) regimes as a function of (peak amplitude, $|\Lambda|$, $\Sigma\lambda$, $d$, $\gamma_0$, $T_{\text{bath}}$) directly. The "1/d formula" is then a curve through this multidimensional space along a particular convention path; different conventions trace different curves.
+
+The Townes-profile volume averaging (the recommended next step in this open problem) is naturally amplitude-coherent: the focal width $L(t)$ and the peak density $\rho_{\text{peak}}(t) = N L(t)^{-d}$ are amplitude-bridge invariants. The release condition derived from the Townes profile should automatically be convention-independent if the derivation works.
+
+The conclusion is that the analytical theory's goal should be reformulated: not "derive the 1/d formula" (which is multi-convention and partly artifactual), but "derive the regime structure in amplitude-bridge form" with the 1/d formula recovered as a particular cross-section. The Townes-profile volume-averaging treatment is the natural framework for this reformulation.
+
 ## Connections to existing repo content
 
 - [`../principles/02-self-reference.md`](../principles/02-self-reference.md) section "A structural observation about the two parts": the qualitative argument is here; the open problem is to make it quantitative.
