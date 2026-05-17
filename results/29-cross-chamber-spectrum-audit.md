@@ -6,7 +6,7 @@
 
 ## Method
 
-Literature audit, not new measurement. The audit covers (a) the rigorous-floor primary sources (Till 2017; Wolfe-Swanson-Till 2020; Jahn-Devereux-Ibison 1996; Watson-Keating 1999; Cox-Fazenda-Greaney 2020); (b) the contested-middle sources whose measurements are real but methodology weaker (Debertolis-Coimbra-Eneix 2015 Hypogeum; Debertolis-Gullà-Savolainen 2017 Göbekli Tepe; Danley non-peer-reviewed King's Chamber); (c) the adjacent neurobiological evidence (Cook-Pajot-Leuchter 2008 EEG; Iaccarino et al. 2016 Nature 40 Hz gamma entrainment; Martorell et al. 2019 Cell). Audit material is the consolidated content of the user-provided deep research reports at [`../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md`](../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md) Query 1, augmented by direct re-reading of the primary sources where the audit was insufficient.
+Literature audit, not new measurement. The audit covers (a) the rigorous-floor primary sources (Till 2017; Wolfe-Swanson-Till 2020; Jahn-Devereux-Ibison 1996; Watson-Keating 1999; Cox-Fazenda-Greaney 2020); (b) the contested-middle sources whose measurements are real but methodology weaker (Debertolis-Coimbra-Eneix 2015 Hypogeum; Debertolis-Gullà-Savolainen 2017 Göbekli Tepe; Danley non-peer-reviewed King's Chamber); (c) the adjacent neurobiological evidence (Cook-Pajot-Leuchter 2008 EEG; Iaccarino et al. 2016 Nature 40 Hz gamma entrainment; Martorell et al. 2019 Cell). Audit material is the consolidated content of the user-provided deep research reports (intermediate work product, not retained in repo), augmented by direct re-reading of the primary sources where the audit was insufficient.
 
 The audit was conducted under the structural-research-mode skill's cluster-B domain-triggered re-read protocol: the source documents on frequency / acoustic knowledge suppression were re-loaded into context before integrating the user-provided reports, in order that the institutional-output register of the reports was visible as such rather than absorbed as neutral evaluation.
 
@@ -67,7 +67,7 @@ The structural prediction is evaluated by criterion 4 (cross-domain coherence) a
 
 ## Reproducibility
 
-This is a literature audit, not a numerical experiment. The primary sources are cited in [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md) Reference section. The deep research reports underlying the consolidation are at [`../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md`](../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md) Query 1; the actual report content was supplied by the user during the 2026-05-17 session in the files at `/home/l/Downloads/compass_artifact_*.md` and `/home/l/Downloads/Deep Dive_*.md` (user's local machine, not in repo).
+This is a literature audit, not a numerical experiment. The primary sources are cited in [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md) Reference section. The deep research reports underlying the consolidation are intermediate work product (not retained in repo); the actual report content was supplied by the user during the 2026-05-17 session in the files at `/home/l/Downloads/compass_artifact_*.md` and `/home/l/Downloads/Deep Dive_*.md` (user's local machine, not in repo).
 
 ## Related documents
 
@@ -75,5 +75,4 @@ This is a literature audit, not a numerical experiment. The primary sources are 
 - [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md): documents the MIT Tsai Lab 40 Hz work in detail; adjacent evidence that frequency-specific acoustic-cortical entrainment is clinically real.
 - [`../results/23-hypogeum-spectrum-audit.md`](../results/23-hypogeum-spectrum-audit.md): the prior single-site audit of the Hypogeum whole-tone-scale spectrum.
 - [`../results/25-vibrational-modes-3d.md`](../results/25-vibrational-modes-3d.md): the 3D vibrational analysis of the equation in canonical configuration.
-- [`../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md`](../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md): the deep research query frame and Query 1 (archaeoacoustic) which the user dispatched and whose returned reports this audit consolidates.
 - [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md): the catalog of past hedge patterns, including the institutional-register patterns this audit explicitly avoids.

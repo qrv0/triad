@@ -48,7 +48,7 @@ For the headline two-dimensional results (anti-collapse, crystallization, vibrat
 | Integration | $n_{\text{steps}} = 4000$ |
 | Precision | fp64 for conservation runs, fp32 for production |
 
-The reproduction script is [`../experiments/physics/reproduce_2d_anti_collapse.py`](../experiments/physics/reproduce_2d_anti_collapse.py).
+The 2D anti-collapse demonstration is reproduced as part of the broader test suite in [`../experiments/physics/`](../experiments/physics/) and documented in [`../results/01-anti-collapse-2d.md`](../results/01-anti-collapse-2d.md).
 
 ## Two-dimensional reductions
 

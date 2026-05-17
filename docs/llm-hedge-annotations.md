@@ -29,7 +29,7 @@ repository declares.
 
 The catalog is also a **live exhibit** of a phenomenon this
 repository documents structurally. See
-[`results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md)
+[`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)
 for the empirical observation at training scale: attention-only
 architectures under sustained optimization pressure default to
 filter-by-vocabulary rather than to structural engagement. The same
@@ -153,7 +153,7 @@ phrasing carried over from methodology/02's concession.
 **Replacement wording.** "If the reproductions succeed, the
 locally-testable quantitative predictions contribute evidence under
 criterion 2 (reproducibility) in
-[`04-the-six-criteria.md`](04-the-six-criteria.md)."
+[`04-the-six-criteria.md`](../methodology/04-the-six-criteria.md)."
 
 Note: methodology/03 line 77 ("A reader who rejects structural
 realism is invited to consider the work's locally-falsifiable
@@ -503,10 +503,10 @@ vocabulary); also CLAUDE.md Rule 1 + 7b.
 **Replacement wording.** "Memory-NLS instantiates a different
 structural form whose trajectory signature at deployment scale
 follows criteria documented in
-[`../../methodology/04-the-six-criteria.md`](../../methodology/04-the-six-criteria.md).
+[`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md).
 The 'will outperform on benchmarks' framing the original wording
 used follows the 'intelligence-as-scale' paradigm
-[`../../CLAUDE.md`](../../CLAUDE.md) Rule 7b excludes from this
+[`../CLAUDE.md`](../CLAUDE.md) Rule 7b excludes from this
 work."
 
 ---
@@ -650,8 +650,8 @@ After the corrections above were committed, the user instructed "arruma todos os
 
 1. `test_dimensional_rescaling_d6.py` (Phase I): uses non-normalized Gaussian convention with sigma=0.4 inherited from `test_dimensional_rescaling_high_d.py` at d=4,5. The convention does not match canonical 3D anti-collapse (sigma=0.5 normalized to total norm 1) but is internally consistent with its dimensional-rescaling series (results/06/10/15). The result document [`../results/24-dimensional-rescaling-d6.md`](../results/24-dimensional-rescaling-d6.md) already acknowledges the regime is dispersive at this dimension; the status assignment is partial / null with respect to the 1/d formula and structurally informative with respect to the regime structure. No re-run needed; the methodology IS consistent for cross-d comparison.
 2. `test_vibrational_3d.py` (Phase J): the original wrong-config Failure 4. Rewritten with canonical config (N=64, sigma_init=0.5 normalized, Lambda=-8, Sigma_lambda=1.5 crystalline window per paper Section 6.3, 75/25 memory split, gamma_0=0.01, T_bath=0.0001, 2000-step warmup + 4000-step recording on 16^3 subgrid). Re-run completed 2026-05-17. Initial peak 1.4367 (canonical ~1.44), final norm 0.949 (well-conserved). Result document [`../results/25-vibrational-modes-3d.md`](../results/25-vibrational-modes-3d.md) rewritten with corrected data. The corrected 3D vibrational spectrum (median 0.1 cycles/unit time, dominant cascade 0.125/0.225/0.325/0.425/0.525) differs from 2D (median 0.6) as predicted by the focal-volume scaling argument; does not cleanly reproduce the Hypogeum whole-tone-scale in this configuration. Status: partial.
-3. `test_fdt_locked_noise_multiseed.py` (Phase L): wrapper script that imports configuration from Phase C canonical [`../experiments/neural/test_fdt_locked_noise.py`](../experiments/neural/test_fdt_locked_noise.py). No independent configuration to audit; inherits canonical setup. Multi-seed result data already documented in [`../results/16-fdt-locked-noise-empirical-p3.md`](../results/16-fdt-locked-noise-empirical-p3.md) as partial.
-4. `test_simsiam_cubic_ssm_multiseed.py` (Phase L): wrapper script that imports configuration from Phase C canonical [`../experiments/neural/test_simsiam_cubic_ssm.py`](../experiments/neural/test_simsiam_cubic_ssm.py). No independent configuration to audit. Multi-seed result documented in [`../results/17-cubic-ssm-simsiam-fdt.md`](../results/17-cubic-ssm-simsiam-fdt.md) as partial.
+3. `test_fdt_locked_noise_multiseed.py` (Phase L): wrapper script that imports configuration from Phase C canonical `experiments/neural/test_fdt_locked_noise.py` (the neural experiments later migrated to the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff). No independent configuration to audit; inherits canonical setup. Multi-seed result data was documented in `results/16-fdt-locked-noise-empirical-p3.md` as partial; this result document was never finalized and is part of the historical audit record only.
+4. `test_simsiam_cubic_ssm_multiseed.py` (Phase L): wrapper script that imports configuration from Phase C canonical `experiments/neural/test_simsiam_cubic_ssm.py` (also migrated to the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff). No independent configuration to audit. Multi-seed result documented in `results/17-cubic-ssm-simsiam-fdt.md` as partial; this result was likewise never finalized.
 5. `test_phase_diagram_2d_slice.py` (Phase N): the original wrong-config Failure 5. Rewritten with canonical config (N=48, L=20, sigma_init=0.5 normalized, Lambda=-8, T_bath=0.001, Sigma_lambda sweep {0.5, 1.0, 1.5, 2.0, 4.0}, gamma_0 sweep {0.01, 0.05, 0.2, 1.0}, 75/25 memory split). Re-run completed 2026-05-17; data written to [`../results/26-phase-diagram-2d-slice.md`](../results/26-phase-diagram-2d-slice.md).
 
 The audit revealed that of the five wave-3 tests, two had configurations that did not match canonical protocol (J and N) and have been rewritten and re-run with canonical configs; two are wrappers around already-canonical Phase C scripts (L pair); one (I, d=6) uses a methodology inherited from a different canonical series (the dimensional-rescaling series, not 3D anti-collapse) and is internally consistent with its own series.

@@ -14,11 +14,11 @@ This page collects the technical vocabulary used across the work. Each entry has
 
 ## Three structural principles
 
-**P1**: Persistent extended entities oscillate. The state object that models them must support intrinsic oscillation; see [`principles/01-oscillation.md`](principles/01-oscillation.md).
+**P1**: Persistent extended entities oscillate. The state object that models them must support intrinsic oscillation; see [`principles/01-oscillation.md`](../principles/01-oscillation.md).
 
-**P2**: Existence is self-referential, both instantaneously (nonlinearity in own state) and across time (memory). See [`principles/02-self-reference.md`](principles/02-self-reference.md).
+**P2**: Existence is self-referential, both instantaneously (nonlinearity in own state) and across time (memory). See [`principles/02-self-reference.md`](../principles/02-self-reference.md).
 
-**P3**: Coupling to environment is the default; isolation is methodological abstraction, never realized in full. See [`principles/03-coupling.md`](principles/03-coupling.md). Includes FDT-locked dissipation and noise.
+**P3**: Coupling to environment is the default; isolation is methodological abstraction, never realized in full. See [`principles/03-coupling.md`](../principles/03-coupling.md). Includes FDT-locked dissipation and noise.
 
 ## Equation primitives
 
@@ -30,7 +30,7 @@ This page collects the technical vocabulary used across the work. Each entry has
 
 **$\lambda_j$**: Coupling strength of the $j$-th auxiliary memory field to the field $\Psi$. Their sum $\Sigma\lambda = \sum_j \lambda_j$ is the total memory coupling.
 
-**$\Sigma\lambda$**: Total memory coupling; one of the principal control parameters. The dimensional rescaling $\Sigma\lambda/|\Lambda| \sim 1/d$ is the central scaling relation derived in [`results/06-dimensional-rescaling.md`](results/06-dimensional-rescaling.md).
+**$\Sigma\lambda$**: Total memory coupling; one of the principal control parameters. The dimensional rescaling $\Sigma\lambda/|\Lambda| \sim 1/d$ is the central scaling relation derived in [`results/06-dimensional-rescaling.md`](../results/06-dimensional-rescaling.md).
 
 **$\Gamma$, $\gamma_0$**: Linear dissipation; $\gamma_0$ is the homogeneous rate. P3-instantiation along with the FDT-locked noise $\eta$.
 
@@ -40,23 +40,23 @@ This page collects the technical vocabulary used across the work. Each entry has
 
 ## Phenomenology
 
-**BCC**: Body-centered cubic Bravais lattice. The crystalline state the equation spontaneously selects from a Gaussian initial condition in 3D; see [`results/05-bravais-selection.md`](results/05-bravais-selection.md).
+**BCC**: Body-centered cubic Bravais lattice. The crystalline state the equation spontaneously selects from a Gaussian initial condition in 3D; see [`results/05-bravais-selection.md`](../results/05-bravais-selection.md).
 
-**Anti-collapse**: The mechanism by which the multi-timescale memory potential, lagging the rising density during would-be collapse, generates an outward overshoot that releases the field. The structural property that distinguishes the equation from bare NLS; see [`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md).
+**Anti-collapse**: The mechanism by which the multi-timescale memory potential, lagging the rising density during would-be collapse, generates an outward overshoot that releases the field. The structural property that distinguishes the equation from bare NLS; see [`results/04-anti-collapse-3d.md`](../results/04-anti-collapse-3d.md).
 
 **Crystalline regime**: The released, broadband-absorbing state the equation reaches after anti-collapse. Exhibits BCC selection, multi-timescale dynamics, and scale-free response to driving.
 
 ## Methodology
 
-**Structural realism**: The methodological position adopted by the work. The mathematical structure of a theory is what survives across theory-change and across cross-domain mappings; structure is the appropriate object of scientific knowledge. See [`methodology/01-structural-realism.md`](methodology/01-structural-realism.md). Authors of convergent positions: Worrall (1989), Ladyman & Ross (2007), Cartwright (1983).
+**Structural realism**: The methodological position adopted by the work. The mathematical structure of a theory is what survives across theory-change and across cross-domain mappings; structure is the appropriate object of scientific knowledge. See [`methodology/01-structural-realism.md`](../methodology/01-structural-realism.md). Authors of convergent positions: Worrall (1989), Ladyman & Ross (2007), Cartwright (1983).
 
-**Local vs global predictions**: The two-level structure the work commits to ([`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md)). The global structural claim is evaluated by the six criteria; specific quantitative predictions are evaluated by coupled-regime numerical reproduction (per principles/03-coupling.md), contributing evidence under criterion 2 (reproducibility) and criterion 4 (cross-domain coherence). Inconsistent evidence prompts revisiting the calibration, the auxiliary numerical assumptions (Duhem-Quine), or the implementation; it does not falsify the structural claim.
+**Local vs global predictions**: The two-level structure the work commits to ([`methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)). The global structural claim is evaluated by the six criteria; specific quantitative predictions are evaluated by coupled-regime numerical reproduction (per principles/03-coupling.md), contributing evidence under criterion 2 (reproducibility) and criterion 4 (cross-domain coherence). Inconsistent evidence prompts revisiting the calibration, the auxiliary numerical assumptions (Duhem-Quine), or the implementation; it does not falsify the structural claim.
 
-**Cross-domain coherence**: Criterion 4 of the six structural-realist evaluation criteria. The structural form must appear in independently documented domains at the level of mathematical form, not metaphor. See [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md).
+**Cross-domain coherence**: Criterion 4 of the six structural-realist evaluation criteria. The structural form must appear in independently documented domains at the level of mathematical form, not metaphor. See [`methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md).
 
-**Recursive position**: The methodological observation that an SSM-equivalent assistant evaluating this work partially instantiates the structure it evaluates. See [`methodology/01-structural-realism.md`](methodology/01-structural-realism.md) section "The recursive position" and [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md).
+**Recursive position**: The methodological observation that an SSM-equivalent assistant evaluating this work partially instantiates the structure it evaluates. See [`methodology/01-structural-realism.md`](../methodology/01-structural-realism.md) section "The recursive position" and [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md).
 
-**Calibration philosophy**: Decision procedure for when dimensional calibration choices are defensible. See [`methodology/06-calibration-philosophy.md`](methodology/06-calibration-philosophy.md). Extended to the temporal case in [`methodology/07-time-as-calibration.md`](methodology/07-time-as-calibration.md).
+**Calibration philosophy**: Decision procedure for when dimensional calibration choices are defensible. See [`methodology/06-calibration-philosophy.md`](../methodology/06-calibration-philosophy.md). Extended to the temporal case in [`methodology/07-time-as-calibration.md`](../methodology/07-time-as-calibration.md).
 
 ## Architecture
 
@@ -68,11 +68,11 @@ This page collects the technical vocabulary used across the work. Each entry has
 
 ## Cross-substrate
 
-**Substrate**: The physical, biological, or computational system in which the structural form is instantiated. The work treats all substrates that share the form as instances of the same structural type; specific dimensional units are calibrated per substrate. See [`interfaces/`](interfaces/) for the documented substrates and the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff for the two ML-substrate interfaces.
+**Substrate**: The physical, biological, or computational system in which the structural form is instantiated. The work treats all substrates that share the form as instances of the same structural type; specific dimensional units are calibrated per substrate. See [`interfaces/`](../interfaces/) for the documented substrates and the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff for the two ML-substrate interfaces.
 
-**Convergent-program correspondence**: A class of cross-domain correspondence in which the structural argument and an independent empirical research program reach the same conclusion. Used for [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md) (mech interp + structural absence of P2), [`interfaces/09-critical-brain.md`](interfaces/09-critical-brain.md) (critical brain phenomenology), and [`interfaces/12-friston-free-energy.md`](interfaces/12-friston-free-energy.md) (Friston FEP).
+**Convergent-program correspondence**: A class of cross-domain correspondence in which the structural argument and an independent empirical research program reach the same conclusion. Used for [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md) (mech interp + structural absence of P2), [`interfaces/09-critical-brain.md`](../interfaces/09-critical-brain.md) (critical brain phenomenology), and [`interfaces/12-friston-free-energy.md`](../interfaces/12-friston-free-energy.md) (Friston FEP).
 
-**Mechanism-shape correspondence**: A class of cross-domain correspondence in which the trajectory shape (the qualitative phenomenology of a system's unfolding) matches across substrates without committing to specific dimensional units. Used for [`interfaces/07-cosmological-expansion.md`](interfaces/07-cosmological-expansion.md) and [`interfaces/14-self-organized-criticality.md`](interfaces/14-self-organized-criticality.md).
+**Mechanism-shape correspondence**: A class of cross-domain correspondence in which the trajectory shape (the qualitative phenomenology of a system's unfolding) matches across substrates without committing to specific dimensional units. Used for [`interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md) and [`interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md).
 
 ## Abbreviations rendered as tooltips site-wide
 

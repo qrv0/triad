@@ -111,7 +111,6 @@ provides a transient repulsive contribution that exceeds the cubic
 attraction at the focal point, releasing the field outward.
 
 <div class="inline-diagram" markdown>
-![Memory lag, the mechanism behind anti-collapse](../_docs_assets/diagrams/memory-lag.svg)
 <p class="inline-diagram-caption">
 <strong>The mechanism in one picture.</strong> The memory potential
 $V_{\text{mem}}(t)$ (teal) is a low-pass-filtered echo of the field

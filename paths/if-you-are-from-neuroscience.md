@@ -83,7 +83,6 @@ dimension-independent and substrate-independent; specific frequencies
 depend on substrate-specific calibration.
 
 <div class="inline-diagram" markdown>
-![Neural frequency bands and Memory-NLS modes](../_docs_assets/diagrams/frequency-bands.svg)
 <p class="inline-diagram-caption">
 <strong>Where the equation's modes fall on the EEG frequency map.</strong>
 The four teal markers are the equation's principal modes under three
@@ -146,7 +145,6 @@ McClelland, McNaughton & O'Reilly 1995): rapid encoding in hippocampus
 (slow mode).
 
 <div class="inline-diagram" markdown>
-![Memory timescale hierarchy](../_docs_assets/diagrams/timescale-hierarchy.svg)
 <p class="inline-diagram-caption">
 <strong>The two structural memory modes mapped onto the biological pipeline.</strong>
 The equation's fast and slow relaxation rates fall in exactly the bands

@@ -1,6 +1,6 @@
 # Experimental protocols for prediction tests
 
-This document specifies the protocol for the prediction-tests that operationalize the "Locally testable predictions and observational signatures" sections in each interface document. The protocol exists so that any test added to [`physics/`](physics/) or [`neural/`](neural/) is structured consistently with the rest of the testing infrastructure and produces a result document that the interface document can reference.
+This document specifies the protocol for the prediction-tests that operationalize the "Locally testable predictions and observational signatures" sections in each interface document. The protocol exists so that any test added to [`physics/`](physics/) is structured consistently with the rest of the testing infrastructure (ML-substrate tests live in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff) and produces a result document that the interface document can reference.
 
 ## Purpose
 
