@@ -454,6 +454,7 @@ nav:
           - 'Active Matter': interfaces/13-active-matter.md
           - 'Self-Organized Criticality': interfaces/14-self-organized-criticality.md
           - 'Hawkes Intensity Processes': interfaces/21-hawkes-intensity.md
+          - 'Earthquake Cycle Dynamics': interfaces/22-earthquake-cycle.md
       - 'Biological':
           - 'Immune Affinity Maturation': interfaces/11-immune-affinity-maturation.md
           - 'Cardiac Dynamics': interfaces/15-cardiac-dynamics.md
@@ -474,6 +475,7 @@ nav:
       - 'Calibration Philosophy': methodology/06-calibration-philosophy.md
       - 'Time as Calibration': methodology/07-time-as-calibration.md
       - 'Mori-Zwanzig Foundation': methodology/08-mori-zwanzig-foundation.md
+      - 'On the Tautology Objection': methodology/09-on-the-tautology-objection.md
 
   - Open Problems:
       - 'Overview': open-problems/README.md

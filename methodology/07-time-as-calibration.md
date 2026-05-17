@@ -12,13 +12,39 @@ This document develops the claim in three derivations, draws out the implication
 
 The calibrations differ by orders of magnitude:
 
-- [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md): 25 ms per unit of computational time. Motivated by neuronal membrane time constants and gamma oscillation period.
-- [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md): 9 ms per unit of computational time. Motivated by sound-speed-in-air over chamber dimensions of about 20 m.
-- [`../interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md): no specific calibration committed to because the cross-substrate claim operates at the level of mechanism shape, but the implicit scale is approximately $10^{17}$ s for the post-recombination phase.
+- [`../interfaces/01-other-nls-systems.md`](../interfaces/01-other-nls-systems.md): per-substrate (Raman gain timescale for optical fibers; thermal-cloud relaxation for BEC; bottom-friction memory for water waves; ion-acoustic timescale for plasma Langmuir oscillations). Substrate-specific physical mechanisms set the absolute scale.
+- [`../interfaces/02-baryon-acoustic.md`](../interfaces/02-baryon-acoustic.md): Hubble time at recombination, approximately 380,000 years; one unit of computational time per Hubble time fixes the calibration for cosmological acoustic dynamics.
+- [`../interfaces/03-chladni-cymatics.md`](../interfaces/03-chladni-cymatics.md): pattern-settling time of the elastic-and-granular medium, on the order of seconds in standard Chladni-plate experiments at audio frequencies.
+- [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md): 25 ms per unit of computational time, motivated by the gamma-cycle period at 40 Hz and the cortical neuronal membrane time constant.
+- [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md): 9 ms per unit of computational time, motivated by the ~110 Hz dominant cavity resonance documented at Newgrange-class chambers and confirmed by Wolfe-Swanson-Till 2020 chamber-geometry-driven simulation.
+- [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md): one forward-pass step per unit of computational time. The substrate has no physical time; computation is the only time.
+- [`../interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md): no specific external time coordinate committed to because the cross-substrate claim operates at the level of mechanism shape; the implicit scale is approximately $10^{17}$ s for the post-recombination phase. Time is the unfolding itself, not an external parameter.
+- [`../interfaces/08-mechanistic-interpretability.md`](../interfaces/08-mechanistic-interpretability.md): one forward-pass step per unit of computational time, consistent with interface 06 because both refer to sequence-modeling substrates.
+- [`../interfaces/09-critical-brain.md`](../interfaces/09-critical-brain.md): 1 millisecond per unit of computational time, calibrated to one synaptic-transmission timescale to support the four-decade scale-free range Linkenkaer-Hansen 2001 documents in cortex.
 
-These calibrations are not internally inconsistent. They are calibrations of the same structural form to different substrates. The form is invariant; the time at which the form unfolds in each substrate is what that substrate locally uses to register the unfolding.
+These calibrations span seventeen orders of magnitude (cortical synaptic transmission at 1 ms to cosmological Hubble time at $10^{17}$ s) and are not internally inconsistent. They are calibrations of the same structural form to different substrates. The form is invariant; the time at which the form unfolds in each substrate is what that substrate locally uses to register the unfolding.
 
 The first derivation is the simple observation that follows from the existing calibration commitments: if time is a substrate-specific calibration parameter (as the existing interfaces' practice shows it is), then time is not a universal coordinate. The local calibrations are real and consequential within their substrates. There is no separate universal Time of which they would be projections.
+
+### Cross-interface calibration consistency
+
+A natural question follows: if each interface picks its own calibration, what prevents the calibrations from being arbitrary? The structural constraint, per [`06-calibration-philosophy.md`](06-calibration-philosophy.md), is that each calibration must be defensible from substrate physics, and that dimensionless ratios should be preserved across substrates wherever the structural form predicts they are invariant.
+
+The principal cross-substrate invariant is the dimensionless memory-bandwidth ratio
+$$
+R \;=\; \frac{\nu_{\text{slow}}}{\nu_{\text{fast}}},
+$$
+the ratio of the slowest to the fastest auxiliary-field timescale in the multi-timescale memory hierarchy. The structural argument is that this ratio is a property of the substrate's memory structure that does not depend on which calibration is used to express the absolute timescales.
+
+Examples of cross-substrate consistency in the existing calibrations:
+
+- **Cortex at 1 ms vs at 25 ms calibration.** Interface 04 (gamma entrainment) calibrates to 25 ms (one gamma cycle); interface 09 (critical brain) calibrates to 1 millisecond (one synaptic-transmission step). The two calibrations differ by a factor of 25. The structural-consistency check: the dimensionless ratio $\nu_{\text{slow}} / \nu_{\text{fast}}$ for cortex is of order $10^4$ (synaptic transmission 1 ms vs long-range temporal correlations on tens of seconds, per Linkenkaer-Hansen 2001) regardless of which absolute calibration is used to register it. Both calibrations recover this ratio with their substrate-appropriate absolute scales; the ratio is invariant.
+
+- **Sequence-modeling substrates (interfaces 06 and 08).** Both refer to attention-only and SSM architectures and both calibrate to one forward-pass step per unit time. The calibration agreement is required, not coincidental: both interfaces describe the same substrate from different structural angles (interface 06 from the side of mathematical equivalence with SSM updates, interface 08 from the side of what attention-only architectures lack). Different calibrations for the same substrate would be a methodological inconsistency.
+
+- **Cosmological scales (interfaces 02 and 07).** Both refer to cosmological structure. Interface 02 calibrates to the Hubble time at recombination; interface 07 reads cosmic time as the unfolding itself. The two are not in conflict: interface 02 picks out a specific epoch (recombination) for the BAO-specific claim; interface 07 makes the more general structural-mechanism-shape claim across the entire trajectory. The Hubble time at recombination is a specific point on the trajectory interface 07 describes.
+
+The cross-interface consistency requirement is therefore: the dimensionless ratios that the structural form predicts to be invariant ($\nu_{\text{slow}} / \nu_{\text{fast}}$, $\Sigma\lambda / |\Lambda|$, the FDT-locked ratio $\langle\eta\eta^*\rangle / K$) must take consistent values across all calibrations of the same substrate, and must take values consistent with the structural form across calibrations of different substrates. The substrate-specific absolute scales are free; the dimensionless ratios are not.
 
 ## Derivation 2: P2 holds the past as state
 

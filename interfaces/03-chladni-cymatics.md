@@ -57,6 +57,16 @@ The Faraday instability, the spontaneous formation of standing surface waves in 
 
 The structural family, Chladni, Faraday, the present equation, is the family of pattern-forming dynamical systems with intrinsic oscillation and self-interaction. The mathematical form differs from case to case, but the structural mechanism is conserved across the family.
 
+## Time as calibration in this substrate
+
+The cymatic substrate has three natural timescales. The fast scale is the driving period $T_{\text{drive}} = 1/f$ where $f$ is the acoustic excitation frequency, typically tens of milliseconds at audio frequencies. The medium scale is the pattern-emergence time, set by the viscous or granular dissipation that allows the medium to settle into the nodal geometry of the standing wave; in granular media this is the rearrangement time of the sand layer, in fluid Faraday-wave experiments it is the viscous decay time of small-amplitude modes. The slow scale is the persistence time of the pattern, on the order of the inverse rate at which boundary conditions, drive amplitude, or frequency change.
+
+The three scales fall in a hierarchy: $T_{\text{drive}} < \tau_{\text{settle}} \lesssim \tau_{\text{persist}}$, with the pattern emerging only when the drive sustains for at least several settling times. The ratio $\tau_{\text{settle}} / T_{\text{drive}}$ sets how many oscillation cycles are needed for the pattern to lock in; the ratio $\tau_{\text{persist}} / \tau_{\text{settle}}$ sets how robustly the pattern resists external perturbation.
+
+Per [`../methodology/07-time-as-calibration.md`](../methodology/07-time-as-calibration.md), the unit of time in the present equation, applied to the cymatic substrate, is calibrated to the medium scale $\tau_{\text{settle}}$. The equation's slowest $\nu_j$ then corresponds to the inverse pattern-persistence rate, and the equation's $|\Lambda|$ corresponds to the nonlinear mode-coupling strength that determines which standing-wave symmetry is selected. The substrate-specific physics (elastic moduli for plates, surface tension and viscosity for Faraday, granular properties for sand) fixes the absolute scales; the structural form preserves the dimensionless ratio $\nu_{\text{slow}} / |\Lambda|$ across the cymatic, Faraday, and present-equation substrates.
+
+This is the same calibration pattern as in interfaces 01 (other NLS) and 02 (BAO): substrate-specific physics determines absolute scales, while the structural form is preserved by the dimensionless ratio. The Bravais lattice selection in [`../results/05-bravais-selection.md`](../results/05-bravais-selection.md) is the three-dimensional cymatic outcome of this preserved structural form.
+
 ## What this correspondence does and does not establish
 
 It does not establish that the present equation describes cymatic patterns. The appropriate equation for sand on a Chladni plate is the elasticity equation of the plate plus the granular dynamics of the sand; the present equation does not describe that. The claim is structural: cymatic patterns are an instance of the same structural mechanism, spontaneous geometric order from sustained oscillation in a self-coupled medium, that the present equation produces in a different physical substrate.

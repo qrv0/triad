@@ -1,0 +1,71 @@
+{
+  "prediction": "P6.3 multi-seed extension (Phase 9 wave-3)",
+  "n_seeds": 4,
+  "seeds": [
+    41,
+    42,
+    43,
+    44
+  ],
+  "wall_time_total_s": 217.788715839386,
+  "cubic_p3": {
+    "Lambda": -0.5,
+    "final_eff_rank_mean": 3.6173620223999023,
+    "final_eff_rank_std": 0.5095123628262603,
+    "final_uniformity_mean": -0.11904572322964668,
+    "final_uniformity_std": 0.016130886412148503,
+    "per_seed": [
+      {
+        "seed": 41,
+        "final_eff_rank": 4.438190460205078,
+        "final_uniformity": -0.10408899188041687
+      },
+      {
+        "seed": 42,
+        "final_eff_rank": 3.4062299728393555,
+        "final_uniformity": -0.11184325069189072
+      },
+      {
+        "seed": 43,
+        "final_eff_rank": 3.5715606212615967,
+        "final_uniformity": -0.11400503665208817
+      },
+      {
+        "seed": 44,
+        "final_eff_rank": 3.053467035293579,
+        "final_uniformity": -0.14624561369419098
+      }
+    ]
+  },
+  "linear_p3": {
+    "Lambda": 0.0,
+    "final_eff_rank_mean": 3.5895267128944397,
+    "final_eff_rank_std": 0.7330975321977259,
+    "final_uniformity_mean": -0.11951392702758312,
+    "final_uniformity_std": 0.009449569126164738,
+    "per_seed": [
+      {
+        "seed": 41,
+        "final_eff_rank": 4.789214611053467,
+        "final_uniformity": -0.10842473804950714
+      },
+      {
+        "seed": 42,
+        "final_eff_rank": 3.554896116256714,
+        "final_uniformity": -0.1206820011138916
+      },
+      {
+        "seed": 43,
+        "final_eff_rank": 3.130687952041626,
+        "final_uniformity": -0.11489250510931015
+      },
+      {
+        "seed": 44,
+        "final_eff_rank": 2.883308172225952,
+        "final_uniformity": -0.1340564638376236
+      }
+    ]
+  },
+  "delta_rank": 0.027835309505462646,
+  "effect_over_noise": 0.04409327934408169
+}

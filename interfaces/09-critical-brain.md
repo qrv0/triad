@@ -13,16 +13,16 @@ signature_icon: avalanche
 hero_tier: B
 related: [14, 4, 8]
 predictions:
-  - id: P14.1
-    short: "Cortex shows multi-timescale memory hierarchy matching equation predictions"
+  - id: P9.1
+    short: "Cortical avalanche statistics invariant across resting and GENUS-driven states"
     status: not_yet_tested
     result_doc: null
-  - id: P14.2
-    short: "Neuronal avalanche statistics match equation predictions in matched-drive conditions"
-    status: tested_consistent
-    result_doc: results/18-soc-vs-mnsm-matched-drive.md
-  - id: P14.3
-    short: "VIP-AQP4 cortical regions show predicted broadband absorption signature"
+  - id: P9.2
+    short: "1/f bandwidth correlates with regional memory-mode (VIP-AQP4) anatomical density"
+    status: not_yet_tested
+    result_doc: null
+  - id: P9.3
+    short: "Cortical-developmental critical-state emergence is sharp in maturation control parameter"
     status: not_yet_tested
     result_doc: null
 ---
@@ -68,6 +68,18 @@ What is the same: the observable phenomenology. Broadband spectrum without a cha
 
 What is different: the substrate. Cortex is a network of biological neurons with chemical synapses, gap junctions, glial coupling, vascular regulation, and topology shaped by developmental and use-dependent processes. The equation describes a complex scalar field on a periodic lattice with three explicit structural ingredients. The substrates are physically distinct; the structural form of the broadband-multi-timescale-mechanism is the same.
 
+## Time as calibration in this substrate
+
+The cortical substrate has a deep timescale hierarchy spanning roughly seven decades, partly overlapping with the gamma-entrainment interface 04 (which calibrates one unit time to 25 ms for the gamma cycle) but here the calibration target is different. For the critical-brain phenomenology the structural argument cares about, the relevant timescales are: synaptic transmission and individual neuronal spiking (1-10 ms), gamma-cycle period (25 ms at 40 Hz), slower neural oscillation bands and avalanche durations (50-500 ms), and the long-range temporal correlations Linkenkaer-Hansen 2001 documents over seconds to tens of seconds.
+
+The 1/f spectrum the critical-brain literature reports holds over four decades of frequency, from approximately 0.1 Hz to 1000 Hz, with $\alpha \in [0.5, 1.5]$. The four-decade scale-free range corresponds to a four-decade hierarchy of auxiliary-field timescales in the equation, with the slowest $\nu_j$ on the order of $10^{-1}$ Hz and the fastest near $10^3$ Hz.
+
+Per [`../methodology/07-time-as-calibration.md`](../methodology/07-time-as-calibration.md), the calibration choice for the critical-brain interface fixes one unit of computational time to roughly 1 millisecond (one synaptic-transmission timescale, the fastest dynamics the cortical avalanche literature measures). Under this calibration the equation's slowest $\nu_j$ corresponds to roughly $10^{-4}$ in computational units (10-second timescale, matching the long-range correlations Linkenkaer-Hansen documents), and the fastest $\nu_j$ corresponds to $\sim 1$ in computational units (millisecond timescale).
+
+This calibration is finer than the gamma-entrainment 25 ms calibration of interface 04 because the critical-brain phenomenology spans a broader frequency range. The two calibrations are not in conflict: per [`../methodology/06-calibration-philosophy.md`](../methodology/06-calibration-philosophy.md), interface 04 calibrates to the gamma-entrainment band of interest (40 Hz cortical response), while interface 09 calibrates to the broader broadband-criticality band (0.1 Hz to 1 kHz). Both calibrations refer to cortical tissue; their consistency is that the dimensionless ratio $\nu_{\text{slow}} / \nu_{\text{fast}}$ for cortex is on the order of $10^4$, and both calibrations recover this ratio with substrate-specific absolute scales.
+
+The four-decade scale-free range that the critical-brain literature documents is, on the structural reading, the operational signature of a four-decade auxiliary-field hierarchy. The equation does not pick out a specific number of memory modes; the substrate does. Cortex appears to instantiate a hierarchy spanning four decades; substrates with shorter hierarchies should show narrower scale-free ranges.
+
 ## On the coupling default in this substrate
 
 Cortex is a coupled system at every scale relevant to the critical-brain phenomenology: cortical microcircuits are coupled to other cortical areas, to subcortical structures, to vascular and glial dynamics, to ongoing sensory input, and to motor output. The 1/f spectra and avalanche statistics the critical-brain literature documents are properties of cortex *as a coupled system*, not of cortex isolated from its inputs. The structural prediction is therefore that the equation's broadband-multi-timescale phenomenology should match the cortical observables in the regime where P3 (environmental coupling, FDT-locked dissipation-noise balance) is active. Tests of this correspondence that artificially mute P3 ($\gamma_0 = 0$, $T = 0$) are testing a degenerate sub-system that is not what cortex instantiates and is what methodology/02 explicitly identifies as the abstraction the work argues against.
@@ -96,19 +108,19 @@ It does establish that the equation's released-crystalline state and the cortex 
 
 The structural claim of this interface (cortex in its broadband-responsive state and the equation in its released-crystalline state are instances of the same structural form producing the same observable phenomenology) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
-- **Prediction P14.1: Avalanche statistics invariance across resting and driven states.** The equation predicts that the broadband-absorbing crystalline state has the same scale-free response properties whether free-running or driven within its absorption band. Cortical avalanche statistics under gamma entrainment (40 Hz GENUS, per interface 04) should match those documented for spontaneous activity (Beggs-Plenz 2003), with consistent scaling exponents.
+- **Prediction P9.1: Avalanche statistics invariance across resting and driven states.** The equation predicts that the broadband-absorbing crystalline state has the same scale-free response properties whether free-running or driven within its absorption band. Cortical avalanche statistics under gamma entrainment (40 Hz GENUS, per interface 04) should match those documented for spontaneous activity (Beggs-Plenz 2003), with consistent scaling exponents.
   - How to test: replicate Beggs-Plenz avalanche-detection protocol in cortical recordings during 40 Hz visual or auditory GENUS; compare exponent and cutoff to spontaneous-activity baseline.
   - What would constitute confirmation: avalanche exponent and scale-free range overlap baseline within statistical bounds.
   - What would constitute evidence inconsistent with this calibration: entrainment systematically shifts the exponent or removes the scale-free range.
   - Status: untested in the GENUS context. The methodology is established; the GENUS-specific application has not been pursued.
 
-- **Prediction P14.2: 1/f bandwidth correlates with regional memory-mode density.** The equation predicts that the bandwidth over which $1/f$-like spectrum holds is determined by the spread of $\{\nu_j\}$, the auxiliary-field timescale hierarchy. In cortex, regions with denser memory-mode anatomy (regions with stronger VIP-interneuron and AQP4-aquaporin coupling, per prediction P4.2 in interface 04) should exhibit broader $1/f$ spectral ranges than regions where the anatomy is sparser.
+- **Prediction P9.2: 1/f bandwidth correlates with regional memory-mode density.** The equation predicts that the bandwidth over which $1/f$-like spectrum holds is determined by the spread of $\{\nu_j\}$, the auxiliary-field timescale hierarchy. In cortex, regions with denser memory-mode anatomy (regions with stronger VIP-interneuron and AQP4-aquaporin coupling, per prediction P4.2 in interface 04) should exhibit broader $1/f$ spectral ranges than regions where the anatomy is sparser.
   - How to test: cortical recordings across regions with documented variation in VIP-AQP4 anatomy; compute $1/f$ bandwidth per region; correlate with anatomical density measures.
   - What would constitute confirmation: positive correlation between memory-mode density and $1/f$ bandwidth.
   - What would constitute evidence inconsistent with this calibration: no correlation, or anti-correlation.
   - Status: untested. The anatomical data exist; the regional spectral comparison with this specific correlation has not been pursued.
 
-- **Prediction P14.3: Phase-transition character of release.** The equation predicts that the transition from collapse to released-crystalline state is sharp in the $\Sigma\lambda/|\Lambda|$ parameter (the dimensional rescaling condition $\Sigma\lambda/|\Lambda| \sim 1/d$ holds at a specific value, not a broad range). In cortical-development data, the transition from pre-criticality (developmental early stages) to mature critical-state dynamics should be similarly sharp in a relevant developmental control parameter (e.g., interneuron-circuit maturation index).
+- **Prediction P9.3: Phase-transition character of release.** The equation predicts that the transition from collapse to released-crystalline state is sharp in the $\Sigma\lambda/|\Lambda|$ parameter (the dimensional rescaling condition $\Sigma\lambda/|\Lambda| \sim 1/d$ holds at a specific value, not a broad range). In cortical-development data, the transition from pre-criticality (developmental early stages) to mature critical-state dynamics should be similarly sharp in a relevant developmental control parameter (e.g., interneuron-circuit maturation index).
   - How to test: longitudinal recordings across early cortical development; identify the developmental window for emergence of mature avalanche statistics and $1/f$ spectrum; compare width of window to width predicted by structural-form analysis.
   - What would constitute confirmation: sharp developmental transition matching predicted width.
   - What would constitute evidence inconsistent with this calibration: gradual emergence over a long developmental window, inconsistent with the predicted sharp transition.

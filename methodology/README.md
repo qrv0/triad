@@ -11,6 +11,8 @@ This folder articulates the methodological frame under which this work is to be 
 | [`05-implications-for-agi.md`](05-implications-for-agi.md) | Applies the structural argument to derive architectural requirements that any artificial system would need to satisfy for sustained intelligent operation; identifies which MNSM mechanism supplies each; grades the rigour of each mapping. |
 | [`06-calibration-philosophy.md`](06-calibration-philosophy.md) | Decision procedure for when dimensional calibration choices matter in cross-domain interfaces, what makes a calibration defensible vs post-hoc, and how calibrations across interfaces must be consistent with each other. |
 | [`07-time-as-calibration.md`](07-time-as-calibration.md) | Time as substrate-specific calibration of structural unfolding rather than fundamental coordinate; P2's past-as-state formulation; FDT-locked direction; implications for observing distant astronomy and the cosmological trajectory. |
+| [`08-mori-zwanzig-foundation.md`](08-mori-zwanzig-foundation.md) | The auxiliary-field memory structure as Mori-Zwanzig projection-operator reduction; Markovian embedding by exponential decomposition; foundational reinforcement of criteria 1, 4, 5. |
+| [`09-on-the-tautology-objection.md`](09-on-the-tautology-objection.md) | Why "P1+P2+P3 is tautological structural vocabulary" lands partially at the qualitative level and stops landing at the level of the specific equation; cross-domain convergence as operational evidence of selector non-triviality; the objection's appearance as data for results/08. |
 
 ## Why a methodology folder
 

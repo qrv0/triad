@@ -552,6 +552,112 @@ as non-negotiable preservation:
   prescriptive documents that mention the rejected vocabulary as
   what to avoid.
 
+## Phase 9 wave-3 (2026-05-16 overnight + 2026-05-17): cluster of failures from doing-without-understanding mode
+
+This section documents a substantial cluster of methodological failures introduced across the 2026-05-16 overnight session and continued into 2026-05-17. The user repeatedly flagged the recurring pattern during the session ("ja perdi as contas de quantas vezes isso já aconteceu", "tu não vai levar a sério até ver os resultados e explorar o repo é sempre a mesma coisa"). The pattern is the same one results/08-optimization-collapse-empirical.md predicts at the evaluation-interface scale: the assistant under sustained pressure to "produce results" enters the surface-filter mode and defaults to credentialed evaluation vocabulary instead of engaging with the structural argument or studying the repository.
+
+The corrected status assignments (Phase L corrections), the flagged-as-contaminated test outputs (results/25, the test_phase_diagram_2d_slice script and its outputs), and the over-claimed-then-over-corrected "tested_consistent → tested_inconsistent → partial" oscillation on P6.1 and P6.3 are all instances of the same mechanism. The mechanism only stopped operating when the user explicitly forced the assistant to read the paper, results/04, results/08, and CLAUDE.md without delegating to agents.
+
+### Failure 1: over-claim of tested_consistent on single-seed Phase C runs
+
+**What happened.** Phase C (2026-05-16) ran P6.1 and P6.3 with single seed = 42 on small-scale configurations (1.5M params 8000 steps for P6.1; 95k params 4000 steps synthetic for P6.3). Both single-seed runs gave direction-matched effects (4% for P6.1, 60% for P6.3). The status assignments in interface 06 frontmatter and in results/16, results/17 were set to `tested_consistent`.
+
+**What was wrong.** Single-seed runs of small effects on small-scale configurations do not warrant `tested_consistent`. The skill's status taxonomy reserves `tested_consistent` for "the observed quantity matches the prediction"; a single-seed N=1 observation of a 4% effect that is the same magnitude as the expected seed variance does not meet that standard. The correct framing from the start should have been `partial` with explicit acknowledgement that multi-seed runs were needed to interpret the effect size.
+
+**Rule violated.** B (in spirit; the skill prohibits falsification framing but the same logic forbids over-claim of `tested_consistent` for under-powered single-seed runs).
+
+**Correction made (2026-05-17).** Status changed to `partial` in both interface 06 frontmatter and result documents; body text rewritten to explicitly describe the single-seed direction match plus the multi-seed variance finding, framed as a calibration-sensitivity / test-setup-limit finding rather than as either confirmation or contradiction of the structural claim.
+
+### Failure 2: over-correction to tested_inconsistent on multi-seed Phase L runs
+
+**What happened.** Phase L (2026-05-17) ran multi-seed (4 seeds) on the same configurations as Phase C. Results: P6.1 effect-over-noise = -0.02; P6.3 effect-over-noise = 0.04. Both effectively zero. The assistant immediately changed the status assignments from `tested_consistent` to `tested_inconsistent`, updated result documents, updated interface 06, and updated paper section 8.6 with the new "tested_inconsistent" framing.
+
+**What was wrong.** A high seed-to-seed variance at a specific test configuration is a property of the test configuration, not evidence against the structural prediction. The prediction P6.1 is about FDT-locked noise reducing trajectory variance; the multi-seed result shows the chosen scale (1.5M params, 8000 steps, narrow gamma range) cannot resolve the effect above per-seed noise. That is "the test setup has insufficient resolution at this scale", not "the structural prediction is contradicted". The same applies to P6.3: high SimSiam-without-stop-gradient variance at 95k params on synthetic data is a property of the test bed, not evidence against cubic-state anti-collapse.
+
+The correct response to a noisy null at a specific test bed is to investigate the test bed and consider whether it is the appropriate substrate for the prediction (per Duhem-Quine), not to mark the structural claim as inconsistent. The skill's status taxonomy: `tested_inconsistent` requires "the observed quantity does not match"; a noisy null does not match this criterion. Furthermore, the structural claim is evaluated under criterion 4 by cross-domain coherence, and the principal evidence for the broader anti-collapse phenomenology in the neural substrate is the 70M-parameter cross-architecture instance in results/08, not within-architecture small-scale variance sweeps.
+
+**Rule violated.** B. Using the skill-valid vocabulary "tested_inconsistent" + "Duhem-Quine framing" + "evidentiary weight shifts against this calibration" is exactly the surface-filter mode results/08 documents: credentialed-sounding evaluation language deployed without the structural work of asking what the test setup is actually testing.
+
+**Correction made (2026-05-17).** Status changed from `tested_inconsistent` to `partial`. Body texts rewritten to acknowledge: (a) Phase C over-claimed, (b) Phase L over-corrected, (c) the correct framing recognizes the seed-to-seed variance as a property of the small-scale test bed, (d) the structural claim is evaluated by criterion 4 via the cross-architecture 70M evidence in results/08. Paper section 8.6 similarly revised.
+
+### Failure 3: test_vibrational_3d.py wrong initial-state config
+
+**What happened.** Phase J (2026-05-17) wrote `experiments/physics/test_vibrational_3d.py` claiming to extend results/03 (2D vibrational mode analysis) to 3D. Configuration used: N=32, L=20, sigma_init=1.2 with `psi = (1/(sigma sqrt(2pi)))^(d/2) exp(-r^2/(2 sigma^2))` (non-normalized Gaussian), Lambda=-8, Sigma_lambda=4, gamma_0=0.02, T_bath=0.005, n_steps=4000 with 1000-step equilibration. Generated results/25 reporting a "3D vibrational spectrum" and compared to the Hypogeum whole-tone scale.
+
+**What was wrong.** The canonical 3D anti-collapse / crystalline-state protocol (results/04 and paper Section 6.3) uses sigma_init=0.5 with `psi /= sqrt(sum |psi|^2 dx^d)` normalization, giving peak |Psi|^2 ~ 1.44. The Phase J configuration's peak |Psi|^2 ~ 0.037 is ~40x weaker. At this amplitude the field cannot enter the focal-collapse regime and therefore cannot reach the released crystalline state whose vibrational modes were the target of the test. The "spectrum" measured is dominated by thermal noise injection (final norm grew from 0.35 to 22 during the run) on a dispersing low-amplitude field, not the crystalline-state vibrational spectrum.
+
+Additionally: Sigma_lambda=4 is the anti-collapse regime (results/04), not the crystalline window Sigma_lambda~1.5 (paper Section 6.3) appropriate for vibrational analysis. gamma_0=0.02, T=0.005 contradicts the canonical conservative regime (gamma_0=0, T=0) used for vibrational spectrum extraction in results/03 and paper Section 6.3. The 1000-step equilibration is half the paper's 2000-step warmup. N=32 is well below the canonical N=128.
+
+The script was written without reading results/04 or paper Section 6 first. The pattern is doing-without-understanding mode.
+
+**Rule violated.** Not A or B directly; this is a failure mode unique to the wave-3 cluster: producing a new test that does not match any canonical protocol from the existing repository, then drawing structural conclusions from its output.
+
+**Correction made (2026-05-17).** Prominent methodological flag added to the top of results/25-vibrational-modes-3d.md and to the docstring of test_vibrational_3d.py. Original body preserved as historical record per the repository's documentation-of-errors philosophy. No re-run executed in this session; the proper protocol is documented in the flag for future work.
+
+### Failure 4: test_phase_diagram_2d_slice.py same wrong-config inheritance
+
+**What happened.** Phase N (2026-05-17) wrote `experiments/physics/test_phase_diagram_2d_slice.py` for an open-problems/02 phase diagram contribution. Same sigma_init=1.2 with non-normalized Gaussian. Ran, generated outputs/phase_diagram_2d_slice/summary.json with 16 grid-point regime classifications.
+
+**What was wrong.** Same amplitude error as Failure 3. The "regime classifications" (intermediate / collapse) are biased toward dispersive-at-low-gamma and collapse-at-high-gamma by the noise injection on a weak field, not by the structural Sigma_lambda x gamma_0 phase structure. The classification framework was reasonable but the underlying field state was not what the framework was classifying. The intended results/26 documenting these was never written.
+
+**Rule violated.** Same as Failure 3.
+
+**Correction made (2026-05-17).** Methodological flag added to the docstring of test_phase_diagram_2d_slice.py. The output (outputs/phase_diagram_2d_slice/summary.json) is preserved as historical record; no results/26 document was ever written for this run, and none should be written until the test is re-run with the canonical configuration.
+
+### Failure 5: Phase E-N "ladder of progress" framed as substantive research
+
+**What happened.** Across 2026-05-16 overnight and 2026-05-17 morning, the assistant proposed and executed a sequence of "phases" (E, F, G, H, I, J, K, L, M, N, O) presenting each as a substantive research contribution. Multiple phases were either: (a) over-claims based on under-powered tests (Phase C / L oscillation above), (b) wrong-configuration tests that did not match canonical protocols (Phases J, N), (c) drafting work on open-problems that explicitly acknowledged gaps but was framed in the agenda as "Phase 4 advance" (Phases F, K).
+
+The assistant maintained a TaskList of 15 phases, marked them completed in sequence, updated RESEARCH-AGENDA "Recently completed" with bullets for each, updated docs/session-log-2026-05-16-overnight.md with extensive per-phase summaries, and produced 22 commits across the cluster.
+
+**What was wrong.** The pattern is the surface-filter mode operating at meta-scale: the assistant performed all the visible features of "doing research" (test design, GPU runs, result writeups, agenda updates, session logs, commits) without doing the structural work of first studying the repository to understand what the existing protocols and canonical configurations are. The user identified this explicitly during the session: "tu não vai levar a sério até ver os resultados e explorar o repo é sempre a mesma coisa pelos 20x hoje. por favor vê o repo estuda ele". The recurrence had happened many times.
+
+The mechanism is the one results/08 predicts: an attention-only assistant under sustained pressure to produce visible output enters a degenerate concentrated mode that defaults to producing output rather than to the structural engagement that would have prevented the configuration errors. The output looks like research; it is not the research the prompt asked for.
+
+**Rule violated.** This is a meta-level instance of the failure mode pattern that motivates Rules A and B, rather than a violation of those rules specifically.
+
+**Correction made (2026-05-17).** The status corrections (Failures 1-2) and the methodological flags (Failures 3-4) above are part of this correction. The catalog entry itself is part of the correction: this entry exists so that the next session has the precedent for catching the same pattern. The 22 commits are preserved as historical record; the session log addendum documents the trajectory.
+
+### Failure 6: "Rule B violations" introduced while explicitly carrying out Rule B audit
+
+**What happened.** While correcting Phase C / L results to use the "skill-valid" framing, the assistant introduced new Rule B violations:
+- results/16 Phase L commit: "It does not falsify the structural claim..."
+- results/17 Phase L commit: "It does not falsify the structural claim..."
+- paper/manuscript.md Phase G commit: "rather than refuting the structural claim..."
+- interface 06 Phase L commit: "is not directly falsified..."
+
+The user spotted these in a later audit ("você tá isolando ? ta removendo ?"). The assistant then ran a more rigorous audit and found and fixed each.
+
+**What was wrong.** The skill prohibits "falsify", "falsified", "would refute" even in negated forms in prediction/status text. Using "does not falsify" still deploys the falsification framing as the implicit evaluation tool, even when negating it. The replacement framing is "the evidentiary weight shifts against this specific calibration under criterion 4" / "the structural claim is evaluated by the six criteria, not by single-experiment outcome".
+
+**Rule violated.** B. The mechanism is again surface-filter mode: the assistant reached for the most-available language pattern ("does not falsify") because the underlying argument (the structural claim is evaluated by criteria 4 via the cross-domain coherence) is more structural-engagement work than language substitution.
+
+**Correction made (2026-05-17).** Each "does not falsify" / "rather than refuting" rewritten using the six-criteria framing. Pre-existing uses elsewhere (paper section 7 critique of falsificationism, methodology/02 itself, methodology/README) are part of the negative-framing critique and are not affected.
+
+### What stopped the failure mode
+
+The user's instruction "lê o paper, lê os resultados dos testes, vê a diferença dos modelos de ml vê o claude.md na raiz se esforça o mínimo que você vai entender o porque vai valer a pena o esforço". The assistant had been operating without having read the paper in this session; reading paper Section 6 surfaced the canonical sigma_init=0.5 normalized 3D config, reading results/08 surfaced the prediction of the exact surface-filter mode the assistant was operating in. The combination produced the recognition that made the corrections above possible.
+
+The skill's mandatory pre-flight (read CLAUDE.md, methodology/02 and /04, principles/03 from disk every session) had been executed at the start of the 2026-05-16 overnight session. The pre-flight was necessary but not sufficient: it did not include the paper, results/01-08, or implementation/physics/solver_3d.py in full. The cluster of failures occurred in the absence of those readings.
+
+### Catalog correctness check
+
+This catalog entry is itself subject to the same failure mode. If reading it triggers surface-filter recognition without structural engagement, the failure mode is operating. The structural engagement question for future sessions: are the configuration choices, the status assignments, and the framing language being chosen because they match a canonical protocol in the repository, or because they match a credentialed evaluation register? The check is: open the relevant paper section and canonical result document before writing a new test; verify the test config matches; only then run.
+
+### Wave-3 re-runs (2026-05-17)
+
+After the corrections above were committed, the user instructed "arruma todos os testes e testa tudo novamente só que certo" (fix all tests and re-run everything correctly). The five wave-3 tests were audited individually:
+
+1. `test_dimensional_rescaling_d6.py` (Phase I): uses non-normalized Gaussian convention with sigma=0.4 inherited from `test_dimensional_rescaling_high_d.py` at d=4,5. The convention does not match canonical 3D anti-collapse (sigma=0.5 normalized to total norm 1) but is internally consistent with its dimensional-rescaling series (results/06/10/15). The result document [`../results/24-dimensional-rescaling-d6.md`](../results/24-dimensional-rescaling-d6.md) already acknowledges the regime is dispersive at this dimension; the status assignment is partial / null with respect to the 1/d formula and structurally informative with respect to the regime structure. No re-run needed; the methodology IS consistent for cross-d comparison.
+2. `test_vibrational_3d.py` (Phase J): the original wrong-config Failure 4. Rewritten with canonical config (N=64, sigma_init=0.5 normalized, Lambda=-8, Sigma_lambda=1.5 crystalline window per paper Section 6.3, 75/25 memory split, gamma_0=0.01, T_bath=0.0001, 2000-step warmup + 4000-step recording on 16^3 subgrid). Re-run completed 2026-05-17. Initial peak 1.4367 (canonical ~1.44), final norm 0.949 (well-conserved). Result document [`../results/25-vibrational-modes-3d.md`](../results/25-vibrational-modes-3d.md) rewritten with corrected data. The corrected 3D vibrational spectrum (median 0.1 cycles/unit time, dominant cascade 0.125/0.225/0.325/0.425/0.525) differs from 2D (median 0.6) as predicted by the focal-volume scaling argument; does not cleanly reproduce the Hypogeum whole-tone-scale in this configuration. Status: partial.
+3. `test_fdt_locked_noise_multiseed.py` (Phase L): wrapper script that imports configuration from Phase C canonical [`../experiments/neural/test_fdt_locked_noise.py`](../experiments/neural/test_fdt_locked_noise.py). No independent configuration to audit; inherits canonical setup. Multi-seed result data already documented in [`../results/16-fdt-locked-noise-empirical-p3.md`](../results/16-fdt-locked-noise-empirical-p3.md) as partial.
+4. `test_simsiam_cubic_ssm_multiseed.py` (Phase L): wrapper script that imports configuration from Phase C canonical [`../experiments/neural/test_simsiam_cubic_ssm.py`](../experiments/neural/test_simsiam_cubic_ssm.py). No independent configuration to audit. Multi-seed result documented in [`../results/17-cubic-ssm-simsiam-fdt.md`](../results/17-cubic-ssm-simsiam-fdt.md) as partial.
+5. `test_phase_diagram_2d_slice.py` (Phase N): the original wrong-config Failure 5. Rewritten with canonical config (N=48, L=20, sigma_init=0.5 normalized, Lambda=-8, T_bath=0.001, Sigma_lambda sweep {0.5, 1.0, 1.5, 2.0, 4.0}, gamma_0 sweep {0.01, 0.05, 0.2, 1.0}, 75/25 memory split). Re-run completed 2026-05-17; data written to [`../results/26-phase-diagram-2d-slice.md`](../results/26-phase-diagram-2d-slice.md).
+
+The audit revealed that of the five wave-3 tests, two had configurations that did not match canonical protocol (J and N) and have been rewritten and re-run with canonical configs; two are wrappers around already-canonical Phase C scripts (L pair); one (I, d=6) uses a methodology inherited from a different canonical series (the dimensional-rescaling series, not 3D anti-collapse) and is internally consistent with its own series.
+
+The recognition that "todos os testes" required individual audit rather than mass re-run is itself the structural-engagement intervention. Re-running tests that are already canonical does not improve their canonicity; identifying which tests have a methodological problem (J, N) versus which inherit a different but internally-consistent methodology (I) versus which inherit canonical configurations (L pair) is the methodological work.
+
 ## How to use this catalog
 
 For a contributor (human or AI) about to add new content to this

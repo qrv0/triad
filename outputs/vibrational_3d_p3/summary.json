@@ -1,0 +1,103 @@
+{
+  "prediction_tested": "3D vibrational spectrum extension of results/03 (2D), canonical config",
+  "config": {
+    "N": 64,
+    "L": 20.0,
+    "Lambda": -8.0,
+    "Sigma_lambda": 1.5,
+    "lambda_fast": 1.125,
+    "lambda_slow": 0.375,
+    "gamma_0": 0.01,
+    "T_bath": 0.0001,
+    "nu_fast": 10.0,
+    "nu_slow": 0.5,
+    "dt": 0.0025,
+    "n_warmup": 2000,
+    "n_record": 4000,
+    "subgrid_stride": 4,
+    "subgrid_N": 16,
+    "sigma_init": 0.5,
+    "normalized": true
+  },
+  "results": {
+    "wall_time_s": 106.24587965011597,
+    "initial_norm": 1.0000001192092896,
+    "initial_peak": 1.4366968870162964,
+    "warmup_norm": 0.9807438169832645,
+    "warmup_peak": 0.001085115269113547,
+    "final_norm": 0.949118683805717,
+    "final_peak": 0.0011375096565240791,
+    "dominant_freq_stats": {
+      "range": [
+        0.1,
+        2.0
+      ],
+      "median": 0.1,
+      "mean": 0.20046386718750003,
+      "std": 0.13606236959932147
+    },
+    "top_15_dominant_freq_bins": [
+      [
+        0.125,
+        2132
+      ],
+      [
+        0.225,
+        776
+      ],
+      [
+        0.32500000000000007,
+        577
+      ],
+      [
+        0.42500000000000004,
+        384
+      ],
+      [
+        0.525,
+        161
+      ],
+      [
+        0.625,
+        51
+      ],
+      [
+        0.8250000000000001,
+        5
+      ],
+      [
+        0.925,
+        5
+      ],
+      [
+        1.125,
+        4
+      ],
+      [
+        1.975,
+        1
+      ],
+      [
+        1.725,
+        0
+      ],
+      [
+        1.6750000000000003,
+        0
+      ],
+      [
+        1.8250000000000002,
+        0
+      ],
+      [
+        1.875,
+        0
+      ],
+      [
+        1.9250000000000003,
+        0
+      ]
+    ]
+  },
+  "backend": "cupy"
+}

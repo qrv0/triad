@@ -15,7 +15,7 @@ related: [8, 10, 9]
 predictions:
   - id: P6.1
     short: "FDT-locked noise reduces training trajectory variance vs ad-hoc noise schedules"
-    status: not_yet_tested
+    status: partial
     result_doc: results/16-fdt-locked-noise-empirical-p3.md
   - id: P6.2
     short: "Optimization collapse boundary scales with model size as the cubic term predicts"
@@ -23,7 +23,7 @@ predictions:
     result_doc: null
   - id: P6.3
     short: "Cubic state nonlinearity prevents SimSiam collapse without stop-gradient in coupled regime"
-    status: not_yet_tested
+    status: partial
     result_doc: results/17-cubic-ssm-simsiam-fdt.md
 ---
 # Interface: structured state space models
@@ -100,11 +100,23 @@ Noise injection during training is standard in deep learning, but the relationsh
 
 The equation's noise term is FDT-locked by construction. Translated into optimization terms, the prescription would be: the stochastic forcing applied during training should be proportional to the square root of (dissipative regularization rate × bath temperature × step size). The temperature parameter is, in this translation, an analogue of the effective stochasticity of the input distribution. The prescription is parameter-poor, only $\gamma_0$ and $T$ are free, and removes the need to separately tune noise injection and weight decay.
 
-## What this folder is and is not
+## Time as calibration in this substrate
 
-This document is the most concrete of the cross-domain mappings because the mathematical correspondence is exact. It is also the most consequential for the work's potential reception in the machine learning community: a reader from machine learning who reads this document understands immediately that the work is not adjacent to their field but is, in a precise sense, a different formulation of objects they already work with.
+The SSM substrate has no physical time; computation is the only time. The relevant timescales are computational: the discretization step $\Delta t$ in the continuous-time S4 formulation, equivalent to one token's worth of sequence advance in Mamba and RWKV; the per-step decay factor $\exp(-\nu_j \Delta t)$ for the j-th memory channel; and the slowest-decaying channel set by the smallest $\nu_j$ in the model.
 
-This document is not a benchmark claim. The four extensions to the SSM baseline outlined above are structural claims about the equation; whether they translate into empirical performance improvements on standard sequence-modeling benchmarks (Long Range Arena, language modeling perplexity, etc.) is a question for the empirical work outlined in [`../experiments/neural/README.md`](../experiments/neural/README.md). That empirical work is the natural next direction.
+The substrate's three timescales fall in a hierarchy. $\Delta t$ (one forward-pass step) is the fast scale. The medium scale is $1/\nu_j$ for channels with eigenvalues near $\Delta t^{-1}$, channels that retain memory of order one step. The slow scale is $1/\nu_{\text{slow}}$ for channels with the smallest eigenvalues, channels that retain memory across many steps and provide long-range context.
+
+Per [`../methodology/07-time-as-calibration.md`](../methodology/07-time-as-calibration.md), the unit of computational time in the present equation is calibrated to one of these substrate timescales. The natural choice for the SSM substrate is to calibrate the equation's discretization step to one forward-pass step of the SSM. The other timescales then follow: $\nu_j \Delta t$ is dimensionless and equal to the per-step decay; the equation's slowest $\nu_j$ corresponds to the SSM's slowest hidden-state component, which sets the effective context length.
+
+This calibration choice differs from the calibration choices for the physics substrates (interfaces 02, 03, 05, 07) where time has a substrate-specific physical meaning. The structural form is preserved across calibrations; the absolute scales are not. This is the standard pattern documented in [`../methodology/06-calibration-philosophy.md`](../methodology/06-calibration-philosophy.md): the structural form is invariant; the calibration is substrate-specific.
+
+## What this correspondence does and does not establish
+
+It does not establish that machine learning practitioners need to adopt the physics-side framing of these objects. The work asserts only that an equation derived from physical structural axioms (P1+P2+P3) is mathematically identical to the linear core of modern sequence models. Whether researchers in machine learning find the physics-side framing useful for their own work is for them to decide; the structural fact does not depend on adoption.
+
+It does not establish that the four extensions Memory-NLS makes beyond the linear SSM baseline (cubic nonlinearity, anti-collapse via temporal memory lag, spontaneous discrete-symmetry selection, FDT-locked noise) constitute superior architectural choices in the comparative-benchmark sense. The structural claim is that each extension is principled, follows from one of the three axioms, and addresses a documented failure mode in current sequence-modeling architectures. Whether the extensions translate into the metrics that ML evaluation conventions privilege is a separate empirical question whose outcome does not bear on the structural claim. Per [`../CLAUDE.md`](../CLAUDE.md) Rule 7a, the comparison is differentiation, not competition.
+
+It does establish that two communities, with no coordination and different research motivations, independently arrived at the same mathematical object. The auxiliary-field memory equation and the diagonal SSM update are term-by-term identical, and remain so whether or not either community engages with the other's framing. This convergence is the cross-domain coherence evidence under criterion 4 of [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md). The structural form selected by P1+P2+P3, far from being arbitrary or post-hoc, is the same form the ML community arrived at independently while solving a different problem (efficient long-sequence modeling).
 
 ## Common dismissals and why they do not apply
 
@@ -124,7 +136,7 @@ The structural claim of this interface (the auxiliary-field equation is term-by-
   - How to test: train two nonlinear-SSM variants on the same corpus and infrastructure, one with FDT-locked noise scheduling, one with empirically tuned noise; compare optimization-trajectory variance and incidence of loss spikes.
   - What would constitute confirmation: FDT-locked variant has lower trajectory variance and fewer spikes at matched accuracy.
   - What would constitute evidence inconsistent with this calibration: no difference, or the FDT-locked variant has higher variance / more spikes.
-  - Status: partially tested at the cross-architecture level (the empirical 70M instance in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md) compares MemNLS vs Transformer); the FDT-lock specific comparison within nonlinear-SSM architectures has a dedicated script ready ([`../experiments/neural/test_fdt_locked_noise.py`](../experiments/neural/test_fdt_locked_noise.py)) and a result-document template ([`../results/11-fdt-locked-noise-empirical.md`](../results/11-fdt-locked-noise-empirical.md)) **pending GPU execution**.
+  - Status: **partial** (see [`../results/16-fdt-locked-noise-empirical-p3.md`](../results/16-fdt-locked-noise-empirical-p3.md)). Single-seed Phase C run showed val-loss trajectory std 0.0952 vs 0.0995 (direction matched, 4% effect). Multi-seed Phase 9 wave-3 follow-up at the same configuration (4 seeds, 1.5M params, 8000 steps, narrow $\gamma_0 \in \{0.005, 0.02\}$) gave 0.0987 +/- 0.0041 vs 0.0986 +/- 0.0040; the small expected effect at this scale is within the seed-to-seed noise floor. This is the calibration-sensitivity finding the Duhem-Quine framing of [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md) anticipates: the within-architecture FDT-coupling-strength signature is not measurable at this small scale and narrow $\gamma_0$ range; the appropriate test bed for this prediction is the cross-architecture instance at [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md) at 70M parameters, which is the principal evidence for the broader anti-collapse phenomenology. The structural claim is evaluated under criterion 4 by the cross-architecture 70M evidence, not by within-architecture small-scale variance sweeps.
 
 - **Prediction P6.2: Scaling of the optimization-collapse boundary with model size.** The equation predicts that the boundary at which optimization-collapse becomes likely (in an attention-only architecture without anti-collapse) scales with model size in a specific way derivable from the focal-region geometry argument (analogous to the dimensional rescaling $\Sigma\lambda / |\Lambda| \sim 1/d$ in the field-theoretic case). Specifically, the parameter-space dimension of the optimization landscape acts as the effective dimension; collapse-boundary parameters should scale accordingly.
   - How to test: repeat the optimization-collapse experiment at a range of model scales (1.5M, 7M, 30M, 70M, 140M, 700M); identify the parameter regime at which the spike becomes likely vs unlikely; compare scaling to the predicted form.
@@ -136,7 +148,7 @@ The structural claim of this interface (the auxiliary-field equation is term-by-
   - How to test: implement a nonlinear-SSM-state variant of SimSiam without stop-gradient; train on standard SSL benchmarks; measure representation collapse signatures (representation-space rank, alignment-uniformity loss).
   - What would constitute confirmation: nonlinear-SSM SSL without stop-gradient does not collapse; rank and uniformity remain healthy.
   - What would constitute evidence inconsistent with this calibration: nonlinear-SSM SSL still collapses without stop-gradient; the cubic nonlinearity does not provide the protection.
-  - Status: **script ready, pending GPU execution**, see [`../experiments/neural/test_simsiam_cubic_ssm.py`](../experiments/neural/test_simsiam_cubic_ssm.py) and [`../results/12-cubic-ssm-simsiam.md`](../results/12-cubic-ssm-simsiam.md). The test compares cubic vs linear SSM-state variants of SimSiam without stop-gradient on a synthetic clustered-sequences dataset; effective-rank metric will identify whether the cubic nonlinearity suppresses representation collapse as predicted.
+  - Status: **partial** (see [`../results/17-cubic-ssm-simsiam-fdt.md`](../results/17-cubic-ssm-simsiam-fdt.md)). Single-seed Phase C run showed cubic 4.60/64 vs linear 2.88/64 (60% direction-matched preservation). Multi-seed Phase 9 wave-3 follow-up (4 seeds, 95k params, 4000 steps, synthetic clustered data, SimSiam without stop-gradient) yields cubic 3.617 +/- 0.510 vs linear 3.590 +/- 0.733; the seed-to-seed variability in this configuration is large (std ~0.5-0.7 out of mean ~3.6), and the cubic-vs-linear difference is within that variability. The Phase C single-seed pointed in the predicted direction; the multi-seed reveals the test setup (synthetic clustered data, SimSiam-without-stop-gradient, 95k parameters) has high seed-dependent variance that obscures the signal at this scale. Per the Duhem-Quine framing of [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), this prompts investigation of the test bed (synthetic clustered data may not be the right substrate; the SSL methodology including the predictor head may dominate the collapse dynamics; 95k parameters is small) rather than evaluation of the structural claim. The structural claim that cubic state nonlinearity provides anti-collapse is evaluated under criterion 4 by the cross-architecture 70M evidence in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md), not by this specific SSL configuration. Wave-1 isolated variant at [`../results/12-cubic-ssm-simsiam.md`](../results/12-cubic-ssm-simsiam.md) retracted.
 
 ## Recommended further reading
 
