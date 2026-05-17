@@ -209,7 +209,7 @@ The "seeing the past" observation in extragalactic astronomy is structurally not
 
 ## Honest caveats
 
-The cosmological reading is the most speculative interface in this
+The cosmological reading is the most ambitious of the interfaces in this
 folder. It is included because the visual correspondence between the
 anti-collapse release pattern and cosmological expansion is exact at the
 level of dynamical shape, and the structural-realist methodology
@@ -225,6 +225,14 @@ The interface is offered in the same spirit as
 [`05-archaeoacoustic-resonance.md`](05-archaeoacoustic-resonance.md):
 a structural correspondence that the equation produces, reported with
 explicit acknowledgement of its current state of theoretical development.
+
+## What this correspondence does and does not establish
+
+It does not establish that the present equation, as written, is the correct cosmological field equation. The cosmological case requires Friedmann-Robertson-Walker spacetime metric, relativistic dynamics, multi-fluid coupling (baryons, photons, dark matter, dark energy), and a specific gauge structure. The present equation treats spacetime as a flat background and does not include these features explicitly. A direct cosmological application would require non-trivial extension; this is named as open work in [`../open-problems/`](../open-problems/).
+
+It does not establish a falsification test against standard cosmology. Standard cosmology accounts for observation through its multi-mechanism framework (inflation, dark matter, dark energy, primordial fluctuations); the present reading is a structural proposal that the same observations could be accounted for through a single mechanism if extended appropriately. Whether such an extension produces the same predictions, or different ones, is open empirical work beyond the scope of this document.
+
+It does establish that the same mathematical shape (concentrated state with memory-mediated anti-collapse releasing into expanding structured pattern) appears at the level of mechanism in both the laboratory anti-collapse experiment ([`../results/04-anti-collapse-3d.md`](../results/04-anti-collapse-3d.md)) and the cosmological trajectory. The form is the same; the dimensional calibration and the specific physical substrate differ by approximately 60 orders of magnitude. This is the strongest mechanism-shape correspondence in the folder: where the BAO interface identifies a specific observable feature, this interface identifies the entire dynamical trajectory as a single instance of the mechanism. The detailed treatment of what this means and what it does not (parsimony claim, complementarity with standard cosmology, current theoretical-development state) appears in the sections "What this offers, structurally", "What this reading is not", and "Where this sits in the structural-realist case" above.
 
 ## Common dismissals and why they do not apply
 
