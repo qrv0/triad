@@ -149,7 +149,8 @@ def main():
     n_steps = 2000
 
     SIGMA_LAMBDA_VALUES = [0.5, 1.0, 1.5, 2.0, 4.0]
-    GAMMA_0_VALUES = [0.01, 0.05, 0.2, 1.0]
+    # Rule 10 (CLAUDE.md): t_integration = 2000 * 0.0025 = 5.0; all gamma_0 satisfy 1/gamma_0 <= t_integration.
+    GAMMA_0_VALUES = [0.2, 0.5, 1.0, 2.0]
 
     psi_init = initial_gaussian_convention_A_3d(N, L, 0.4)
     dx = L / N

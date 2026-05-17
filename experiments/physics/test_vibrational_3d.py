@@ -227,7 +227,8 @@ def main():
     t_total = time.time()
     r = run_3d_vibrational(
         N=64, L=20.0, Lambda=-8.0, Sigma_lambda=1.5,
-        gamma_0=0.01, T_bath=0.0001,
+        # Rule 10: t_integration = 6000 * 0.0025 = 15.0; gamma_0 = 0.1 gives 1/gamma_0 = 10 <= t_int.
+        gamma_0=0.1, T_bath=0.0001,
         dt=0.0025, n_warmup=2000, n_record=4000,
         subgrid_stride=4, sigma_init=0.5, seed=42,
     )

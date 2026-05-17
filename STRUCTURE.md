@@ -14,6 +14,8 @@ The shape of this repository is, therefore, a structural argument in its own rig
 
 There are twelve folders at the top level: `principles/`, `equation/`, `results/`, `interfaces/`, `methodology/`, `paths/`, `playground/`, `implementation/`, `experiments/`, `paper/`, `tests/`, `open-problems/`. The repository root also contains `RESEARCH-AGENDA.md`, which sits beside `README.md`, `CLAUDE.md`, `STRUCTURE.md`, and `CONTRIBUTING.md`.
 
+The ML implementation depth that previously lived under `implementation/neural/` and `experiments/neural/` was migrated on 2026-05-17 to the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository, along with the two ML-substrate interfaces (`06-state-space-models.md` and `08-mechanistic-interpretability.md`) and the optimization-collapse empirical result. The two repositories advance in parallel; this one holds the structural argument and the non-ML substrates.
+
 `principles/` comes first because the work begins in axioms, not in code. Putting the three structural principles into a top-level folder, rather than burying them in the introduction of a README, is a declaration that this work is foundational rather than incremental. Anyone who reads the file tree before reading any prose sees that the entry point is mathematical principles.
 
 `equation/` follows because the equation is what the principles select. The derivation, the Markovian embedding, the two-dimensional and three-dimensional forms, and the reductions to known equations are all in this folder. The equation is the load-bearing object of the work.

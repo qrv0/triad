@@ -2,6 +2,8 @@
 
 This folder is where the structural-realist claim of the work is operationalized. Each document maps the equation's mathematical form onto a separate independently-documented domain where the same structural form appears. The mappings use only peer-reviewed sources; speculative or contested mappings are not included.
 
+Twenty interfaces live in this repository. Two additional ML-substrate interfaces (state space model equivalence, formerly `06`; mechanistic-interpretability convergent prediction, formerly `08`) were moved on 2026-05-17 to the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository where the ML implementation depth lives. The numbering in the table below preserves the historical positions of `06` and `08` so existing cross-references resolve; the two rows are annotated with the spinoff location. The total cross-substrate count across both repositories is 22.
+
 | File | Domain | Type of correspondence |
 |---|---|---|
 | [`01-other-nls-systems.md`](01-other-nls-systems.md) | Bose–Einstein condensates, optical solitons, deep-water waves | Established physical instantiations of NLS-class dynamics |
@@ -9,9 +11,9 @@ This folder is where the structural-realist claim of the work is operationalized
 | [`03-chladni-cymatics.md`](03-chladni-cymatics.md) | Vibrated continuous media producing geometric patterns | Periodic spatial structure from sustained oscillation |
 | [`04-gamma-entrainment.md`](04-gamma-entrainment.md) | 40 Hz neural entrainment and amyloid-β clearance | Broadband absorption regime intersecting documented neural resonance |
 | [`05-archaeoacoustic-resonance.md`](05-archaeoacoustic-resonance.md) | Low-frequency acoustic resonance in megalithic chambers | Calibrated frequency correspondence at 66 Hz and 110 Hz |
-| [`06-state-space-models.md`](06-state-space-models.md) | Structured state space models in machine learning (S4, Mamba, RWKV) | **Mathematically exact equivalence with no calibration required** |
+| `06-state-space-models.md` (moved to [`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)) | Structured state space models in machine learning (S4, Mamba, RWKV) | **Mathematically exact equivalence with no calibration required** |
 | [`07-cosmological-expansion.md`](07-cosmological-expansion.md) | Cosmological expansion as anti-collapse release at cosmic scale | Mechanism-shape correspondence between lab anti-collapse and cosmic expansion |
-| [`08-mechanistic-interpretability.md`](08-mechanistic-interpretability.md) | Mechanistic interpretability of attention-based language models | Structural prediction: absence of P2 forces superposed encoding that mech interp recovers post-hoc |
+| `08-mechanistic-interpretability.md` (moved to [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md)) | Mechanistic interpretability of attention-based language models | Structural prediction: absence of P2 forces superposed encoding that mech interp recovers post-hoc |
 | [`09-critical-brain.md`](09-critical-brain.md) | Critical brain dynamics, neuronal avalanches, 1/f spectra | Observable phenomenology shared with the equation's broadband-absorbing crystalline regime |
 | [`10-kuramoto-synchronization.md`](10-kuramoto-synchronization.md) | Coupled phase oscillators (Kuramoto and memory-augmented variants) | Phase sector of the equation maps onto memory-Kuramoto term-by-term in the continuum limit |
 | [`11-immune-affinity-maturation.md`](11-immune-affinity-maturation.md) | B-cell affinity maturation in germinal centers | Multi-timescale memory (chromatin + repertoire + memory cells) instantiates the auxiliary-field hierarchy in a discrete-cell biological substrate |

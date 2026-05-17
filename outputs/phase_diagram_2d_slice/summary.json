@@ -20,36 +20,12 @@
     4.0
   ],
   "gamma_0_values": [
-    0.01,
-    0.05,
     0.2,
-    1.0
+    0.5,
+    1.0,
+    2.0
   ],
   "grid": [
-    {
-      "Sigma_lambda": 0.5,
-      "gamma_0": 0.01,
-      "initial_peak": 1.4366912841796875,
-      "max_peak": 7.482876777648926,
-      "final_peak": 0.0022526588290929794,
-      "final_norm": 1.6747853755950928,
-      "peak_growth_ratio": 5.208409670224629,
-      "final_ratio": 0.0015679491160685837,
-      "regime": "released",
-      "wall_time": 4.470407962799072
-    },
-    {
-      "Sigma_lambda": 0.5,
-      "gamma_0": 0.05,
-      "initial_peak": 1.4366912841796875,
-      "max_peak": 7.352031707763672,
-      "final_peak": 0.005575879476964474,
-      "final_norm": 3.757122039794922,
-      "peak_growth_ratio": 5.117335776113855,
-      "final_ratio": 0.0038810561032589213,
-      "regime": "released",
-      "wall_time": 4.514771461486816
-    },
     {
       "Sigma_lambda": 0.5,
       "gamma_0": 0.2,
@@ -60,7 +36,19 @@
       "peak_growth_ratio": 4.686321092878764,
       "final_ratio": 0.008246855355696723,
       "regime": "intermediate",
-      "wall_time": 4.497539281845093
+      "wall_time": 4.696823596954346
+    },
+    {
+      "Sigma_lambda": 0.5,
+      "gamma_0": 0.5,
+      "initial_peak": 1.4366912841796875,
+      "max_peak": 6.481543064117432,
+      "final_peak": 0.010944376699626446,
+      "final_norm": 7.8953657150268555,
+      "peak_growth_ratio": 4.511437589612872,
+      "final_ratio": 0.007617765082966584,
+      "regime": "intermediate",
+      "wall_time": 4.676327228546143
     },
     {
       "Sigma_lambda": 0.5,
@@ -72,31 +60,19 @@
       "peak_growth_ratio": 3.491227231692422,
       "final_ratio": 0.00890511324411874,
       "regime": "intermediate",
-      "wall_time": 4.516964673995972
+      "wall_time": 4.71222186088562
     },
     {
-      "Sigma_lambda": 1.0,
-      "gamma_0": 0.01,
+      "Sigma_lambda": 0.5,
+      "gamma_0": 2.0,
       "initial_peak": 1.4366912841796875,
-      "max_peak": 7.348228454589844,
-      "final_peak": 0.0023701884783804417,
-      "final_norm": 1.6734694242477417,
-      "peak_growth_ratio": 5.114688545483511,
-      "final_ratio": 0.0016497548947919985,
-      "regime": "released",
-      "wall_time": 4.443343162536621
-    },
-    {
-      "Sigma_lambda": 1.0,
-      "gamma_0": 0.05,
-      "initial_peak": 1.4366912841796875,
-      "max_peak": 7.260396957397461,
-      "final_peak": 0.005303783342242241,
-      "final_norm": 3.7616093158721924,
-      "peak_growth_ratio": 5.0535539801391325,
-      "final_ratio": 0.003691665287209256,
-      "regime": "released",
-      "wall_time": 4.439341306686401
+      "max_peak": 1.847663164138794,
+      "final_peak": 0.014250040985643864,
+      "final_norm": 8.006778717041016,
+      "peak_growth_ratio": 1.286054411608518,
+      "final_ratio": 0.009918652074081633,
+      "regime": "dispersive",
+      "wall_time": 4.708751678466797
     },
     {
       "Sigma_lambda": 1.0,
@@ -108,7 +84,19 @@
       "peak_growth_ratio": 4.6765659019701555,
       "final_ratio": 0.007045539830432532,
       "regime": "intermediate",
-      "wall_time": 4.444175481796265
+      "wall_time": 4.752412557601929
+    },
+    {
+      "Sigma_lambda": 1.0,
+      "gamma_0": 0.5,
+      "initial_peak": 1.4366912841796875,
+      "max_peak": 6.623235702514648,
+      "final_peak": 0.00980466976761818,
+      "final_norm": 7.9466776847839355,
+      "peak_growth_ratio": 4.610061866071903,
+      "final_ratio": 0.006824479187410387,
+      "regime": "intermediate",
+      "wall_time": 4.681234121322632
     },
     {
       "Sigma_lambda": 1.0,
@@ -120,31 +108,19 @@
       "peak_growth_ratio": 3.441862487387818,
       "final_ratio": 0.008720698976255908,
       "regime": "intermediate",
-      "wall_time": 4.505079746246338
+      "wall_time": 4.732557058334351
     },
     {
-      "Sigma_lambda": 1.5,
-      "gamma_0": 0.01,
+      "Sigma_lambda": 1.0,
+      "gamma_0": 2.0,
       "initial_peak": 1.4366912841796875,
-      "max_peak": 7.221630096435547,
-      "final_peak": 0.002033267403021455,
-      "final_norm": 1.6582618951797485,
-      "peak_growth_ratio": 5.026570548563539,
-      "final_ratio": 0.001415243083473146,
-      "regime": "released",
-      "wall_time": 4.5374157428741455
-    },
-    {
-      "Sigma_lambda": 1.5,
-      "gamma_0": 0.05,
-      "initial_peak": 1.4366912841796875,
-      "max_peak": 7.074965953826904,
-      "final_peak": 0.005163446068763733,
-      "final_norm": 3.7351303100585938,
-      "peak_growth_ratio": 4.924485887632096,
-      "final_ratio": 0.0035939844040412086,
-      "regime": "intermediate",
-      "wall_time": 4.453143358230591
+      "max_peak": 1.5925394296646118,
+      "final_peak": 0.012132201343774796,
+      "final_norm": 8.055827140808105,
+      "peak_growth_ratio": 1.1084771288035686,
+      "final_ratio": 0.0084445430116895,
+      "regime": "dispersive",
+      "wall_time": 4.839536666870117
     },
     {
       "Sigma_lambda": 1.5,
@@ -156,7 +132,19 @@
       "peak_growth_ratio": 4.889906271573469,
       "final_ratio": 0.009801325591154545,
       "regime": "intermediate",
-      "wall_time": 4.483850955963135
+      "wall_time": 4.768847703933716
+    },
+    {
+      "Sigma_lambda": 1.5,
+      "gamma_0": 0.5,
+      "initial_peak": 1.4366912841796875,
+      "max_peak": 6.722442150115967,
+      "final_peak": 0.014085127972066402,
+      "final_norm": 7.994604110717773,
+      "peak_growth_ratio": 4.679113894641814,
+      "final_ratio": 0.009803865400428482,
+      "regime": "intermediate",
+      "wall_time": 4.834959030151367
     },
     {
       "Sigma_lambda": 1.5,
@@ -168,31 +156,19 @@
       "peak_growth_ratio": 3.4026462349317614,
       "final_ratio": 0.009568509092802427,
       "regime": "intermediate",
-      "wall_time": 4.405129432678223
+      "wall_time": 4.7405314445495605
     },
     {
-      "Sigma_lambda": 2.0,
-      "gamma_0": 0.01,
+      "Sigma_lambda": 1.5,
+      "gamma_0": 2.0,
       "initial_peak": 1.4366912841796875,
-      "max_peak": 7.228955268859863,
-      "final_peak": 0.002616139594465494,
-      "final_norm": 1.6675835847854614,
-      "peak_growth_ratio": 5.0316691891030745,
-      "final_ratio": 0.0018209476338260382,
-      "regime": "released",
-      "wall_time": 4.534740447998047
-    },
-    {
-      "Sigma_lambda": 2.0,
-      "gamma_0": 0.05,
-      "initial_peak": 1.4366912841796875,
-      "max_peak": 7.271942615509033,
-      "final_peak": 0.006052782759070396,
-      "final_norm": 3.770803928375244,
-      "peak_growth_ratio": 5.061590263395465,
-      "final_ratio": 0.004213001655763767,
-      "regime": "released",
-      "wall_time": 4.510456800460815
+      "max_peak": 1.622414231300354,
+      "final_peak": 0.010714073665440083,
+      "final_norm": 8.057676315307617,
+      "peak_growth_ratio": 1.1292712979926716,
+      "final_ratio": 0.007457464093657068,
+      "regime": "dispersive",
+      "wall_time": 4.701143741607666
     },
     {
       "Sigma_lambda": 2.0,
@@ -204,7 +180,19 @@
       "peak_growth_ratio": 5.076293080558654,
       "final_ratio": 0.007405015541195369,
       "regime": "released",
-      "wall_time": 4.397568464279175
+      "wall_time": 4.6929779052734375
+    },
+    {
+      "Sigma_lambda": 2.0,
+      "gamma_0": 0.5,
+      "initial_peak": 1.4366912841796875,
+      "max_peak": 6.69671630859375,
+      "final_peak": 0.011346534825861454,
+      "final_norm": 7.970578670501709,
+      "peak_growth_ratio": 4.661207583240402,
+      "final_ratio": 0.007897684736314123,
+      "regime": "intermediate",
+      "wall_time": 4.724419355392456
     },
     {
       "Sigma_lambda": 2.0,
@@ -216,31 +204,19 @@
       "peak_growth_ratio": 3.177130794965748,
       "final_ratio": 0.009019104525740469,
       "regime": "intermediate",
-      "wall_time": 4.5594563484191895
+      "wall_time": 4.659194469451904
     },
     {
-      "Sigma_lambda": 4.0,
-      "gamma_0": 0.01,
+      "Sigma_lambda": 2.0,
+      "gamma_0": 2.0,
       "initial_peak": 1.4366912841796875,
-      "max_peak": 8.361943244934082,
-      "final_peak": 0.0034281613770872355,
-      "final_norm": 1.6666172742843628,
-      "peak_growth_ratio": 5.820278397323563,
-      "final_ratio": 0.0023861503266824815,
-      "regime": "released",
-      "wall_time": 4.4310455322265625
-    },
-    {
-      "Sigma_lambda": 4.0,
-      "gamma_0": 0.05,
-      "initial_peak": 1.4366912841796875,
-      "max_peak": 8.25186538696289,
-      "final_peak": 0.005535459145903587,
-      "final_norm": 3.754133939743042,
-      "peak_growth_ratio": 5.743659391429027,
-      "final_ratio": 0.0038529217841425044,
-      "regime": "released",
-      "wall_time": 4.511791467666626
+      "max_peak": 1.682342290878296,
+      "final_peak": 0.01200797688215971,
+      "final_norm": 8.01773738861084,
+      "peak_growth_ratio": 1.170983849768998,
+      "final_ratio": 0.008358077350636916,
+      "regime": "dispersive",
+      "wall_time": 4.699378490447998
     },
     {
       "Sigma_lambda": 4.0,
@@ -252,7 +228,19 @@
       "peak_growth_ratio": 5.310887632096012,
       "final_ratio": 0.006898908952906776,
       "regime": "released",
-      "wall_time": 4.511076927185059
+      "wall_time": 4.7838380336761475
+    },
+    {
+      "Sigma_lambda": 4.0,
+      "gamma_0": 0.5,
+      "initial_peak": 1.4366912841796875,
+      "max_peak": 6.6301655769348145,
+      "final_peak": 0.011397536844015121,
+      "final_norm": 7.934494495391846,
+      "peak_growth_ratio": 4.614885361903244,
+      "final_ratio": 0.007933184372676703,
+      "regime": "intermediate",
+      "wall_time": 4.736583232879639
     },
     {
       "Sigma_lambda": 4.0,
@@ -264,14 +252,26 @@
       "peak_growth_ratio": 1.8826496203069407,
       "final_ratio": 0.007735005349805507,
       "regime": "dispersive",
-      "wall_time": 4.5572593212127686
+      "wall_time": 4.846732139587402
+    },
+    {
+      "Sigma_lambda": 4.0,
+      "gamma_0": 2.0,
+      "initial_peak": 1.4366912841796875,
+      "max_peak": 1.5333774089813232,
+      "final_peak": 0.011655337177217007,
+      "final_norm": 8.04289436340332,
+      "peak_growth_ratio": 1.0672977736179703,
+      "final_ratio": 0.008112624685317761,
+      "regime": "dispersive",
+      "wall_time": 4.729996919631958
     }
   ],
   "regime_counts": {
-    "released": 11,
-    "intermediate": 8,
-    "dispersive": 1
+    "intermediate": 12,
+    "dispersive": 6,
+    "released": 2
   },
-  "wall_time_total_s": 90.0635347366333,
+  "wall_time_total_s": 95.4161639213562,
   "backend": "cupy"
 }

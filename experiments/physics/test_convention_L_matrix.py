@@ -176,7 +176,8 @@ def main():
         {"label": "B_L10_d3", "convention": "B", "d": 3, "N": 48, "L": 10.0, "sigma_init": 0.5,
          "SL": [0.5, 1.0, 1.5, 2.0, 4.0]},
     ]
-    GAMMA_0_VALUES = [0.01, 0.05, 0.2, 1.0]
+    # Rule 10 (CLAUDE.md): t_integration = 2000 * 0.0025 = 5.0; all gamma_0 satisfy 1/gamma_0 <= t_integration.
+    GAMMA_0_VALUES = [0.2, 0.5, 1.0, 2.0]
 
     all_results = {}
     t_total = time.time()

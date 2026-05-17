@@ -155,7 +155,9 @@ def main():
         {"label": "A_native_d3", "d": 3, "N": 48,
          "SL": [0.5, 1.0, 1.5, 2.0, 4.0]},
     ]
-    GAMMA_0_VALUES = [0.05, 0.2, 1.0]  # native regime starts at 0.05
+    # Rule 10 (CLAUDE.md): t_integration = 4000 * 0.0025 = 10.0; all gamma_0 satisfy 1/gamma_0 <= t_integration.
+    # Pre-2026-05-17 sweep [0.05, 0.2, 1.0] had 0.05 in marginal hedge regime.
+    GAMMA_0_VALUES = [0.1, 0.5, 1.0, 2.0]
 
     all_results = {}
     t_total = time.time()

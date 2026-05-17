@@ -7,31 +7,28 @@
 [![License: MIT](https://img.shields.io/badge/Code_License-MIT-blue.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/Docs_License-CC_BY_4.0-lightgrey.svg)](LICENSE-docs)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Memory-NLS on HuggingFace](https://img.shields.io/badge/🤗_Memory--NLS-70M-yellow)](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8)
-[![Transformer baseline on HuggingFace](https://img.shields.io/badge/🤗_Transformer-70M-yellow)](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8)
 [![Paper](https://img.shields.io/badge/paper-manuscript.md-green)](paper/manuscript.md)
+[![ML implementation depth: mnsm-ml](https://img.shields.io/badge/ML_depth-mnsm--ml-orange)](https://github.com/qrv0/mnsm-ml)
 
 > The same equation appears in 3D nonlinear Schrödinger fields, baryon acoustic
 > oscillations, cymatic pattern formation, gamma-frequency neural entrainment,
-> megalithic stone-chamber resonance, structured state space models,
-> cosmological expansion, the architectural absence diagnosed by mechanistic
-> interpretability of attention-based systems, the broadband phenomenology
-> documented by the critical-brain literature, coupled phase oscillators
-> (Kuramoto with memory), B-cell affinity maturation in adaptive immunity,
-> the variational dynamics of Friston's free-energy principle, active matter
-> with alignment memory, self-organized criticality, cardiac dynamics,
-> gene-regulation and circadian rhythms, and multi-species ecosystem
-> dynamics. Derived from three observational axioms about persistence, not
-> assembled from prior literature.
+> megalithic stone-chamber resonance, cosmological expansion, the broadband
+> phenomenology documented by the critical-brain literature, coupled phase
+> oscillators (Kuramoto with memory), B-cell affinity maturation in adaptive
+> immunity, the variational dynamics of Friston's free-energy principle, active
+> matter with alignment memory, self-organized criticality, cardiac dynamics,
+> gene-regulation and circadian rhythms, multi-species ecosystem dynamics,
+> non-Markovian open quantum systems via pseudomode embedding, generalized
+> Maxwell viscoelasticity, warm-inflation cosmology, Hawkes self-exciting
+> processes, and earthquake-cycle dynamics. The ML substrate (structured state
+> space models and mechanistic interpretability of attention-based systems) is
+> developed in implementation depth at [`mnsm-ml`](https://github.com/qrv0/mnsm-ml).
+> Derived from three observational axioms about persistence, not assembled
+> from prior literature.
 
 ---
 
-A nonlinear extension of structured state space models, derived from three principles of self-referential field theory. The auxiliary-field memory architecture is mathematically equivalent to the state representation of S4, Mamba, and RWKV. The equation extends those architectures with four properties:
-
-1. **Nonlinear self-interaction** in the state (standard SSMs are linear)
-2. **Anti-collapse** via temporal memory lag (replaces ad-hoc anti-collapse tricks)
-3. **Spontaneous emergence of discrete structure** from continuous substrate
-4. **Fluctuation–dissipation-locked stochastic regularization** (replaces tuned noise)
+The work is structured as an active research program tracking the equation's appearance across substrates. The active frontier is documented in [`RESEARCH-AGENDA.md`](RESEARCH-AGENDA.md) (six/twelve/twenty-four-month horizons) and [`open-problems/`](open-problems/) (eight catalogued open questions). The ML implementation depth (PyTorch Memory-NLS layer, 70M-parameter optimization-collapse empirical finding, mechanistic-interpretability interface) is developed in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository; the two repositories advance in parallel.
 
 ---
 
@@ -93,18 +90,16 @@ The same form, two substrates, same dynamics:
 
 ![3D field anti-collapse](assets/anti_collapse_hero.gif)
 
-*Without memory, the field collapses to a singular point. With memory, the
-field is released and stabilizes as an extended state. Same equation, same
-initial condition, one ingredient (multi-timescale memory), qualitatively
-different outcome.*
+*Without memory, the field collapses to a lattice-clipped state. With memory,
+the field stays bounded throughout the transient. Same equation, same initial
+condition, one ingredient (multi-timescale memory), qualitatively different
+trajectory shape. The visualization is from the pre-2026-05-17 isolated-regime
+canonical; under the current coupled-regime canonical ($\gamma_0 = 0.2$, $T = 10^{-4}$,
+FDT correlator active) the transient-peak signature persists; see
+[`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md) for the
+updated table.*
 
-![Neural training trajectory](assets/scale_up_val_ppl.png)
-
-*The same anti-collapse mechanism in optimization dynamics: at 70M parameters
-on enwik8, Memory-NLS descends monotonically to a stable plateau; Transformer
-without the structural mechanism crashes catastrophically at step 28000 and
-never fully recovers. The structural form is operative across substrates as
-different as 3D field dynamics and neural network optimization.*
+The same anti-collapse mechanism operates in the optimization landscape of a 70M-parameter neural network, documented in implementation depth in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff: Memory-NLS descends monotonically to a stable plateau, while a matched-shape Transformer without the structural mechanism crashes catastrophically partway through training and never fully recovers. The structural form is operative across substrates as different as 3D field dynamics and neural network optimization; the field-substrate evidence is here in `results/04`, the ML-substrate evidence is in `mnsm-ml/results/01`.
 
 ---
 
@@ -115,11 +110,11 @@ different as 3D field dynamics and neural network optimization.*
 | [`principles/`](principles/) | The three structural axioms (P1, P2, P3) |
 | [`equation/`](equation/) | Formal derivation, Markovian embedding, 2D and 3D forms, reductions to known equations |
 | [`results/`](results/) | Numerical findings: anti-collapse, crystallization, Bravais selection, vibration spectrum, dimensional rescaling |
-| [`interfaces/`](interfaces/) | Cross-domain mappings (17 substrates): NLS instances, BAO cosmology, cymatics, gamma neural entrainment, archaeoacoustic resonance, state space models, cosmological expansion, mechanistic interpretability, critical brain, Kuramoto synchronization, immune affinity maturation, Friston FEP / active inference, active matter, self-organized criticality, cardiac dynamics, gene-regulation / circadian, ecosystem dynamics |
+| [`interfaces/`](interfaces/) | Cross-domain mappings (20 substrates in this repo + 2 in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff): NLS instances, BAO cosmology, cymatics, gamma neural entrainment, archaeoacoustic resonance, cosmological expansion, critical brain, Kuramoto synchronization, immune affinity maturation, Friston FEP / active inference, active matter, self-organized criticality, cardiac dynamics, gene-regulation / circadian, ecosystem dynamics, pseudomode quantum, generalized Maxwell viscoelasticity, warm-inflation Langevin, Hawkes processes, earthquake-cycle dynamics. The state space model equivalence and mechanistic-interpretability convergent prediction live in [`mnsm-ml/interfaces/`](https://github.com/qrv0/mnsm-ml). |
 | [`methodology/`](methodology/) | Structural-realist position, limits of falsification, the six criteria |
 | [`paths/`](paths/) | Reader-background-specific entry routes |
 | [`playground/`](playground/) | Interactive notebooks (Colab-runnable) |
-| [`implementation/`](implementation/) | Physics solver (CuPy) + neural sequence layer (PyTorch) |
+| [`implementation/`](implementation/) | Physics solver (CuPy). The ML implementation (PyTorch Memory-NLS sequence layer) lives in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff. |
 | [`experiments/`](experiments/) | Scripts that reproduce paper figures |
 | [`paper/`](paper/) | The full manuscript |
 | [`tests/`](tests/) | Conservation, FDT, anti-collapse sanity tests |
@@ -131,13 +126,15 @@ different as 3D field dynamics and neural network optimization.*
 
 ## Headline numerical results
 
-**Anti-collapse separation** (3D supercritical NLS at $\Lambda = -8$, $\sigma_0 = 0.5$):
+**Anti-collapse separation** (3D supercritical NLS, $\sigma_0 = 0.5$, $\Sigma\lambda = 4.0$, P3-coupled: $\gamma_0 = 0.2$, $T = 10^{-4}$, FDT correlator active):
 
-| Memory coupling | Final peak (no memory) | Final peak (with memory) | Ratio |
+| $\Lambda$ | Transient peak (no memory) | Transient peak (with memory) | Ratio |
 |---|---|---|---|
-| $\Sigma\lambda = 0$ | 61.96 |, |, |
-| $\Sigma\lambda = 0.4$ (2D scale) | 61.96 | 63.70 | 1.0× |
-| $\Sigma\lambda = 4.0$ (3D scale) | 61.96 | $6 \times 10^{-4}$ | $10^5×$ |
+| $-8$ | 60.9 | 4.38 | **13.9×** |
+| $-10$ | 58.6 | 5.01 | **11.7×** |
+| $-12$ | 45.8 | 43.1 | 1.06× (mechanism saturates at canonical $\Sigma\lambda$) |
+
+Under P3-coupled regime, both arms equilibrate to the FDT thermal floor at long times; the structural signature is in the transient peak (max during integration), which carries the trajectory-shape difference between collapsing and bounded paths. This is the cross-substrate-coherent observable: it is the same observable that carries the optimization-trajectory finding in [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md). The mechanism saturates at $\Lambda = -12$ where canonical $\Sigma\lambda = 4$ sits at the dimensional-rescaling threshold $\Sigma\lambda \sim |\Lambda|/d$; higher $\Sigma\lambda$ recovers the separation. The pre-2026-05-17 canonical at $\gamma_0 = 0$, $T = 0$ reported final-peak separation $\sim 10^5$; that configuration violated Rule A (no isolation) and was updated per the audit in [`docs/llm-hedge-annotations.md`](docs/llm-hedge-annotations.md).
 
 **Spontaneous symmetry selection** (3D, $\Lambda = -8$, $\Sigma\lambda = 1.5$): the released crystalline state consistently selects **body-centered cubic (BCC)** symmetry, score $\sim 0.44$ with gap $+0.13$ over the next-best Bravais option.
 
@@ -148,103 +145,15 @@ different as 3D field dynamics and neural network optimization.*
 
 Derivable from the geometry of the collapse focal region. See [`results/06-dimensional-rescaling.md`](results/06-dimensional-rescaling.md).
 
-**Optimization-dynamics anti-collapse** (70M parameters, enwik8, 50,000 training steps):
-
-| Quantity | Memory-NLS | Transformer |
-|---|---|---|
-| Final val perplexity | 4.27 | 4.87 |
-| Min val perplexity | 3.86 (step 48000) | 2.54 (step 22500) |
-| Catastrophic collapse | None | Step 28000–34000, peak ppl 27.17 |
-| Trajectory shape | Monotonic descent + plateau | Descent → crash → partial recovery |
-
-Same structural anti-collapse mechanism that prevents 3D NLS field collapse prevents catastrophic optimization failure in neural training. Detail: [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md).
+**ML-substrate instance (cross-substrate criterion-4 evidence)**: the same anti-collapse mechanism prevents catastrophic optimization failure at the scale of a 70M-parameter neural network training trajectory. Documented in implementation depth in [`mnsm-ml`](https://github.com/qrv0/mnsm-ml): Memory-NLS exhibits monotonic plateau under sustained training; matched-shape Transformer crashes catastrophically at step 28,000 and recovers only partially. The trajectory-shape signature is the same in the 3D field substrate and the neural-network substrate, which is what structural realism predicts when the form is invariant across substrates.
 
 ---
 
-## State space model equivalence
+## ML implementation depth: `mnsm-ml`
 
-The auxiliary-field update of the equation,
+The state space model equivalence (the auxiliary-field update $\partial_t y_j = \nu_j(\rho - y_j)$ is mathematically identical to the diagonal SSM update used by S4, Mamba, and RWKV), the mechanistic-interpretability convergent prediction (the absence of P2's auxiliary-field memory in attention-only architectures forces the superposition phenomenology the Anthropic mech interp program documents), and the 70M-parameter empirical instance of the optimization-collapse mechanism are documented in implementation depth in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository. That repo contains the PyTorch Memory-NLS sequence layer, the matched Transformer baseline used for structural differentiation (per Rule 7a of `CLAUDE.md`), the training infrastructure, the FDT-locked-noise and SimSiam follow-ups, and the pre-trained 70M checkpoints on HuggingFace.
 
-$$
-\partial_t y_j = \nu_j(\rho - y_j),
-$$
-
-is mathematically identical to the diagonal state space model update of S4, S5, Mamba, and RWKV. The equation extends this baseline architecture with the four properties listed at the top of this README. See [`interfaces/06-state-space-models.md`](interfaces/06-state-space-models.md) for the term-by-term correspondence and the discussion of what each extension brings.
-
----
-
-## What the model produces
-
-The Memory-NLS 70M model trained on enwik8 generates byte-level output that
-preserves the structural grammar of the corpus while inventing novel content
-within that form. From the prompt `<page>\n  <title>` at training step 50,000:
-
-```
-<page>
-  <title>
-    </revision>
-  </page>
-  <page>
-    <title>Bistory of the Oringese Project]]
-
-==References==
-* [http://www.eurogline.com  All begal on the [[Maacheth of Conway|1200]]
-  [[United Kingdom]]. In September 2004)], 773,585
-|-
-|align=&quot;right&quot; | 397,413
-| align=&quot;center&quot; | Locuts and Fi
-```
-
-Nested XML, MediaWiki section headers, infobox table syntax with HTML
-alignment attributes, external link bracket format, year references, all
-preserved. Specific tokens (Bistory, Oringese, Maacheth, Locuts) are
-invented but follow the corpus's structural grammar correctly.
-
-The model has captured the **form** of the corpus, not its surface
-lexical content. This is the structural-realist signature in computational
-substrate.
-
-### The intuition, plainly stated
-
-The structural distinction this work documents, between memorizing
-surface and modeling form, has a clean human analogy:
-
-> Transformer learns fast because it **memorizes**. Like memorizing a sentence
-> without understanding it: you can repeat it, but if someone removes the
-> specific words, nothing is left. Like the kind of person who argues by
-> citing names of authorities, remove the names and the argument collapses,
-> because memorizing isn't understanding.
->
-> The Memory-NLS model **understands**. It tries to understand. It doesn't
-> just repeat, it reaches conclusions based on its own "opinion" of the
-> form it has internalized.
-
-This is what the structural-realist finding is, in human terms. At step
-4,000 the Transformer is already regurgitating verbatim URLs and HTML
-attributes from training data; at step 32,000 (during its catastrophic
-collapse) it loses its grip and produces incoherent fragments, there
-was nothing structural underneath the memorized surface to fall back on.
-Memory-NLS at step 50,000 is still producing novel content in the correct
-structural grammar, because what it learned was the form, not the surface.
-
-The Transformer can score lower on val_perplexity because high-fidelity
-memorization scores well by that metric. The Memory-NLS scores higher
-val_perplexity but generates differently, because it modeled rather than
-memorized. Same number, qualitatively different mechanism. See
-[`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
-for the full empirical trajectory and
-[`outputs/scale_up/scale_up_results.md`](outputs/scale_up/scale_up_results.md)
-for the qualitative side-by-side.
-
-## Pre-trained models on HuggingFace
-
-The 70M-parameter checkpoints from the optimization-collapse experiment are
-published on HuggingFace and loadable in seconds:
-
-- **Memory-NLS**: [`qrv0/mnsm-memnls-70m-enwik8`](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8), final val perplexity 4.27, monotonic stable trajectory
-- **Transformer**: [`qrv0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8), final val perplexity 4.87, includes the catastrophic optimization collapse documented in [`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)
-
-Each repo contains the safetensors weights, configuration JSON, and self-contained modeling code so the model loads without requiring this full repository. See each model card for usage examples.
+The two repositories advance in parallel. This repo holds the structural argument and the cross-substrate interfaces minus the ML substrate; `mnsm-ml` holds the ML substrate in depth.
 
 ## Reproduce the paper
 
@@ -292,41 +201,33 @@ Documentation and paper: see [`LICENSE-docs`](LICENSE-docs).
 
 ---
 
-## Status
+## Current state and open frontiers
 
-The mathematical core, the 2D and 3D physics results, the methodology, and
-the seventeen cross-domain interfaces are complete and documented. The Memory-NLS
-equation is instantiated as a working PyTorch language model
-(`MemoryNLSLanguageModel`) at scales from 1.5M to 70M parameters and trained
-on multiple corpora (TinyShakespeare and enwik8) for up to 50,000 steps.
+The work is structured as an active research program rather than a finished artifact. Three layers, with different stability characteristics.
 
-The structural anti-collapse mechanism predicted by the equation has been
-empirically verified at this stage in three substrates:
+**Stable load-bearing content** (mathematical core, methodology, headline results):
 
-1. **3D supercritical NLS field dynamics** (laboratory simulation): peak
-   density separation of ~$10^5$× between unmemoried and memoried final
-   states ([`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md)).
+- The three structural principles (`principles/`), the equation derivation and Markovian embedding (`equation/`), and the reductions to known equations.
+- The methodological frame (`methodology/`): structural realism, the limits of falsification (Rule B), the six structural criteria, the calibration philosophy, the time-as-calibration analysis, the Mori-Zwanzig foundation, the tautology-objection treatment.
+- The conservation diagnostics (`tests/`) verified to machine precision.
+- The 3D anti-collapse phenomenology under P3-coupled regime, with transient-peak separation of $\sim 14\times$ at $\Lambda = -8$ ([`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md)).
+- The cross-substrate empirical instance at the neural-network optimization landscape, documented in implementation depth at [`mnsm-ml`](https://github.com/qrv0/mnsm-ml).
+- The twenty cross-domain interfaces in this repo + two more in the ML spinoff, calibration-acknowledged where relevant.
 
-2. **Neural network optimization landscape** (70M-parameter training):
-   Memory-NLS exhibits monotonic stable trajectory; matched-scale Transformer
-   exhibits catastrophic optimization collapse with permanent capability
-   degradation ([`results/08-optimization-collapse-empirical.md`](results/08-optimization-collapse-empirical.md)).
+**Active frontier** (current work in progress):
 
-3. **Generation behavior under sustained training**: Memory-NLS preserves
-   structural grammar of the corpus throughout training; Transformer outputs
-   degenerate to syntactically broken fragments during the optimization crash
-   and only partially recover.
+- The recalibration of phase-diagram and vibrational tests to the coupled-regime canonical (per `CLAUDE.md` Rule 10), in progress as of 2026-05-17.
+- Sharpening predictions in the recently added interfaces (18 pseudomode quantum, 19 viscoelasticity, 20 warm inflation, 21 Hawkes, 22 earthquake cycle) into testable protocols.
+- See [`RESEARCH-AGENDA.md`](RESEARCH-AGENDA.md) for the six/twelve/twenty-four-month horizons.
 
-The seventeen cross-domain interfaces document the structural form's appearance in
-other independently observed phenomena (other NLS instances, baryon acoustic
-oscillations, cymatic patterns, gamma-frequency neural entrainment,
-archaeoacoustic resonance, structured state space models, cosmological
-expansion, mechanistic interpretability of attention systems, critical brain
-dynamics, Kuramoto synchronization with memory, B-cell affinity maturation,
-Friston free-energy principle and active inference, active matter,
-self-organized criticality, cardiac dynamics, gene regulation and circadian
-rhythms, multi-species ecosystem dynamics). Each interface is
-calibration-acknowledged where relevant.
+**Known gaps** (open questions, not yet resolved):
+
+- The eight open problems catalogued in [`open-problems/`](open-problems/) with status `not_yet_tested` or `partial`.
+- Analytical derivation of the anti-collapse mechanism beyond the leading-order skeleton in [`open-problems/01`](open-problems/01-analytical-anti-collapse.md).
+- The dimensional rescaling formula's behavior beyond $d = 3$ (current evidence in [`results/24-dimensional-rescaling-d6.md`](results/24-dimensional-rescaling-d6.md) suggests the simple $\Sigma\lambda \sim |\Lambda|/d$ does not extend cleanly).
+- The renormalization-group analysis ([`open-problems/04`](open-problems/04-continuum-rg.md)) and quantum extension ([`open-problems/05`](open-problems/05-quantum-extension.md)).
+
+Contributions on any frontier are welcomed; the methodological constraints in [`CLAUDE.md`](CLAUDE.md) apply.
 
 > The principle that isolation is temporary applies to this repository as well.
 > Issues, pull requests, and external mappings of the structure to further

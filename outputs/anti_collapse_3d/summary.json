@@ -1,0 +1,134 @@
+[
+  {
+    "Lambda": -2.0,
+    "with_memory": false,
+    "label": "L-2.0_nomem",
+    "max_peak": 1.4358240365982056,
+    "final_peak": 0.0013702833093702793,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8965144753456116,
+    "norm_drift": 0.10341078042984009,
+    "wall_time": 23.862303972244263
+  },
+  {
+    "Lambda": -2.0,
+    "with_memory": true,
+    "label": "L-2.0_mem",
+    "max_peak": 1.4358240365982056,
+    "final_peak": 0.0013974851462990046,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8965028524398804,
+    "norm_drift": 0.10342240333557129,
+    "wall_time": 22.705180168151855
+  },
+  {
+    "Lambda": -4.0,
+    "with_memory": false,
+    "label": "L-4.0_nomem",
+    "max_peak": 1.6631351709365845,
+    "final_peak": 0.001386913238093257,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8965438604354858,
+    "norm_drift": 0.10338133573532104,
+    "wall_time": 20.112696886062622
+  },
+  {
+    "Lambda": -4.0,
+    "with_memory": true,
+    "label": "L-4.0_mem",
+    "max_peak": 1.4874587059020996,
+    "final_peak": 0.0013608360895887017,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8965089917182922,
+    "norm_drift": 0.10341620445251465,
+    "wall_time": 22.72560429573059
+  },
+  {
+    "Lambda": -6.0,
+    "with_memory": false,
+    "label": "L-6.0_nomem",
+    "max_peak": 2.7796826362609863,
+    "final_peak": 0.0013986284611746669,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8966416716575623,
+    "norm_drift": 0.10328352451324463,
+    "wall_time": 20.144182443618774
+  },
+  {
+    "Lambda": -6.0,
+    "with_memory": true,
+    "label": "L-6.0_mem",
+    "max_peak": 1.9372636079788208,
+    "final_peak": 0.0013695404632017016,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8965269327163696,
+    "norm_drift": 0.10339826345443726,
+    "wall_time": 22.77647304534912
+  },
+  {
+    "Lambda": -8.0,
+    "with_memory": false,
+    "label": "L-8.0_nomem",
+    "max_peak": 60.912193298339844,
+    "final_peak": 0.0017442458774894476,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8965715765953064,
+    "norm_drift": 0.10335355997085571,
+    "wall_time": 20.13016152381897
+  },
+  {
+    "Lambda": -8.0,
+    "with_memory": true,
+    "label": "L-8.0_mem",
+    "max_peak": 4.380957126617432,
+    "final_peak": 0.0014155093813315034,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8966312408447266,
+    "norm_drift": 0.10329389572143555,
+    "wall_time": 22.737531185150146
+  },
+  {
+    "Lambda": -10.0,
+    "with_memory": false,
+    "label": "L-10.0_nomem",
+    "max_peak": 58.61311340332031,
+    "final_peak": 0.0014047397999092937,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8965243697166443,
+    "norm_drift": 0.10340070724487305,
+    "wall_time": 20.126535654067993
+  },
+  {
+    "Lambda": -10.0,
+    "with_memory": true,
+    "label": "L-10.0_mem",
+    "max_peak": 5.012613296508789,
+    "final_peak": 0.0013960138894617558,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8966652154922485,
+    "norm_drift": 0.1032598614692688,
+    "wall_time": 22.672878980636597
+  },
+  {
+    "Lambda": -12.0,
+    "with_memory": false,
+    "label": "L-12.0_nomem",
+    "max_peak": 45.82724380493164,
+    "final_peak": 0.0014000886585563421,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8964437246322632,
+    "norm_drift": 0.10348129272460938,
+    "wall_time": 20.072975158691406
+  },
+  {
+    "Lambda": -12.0,
+    "with_memory": true,
+    "label": "L-12.0_mem",
+    "max_peak": 43.05986785888672,
+    "final_peak": 0.001399293658323586,
+    "final_fwhm": 19.6875,
+    "final_norm": 0.8966940641403198,
+    "norm_drift": 0.10323095321655273,
+    "wall_time": 22.670130252838135
+  }
+]

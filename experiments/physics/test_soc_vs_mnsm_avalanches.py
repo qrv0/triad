@@ -206,9 +206,10 @@ def main():
     btw_fit = fit_power_law_exponent(btw_sizes, x_min=4)
 
     # MNSM with multiple gamma_0 values to compare across P3 strengths.
-    # Rule A: gamma_0 sweep starts at 0.01 (small positive), not 0.0 (isolated regime is invalid).
+    # Rule 10 (CLAUDE.md): t_integration = (1000 + 5000) * 0.005 = 30.0; all gamma_0 satisfy 1/gamma_0 <= t_integration.
+    # Pre-2026-05-17 sweep [0.01, 0.05, 0.2] had 0.01 in near-isolation hedge.
     mnsm_results = []
-    for gamma_0 in [0.01, 0.05, 0.2]:
+    for gamma_0 in [0.05, 0.2, 0.5]:
         mr = mnsm_2d_with_fdt(N=64, L=10.0, Lambda=-8.0, Sigma_lambda=2.0,
                                gamma_0=gamma_0, T_bath=0.05, seed=42)
         mr_fit = fit_power_law_exponent(mr["sizes"], x_min=0.001)

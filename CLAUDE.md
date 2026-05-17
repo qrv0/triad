@@ -290,7 +290,14 @@ Concretely:
   [`paper/manuscript.md`](paper/manuscript.md) Section 6.1 and
   [`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md)
   (sigma_init=0.5 normalized to total norm 1, initial peak |Psi|^2 ~ 1.44,
-  N=128, L=20, Lambda=-8, Sigma_lambda=4).
+  N=128, L=20, Lambda=-8, Sigma_lambda=4, gamma_0=0.2, T=1e-4,
+  FDT correlator active per Rule 10). The observable that carries the
+  anti-collapse signature under coupled regime is the transient peak
+  (max during integration), not the final peak; under FDT both arms
+  equilibrate to the thermal floor 2T. Pre-2026-05-17 the canonical
+  used gamma_0=0, T=0 and reported separation in final-peak ratios
+  of ~10^5; that was a Rule A violation per the audit catalogued in
+  [`docs/llm-hedge-annotations.md`](docs/llm-hedge-annotations.md).
 - Vibrational mode tests: canonical protocol is in
   [`paper/manuscript.md`](paper/manuscript.md) Section 6.3 (2000-step
   warmup + 4000-step recording, 16^3 subgrid).
@@ -361,6 +368,53 @@ rule prevents the surface-filter mode that pattern-matches "result
 direction" to status and then later pattern-matches "variance dominates
 effect" to opposite status, without engaging structurally with what
 the test bed is measuring.
+
+### Rule 10: Coupling timescale must be structurally meaningful, not just gamma_0 > 0
+
+P3 requires that the bath actually equilibrate with the system during
+the test. The structural criterion is `1/gamma_0 <= t_integration`,
+where `t_integration = n_steps * dt`, not just `gamma_0 > 0`.
+
+A configuration with `gamma_0 = 0.01` and `t_integration = 5` formally
+satisfies Rule A (gamma_0 > 0) but structurally leaves the system in
+the near-isolation regime: `1/gamma_0 = 100 >> 5`, so the bath does
+not couple to the system within the test duration. Treating that
+configuration as a test of the equation's coupled-regime behavior is
+the soft form of the wave-1 isolation violation.
+
+For physics field-equation tests, every sweep `gamma_0` value must
+satisfy `1/gamma_0 <= t_integration`. Concrete minima at canonical
+configurations:
+- `t_integration ~ 5`: `gamma_0 >= 0.2`
+- `t_integration ~ 10`: `gamma_0 >= 0.1`
+- `t_integration ~ 30`: `gamma_0 >= 0.05`
+- `t_integration ~ 250` (Kuramoto): any `gamma_0 >= 0.01` is fine
+
+If a script's existing `gamma_0` sweep includes values that fail the
+criterion, the sweep is in the near-isolation hedge regime for those
+points. Either widen `gamma_0` upward, extend `t_integration`, or drop
+the sub-threshold points. Do not interpret results from sub-threshold
+points as evidence about the coupled-regime structural prediction;
+they are evidence about what the equation does in a near-isolation
+regime that P3 asserts does not exist as a stable physical state.
+
+For neural-training tests the criterion is different: P3 requires
+FDT-locked noise to be structurally relevant to the gradient flow,
+not just numerically present. The values currently used in
+[`experiments/neural/test_fdt_locked_noise.py`](experiments/neural/test_fdt_locked_noise.py)
+(gamma_0 = 0.005 to 0.02, T = 0.01) are evaluated by the
+noise-to-signal-magnitude criterion rather than the equilibration-time
+criterion above; see that script's preamble for the rationale.
+
+This rule exists because the wave-2 correction of the wave-1 isolation
+violation chose `gamma_0 = 0.01` (the smallest positive value
+satisfying Rule A's letter) without checking whether that value
+produces structurally meaningful coupling within the test duration.
+The 2026-05-17 audit identified roughly thirteen physics scripts whose
+sweeps include points in the near-isolation hedge regime. The source
+of the hedge was the SKILL.md prescription "a small positive value,
+e.g. 0.01 or 0.05"; that prescription has been updated to the
+timescale criterion above.
 
 ## Operational alarm triggers: surface markers of focal-collapse
 
