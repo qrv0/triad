@@ -1,5 +1,26 @@
 """Phase 9 wave-3 test: vibrational mode spectrum at d=3 (P3 active).
 
+**METHODOLOGICAL FLAG (2026-05-17 audit):** the configuration in this script
+does NOT match the canonical 3D anti-collapse / crystalline-state protocol
+established in results/04 and paper Section 6.3. Specifically:
+  - sigma_init=1.2 with non-normalized Gaussian gives peak |Psi|^2 ~ 0.037,
+    ~40x weaker than the canonical sigma_init=0.5 with total-norm=1
+    normalization (peak |Psi|^2 ~ 1.44). The field never reaches the
+    crystalline regime at this amplitude.
+  - Sigma_lambda=4.0 is the 3D anti-collapse regime (results/04), NOT the
+    crystalline window Sigma_lambda~1.5 (paper Section 6.3) appropriate
+    for vibrational mode analysis.
+  - gamma_0=0.02, T_bath=0.005 contradicts the canonical conservative
+    regime used for vibrational spectrum extraction in results/03 (2D)
+    and paper Section 6.3 (3D).
+The "spectrum" produced by this script is dominated by thermal noise on a
+dispersing field, not the 3D crystalline vibrational spectrum.
+This script and its output (results/25, outputs/vibrational_3d_p3) are
+preserved as historical record per the repository's documentation-of-errors
+philosophy; the proper 3D vibrational analysis requires N=128, L=20,
+sigma_init=0.5 normalized, Lambda=-8, Sigma_lambda=1.5 (or 4 for anti-collapse
+regime), gamma_0=0 and T=0, 2000-step warmup. See docs/llm-hedge-annotations.md.
+
 Extends the 2D vibrational analysis of results/03 (median 0.6 cycles/unit time,
 secondary at 1.0) to d=3 using the standard 3D anti-collapse configuration.
 The structural question (from results/23 audit) is whether the equation's 3D

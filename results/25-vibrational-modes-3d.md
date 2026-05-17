@@ -1,5 +1,23 @@
 # Result 25: vibrational mode spectrum at d=3 (P3 active)
 
+> **METHODOLOGICAL FLAG (2026-05-17, post-hoc audit).** This result was generated with a test configuration that does NOT match the canonical 3D anti-collapse / crystalline-state protocol established in [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md) and paper Section 6.3. The mismatches:
+>
+> 1. **Initial-state amplitude is ~40x too weak.** Used `sigma_init = 1.2` with the non-normalized Gaussian `psi = (1/(sigma sqrt(2pi)))^(d/2) exp(...)` giving peak |Psi|^2 ≈ 0.037. Canonical 3D anti-collapse (results/04) uses `sigma_init = 0.5` with `psi /= sqrt(sum |psi|^2 dx^d)` normalization, giving peak |Psi|^2 ≈ 1.44. At my chosen amplitude the field is below the focal-collapse regime and never reaches the released crystalline state.
+> 2. **Sigma_lambda = 4.0 (results/04 anti-collapse regime), not 1.5 (paper Section 6.3 crystalline window).** The vibrational spectrum of the released crystalline state is well-defined only in the narrow crystalline window per `05-bravais-selection.md`.
+> 3. **P3 active (gamma_0 = 0.02, T_bath = 0.005) does not match the conservative regime used in the canonical results/03 (2D vibrational) and paper Section 6.3 (3D vibrational). Norm grew from 0.35 to 22 during the run because of thermal noise injection on a non-crystallizing field; the "spectrum" measured is dominated by thermal fluctuations on a dispersing field.
+> 4. **Equilibration window 1000 steps vs paper's 2000-step warmup.** Insufficient for the slow memory mode ($\nu_{\text{slow}} = 0.5$) to fully establish the crystalline regime.
+> 5. **N = 32** is the smallest of the issues but is below the canonical N = 128.
+>
+> The "spectrum" reported below is therefore NOT the 3D vibrational spectrum of the crystalline state. It is the spectrum of a low-amplitude field dispersing under thermal noise. The structural reading of this result is null: it documents what happens when test configuration mismatches the canonical protocol, not what the 3D vibrational spectrum is.
+>
+> The status assignment originally given was "partial / inconsistent" with respect to the Hypogeum whole-tone scale; that comparison is invalid because the configuration tested is not the crystalline-state configuration the Hypogeum comparison requires.
+>
+> See [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md) for the catalog entry on this and other Phase 9 wave-3 (2026-05-17) configuration errors.
+>
+> The proper 3D vibrational analysis requires re-running with: N = 128, L = 20, sigma_init = 0.5 normalized to total norm 1, Lambda = -8, Sigma_lambda = 1.5 (or 4.0 depending on regime targeted), gamma_0 = 0 and T = 0 (matching canonical conservative methodology for vibrational analysis), 2000-step warmup, then record. The body below is preserved as historical record per the repository's documentation-of-errors philosophy.
+
+---
+
 ## Prediction tested
 
 Open item flagged in [`23-hypogeum-spectrum-audit.md`](23-hypogeum-spectrum-audit.md): the equation's published vibrational analysis ([`03-vibrational-modes.md`](03-vibrational-modes.md)) is 2D and reports median 0.6 cycles per unit time with secondary mode locked at 1.0. The Hypogeum is a 3D cavity; the structural comparison to the Hypogeum whole-tone-scale spectrum requires the 3D vibrational analysis of the equation. This result is the first 3D extension.

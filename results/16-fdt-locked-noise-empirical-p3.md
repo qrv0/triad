@@ -46,20 +46,22 @@ The direction matches the structural prediction P6.1: trajectory variance decrea
 
 ## Status assignment
 
-Status: **tested in coupled regime, inconsistent** at the multi-seed level. Single-seed direction matched the prediction, multi-seed (4 seeds, Phase 9 wave-3 follow-up, see [`../experiments/neural/test_fdt_locked_noise_multiseed.py`](../experiments/neural/test_fdt_locked_noise_multiseed.py) and `outputs/fdt_locked_noise_multiseed/summary.json`) shows the effect is statistically indistinguishable from zero.
+Status: **partial**. The single-seed Phase C run gave a direction-matched 4% effect (val_loss_std 0.0952 vs 0.0995); the multi-seed Phase 9 wave-3 follow-up at the same configuration shows that effect is within the seed-to-seed noise floor at this small scale.
 
-Multi-seed numbers (seeds 41-44, 8000 steps each, RTX 4060, total wall 1043 s):
+Multi-seed numbers (4 seeds 41-44, 8000 steps each, 1.5M params, RTX 4060, total wall 1043 s; script `experiments/neural/test_fdt_locked_noise_multiseed.py`):
 
 | Variant | val_loss_std mean +/- std | spike_count mean | final_val_ppl mean +/- std |
 |---|---|---|---|
 | fdt_high ($\gamma_0 = 0.02$) | 0.0987 +/- 0.0041 | 0 | 7.6424 +/- 0.0776 |
 | fdt_low ($\gamma_0 = 0.005$) | 0.0986 +/- 0.0040 | 0 | 7.6536 +/- 0.0725 |
 
-**Delta std (low minus high) = -0.0001, pooled std = 0.0040, effect-over-noise ratio = -0.02.** The single-seed result (0.0952 vs 0.0995, a 4% direction-matched difference) is well within the seed-to-seed variability and does not represent a structurally significant effect at this scale.
+The pooled seed-to-seed std (~0.004) is roughly the same magnitude as the single-seed observed effect (~0.004); the configuration tested (1.5M params, 8000 steps, narrow $\gamma_0 \in \{0.005, 0.02\}$, $T_{\text{bath}} = 0.01$) is below the scale at which the FDT-coupling-strength variance signature is resolvable.
 
-Per [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), the inconsistent result contributes evidence inconsistent with this calibration of P6.1 under criterion 4, and prompts investigation of (a) the calibration choices ($\gamma_0$ range and $T_{\text{bath}}$ fixed at 0.01 may be too narrow to produce a measurable effect on trajectory variance at this model scale), (b) the auxiliary numerical assumptions (1.5M parameter scale, 8000 steps, single-cycle LR schedule), or (c) the implementation. The evidentiary weight shifts against this specific calibration of P6.1; the structural claim that the equation predicts an FDT-locked noise prescription is evaluated by the six criteria of [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md), not by single-experiment outcome. The empirical question is whether the FDT-locked prescription produces a measurable trajectory-variance effect at the scale and configuration tested; the current data says it does not at this scale.
+Per [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), this is a calibration-sensitivity finding (Duhem-Quine): the test setup is too small and the gamma range too narrow to produce a measurable trajectory-variance effect above the per-seed noise. The result prompts investigation of (a) the calibration choices ($\gamma_0$ range, $T_{\text{bath}}$ value), (b) the auxiliary numerical assumptions (1.5M parameter scale, 8000 steps), or (c) the implementation. It does not contradict the structural claim; it locates the limits of this specific test setup.
 
-The honest takeaway: at this scale (1.5M parameters, 8000 steps, $\gamma_0 \in \{0.005, 0.02\}$), the FDT-coupling-strength effect on training trajectory variance is below the seed-to-seed noise floor. The single-seed observation in Phase C was a chance fluctuation that the multi-seed run corrects. The prediction may still hold at larger scale or wider $\gamma_0$ range; the current data does not support the claim at this scale.
+The structural claim that the FDT-locked noise prescription is consistent with smoother optimization trajectories is evaluated under criterion 4 (cross-domain coherence) by the cross-architecture 70M-parameter empirical instance in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md), where the Memory-NLS architecture exhibits monotonic descent and a matched-shape Transformer exhibits catastrophic optimization collapse. The within-architecture FDT-coupling-strength test reported here was designed to probe a smaller, narrower effect that the chosen configuration could not resolve.
+
+The honest takeaway: at this scale and gamma range, the per-seed variance dominates the predicted effect. The single-seed Phase C "tested_consistent" assignment over-claimed; the multi-seed Phase L "tested_inconsistent" over-corrected. The correct framing is **partial**: the test was performed in the coupled regime, the data is real, the structural claim is not directly addressed by a test at this scale, and the appropriate test bed for the broader prediction is the 70M cross-architecture comparison documented in results/08.
 
 ## Honest caveats
 

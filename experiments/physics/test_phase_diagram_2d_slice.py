@@ -1,5 +1,16 @@
 """Phase 9 wave-3 phase diagram 2D slice: Sigma_lambda x gamma_0 at d=3.
 
+**METHODOLOGICAL FLAG (2026-05-17 audit):** this script uses sigma_init=1.2
+with non-normalized Gaussian (same wrong convention as test_vibrational_3d.py),
+giving peak |Psi|^2 ~ 0.037, ~40x weaker than the canonical 3D config
+(sigma_init=0.5 normalized to total norm 1, peak ~1.44). At this amplitude
+the field is in the noise-amplification regime rather than the focal-collapse
+regime; the "regime classifications" produced are biased toward dispersive /
+intermediate at low gamma and collapse / runaway at high gamma due to thermal
+noise injection on a weak field, not due to the structural Sigma_lambda x
+gamma_0 phase structure. The proper sweep requires sigma_init=0.5 normalized,
+matching the results/04 3D anti-collapse config. See docs/llm-hedge-annotations.md.
+
 First focused contribution to open-problems/02 (full phase diagram).
 Sweeps (Sigma_lambda, gamma_0) at fixed d=3, Lambda=-8.0, T_bath=0.05,
 nu_fast=10, nu_slow=0.5. Classifies each grid point by qualitative regime
