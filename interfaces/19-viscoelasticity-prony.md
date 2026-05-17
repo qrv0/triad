@@ -108,8 +108,6 @@ It does establish that the equation's memory subsystem is mathematically identic
 
 ## Locally testable predictions and observational signatures
 
-> **Hedge cleanup posture (post-2026-05-16 authored).** This interface was authored after the Phase 2/3 falsification-framing cleanup catalogued in [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md); the predictions below use the structural-realist evaluation framing (cross-domain coherence under methodology/04 criterion 4, not single-experiment refutation) from the start. No prior Popperian wording was present to remove. The annotation appears here for procedural consistency with interfaces 01-17.
-
 The structural claim of this interface (the auxiliary-field memory equation of the present work is mathematically identical to the generalized Maxwell internal-variable representation used in industrial viscoelasticity) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are local predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md).
 
 - **Prediction P19.1: Prony series fit to measured creep modulus reproduces stress relaxation via the auxiliary-field equation.** The structural prediction is that given a measured stress relaxation curve $G(t)$ for a viscoelastic material (e.g., PMMA at room temperature, or hydrated bone, or Earth-mantle data), fitting a Prony series and integrating the auxiliary-field equation $dq_i/dt + q_i/\tau_i = d\varepsilon/dt$ with the fit parameters reproduces the measured stress response to within experimental precision under a step-strain or dynamic-mechanical-analysis loading protocol.
