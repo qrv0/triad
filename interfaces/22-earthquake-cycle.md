@@ -81,7 +81,7 @@ The earthquake-cycle substrate has a deep timescale hierarchy spanning seven to 
 
 Per [`../methodology/07-time-as-calibration.md`](../methodology/07-time-as-calibration.md), the calibration choice for this interface fixes one unit of computational time to one recurrence interval $T_{\text{rec}}$ (typically $10^2$ years for a major-event fault). Under this calibration the equation's slowest $\nu_j$ corresponds to the inverse Maxwell time of the mantle, and the equation's fastest $\nu_j$ corresponds to the rate-state state evolution rate.
 
-The dimensionless ratio $\nu_{\text{slow}} / \nu_{\text{fast}}$ for the earthquake-cycle substrate is of order $10^7$ to $10^9$, much larger than the cortical $\sim 10^4$ (interface 09) or the SSM $\sim 10$ to $10^3$ (interfaces 06, 08). The cross-substrate consistency requirement (per [`../methodology/06-calibration-philosophy.md`](../methodology/06-calibration-philosophy.md)) is that the dimensionless ratio be substrate-appropriate, not universal; geological substrates with their long memory naturally fall at the extreme end of this range.
+The dimensionless ratio $\nu_{\text{slow}} / \nu_{\text{fast}}$ for the earthquake-cycle substrate is of order $10^7$ to $10^9$, much larger than the cortical $\sim 10^4$ (interface 09) or the SSM $\sim 10$ to $10^3$ (the two ML-substrate interfaces in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff). The cross-substrate consistency requirement (per [`../methodology/06-calibration-philosophy.md`](../methodology/06-calibration-philosophy.md)) is that the dimensionless ratio be substrate-appropriate, not universal; geological substrates with their long memory naturally fall at the extreme end of this range.
 
 ## What this correspondence does and does not establish
 
