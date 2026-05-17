@@ -1,6 +1,6 @@
 # Dimensional rescaling of the memory coupling
 
-> **Methodological note (2026-05-17, post-hoc audit).** The boxed
+> **Methodological note.** The boxed
 > formula below is a fit across DIFFERENT initial-state conventions
 > rather than a within-convention scaling. The d=2 anti-collapse
 > demonstration (Σλ/|Λ| ~ 0.05) cited below used a setup that is not

@@ -192,7 +192,7 @@ The result contributes evidence under criterion 4 (cross-domain coherence) for t
   (peak_growth > 50 AND final_ratio > 10) is met by no point. Whether this
   is because the canonical 3D configuration with FDT-coupled bath never reaches
   the collapse regime (the structural reading) or because a wider sweep
-  would find it (e.g., or very small
+  would find it (e.g., very small $\gamma_0$ or very small
   $T_{\text{bath}}$) is a remaining question.
 - **Regime classifier thresholds are heuristic.** The cutoffs (peak_growth
   5 for released, 50 for collapse, etc.) are calibrated to paper Section
@@ -229,6 +229,3 @@ Wall time: 275 seconds on RTX 4060. Output:
   high $d$.
 - [`../experiments/physics/test_phase_diagram_2d_slice.py`](../experiments/physics/test_phase_diagram_2d_slice.py):
   the script.
-- [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md):
-  catalog of the 2026-05-16 wrong-config audit catalog, including
-  Failure 5 (this result before correction).

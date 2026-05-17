@@ -63,7 +63,7 @@ In any of these outcomes the result is informative: it discriminates between the
 
 ## Honest caveats
 
-- **Reduced lattice sizes.** $d=4$ at $N=24$ and $d=5$ at $N=16$ are at the minimum-resolution end where lattice artifacts may affect the precise threshold. The 3D reference uses $N=128$. Higher-resolution runs would require GPU CuPy port; deferred to wave 2.
+- **Reduced lattice sizes.** $d=4$ at $N=24$ and $d=5$ at $N=16$ are at the minimum-resolution end where lattice artifacts may affect the precise threshold. The 3D reference uses $N=128$. Higher-resolution runs would require GPU CuPy port; deferred to follow-up work.
 
 - **Minimal solver.** The test uses a scalar (non-spinor) implementation with local memory only. The full equation has spinor option and nonlocal memory; these extensions are not used here. The result speaks to the cubic + local-memory subset of the full equation.
 

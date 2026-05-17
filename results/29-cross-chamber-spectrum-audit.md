@@ -72,7 +72,7 @@ This is a literature audit, not a numerical experiment. The primary sources are 
 ## Related documents
 
 - [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md): the interface whose predictions this result evaluates.
-- [`../interfaces/04-gamma-entrainment-neurobio.md`](../interfaces/04-gamma-entrainment-neurobio.md): documents the MIT Tsai Lab 40 Hz work in detail; adjacent evidence that frequency-specific acoustic-cortical entrainment is clinically real.
+- [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md): documents the MIT Tsai Lab 40 Hz work in detail; adjacent evidence that frequency-specific acoustic-cortical entrainment is clinically real.
 - [`../results/23-hypogeum-spectrum-audit.md`](../results/23-hypogeum-spectrum-audit.md): the prior single-site audit of the Hypogeum whole-tone-scale spectrum.
 - [`../results/25-vibrational-modes-3d.md`](../results/25-vibrational-modes-3d.md): the 3D vibrational analysis of the equation in canonical configuration.
 - [`../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md`](../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md): the deep research query frame and Query 1 (archaeoacoustic) which the user dispatched and whose returned reports this audit consolidates.
