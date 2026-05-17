@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/triad-mark.svg" alt="triad: three principles forming a triangle" width="320">
+
 # triad
 
 **One equation. Three principles. Twenty-two substrates.**
