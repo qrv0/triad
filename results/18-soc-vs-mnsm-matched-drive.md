@@ -1,4 +1,4 @@
-# Result 18: SOC vs MNSM avalanche statistics with FDT-coupled MNSM (P3 active)
+# Result 18: SOC vs MNSM avalanche statistics with FDT-coupled MNSM
 
 ## Prediction tested
 
@@ -45,7 +45,7 @@ Status: **tested, consistent**.
 
 Rationale: P14.2 predicted that MNSM's release-regime avalanche distributions should be statistically indistinguishable from BTW sandpile distributions. The new test produces MNSM exponents (1.23, 1.24) within statistical proximity of the BTW reference (1.37, and within the literature range 1.0-1.2). The event counts are large enough (600-800) for confident exponent estimation. The result contributes evidence consistent with P14.2 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
 
-An earlier test (results/13) used configuration and produced numerics the methodology does not interpret (configuration outside the scope P3 permits). The present test addresses the prediction with the FDT-coupled drive.in this substrate.
+An earlier test in [`13-soc-vs-mnsm-avalanches.md`](13-soc-vs-mnsm-avalanches.md) used a different configuration; the present test addresses the prediction with the FDT-coupled drive.
 
 ## Honest caveats
 

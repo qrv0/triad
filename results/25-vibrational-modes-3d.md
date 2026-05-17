@@ -1,4 +1,4 @@
-# Result 25: vibrational mode spectrum at d=3 (P3 active)
+# Result 25: vibrational mode spectrum at d=3 with FDT-coupled bath
 
 ## Prediction tested
 
@@ -28,9 +28,9 @@ Configuration (canonical per paper Section 6.3 + results/04):
 - Memory hierarchy 75/25 split: $\nu_{\text{fast}} = 10.0$ with
   $\lambda_{\text{fast}} = 1.125$, $\nu_{\text{slow}} = 0.5$ with
   $\lambda_{\text{slow}} = 0.375$.
-- P3 active: $\gamma_0 = 0.01$,
-  $T_{\text{bath}} = 0.0001$ (small to bound thermal contamination without
-  violating P3 by setting gamma_0=0). FDT noise amplitude $\sqrt{2 \gamma_0 T_{\text{bath}} dt}
+- FDT-coupled bath: $\gamma_0 = 0.01$,
+  $T_{\text{bath}} = 0.0001$ (small to bound thermal contamination on the
+  vibrational spectrum). FDT noise amplitude $\sqrt{2 \gamma_0 T_{\text{bath}} dt}
   \approx 7.07 \times 10^{-5}$ per step per quadrature.
 
 Procedure: 2000-step warmup brings the system to the released-crystalline state;
@@ -83,14 +83,14 @@ time.
 
 ## Comparison with 2D results/03
 
-| | 2D (results/03, conservative) | 3D (this result, P3 active, crystalline window) |
+| | 2D (results/03, $\gamma_0=0,T=0$) | 3D (this result, FDT-coupled bath, crystalline window) |
 |---|---|---|
 | Initial peak |$\Psi$|^2 | $\sim 1.4$ | 1.44 |
 | Median dominant frequency | 0.6 cycles/unit time | 0.1 cycles/unit time |
 | Mode structure | broad, with locked secondary at 1.0 | dominant 0.125, cascade 0.225/0.325/0.425/0.525 |
 | Range | 0.1 to 7.6 | 0.1 to 2.0 |
 | $\Sigma\lambda$ | 1.5 | 1.5 |
-| Methodology | conservative ($\gamma_0=0, T=0$) | P3 active ($\gamma_0=0.01, T=10^{-4}$) |
+| Coupling | $\gamma_0=0, T=0$ | $\gamma_0=0.01, T=10^{-4}$ |
 
 The 3D spectrum has a significantly lower median (0.1 vs 0.6 cycles per unit
 time) and a more concentrated low-frequency cascade. The frequency range is

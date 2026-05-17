@@ -205,7 +205,7 @@ Qualitative structural observations across the two slices:
   mechanism partially operates but thermal contamination prevents the full
   released signature.
 - **No collapse, no runaway at either dimension**: the canonical
-  anti-collapse configuration with P3 active suppresses both indefinite
+  anti-collapse configuration with FDT-coupled bath suppresses both indefinite
   focal locking and memory-driven runaway at d=2 and d=3.
 - **Transient focal-growth magnitude**: d=2 reaches peak_growth $\sim 20\times$
   initial in the released regime; d=3 reaches only $\sim 5\text{-}8\times$ initial.
@@ -270,7 +270,7 @@ The result contributes evidence under criterion 4 (cross-domain coherence) for t
 - **No collapse regime observed.** The classifier criterion (peak_growth >
   50 AND final_ratio > 10) is not met by any tested point. Whether this
   reflects the structural prediction that the canonical anti-collapse
-  configuration with P3 active suppresses collapse at d=2, or whether the
+  configuration with FDT-coupled bath suppresses collapse at d=2, or whether the
   tested $\Sigma\lambda$ range did not include values low enough to fail
   the anti-collapse mechanism, is a remaining question. The intermediate
   point at $(0.05, 0.01)$ is the closest to a collapse signature in this

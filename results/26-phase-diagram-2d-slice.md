@@ -190,7 +190,7 @@ The result contributes evidence under criterion 4 (cross-domain coherence) for t
   intermediate boundary where the classification may be seed-sensitive.
 - **No "collapse" regime observed** in this slice. The classifier criterion
   (peak_growth > 50 AND final_ratio > 10) is met by no point. Whether this
-  is because the canonical 3D configuration with P3 active never reaches
+  is because the canonical 3D configuration with FDT-coupled bath never reaches
   the collapse regime (the structural reading) or because a wider sweep
   would find it (e.g., or very small
   $T_{\text{bath}}$) is a remaining question.

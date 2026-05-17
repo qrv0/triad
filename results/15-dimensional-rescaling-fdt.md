@@ -1,8 +1,8 @@
-# Result 15: dimensional rescaling at d=4 and d=5 with FDT-locked field noise (P3 active)
+# Result 15: dimensional rescaling at d=4 and d=5 with FDT-locked field noise
 
 ## Prediction tested
 
-Extension of [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md) to higher spatial dimensions, with P3 active.
+Extension of [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md) to higher spatial dimensions, with FDT-coupled bath.
 
 Predicted observable: the critical $\Sigma\lambda_{\text{crit}}/|\Lambda|$ for anti-collapse should depend on spatial dimension $d$ but be ROBUST to bath coupling $\gamma_0$ (if the dimensional rescaling is a purely structural property of the equation's geometry, as results/06 argues).
 

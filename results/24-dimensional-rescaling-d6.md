@@ -1,4 +1,4 @@
-# Result 24: dimensional rescaling at d=6 with P3 active
+# Result 24: dimensional rescaling at d=6 with FDT-coupled bath
 
 ## Prediction tested
 

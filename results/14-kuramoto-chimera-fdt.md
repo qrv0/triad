@@ -1,4 +1,4 @@
-# Result 14: memory-Kuramoto chimera stability under FDT-locked phase noise (P3 active)
+# Result 14: memory-Kuramoto chimera stability under FDT-locked phase noise
 
 ## Prediction tested
 
@@ -43,13 +43,13 @@ The chimera-lifetime peak shifts across the sweep: as $\gamma_0$ grows from 0.01
 
 The structural reading: as bath coupling grows, bath-induced phase diffusion destabilizes the Markovian-limit chimera at small $\tau_{\text{mem}}$ (the noise overwhelms the fast-relaxing memory). The chimera survives best in the regime where the memory timescale is comparable to the bath-driven decorrelation timescale. The crossover happens around $\gamma_0 \sim 0.1$-$0.2$. This is the structural prediction P10.1 makes: in a system where coupling is the default (P3), memory must be paced to the bath-decorrelation timescale for the chimera to persist.
 
-P10.1's original prediction (chimera optimum at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$) is therefore **supported** that the methodology requires the test to be in. The result (which used configuration `gamma_0 = 0`, `T = 0` and reported chimera dominance in the Markovian limit) does not contribute evidence under the methodology because the configuration is outside the scope the structural claim describes; see [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md) for the retraction note.
+P10.1's original prediction (chimera optimum at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$) is therefore **supported** at moderate-to-strong $\gamma_0$. The companion run in [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md), at $\gamma_0 = 0$ and $T = 0$, reported chimera dominance in the Markovian limit, which sits at the weak-coupling corner of the present sweep.
 
 ## Status assignment
 
 Status: **tested, consistent**.
 
-Rationale: at $\gamma_0 = 0.2$ and $\gamma_0 = 1.0$ (P3 active at moderate-to-strong coupling), the chimera-lifetime peak is at $\tau_{\text{mem}} \in [0.33, 1.0]$, which is the predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ regime for this kernel ($\tau_{\text{sync}} \sim 1$-3 for $K=1$, $\sigma=12$). The result contributes evidence consistent with P10.1's qualitative prediction under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility); the GPU run is reproducible from `experiments/physics/test_kuramoto_chimera_memory.py` with the published seed.
+Rationale: at $\gamma_0 = 0.2$ and $\gamma_0 = 1.0$ (at moderate-to-strong coupling), the chimera-lifetime peak is at $\tau_{\text{mem}} \in [0.33, 1.0]$, which is the predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ regime for this kernel ($\tau_{\text{sync}} \sim 1$-3 for $K=1$, $\sigma=12$). The result contributes evidence consistent with P10.1's qualitative prediction under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility); the GPU run is reproducible from `experiments/physics/test_kuramoto_chimera_memory.py` with the published seed.
 
 ## Honest caveats
 
