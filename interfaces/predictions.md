@@ -1,7 +1,7 @@
 ---
 title: "Predictions status board"
 description: >-
-  Unified dashboard of all locally-testable predictions across the 17
+  Unified dashboard of all locally-testable predictions across the
   cross-domain interfaces; filterable by domain and status; linked to
   source interface and result document.
 hide:
@@ -10,18 +10,16 @@ hide:
 
 # Predictions status board
 
-This page lists every locally-testable prediction across the 17
+This page lists every locally-testable prediction across the
 cross-domain interfaces in one place. Each row shows the prediction
 ID, the source interface, the substrate domain, the one-line claim,
 the current status, and a link to the result document where a
 test exists.
 
 The status taxonomy follows the methodology (see
-[`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)
-and [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md)
-for the structural reason): predictions are evaluated by coupled-
-regime numerical reproduction (per principles/03-coupling.md and the
-structural-research-mode skill), and a prediction's status reflects
+[`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)):
+predictions are evaluated by numerical reproduction at the parameter
+values the experiment requires, and a prediction's status reflects
 whether such a test has run and what the evidence under criterion 4
 of [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md)
 points to. There is no aggregate "passing rate" because the global
@@ -45,23 +43,20 @@ the six criteria are.
 </div>
 
 ??? note "Status vocabulary"
-    The status terms used in this board follow the
-    `structural-research-mode` skill's taxonomy. None of them use the
-    word "falsified" because the methodology rejects Popperian
-    falsificationism as the evaluation method for this work; see
+    None of the terms below use the word "falsified" because the
+    methodology rejects Popperian falsificationism as the evaluation
+    method for this work; see
     [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)
     for the structural argument.
 
     - **not yet tested** : no test has been run.
-    - **tested, consistent** : the coupled-regime
-      test ran and the observed quantity matches the prediction.
-      Contributes evidence under criterion 4 (cross-domain coherence)
-      and criterion 2 (reproducibility).
-    - **tested, inconsistent** : the coupled-regime
-      test ran and the observed quantity does not match. Prompts
-      investigation of calibration, auxiliary numerical assumptions
-      (Duhem-Quine), or implementation; does not falsify the
-      structural claim.
+    - **tested, consistent** : a test ran and the observed quantity
+      matches the prediction. Contributes evidence under criterion 4
+      (cross-domain coherence) and criterion 2 (reproducibility).
+    - **tested, inconsistent** : a test ran and the observed
+      quantity does not match. Prompts investigation of calibration,
+      auxiliary numerical assumptions (Duhem-Quine), or
+      implementation; does not falsify the structural claim.
     - **partially tested** : a related experiment exists but does
       not directly target this prediction.
 

@@ -14,13 +14,14 @@ This page is the cross-domain unification made tangible. Pick any two
 interfaces from the dropdowns below; the page renders their
 structural-prediction triangles, mappings, and locally-testable
 predictions side by side. The work's central claim is that the same
-form (P1 + P2 + P3) appears across 17 substrates; this comparison view
-is what lets you see that directly for any pair you choose.
+form (P1 + P2 + P3) appears across the documented substrates; this
+comparison view is what lets you see that directly for any pair you
+choose.
 
 The comparison view is hydrated client-side from
 `/assets/data/interfaces-index.json` (built by `hooks/build_index.py`
 from the YAML frontmatter of each interface page). Default pair on
-page load: interface 06 (state space models) versus interface 10
+page load: interface 01 (other NLS systems) versus interface 10
 (Kuramoto synchronization), the canonical mathematical-equivalence
 plus structural-prediction-convergence example.
 
@@ -41,8 +42,8 @@ plus structural-prediction-convergence example.
 </div>
 
 ??? note "What this view is for"
-    The site has a wheel showing all 17 interfaces and a dashboard
-    showing all ~51 predictions. The wheel surfaces a node at a time;
+    The site has a wheel showing all interfaces and a dashboard
+    showing the locally-testable predictions. The wheel surfaces a node at a time;
     the dashboard surfaces predictions individually. This view is the
     in-between: pick two substrates and see what the structural form
     looks like in each, side by side.

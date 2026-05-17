@@ -4,7 +4,7 @@
 
 This document grounds the auxiliary-field memory structure of the equation in a rigorous theorem from non-equilibrium statistical mechanics: the Mori-Zwanzig projection-operator formalism. The grounding is not a new mathematical result; it is the recognition that the structure P2 introduces into the equation is the standard reduced-description form that emerges, by theorem, when one projects a high-dimensional Hamiltonian system onto a slow subspace and retains the memory of the eliminated degrees of freedom.
 
-The structural-realist argument of the work does not require Mori-Zwanzig grounding to stand: the equation is derived from P1+P2+P3 as structural axioms, evaluated by the six criteria of [`04-the-six-criteria.md`](04-the-six-criteria.md), and validated by cross-domain coherence across the seventeen-plus interfaces. The Mori-Zwanzig connection adds an independent layer of rigor: the same auxiliary-variable structure that the equation introduces from physics-philosophy axioms is also the unique reduced description that classical statistical mechanics derives by projection from microscopic Hamiltonian dynamics.
+The structural-realist argument of the work does not require Mori-Zwanzig grounding to stand: the equation is derived from P1+P2+P3 as structural axioms, evaluated by the six criteria of [`04-the-six-criteria.md`](04-the-six-criteria.md), and validated by cross-domain coherence across the documented interfaces. The Mori-Zwanzig connection adds an independent layer of rigor: the same auxiliary-variable structure that the equation introduces from physics-philosophy axioms is also the unique reduced description that classical statistical mechanics derives by projection from microscopic Hamiltonian dynamics.
 
 ## The Mori-Zwanzig theorem
 

@@ -175,7 +175,7 @@ beyond the scope of this document.
 The cosmological reading, like the other interfaces, is offered as an
 instance of the structural form appearing across substrates. The
 strongest interface is the state space model correspondence
-([`06-state-space-models.md`](06-state-space-models.md)), where the
+([`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)), where the
 mathematical equivalence is exact and requires no calibration. The
 BAO interface ([`02-baryon-acoustic.md`](02-baryon-acoustic.md)) is
 strong because it identifies a specific observable cosmological feature
