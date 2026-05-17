@@ -19,6 +19,8 @@ across the parameter space $(\Lambda, \Sigma\lambda, \nu_{\text{slow}}, \nu_{\te
 - **Temporal-spatial asymmetry** of memory: [`../results/07-temporal-spatial-asymmetry.md`](../results/07-temporal-spatial-asymmetry.md) shows spatial non-locality destroys regularization.
 - **Optimization-dynamics analogue**: [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md) documents the failure mode at 70M parameters without anti-collapse.
 - **Reductions to known equations**: [`../equation/05-reductions.md`](../equation/05-reductions.md) catalogues the limits where the equation reduces to standard NLS, Gross-Pitaevskii, Lindblad, stochastic GP, fractional Schrödinger, Rashba.
+- **First focused 2D slice $(\Sigma\lambda, \gamma_0)$ at d=3**: [`../results/26-phase-diagram-2d-slice.md`](../results/26-phase-diagram-2d-slice.md). 5x4 grid in canonical 3D anti-collapse config (N=48, $\sigma_{\text{init}}=0.5$ normalized, $\Lambda=-8$, $T_{\text{bath}}=10^{-3}$, 75/25 memory split). Regime structure: released dominates the low-$\gamma_0$ region across all $\Sigma\lambda \in [0.5, 4.0]$; intermediate at moderate $\gamma_0$; dispersive at high $\gamma_0=1.0$ with high $\Sigma\lambda=4.0$. No collapse or runaway observed (the anti-collapse mechanism prevents focal locking).
+- **d=6 dimensional rescaling result**: [`../results/24-dimensional-rescaling-d6.md`](../results/24-dimensional-rescaling-d6.md). At d=6, $\Sigma\lambda=0$ baseline is already dispersive (no memory needed); memory-driven runaway only at $\Sigma\lambda=32$. The "anti-collapse threshold" notion does not apply cleanly at this high d in the chosen configuration.
 
 ## What is missing
 
