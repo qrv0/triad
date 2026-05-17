@@ -14,20 +14,6 @@ P3 asserts that perfect dynamical isolation does not occur (see [`../principles/
 
 A theory whose third axiom is "isolation does not occur" cannot be evaluated by methodology that presupposes isolation. The methodology contradicts the content of the theory before any experiment is performed. This is not a stylistic point and not a defensive maneuver; it is the structural consequence of accepting P3 as content.
 
-> **Hedge cleanup (2026-05-16).** The two paragraphs immediately
-> below previously contained a "global vs local falsification"
-> carve-out ("Locally-isolable predictions remain locally falsifiable
-> in the standard sense"; "Each individual test admits falsification").
-> That carve-out was a concession to readers committed to
-> falsificationism and contradicted the structural argument the rest
-> of this document establishes. The argument applies at every level:
-> there is no level at which "local falsification" is a valid
-> evaluation method for this work, because both the P3 argument above
-> and the Duhem-Quine argument below apply at every level. See
-> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md)
-> for the prior wording, the assistant Phase that propagated it
-> across 17 interfaces, and the structural reason for revision.
-
 The constructive consequence is that the work is evaluated by criteria appropriate to a theory whose content is anti-isolation. The criteria are documented in [`04-the-six-criteria.md`](04-the-six-criteria.md); the procedure for applying them is in [`03-how-to-evaluate-this.md`](03-how-to-evaluate-this.md). Locally-isolable predictions remain locally testable (the lab numerics in [`../experiments/physics/`](../experiments/physics/)); their numerics either reproduce (contributing evidence under criterion 2, reproducibility) or do not (prompting investigation of calibration, auxiliary numerical assumptions per Duhem-Quine, or implementation). Reproduction or non-reproduction contributes evidence under criteria 1 (consistency), 2 (reproducibility), 3 (generative scope), and 4 (cross-domain coherence); it does not constitute falsification in the Popperian sense.
 
 This applies to the present work as follows. The numerical experiments in [`../experiments/physics/`](../experiments/physics/) test specific quantitative predictions of the equation using coupled-regime configurations (gamma_0 > 0, T > 0, FDT-locked noise correlator), per P3. Each test contributes evidence under criteria 1, 2, and 3: the anti-collapse separation should be approximately five orders of magnitude in three dimensions; the numerics either reproduce that magnitude (criterion 2 evidence in favor) or do not (prompting investigation of which auxiliary assumption or calibration choice the inconsistent evidence implicates). The *global content* of the work, the structural claim that the equation captures the form of persistent extended entities in coupled environments, is evaluated by all six criteria in [`04-the-six-criteria.md`](04-the-six-criteria.md): internal consistency, reproducibility, generative scope, cross-domain coherence, parsimony, comprehensiveness.

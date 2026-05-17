@@ -282,18 +282,6 @@ These are the appropriate tests for a structure. They are weaker than single-qua
 
 ### 7.3 What this does not entail
 
-> **Hedge cleanup (2026-05-16).** The paragraph below previously
-> opened with "does not entail the abandonment of falsification within
-> domains where isolation is a good approximation". Per
-> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
-> that wording was a Rule B concession: it carved out an exception
-> for "domains where isolation is a good approximation" even though
-> the same P3 argument the rest of section 7 establishes excludes
-> isolation at every level. The revised wording below preserves the
-> point (external researchers in adjacent communities may test
-> specific predictions on their own terms) but reframes it without
-> the falsification carve-out.
-
 The structural realist position adopted here does not preclude external researchers from testing specific quantitative predictions of the equation in their own preferred frame. Bench experiments on optical solitons, BEC dynamics, NLS in oceanographic models, and other adjacent communities welcome predictions formulated quantitatively; the present work supplies several. The present work itself evaluates the structural claim by the six criteria above (internal consistency, reproducibility, generative scope, cross-domain coherence, parsimony, comprehensiveness), not by single-experiment refutation. The global content of the equation (P1, P2, P3 as a structural unity) is not the kind of claim that admits single-experiment refutation; that is the structural-realist position's specific commitment, established by the argument from P3 (isolation does not occur) and from Duhem-Quine (no hypothesis is tested in isolation) earlier in this section.
 
 ### 7.4 On the tautology objection

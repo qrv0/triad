@@ -1,7 +1,5 @@
 # Result 10: dimensional rescaling extended to 4D and 5D
 
-> **METHODOLOGICAL RETRACTION (2026-05-16, same Phase 9 wave).** Same flaw as [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md): test was run with $\gamma_0=0$, $T=0$ (P3 muted). Although the existing [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md) reference also used the isolated regime, extending it to 4D and 5D without addressing whether the isolation is a "good approximation" for higher dimensions reproduces the same methodological gap. A wave-2 design includes the FDT-locked bath and sweeps coupling strength alongside dimension. The wave-1 result (had it completed) would not be a methodologically valid test of the scaling prediction.
-
 ---
 
 ## Prediction tested

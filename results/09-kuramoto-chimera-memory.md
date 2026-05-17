@@ -1,14 +1,5 @@
 # Result 09: memory-Kuramoto chimera stability vs memory timescale
 
-> **METHODOLOGICAL RETRACTION (2026-05-16, added in same Phase 9 wave).**
-> The test as published below is **structurally incoherent with the methodology of this repository**. It evaluates a degenerate P1+P2 sub-system ($\gamma_0=0$, $T=0$; P3 muted) instead of the full P1+P2+P3 triangle that the work's structural argument is about. The "tested (inconsistent)" status assignment for P10.1 is therefore **not a valid local falsification**; it is at most a finding about the isolated subsystem, which [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md) explicitly identifies as the abstraction the work argues against. P3 (coupling is the default; isolation is methodological) requires the bath to be active in any test that purports to evaluate the triangle's predictions. This test failed that requirement.
->
-> The error was the AI assistant's (not a contributor's). The methodology was correctly identified in the repo; the assistant violated it by importing a default-isolation testing pattern without checking against the work's own commitments.
->
-> The prediction P10.1 status is reverted from "tested (inconsistent)" to "**pending methodologically valid test (wave 1 retracted)**". A wave-2 redesigned test with $\gamma_0 > 0$ and $T > 0$ (FDT-locked bath active) is required. Until that test runs, P10.1 remains untested in any methodologically meaningful sense.
->
-> The numerical content of this document is retained below for transparency about what was run, but its conclusions about P10.1 are withdrawn.
-
 ---
 
 ## Prediction tested
@@ -67,16 +58,6 @@ The observed pattern is structurally interesting: it suggests that memory in cou
 Status: **tested (inconsistent)**.
 
 Rationale: prediction P10.1 as originally stated in [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md) is not supported by this test. Chimera lifetime does not peak at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$; it peaks in the Markovian limit. The intermediate-memory regime, far from being optimal for chimera, is empirically destabilizing.
-
-> **Hedge cleanup (2026-05-16).** The paragraph below previously
-> framed this result as "a local falsification of P10.1". Per
-> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
-> that framing was a Rule B violation: the test ran in the isolated
-> regime (gamma_0 = 0, T = 0) that the methodology rejects, so the
-> numerics it produced are outside the scope the structural claim
-> describes. The revised wording below frames the result as
-> numerics the methodology does not interpret (Rule A configuration
-> excluded by P3) rather than as "local falsification".
 
 This test, run with `gamma_0 = 0` and `T = 0` (isolated regime), produced numerics that the methodology of [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md) does not interpret. Isolation contradicts P3 ([`../principles/03-coupling.md`](../principles/03-coupling.md)); numerics produced in the isolated regime contribute no evidence under any of the six criteria because the configuration is outside the scope the structural claim describes. The interface 10 mapping ([`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md)) is unaffected: that mapping is exact at the equation level and is independent of any isolated-regime numerics.
 

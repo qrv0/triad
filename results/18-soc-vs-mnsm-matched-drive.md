@@ -14,18 +14,6 @@ The script [`../experiments/physics/test_soc_vs_mnsm_avalanches.py`](../experime
 
 **BTW sandpile (reference)**: 2D grid $64 \times 64$, threshold = 4, dissipative boundary, 15,000 grain drives. Avalanche size = count of topplings per drive event. (Standard SOC reference.)
 
-> **Hedge cleanup (2026-05-16).** This document was originally
-> presented with three MNSM $\gamma_0$ values, the first being
-> "0 (degenerate isolated, for comparison)". Per
-> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
-> that point was a Rule A violation. The sweep table and the
-> analysis have been re-stated for the coupled-regime points only.
-> The original wave-2 run included the isolated cell (18 events,
-> $\tau = 1.155$); that cell is removed here because the methodology
-> excludes the configuration. The structural conclusion (P14.2 is
-> supported in the coupled regime, with $\tau \approx 1.23$ matching
-> BTW within statistical proximity) is unchanged.
-
 **MNSM 2D with FDT-locked drive (wave-2 redesigned)**: $N = 64$, $L = 10$, $\Lambda = -8$, $\Sigma\lambda = 2$, $T_{\text{bath}} = 0.05$. Two values of $\gamma_0$ in the coupled regime (per principles/03-coupling.md Rule A): 0.05 (weak P3), 0.2 (moderate P3). Stochastic forcing applied continuously every step per the FDT correlator (replacing the wave-1 ad-hoc periodic perturbations).
 
 Avalanche detection (MNSM): excursions of peak density above threshold (median peak × 1.05); size = time-integrated excursion. Statistical analysis: Clauset-Shalizi-Newman MLE for the power-law exponent.

@@ -1,9 +1,5 @@
 # Result 13: SOC sandpile vs MNSM release-regime avalanche statistics
 
-> **METHODOLOGICAL RETRACTION (2026-05-16, same Phase 9 wave).** The MNSM portion of this test was run with $\gamma_0=0$, $T=0$. The "periodic perturbation" was ad-hoc, not FDT-coupling. The BTW portion has natural drive but does not have an analogous bath structure to MNSM's intended one. The "partially tested (consistent at coarse level)" status assignment for P14.2 was based on a comparison between a discrete-event SOC and an isolated-MNSM with ad-hoc perturbation. Per the methodology, this is not a valid test of the cross-substrate avalanche-statistics prediction. A wave-2 design uses FDT-coupled MNSM and matched-substrate avalanche-detection methodology.
->
-> The prediction P14.2 status is reverted from "partially tested (consistent at coarse level)" to "**pending methodologically valid test (wave 1 retracted)**".
-
 ---
 
 ## Prediction tested

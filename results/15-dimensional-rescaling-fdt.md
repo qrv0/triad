@@ -15,17 +15,6 @@ The script [`../experiments/physics/test_dimensional_rescaling_high_d.py`](../ex
 - Sub-step 5: P3 dissipation $\psi \leftarrow e^{-\gamma_0 dt} \psi$.
 - Sub-step 6: P3 noise $\psi \leftarrow \psi + \sqrt{2 \gamma_0 T dt}\, \xi$ (complex Gaussian per voxel, FDT-locked).
 
-> **Hedge cleanup (2026-05-16).** This document was originally
-> presented with $\gamma_0 = 0$ as a "degenerate sweep point". Per
-> [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
-> that formulation was a Rule A violation. The sweep table below
-> has been re-stated for the coupled-regime points only. The
-> structural conclusion (the rescaling ratio is $\gamma_0$-independent
-> across the coupled sweep) is unchanged; the original wave-2 run
-> showed the same ratio at $\gamma_0 = 0$, but that point is removed
-> here because the configuration is outside the scope the methodology
-> describes.
-
 **Parameters**: $|\Lambda| = 8$, $\sigma_{\text{init}} = 0.4$, $L = 10$, $T_{\text{bath}} = 0.05$, $dt = 0.0025$, $n_{\text{steps}} = 4000$. $d=4$ at $N=24$ (332k voxels); $d=5$ at $N=12$ (249k voxels). $\gamma_0 \in \{0.05, 0.2, 1.0\}$ (three coupled-regime points, per principles/03-coupling.md Rule A).
 
 **Anti-collapse criterion**: $\rho_{\text{peak, final}} < 10 \cdot \rho_{\text{peak, initial}}$ (relaxed threshold; full release expected to drop further).

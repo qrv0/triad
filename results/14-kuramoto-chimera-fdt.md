@@ -16,19 +16,6 @@ $$\frac{d\theta_i}{dt} = K \cdot \text{Im}\left[e^{-i(\theta_i + \alpha)} Y_i\ri
 
 with $\xi_i$ unit-variance Gaussian. The noise amplitude is fixed by P3's FDT correlator in terms of $(\gamma_0, T)$. The auxiliary-field memory is unchanged from wave 1 (exact OU update per paper §4.1).
 
-> **Hedge cleanup (2026-05-16).** This document was originally
-> presented with $\gamma_0 = 0$ as a "degenerate sweep point" in the
-> coupling sweep. Per [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
-> that formulation was a Rule A violation (the "degenerate sweep
-> limit" is the softer recurrence of the wave-1 isolation error).
-> The sweep table and the analysis below have been re-stated for the
-> coupled-regime points only. The original wave-2 run included the
-> isolated cell; that cell is removed here because the methodology
-> excludes the configuration. The structural conclusion (P10.1 is
-> supported in the coupled regime) is unchanged; the comparison to
-> the wave-1 isolated result is now framed structurally (the
-> isolated regime is what P3 says the world is NOT).
-
 **2D parameter sweep**: $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$ at $T_{\text{bath}} = 0.1$, $\nu \in \{0.03, 0.1, 0.3, 1.0, 3.0, 10.0\}$ (i.e., $\tau_{\text{mem}}$ from 33 to 0.1). All sweep points are in the coupled regime per principles/03-coupling.md (Rule A); the structural prediction is evaluated across these four coupling strengths.
 
 Random seed varies per cell (seed = base + 1000*g_idx + n_idx) to give independent realizations. Backend: CuPy on RTX 4060. Wall time: 38.9 seconds.

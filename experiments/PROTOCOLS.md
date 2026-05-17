@@ -4,13 +4,6 @@ This document specifies the protocol for the prediction-tests that operationaliz
 
 ## Purpose
 
-> **Hedge cleanup (2026-05-16).** This document was originally
-> written with a "local predictions are evaluated by standard
-> falsification" frame in the introduction and status taxonomy.
-> Per [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md),
-> that frame was a Rule B violation. The revised text below uses
-> six-criteria framing per the cleaned methodology.
-
 Each interface in [`../interfaces/`](../interfaces/) names locally testable predictions (P{N}.{n}) in a uniform format. The structural-realist methodology (see [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)) commits to the two-level structure: the global structural claim is evaluated by cross-domain coherence (criterion 4); the local predictions are evaluated by coupled-regime numerical reproduction (reproduction contributes evidence under criterion 2; non-reproduction prompts investigation of calibration, auxiliary numerical assumptions per Duhem-Quine, or implementation). This document specifies how the local-prediction tests are run, what data they produce, and how their outcomes are published in repo.
 
 The repository is set up as active live research: each completed test publishes its results in repo, updates the prediction status in the relevant interface, and updates [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md) "Recently completed" section.

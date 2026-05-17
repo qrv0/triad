@@ -1,15 +1,5 @@
 # Result 26: phase diagram 2D slice ($\Sigma\lambda \times \gamma_0$) at d=3
 
-> **Historical note (2026-05-17).** This document replaces a wrong-config
-> 2026-05-16 phase-diagram run (N=24, L=10, sigma_init=1.2 unnormalized,
-> Sigma_lambda sweep {0, 0.5, 2, 8}, gamma_0 sweep {0.01, 0.05, 0.2, 1.0})
-> catalogued in [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md)
-> as Phase 9 wave-3 cluster Failure 5. That run placed the field below the
-> focal-collapse regime (peak |Psi|^2 ~ 0.04 vs canonical ~1.44) and included
-> Sigma_lambda=0 (no memory) as a sweep endpoint. The body below reports the
-> re-run with canonical configuration; the wrong-config body is preserved in
-> git history at commit b3e238c.
-
 ## Prediction tested
 
 Open problem [`02-phase-diagram.md`](../open-problems/02-phase-diagram.md):

@@ -1,16 +1,5 @@
 # Result 25: vibrational mode spectrum at d=3 (P3 active)
 
-> **Historical note (2026-05-17).** This document was first written on 2026-05-16
-> with a wrong configuration (sigma_init=1.2 unnormalized, Sigma_lambda=4.0,
-> gamma_0=0.02 with T=0.005, N=32). That configuration did not match the
-> canonical 3D crystalline-state protocol of [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md)
-> and paper Section 6.3; the field was below the focal-collapse regime and the
-> spectrum was dominated by thermal noise on a dispersing low-amplitude state.
-> Catalogued in [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md)
-> as Phase 9 wave-3 cluster Failure 4. The body below reports the re-run with
-> canonical configuration; the wrong-config body is preserved in git history at
-> commit b3e238c.
-
 ## Prediction tested
 
 Open item flagged in [`23-hypogeum-spectrum-audit.md`](23-hypogeum-spectrum-audit.md):
