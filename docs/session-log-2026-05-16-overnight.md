@@ -471,6 +471,160 @@ Combined session total (Phase A-I): ~7.5 hours by wall time, with
 significant background-task time absorbed in parallel (GPU runs in
 Phase C and Phase I).
 
+## Second continuation: Phases J through O (date 2026-05-17)
+
+After Phase I completed and the user confirmed work should continue,
+five more phases were planned (J-N for substantive new work, O for
+cleanup + final wrap). Each is documented here as it completes.
+
+### Phase J: 3D vibrational mode spectrum extension
+
+Numerical extension of the 2D vibrational analysis (results/03) to 3D.
+Script: `experiments/physics/test_vibrational_3d.py`. Configuration:
+N=32, Lambda=-8.0, Sigma_lambda=4.0, 4000 steps, P3 active
+(gamma_0=0.02, T_bath=0.005). Wall time 13.9 s on RTX 4060.
+
+Key findings:
+- Per-voxel dominant frequency: median 0.333 cycles/unit time (vs
+  2D's 0.6), mean 0.510, range 0.067 to 2.733.
+- Histogram peaks at 0.05 (artifact: low-amplitude voxels), 0.25,
+  0.45, 0.15, 0.55, 0.85 cycles/unit time.
+- 3D spectrum is multi-modal with lower median and broader high-
+  frequency tail than the 2D sharp 0.6/1.0 structure.
+- Some pair ratios cluster near the Hypogeum whole-tone reference
+  (1.122): 0.55/0.45 = 1.22; 1.05/0.85 = 1.24. Most do not.
+- The 3D equation does NOT cleanly reproduce the whole-tone-scale
+  structure in this configuration.
+
+Honest caveats: thermal noise contributes substantially (final norm 22
+vs initial 0.35); N=32 may be undersampled; equilibration window
+short. Bug fix: variable-name shadowing of `r` in main() loop caused
+summary.json not to be written on first run; corrected and re-ran.
+
+Documented in `results/25-vibrational-modes-3d.md`. Status: partial /
+informative (3D vs 2D); partial / inconsistent (Hypogeum whole-tone).
+
+### Phase K: variational Gaussian ansatz analysis
+
+Continuation section added to `open-problems/01-analytical-anti-collapse.md`,
+advancing the Phase F perturbative draft.
+
+Variational Gaussian ansatz:
+- $\Psi = A(t) \exp(-r^2 / (2\sigma(t)^2))$
+- $E_K = d N / (4 m \sigma^2)$
+- $E_{\text{NL}} = \Lambda N^2 / (2 (2\pi)^{d/2} \sigma^d)$
+- Fixed point: $\sigma_*^{d-2} = m|\Lambda|N / (2\pi)^{d/2}$
+- Stability: positive for d<2, zero at d=2, negative for d>2 (L^2-supercriticality)
+
+Adding memory in equilibrium-tracking limit:
+- $\Lambda_{\text{eff}} = \Lambda + \Sigma\lambda$
+- Release condition: $\Sigma\lambda > |\Lambda|$, dimension-independent
+
+The dimensional dependence enters via the lag-dynamics correction to
+equilibrium-tracking sufficiency through $\rho_{\text{peak}} \sim N \sigma_*^{-d}$.
+
+Self-similar collapse argument:
+- $y(0, t_*) = \nu f(0)^2 \int_0^\infty e^{-\nu s} L(s)^{-d} ds$
+- Integral diverges at $s \to 0$ for $d \geq 2$
+- Memory regularizes its own collapse self-consistently
+
+D=6 result incorporated as constraint: the 1/d formula is a partial
+fit valid only in focal-collapse regime, not fundamental.
+
+Phase 4 advances from "leading-order skeleton" to "leading-order +
+variational + regime constraints + d=6 boundary."
+
+### Phase L: multi-seed P6.1 + P6.3 (in progress)
+
+Two new wrapper scripts to extend the Phase C single-seed runs with
+multi-seed statistics for variance estimation.
+
+P6.1 multi-seed (`experiments/neural/test_fdt_locked_noise_multiseed.py`):
+imports test_fdt_locked_noise module, runs each variant at seeds 41-44,
+computes mean +/- std of val_loss_std, spike_count, final_val_ppl.
+Wall time ~20 min on RTX 4060.
+
+P6.3 multi-seed (`experiments/neural/test_simsiam_cubic_ssm_multiseed.py`):
+imports test_simsiam_cubic_ssm module, runs each variant at seeds 41-44,
+computes mean +/- std of final_eff_rank and final_uniformity. Wall time
+~3 min on RTX 4060.
+
+Results to be populated in this section when GPU runs complete.
+
+### Phase M: interface 22 earthquake cycle dynamics
+
+New cross-domain interface added to ledger. Ledger 21 -> 22 substrates.
+
+Structural correspondence: earthquake cycles instantiate the triangle at
+geophysical scale as nonlinear relaxation oscillations.
+- P1: seismic cycle (recurrence period)
+- P2: rate-state friction state variable (Dieterich 1979, Ruina 1983) +
+  viscoelastic mantle relaxation modes (Pollitz 1997)
+- P3: tectonic plate-motion forcing + viscous dissipation + fault-fault
+  stress transfer (Stein 1999, Toda 2005)
+
+Calibration: one unit of computational time = one recurrence interval
+(~10^2 years). Dimensionless ratio nu_slow/nu_fast for the substrate is
+~10^7 to 10^9, extreme end of the cross-substrate range.
+
+Convergent observation: Erickson-Birnir-Lavallée 2008 and
+Cattania-McGuire-Collins 2019 both characterize the seismic cycle as
+"nonlinear relaxation oscillations" independently of this work.
+
+Three predictions named (recurrence-variance vs Maxwell-time ratio;
+afterslip decay timescale; multi-patch complexity scaling); all
+not_yet_tested. References verified via WebSearch.
+
+Documented in `interfaces/22-earthquake-cycle.md`. Ledger
+`interfaces/README.md` updated. Mkdocs nav updated.
+
+### Phase N: phase diagram 2D slice (script ready, GPU pending)
+
+Script `experiments/physics/test_phase_diagram_2d_slice.py` writes a 4x4
+grid sweep (Sigma_lambda x gamma_0) at d=3, classifying each grid point
+by qualitative regime (runaway, collapse, released, dispersive_noise_
+dominated, stable, intermediate). First focused contribution to
+`open-problems/02-phase-diagram.md`.
+
+Configuration: N=24, Lambda=-8.0, T_bath=0.05, 2000 steps per grid
+point. Sigma_lambda in {0, 0.5, 2, 8}; gamma_0 in {0.01, 0.05, 0.2, 1.0}.
+Expected wall time: ~5 min on RTX 4060.
+
+Results to be populated when run. Queued behind Phase L (GPU contention).
+
+### Phase O: cleanup wave-1 retracted bodies (reassessed)
+
+The original Phase O plan included truncating or restructuring the
+wave-1 retracted result bodies (results/09, 11, 12, 13). On review,
+those files already have clear retraction banners at the top
+explaining the methodological issue, with the wave-1 body preserved
+below for historical record. This matches the user's earlier stated
+preference for preserving "registro fossilizado" (fossilized record).
+
+Phase O is therefore reduced to: final session log update covering
+Phases J-N, final em-dash and hedge audit, final commit.
+
+### Open items after this second continuation
+
+- The 3D vibrational analysis at higher N (e.g., N=64) with cleaner
+  thermal noise to see if the spectrum sharpens into discrete modes
+  resembling the Hypogeum whole-tone scale.
+- The Townes-profile volume-averaging carried out rigorously (the
+  Phase K variational treatment identifies this as the next analytical
+  step but does not perform it; the self-similar collapse argument
+  identifies a non-trivial self-consistent regularization problem).
+- A focused regime-boundary numerical sweep in (d, Lambda, N) space
+  characterizing the focal-collapse vs dispersive-dominated transition
+  identified by the Phase I d=6 result. Phase N starts this with a
+  (Sigma_lambda, gamma_0) slice at d=3; extension to other d slices is
+  the natural next step.
+- Earthquake-cycle interface 22 predictions are all not_yet_tested;
+  the P22.1 (recurrence-variance vs Maxwell-time) test is data-only
+  (would require cross-fault data collation) but doable without
+  fieldwork or simulation.
+- The wave-1 retracted result bodies are preserved as historical
+  record per the user's preference; no cleanup work is required.
+
 ## Open items after Phase I
 
 - Townes-profile volume average derivation in d dimensions (Phase F
