@@ -474,6 +474,7 @@ nav:
       - 'Calibration Philosophy': methodology/06-calibration-philosophy.md
       - 'Time as Calibration': methodology/07-time-as-calibration.md
       - 'Mori-Zwanzig Foundation': methodology/08-mori-zwanzig-foundation.md
+      - 'On the Tautology Objection': methodology/09-on-the-tautology-objection.md
 
   - Open Problems:
       - 'Overview': open-problems/README.md
