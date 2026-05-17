@@ -4,14 +4,11 @@ Scripts that reproduce the numerical findings documented in [`../../results/`](.
 
 | Script | Reproduces |
 |---|---|
-| `reproduce_2d_anti_collapse.py` | [`../../results/01-anti-collapse-2d.md`](../../results/01-anti-collapse-2d.md) |
-| `reproduce_2d_crystallization.py` | [`../../results/02-spontaneous-crystallization.md`](../../results/02-spontaneous-crystallization.md) |
-| `reproduce_2d_vibration_spectrum.py` | [`../../results/03-vibrational-modes.md`](../../results/03-vibrational-modes.md) |
 | `reproduce_3d_anti_collapse.py` | [`../../results/04-anti-collapse-3d.md`](../../results/04-anti-collapse-3d.md) |
 | `reproduce_3d_bravais_sweep.py` | [`../../results/05-bravais-selection.md`](../../results/05-bravais-selection.md) |
-| `reproduce_dimensional_rescaling.py` | [`../../results/06-dimensional-rescaling.md`](../../results/06-dimensional-rescaling.md) |
-| `reproduce_temporal_spatial_asymmetry.py` | [`../../results/07-temporal-spatial-asymmetry.md`](../../results/07-temporal-spatial-asymmetry.md) |
-| `reproduce_all.py` | All of the above in sequence. |
+| `reproduce_all.py` | The 3D reproduction scripts in sequence. |
+
+Prediction-test scripts (named `test_<topic>.py`) implement the locally-testable predictions named in [`../../interfaces/`](../../interfaces/) and write to result documents in [`../../results/`](../../results/) with numbering ≥ 09. These tests follow the protocol in [`../PROTOCOLS.md`](../PROTOCOLS.md).
 
 ## Running a script
 
@@ -37,11 +34,11 @@ Each script exposes its configuration at the top of the file. To explore alterna
 
 ## Roadmap
 
-The current scripts reproduce the results in the paper. Future additions (not yet implemented):
+Future directions (not yet implemented as reproduce scripts):
 
 - Mesh-convergence sweeps: $N = 192$, $N = 256$, where compute permits.
-- Spatial-kernel variations in 3D (currently only 2D is fully documented).
-- Resonance spectrum scan (R2 in the 2D `reach_report.md`, not yet ported to 3D).
-- Dense phase diagram in $(\Lambda, \Sigma\lambda)$ (R4 in 2D, not yet ported to 3D).
+- Spatial-kernel variations in 3D.
+- 2D reproduction scripts (the 2D results in [`../../results/01-anti-collapse-2d.md`](../../results/01-anti-collapse-2d.md), [`02-spontaneous-crystallization.md`](../../results/02-spontaneous-crystallization.md), [`03-vibrational-modes.md`](../../results/03-vibrational-modes.md), [`07-temporal-spatial-asymmetry.md`](../../results/07-temporal-spatial-asymmetry.md) were produced from earlier versions of the solver; ports to the current `solver_3d.py` framework run-as-2D have not been finalized).
+- Dense phase diagram in $(\Lambda, \Sigma\lambda)$.
 
 These extensions are noted as open directions in [`../../paper/manuscript.md`](../../paper/manuscript.md), §10.
