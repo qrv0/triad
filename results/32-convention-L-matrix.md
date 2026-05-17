@@ -78,11 +78,32 @@ The structural-realist reading: the equation's predictions are about regimes (fo
 
 Convention B at L=10 is itself a new operating region not previously documented in the repository. The released regime there (14/20 d=2, 15/20 d=3) extends the regime-coverage and confirms that the canonical Convention B is robust to the L=20 -> L=10 reduction.
 
+## Convention A at native regime: d=2 and d=3 verification (2026-05-17)
+
+Script: [`../experiments/physics/test_convention_A_native_regime.py`](../experiments/physics/test_convention_A_native_regime.py). Runs Convention A at L=10, sigma=0.4, T_bath=0.05 (dimensional-rescaling series value), n_steps=4000 (series value), gamma_0 from 0.05 (series minimum), at d=2 and d=3. Closes the `partial` clause of the convention question.
+
+Result: even at the dimensional-rescaling series' native parameter regime, Convention A at L=10 does NOT achieve focal-collapse at d=2 or d=3.
+
+| Cell | regime counts | peak_growth range |
+|---|---|---|
+| A_native_d2 (L=10, sigma=0.4, T_bath=0.05, n=4000) | 9 dispersive, 6 stable | 1.00-1.11 |
+| A_native_d3 (L=10, sigma=0.4, T_bath=0.05, n=4000) | 5 dispersive, 10 stable | 1.00-1.03 |
+
+Zero released regime at either d. Peak_growth ratios across all 30 grid points are between 1.00 and 1.11; the field essentially does not undergo focal growth before dispersing or stabilizing.
+
+The structural reading is sharper than the convention-only framing in results/31: Convention A at L=10, sigma=0.4 does not access focal-collapse at d=2 or d=3 under any tested parameter regime (neither the phase-diagram series' T_bath=0.001 + n=2000 nor the dimensional-rescaling series' T_bath=0.05 + n=4000). The dimensional-rescaling series' focal-collapse access at d=4, d=5 (results/15) is a property of the d=4, d=5 amplitude regime, not of Convention A in general.
+
+The implication for results/06's 1/d formula: the formula was built across DIFFERENT conventions silently. The d=2 anti-collapse demonstration (Σλ_crit/|Λ| ~ 0.05) cited in results/06 used a setup distinct from Convention A; the d=3 demonstration (Σλ_crit/|Λ| ~ 0.5) used Convention B / canonical; the d=4, d=5 datapoints in results/10, 15 used Convention A. The 1/d scaling is therefore not within-convention; it is across conventions, with the convention choice silently varying with d.
+
+For the analytical theory in open-problems/01, the implication is that the dimensional dependence of Σλ_crit must be characterized in a convention-independent / amplitude-bridge form, not as a single-parameter sweep within Convention A or Convention B.
+
 ## Status assignment
 
-Status: **tested_consistent** with respect to the convention-robustness question at the phase-diagram parameter regime: Convention B is L-robust at L=10 and L=20; Convention A is not focal-collapse-accessible at the phase-diagram parameter regime regardless of L. **partial / informative** with respect to the broader (convention x parameter regime) plane: the dimensional-rescaling series' (Convention A, T_bath=0.05, n_steps=4000) regime has not been re-run here for direct validation.
+Status: **tested_consistent** with respect to the convention-robustness question at the phase-diagram parameter regime: Convention B is L-robust at L=10 and L=20; Convention A is not focal-collapse-accessible at d=2, d=3 under ANY tested parameter regime. **tested_consistent** with respect to the convention-A-at-native-regime verification: Convention A at d=2, d=3 with (T_bath=0.05, n_steps=4000) is still all-dispersive-or-stable; the dimensional-rescaling series' focal-collapse access at d=4, d=5 is a property of those d's, not of Convention A generally.
 
-Rule 9 application: the convention effect is deterministic in this regime (Convention A 100% dispersive at both L, Convention B released-dominant at both L); single-seed runs are sufficient to document it. The variance question is closed at this scale because the convention effect dominates by orders of magnitude.
+The 1/d formula in results/06 is structurally informative as a fit across multi-convention data, not as a within-convention scaling.
+
+Rule 9 application: the convention effect is deterministic in this regime (Convention A 100% non-released at both L and at native parameter regime, Convention B released-dominant at both L); single-seed runs are sufficient to document it. The variance question is closed at this scale because the convention effect dominates by orders of magnitude.
 
 ## Honest caveats
 
