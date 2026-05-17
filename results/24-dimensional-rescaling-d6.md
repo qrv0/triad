@@ -23,21 +23,25 @@ Hardware: RTX 4060 Laptop GPU, CUDA 13.0, PyTorch+CuPy 2.12.0.
 
 ## Results
 
-Executed 2026-05-16. Results to be populated from `outputs/dimensional_rescaling_d6_p3/summary.json` once the GPU run completes.
+Executed 2026-05-16 on RTX 4060 Laptop GPU (CUDA 13.0, CuPy backend). Total wall time 442 seconds across the eight-point sweep (52-63 s per $\Sigma\lambda$ value).
 
 | $\Sigma\lambda$ | max_peak | final/initial | released |
 |---|---|---|---|
-| 0.0 | _pending_ | _pending_ | _pending_ |
-| 0.5 | _pending_ | _pending_ | _pending_ |
-| 1.0 | _pending_ | _pending_ | _pending_ |
-| 2.0 | _pending_ | _pending_ | _pending_ |
-| 4.0 | _pending_ | _pending_ | _pending_ |
-| 8.0 | _pending_ | _pending_ | _pending_ |
-| 16.0 | _pending_ | _pending_ | _pending_ |
-| 32.0 | _pending_ | _pending_ | _pending_ |
+| 0.0 | 0.9842 | **0.7705** | True (already dispersive without memory) |
+| 0.5 | 0.9866 | 0.6085 | True |
+| 1.0 | 0.9846 | 0.5552 | True (minimum final ratio in sweep) |
+| 2.0 | 0.9842 | 0.6230 | True |
+| 4.0 | 0.9842 | 0.6023 | True |
+| 8.0 | 0.9842 | 0.6309 | True |
+| 16.0 | 0.9893 | 0.6562 | True |
+| 32.0 | **1.7400** | **1.6562** | **False (memory-driven runaway)** |
 
-Critical $\Sigma\lambda$ at d=6, $\gamma_0=0.2$: _pending_.
-Critical $\Sigma\lambda / |\Lambda|$: _pending_.
+Naive critical $\Sigma\lambda$ at d=6, $\gamma_0=0.2$: 0.5 (smallest non-zero released).
+Naive critical $\Sigma\lambda / |\Lambda|$: 0.0625.
+
+**Interpretation requires care.** The naive critical-$\Sigma\lambda$ identification above is misleading because the $\Sigma\lambda = 0$ case (no memory) is ALSO released (final/initial = 0.7705). The criterion "field releases when memory is present" does not apply at d=6 with the chosen configuration because the field releases EVEN WITHOUT memory. The regime is dispersive: the kinetic operator $-(\hbar^2/2m)\nabla^2$ in d=6 spreads the initial Gaussian rapidly, and the cubic attraction at this field amplitude (initial norm 3.76) is insufficient to sustain collapse on the simulation timescale.
+
+The high-$\Sigma\lambda$ end of the sweep shows the opposite phenomenon: at $\Sigma\lambda = 32$ the memory potential is so strong that it drives the field into a runaway (max_peak = 1.74, larger than initial; final/initial = 1.66). This is over-memory destabilization, not anti-collapse.
 
 ## Comparison with existing dimensional data
 
@@ -49,11 +53,19 @@ Critical $\Sigma\lambda / |\Lambda|$: _pending_.
 | 5 | not on 1/d formula | [`10-dimensional-rescaling-higher-d.md`](10-dimensional-rescaling-higher-d.md), [`15-dimensional-rescaling-fdt.md`](15-dimensional-rescaling-fdt.md) |
 | 6 | _pending_ | this result |
 
-The 1/d formula predicts ratio $\sim 0.167$ at d=6 (i.e., $\Sigma\lambda_{\text{crit}} \sim 1.33$). The d=4,5 data does not follow this prediction. The d=6 data clarifies whether the formula breaks down further or stabilizes.
+The 1/d formula predicts ratio $\sim 0.167$ at d=6 (i.e., $\Sigma\lambda_{\text{crit}} \sim 1.33$). The d=4,5 data does not follow this prediction. The d=6 data shows that the formula does not apply at all at this dimension with the chosen configuration: the no-memory baseline is already released, so the "critical $\Sigma\lambda$ at which anti-collapse begins" is undefined.
 
 ## Status assignment
 
-Status: _pending GPU execution_. Will be assigned (tested_consistent, tested_inconsistent, or partial) once `outputs/dimensional_rescaling_d6_p3/summary.json` is populated. The structural reading is independent of the specific ratio value; the ratio's d-dependence is the open question for [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md) (Townes-profile volume averaging is the suggested analytical path to recover the d-dependence from the equation).
+Status: **tested in coupled regime, partial / null** with respect to the original 1/d formula prediction; **tested in coupled regime, structurally informative** with respect to the equation's regime structure at high dimension.
+
+The reading: at d=6 with N=8 and the parameters used, the equation is in a dispersive regime rather than a focal-collapse regime. The 2D-and-3D collapse phenomenology that motivated the 1/d formula has structurally weakened by d=6; the focal collapse is sufficiently slow that bath dissipation alone disperses the field. Adding memory does not strengthen the anti-collapse mechanism in this regime because there is no anti-collapse mechanism to strengthen; the field is not collapsing.
+
+The d=6 runaway at $\Sigma\lambda = 32$ is itself structurally informative: it identifies the boundary between the no-effect regime (small to moderate memory just decreases final ratio further by reinforcing dispersion) and the over-memory destabilization regime (strong memory drives a runaway). The transition is between $\Sigma\lambda = 16$ (released, ratio 0.66) and $\Sigma\lambda = 32$ (runaway, ratio 1.66). The transition is not in the same family as the d=2 anti-collapse threshold; it is the inverse.
+
+The result contributes evidence under criterion 4 (cross-domain coherence) but in a way that refines the structural prediction rather than confirming the boxed 1/d formula: the structural form has different regime structures at different dimensions, and the dimensional rescaling thread is more subtle than a single boxed formula captures. The analytical theory of [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md) needs to account for the regime structure as a function of dimension, not just the threshold scaling within a single regime.
+
+The L²-criticality of the 2D NLS, the supercriticality of the 3D NLS, and the strongly supercritical higher-d cases have qualitatively different collapse phenomenology. At sufficiently high $d$, the dispersive kinetic operator dominates the cubic attraction at the field amplitudes accessible in numerical simulation, and the "collapse" the dimensional-rescaling thread was studying is no longer a feature of the dynamics. This is the structural finding from d=6.
 
 ## Reproducibility
 
