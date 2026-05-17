@@ -1,0 +1,40 @@
+Phase 9 wave-3 (CORRECTED): 3D vibrational mode spectrum
+Backend: cupy (GPU)
+Canonical 3D crystalline-state protocol per paper Section 6.3 + results/04
+  Canonical 3D vibrational config:
+  N=64 (subgrid 16^3 = 4096 voxels recorded)
+  initial_norm = 1.000000 (should be 1.0)
+  initial_peak = 1.4367 (canonical ~1.44 for sigma=0.5 in d=3)
+  warmup: 2000 steps; record: 4000 steps
+  P3: gamma_0=0.01, T_bath=0.0001, noise_amp=7.07e-05
+  Warmup complete in 29.1s
+  Post-warmup: norm=0.9807, peak=0.0011
+  Recording complete; total wall 105.2s
+  Final: norm=0.9491, peak=0.0011
+
+Analyzing spectrum...
+
+Per-voxel dominant frequency statistics:
+  Range: 0.100 to 2.000 cycles/unit time
+  Median: 0.100  (reference: 2D results/03 = 0.6)
+  Mean: 0.200
+  Std: 0.136
+
+Top 15 most-common dominant frequencies (0.05-cycle bins):
+  0.125 cycles/unit time: 2132 voxels
+  0.225 cycles/unit time: 776 voxels
+  0.325 cycles/unit time: 577 voxels
+  0.425 cycles/unit time: 384 voxels
+  0.525 cycles/unit time: 161 voxels
+  0.625 cycles/unit time: 51 voxels
+  0.825 cycles/unit time: 5 voxels
+  0.925 cycles/unit time: 5 voxels
+  1.125 cycles/unit time: 4 voxels
+  1.675 cycles/unit time: 0 voxels
+  1.725 cycles/unit time: 0 voxels
+  1.825 cycles/unit time: 0 voxels
+  1.875 cycles/unit time: 0 voxels
+  1.925 cycles/unit time: 0 voxels
+  1.975 cycles/unit time: 1 voxels
+
+Summary written to /home/l/mnsm/modest-heisenberg-f18b5b/outputs/vibrational_3d_p3/summary.json
