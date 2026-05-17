@@ -268,7 +268,49 @@ Merge commits on main: `0860ac8`, `2ed4cc8`.
 
 - P3 math LLM dispatch (user's external action; problem statement is in [`../docs/external-dispatch/P3-math-llm-townes-profile-and-perturbative.md`](../docs/external-dispatch/P3-math-llm-townes-profile-and-perturbative.md)).
 - P4 Query 2 earthquake-cycle deep research dispatch (user's external action; query frame in [`../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md`](../docs/external-dispatch/P4-deep-research-archaeoacoustic-and-earthquake.md) Query 2 section).
-- Multi-seed extension of d=2 and d=4 phase diagrams for completeness (currently single-seed, status partial).
-- Convention A multi-seed extension at d=2 and d=3 for consistency with Convention B multi-seed promotion.
 - Cross-interface systematic re-audit (longer-term).
 - Open-problems/01 analytical continuation (waiting on math LLM dispatch).
+- Re-run Convention A at d=2, d=3 with the dimensional-rescaling series parameter regime (T_bath=0.05, n_steps=4000) to verify Convention A's focal-collapse access under its native regime (closes the `partial` clause of results/32).
+
+## Continuation: convention audit + (convention, L) matrix (2026-05-17 ~08:30-09:00)
+
+After the wave-3 cluster corrections were merged to main, the autonomous continuation focused on closing the convention-question identified in [`../results/30-dimensional-rescaling-convention-audit.md`](../results/30-dimensional-rescaling-convention-audit.md).
+
+### Multi-seed extension at d=2 (results/27)
+
+[`../experiments/physics/test_phase_diagram_d2_slice_multiseed.py`](../experiments/physics/test_phase_diagram_d2_slice_multiseed.py): 4 seeds across the 5x4 grid at d=2, N=128, L=20. Wall time 277 s. All 20 grid points stable across seeds. L²-critical signature (peak_growth ~22 at d=2 vs ~5-8 at d=3) reproducible. Status of [`../results/27-phase-diagram-d2-slice.md`](../results/27-phase-diagram-d2-slice.md) promoted from `partial` to `tested_consistent` per Rule 9. Commit `37803ae`.
+
+### Cross-convention comparison at L=20 (results/31)
+
+[`../experiments/physics/test_phase_diagram_d2_convention_A.py`](../experiments/physics/test_phase_diagram_d2_convention_A.py) and [`../experiments/physics/test_phase_diagram_d3_convention_A.py`](../experiments/physics/test_phase_diagram_d3_convention_A.py): Convention A (sigma=0.4 non-normalized) at d=2, d=3 with L=20 (the canonical phase-diagram series L). Both single-seed, 5x4 grids. Both yielded all-dispersive 20/20 (peak_growth 1.00-1.13). The convention IS the regime-determining factor at L=20; Convention B preserves focal-collapse access, Convention A does not. [`../results/31-cross-convention-phase-diagram-comparison.md`](../results/31-cross-convention-phase-diagram-comparison.md) documents the finding. Commit `9713cb8`.
+
+### Convention x L matrix (results/32)
+
+[`../experiments/physics/test_convention_L_matrix.py`](../experiments/physics/test_convention_L_matrix.py): single script covering the 4 cells at L=10 (the cells not previously tested). Wall time 245 s. Findings:
+
+- Convention A at L=10 also all-dispersive (20/20) at both d=2 and d=3 with the phase-diagram series parameter regime.
+- Convention B at L=10 released-dominant (14/20 d=2, 15/20 d=3). Robust to L variation.
+
+The dimensional-rescaling series' focal-collapse access at d=4, d=5 (results/15) is therefore a property of its specific (T_bath=0.05, n_steps=4000, gamma_0 from 0.05) parameter regime, not of Convention A in general. With the phase-diagram series' parameter regime (T_bath=0.001, n_steps=2000), Convention A does not access focal-collapse at any tested d or L.
+
+The structural reading is regime-coherence rather than single-parameter scaling: each parameter regime defines an operating region, different regimes probe different regions, cross-regime comparison requires bridging through amplitude-based invariants (initial peak, max peak, cubic-kinetic balance). [`../results/32-convention-L-matrix.md`](../results/32-convention-L-matrix.md) documents the 8-cell matrix and the regime-coherence reading. Commit `71aa431`.
+
+### Additional commits
+
+```
+40c636e Merge branch 'claude/modest-heisenberg-f18b5b'  (main)
+4f0c231 Merge branch 'claude/modest-heisenberg-f18b5b'  (main)
+71aa431 Convention x L matrix at d=2, d=3
+9713cb8 Cross-convention phase diagram comparison at d=2, d=3
+37803ae Phase diagram d=2 multi-seed
+95a20fc Merge branch 'claude/modest-heisenberg-f18b5b'  (main)
+0e8525b Merge branch 'claude/modest-heisenberg-f18b5b'  (main)
+35c5caf Convention audit + agenda + session log
+```
+
+### Open items after this continuation
+
+- Re-run Convention A at d=2, d=3 with the dimensional-rescaling series parameter regime (T_bath=0.05, n_steps=4000) to close the `partial` clause of results/32 with direct verification that Convention A does access focal-collapse under its native regime.
+- Higher-N vibrational (N=128 canonical) to test cascade structure persistence at higher resolution.
+- P3 math LLM and P4 Query 2 deep research dispatches still pending.
+- Cross-interface systematic re-audit (longer-term).
