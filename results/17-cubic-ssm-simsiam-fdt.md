@@ -55,9 +55,18 @@ Note that neither variant fully avoids collapse to a low-rank attractor (effecti
 
 ## Status assignment
 
-Status: **tested in coupled regime, consistent**. Cubic state nonlinearity maintains higher effective rank (4.60/64) than linear state (2.88/64), a ~60% relative difference, with both variants in the FDT-coupled regime. The direction matches the prediction; the magnitude is non-trivial.
+Status: **tested in coupled regime, inconsistent** at the multi-seed level. Single-seed Phase C run showed cubic 4.60 vs linear 2.88 (60% relative preservation). Phase 9 wave-3 multi-seed follow-up (4 seeds, see [`../experiments/neural/test_simsiam_cubic_ssm_multiseed.py`](../experiments/neural/test_simsiam_cubic_ssm_multiseed.py)) shows:
 
-The result contributes evidence under criterion 4 (cross-domain coherence: the cubic nonlinearity prediction, derived from physics-philosophy axioms about anti-collapse in field-theoretic settings, transfers to the neural-representation substrate) and criterion 2 (reproducibility: the test runs in ~50 seconds on a single consumer GPU, fully scripted). It contributes weakly under criterion 3 (generative scope) because the experiment is at small scale (95k parameters, 4000 steps, synthetic data).
+| Variant | final_eff_rank mean +/- std | final_uniformity mean +/- std |
+|---|---|---|
+| cubic_p3 ($\Lambda = -0.5$) | 3.617 +/- 0.510 | -0.1190 +/- 0.0161 |
+| linear_p3 ($\Lambda = 0$) | 3.590 +/- 0.733 | -0.1195 +/- 0.0094 |
+
+**Delta rank = 0.028, pooled std = 0.631, effect-over-noise = 0.04.** The single-seed observation was a chance occurrence within the seed-to-seed noise floor. The seed-to-seed variability in this test is very large (std ~0.5-0.7 out of mean ~3.6), reflecting the strong sensitivity of representation collapse to initialization in the no-stop-gradient SimSiam configuration.
+
+Per the Duhem-Quine framing of [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), the inconsistent result contributes evidence inconsistent with this calibration of P6.3 under criterion 4, and prompts investigation of (a) calibration choices (Lambda magnitude, gamma_0 strength, T_bath), (b) auxiliary numerical assumptions (synthetic clustered data may not be the right test bed for cubic-state anti-collapse; the SSL methodology including the predictor head may dominate the collapse dynamics), or (c) implementation. It does not falsify the structural claim that cubic nonlinearity provides anti-collapse; the empirical question is whether the specific SimSiam-without-stop-gradient configuration is the right test bed for that prediction.
+
+The honest takeaway: at this scale (95k parameters, 4000 steps, synthetic clustered data, SimSiam-without-stop-gradient), the cubic-vs-linear difference in representation rank is below the seed-to-seed noise floor. Both variants collapse to similar final rank (3.6 out of 64) with high variability. The single-seed Phase C observation that cubic preserved more rank was a chance fluctuation. The structural prediction may still hold in different SSL configurations, at different scales, or with different anti-collapse-stress-testing metrics; the current data does not support it.
 
 ## Honest caveats
 

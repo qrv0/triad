@@ -23,7 +23,7 @@ predictions:
     result_doc: null
   - id: P6.3
     short: "Cubic state nonlinearity prevents SimSiam collapse without stop-gradient in coupled regime"
-    status: tested_consistent
+    status: tested_inconsistent
     result_doc: results/17-cubic-ssm-simsiam-fdt.md
 ---
 # Interface: structured state space models
@@ -148,7 +148,7 @@ The structural claim of this interface (the auxiliary-field equation is term-by-
   - How to test: implement a nonlinear-SSM-state variant of SimSiam without stop-gradient; train on standard SSL benchmarks; measure representation collapse signatures (representation-space rank, alignment-uniformity loss).
   - What would constitute confirmation: nonlinear-SSM SSL without stop-gradient does not collapse; rank and uniformity remain healthy.
   - What would constitute evidence inconsistent with this calibration: nonlinear-SSM SSL still collapses without stop-gradient; the cubic nonlinearity does not provide the protection.
-  - Status: **tested in coupled regime, consistent** (see [`../results/17-cubic-ssm-simsiam-fdt.md`](../results/17-cubic-ssm-simsiam-fdt.md)). Cubic vs linear SSM-state variants of SimSiam without stop-gradient, both with FDT noise active (γ₀ = 0.02, T = 0.01), 4000 steps on RTX 4060: cubic_p3 final effective rank = 4.60/64 vs linear_p3 final effective rank = 2.88/64. Cubic maintains ~60% higher rank than linear, matching the predicted direction. Both variants partially collapse (rank below full 64), so the result establishes the comparative claim (cubic > linear) rather than absolute anti-collapse. Wave-1 isolated variant at [`../results/12-cubic-ssm-simsiam.md`](../results/12-cubic-ssm-simsiam.md) retracted.
+  - Status: **tested in coupled regime, inconsistent** at the multi-seed level (see [`../results/17-cubic-ssm-simsiam-fdt.md`](../results/17-cubic-ssm-simsiam-fdt.md)). Phase C single-seed run showed cubic 4.60/64 vs linear 2.88/64 (60% relative preservation). Phase 9 wave-3 multi-seed follow-up with 4 seeds yields cubic 3.617 +/- 0.510 vs linear 3.590 +/- 0.733; effect-over-noise ratio 0.04. The single-seed observation was within the seed-to-seed noise floor. Per the Duhem-Quine principle, the inconsistent result prompts investigation of the calibration (Lambda magnitude, the choice of SimSiam-without-stop-gradient as test bed, synthetic clustered data) or the implementation. The structural claim that cubic nonlinearity provides anti-collapse is not directly falsified; the specific SSL test configuration may not be the right substrate for that prediction. Wave-1 isolated variant at [`../results/12-cubic-ssm-simsiam.md`](../results/12-cubic-ssm-simsiam.md) retracted.
 
 ## Recommended further reading
 
