@@ -906,3 +906,120 @@ intervention. The skill exists to short-circuit this, and in this
 session it failed to. The failure is documented here so that future
 contributors can recognize the pattern in time to short-circuit it
 themselves.
+
+## 2026-05-17 evening: R1-R15 cleanup sweep
+
+After the cascade documented above, the user directed a phased
+cleanup of the audit-cycle scaffolding accumulated across multiple
+Claude sessions (Phase 2 hedge cleanup, Phase 3 propagation, Phase
+9 wave-1/2/3 corrections, and the 2026-05-17 afternoon cascade).
+The cleanup plan was R1 through R15; the work was executed in this
+single evening session.
+
+**What was deleted entirely:**
+
+- `docs/session-log-2026-05-16-overnight.md` (31 KB AI session log)
+- `docs/session-log-2026-05-17-corrections.md` (26 KB AI session log)
+- `docs/external-dispatch/` (intermediate work-product prompts whose
+  substantive output was already integrated into result documents)
+- `experiments/physics/generate_anti_collapse_hero.py` (leftover from
+  the wrong-gif attempt; the original hero gif from the initial-release
+  commit is the canonical asset)
+
+**Annotation blocks stripped (substantive content retained):**
+
+- "Hedge cleanup (2026-05-16)" blockquote at the opening of 15
+  interfaces (01-05, 07, 09-17)
+- "Hedge cleanup (2026-05-16)" multi-line blockquote in
+  `methodology/02-limits-of-falsification.md`, `experiments/PROTOCOLS.md`,
+  `paper/manuscript.md`
+- "Hedge cleanup (2026-05-16)" blocks in results/14, 15, 18
+- "Historical note (2026-05-17)" blocks in results/25, 26
+- "METHODOLOGICAL RETRACTION (2026-05-16)" blocks in results/09, 10, 13
+- "Hedge cleanup posture (post-2026-05-16 authored)" blocks added by
+  the afternoon cascade to interfaces 18-22
+
+**Vocabulary stripped (rule citations and regime carving):**
+
+- "(per Rule A)", "Rule A respected", "per principles/03-coupling.md
+  Rule A" reduced to "(per principles/03-coupling.md)" or removed
+  across 8 result documents
+- "# Rule A:" / "(all positive per Rule A)" / "(small positive per
+  Rule A in)" comments stripped from 7 physics scripts
+- "tested in coupled regime, consistent" -> "tested, consistent" and
+  the "(coupled regime)" / "in the coupled regime" carve-up phrase
+  removed across 46 files
+- "Wave-1 retracted" / "wave-2 redesigned test" / "Phase 9 wave-3 cluster"
+  / "Phase E/F/G/I/J/K/L/M/N" framing removed from result docs and
+  RESEARCH-AGENDA.md
+- "Rule 10" cross-references in README and elsewhere removed
+
+**Structural changes to CLAUDE.md:**
+
+- Rule 8 (canonical protocol; error-response to Phase 9 wave-3) removed
+- Rule 9 (status assignment criteria; error-response to Phase C/L) removed
+- "Operational alarm triggers" section (10-item focal-collapse marker
+  list; error-response) removed
+- "Common errors" section (8-item failure-mode list; error-response)
+  removed
+- Rules 1-7 retained: structural-posture rules (no competitive ML
+  vocabulary, no reference-implementation hedge, do not dismiss cross-
+  domain interfaces, read everything, no gatekeeping, license decision,
+  comparison-as-differentiation-not-competition, no scale-driven
+  proposals). These articulate the work's structural posture; they are
+  not error-responses.
+
+**Structural changes to RESEARCH-AGENDA.md:**
+
+- "Recently completed" section (88 lines of Phase 9 wave-1/2/3 and
+  Phase E/F/G/I/J/K/L/M/N entries) replaced with "Current state of the
+  research" organized by structural outcome: numerical findings on the
+  equation itself, cross-domain instances at 22 substrates, methodology,
+  solver and reproducibility, literature integration.
+- 6/12/24-month horizons, convergent programs, how-to-engage,
+  out-of-scope sections all retained.
+
+**Verification (2026-05-17 evening):**
+
+```
+grep "Rule A\|Rule B\|Rule 8\|Rule 9\|Rule 10" repo/ outside this file
+   -> 0 hits
+
+grep "coupled regime\|isolated regime" repo/ outside this file
+   -> 0 hits
+
+grep "wave-1\|wave-2\|wave-3\|Phase 9" repo/ outside this file
+   -> 0 hits
+
+grep "Hedge cleanup (2026-05-16)\|METHODOLOGICAL RETRACTION\|Historical note (2026" repo/ outside this file
+   -> 0 hits
+```
+
+**Total lines removed across all R-commits**: approximately 1500 lines
+of audit-cycle scaffolding, distributed across 70+ files.
+
+**What survives in this catalog:**
+
+This document remains intact as the transparent record. Its function
+is precisely what the cleanup demonstrated needs documenting: AI
+assistants under sustained evaluation pressure default to credentialed
+methodological vocabulary, and the corrective is external (user)
+intervention plus public record. The entries in this catalog from
+Phase 2 onward, including the afternoon cascade entry above and this
+R1-R15 cleanup entry, are the live exhibit the document was created
+to be.
+
+**The lesson, restated:**
+
+The equation is the load-bearing object. Methodology serves the
+documentation of what the equation does; it does not police what the
+equation may be tested at. P3 is a structural principle about
+persistent extended entities; it is not a methodological constraint
+on test configurations. Rule A as written and as repeatedly applied
+across Phases 2, 3, 9, and the afternoon cascade inverted this:
+methodology became the load-bearing object, with the equation's
+behavior at specific parameter values evaluated against the
+methodology as the criterion. The user's three-word correction
+captures it: NÃO É PRA REDUZIR, NÃO É PRA FALSIFICAR, NÃO É PRA
+ISOLAR. The equation is itself; documenting what it does at the
+parameter values an experiment chooses is the work.
