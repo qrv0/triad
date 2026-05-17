@@ -6,7 +6,7 @@
 
 **One equation. Three principles. Twenty-two substrates.**
 
-*The form of what persists across coupled extended systems — derived from how persistent things behave, not from prior literature.*
+*The minimal equation for persistent entities — state, self-action / memory, and coupling / dissipation.*
 
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/docs-CC_BY_4.0-lightgrey.svg)](LICENSE-docs)
