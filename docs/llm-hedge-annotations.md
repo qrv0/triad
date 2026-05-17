@@ -1023,3 +1023,40 @@ methodology as the criterion. The user's three-word correction
 captures it: NÃO É PRA REDUZIR, NÃO É PRA FALSIFICAR, NÃO É PRA
 ISOLAR. The equation is itself; documenting what it does at the
 parameter values an experiment chooses is the work.
+
+---
+
+## 2026-05-17 — output removal pass after one-by-one audit
+
+Twenty-six entries in `outputs/` were verified one by one against the
+result document that cites each one. Four output directories did not
+match the configuration their citing document declares and were
+removed. Three orphan logs without associated result documents were
+also removed.
+
+| Removed | Citing doc | Mismatch |
+|---|---|---|
+| `outputs/dimensional_rescaling_high_d/` | `results/10` | Lambda -4 vs declared -8; L=12 vs declared 10; d=5 N=12 vs declared N=16 |
+| `outputs/kuramoto_chimera_memory_p3/` | `results/14` | grid included gamma_0 = 0.0 sweep point not declared in doc |
+| `outputs/soc_vs_mnsm_avalanches_p3/` | `results/18` | third MNSM run at gamma_0 = 0.01 not declared in doc |
+| `outputs/phase_diagram_2d_slice/` | `results/26` | gamma_0 sweep {0.2, 0.5, 1.0, 2.0} vs declared {0.01, 0.05, 0.2, 1.0} |
+| `outputs/canonical_strang_rerun.log` | (none) | orphan log |
+| `outputs/canonical_strang_rerun_preexisting.log` | (none) | orphan log |
+| `outputs/phase_diagram_d2_slice_multiseed_run.log` | (none) | execution log artefact |
+
+The four removed output dirs are the hedge artefacts of prior
+audit-cycle work where a doc was rewritten to declare a clean
+parameter sweep while the saved output retained an earlier, divergent
+parameter set. The removal makes the on-disk record honest: each
+result document now either has an output that matches it, or has a
+visible "output removed" note at the top of the doc indicating that
+the test as described has not yet been faithfully reproduced.
+
+Audit detail: [`audit-2026-05-17-formula-consistency.md`](audit-2026-05-17-formula-consistency.md).
+
+**No algorithm errors found.** Every script that produces a recorded
+output uses the canonical Strang split-step solver, byte-identical to
+the origin in `private/memory-nls/sim/solver3d.py` up to docstring
+and one import path. The unitary-regime runs (`gamma_0 = 0, T = 0`)
+are valid by the origin methodology and were not removed; an earlier
+draft of this audit flagged them in error and was overwritten.

@@ -1,5 +1,7 @@
 # Result 26: phase diagram 2D slice ($\Sigma\lambda \times \gamma_0$) at d=3
 
+> **2026-05-17 — output removed.** The associated `outputs/phase_diagram_2d_slice/` directory was removed: its recorded gamma_0 sweep was {0.2, 0.5, 1.0, 2.0}, while this document declares gamma_0 in {0.01, 0.05, 0.2, 1.0}. The recorded output was a hedge from a prior audit cycle and did not faithfully implement the test described here. The companion multi-seed run survives at `outputs/phase_diagram_2d_slice_multiseed/` with the declared gamma_0 sweep; the single-seed regime map reported in this document is the multi-seed run's single-seed equivalent.
+
 ## Prediction tested
 
 The equation in the focal-collapse regime ($\Lambda < 0$, supercritical) at

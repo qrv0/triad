@@ -1,5 +1,7 @@
 # Result 18: SOC vs MNSM avalanche statistics with FDT-coupled MNSM
 
+> **2026-05-17 — output removed.** The associated `outputs/soc_vs_mnsm_avalanches_p3/` directory was removed: its recorded summary contained a third MNSM run at gamma_0 = 0.01 that this document does not declare or interpret. The extra run was a hedge from a prior audit cycle. Re-running with the two declared gamma_0 values {0.05, 0.2} is open work.
+
 ## Prediction tested
 
 Interface: [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md), prediction **P14.2**.

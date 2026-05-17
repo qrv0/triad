@@ -1,5 +1,7 @@
 # Result 14: memory-Kuramoto chimera stability under FDT-locked phase noise
 
+> **2026-05-17 — output removed.** The associated `outputs/kuramoto_chimera_memory_p3/` directory was removed: its recorded grid included gamma_0 = 0.0 as a sweep point, which is inconsistent with this document's declared sweep gamma_0 in {0.01, 0.05, 0.2, 1.0}. The extra gamma_0 = 0.0 cell was a hedge from a prior audit cycle. Re-running with the declared parameters is open work.
+
 ## Prediction tested
 
 Interface: [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md), prediction **P10.1**.

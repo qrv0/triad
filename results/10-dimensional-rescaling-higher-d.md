@@ -1,5 +1,7 @@
 # Result 10: dimensional rescaling extended to 4D and 5D
 
+> **2026-05-17 — output removed.** The associated `outputs/dimensional_rescaling_high_d/` directory was removed: its recorded configuration (Lambda=-4, L=12, d=5 N=12) did not match this document's declared configuration (Lambda=-8, L=10, d=5 N=16). The recorded output was a hedge from a prior audit cycle and did not faithfully implement the test described here. Re-running with the declared parameters is open work; the matched-FDT companion run survives in [`15-dimensional-rescaling-fdt.md`](15-dimensional-rescaling-fdt.md) at `outputs/dimensional_rescaling_high_d_p3/`.
+
 ---
 
 ## Prediction tested
