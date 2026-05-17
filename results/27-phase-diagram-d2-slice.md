@@ -215,25 +215,47 @@ Qualitative structural observations across the two slices:
   transient $\sim 80$ at supercritical norm in the unmemoried baseline; the
   memoried version retains a significant transient before release).
 
+## Multi-seed extension (2026-05-17)
+
+Script: [`../experiments/physics/test_phase_diagram_d2_slice_multiseed.py`](../experiments/physics/test_phase_diagram_d2_slice_multiseed.py). 4 seeds {42, 43, 44, 45} per grid point. Wall time 277 seconds on RTX 4060. Output: `outputs/phase_diagram_d2_slice_multiseed/summary.json`.
+
+**Regime stability: all 20 grid points stable across all 4 seeds.** Every grid point yields the same regime classification across all 4 seeds. Stability counts: stable 20, boundary 0, ambiguous 0.
+
+Multi-seed regime map:
+
+| $\Sigma\lambda \setminus \gamma_0$ | 0.01 | 0.05 | 0.2 | 1.0 |
+|---|---|---|---|---|
+| 0.05 | intermediate | released | released | dispersive |
+| 0.10 | stable | released | released | dispersive |
+| 0.50 | released | released | released | dispersive |
+| 1.00 | released | released | released | dispersive |
+| 2.00 | released | released | intermediate | dispersive |
+
+Regime counts: released 12, dispersive 5, intermediate 2, stable 1, collapse 0, runaway 0.
+
+Quantitative variance per grid point (selected):
+
+| $\Sigma\lambda$ | $\gamma_0$ | Regime | peak_growth (mean ± std) | final_ratio (mean ± std) |
+|---|---|---|---|---|
+| 0.05 | 0.01 | intermediate | 22.88 ± 0.21 | 8.09 ± 3.17 |
+| 0.05 | 0.05 | released | 16.45 ± 0.97 | 0.022 ± 0.003 |
+| 0.10 | 0.01 | stable | 22.13 ± 0.03 | 0.690 ± 0.175 |
+| 0.50 | 0.20 | released | 10.55 ± 0.50 | 0.0101 ± 0.0011 |
+| 1.00 | 0.05 | released | 22.64 ± 0.15 | 0.0123 ± 0.0014 |
+| 2.00 | 0.05 | released | 23.19 ± 0.34 | 0.0240 ± 0.0017 |
+| 2.00 | 1.00 | dispersive | 1.27 ± 0.02 | 0.0085 ± 0.0011 |
+
+The peak_growth_ratio relative variance ranges from < 1% (most grid points) to ~10% (low-Σλ corner where the field is at the L²-critical boundary and dynamics are most variance-sensitive). The effect (the regime structure across the grid) exceeds the seed-to-seed variance at every grid point. The strong transient growth signature of L²-critical dynamics (peak_growth ~10-23 across most of the grid, compared to ~5-8 at d=3) is reproducible.
+
+**Comparison with d=3 multi-seed (results/26):** both d=2 and d=3 yield regime-map seed-stability (all 20 grid points stable in each). The d=2 transient peak_growth is consistently 2-4x larger than d=3 (~22 vs ~5), confirming the L²-critical mechanism's stronger transient focal growth before release. The dispersive corner is wider at d=2 (entire $\gamma_0=1.0$ column dispersive) than d=3 (only $\Sigma\lambda=4, \gamma_0=1.0$ dispersive).
+
 ## Status assignment
 
-Status: **partial** with respect to the d=2 phase-diagram open problem
-contribution.
+Status: **tested_consistent** with respect to the regime-structure reproducibility at d=2 under criterion 4 (promoted from `partial` by the 2026-05-17 multi-seed extension); **partial** with respect to the full phase-diagram open problem at d=2 (the 20-point grid is too coarse to identify boundaries precisely, and the slice does not exhaust the higher-dimensional parameter space).
 
-- Single seed per grid point; multi-seed extension is future work
-  (variance estimates near the released-intermediate-dispersive boundary
-  are not available from this run).
-- 20-point grid is too coarse to identify regime boundaries precisely.
-- 2D slice in the (Sigma_lambda, gamma_0) plane only; $T_{\text{bath}}$,
-  memory hierarchy ($\nu_{\text{fast/slow}}$), and initial-state width
-  ($\sigma_{\text{init}}$) are fixed.
+Rule 9 application: effect (the regime classification across 20 grid points) exceeds test-bed variance (all 20 grid points stable across 4 seeds; peak_growth relative variance < 10% at every grid point). The d=2 regime structure is reproducible, not a seed artifact. The qualitative finding (released-dominant low-$\gamma_0$ region, dispersive at high $\gamma_0$, intermediate / stable at low-$\Sigma\lambda$ corners; no collapse or runaway) is consistent with the structural expectation that the anti-collapse mechanism operates at d=2 as at d=3, with the L²-critical-specific signature of stronger transient peak_growth before release.
 
-The result contributes evidence under criterion 4 (cross-domain coherence)
-for the regime structure of the equation in the canonical anti-collapse
-configuration extended to d=2. The qualitative finding (released-dominant
-low-$\gamma_0$ region, dispersive at high $\gamma_0$, intermediate at
-boundaries; no collapse or runaway) is consistent with the structural
-expectation that the anti-collapse mechanism operates at d=2 as at d=3.
+The result contributes evidence under criterion 4 (cross-domain coherence) for the regime structure of the equation extended to d=2.
 
 ## Honest caveats
 
