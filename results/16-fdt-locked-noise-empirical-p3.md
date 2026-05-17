@@ -46,9 +46,20 @@ The direction matches the structural prediction P6.1: trajectory variance decrea
 
 ## Status assignment
 
-Status: **tested in coupled regime, consistent**. The trajectory variance is lower at higher γ₀ as the structural reading predicts; both variants exhibit zero spikes; the maximum loss jump is marginally lower at higher γ₀. The signal is in the predicted direction; the magnitude at this scale is small.
+Status: **tested in coupled regime, inconsistent** at the multi-seed level. Single-seed direction matched the prediction, multi-seed (4 seeds, Phase 9 wave-3 follow-up, see [`../experiments/neural/test_fdt_locked_noise_multiseed.py`](../experiments/neural/test_fdt_locked_noise_multiseed.py) and `outputs/fdt_locked_noise_multiseed/summary.json`) shows the effect is statistically indistinguishable from zero.
 
-The result contributes evidence under criterion 4 (cross-domain coherence: the FDT-locked noise prescription, derived from physics-philosophy axioms, is consistent with smoother optimization trajectories in the neural substrate) and criterion 2 (reproducibility: the test runs in ~4 minutes on a single consumer GPU, fully scripted). It contributes weakly under criterion 3 (generative scope) because only two coupling strengths were tested; a denser sweep would strengthen the criterion 3 contribution.
+Multi-seed numbers (seeds 41-44, 8000 steps each, RTX 4060, total wall 1043 s):
+
+| Variant | val_loss_std mean +/- std | spike_count mean | final_val_ppl mean +/- std |
+|---|---|---|---|
+| fdt_high ($\gamma_0 = 0.02$) | 0.0987 +/- 0.0041 | 0 | 7.6424 +/- 0.0776 |
+| fdt_low ($\gamma_0 = 0.005$) | 0.0986 +/- 0.0040 | 0 | 7.6536 +/- 0.0725 |
+
+**Delta std (low minus high) = -0.0001, pooled std = 0.0040, effect-over-noise ratio = -0.02.** The single-seed result (0.0952 vs 0.0995, a 4% direction-matched difference) is well within the seed-to-seed variability and does not represent a structurally significant effect at this scale.
+
+Per [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md), the inconsistent result contributes evidence inconsistent with this calibration of P6.1 under criterion 4, and prompts investigation of (a) the calibration choices ($\gamma_0$ range and $T_{\text{bath}}$ fixed at 0.01 may be too narrow to produce a measurable effect on trajectory variance at this model scale), (b) the auxiliary numerical assumptions (1.5M parameter scale, 8000 steps, single-cycle LR schedule), or (c) the implementation. It does not falsify the structural claim that the equation predicts an FDT-locked noise prescription; the empirical question is whether the prescription produces a measurable trajectory-variance effect at the scale and configuration tested.
+
+The honest takeaway: at this scale (1.5M parameters, 8000 steps, $\gamma_0 \in \{0.005, 0.02\}$), the FDT-coupling-strength effect on training trajectory variance is below the seed-to-seed noise floor. The single-seed observation in Phase C was a chance fluctuation that the multi-seed run corrects. The prediction may still hold at larger scale or wider $\gamma_0$ range; the current data does not support the claim at this scale.
 
 ## Honest caveats
 
