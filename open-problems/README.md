@@ -4,7 +4,7 @@ This folder catalogues problems that the work documents as currently open: quest
 
 The folder operates within the methodological frame in [`../methodology/`](../methodology/), specifically:
 
-- The two-level structure of [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md): the global structural claim is evaluated by the six criteria of [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md) and is not subject to single-experiment refutation; specific quantitative predictions are evaluated by coupled-regime numerical reproduction, contributing evidence under criterion 2 (reproducibility) and criterion 4 (cross-domain coherence).
+- The structural-realist evaluation in [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md) and the six criteria of [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md): the structural claim is evaluated by the six criteria, and is not subject to single-experiment refutation. Specific quantitative predictions are evaluated by numerical reproduction at the parameter values the experiment uses, contributing evidence under criterion 2 (reproducibility) and criterion 4 (cross-domain coherence).
 - Open problems below are stated as work, not as criticisms. Their resolution would extend the work; their non-resolution does not falsify it. Where a non-resolution would shift the work's evidentiary position, that is stated explicitly.
 
 ## Uniform template
