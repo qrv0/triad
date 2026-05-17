@@ -66,7 +66,7 @@ The cross-domain coherence the equation exhibits is, at the foundational level, 
 
 ## What this document does not claim
 
-It does not claim that the present equation can be rigorously derived from a specific microscopic Hamiltonian via Mori-Zwanzig projection. Such a derivation would be a substantial mathematical undertaking and is named as open work in [`../open-problems/`](../open-problems/). What this document claims is the weaker structural statement: the auxiliary-field memory form the equation introduces matches the form Mori-Zwanzig projection produces in principle, and this match is non-accidental.
+It does not claim that the present equation can be rigorously derived from a specific microscopic Hamiltonian via Mori-Zwanzig projection. Such a derivation would be a substantial mathematical undertaking and is open work. What this document claims is the weaker structural statement: the auxiliary-field memory form the equation introduces matches the form Mori-Zwanzig projection produces in principle, and this match is non-accidental.
 
 It does not claim that all memory in nature is multi-exponential. The Mori-Zwanzig formalism applies most cleanly to systems with completely monotone (Bernstein-representable) autocorrelation; pathological memory kernels (oscillatory non-decaying, sign-indefinite, fractal) require generalizations. The equation's multi-exponential auxiliary-field structure is the most economical form consistent with both P2 and the standard MZ Markovian embedding; substrates with more exotic memory may require structural extensions.
 

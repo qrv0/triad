@@ -2,8 +2,7 @@
 
 ## Prediction tested
 
-Open problem [`02-phase-diagram.md`](../open-problems/02-phase-diagram.md):
-the equation in the focal-collapse regime ($\Lambda < 0$, supercritical) at
+The equation in the focal-collapse regime ($\Lambda < 0$, supercritical) at
 d=3 has multiple regime structures (collapse, released, stable, dispersive,
 runaway) per paper Section 6.1 phenomenology. The full phase diagram is the
 mapping from $(\Sigma\lambda, \gamma_0, T_{\text{bath}}, \nu_{\text{fast/slow}})$
@@ -218,8 +217,7 @@ Wall time: 275 seconds on RTX 4060. Output:
 
 ## Related documents
 
-- [`../open-problems/02-phase-diagram.md`](../open-problems/02-phase-diagram.md):
-  the open problem this result contributes to.
+- Phase diagram open problem: this result contributes the first focused 2D slice of the regime structure at d=3.
 - [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md): the canonical 3D
   anti-collapse configuration this slice's normalization matches.
 - [`05-bravais-selection.md`](05-bravais-selection.md): the crystalline-window

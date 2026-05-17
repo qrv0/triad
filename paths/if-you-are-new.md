@@ -185,15 +185,7 @@ count as evidence at all.
 
 ## What you should read next
 
-If you have read this far, the most useful next document is the
-playground notebook:
-[`playground/01-just-watch.ipynb`](https://github.com/qrv0/mnsm/blob/main/playground/01-just-watch.ipynb).
-It is a Jupyter notebook that you can run in a free cloud-based Python
-environment (Google Colab) without installing anything. The notebook runs
-the equation, shows you the initial Gaussian, and lets you watch the
-crystallization happen visually. **You see the geometry emerge.**
-
-Once you have watched it happen, the most useful next document is
+If you have read this far, the most useful next document is
 [`../principles/`](../principles/README.md). The three principle documents
 state the axioms plainly, with motivation. They do not require any
 technical background; they are conceptual.
@@ -207,12 +199,7 @@ After that, you have a choice.
 <p class="blurb">The minimal observations that the equation is built from. Plain language, no math required.</p>
 </div>
 <div class="path-reading-card" markdown>
-<span class="step">B · Visual</span>
-<p class="title">[Playground notebooks](https://github.com/qrv0/mnsm/tree/main/playground)</p>
-<p class="blurb">Press play, watch the equation evolve. No installation needed, runs in your browser via Colab.</p>
-</div>
-<div class="path-reading-card" markdown>
-<span class="step">C · Mathematical</span>
+<span class="step">B · Mathematical</span>
 <p class="title">[Equation derivation](../equation/01-derivation.md)</p>
 <p class="blurb">What the equation actually looks like and how the three principles select its form. Some math required, but explained.</p>
 </div>

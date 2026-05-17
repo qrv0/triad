@@ -87,4 +87,4 @@ The result moves P14.2 from "untested" to "partially tested (consistent at coars
 3. 3D substrates for both.
 4. Bootstrap confidence intervals on $\tau$.
 
-This is documented in [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md). The current test establishes the coarse consistency and the methodology; refinement is iterative.
+The current test establishes the coarse consistency and the methodology; refinement is iterative.

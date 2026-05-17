@@ -248,9 +248,7 @@ Wall time: 106 seconds on RTX 4060. Output:
   Wolfe-Swanson-Till 2020 Hypogeum spectrum that motivated this 3D extension.
 - [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md):
   the interface this work feeds back into.
-- [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md):
-  the analytical-theory open problem that should clarify whether the multi-mode
-  whole-tone-scale is predicted by the equation's 3D crystalline regime.
+- Analytical-theory open work: clarifying whether the multi-mode whole-tone-scale is predicted by the equation's 3D crystalline regime.
 - [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md):
   catalog of the 2026-05-16 wrong-config audit catalog, including
   Failure 4 (this result before correction).

@@ -95,7 +95,7 @@ The structural reading is sharper than the convention-only framing in results/31
 
 The implication for results/06's 1/d formula: the formula was built across DIFFERENT conventions silently. The d=2 anti-collapse demonstration (Σλ_crit/|Λ| ~ 0.05) cited in results/06 used a setup distinct from Convention A; the d=3 demonstration (Σλ_crit/|Λ| ~ 0.5) used Convention B / canonical; the d=4, d=5 datapoints in results/10, 15 used Convention A. The 1/d scaling is therefore not within-convention; it is across conventions, with the convention choice silently varying with d.
 
-For the analytical theory in open-problems/01, the implication is that the dimensional dependence of Σλ_crit must be characterized in a convention-independent / amplitude-bridge form, not as a single-parameter sweep within Convention A or Convention B.
+The analytical theory implication is that the dimensional dependence of Σλ_crit must be characterized in a convention-independent / amplitude-bridge form, not as a single-parameter sweep within Convention A or Convention B.
 
 ## Status assignment
 
@@ -127,4 +127,4 @@ Wall time: 245 s on RTX 4060. Output: `outputs/convention_L_matrix/summary.json`
 - [`31-cross-convention-phase-diagram-comparison.md`](31-cross-convention-phase-diagram-comparison.md): the L=20 cross-convention comparison.
 - [`26-phase-diagram-2d-slice.md`](26-phase-diagram-2d-slice.md), [`27-phase-diagram-d2-slice.md`](27-phase-diagram-d2-slice.md): the Convention B at L=20 references.
 - [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md), [`15-dimensional-rescaling-fdt.md`](15-dimensional-rescaling-fdt.md): the Convention A literature at L=10, T_bath=0.05, n_steps=4000.
-- [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md): the analytical theory that should clarify the parameter-region dependence in a regime-coherent form.
+- Analytical theory to clarify the parameter-region dependence in a regime-coherent form is open work.

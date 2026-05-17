@@ -34,7 +34,7 @@ fits this repository:
   economics, biology, etc.).
 
 - Notebooks that demonstrate specific properties of the equation
-  interactively. Additional `playground/` notebooks are welcome.
+  interactively.
 
 **Should be discussed first** (open an issue):
 

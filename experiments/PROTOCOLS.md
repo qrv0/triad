@@ -6,7 +6,7 @@ This document specifies the protocol for the prediction-tests that operationaliz
 
 Each interface in [`../interfaces/`](../interfaces/) names locally testable predictions (P{N}.{n}) in a uniform format. The structural-realist methodology (see [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)) commits to the two-level structure: the global structural claim is evaluated by cross-domain coherence (criterion 4); the local predictions are evaluated by coupled-regime numerical reproduction (reproduction contributes evidence under criterion 2; non-reproduction prompts investigation of calibration, auxiliary numerical assumptions per Duhem-Quine, or implementation). This document specifies how the local-prediction tests are run, what data they produce, and how their outcomes are published in repo.
 
-The repository is set up as active live research: each completed test publishes its results in repo, updates the prediction status in the relevant interface, and updates [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md) "Recently completed" section.
+The repository is set up as active live research: each completed test publishes its results in repo and updates the prediction status in the relevant interface.
 
 ## Status taxonomy for predictions
 
@@ -96,10 +96,6 @@ When a test moves a prediction's status from "untested" to anything else, the in
 
 Example: in [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md), under prediction P10.1, the "Status: untested" line becomes "Status: tested (consistent), see [`../results/09-kuramoto-chimera-memory.md`](../results/09-kuramoto-chimera-memory.md)."
 
-## Updating RESEARCH-AGENDA
-
-When a batch of tests completes, the [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md) is updated with the result documents added and the prediction-status changes. This keeps the agenda accurate to the current state of the program.
-
 ## Batching
 
 Tests are grouped into thematic batches for commits. Each batch commits a coherent set of test scripts + result documents + status updates as a single integrated change. Currently active prediction targets:
@@ -108,11 +104,11 @@ Tests are grouped into thematic batches for commits. Each batch commits a cohere
 - Dimensional rescaling Σλ/|Λ| ~ 1/d extended to 4D and 5D (extends results/06)
 - P14.2 (SOC vs MNSM avalanche statistics comparison)
 
-Further targets are tracked in [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md).
+Further targets are identified as predictions reach untested status in the interfaces.
 
 ## Honest disclosure of test outcomes
 
-If a test produces results inconsistent with a prediction (status "tested, inconsistent"), the result is published with the same prominence as a consistent result. The interface's evidentiary weight under criterion 4 is updated honestly per methodology/02; the structural claim's global status reflects the cumulative evidence across all interfaces, evaluated by the six criteria; the entry in RESEARCH-AGENDA notes the inconsistent evidence and the investigation paths it prompts.
+If a test produces results inconsistent with a prediction (status "tested, inconsistent"), the result is published with the same prominence as a consistent result. The interface's evidentiary weight under criterion 4 is updated honestly per methodology/02; the structural claim's global status reflects the cumulative evidence across all interfaces, evaluated by the six criteria; the inconsistent evidence and the investigation paths it prompts are noted in the result document.
 
 This disclosure commitment is what makes the work active research rather than advocacy. The structural-realist position commits to evaluating the form by cross-domain coherence (criterion 4), which requires honest reporting of which interfaces survive local tests and which do not.
 

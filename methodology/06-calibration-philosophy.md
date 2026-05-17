@@ -35,7 +35,7 @@ Cross-interface consistency is the constraint at the heart of cross-domain coher
 
 In the current set of interfaces, the calibrations are: gamma uses 25 ms unit time; archaeoacoustic uses 9 ms unit time. These are different by a factor of approximately 2.8. The substrates differ: neural-tissue dynamics versus chamber acoustics. The 2.8 factor must be checkable against the physical scales of the two substrates (neural firing timescale vs sound-wave timescale in stone chambers); if the ratio matches the physical-scale ratio, the calibrations are consistent.
 
-This check has not been performed quantitatively in the current repo; it is documented as part of [`../open-problems/08-calibration-philosophy.md`](../open-problems/08-calibration-philosophy.md) for future work.
+This check has not been performed quantitatively in the current repo; it is documented as future work.
 
 **Step 4: Does the structural form survive variation of the calibration within the defensible range?**
 
@@ -51,7 +51,7 @@ The calibration is "1 unit of computational time corresponds to 25 ms." This is 
 
 **Step 1 (motivated):** The 25 ms scale is fixed by neuronal biophysics, not by the desired match. Cortical neurons have membrane time constants in this range; gamma oscillations have periods near this; the choice is grounded in substrate measurement.
 
-**Step 2 (multiple predictions):** The calibration predicts broadband absorption spans 20-200 Hz, which includes gamma (where the empirical match is documented) but also beta and high-gamma. Predictions about absorption signatures at non-gamma frequencies are testable but not yet tested; this is named in [`../open-problems/`](../open-problems/) under the "Locally testable predictions" framework.
+**Step 2 (multiple predictions):** The calibration predicts broadband absorption spans 20-200 Hz, which includes gamma (where the empirical match is documented) but also beta and high-gamma. Predictions about absorption signatures at non-gamma frequencies are testable but not yet tested.
 
 **Step 3 (cross-interface consistency):** Differs from archaeoacoustic calibration by factor 2.8. The factor needs comparison to physical-scale ratios; not yet done.
 
@@ -93,7 +93,7 @@ When multiple interfaces operate, the calibrations must be jointly defensible. T
 
 > For interfaces A and B with calibrations $C_A$ and $C_B$, if both substrates exhibit the same structural feature of the equation (e.g., the broadband absorption regime), then under $C_A$ and $C_B$ the absorption regimes must coincide with the empirically active frequency bands of substrates A and B respectively. The ratio $C_A / C_B$ must equal the ratio of physical scales between substrates A and B, measured independently.
 
-For the existing interfaces, this constraint produces specific tests not yet performed; see [`../open-problems/08-calibration-philosophy.md`](../open-problems/08-calibration-philosophy.md).
+For the existing interfaces, this constraint produces specific tests not yet performed.
 
 A calibration that satisfies cross-substrate consistency is jointly defensible. A calibration that violates it is evidence either that the cross-substrate claim is wrong at that pair of substrates, or that one of the calibrations is post-hoc.
 
@@ -114,5 +114,5 @@ This document does not relieve interfaces of the responsibility to acknowledge t
 - [`01-structural-realism.md`](01-structural-realism.md): the two-level structure (global structural claim vs local predictions) the calibration philosophy operates within.
 - [`02-limits-of-falsification.md`](02-limits-of-falsification.md): coupled-regime testability of specific quantitative predictions, including calibration-dependent ones, evaluated under criterion 2 (reproducibility) and criterion 4 (cross-domain coherence) of [`04-the-six-criteria.md`](04-the-six-criteria.md).
 - [`04-the-six-criteria.md`](04-the-six-criteria.md) criterion 4 (cross-domain coherence): the evaluation criterion whose operational test the calibration philosophy refines.
-- [`../open-problems/08-calibration-philosophy.md`](../open-problems/08-calibration-philosophy.md): the open work this document partially addresses; the cross-substrate consistency check across all current interfaces is named there as work to do.
+- Cross-substrate consistency check across all current interfaces is open work.
 - [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md), [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md), [`../interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md): the worked examples.

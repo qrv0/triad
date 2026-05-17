@@ -99,4 +99,4 @@ Wall time: ~3 min (d=2) + ~5 min (d=3) on RTX 4060. Output: `outputs/phase_diagr
 - [`26-phase-diagram-2d-slice.md`](26-phase-diagram-2d-slice.md), [`27-phase-diagram-d2-slice.md`](27-phase-diagram-d2-slice.md): the Convention B counterparts at d=3 and d=2.
 - [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md), [`10-dimensional-rescaling-higher-d.md`](10-dimensional-rescaling-higher-d.md), [`15-dimensional-rescaling-fdt.md`](15-dimensional-rescaling-fdt.md), [`24-dimensional-rescaling-d6.md`](24-dimensional-rescaling-d6.md): the Convention A literature at L=10 (the relevant L for that series).
 - [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md): the canonical Convention B 3D anti-collapse setup.
-- [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md): the analytical theory that should clarify the (convention, L) dependence in a fully dimension-coherent form.
+- Analytical theory to clarify the (convention, L) dependence in a fully dimension-coherent form is open work.

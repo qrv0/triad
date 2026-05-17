@@ -2,8 +2,7 @@
 
 ## Prediction tested
 
-Open problem [`02-phase-diagram.md`](../open-problems/02-phase-diagram.md):
-the equation in the focal-collapse regime ($\Lambda < 0$) has multiple regime
+The equation in the focal-collapse regime ($\Lambda < 0$) has multiple regime
 structures (collapse, released, stable, dispersive, runaway). The first
 focused slice at d=3 ([`26-phase-diagram-2d-slice.md`](26-phase-diagram-2d-slice.md))
 mapped the released-dominated regime in the canonical supercritical
@@ -270,8 +269,7 @@ Wall time: 115 seconds on RTX 4060 Laptop GPU. Output:
 
 ## Related documents
 
-- [`../open-problems/02-phase-diagram.md`](../open-problems/02-phase-diagram.md):
-  the open problem this result contributes to.
+- Phase diagram open problem: this result contributes to the characterization of the equation's regime structure across dimensions.
 - [`26-phase-diagram-2d-slice.md`](26-phase-diagram-2d-slice.md): the
   companion d=3 slice in the canonical configuration this result extends
   from.

@@ -228,7 +228,7 @@ explicit acknowledgement of its current state of theoretical development.
 
 ## What this correspondence does and does not establish
 
-It does not establish that the present equation, as written, is the correct cosmological field equation. The cosmological case requires Friedmann-Robertson-Walker spacetime metric, relativistic dynamics, multi-fluid coupling (baryons, photons, dark matter, dark energy), and a specific gauge structure. The present equation treats spacetime as a flat background and does not include these features explicitly. A direct cosmological application would require non-trivial extension; this is named as open work in [`../open-problems/`](../open-problems/).
+It does not establish that the present equation, as written, is the correct cosmological field equation. The cosmological case requires Friedmann-Robertson-Walker spacetime metric, relativistic dynamics, multi-fluid coupling (baryons, photons, dark matter, dark energy), and a specific gauge structure. The present equation treats spacetime as a flat background and does not include these features explicitly. A direct cosmological application would require non-trivial extension; this is open work.
 
 It does not establish a falsification test against standard cosmology. Standard cosmology accounts for observation through its multi-mechanism framework (inflation, dark matter, dark energy, primordial fluctuations); the present reading is a structural proposal that the same observations could be accounted for through a single mechanism if extended appropriately. Whether such an extension produces the same predictions, or different ones, is open empirical work beyond the scope of this document.
 
@@ -252,7 +252,7 @@ The structural claim of this interface (the full cosmic trajectory has the same 
   - How to test: precision measurements of $w(z)$ as a function of redshift from DESI, Euclid, Roman Space Telescope, LSST.
   - What would constitute confirmation: measured $w(z)$ deviation matches the predicted time-dependence.
   - What would constitute evidence inconsistent with this calibration: $w(z)$ is consistent with $w = -1$ to within the predicted memory-deviation magnitude; or the deviation is in the opposite direction; or the time-dependence is different.
-  - Status: untested. Requires development of the analytical form of the deviation from the structural reading, which is open work named in [`../open-problems/`](../open-problems/) under additional substrates and the cosmological development.
+  - Status: untested. Requires development of the analytical form of the deviation from the structural reading, which is open work.
 
 - **Prediction P7.2: Small-scale BAO substructure from memory-modulated oscillation.** The structural reading predicts that the BAO peak has substructure arising from the harmonics of the memory-modulated acoustic oscillation. The harmonics are present in the standard analysis but the memory modulation predicts specific amplitude and phase relations between them that differ from the standard prediction.
   - How to test: precision galaxy-survey measurements of the matter correlation function at sub-BAO scales (30-150 Mpc).

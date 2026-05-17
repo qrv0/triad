@@ -217,12 +217,6 @@ python -m tests.test_conservation
 python experiments/physics/reproduce_3d_anti_collapse.py
 ```
 
-Or run in browser without local setup:
-
-- 🎬 [`playground/01-just-watch.ipynb`](playground/01-just-watch.ipynb) — Gaussian → BCC crystal, no code edits
-- 🎛️ [`playground/02-adjust-the-knobs.ipynb`](playground/02-adjust-the-knobs.ipynb) — interactive parameter exploration
-- 🛠️ [`playground/03-build-your-own.ipynb`](playground/03-build-your-own.ipynb) — guided implementation
-
 All runs use fixed seeds, bit-for-bit reproducible on identical hardware.
 
 ---
@@ -237,14 +231,11 @@ All runs use fixed seeds, bit-for-bit reproducible on identical hardware.
 | 🌐 | [`interfaces/`](interfaces/) | 20 cross-domain mappings (+ 2 in [`mnsm`](https://github.com/qrv0/mnsm)) |
 | 🧭 | [`methodology/`](methodology/) | Structural realism, limits of falsification, six criteria, calibration philosophy |
 | 🛤️ | [`paths/`](paths/) | Reader-specific entry routes |
-| 🎮 | [`playground/`](playground/) | Interactive Colab notebooks |
 | ⚙️ | [`implementation/`](implementation/) | CuPy physics solver |
 | 🧪 | [`experiments/`](experiments/) | Reproduction scripts |
 | 📄 | [`paper/`](paper/) | Full manuscript |
 | ✅ | [`tests/`](tests/) | Conservation diagnostics |
 | 🎨 | [`assets/`](assets/) | Visual outputs |
-| 🔬 | [`open-problems/`](open-problems/) | Open research questions, uniform template |
-| 📅 | [`RESEARCH-AGENDA.md`](RESEARCH-AGENDA.md) | 6/12/24-month horizons |
 | 🏛️ | [`STRUCTURE.md`](STRUCTURE.md) | Why the repository is shaped this way |
 
 ---
@@ -276,10 +267,8 @@ Full methodological frame: [`methodology/`](methodology/).
 **Active frontier:**
 - Phase-diagram and vibrational test recalibration
 - Sharpening predictions in recently added interfaces (18 pseudomode, 19 viscoelasticity, 20 warm inflation, 21 Hawkes, 22 earthquake) into testable protocols
-- → [`RESEARCH-AGENDA.md`](RESEARCH-AGENDA.md)
 
 **Known gaps:**
-- Eight open problems catalogued in [`open-problems/`](open-problems/) with status `not_yet_tested` or `partial`
 - Analytical derivation of anti-collapse beyond leading order
 - Dimensional rescaling beyond $d = 3$ (simple $1/d$ does not extend cleanly)
 - Renormalization-group analysis and quantum extension

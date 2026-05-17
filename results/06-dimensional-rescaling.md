@@ -39,9 +39,7 @@
 > for the structural reading: the equation produces different regime
 > structures at different (convention, L, d, T_bath, n_steps) joint
 > choices, and the dimensional dependence in the convention-independent
-> form is what the analytical theory in
-> [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md)
-> needs to characterize.
+> form is open analytical work.
 
 ## The finding
 

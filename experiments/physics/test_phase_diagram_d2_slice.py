@@ -236,7 +236,7 @@ def main():
         print()
 
     summary = {
-        "prediction_tested": "Phase diagram 2D slice at d=2 for open-problems/02",
+        "prediction_tested": "Phase diagram 2D slice at d=2 (phase diagram characterization)",
         "convention_note": (
             "Canonical anti-collapse convention (sigma_init=0.5 normalized to "
             "total norm 1) extended to d=2. Distinct from the dimensional-"

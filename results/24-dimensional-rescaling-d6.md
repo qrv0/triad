@@ -63,7 +63,7 @@ The reading: at d=6 with N=8 and the parameters used, the equation is in a dispe
 
 The d=6 runaway at $\Sigma\lambda = 32$ is itself structurally informative: it identifies the boundary between the no-effect regime (small to moderate memory just decreases final ratio further by reinforcing dispersion) and the over-memory destabilization regime (strong memory drives a runaway). The transition is between $\Sigma\lambda = 16$ (released, ratio 0.66) and $\Sigma\lambda = 32$ (runaway, ratio 1.66). The transition is not in the same family as the d=2 anti-collapse threshold; it is the inverse.
 
-The result contributes evidence under criterion 4 (cross-domain coherence) but in a way that refines the structural prediction rather than confirming the boxed 1/d formula: the structural form has different regime structures at different dimensions, and the dimensional rescaling thread is more subtle than a single boxed formula captures. The analytical theory of [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md) needs to account for the regime structure as a function of dimension, not just the threshold scaling within a single regime.
+The result contributes evidence under criterion 4 (cross-domain coherence) but in a way that refines the structural prediction rather than confirming the boxed 1/d formula: the structural form has different regime structures at different dimensions, and the dimensional rescaling thread is more subtle than a single boxed formula captures. The analytical theory needs to account for the regime structure as a function of dimension, not just the threshold scaling within a single regime.
 
 The L²-criticality of the 2D NLS, the supercriticality of the 3D NLS, and the strongly supercritical higher-d cases have qualitatively different collapse phenomenology. At sufficiently high $d$, the dispersive kinetic operator dominates the cubic attraction at the field amplitudes accessible in numerical simulation, and the "collapse" the dimensional-rescaling thread was studying is no longer a feature of the dynamics. This is the structural finding from d=6.
 
@@ -85,6 +85,6 @@ Output: `outputs/dimensional_rescaling_d6_p3/`. Wall time estimate: a few minute
 
 ## Related documents
 
-- [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md): the analytical-theory question that this numerical result feeds into.
+- Analytical-theory open work: characterizing the dimensional dependence of regime structure in a convention-independent form, which this numerical result feeds into.
 - [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md), [`10-dimensional-rescaling-higher-d.md`](10-dimensional-rescaling-higher-d.md), [`15-dimensional-rescaling-fdt.md`](15-dimensional-rescaling-fdt.md): the existing dimensional-rescaling thread.
 - [`../experiments/physics/test_dimensional_rescaling_d6.py`](../experiments/physics/test_dimensional_rescaling_d6.py): the script.

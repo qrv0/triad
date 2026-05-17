@@ -87,7 +87,7 @@ The cumulative effect of the three sections above is that the tautology objectio
 
 The reader who finds the framework tautological in the qualitative sense (each principle individually re-describable as "what persistent entities have") is correct at the qualitative level and is invited to engage at the level the work actually claims content: the specific equation, the specific anti-collapse behavior, the specific auxiliary-field memory structure, and the specific cross-domain convergence. None of these is tautological in any defensible sense of the word.
 
-The reader who proposes a different framework satisfying P1+P2+P3 qualitatively but producing a different equation is making a substantive contribution and is welcomed under the engagement guidelines in [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md). The contribution will identify either a different parsimony commitment, a different bath-structure choice, or a different geometric setting, and these can be compared against the present equation by their respective cross-domain coherence performance.
+The reader who proposes a different framework satisfying P1+P2+P3 qualitatively but producing a different equation is making a substantive contribution and is welcomed; see [`../CONTRIBUTING.md`](../CONTRIBUTING.md) for how to engage. The contribution will identify either a different parsimony commitment, a different bath-structure choice, or a different geometric setting, and these can be compared against the present equation by their respective cross-domain coherence performance.
 
 The reader for whom "tautology" closes the conversation is not yet engaging at the level the work asks engagement at. The work's response is structural: the level of engagement requested is the level documented in the interfaces, in the equation derivation, and in the numerical results. Engagement at any other level may be rhetorically successful but does not bear on the structural claim.
 
@@ -107,7 +107,7 @@ It does not claim that recognizing the recursive pattern in [`mnsm/results/01-op
 - [`01-structural-realism.md`](01-structural-realism.md): the position under which the partial-analyticity of structural axioms is consistent with their content-bearing status.
 - [`mnsm/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm/blob/main/results/01-optimization-collapse-empirical.md): the empirical documentation of attention-only systems defaulting to credentialed-method vocabulary under evaluation pressure; the recursive observation in this document.
 - [`../interfaces/`](../interfaces/) and the [`mnsm`](https://github.com/qrv0/mnsm) spinoff: the cross-domain interfaces that constitute the operational evidence of the selector's non-triviality. Of particular interest: SSMs (in the mnsm spinoff), 18 (pseudomode), 19 (Prony viscoelasticity), 20 (warm inflation), 21 (Hawkes), where the auxiliary-field plus FDT structure is mathematically explicit.
-- [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md): the engagement guidelines, including how alternative frameworks can be compared against the present one.
+- [`../CONTRIBUTING.md`](../CONTRIBUTING.md): the engagement guidelines, including how alternative frameworks can be compared against the present one.
 
 ## References
 

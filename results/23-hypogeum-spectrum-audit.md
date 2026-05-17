@@ -68,13 +68,13 @@ The structural prediction was derived from the 2D crystalline regime of the equa
 
 Status: **partial**. The empirical pattern at the Hypogeum (nine-peak whole-tone scale) is richer than the equation's 2D two-mode prediction. Pair ratios near 0.6 do appear within the Hypogeum spectrum but are not the only pattern. The cross-chamber ratio invariance part of P5.3 cannot be tested with current rigorous-floor data: the Jahn 1996 chambers have only single dominant peaks per chamber reported, and the Wolfe-Swanson-Till 2020 high-resolution methodology has been applied only to the Hypogeum.
 
-The result contributes evidence under criterion 4 (cross-domain coherence: a multi-mode broadband-resonance phenomenology with regular interval structure is consistent with the equation's broadband-absorbing crystalline regime) and contributes a refinement target for the analytical theory of [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md): the 3D vibrational spectrum of the equation, beyond the 2D two-mode result, should be derived analytically to clarify whether the equation predicts the whole-tone-scale structure or whether the structural prediction needs revision.
+The result contributes evidence under criterion 4 (cross-domain coherence: a multi-mode broadband-resonance phenomenology with regular interval structure is consistent with the equation's broadband-absorbing crystalline regime) and contributes a refinement target for the analytical theory: the 3D vibrational spectrum of the equation, beyond the 2D two-mode result, should be derived analytically to clarify whether the equation predicts the whole-tone-scale structure or whether the structural prediction needs revision.
 
 ## Honest caveats
 
 - Only one chamber complex has been measured at the high resolution of Wolfe-Swanson-Till 2020. Cross-chamber pair-ratio testing requires the same methodology applied to additional sites; the Jahn 1996 single-peak reports do not suffice.
 - The amplitude weights of the nine Hypogeum peaks were not extracted in this audit. If amplitudes weight some peaks heavily over others, the "two principal modes" interpretation in P5.3 may apply if the spectrum has two amplitude-dominant peaks among the nine.
-- The whole-tone scale finding is itself a substantive observation that may indicate a more sophisticated structural prediction is available from the equation than the two-mode prediction currently in interface 05. This is flagged as analytical work for [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md).
+- The whole-tone scale finding is itself a substantive observation that may indicate a more sophisticated structural prediction is available from the equation than the two-mode prediction currently in interface 05. This is flagged as open analytical work.
 - The 2D vs 3D dimensional difference between the equation's published vibrational analysis ([`03-vibrational-modes.md`](03-vibrational-modes.md), 2D) and the Hypogeum substrate (3D cavity) may explain part of the structural mismatch. A 3D vibrational analysis of the equation would be needed for direct comparison.
 
 ## Implications for interface 05
@@ -98,4 +98,4 @@ Ratio computations are arithmetic from the listed peak frequencies; no separate 
 
 - Interface: [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md), P5.3.
 - Source: Wolfe, K., Swanson, D., & Till, R. (2020). The frequency spectrum and geometry of the Ħal Saflieni Hypogeum appear tuned. *Journal of Archaeological Science: Reports* **34**, 102623. arXiv:2010.13697.
-- Adjacent: [`../results/03-vibrational-modes.md`](03-vibrational-modes.md) (the equation's 2D two-mode prediction), [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md) (the analytical-theory open problem that would extend the vibrational analysis to 3D).
+- Adjacent: [`../results/03-vibrational-modes.md`](03-vibrational-modes.md) (the equation's 2D two-mode prediction); analytical extension to 3D is open work.

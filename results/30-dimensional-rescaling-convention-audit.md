@@ -62,7 +62,7 @@ The d=4 and d=5 extension in [`15-dimensional-rescaling-fdt.md`](15-dimensional-
 
 The 1/d formula's monotonic prediction (0.5, 0.33, 0.25, 0.20 across d=2,3,4,5) is not matched by the data. The d=6 result ([`24-dimensional-rescaling-d6.md`](24-dimensional-rescaling-d6.md)) shows the focal-collapse regime is not accessible at all in Convention A at d=6 with the available lattice resolution; the "anti-collapse threshold" notion does not apply cleanly.
 
-The structural reading: the 1/d formula is a useful empirical fit at d=2, 3 within Convention A's focal-collapse regime; it does not extend cleanly to higher $d$ even within Convention A; the dimensional rescaling is more structured than the formula captures. This is consistent with the analytical sketch in [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md), which identifies the dimensional dependence as entering via the lag-dynamics correction to the equilibrium-tracking sufficiency, not as a simple geometric factor.
+The structural reading: the 1/d formula is a useful empirical fit at d=2, 3 within Convention A's focal-collapse regime; it does not extend cleanly to higher $d$ even within Convention A; the dimensional rescaling is more structured than the formula captures. The dimensional dependence enters via the lag-dynamics correction to the equilibrium-tracking sufficiency, not as a simple geometric factor.
 
 ## What this means for the canonical phase diagram series
 
@@ -97,4 +97,4 @@ The audit does suggest two productive next steps:
 - [`24-dimensional-rescaling-d6.md`](24-dimensional-rescaling-d6.md): the d=6 result; Convention A.
 - [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md): the canonical 3D anti-collapse; Convention B.
 - [`26-phase-diagram-2d-slice.md`](26-phase-diagram-2d-slice.md), [`27-phase-diagram-d2-slice.md`](27-phase-diagram-d2-slice.md), [`28-phase-diagram-d4-slice.md`](28-phase-diagram-d4-slice.md): the phase diagram slices; Convention B.
-- [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md): the analytical theory that should resolve the dimensional dependence in a convention-independent form.
+- Analytical theory to resolve the dimensional dependence in a convention-independent form is open work.

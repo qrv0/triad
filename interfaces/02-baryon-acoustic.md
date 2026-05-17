@@ -95,7 +95,7 @@ The structural claim of this interface (the form of early-universe acoustic dyna
   - How to test: precision galaxy-survey measurements of the BAO peak (DESI, Euclid, Roman) compared to the linear-perturbation prediction. The discrepancy, if it matches the predicted memory correction, supports the interface.
   - What would constitute confirmation: measured peak position shifted by the predicted memory correction amount.
   - What would constitute evidence inconsistent with this calibration: measured peak position consistent with the linear-perturbation prediction to within the predicted memory-correction magnitude; the discrepancy is in the opposite direction; or the magnitude is wrong.
-  - Status: untested. Requires development of the analytical correction from open-problem 01 plus the calibration philosophy from methodology/06; the prediction is named here as a target for the analytical-theory work in `../open-problems/01-analytical-anti-collapse.md`.
+  - Status: untested. Requires development of the analytical correction plus the calibration philosophy from methodology/06.
 
 - **Prediction P2.2: Higher-order BAO substructure.** The memory-augmented dynamics predicts secondary peaks in the matter correlation function beyond the principal 150 Mpc peak, arising from harmonics of the acoustic oscillation that the memory term modulates. Standard analysis predicts harmonic peaks; the memory-modulated form predicts a specific amplitude and phase relation between harmonics that differs from the standard prediction.
   - How to test: precision measurements of the matter correlation function at scales 30-150 Mpc; compare detected secondary peaks to predictions.
