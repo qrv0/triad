@@ -1,92 +1,66 @@
----
-title: For physicists
-description: >-
-  Memory-augmented nonlinear Schrödinger field with FDT-locked dissipation.
-  L²-supercritical anti-collapse via auxiliary-field Mori–Zwanzig embedding.
-hide:
-  - navigation
----
-
-<div class="path-hero path--physics" markdown>
-
-<div class="path-breadcrumb" markdown>
 [← Pick another path](../#read-it-your-way)
-</div>
 
-<span class="path-eyebrow">For physicists</span>
+# For physicists
 
-# The Triad equation, in the notation you already use
+> Memory-augmented NLS with FDT-locked dissipation and L²-supercritical anti-collapse via auxiliary-field Mori–Zwanzig embedding. Three structural axioms about persistent extended entities select the form — and produce phenomena no single-term reduction captures.
 
-You know Gross–Pitaevskii, Mori–Zwanzig projection, FDT in open systems, L²-critical/supercritical NLS collapse, and fractional Laplacians. This work sits at their intersection: three structural axioms about persistent extended entities jointly select the form below, and that form produces phenomena — anti-collapse, BCC lattice selection, broadband absorption — that no single-term reduction captures.
-
-<div class="path-eq" markdown>
 $$
-i\hbar\, \partial_t \Psi
-\;=\;
-\left[\,-\tfrac{\hbar^{2}}{2m}\nabla^{2} + V_{\text{ext}} + \Lambda |\Psi|^{2} + V_{\text{mem}} + \alpha\,(-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi \;+\; \eta
+i\hbar\, \partial_t \Psi = \left[\,-\frac{\hbar^2}{2m}\nabla^2 + V_{\text{ext}} + \Lambda |\Psi|^2 + V_{\text{mem}} + \alpha (-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi + \eta
 $$
-</div>
 
 with $V_{\text{mem}} = \sum_j \lambda_j y_j$, $\partial_t y_j = \nu_j(\rho - y_j)$, $\rho = |\Psi|^2$, and $\eta$ Gaussian-white satisfying the classical FDT correlator $\langle \eta(\mathbf{x},t)\,\eta^*(\mathbf{x}',t')\rangle = 4\Gamma T\,\delta(\mathbf{x}-\mathbf{x}')\,\delta(t-t')$.
 
-</div>
-
-<div class="path-body" markdown>
+---
 
 ## What this maps to in your area
 
 The cubic NLS is augmented with three structural additions: (i) an auxiliary-field Mori–Zwanzig memory $V_{\text{mem}}$ — a Markovian embedding of an integro-differential kernel, standard in projection-operator reduction but here treated as structurally required by P2; (ii) an FDT-locked dissipation–noise pair $(-i\Gamma, \eta)$ as in stochastic field theory for open systems; and (iii) an optional fractional Laplacian for anomalous dispersion. In 2D at the L²-critical threshold the memory lag prevents focal collapse by three orders of magnitude in peak density; in 3D (supercritical) the same mechanism operates with a geometrically predicted rescaling $\Sigma\lambda/|\Lambda|\big|_{3D} \sim 10\times\Sigma\lambda/|\Lambda|\big|_{2D}$. The released crystalline state spontaneously selects BCC from a continuous isotropic initial condition.
 
+---
+
 ## Reading sequence
 
-<div class="path-reading" markdown>
-<div class="path-reading-card" markdown>
-<span class="step">01 · Equation</span>
-<p class="title">[Full derivation](../equation/01-derivation.md)</p>
-<p class="blurb">P1 selects the Schrödinger kinetic, P2 selects the integral memory, P3 selects the FDT-locked noise — the derivation in full.</p>
-</div>
+<table>
+<tr>
+<td width="120" valign="top"><b>01</b><br><sub>Derivation</sub></td>
+<td valign="top"><b><a href="../equation/01-derivation.md">Equation derivation</a></b><br>How the three axioms (P1 kinetic, P2 cubic + memory, P3 dissipation + FDT noise) select the form.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>02</b><br><sub>Reduction</sub></td>
+<td valign="top"><b><a href="../equation/02-markovian-embedding.md">Markovian embedding</a></b><br>Mori–Zwanzig projection of the integral kernel into auxiliary fields with diagonal dynamics — the form physicists already use.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>03</b><br><sub>Result</sub></td>
+<td valign="top"><b><a href="../results/01-anti-collapse-2d.md">2D anti-collapse</a></b><br>L²-critical NLS at Λ=−8 — three orders of magnitude peak-density separation between memoried and unmemoried runs.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>04</b><br><sub>Result</sub></td>
+<td valign="top"><b><a href="../results/04-anti-collapse-3d.md">3D anti-collapse</a></b><br>L²-supercritical regime — 10⁵× separation. Mechanism survives the harder regime where bare NLS collapse is generic.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>05</b><br><sub>Result</sub></td>
+<td valign="top"><b><a href="../results/06-dimensional-rescaling.md">Dimensional rescaling</a></b><br>$\Sigma\lambda/|\Lambda| \sim 1/d$ derived from focal-region geometry — predicted from structure, confirmed numerically.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>06</b><br><sub>Result</sub></td>
+<td valign="top"><b><a href="../results/05-bravais-selection.md">Bravais selection</a></b><br>Spontaneous BCC selection from isotropic Gaussian initial state — no symmetry input.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>07</b><br><sub>Interface</sub></td>
+<td valign="top"><b><a href="../interfaces/07-cosmological-expansion.md">Cosmological expansion</a></b><br>The anti-collapse mechanism at cosmic scale — memory-coupled Friedmann.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>08</b><br><sub>Methodology</sub></td>
+<td valign="top"><b><a href="../methodology/01-structural-realism.md">Why structural realism</a></b><br>The position the work commits to and why falsification is the wrong lens for evaluating P3-bearing theories.</td>
+</tr>
+<tr>
+<td width="120" valign="top"><b>09</b><br><sub>Synthesis</sub></td>
+<td valign="top"><b><a href="../paper/manuscript.md">Full paper</a></b><br>The complete synthesized manuscript covering all of the above.</td>
+</tr>
+</table>
 
-<div class="path-reading-card" markdown>
-<span class="step">02 · Reduction</span>
-<p class="title">[Markovian embedding](../equation/02-markovian-embedding.md)</p>
-<p class="blurb">Mori–Zwanzig projection of the integral kernel into diagonal auxiliary fields — the form physicists already use as standard practice.</p>
-</div>
+To reproduce: scripts in [`../experiments/physics/`](../experiments/physics/README.md). Wall-clock on RTX 4060 Laptop is minutes per experiment.
 
-<div class="path-reading-card" markdown>
-<span class="step">03 · Result</span>
-<p class="title">[2D anti-collapse](../results/01-anti-collapse-2d.md)</p>
-<p class="blurb">L²-critical NLS at Λ=−8: three orders of magnitude peak-density separation between memoried and unmemoried runs.</p>
-</div>
+---
 
-<div class="path-reading-card" markdown>
-<span class="step">04 · Result</span>
-<p class="title">[3D anti-collapse](../results/04-anti-collapse-3d.md)</p>
-<p class="blurb">L²-supercritical regime: 10⁵× separation; mechanism survives the harder case where bare NLS collapse is generic.</p>
-</div>
-
-<div class="path-reading-card" markdown>
-<span class="step">05 · Result</span>
-<p class="title">[Dimensional rescaling](../results/06-dimensional-rescaling.md)</p>
-<p class="blurb">$\Sigma\lambda/|\Lambda| \sim 1/d$ derived from focal-region geometry — predicted from structure, confirmed numerically.</p>
-</div>
-
-<div class="path-reading-card" markdown>
-<span class="step">06 · Result</span>
-<p class="title">[Bravais selection](../results/05-bravais-selection.md)</p>
-<p class="blurb">Spontaneous BCC selection from an isotropic Gaussian initial state — no symmetry input, detection score 0.44 with gap +0.13 over FCC.</p>
-</div>
-
-<div class="path-reading-card" markdown>
-<span class="step">07 · Cross-substrate</span>
-<p class="title">[Optimization-collapse experiment](https://github.com/qrv0/mnsm/blob/main/results/01-optimization-collapse-empirical.md)</p>
-<p class="blurb">The anti-collapse mechanism in a 70M-parameter neural network — structurally identical phenomenology, categorically different substrate.</p>
-</div>
-</div>
-
-## Switch path
-
-<div class="path-switch" markdown>
-[ML](if-you-are-from-ml.md) &nbsp;·&nbsp; [Neuroscience](if-you-are-from-neuroscience.md) &nbsp;·&nbsp; [Philosophy](if-you-are-from-philosophy.md) &nbsp;·&nbsp; [Newcomer](if-you-are-new.md)
-</div>
-
-</div>
+**Switch path:** [ML](if-you-are-from-ml.md) · [Neuroscience](if-you-are-from-neuroscience.md) · [Philosophy](if-you-are-from-philosophy.md) · [Newcomer](if-you-are-new.md)

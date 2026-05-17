@@ -2,24 +2,33 @@
 
 This document traces the path from the structural axioms in [`../principles/`](../principles/) to the full equation. Each principle is responsible for a specific structural term; the combination of terms is the equation.
 
-<div class="equation-showpiece" markdown="0">
-  <p class="equation-showpiece__eyebrow">The equation, click a principle to see substrates</p>
-  <div class="equation-showpiece__eq" aria-label="Triad equation with click-to-see substrates per principle">
-    <span class="eq-term-interactive" data-principle="p1" tabindex="0" role="button" aria-label="P1 oscillation: kinetic generator">
-      i&hbar;&part;<sub>t</sub>&Psi; = (-&hbar;&sup2;&nabla;&sup2;/2m + &alpha;(-&Delta;)<sup>&sigma;/2</sup>)&Psi;
-    </span>
-    +
-    <span class="eq-term-interactive" data-principle="p2" tabindex="0" role="button" aria-label="P2 self-reference: cubic + memory potential">
-      &Lambda;|&Psi;|&sup2;&Psi; + V<sub>mem</sub>&Psi;
-    </span>
-    +
-    <span class="eq-term-interactive" data-principle="p3" tabindex="0" role="button" aria-label="P3 coupling: dissipation + FDT-locked noise + external">
-      -i&Gamma;&Psi; + &eta; + V<sub>ext</sub>&Psi;
-    </span>
-  </div>
-  <p class="equation-showpiece__hint">Click any principle term to see the 17 substrate instantiations of that structural slot.</p>
-  <div class="equation-showpiece__panel" id="eq-panel" hidden></div>
-</div>
+$$
+i\hbar\, \partial_t \Psi = \left[\,-\frac{\hbar^2}{2m} D^2 + V_{\text{ext}} + \Lambda |\Psi|^2 + V_{\text{mem}} + \alpha (-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi + \eta
+$$
+
+<table>
+<tr><th width="120">Principle</th><th>Term(s)</th><th>What it is</th><th>Substrates where it dominates</th></tr>
+<tr>
+<td valign="top"><b>P1</b><br><sub>oscillation</sub></td>
+<td valign="top">$-\frac{\hbar^2}{2m}D^2$, $\alpha(-\Delta)^{\sigma/2}$</td>
+<td valign="top">Kinetic generator + optional fractional dispersion</td>
+<td valign="top">All NLS instances (BEC, optics, water waves, plasma); all wave substrates</td>
+</tr>
+<tr>
+<td valign="top"><b>P2</b><br><sub>self-reference</sub></td>
+<td valign="top">$\Lambda|\Psi|^2$, $V_{\text{mem}} = \sum_j \lambda_j y_j$</td>
+<td valign="top">Cubic self-interaction + auxiliary-field memory hierarchy</td>
+<td valign="top">SSMs (mnsm spinoff), memory-Kuramoto, immune memory, gene regulation, viscoelasticity, Hawkes processes</td>
+</tr>
+<tr>
+<td valign="top"><b>P3</b><br><sub>coupling</sub></td>
+<td valign="top">$-i\Gamma$, $\eta$, $V_{\text{ext}}$</td>
+<td valign="top">Dissipation + FDT-locked noise + external potential</td>
+<td valign="top">Warm inflation, pseudomode quantum systems, active matter, all substrates with environmental exchange</td>
+</tr>
+</table>
+
+The remainder of this document derives each term from the corresponding principle.
 
 ## From P1, the kinetic generator
 
