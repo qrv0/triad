@@ -68,4 +68,4 @@ This is not a transient. The crystalline state is stationary on average over the
 
 ## Structural significance
 
-Spontaneous scale selection from a featureless input is one of the canonical signatures of pattern-forming dynamical systems. The classical reference cases include Bénard convection, the Faraday instability, Turing reaction-diffusion patterns, and Chladni cymatic geometry. The present equation places the memory-augmented NLS in this family of pattern-forming systems with a definite intrinsic wavelength. See [`../interfaces/03-chladni-cymatics.md`](../interfaces/03-chladni-cymatics.md) for the explicit cross-domain mapping.
+Spontaneous scale selection from a featureless input is one of the canonical signatures of pattern-forming dynamical systems. The classical reference cases include Bénard convection, the Faraday instability, Turing reaction-diffusion patterns, and Chladni cymatic geometry. The present equation places the Triad equation in this family of pattern-forming systems with a definite intrinsic wavelength. See [`../interfaces/03-chladni-cymatics.md`](../interfaces/03-chladni-cymatics.md) for the explicit cross-domain mapping.

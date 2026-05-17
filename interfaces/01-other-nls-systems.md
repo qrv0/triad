@@ -2,7 +2,7 @@
 title: "Interface 01: Other instances of NLS dynamics"
 description: >-
   Optical solitons, BECs, surface gravity waves, plasma Langmuir
-  oscillations all instantiate the memory-augmented NLS form.
+  oscillations all instantiate the triadic form.
 domain: physics
 triangle:
   p1: "envelope oscillation of the underlying carrier wave"
@@ -83,7 +83,7 @@ It does establish that the bare cubic NLS, in its appearance across optical, ato
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (the memory-augmented NLS form is shared with optical, atomic, hydrodynamic, plasma instances of NLS) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
+The structural claim of this interface (the triadic form is shared with optical, atomic, hydrodynamic, plasma instances of NLS) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P1.1: Memory-augmented soliton stability in optical fiber experiments.** In dispersion-managed optical fiber with controllable Raman gain timescale (which acts as the memory kernel), the equation predicts that the soliton instability threshold shifts as the Raman timescale traverses the slow-mode regime. Specifically, solitons with peak power above the standard NLS modulational-instability threshold should remain stable when the Raman timescale satisfies $\tau_R \sim |\Lambda|^{-1}$ where $|\Lambda|$ is the effective cubic coupling.
   - How to test: dispersion-managed fiber with adjustable Raman gain (achievable via fiber composition or co-propagating pump); measure soliton stability vs Raman timescale.

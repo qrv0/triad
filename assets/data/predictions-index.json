@@ -231,7 +231,7 @@
   },
   {
     "id": "P8.3",
-    "short": "Polysemanticity decreases when Memory-NLS auxiliary fields are added to attention layers",
+    "short": "Polysemanticity decreases when MNSM auxiliary fields are added to attention layers",
     "status": "not_yet_tested",
     "result_doc": null,
     "interface_num": "08",

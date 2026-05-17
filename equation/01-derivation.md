@@ -4,7 +4,7 @@ This document traces the path from the structural axioms in [`../principles/`](.
 
 <div class="equation-showpiece" markdown="0">
   <p class="equation-showpiece__eyebrow">The equation, click a principle to see substrates</p>
-  <div class="equation-showpiece__eq" aria-label="MNSM equation with click-to-see substrates per principle">
+  <div class="equation-showpiece__eq" aria-label="Triad equation with click-to-see substrates per principle">
     <span class="eq-term-interactive" data-principle="p1" tabindex="0" role="button" aria-label="P1 oscillation: kinetic generator">
       i&hbar;&part;<sub>t</sub>&Psi; = (-&hbar;&sup2;&nabla;&sup2;/2m + &alpha;(-&Delta;)<sup>&sigma;/2</sup>)&Psi;
     </span>

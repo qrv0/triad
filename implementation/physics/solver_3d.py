@@ -1,4 +1,4 @@
-"""3D Strang split-step solver for the memory-augmented NLS equation.
+"""3D Strang split-step solver for the Triad equation.
 
 Equation (scalar form; spinor extension noted below):
 

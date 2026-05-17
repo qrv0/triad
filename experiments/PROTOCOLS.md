@@ -1,6 +1,6 @@
 # Experimental protocols for prediction tests
 
-This document specifies the protocol for the prediction-tests that operationalize the "Locally testable predictions and observational signatures" sections in each interface document. The protocol exists so that any test added to [`physics/`](physics/) is structured consistently with the rest of the testing infrastructure (ML-substrate tests live in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff) and produces a result document that the interface document can reference.
+This document specifies the protocol for the prediction-tests that operationalize the "Locally testable predictions and observational signatures" sections in each interface document. The protocol exists so that any test added to [`physics/`](physics/) is structured consistently with the rest of the testing infrastructure (ML-substrate tests live in the [`mnsm`](https://github.com/qrv0/mnsm) spinoff) and produces a result document that the interface document can reference.
 
 ## Purpose
 
@@ -20,7 +20,7 @@ Each prediction has a status. The taxonomy is:
 
 ## Naming convention
 
-Test scripts are named `test_<short-description>.py` and placed in [`physics/`](physics/). ML-substrate test scripts live in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff.
+Test scripts are named `test_<short-description>.py` and placed in [`physics/`](physics/). ML-substrate test scripts live in the [`mnsm`](https://github.com/qrv0/mnsm) spinoff.
 
 Result documents are named `<NN>-<short-description>.md` and placed in [`../results/`](../results/), continuing the existing sequence (results/01 through results/07 are the original physics findings; results/09 onwards are prediction tests).
 
@@ -30,7 +30,7 @@ Every prediction test script must:
 
 1. **Start with a docstring** stating the prediction being tested (interface number and prediction code, e.g., `P10.1`), the prediction's content in one sentence, the expected wall time on RTX 4060, and the output directory.
 
-2. **Reuse existing implementation modules where possible.** For physics tests: `implementation/physics/` (SolverConfig3D, MemoryConfig, run, observables). ML-substrate implementation lives in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff.
+2. **Reuse existing implementation modules where possible.** For physics tests: `implementation/physics/` (SolverConfig3D, MemoryConfig, run, observables). ML-substrate implementation lives in the [`mnsm`](https://github.com/qrv0/mnsm) spinoff.
 
 3. **Use fixed random seeds.** Reproducibility requires the same seed across reruns on the same hardware.
 

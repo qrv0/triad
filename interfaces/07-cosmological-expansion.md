@@ -75,7 +75,7 @@ term, the cosmological pattern:
 | Continued field dispersion with persistent $V_{\text{mem}}$ | Late-time accelerated expansion (dark energy) |
 | Asymptotic stable extended state | Far-future de Sitter-like asymptote |
 
-This is not metaphor. The MNSM equation, derived from three structural
+This is not metaphor. The Triad equation, derived from three structural
 axioms about persistent extended entities, produces a dynamical pattern
 in laboratory simulation that has the same *shape* as the cosmological
 expansion at vastly larger scale.
@@ -137,7 +137,7 @@ mechanism. The proposal is:
   continued action of $V_{\text{mem}}$ at cosmological scale.
 
 These three reductions would require, if confirmed in cosmological
-practice, a single mechanism (the memory-NLS structure operating at
+practice, a single mechanism (the triadic structure operating at
 cosmological scale) to replace three distinct postulated mechanisms
 (inflation field, structure-seeding fluctuations, dark energy). The
 parsimony gain is large; the predictive content needs to be developed
@@ -175,7 +175,7 @@ beyond the scope of this document.
 The cosmological reading, like the other interfaces, is offered as an
 instance of the structural form appearing across substrates. The
 strongest interface is the state space model correspondence
-([`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)), where the
+([`mnsm/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm/blob/main/interfaces/01-state-space-models.md)), where the
 mathematical equivalence is exact and requires no calibration. The
 BAO interface ([`02-baryon-acoustic.md`](02-baryon-acoustic.md)) is
 strong because it identifies a specific observable cosmological feature

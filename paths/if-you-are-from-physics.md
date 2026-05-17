@@ -15,7 +15,7 @@ hide:
 
 <span class="path-eyebrow">For physicists</span>
 
-# Memory-NLS, in the notation you already use
+# The Triad equation, in the notation you already use
 
 You know Gross–Pitaevskii, Mori–Zwanzig projection, FDT in open systems,
 L²-critical/supercritical NLS collapse, fractional Laplacians. The work in
@@ -87,7 +87,7 @@ absent from any single-term reduction.
 <span class="key-insight-tag">The structural claim</span>
 The novelty is not "we added a memory term to NLS". It is that **three
 structural axioms about persistent extended entities, P1, P2, P3, jointly
-select this particular form of memory-augmented NLS**, and the form produces
+select this particular triadic form**, and the form produces
 phenomena (anti-collapse, BCC selection, broadband absorption) that no single
 reduction captures. The equation is what those three axioms add up to.
 </div>
@@ -185,8 +185,8 @@ been observed to operate in a categorically different substrate: gradient
 flow on a high-dimensional non-convex loss landscape of a 70M-parameter
 neural sequence model trained on enwik8.
 
-In a controlled comparison ([`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)),
-the model with explicit multi-timescale memory hierarchy (Memory-NLS layer)
+In a controlled comparison ([`mnsm/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm/blob/main/results/01-optimization-collapse-empirical.md)),
+the model with explicit multi-timescale memory hierarchy (MNSM layer)
 descended monotonically through 50 000 training steps to a stable plateau.
 The matched-shape attention-only baseline (Transformer) reached a lower
 mid-training minimum but then exhibited a **catastrophic loss spike at step
@@ -223,7 +223,7 @@ correspondences is the **exact mathematical equivalence** between the
 auxiliary-field memory equation and the diagonal-state structured state
 space model used in modern sequence-modeling architectures (S4, Mamba,
 RWKV), same equation, derived twice by communities that did not coordinate.
-Detail: [`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md).
+Detail: [`mnsm/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm/blob/main/interfaces/01-state-space-models.md).
 
 **The temporal–spatial asymmetry.** The memory kernel can be non-local in
 time (standard) or also non-local in space (Gaussian/exponential smoothing).
@@ -286,7 +286,7 @@ The order that minimizes back-and-forth for a physics reader:
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">07 · Cross-substrate</span>
-<p class="title">[Optimization-collapse experiment](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)</p>
+<p class="title">[Optimization-collapse experiment](https://github.com/qrv0/mnsm/blob/main/results/01-optimization-collapse-empirical.md)</p>
 <p class="blurb">The anti-collapse mechanism manifesting in 70M-parameter neural training. Empirical instance of the structural-realist prediction.</p>
 </div>
 <div class="path-reading-card" markdown>
@@ -296,7 +296,7 @@ The order that minimizes back-and-forth for a physics reader:
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">09 · Interface</span>
-<p class="title">[SSM equivalence](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)</p>
+<p class="title">[SSM equivalence](https://github.com/qrv0/mnsm/blob/main/interfaces/01-state-space-models.md)</p>
 <p class="blurb">Exact mathematical equivalence with structured state space models in modern ML. Same equation, two derivations.</p>
 </div>
 <div class="path-reading-card" markdown>
@@ -311,7 +311,7 @@ The order that minimizes back-and-forth for a physics reader:
 </div>
 </div>
 
-To reproduce: scripts in [`../experiments/physics/`](../experiments/physics/README.md) execute the relevant computations. Wall-clock on RTX 4060 Laptop is on the order of minutes per experiment. The cross-substrate neural-network instance reproduces from the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff (~6.3 hours).
+To reproduce: scripts in [`../experiments/physics/`](../experiments/physics/README.md) execute the relevant computations. Wall-clock on RTX 4060 Laptop is on the order of minutes per experiment. The cross-substrate neural-network instance reproduces from the [`mnsm`](https://github.com/qrv0/mnsm) spinoff (~6.3 hours).
 
 <div class="path-switch" markdown>
 

@@ -1,6 +1,6 @@
 # Implementation
 
-This folder contains the physics solver for the field equation. The neural sequence layer (PyTorch instantiation of the auxiliary-field equation) was migrated on 2026-05-17 to the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository, where the ML implementation depth lives. The two implementations are mathematically equivalent at the level of the auxiliary-field dynamics, in different computational substrates.
+This folder contains the physics solver for the field equation. The neural sequence layer (PyTorch instantiation of the auxiliary-field equation) was migrated on 2026-05-17 to the [`mnsm`](https://github.com/qrv0/mnsm) spinoff repository, where the ML implementation depth lives. The two implementations are mathematically equivalent at the level of the auxiliary-field dynamics, in different computational substrates.
 
 | Subpackage | What it does |
 |---|---|
@@ -9,9 +9,9 @@ This folder contains the physics solver for the field equation. The neural seque
 
 ## Mathematical equivalence with the ML instantiation
 
-The auxiliary-field equation $\partial_t y_j = \nu_j(\rho - y_j)$ governs both substrates. In the physics solver here, $\rho = |\Psi|^2$ is the local density of the wave equation field at each lattice point. In the ML instantiation in `mnsm-ml`, $\rho$ is the input signal to a hidden state $y_j$, where the hidden state evolution is a structured state space model update. The math is the same; the substrate differs.
+The auxiliary-field equation $\partial_t y_j = \nu_j(\rho - y_j)$ governs both substrates. In the physics solver here, $\rho = |\Psi|^2$ is the local density of the wave equation field at each lattice point. In the ML instantiation in `mnsm`, $\rho$ is the input signal to a hidden state $y_j$, where the hidden state evolution is a structured state space model update. The math is the same; the substrate differs.
 
-The structural mapping is documented in the SSM interface, which now lives at [`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md). The empirical instance of the cross-substrate equivalence at 70M parameters is at [`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md).
+The structural mapping is documented in the SSM interface, which now lives at [`mnsm/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm/blob/main/interfaces/01-state-space-models.md). The empirical instance of the cross-substrate equivalence at 70M parameters is at [`mnsm/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm/blob/main/results/01-optimization-collapse-empirical.md).
 
 ## What runs
 

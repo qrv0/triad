@@ -69,7 +69,7 @@ happen the same way:
 the field has no memory of its past states. On the right it has a memory
 hierarchy. The left field collapses violently to a point; the right field
 holds its extended shape. **<strong>Bottom half:</strong> the loss curve of
-a 70-million-parameter language model being trained. The Memory-NLS model
+a 70-million-parameter language model being trained. The MNSM model
 (teal) descends smoothly and stably. The Transformer (red) crashes
 catastrophically at step 28 000.</strong>*
 

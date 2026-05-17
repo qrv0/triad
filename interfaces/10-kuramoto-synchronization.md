@@ -63,7 +63,7 @@ Structural mapping:
 | Dissipation $-i\Gamma$ | Phase-amplitude damping in the limit where amplitudes are also dynamical |
 | FDT-locked noise $\eta$ | Stochastic forcing in noisy Kuramoto with FDT-balanced noise (Strogatz 2000; Acebron et al. 2005) |
 
-The mathematical correspondence is exact in the limit where the present equation is reduced to its phase-only sector and the oscillator ensemble is taken in the continuum limit ($N \to \infty$ with a continuum index for phase). In this limit, the auxiliary-field memory of the present equation and the multi-exponential coupling memory of generalized Kuramoto are the same mathematical object, just as the auxiliary-field memory and the diagonal-state SSM update are the same object ([`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)).
+The mathematical correspondence is exact in the limit where the present equation is reduced to its phase-only sector and the oscillator ensemble is taken in the continuum limit ($N \to \infty$ with a continuum index for phase). In this limit, the auxiliary-field memory of the present equation and the multi-exponential coupling memory of generalized Kuramoto are the same mathematical object, just as the auxiliary-field memory and the diagonal-state SSM update are the same object ([`mnsm/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm/blob/main/interfaces/01-state-space-models.md)).
 
 ## Time as calibration in this substrate
 

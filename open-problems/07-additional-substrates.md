@@ -58,7 +58,7 @@ Each requires literature review and the standard logic-led interface template. T
 ## Suggested approaches
 
 - **One interface at a time.** Each interface is independent; the order can be chosen for maximum impact. Friston FEP is the most consequential (active research program; potentially mathematical-equivalence tier); Kuramoto is the cleanest (well-established mathematical literature); immune is the most biologically distinct (independent confirmation of the cross-domain claim in living tissue beyond gamma entrainment); active matter is the most contemporary (recent literature explosion); SOC is the most universality-claim.
-- **Literature review per candidate.** Each candidate requires a focused literature review identifying the primary sources, the canonical formulation, the connections to the MNSM equation, and the dismissals likely from the substrate community.
+- **Literature review per candidate.** Each candidate requires a focused literature review identifying the primary sources, the canonical formulation, the connections to the Triad equation, and the dismissals likely from the substrate community.
 
 ## Connections to existing repo content
 

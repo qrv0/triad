@@ -43,7 +43,7 @@ Reference (literature): BTW 2D critical exponent $\tau \in [1.0, 1.2]$ (Manna 19
 
 Status: **tested, consistent**.
 
-Rationale: P14.2 predicted that MNSM's release-regime avalanche distributions should be statistically indistinguishable from BTW sandpile distributions. The new test produces MNSM exponents (1.23, 1.24) within statistical proximity of the BTW reference (1.37, and within the literature range 1.0-1.2). The event counts are large enough (600-800) for confident exponent estimation. The result contributes evidence consistent with P14.2 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
+Rationale: P14.2 predicted that the Triad's release-regime avalanche distributions should be statistically indistinguishable from BTW sandpile distributions. The new test produces Triad exponents (1.23, 1.24) within statistical proximity of the BTW reference (1.37, and within the literature range 1.0-1.2). The event counts are large enough (600-800) for confident exponent estimation. The result contributes evidence consistent with P14.2 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
 
 An earlier test in [`13-soc-vs-mnsm-avalanches.md`](13-soc-vs-mnsm-avalanches.md) used a different configuration; the present test addresses the prediction with the FDT-coupled drive.
 

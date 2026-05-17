@@ -6,7 +6,7 @@ This folder contains the scripts that reproduce the numerical findings of the wo
 |---|---|
 | [`physics/`](physics/) | Scripts that reproduce the field-theory results documented in [`../results/`](../results/). |
 
-ML-substrate experiments (Memory-NLS neural sequence layer training, optimization-collapse comparisons) live in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository.
+ML-substrate experiments (MNSM neural sequence layer training, optimization-collapse comparisons) live in the [`mnsm`](https://github.com/qrv0/mnsm) spinoff repository.
 
 ## Reproduction guarantee
 

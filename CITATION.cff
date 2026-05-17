@@ -1,14 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "mnsm: Memory-Nonlinear State Models"
+title: "Triad: A Structural Field Equation of Persistent Extended Entities"
 abstract: >-
-  A nonlinear extension of structured state space models, derived from three
-  principles of self-referential field theory. The auxiliary-field memory
-  architecture is mathematically equivalent to the state representation of
-  S4, Mamba, and RWKV. The equation extends those architectures with nonlinear
-  self-interaction in the state, anti-collapse via temporal memory lag,
-  spontaneous emergence of discrete structure from continuous substrate, and
-  fluctuation-dissipation-locked stochastic regularization.
+  A structural field equation derived from three principles (P1 oscillation,
+  P2 self-reference, P3 coupling) about persistent extended entities. The
+  auxiliary-field memory structure is mathematically equivalent to the state
+  representation of S4, Mamba, and RWKV. The equation generates anti-collapse
+  via temporal memory lag, spontaneous emergence of discrete structure from
+  continuous substrate, and fluctuation-dissipation-locked stochastic
+  regularization, and it appears across twenty-two independently documented
+  physical, biological, and computational substrates.
 authors:
   - alias: "qrv0"
 type: software

@@ -44,12 +44,12 @@ fits this repository:
 
 **Generally does not fit:**
 
-- Pure benchmark-optimization PRs ("Memory-NLS achieves N% better val_ppl
+- Pure benchmark-optimization PRs ("MNSM achieves N% better val_ppl
   than baseline X with this hyperparameter sweep"). The work does not
   adopt the benchmark-competitive paradigm; see
   [`CLAUDE.md`](CLAUDE.md) for the methodological position.
 - "Modernization" PRs that import standard ML conventions (RoPE, RMSNorm,
-  SwiGLU, etc.) into the Memory-NLS implementation without structural
+  SwiGLU, etc.) into the MNSM implementation without structural
   motivation. The implementation is kept architecturally minimal by
   design.
 

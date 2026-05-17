@@ -149,7 +149,7 @@ def test_fdt_thermalisation_3d(N: int = 48, precision: str = "fp32") -> dict:
 
 def main():
     print()
-    print("Memory-NLS 3D Sanity Suite")
+    print("Triad 3D Sanity Suite")
     print(f"Backend: {'cupy (GPU)' if is_gpu() else 'numpy (CPU)'}")
 
     # VRAM estimate for the largest test

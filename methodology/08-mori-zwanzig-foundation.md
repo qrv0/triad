@@ -57,7 +57,7 @@ Three structural consequences follow from the Mori-Zwanzig grounding.
 **Cross-domain coherence at the meta-level (criterion 4).** The structural correspondences documented across the interfaces are not merely coincidental shared forms; they are the consequence of the underlying mathematical fact that Mori-Zwanzig projection produces the same auxiliary-mode structure regardless of substrate. This is why the auxiliary-field equation appears in:
 - Open quantum systems (interface 18 pseudomode embedding) as a quantum-version Mori-Zwanzig reduction
 - Viscoelasticity (interface 19 generalized Maxwell) as a continuum-mechanics MZ reduction with stress as the slow variable
-- Diagonal SSMs (see the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff) as a machine-learning instantiation of the same reduced description
+- Diagonal SSMs (see the [`mnsm`](https://github.com/qrv0/mnsm) spinoff) as a machine-learning instantiation of the same reduced description
 - Hawkes processes (interface 21) as a stochastic-process Markovian lift
 - Kuramoto with memory (interface 10) as a phase-only sector MZ reduction
 - Warm inflation Langevin (interface 20) as a cosmological-field MZ reduction in expanding-spacetime background
@@ -78,7 +78,7 @@ It does not claim that Mori-Zwanzig grounding makes the structural-realist case 
 - [`../principles/02-self-reference.md`](../principles/02-self-reference.md): P2 as the structural axiom from which the auxiliary-field structure follows.
 - [`01-structural-realism.md`](01-structural-realism.md): the methodology under which Mori-Zwanzig grounding is read as foundational reinforcement of cross-domain coherence.
 - [`04-the-six-criteria.md`](04-the-six-criteria.md): the criteria the MZ grounding strengthens (1 consistency, 4 cross-domain coherence, 5 parsimony).
-- [`../interfaces/18-pseudomode-quantum.md`](../interfaces/18-pseudomode-quantum.md), [`../interfaces/19-viscoelasticity-prony.md`](../interfaces/19-viscoelasticity-prony.md), [`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md), [`../interfaces/21-hawkes-intensity.md`](../interfaces/21-hawkes-intensity.md): substrate-specific instantiations of the MZ auxiliary-mode reduction.
+- [`../interfaces/18-pseudomode-quantum.md`](../interfaces/18-pseudomode-quantum.md), [`../interfaces/19-viscoelasticity-prony.md`](../interfaces/19-viscoelasticity-prony.md), [`mnsm/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm/blob/main/interfaces/01-state-space-models.md), [`../interfaces/21-hawkes-intensity.md`](../interfaces/21-hawkes-intensity.md): substrate-specific instantiations of the MZ auxiliary-mode reduction.
 
 ## References
 

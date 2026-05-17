@@ -1,6 +1,6 @@
-# mnsm
+# triad
 
-### Memory-NLS — an active research program on persistent extended systems
+### Triad — an active research program on persistent extended systems
 
 **Three structural principles. One equation. Twenty-two substrates across two repositories.**
 
@@ -8,11 +8,11 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/Docs_License-CC_BY_4.0-lightgrey.svg)](LICENSE-docs)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Paper](https://img.shields.io/badge/paper-manuscript.md-green)](paper/manuscript.md)
-[![ML implementation: mnsm-ml](https://img.shields.io/badge/ML_implementation-mnsm--ml-orange)](https://github.com/qrv0/mnsm-ml)
+[![ML implementation: mnsm](https://img.shields.io/badge/ML_implementation-mnsm-orange)](https://github.com/qrv0/mnsm)
 
 ![3D field anti-collapse with versus without memory](assets/anti_collapse_hero.gif)
 
-*One equation, one initial condition, one ingredient added. Left: the field collapses to a lattice-clipped singular state. Right: the multi-timescale memory potential builds up with lag, bounds the collapse, and releases the field into an extended state. The same trajectory-shape signature appears across [twenty-two substrates](#where-it-appears) where the structural form of P1+P2+P3 is operative — from BAO-era cosmological structure formation to 70M-parameter neural network optimization. Detail in [`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md); cross-substrate observable in [`mnsm-ml/results/01`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md).*
+*One equation, one initial condition, one ingredient added. Left: the field collapses to a lattice-clipped singular state. Right: the multi-timescale memory potential builds up with lag, bounds the collapse, and releases the field into an extended state. The same trajectory-shape signature appears across [twenty-two substrates](#where-it-appears) where the structural form of P1+P2+P3 is operative — from BAO-era cosmological structure formation to 70M-parameter neural network optimization. Detail in [`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md); cross-substrate observable in [`mnsm/results/01`](https://github.com/qrv0/mnsm/blob/main/results/01-optimization-collapse-empirical.md).*
 
 ---
 
@@ -22,7 +22,7 @@ An active research program tracking the appearance of a single mathematical stru
 
 The work is not assembled from prior literature. The principles come from observation of how persistent extended things behave; the equation is what those principles force; the cross-substrate instances are where the form independently appears. The methodological frame is **structural realism**, not falsificationist competitive empiricism; the work is evaluated by [six structural criteria](methodology/04-the-six-criteria.md) under [`methodology/`](methodology/), not by single-experiment refutation or benchmark performance.
 
-The ML implementation depth — PyTorch Memory-NLS sequence layer, matched-Transformer comparison, the 70M-parameter optimization-collapse empirical finding — lives in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff. The two repositories advance in parallel.
+The ML implementation depth — PyTorch MNSM sequence layer, matched-Transformer comparison, the 70M-parameter optimization-collapse empirical finding — lives in the [`mnsm`](https://github.com/qrv0/mnsm) spinoff. The two repositories advance in parallel.
 
 ---
 
@@ -42,11 +42,11 @@ P1 is the kinetic and cubic terms (intrinsic oscillation). P2 is the auxiliary-f
 
 Twenty-two substrates documented across two repositories, in three evidentiary classes (full catalog in [`interfaces/README.md`](interfaces/README.md)):
 
-**Mathematical equivalence, no calibration required.** Other NLS systems ([`01`](interfaces/01-other-nls-systems.md): BEC, optical solitons, deep-water waves); diagonal-state structured state space models in machine learning ([`mnsm-ml/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)); memory-augmented Kuramoto oscillators ([`10`](interfaces/10-kuramoto-synchronization.md)).
+**Mathematical equivalence, no calibration required.** Other NLS systems ([`01`](interfaces/01-other-nls-systems.md): BEC, optical solitons, deep-water waves); diagonal-state structured state space models in machine learning ([`mnsm/01-state-space-models.md`](https://github.com/qrv0/mnsm/blob/main/interfaces/01-state-space-models.md)); memory-augmented Kuramoto oscillators ([`10`](interfaces/10-kuramoto-synchronization.md)).
 
 **Calibration-dependent structural correspondence.** Baryon acoustic oscillations in early-universe cosmology ([`02`](interfaces/02-baryon-acoustic.md)); Chladni cymatic patterns ([`03`](interfaces/03-chladni-cymatics.md)); gamma-frequency neural entrainment ([`04`](interfaces/04-gamma-entrainment.md)); archaeoacoustic resonance in megalithic chambers ([`05`](interfaces/05-archaeoacoustic-resonance.md)); B-cell affinity maturation ([`11`](interfaces/11-immune-affinity-maturation.md)); active matter with alignment memory ([`13`](interfaces/13-active-matter.md)); cardiac electrophysiology ([`15`](interfaces/15-cardiac-dynamics.md)); gene regulation and circadian rhythms ([`16`](interfaces/16-gene-regulation-circadian.md)); non-Markovian open quantum systems via pseudomode embedding ([`18`](interfaces/18-pseudomode-quantum.md)); generalized Maxwell viscoelasticity ([`19`](interfaces/19-viscoelasticity-prony.md)); warm-inflation cosmology ([`20`](interfaces/20-warm-inflation.md)); Hawkes self-exciting processes ([`21`](interfaces/21-hawkes-intensity.md)); earthquake-cycle dynamics ([`22`](interfaces/22-earthquake-cycle.md)).
 
-**Mechanism-shape and convergent-program correspondence.** Cosmological expansion as anti-collapse release ([`07`](interfaces/07-cosmological-expansion.md)); mechanistic interpretability of attention-based language models ([`mnsm-ml/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md)); critical-brain dynamics ([`09`](interfaces/09-critical-brain.md)); Friston's free-energy principle and active inference ([`12`](interfaces/12-friston-free-energy.md)); self-organized criticality ([`14`](interfaces/14-self-organized-criticality.md)); multi-species ecosystem dynamics ([`17`](interfaces/17-ecosystem-dynamics.md)).
+**Mechanism-shape and convergent-program correspondence.** Cosmological expansion as anti-collapse release ([`07`](interfaces/07-cosmological-expansion.md)); mechanistic interpretability of attention-based language models ([`mnsm/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm/blob/main/interfaces/02-mechanistic-interpretability.md)); critical-brain dynamics ([`09`](interfaces/09-critical-brain.md)); Friston's free-energy principle and active inference ([`12`](interfaces/12-friston-free-energy.md)); self-organized criticality ([`14`](interfaces/14-self-organized-criticality.md)); multi-species ecosystem dynamics ([`17`](interfaces/17-ecosystem-dynamics.md)).
 
 Each interface document derives the structural mapping, names substrate-specific calibration choices, and lists locally testable predictions evaluated under [criterion 4 (cross-domain coherence)](methodology/04-the-six-criteria.md). New substrates are added as the structural form is recognized; the program is not closed.
 
@@ -85,7 +85,7 @@ Pick your reading entry point:
 
 - → **I'm new to all this**: [`paths/if-you-are-new.md`](paths/if-you-are-new.md)
 - → **I'm from physics**: [`paths/if-you-are-from-physics.md`](paths/if-you-are-from-physics.md)
-- → **I'm from machine learning**: [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md) (also leads into [`mnsm-ml`](https://github.com/qrv0/mnsm-ml))
+- → **I'm from machine learning**: [`paths/if-you-are-from-ml.md`](paths/if-you-are-from-ml.md) (also leads into [`mnsm`](https://github.com/qrv0/mnsm))
 - → **I'm from neuroscience**: [`paths/if-you-are-from-neuroscience.md`](paths/if-you-are-from-neuroscience.md)
 - → **I'm from philosophy of science**: [`paths/if-you-are-from-philosophy.md`](paths/if-you-are-from-philosophy.md)
 
@@ -124,11 +124,11 @@ All numerical results use fixed random seeds and reproduce bit-for-bit on identi
 | [`principles/`](principles/) | The three structural axioms (P1, P2, P3) |
 | [`equation/`](equation/) | Derivation, Markovian embedding, 2D and 3D forms, reductions to known equations |
 | [`results/`](results/) | Numerical findings: anti-collapse, crystallization, Bravais selection, vibration spectrum, dimensional rescaling |
-| [`interfaces/`](interfaces/) | Cross-domain mappings (20 substrates here + 2 in [`mnsm-ml`](https://github.com/qrv0/mnsm-ml)) |
+| [`interfaces/`](interfaces/) | Cross-domain mappings (20 substrates here + 2 in [`mnsm`](https://github.com/qrv0/mnsm)) |
 | [`methodology/`](methodology/) | Structural realism, limits of falsification, six criteria, calibration philosophy, time-as-calibration, Mori-Zwanzig foundation, tautology objection |
 | [`paths/`](paths/) | Reader-background-specific entry routes |
 | [`playground/`](playground/) | Interactive notebooks (Colab-runnable) |
-| [`implementation/`](implementation/) | CuPy physics solver (the PyTorch ML layer lives in [`mnsm-ml`](https://github.com/qrv0/mnsm-ml)) |
+| [`implementation/`](implementation/) | CuPy physics solver (the PyTorch ML layer lives in [`mnsm`](https://github.com/qrv0/mnsm)) |
 | [`experiments/`](experiments/) | Reproduction scripts |
 | [`paper/`](paper/) | The full manuscript |
 | [`tests/`](tests/) | Conservation, FDT, anti-collapse sanity tests |
@@ -149,7 +149,7 @@ Three layers with different stability characteristics.
 - The methodological frame: structural realism, six criteria, calibration philosophy, time-as-calibration, Mori-Zwanzig foundation, tautology-objection treatment.
 - Conservation diagnostics verified to machine precision.
 - 3D anti-collapse, with transient-peak separation of $\sim 14\times$ at $\Lambda = -8$.
-- The cross-substrate empirical instance at 70M neural network parameters in [`mnsm-ml`](https://github.com/qrv0/mnsm-ml).
+- The cross-substrate empirical instance at 70M neural network parameters in [`mnsm`](https://github.com/qrv0/mnsm).
 - Twenty cross-domain interfaces here plus two in the ML spinoff, calibration-acknowledged.
 
 **Active frontier:**
@@ -172,16 +172,16 @@ Three layers with different stability characteristics.
 ## Citation
 
 ```bibtex
-@misc{mnsm,
-  title  = {Memory-Nonlinear State Models: An active research program on persistent extended systems},
+@misc{triad,
+  title  = {Triad: A Structural Field Equation of Persistent Extended Entities},
   author = {qrv0},
   year   = {2026},
-  url    = {https://github.com/qrv0/mnsm},
-  note   = {Three structural principles, one equation, twenty-two cross-substrate documentations across mnsm and mnsm-ml.}
+  url    = {https://github.com/qrv0/triad},
+  note   = {Three structural principles, one equation, twenty-two cross-substrate documentations across triad and mnsm.}
 }
 ```
 
-The full paper is in [`paper/manuscript.md`](paper/manuscript.md); the ML implementation depth is in [`mnsm-ml`](https://github.com/qrv0/mnsm-ml).
+The full paper is in [`paper/manuscript.md`](paper/manuscript.md); the ML implementation depth is in [`mnsm`](https://github.com/qrv0/mnsm).
 
 ---
 

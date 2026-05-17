@@ -124,4 +124,4 @@ This update is exact for constant $\rho$ over the time step; for the slowly vary
 
 ## Connection to state space models
 
-The auxiliary-field equation $\partial_t y_j = \nu_j(\rho - y_j)$ is the diagonal form of the structured state space model update used in S4, S5, Mamba, and RWKV. The term-by-term correspondence lives in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff repository, in `interfaces/01-state-space-models.md`.
+The auxiliary-field equation $\partial_t y_j = \nu_j(\rho - y_j)$ is the diagonal form of the structured state space model update used in S4, S5, Mamba, and RWKV. The term-by-term correspondence lives in the [`mnsm`](https://github.com/qrv0/mnsm) spinoff repository, in `interfaces/01-state-space-models.md`.
