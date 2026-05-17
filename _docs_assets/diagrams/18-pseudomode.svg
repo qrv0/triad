@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-label="Interface 18 pseudomode embedding visualization">
+  <defs>
+    <pattern id="grid-18-pseudomode" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="currentColor" opacity="0.18"/>
+    </pattern>
+    <style>
+      .glyph { stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .glyph-fill { fill: currentColor; opacity: 0.8; }
+      .glyph-soft { stroke: currentColor; fill: none; stroke-width: 1; opacity: 0.5; stroke-dasharray: 3 3; }
+      .tri-rail { stroke-width: 3; }
+      .p1-rail { stroke: #6366f1; }
+      .p2-rail { stroke: #0d9488; }
+      .p3-rail { stroke: #d97706; }
+      .tri-label { font-family: Inter, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: currentColor; opacity: 0.7; }
+      .mode-label { font-family: Inter, sans-serif; font-size: 8px; font-weight: 500; fill: currentColor; opacity: 0.7; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="360" height="220" fill="url(#grid-18-pseudomode)"/>
+  <g transform="translate(180 115)">
+    <circle class="glyph-fill" cx="0" cy="0" r="14"/>
+    <text class="mode-label" x="-5" y="3" fill="white" style="font-weight:700">S</text>
+    <g class="glyph">
+      <line x1="-12" y1="-8" x2="-50" y2="-40"/>
+      <line x1="12" y1="-8" x2="50" y2="-40"/>
+      <line x1="-12" y1="8" x2="-50" y2="40"/>
+      <line x1="12" y1="8" x2="50" y2="40"/>
+      <line x1="-14" y1="0" x2="-60" y2="0"/>
+      <line x1="14" y1="0" x2="60" y2="0"/>
+    </g>
+    <circle class="glyph" cx="-50" cy="-40" r="8"/>
+    <circle class="glyph" cx="50" cy="-40" r="8"/>
+    <circle class="glyph" cx="-50" cy="40" r="8"/>
+    <circle class="glyph" cx="50" cy="40" r="8"/>
+    <circle class="glyph" cx="-60" cy="0" r="8"/>
+    <circle class="glyph" cx="60" cy="0" r="8"/>
+    <g class="glyph-soft">
+      <path d="M -50 -50 Q -80 -55 -90 -25"/>
+      <path d="M 50 -50 Q 80 -55 90 -25"/>
+      <path d="M -50 50 Q -80 55 -90 25"/>
+      <path d="M 50 50 Q 80 55 90 25"/>
+      <path d="M -68 -5 Q -85 -5 -85 10"/>
+      <path d="M 68 -5 Q 85 -5 85 10"/>
+    </g>
+  </g>
+  <line class="tri-rail p1-rail" x1="18" y1="20" x2="60" y2="20"/>
+  <text class="tri-label" x="18" y="38">P1</text>
+  <line class="tri-rail p2-rail" x1="300" y1="20" x2="342" y2="20"/>
+  <text class="tri-label" x="300" y="38">P2</text>
+  <line class="tri-rail p3-rail" x1="18" y1="188" x2="60" y2="188"/>
+  <text class="tri-label" x="18" y="206">P3</text>
+</svg>

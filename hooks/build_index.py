@@ -55,6 +55,10 @@ SVG_SLUG_BY_NUM = {
     "15": "15-cardiac",
     "16": "16-gene-regulation-circadian",
     "17": "17-ecosystem",
+    "18": "18-pseudomode",
+    "19": "19-viscoelasticity",
+    "20": "20-warm-inflation",
+    "21": "21-hawkes",
 }
 
 _SVG_CACHE = {}

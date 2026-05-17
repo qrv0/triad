@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-label="Interface 19 viscoelasticity Prony Maxwell elements visualization">
+  <defs>
+    <pattern id="grid-19-visco" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.8" fill="currentColor" opacity="0.18"/>
+    </pattern>
+    <style>
+      .glyph { stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .glyph-fill { fill: currentColor; opacity: 0.8; }
+      .glyph-soft { stroke: currentColor; fill: none; stroke-width: 1; opacity: 0.5; }
+      .tri-rail { stroke-width: 3; }
+      .p1-rail { stroke: #6366f1; }
+      .p2-rail { stroke: #0d9488; }
+      .p3-rail { stroke: #d97706; }
+      .tri-label { font-family: Inter, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: currentColor; opacity: 0.7; }
+      .tau-label { font-family: 'JetBrains Mono', monospace; font-size: 8px; fill: currentColor; opacity: 0.7; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="360" height="220" fill="url(#grid-19-visco)"/>
+  <g transform="translate(60 60)">
+    <line class="glyph" x1="0" y1="0" x2="20" y2="0"/>
+    <path class="glyph" d="M 20 0 L 25 -5 L 35 5 L 45 -5 L 55 5 L 65 -5 L 75 5 L 80 0"/>
+    <line class="glyph" x1="80" y1="0" x2="100" y2="0"/>
+    <text class="tau-label" x="35" y="-12">k1</text>
+  </g>
+  <g transform="translate(60 100)">
+    <line class="glyph" x1="0" y1="0" x2="20" y2="0"/>
+    <path class="glyph" d="M 20 0 L 25 -5 L 35 5 L 45 -5 L 55 5 L 65 -5 L 75 5 L 80 0"/>
+    <line class="glyph" x1="80" y1="0" x2="105" y2="0"/>
+    <rect class="glyph" x="105" y="-7" width="20" height="14"/>
+    <line class="glyph" x1="115" y1="-7" x2="115" y2="7"/>
+    <line class="glyph" x1="125" y1="0" x2="145" y2="0"/>
+    <text class="tau-label" x="35" y="-12">k2</text>
+    <text class="tau-label" x="108" y="20">η/τ</text>
+  </g>
+  <g transform="translate(60 140)">
+    <line class="glyph" x1="0" y1="0" x2="20" y2="0"/>
+    <path class="glyph" d="M 20 0 L 25 -5 L 35 5 L 45 -5 L 55 5 L 65 -5 L 75 5 L 80 0"/>
+    <line class="glyph" x1="80" y1="0" x2="105" y2="0"/>
+    <rect class="glyph" x="105" y="-7" width="20" height="14"/>
+    <line class="glyph" x1="115" y1="-7" x2="115" y2="7"/>
+    <line class="glyph" x1="125" y1="0" x2="145" y2="0"/>
+    <text class="tau-label" x="35" y="-12">k3</text>
+    <text class="tau-label" x="108" y="20">η/τ</text>
+  </g>
+  <line class="glyph-soft" x1="50" y1="55" x2="50" y2="145"/>
+  <line class="glyph-soft" x1="210" y1="55" x2="210" y2="145"/>
+  <g transform="translate(240 70)">
+    <text class="tau-label" x="0" y="0" style="font-size:9px;opacity:0.85">G(t) =</text>
+    <text class="tau-label" x="0" y="14" style="font-size:9px;opacity:0.85">G∞ + ΣGⱼ·</text>
+    <text class="tau-label" x="0" y="28" style="font-size:9px;opacity:0.85">e^(-t/τⱼ)</text>
+    <text class="tau-label" x="0" y="50" style="font-size:9px;opacity:0.85">q̇ⱼ + qⱼ/τⱼ</text>
+    <text class="tau-label" x="0" y="64" style="font-size:9px;opacity:0.85">= ε̇^dev</text>
+  </g>
+  <line class="tri-rail p1-rail" x1="18" y1="20" x2="60" y2="20"/>
+  <text class="tri-label" x="18" y="38">P1</text>
+  <line class="tri-rail p2-rail" x1="300" y1="20" x2="342" y2="20"/>
+  <text class="tri-label" x="300" y="38">P2</text>
+  <line class="tri-rail p3-rail" x1="18" y1="188" x2="60" y2="188"/>
+  <text class="tri-label" x="18" y="206">P3</text>
+</svg>
