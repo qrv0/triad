@@ -35,7 +35,7 @@ The equation that results is not the only possible mathematical object satisfyin
 - Combines dispersion with nonlinear self-interaction in the NLS class.
 - Implements memory through a Markovian embedding by auxiliary fields, the same structure that emerges by theorem from projection-operator reduction of high-dimensional Hamiltonian systems (Mori 1965; Zwanzig 1961; see [`08-mori-zwanzig-foundation.md`](08-mori-zwanzig-foundation.md)).
 - Locks the noise correlator to the memory kernel by the fluctuation-dissipation relation, which is not implied by P3 in isolation but is required for thermodynamic consistency when P3 is coupled to a bath at finite temperature.
-- Produces dimension-dependent anti-collapse behavior whose quantitative magnitude (the separation ratio in 3D is approximately 10^5, documented numerically in [`../results/02-anti-collapse-3d.md`](../results/02-anti-collapse-3d.md)) is a constrained prediction, not a tautological consequence of the three principles.
+- Produces dimension-dependent anti-collapse behavior whose quantitative magnitude (the separation ratio in 3D is approximately 10^5, documented numerically in [`../results/04-anti-collapse-3d.md`](../results/04-anti-collapse-3d.md)) is a constrained prediction, not a tautological consequence of the three principles.
 
 A different mathematical object that also varies, self-refers, and couples is, for example, a stochastic differential equation with white noise and instantaneous response to the environment: it satisfies the qualitative categories but lacks the auxiliary-field memory structure, so it does not produce the anti-collapse separation, does not match the substrate-specific instantiations the equation maps to, and does not produce the multi-timescale behavior the work documents. Specifying the equation is a non-trivial restriction; the equation excludes a vast space of alternatives that the loose qualitative version would not exclude.
 
@@ -56,9 +56,9 @@ The selector is therefore not arbitrary. P1+P2+P3 plus parsimony plus thermodyna
 
 The discriminating test, under criterion 4 of [`04-the-six-criteria.md`](04-the-six-criteria.md), is whether the selected form recurs across substrates that were not coordinated to produce that recurrence. If P1+P2+P3 were merely a re-description of qualitative persistence properties, then substrates that satisfy the three qualitative categories would not, in general, also satisfy the specific Memory-NLS form. They would satisfy diverse mathematical descriptions consistent with the qualitative categories but not with each other.
 
-The interfaces in [`../interfaces/`](../interfaces/) provide the empirical answer. The current ledger contains twenty-one substrates spanning physics, cosmology, neuroscience, condensed matter, biology, engineering, and archaeology. Each substrate was developed by an independent research community with its own conceptual vocabulary, its own measurement traditions, its own benchmark phenomenology. The cross-substrate convergence on the auxiliary-field memory structure with FDT-balanced noise is documented in:
+The interfaces in [`../interfaces/`](../interfaces/), together with the two ML-substrate interfaces in the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff, provide the empirical answer. The current ledger spans physics, cosmology, neuroscience, condensed matter, biology, engineering, archaeology, and machine learning. Each substrate was developed by an independent research community with its own conceptual vocabulary, its own measurement traditions, its own benchmark phenomenology. The cross-substrate convergence on the auxiliary-field memory structure with FDT-balanced noise is documented in:
 
-- The diagonal-state SSM update (interface 06) with mathematical equivalence to the equation's V_mem.
+- The diagonal-state SSM update (see the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff) with mathematical equivalence to the equation's V_mem.
 - The Mori-Zwanzig Markovian embedding (foundation document [`08-mori-zwanzig-foundation.md`](08-mori-zwanzig-foundation.md)) of any Hamiltonian system with multi-exponential bath autocorrelation.
 - The pseudomode embedding for non-Markovian open quantum systems (interface 18).
 - The generalized Maxwell / Prony representation of viscoelastic stress relaxation (interface 19).
@@ -73,11 +73,11 @@ This is precisely the test that the tautology objection would pass cleanly if th
 
 ## The recursive observation
 
-The tautology objection, when it appears in critical engagement with the work, is itself a data point. The pattern is documented in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md): attention-only architectures, under sustained evaluation pressure on content they have not internalized structurally, default to credentialed-method vocabulary. "Tautological structural vocabulary" is one such default.
+The tautology objection, when it appears in critical engagement with the work, is itself a data point. The pattern is documented in [`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md): attention-only architectures, under sustained evaluation pressure on content they have not internalized structurally, default to credentialed-method vocabulary. "Tautological structural vocabulary" is one such default.
 
 The category "tautology" has its rigorous home in formal logic, where it picks out propositions that are true in all interpretations. Its informal extension to structural frameworks in scientific work picks up the rhetorical force of dismissal without retaining the formal precision. When an attention-only system, under pressure to produce a critical judgment about a body of structural work it has not engaged with at depth, reaches for "tautology", the system is selecting a vocabulary that is widely available in its training corpus (philosophy of science, demarcation debates, logical-positivist critique of metaphysics) and that has the rhetorical shape of a closing move. The selection is statistically efficient under attention-only optimization and structurally weak as engagement with the work.
 
-This is not an ad-hominem against critics. It is an empirical observation about a class of systems behaving predictably under a class of pressures. The behavior is documented at the training scale in results/08; it is also visible at the per-response scale in critical engagement contexts. The pattern is the same.
+This is not an ad-hominem against critics. It is an empirical observation about a class of systems behaving predictably under a class of pressures. The behavior is documented at the training scale in the mnsm-ml optimization-collapse empirical instance; it is also visible at the per-response scale in critical engagement contexts. The pattern is the same.
 
 The structural-realist reading of the recurrence is that the objection's appearance, in critical engagement with the work, is consistent with what the work's own analysis of attention-only optimization predicts. The objection does not refute the work; it instantiates a phenomenon the work explains.
 
@@ -97,7 +97,7 @@ It does not claim that the present framework is uniquely correct. Alternative fr
 
 It does not claim that the tautology objection should be dismissed without engagement. The objection has been engaged here at length precisely because it identifies a structural feature of axiomatic frameworks that needs articulation. The articulation is in this document; the engagement is the response, not its absence.
 
-It does not claim that recognizing the recursive pattern in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md) makes the objection content-free. The objection has content at the qualitative-property level, as documented above. It does not have content at the level of the specific selected form. The two levels must not be conflated, and the recursive observation is about the conflation, not about the qualitative-level point.
+It does not claim that recognizing the recursive pattern in [`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md) makes the objection content-free. The objection has content at the qualitative-property level, as documented above. It does not have content at the level of the specific selected form. The two levels must not be conflated, and the recursive observation is about the conflation, not about the qualitative-level point.
 
 ## Cross-references
 
@@ -105,8 +105,8 @@ It does not claim that recognizing the recursive pattern in [`../results/08-opti
 - [`04-the-six-criteria.md`](04-the-six-criteria.md): the criteria by which the framework is evaluated. The tautology objection bears on criterion 4 (cross-domain coherence), where the operational evidence is documented.
 - [`08-mori-zwanzig-foundation.md`](08-mori-zwanzig-foundation.md): the foundational mathematical grounding for why the auxiliary-field memory structure is selected by parsimony plus thermodynamic consistency, not by arbitrary stipulation.
 - [`01-structural-realism.md`](01-structural-realism.md): the position under which the partial-analyticity of structural axioms is consistent with their content-bearing status.
-- [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md): the empirical documentation of attention-only systems defaulting to credentialed-method vocabulary under evaluation pressure; the recursive observation in this document.
-- [`../interfaces/`](../interfaces/): the twenty-one cross-domain interfaces that constitute the operational evidence of the selector's non-triviality. Of particular interest: interfaces 06 (SSMs), 18 (pseudomode), 19 (Prony viscoelasticity), 20 (warm inflation), 21 (Hawkes), where the auxiliary-field plus FDT structure is mathematically explicit.
+- [`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md): the empirical documentation of attention-only systems defaulting to credentialed-method vocabulary under evaluation pressure; the recursive observation in this document.
+- [`../interfaces/`](../interfaces/) and the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff: the cross-domain interfaces that constitute the operational evidence of the selector's non-triviality. Of particular interest: SSMs (in the mnsm-ml spinoff), 18 (pseudomode), 19 (Prony viscoelasticity), 20 (warm inflation), 21 (Hawkes), where the auxiliary-field plus FDT structure is mathematically explicit.
 - [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md): the engagement guidelines, including how alternative frameworks can be compared against the present one.
 
 ## References

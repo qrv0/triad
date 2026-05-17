@@ -17,10 +17,12 @@ The calibrations differ by orders of magnitude:
 - [`../interfaces/03-chladni-cymatics.md`](../interfaces/03-chladni-cymatics.md): pattern-settling time of the elastic-and-granular medium, on the order of seconds in standard Chladni-plate experiments at audio frequencies.
 - [`../interfaces/04-gamma-entrainment.md`](../interfaces/04-gamma-entrainment.md): 25 ms per unit of computational time, motivated by the gamma-cycle period at 40 Hz and the cortical neuronal membrane time constant.
 - [`../interfaces/05-archaeoacoustic-resonance.md`](../interfaces/05-archaeoacoustic-resonance.md): 9 ms per unit of computational time, motivated by the ~110 Hz dominant cavity resonance documented at Newgrange-class chambers and confirmed by Wolfe-Swanson-Till 2020 chamber-geometry-driven simulation.
-- [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md): one forward-pass step per unit of computational time. The substrate has no physical time; computation is the only time.
+- [`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md): one forward-pass step per unit of computational time. The substrate has no physical time; computation is the only time.
 - [`../interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md): no specific external time coordinate committed to because the cross-substrate claim operates at the level of mechanism shape; the implicit scale is approximately $10^{17}$ s for the post-recombination phase. Time is the unfolding itself, not an external parameter.
-- [`../interfaces/08-mechanistic-interpretability.md`](../interfaces/08-mechanistic-interpretability.md): one forward-pass step per unit of computational time, consistent with interface 06 because both refer to sequence-modeling substrates.
+- [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md): one forward-pass step per unit of computational time, consistent with the SSM interface because both refer to sequence-modeling substrates.
 - [`../interfaces/09-critical-brain.md`](../interfaces/09-critical-brain.md): 1 millisecond per unit of computational time, calibrated to one synaptic-transmission timescale to support the four-decade scale-free range Linkenkaer-Hansen 2001 documents in cortex.
+
+The above is representative; further substrate-specific calibrations appear in additional interfaces collected in [`../interfaces/`](../interfaces/).
 
 These calibrations span seventeen orders of magnitude (cortical synaptic transmission at 1 ms to cosmological Hubble time at $10^{17}$ s) and are not internally inconsistent. They are calibrations of the same structural form to different substrates. The form is invariant; the time at which the form unfolds in each substrate is what that substrate locally uses to register the unfolding.
 
@@ -137,7 +139,7 @@ This document does not commit to:
 - [`../principles/02-self-reference.md`](../principles/02-self-reference.md): P2's two parts. The instantaneous self-coupling and the integral memory potential. The past-as-state claim derives from the integral form.
 - [`../equation/02-markovian-embedding.md`](../equation/02-markovian-embedding.md): the technical derivation of the auxiliary-field structure that makes the past propagatable as state.
 - [`../interfaces/07-cosmological-expansion.md`](../interfaces/07-cosmological-expansion.md): the canonical instance. The cosmological trajectory as one unfolding rather than a sequence of events along a Time coordinate.
-- [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md): direction at the neural-training substrate. The 70M-parameter trajectory has structural direction set by the optimization's effective FDT-like balance; the Transformer's catastrophic collapse is the trajectory entering a structurally different phase.
+- [`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md): direction at the neural-training substrate. The 70M-parameter trajectory has structural direction set by the optimization's effective FDT-like balance; the Transformer's catastrophic collapse is the trajectory entering a structurally different phase.
 
 ## References
 
