@@ -74,7 +74,7 @@ Possible explanations:
 2. The criterion "released vs not" may differ from the 3D reference's criterion in a way that matters at the threshold.
 3. The actual physical scaling may be d-dependent in a way the geometric argument captures incompletely.
 
-This is research; the result is informative regardless of which interpretation holds. Wave-3 could pursue tighter lattice + finer sweep at $d=4, 5$.
+This is research; the result is informative regardless of which interpretation holds. Follow-up work could pursue tighter lattice + finer sweep at $d=4, 5$.
 
 ## Honest caveats (continued)
 

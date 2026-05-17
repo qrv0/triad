@@ -77,6 +77,6 @@ Wall time: 38.9 seconds on RTX 4060. Output: `outputs/kuramoto_chimera_memory_p3
 
 ## What this result implies for the program
 
-Wave-2 demonstrates concretely why methodology/02 commits to "isolation is the abstraction the work argues against": a test in isolation gave the wrong answer about a coupled-system prediction. The structural-realist methodology and the empirical result are now in coherent alignment.
+The result shifts the picture of P10.1: chimera lifetime in this 1D ring of phase oscillators depends jointly on $\gamma_0$ and $\tau_{\text{mem}}$ rather than on $\tau_{\text{mem}}$ alone. The companion run in [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md), at $\gamma_0 = 0$ and $T = 0$, sits at one corner of the present sweep; the present 2D sweep populates the rest.
 
-Wave-3 candidates for this prediction: multi-seed statistical analysis; $T_{\text{bath}}$ sweep; kernel-width sweep; alternative memory-kernel shapes (multi-exponential, power-law).
+Candidates for further investigation of this prediction: multi-seed statistical analysis; $T_{\text{bath}}$ sweep; kernel-width sweep; alternative memory-kernel shapes (multi-exponential, power-law).

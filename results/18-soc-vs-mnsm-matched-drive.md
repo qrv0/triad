@@ -74,11 +74,9 @@ Wall: 12.9 seconds on RTX 4060 (CuPy). Output: `outputs/soc_vs_mnsm_avalanches_p
 
 ## What this result implies for the program
 
-This is the most empirically clean result: the new coupled test produced 600-800 events with $\tau = 1.23$-$1.24$, well-resolved statistics, contributing evidence consistent with P14.2 under criterion 4.
+This result produced 600-800 events with $\tau = 1.23$-$1.24$ and well-resolved statistics, contributing evidence consistent with P14.2 under criterion 4.
 
-An earlier test used configuration the methodology excludes; it produced numerics the methodology does not interpret. The present test addresses the prediction with the FDT-coupled drive.
-
-Wave-3 follow-ups for P14.2:
+Follow-ups for P14.2:
 - MNSM 3D with FDT-locked drive (existing CuPy solver).
 - Matched-substrate event definitions (discretize MNSM events to match BTW topplings, or generalize BTW to continuous-field).
 - Multi-seed bootstrap confidence intervals on $\tau$.

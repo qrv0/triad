@@ -59,7 +59,7 @@ Status: **tested (inconsistent)**.
 
 Rationale: prediction P10.1 as originally stated in [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md) is not supported by this test. Chimera lifetime does not peak at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$; it peaks in the Markovian limit. The intermediate-memory regime, far from being optimal for chimera, is empirically destabilizing.
 
-This test, run with `gamma_0 = 0` and `T = 0` (the regime), produced numerics that the methodology of [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md) does not interpret. Isolation contradicts P3 ([`../principles/03-coupling.md`](../principles/03-coupling.md)); numerics produced in the the regime contribute no evidence under any of the six criteria because the configuration is outside the scope the structural claim describes. The interface 10 mapping ([`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md)) is unaffected: that mapping is exact at the equation level and is independent of any isolated-regime numerics.
+This test was run at `gamma_0 = 0` and `T = 0`. The interface 10 mapping ([`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md)) is exact at the equation level: memory-Kuramoto is mathematically the same Markovian embedding as the equation's auxiliary-field memory, independent of which parameter values any particular simulation uses.
 
 The interface document's prediction P10.1 will be updated to:
 1. Reflect the inconsistent status with a pointer to this result.
