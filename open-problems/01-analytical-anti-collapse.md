@@ -148,6 +148,120 @@ This sketch does not establish:
 
 The Townes-profile volume average is the most direct path to the dimensional-rescaling result and is the recommended first attempt.
 
+## Continuation: variational-ansatz analysis (partial)
+
+The variational Gaussian ansatz suggested above is the cleanest setup short of the full Townes-profile treatment. This section carries it out and identifies what it does and does not explain.
+
+### The Gaussian ansatz
+
+Parametrize the field as $\Psi(\mathbf{r}, t) = A(t)\, \exp(-r^2 / (2\sigma(t)^2))$ with width $\sigma(t)$ and amplitude $A(t)$ in $d$ dimensions. Norm conservation gives $|A|^2 = N / (\pi^{d/2} \sigma^d)$ where $N$ is the conserved total norm. The peak density at $r = 0$ is $\rho_{\text{peak}}(t) = |A(t)|^2 = N / (\pi^{d/2} \sigma(t)^d)$.
+
+### Kinetic and nonlinear energies
+
+The kinetic energy of the Gaussian is
+$$
+E_K \;=\; \frac{1}{2m} \int |\nabla\Psi|^2\, d^d r \;=\; \frac{d N}{4 m \sigma^2}.
+$$
+The cubic nonlinear energy is
+$$
+E_{\text{NL}} \;=\; \frac{\Lambda}{2} \int |\Psi|^4\, d^d r \;=\; \frac{\Lambda\, N^2}{2 (2\pi)^{d/2}\, \sigma^d}.
+$$
+$E_K$ grows as $\sigma \to 0$; $E_{\text{NL}}$ also grows in magnitude (with opposite sign for $\Lambda < 0$).
+
+### Fixed-point analysis without memory
+
+Setting $\partial E / \partial \sigma = 0$:
+$$
+\frac{-d N}{2 m \sigma^3} \;+\; \frac{d |\Lambda| N^2}{2 (2\pi)^{d/2}\, \sigma^{d+1}} \;=\; 0,
+$$
+giving
+$$
+\sigma_*^{\,d-2} \;=\; \frac{m\, |\Lambda|\, N}{(2\pi)^{d/2}}.
+$$
+For $d > 2$ this has a real solution; for $d = 2$ it is critical (no equilibrium width); for $d < 2$ the kinetic dominates always and there is no collapse.
+
+Second-derivative analysis at $\sigma_*$:
+$$
+\left.\frac{\partial^2 E}{\partial \sigma^2}\right|_{\sigma_*} \;=\; \frac{d N\, (2 - d)}{2 m\, \sigma_*^4}.
+$$
+This is positive for $d < 2$ (the focal width is a stable minimum), zero at $d = 2$ (critical), and negative for $d > 2$ (the focal width is an unstable maximum). The well-known L^2-supercriticality of the cubic NLS in $d \geq 3$ appears in the Gaussian ansatz as the absence of a stable focal width: any small perturbation either disperses the Gaussian (growing $\sigma$) or collapses it (shrinking $\sigma$).
+
+### Adding memory in the equilibrium-tracking limit
+
+Suppose the auxiliary fields track the density perfectly: $y_j(t) = \rho(t)$ at all times. Then the memory potential is $V_{\text{mem}} = \sum_j \lambda_j y_j = \Sigma\lambda \cdot \rho$, and the effective nonlinearity becomes
+$$
+\Lambda_{\text{eff}} \;=\; \Lambda + \Sigma\lambda.
+$$
+The fixed-point condition becomes $\sigma_*^{\,d-2} = m |\Lambda_{\text{eff}}| N / (2\pi)^{d/2}$ when $\Lambda_{\text{eff}} < 0$, and disappears (no collapse) when $\Lambda_{\text{eff}} > 0$.
+
+The release condition in the equilibrium-tracking limit is therefore
+$$
+\Sigma\lambda \;>\; |\Lambda|.
+$$
+This is the same condition as the leading-order scalar analysis. It is dimension-independent and does not recover the numerical $\Sigma\lambda_{\text{crit}} / |\Lambda| \sim 1/d$ for $d = 2, 3$.
+
+### Where the dimensional rescaling must come from
+
+The equilibrium-tracking limit assumes $y_j = \rho$ at all times. In reality $y_j$ lags $\rho$ during focal collapse, with the lag analyzed in the leading-order section above. The lag at the focal peak is of order $\varepsilon^2 \rho_{\text{peak}}$ where $\varepsilon = \nu / |\Lambda \rho_{\text{peak}}|$.
+
+For the equilibrium-tracking release condition $\Sigma\lambda > |\Lambda|$ to be SUFFICIENT during the actual lag dynamics, the lag must be small enough not to push the system past the focal-peak before $y_j$ has caught up. The lag analysis quantifies "small enough" as $\varepsilon \ll 1$.
+
+The dimensional dependence enters via $\varepsilon$, which depends on $\rho_{\text{peak}}$ via $\rho_{\text{peak}} \sim N / \sigma^d$. At the focal peak in $d$ dimensions, $\sigma$ scales as $\sigma_* \sim (m |\Lambda| N)^{1/(d-2)}$, so $\rho_{\text{peak}} \sim (m |\Lambda|)^{d/(d-2)} N^{-2/(d-2)}$. The exponent on $|\Lambda|$ depends on $d$.
+
+For $d = 3$: $\rho_{\text{peak}} \sim (m|\Lambda|)^3 N^{-2}$. For $d = 4$: $\rho_{\text{peak}} \sim (m|\Lambda|)^2 N^{-1}$. The two are not simply related.
+
+This is where the gap in the analytical derivation stands: the equilibrium-tracking condition $\Sigma\lambda > |\Lambda|$ is dimension-independent, but the SUFFICIENCY of this condition during the actual lag dynamics depends on $\varepsilon$, which depends on $d$ through $\rho_{\text{peak}}$. The detailed treatment of how this affects the critical $\Sigma\lambda$ would require solving the coupled system $(\sigma(t), y_j(t))$ self-consistently and identifying the boundary in $(\Sigma\lambda, |\Lambda|, d)$ space where the lag-dynamics breaks the equilibrium-tracking sufficiency.
+
+### Self-similar collapse and memory divergence
+
+A further complication: in the self-similar regime, $\rho(\mathbf{r}, t) = L(t)^{-d} f(\mathbf{r}/L(t))^2$ with $L(t) \to 0$ at finite time $t_*$. The auxiliary field at the focal center is
+$$
+y(0, t_*) \;=\; \nu f(0)^2 \int_0^\infty e^{-\nu s}\, L(t_* - s)^{-d}\, ds.
+$$
+For 2D critical, $L \propto \sqrt{(t_* - t)/\log\log}$, so $L^{-d} = L^{-2} \propto 1/(t_* - t)\log\log$. The integral diverges logarithmically at $s \to 0$.
+
+For 3D supercritical, $L \propto (t_* - t)^{1/2}$ in the strong-collapse self-similar regime, so $L^{-3} \propto (t_* - t)^{-3/2}$. The integral diverges as $\int s^{-3/2} ds$.
+
+The interpretation: in the strict self-similar collapse, the memory cannot track the focal-point density because the integrand has a non-integrable singularity at the collapse time. In reality the memory regularizes its own collapse by producing the back-reaction that the lag analysis identifies; once $y$ becomes large enough, the effective potential turns repulsive and the focal density stops growing. The self-similar form is therefore only valid until the memory regularization kicks in.
+
+This is the structural mechanism but the closed-form expression for the critical $\Sigma\lambda$ requires self-consistent treatment of the coupled $(\sigma(t), y(t))$ system, which the variational ansatz above does not provide.
+
+### The d=6 finding as constraint on the analytical theory
+
+The Phase 9 wave-3 d=6 result ([`../results/24-dimensional-rescaling-d6.md`](../results/24-dimensional-rescaling-d6.md)) showed that at d=6 with the chosen configuration, the field does not collapse even without memory. The dispersive kinetic operator dominates the cubic attraction at the field amplitudes accessible in numerical simulation. The 1/d formula extrapolated from d=2,3 does not apply because the regime is no longer focal-collapse.
+
+This means the analytical theory must characterize:
+1. The boundary in $(d, |\Lambda|, N, \sigma_{\text{init}})$ space between the focal-collapse regime (where anti-collapse is the relevant question) and the dispersive-dominated regime (where no collapse occurs).
+2. Within the focal-collapse regime, the dimensional dependence of $\Sigma\lambda_{\text{crit}}$.
+3. The transition between these regimes as one increases $d$.
+
+The current numerical data:
+- d=2 ratio ~0.05 (focal-collapse, anti-collapse active)
+- d=3 ratio ~0.5 (focal-collapse, anti-collapse active)
+- d=4 ratio ~0.125 (focal-collapse, anti-collapse active, off 1/d)
+- d=5: not on boxed 1/d (focal-collapse degrading)
+- d=6: dispersive-dominated, anti-collapse not the relevant phenomenology
+
+is consistent with a transition between regimes near $d \sim 4$ or $5$, with the boxed 1/d formula being a partial fit valid only in the focal-collapse regime where the dimensional scaling of the focal volume is the dominant geometric effect.
+
+### Status of the analytical theory
+
+The leading-order scalar analysis (above) plus the variational Gaussian ansatz (this section) plus the self-similar collapse argument (this section) together establish:
+
+- The small parameter for the lag dynamics is $\varepsilon = \nu / (|\Lambda| \rho_{\text{peak}})$.
+- The auxiliary-field lag at the focal peak is $O(\varepsilon^2 \rho_{\text{peak}})$.
+- In the equilibrium-tracking limit (no lag), the release condition is $\Sigma\lambda > |\Lambda|$, dimension-independent.
+- The dimensional dependence of $\Sigma\lambda_{\text{crit}}$ enters via the lag-dynamics correction to the equilibrium-tracking sufficiency, which depends on $\rho_{\text{peak}}$ via $\sigma_*$ and hence on $d$.
+- The d=6 result places a constraint: above some critical dimension the dispersive operator dominates and the focal-collapse phenomenology is absent, regardless of memory.
+
+The remaining gaps:
+- A closed-form expression for the critical $\Sigma\lambda(d)$ within the focal-collapse regime.
+- The exact form of the focal-collapse-vs-dispersive-dominated regime boundary as a function of $(d, |\Lambda|, N, \sigma_{\text{init}})$.
+- The Townes-profile volume-averaging treatment carried out rigorously to extract the leading non-equilibrium correction to the release condition.
+- Numerical validation of any analytical formula against the existing d=2,3,4,5,6 data.
+
+The variational Gaussian ansatz of this section advances Phase 4 in identifying the structural mechanism by which dimensional dependence enters (via the lag-dynamics correction to the equilibrium-tracking sufficiency), but does not produce a clean closed-form expression for the critical $\Sigma\lambda(d)$. The 1/d formula extracted from results/06 at d=2,3 should be treated as an empirical fit within the focal-collapse regime, not a fundamental analytical result.
+
 ## Connections to existing repo content
 
 - [`../principles/02-self-reference.md`](../principles/02-self-reference.md) section "A structural observation about the two parts": the qualitative argument is here; the open problem is to make it quantitative.
