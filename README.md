@@ -223,19 +223,39 @@ All runs use fixed seeds, bit-for-bit reproducible on identical hardware.
 
 ## Repository map
 
-| | Folder | Content |
+Four layers — pick where you want to enter:
+
+**🧩 The argument** &nbsp; · &nbsp; *what the work claims and how*
+
+| | Folder | What |
 |---|---|---|
 | 📐 | [`principles/`](principles/) | The three structural axioms (P1, P2, P3) |
-| 📜 | [`equation/`](equation/) | Derivation, Markovian embedding, reductions to known equations |
-| 📊 | [`results/`](results/) | Anti-collapse, crystallization, Bravais selection, vibrational modes, dimensional rescaling |
+| 📜 | [`equation/`](equation/) | Derivation + Markovian embedding + reductions |
+| 🧭 | [`methodology/`](methodology/) | Structural realism, six criteria, calibration philosophy |
+| 📄 | [`paper/`](paper/) | Full synthesis (manuscript) |
+
+**🔬 The evidence** &nbsp; · &nbsp; *what supports the claim*
+
+| | Folder | What |
+|---|---|---|
 | 🌐 | [`interfaces/`](interfaces/) | 20 cross-domain mappings (+ 2 in [`mnsm`](https://github.com/qrv0/mnsm)) |
-| 🧭 | [`methodology/`](methodology/) | Structural realism, limits of falsification, six criteria, calibration philosophy |
-| 🛤️ | [`paths/`](paths/) | Reader-specific entry routes |
+| 📊 | [`results/`](results/) | Anti-collapse, Bravais selection, vibrational modes, dimensional rescaling |
+| 🎨 | [`assets/`](assets/) | Hero animations, plots |
+
+**⚙️ The code** &nbsp; · &nbsp; *if you want to run it*
+
+| | Folder | What |
+|---|---|---|
 | ⚙️ | [`implementation/`](implementation/) | CuPy physics solver |
 | 🧪 | [`experiments/`](experiments/) | Reproduction scripts |
-| 📄 | [`paper/`](paper/) | Full manuscript |
 | ✅ | [`tests/`](tests/) | Conservation diagnostics |
-| 🎨 | [`assets/`](assets/) | Visual outputs |
+
+**🛤️ Routing** &nbsp; · &nbsp; *navigation helpers*
+
+| | Folder | What |
+|---|---|---|
+| 🛤️ | [`paths/`](paths/) | Audience-specific entry routes |
+| 📖 | [`docs/glossary.md`](docs/glossary.md) | Glossary of terms |
 | 🏛️ | [`STRUCTURE.md`](STRUCTURE.md) | Why the repository is shaped this way |
 
 ---
@@ -254,30 +274,6 @@ Full methodological frame: [`methodology/`](methodology/).
 </details>
 
 <details>
-<summary><b>🚧 Current state and open frontiers</b></summary>
-
-**Stable load-bearing content:**
-- The three principles, the equation derivation, the Markovian embedding, the reductions
-- Methodological frame: structural realism, six criteria, calibration philosophy, Mori-Zwanzig foundation
-- Conservation diagnostics verified to machine precision
-- 3D anti-collapse, BCC selection, dimensional rescaling at $d \in \{2,3\}$
-- The cross-substrate empirical instance at 70M neural network parameters in [`mnsm`](https://github.com/qrv0/mnsm)
-- 22 cross-domain interfaces, calibration-acknowledged
-
-**Active frontier:**
-- Phase-diagram and vibrational test recalibration
-- Sharpening predictions in recently added interfaces (18 pseudomode, 19 viscoelasticity, 20 warm inflation, 21 Hawkes, 22 earthquake) into testable protocols
-
-**Known gaps:**
-- Analytical derivation of anti-collapse beyond leading order
-- Dimensional rescaling beyond $d = 3$ (simple $1/d$ does not extend cleanly)
-- Renormalization-group analysis and quantum extension
-
-> Coupling is the default. Issues, pull requests, and external mappings of the structure to further substrates are explicitly welcomed. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
-</details>
-
-<details>
 <summary><b>📚 Citation</b></summary>
 
 ```bibtex
@@ -290,14 +286,7 @@ Full methodological frame: [`methodology/`](methodology/).
 }
 ```
 
-Full paper: [`paper/manuscript.md`](paper/manuscript.md) · ML implementation: [`mnsm`](https://github.com/qrv0/mnsm)
-
-</details>
-
-<details>
-<summary><b>🤖 On AI-assisted contribution</b></summary>
-
-This work was developed with substantial AI-assisted formalization. The methodological frame has direct implications for how AI assistants should engage with the codebase: avoid competitive-benchmark framing, respect the structural-realist evaluation criteria, do not dismiss cross-domain interfaces as "speculative". Operational constraints in [`CLAUDE.md`](CLAUDE.md) ensure that assistance aligns with what this work is, rather than the default frame an AI assistant trained on standard ML content would naturally adopt.
+Full paper: [`paper/manuscript.md`](paper/manuscript.md) · ML implementation: [`mnsm`](https://github.com/qrv0/mnsm) · Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 </details>
 
