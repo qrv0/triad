@@ -7,7 +7,6 @@ collects the data into two JSON files served from
 page's body. The hero is rendered from the same frontmatter, so the
 single source of truth is the interface markdown's own frontmatter.
 
-Wave 1 of the site-restructure plan: commit 2 of 8.
 """
 
 import json

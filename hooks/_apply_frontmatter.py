@@ -393,7 +393,7 @@ FRONTMATTER = {
         "description": (
             "Drive-and-release systems organizing to a critical state "
             "instantiate the triangle; MNSM produces matching "
-            "avalanche-statistics exponents in the coupled regime."
+            "avalanche-statistics exponents."
         ),
         "domain": "complex-systems",
         "triangle": {

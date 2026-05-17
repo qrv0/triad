@@ -1,4 +1,4 @@
-"""Phase 9 wave-3 test: dimensional rescaling at d=6 with FDT-locked field noise (P3 active).
+"""Test: dimensional rescaling at d=6 with FDT-locked field noise (P3 active).
 
 Extends results/10-dimensional-rescaling-higher-d.md (d=4, d=5) to one more
 dimension. The existing data show a non-monotonic pattern: d=2 ratio ~0.05,
@@ -149,7 +149,7 @@ def run_anti_collapse_p3(d: int, N: int, L: float, Lambda: float, Sigma_lambda: 
 
 
 def main():
-    print(f"Phase 9 wave-3 test: dimensional rescaling at d=6 (P3 active)")
+    print(f"Test: dimensional rescaling at d=6 (P3 active)")
     print(f"Backend: {'cupy (GPU)' if USING_GPU else 'numpy (CPU)'}")
 
     Lambda = -8.0
@@ -209,7 +209,7 @@ def main():
     print(f"  1/d formula at d=6: predicts ratio ~0.167 (Sigma_lambda ~1.33)")
 
     summary = {
-        "prediction_tested": "Phase 9 wave-3 extension to d=6 of dimensional rescaling per results/06,10,15",
+        "prediction_tested": "Extension to d=6 of dimensional rescaling per results/06,10,15",
         "config": {"d": d, "N": N, "L": L, "Lambda": Lambda, "gamma_0": gamma_0, "T_bath": T_bath},
         "sigma_lambda_sweep": SIGMA_LAMBDA_VALUES,
         "results": [{k: v for k, v in r.items() if k not in ("peaks", "norms")} for r in results],

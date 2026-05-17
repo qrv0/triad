@@ -252,5 +252,5 @@ Wall time: 106 seconds on RTX 4060. Output:
   the analytical-theory open problem that should clarify whether the multi-mode
   whole-tone-scale is predicted by the equation's 3D crystalline regime.
 - [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md):
-  catalog of the 2026-05-16 wrong-config Phase 9 wave-3 cluster, including
+  catalog of the 2026-05-16 wrong-config audit catalog, including
   Failure 4 (this result before correction).

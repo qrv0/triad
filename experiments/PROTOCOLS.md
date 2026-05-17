@@ -15,7 +15,7 @@ Each prediction has a status. The taxonomy is:
 - **untested**: no targeted experiment has been run; the prediction is named but its observable has not been measured.
 - **partially tested**: an experiment compatible with the prediction has been run, but with limitations (small sample, specific parameter regime, weak statistical power). The result shifts evidentiary weight but does not fully resolve the prediction.
 - **tested (consistent)**: an experiment targeting the prediction has been run, and the result matches the predicted observable within statistical bounds.
-- **tested in coupled regime, inconsistent**: an experiment targeting the prediction has been run with P3 active (gamma_0 > 0, T > 0, FDT-locked noise), and the result does not match the predicted observable. Per methodology/02 in its cleaned form, the inconsistent evidence shifts evidentiary weight against this interface's specific calibration under criterion 4 and prompts investigation of (a) the calibration of the prediction, (b) the auxiliary numerical assumptions (Duhem-Quine), or (c) the implementation. It does not falsify the global structural claim.
+- **tested, inconsistent**: an experiment targeting the prediction has been run with P3 active (gamma_0 > 0, T > 0, FDT-locked noise), and the result does not match the predicted observable. Per methodology/02 in its cleaned form, the inconsistent evidence shifts evidentiary weight against this interface's specific calibration under criterion 4 and prompts investigation of (a) the calibration of the prediction, (b) the auxiliary numerical assumptions (Duhem-Quine), or (c) the implementation. It does not falsify the global structural claim.
 - **disputed**: the experiment has been run but the result is contested (interpretation depends on choices that are themselves under debate); requires further work to resolve.
 
 ## Naming convention
@@ -114,7 +114,7 @@ Future waves are planned in [`../RESEARCH-AGENDA.md`](../RESEARCH-AGENDA.md).
 
 ## Honest disclosure of test outcomes
 
-If a test produces results inconsistent with a prediction (status "tested in coupled regime, inconsistent"), the result is published with the same prominence as a consistent result. The interface's evidentiary weight under criterion 4 is updated honestly per methodology/02; the structural claim's global status reflects the cumulative evidence across all interfaces, evaluated by the six criteria; the entry in RESEARCH-AGENDA notes the inconsistent evidence and the investigation paths it prompts.
+If a test produces results inconsistent with a prediction (status "tested, inconsistent"), the result is published with the same prominence as a consistent result. The interface's evidentiary weight under criterion 4 is updated honestly per methodology/02; the structural claim's global status reflects the cumulative evidence across all interfaces, evaluated by the six criteria; the entry in RESEARCH-AGENDA notes the inconsistent evidence and the investigation paths it prompts.
 
 This disclosure commitment is what makes the work active research rather than advocacy. The structural-realist position commits to evaluating the form by cross-domain coherence (criterion 4), which requires honest reporting of which interfaces survive local tests and which do not.
 

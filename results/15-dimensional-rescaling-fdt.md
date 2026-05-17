@@ -6,7 +6,6 @@ Extension of [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md) to hig
 
 Predicted observable: the critical $\Sigma\lambda_{\text{crit}}/|\Lambda|$ for anti-collapse should depend on spatial dimension $d$ but be ROBUST to bath coupling $\gamma_0$ (if the dimensional rescaling is a purely structural property of the equation's geometry, as results/06 argues).
 
-Wave 1 ([`10-dimensional-rescaling-higher-d.md`](10-dimensional-rescaling-higher-d.md)) was retracted for testing the P1+P2 degenerate sub-system. Wave 2 activates P3 via Strang split-step dissipation + FDT-locked noise sub-steps.
 
 ## Method
 
@@ -41,7 +40,7 @@ Reference (from `results/06-dimensional-rescaling.md`, larger lattice):
 
 **Two clean findings, two important caveats.**
 
-**Finding 1 (the structural-realist content)**: $\Sigma\lambda_{\text{crit}}/|\Lambda|$ is **independent of $\gamma_0$** at fixed $d$ across the sweep tested. The ratio at $d=4$ is 0.125 at every coupling value (0.05, 0.2, 1.0); the ratio at $d=5$ is 0.250 at every coupling value. The dimensional rescaling is therefore robust to bath coupling strength within the coupled regime, consistent with the purely-structural reading: the scaling is a property of the equation's geometric concentration of the focal region, not of the dissipative dynamics.
+**Finding 1 (the structural-realist content)**: $\Sigma\lambda_{\text{crit}}/|\Lambda|$ is **independent of $\gamma_0$** at fixed $d$ across the sweep tested. The ratio at $d=4$ is 0.125 at every coupling value (0.05, 0.2, 1.0); the ratio at $d=5$ is 0.250 at every coupling value. The dimensional rescaling is therefore robust to bath coupling strength within the sweep, consistent with the purely-structural reading: the scaling is a property of the equation's geometric concentration of the focal region, not of the dissipative dynamics.
 
 **Finding 2 (the dimensional pattern)**: across the four documented dimensions, the ratio is non-monotonic:
 
@@ -62,9 +61,9 @@ Neither the boxed formula $1/d$ (which would give monotonically decreasing 0.5, 
 
 ## Status assignment
 
-Status: **partially tested**. Two structurally meaningful findings (gamma_0-invariance; non-monotonic d-scaling) emerge from the data. Both are honest; both are weaker than the strong-form claim that would resolve the 1/d vs factor-10 dispute. The wave-2 test demonstrates the P3-active methodology works (the gamma_0 invariance is the kind of structural fact this methodology can produce) but does not produce a clean d-scaling formula.
+Status: **partially tested**. Two structurally meaningful findings (gamma_0-invariance; non-monotonic d-scaling) emerge from the data. Both are honest; both are weaker than the strong-form claim that would resolve the 1/d vs factor-10 dispute. The new test demonstrates the P3-active methodology works (the gamma_0 invariance is the kind of structural fact this methodology can produce) but does not produce a clean d-scaling formula.
 
-The wave-1 result document's claim was "execution in progress, pending"; wave-2 here is the execution that finally happened. The status moves from "untested" to "partially tested" with the caveats above.
+The result document's claim was "execution in progress, pending"; new here is the execution that finally happened. The status moves from "untested" to "partially tested" with the caveats above.
 
 ## What this implies for results/06
 

@@ -230,5 +230,5 @@ Wall time: 275 seconds on RTX 4060. Output:
 - [`../experiments/physics/test_phase_diagram_2d_slice.py`](../experiments/physics/test_phase_diagram_2d_slice.py):
   the script.
 - [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md):
-  catalog of the 2026-05-16 wrong-config Phase 9 wave-3 cluster, including
+  catalog of the 2026-05-16 wrong-config audit catalog, including
   Failure 5 (this result before correction).

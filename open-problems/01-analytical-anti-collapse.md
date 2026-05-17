@@ -228,7 +228,7 @@ This is the structural mechanism but the closed-form expression for the critical
 
 ### The d=6 finding as constraint on the analytical theory
 
-The Phase 9 wave-3 d=6 result ([`../results/24-dimensional-rescaling-d6.md`](../results/24-dimensional-rescaling-d6.md)) showed that at d=6 with the chosen configuration, the field does not collapse even without memory. The dispersive kinetic operator dominates the cubic attraction at the field amplitudes accessible in numerical simulation. The 1/d formula extrapolated from d=2,3 does not apply because the regime is no longer focal-collapse.
+The d=6 result ([`../results/24-dimensional-rescaling-d6.md`](../results/24-dimensional-rescaling-d6.md)) showed that at d=6 with the chosen configuration, the field does not collapse even without memory. The dispersive kinetic operator dominates the cubic attraction at the field amplitudes accessible in numerical simulation. The 1/d formula extrapolated from d=2,3 does not apply because the regime is no longer focal-collapse.
 
 This means the analytical theory must characterize:
 1. The boundary in $(d, |\Lambda|, N, \sigma_{\text{init}})$ space between the focal-collapse regime (where anti-collapse is the relevant question) and the dispersive-dominated regime (where no collapse occurs).

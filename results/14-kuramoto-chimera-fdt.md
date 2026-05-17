@@ -6,7 +6,6 @@ Interface: [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kur
 
 Predicted observable: chimera-state stability in a memory-Kuramoto ensemble is maximal in the parameter window where the memory kernel timescale $\tau_{\text{mem}}$ is comparable to the synchronization timescale $\tau_{\text{sync}}$ of the synchronized cluster.
 
-This is the wave-2 redesigned test. Wave 1 ([`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md)) was retracted for testing the P1+P2 degenerate sub-system without P3.
 
 ## Method
 
@@ -14,7 +13,7 @@ The script [`../experiments/physics/test_kuramoto_chimera_memory.py`](../experim
 
 $$\frac{d\theta_i}{dt} = K \cdot \text{Im}\left[e^{-i(\theta_i + \alpha)} Y_i\right] + \sqrt{2 \gamma_0 T / dt}\, \xi_i$$
 
-with $\xi_i$ unit-variance Gaussian. The noise amplitude is fixed by P3's FDT correlator in terms of $(\gamma_0, T)$. The auxiliary-field memory is unchanged from wave 1 (exact OU update per paper §4.1).
+with $\xi_i$ unit-variance Gaussian. The noise amplitude is fixed by P3's FDT correlator in terms of $(\gamma_0, T)$. The auxiliary-field memory is unchanged from the earlier (exact OU update per paper §4.1).
 
 **2D parameter sweep**: $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$ at $T_{\text{bath}} = 0.1$, $\nu \in \{0.03, 0.1, 0.3, 1.0, 3.0, 10.0\}$ (i.e., $\tau_{\text{mem}}$ from 33 to 0.1). All sweep points are per principles/03-coupling.md; the structural prediction is evaluated across these four coupling strengths.
 
@@ -44,7 +43,7 @@ The chimera-lifetime peak shifts across the sweep: as $\gamma_0$ grows from 0.01
 
 The structural reading: as bath coupling grows, bath-induced phase diffusion destabilizes the Markovian-limit chimera at small $\tau_{\text{mem}}$ (the noise overwhelms the fast-relaxing memory). The chimera survives best in the regime where the memory timescale is comparable to the bath-driven decorrelation timescale. The crossover happens around $\gamma_0 \sim 0.1$-$0.2$. This is the structural prediction P10.1 makes: in a system where coupling is the default (P3), memory must be paced to the bath-decorrelation timescale for the chimera to persist.
 
-P10.1's original prediction (chimera optimum at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$) is therefore **supported** that the methodology requires the test to be in. The wave-1 result (which used configuration `gamma_0 = 0`, `T = 0` and reported chimera dominance in the Markovian limit) does not contribute evidence under the methodology because the configuration is outside the scope the structural claim describes; see [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md) for the wave-1 retraction note.
+P10.1's original prediction (chimera optimum at $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$) is therefore **supported** that the methodology requires the test to be in. The result (which used configuration `gamma_0 = 0`, `T = 0` and reported chimera dominance in the Markovian limit) does not contribute evidence under the methodology because the configuration is outside the scope the structural claim describes; see [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md) for the retraction note.
 
 ## Status assignment
 
@@ -78,7 +77,7 @@ Wall time: 38.9 seconds on RTX 4060. Output: `outputs/kuramoto_chimera_memory_p3
 
 ## What this result implies for the program
 
-The wave-1 to wave-2 sequence is itself the methodology in action: the assistant ran an isolated test, the result produced numerics the methodology does not interpret (configuration outside what P3 permits), the user pointed out the test was methodologically incoherent, the assistant retracted, redesigned with P3 active, and the redesigned test contributes evidence consistent with the prediction under criterion 4. The chimera regime that the methodology actually applies to (coupled, with bath active) shows the predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ peak. The the regime shows different phenomenology (Markovian limit dominance), which is consistent with the literature on Abrams-Strogatz instantaneous-coupling chimera; the difference between the two regimes is the structural prediction P3 makes.
+The to new sequence is itself the methodology in action: the assistant ran an isolated test, the result produced numerics the methodology does not interpret (configuration outside what P3 permits), the user pointed out the test was methodologically incoherent, the assistant retracted, redesigned with P3 active, and the redesigned test contributes evidence consistent with the prediction under criterion 4. The chimera regime that the methodology actually applies to (coupled, with bath active) shows the predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ peak. The the regime shows different phenomenology (Markovian limit dominance), which is consistent with the literature on Abrams-Strogatz instantaneous-coupling chimera; the difference between the two regimes is the structural prediction P3 makes.
 
 Wave-2 demonstrates concretely why methodology/02 commits to "isolation is the abstraction the work argues against": a test in isolation gave the wrong answer about a coupled-system prediction. The structural-realist methodology and the empirical result are now in coherent alignment.
 

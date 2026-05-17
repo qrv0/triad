@@ -3,7 +3,7 @@ title: "Interface 14: Self-organized criticality (avalanches)"
 description: >-
   Drive-and-release systems organizing to a critical state instantiate
   the triangle; MNSM produces matching avalanche-statistics exponents in
-  the coupled regime.
+  the dynamics with P3 active.
 domain: complex-systems
 triangle:
   p1: "stress / activity field accumulating toward threshold"
@@ -81,7 +81,7 @@ The cross-substrate consistency check is interesting: cortical avalanches operat
 
 ## On the coupling default in this substrate
 
-SOC substrates are coupled systems by definition: the BTW sandpile has slow drive (sand addition) plus fast dissipative relaxation (avalanches with grains lost at the boundary); neuronal-avalanche cortex has the same coupling structure as the broader cortical substrate (see interface 09); the seismic substrate is driven by tectonic loading and dissipates by earthquakes. None of these substrates exhibits criticality in the isolated limit; criticality is precisely a property of the drive-and-dissipate coupled regime. The structural prediction is that the equation's release transition produces SOC-like phenomenology when P3 is active (effective drive plus FDT-locked dissipation). Tests of this correspondence that mute P3 ($\gamma_0 = 0$, $T = 0$, no drive) cannot evaluate the prediction: the equation in that regime has no analog of the drive-and-relax cycle and methodology/02 identifies the the regime as the abstraction the work argues against.
+SOC substrates are coupled systems by definition: the BTW sandpile has slow drive (sand addition) plus fast dissipative relaxation (avalanches with grains lost at the boundary); neuronal-avalanche cortex has the same coupling structure as the broader cortical substrate (see interface 09); the seismic substrate is driven by tectonic loading and dissipates by earthquakes. None of these substrates exhibits criticality in the isolated limit; criticality is precisely a property of the drive-and-dissipate dynamics. The structural prediction is that the equation's release transition produces SOC-like phenomenology when P3 is active (effective drive plus FDT-locked dissipation). Tests of this correspondence that mute P3 ($\gamma_0 = 0$, $T = 0$, no drive) cannot evaluate the prediction: the equation at gamma_0=0 has no analog of the drive-and-relax cycle and methodology/02 identifies the configuration as the abstraction the work argues against.
 
 ## What this correspondence does and does not establish
 
@@ -113,7 +113,7 @@ The structural claim of this interface (SOC substrates instantiate the same tria
   - How to test: simulate the equation in the release regime; measure avalanche-size statistics; compare with BTW sandpile statistics at matched dimensional and timescale parameters.
   - What would constitute confirmation: statistical agreement of the two distributions.
   - What would constitute evidence inconsistent with this calibration: persistent statistical difference.
-  - Status: **tested (consistent)**, see [`../results/18-soc-vs-mnsm-matched-drive.md`](../results/18-soc-vs-mnsm-matched-drive.md). Wave-2 test with FDT-locked MNSM drive: at $\gamma_0=0.05$ and $\gamma_0=0.20$ the MNSM avalanche exponents are $\tau = 1.23$ and $\tau = 1.24$ across 616 and 791 events respectively, within the BTW literature range $\tau \in [1.0, 1.2]$ and close to our BTW reference $\tau = 1.37$. The wave-1 isolated test (results/13, retracted) had only 18-25 events; the wave-2 P3-active test has ~30x more events and yields a statistically confident exponent matching SOC universality. P14.2 is supported in the methodologically valid (coupled) regime.
+  - Status: **tested (consistent)**, see [`../results/18-soc-vs-mnsm-matched-drive.md`](../results/18-soc-vs-mnsm-matched-drive.md). With FDT-locked phase noise: at $\gamma_0=0.05$ and $\gamma_0=0.20$ the MNSM avalanche exponents are $\tau = 1.23$ and $\tau = 1.24$ across 616 and 791 events respectively, within the BTW literature range $\tau \in [1.0, 1.2]$ and close to our BTW reference $\tau = 1.37$. The earlier test (results/09) had only 18-25 events; the test has ~30x more events and yields a statistically confident exponent matching SOC universality. P14.2 is supported.
 
 - **Prediction P14.3: Cortical avalanche dynamics show triangle structure beyond observable SOC.** The structural prediction is that cortical avalanche dynamics (Beggs-Plenz substrate) should exhibit not only the SOC phenomenology (power-law size distributions) but also explicit P2-memory effects (avalanche-size distributions conditioned on the time since the previous avalanche should be non-trivial; the memory of past avalanches should bias current dynamics). The structural prediction goes beyond observable SOC into the structural memory the SOC literature has not isolated.
   - How to test: re-analyze cortical avalanche datasets with explicit conditioning on past avalanche history; characterize the conditional distributions.

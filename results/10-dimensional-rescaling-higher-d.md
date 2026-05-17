@@ -33,7 +33,7 @@ Parameters:
 
 Anti-collapse criterion: $\rho_{\text{peak,final}} < 10 \cdot \rho_{\text{peak,initial}}$ (10x relaxed; full release expected to drive $\rho_{\text{peak,final}}$ below $\rho_{\text{peak,initial}}$).
 
-Backend: numpy (CPU). Hardware: consumer CPU (the existing CuPy 3D solver is dimension-specific; an $n$D port to CuPy is wave-2 work).
+Backend: numpy (CPU). Hardware: consumer CPU (the existing CuPy 3D solver is dimension-specific; an $n$D port to CuPy is future work).
 
 Expected wall time: approximately 15-30 minutes per dimension on CPU.
 
