@@ -40,6 +40,114 @@ The derivation should yield: (a) an analytical bound on the peak density separat
 - **Variational ansatz.** Parameterize the field with a Gaussian-of-Gaussians ansatz of varying width; derive ODEs for the width parameters; analyze the fixed-point structure of the augmented system including the auxiliary fields.
 - **Multiple-scale analysis.** Separate timescales: the fast (collapse) dynamics from the slow (memory equilibration) dynamics; apply method of multiple scales to derive an effective equation for the slow envelope.
 
+## Partial derivation: leading-order lag analysis
+
+This section is a draft sketch advancing the open problem from "qualitatively understood, no analytical content" to "leading-order skeleton in place, dimensional rescaling still open." It is not a finished derivation; the gaps are flagged explicitly.
+
+### The small parameter
+
+The natural small parameter is
+$$
+\varepsilon \;=\; \frac{\nu_{\text{slow}}}{|\Lambda|\, \rho_{\text{peak}}},
+$$
+the ratio of the slow-mode memory relaxation rate to the nonlinear timescale at the focal peak. Anti-collapse operates in the regime $\varepsilon \ll 1$ (memory lags significantly during focal collapse); the opposite regime $\varepsilon \gtrsim 1$ corresponds to no effective lag and reduces to the bare NLS without anti-collapse.
+
+### Auxiliary-field lag at the focal peak
+
+The auxiliary field $y(t)$ at the focal point $\mathbf{r} = 0$ satisfies $\dot y = \nu(\rho - y)$ with formal solution
+$$
+y(t) \;=\; \nu \int_0^{\infty} e^{-\nu s}\, \rho(t - s)\, ds.
+$$
+Expand $\rho$ around the focal-peak time $t_*$, where $\rho(t_*) = \rho_{\text{peak}}$, $\dot\rho(t_*) = 0$, $\ddot\rho(t_*) = -|\ddot\rho|_* < 0$:
+$$
+\rho(t_* - s) \;=\; \rho_{\text{peak}} \;-\; \tfrac{1}{2} |\ddot\rho|_*\, s^2 \;+\; O(s^3).
+$$
+Inserting this into the convolution and integrating against $\nu e^{-\nu s}$:
+$$
+y(t_*) \;=\; \rho_{\text{peak}} \;-\; \frac{|\ddot\rho|_*}{\nu^2} \;+\; O\!\left(\frac{1}{\nu^3}\right).
+$$
+Define the focal-peak curvature timescale $\tau_{\text{fast}}^2 = \rho_{\text{peak}} / |\ddot\rho|_*$. The lag at the focal peak becomes
+$$
+\rho_{\text{peak}} - y(t_*) \;=\; \rho_{\text{peak}} \cdot \frac{1}{(\nu \tau_{\text{fast}})^2} \;+\; O(\varepsilon^3) \;\equiv\; \rho_{\text{peak}} \cdot \varepsilon^2.
+$$
+The lag at the focal peak is of order $\varepsilon^2 \rho_{\text{peak}}$, which is small in the slow-memory regime but nonzero.
+
+### Post-peak overshoot
+
+For $\Delta t > 0$ small (just after the focal peak), $\rho$ decreases approximately quadratically:
+$$
+\rho(t_* + \Delta t) \;\approx\; \rho_{\text{peak}} \left(1 - \tfrac{1}{2}\, \frac{\Delta t^2}{\tau_{\text{fast}}^2}\right).
+$$
+The auxiliary field continues evolving with $\dot y = \nu(\rho - y)$. At $t_*$, $\dot y(t_*) = \nu \cdot \varepsilon^2 \rho_{\text{peak}} > 0$. The auxiliary field still rises briefly after the focal peak.
+
+Solving the linear ODE for $y$ near $t_*$ with initial condition $y(t_*) = \rho_{\text{peak}}(1 - \varepsilon^2)$:
+$$
+y(t_* + \Delta t) \;=\; \rho(t_* + \Delta t) \;+\; \varepsilon^2 \rho_{\text{peak}} \, e^{-\nu \Delta t} \;+\; O(\varepsilon^3).
+$$
+For $\Delta t \lesssim 1/\nu$, the exponential is order unity, so
+$$
+y(t_* + \Delta t) \;\approx\; \rho(t_* + \Delta t) \;+\; \varepsilon^2 \rho_{\text{peak}}.
+$$
+The auxiliary field exceeds the field density by approximately $\varepsilon^2 \rho_{\text{peak}}$ for a window of duration $\tau_{\text{persist}} \sim 1/\nu$ after the peak.
+
+### Leading-order release condition
+
+The release condition is that the memory potential exceeds the attractive nonlinearity at the focal point during the overshoot window:
+$$
+\Sigma\lambda \cdot \langle y \rangle \;>\; |\Lambda| \cdot \rho.
+$$
+At the moment when $y$ has peaked relative to $\rho$ (approximately $\Delta t \sim 1/(2\nu)$ after $t_*$):
+$$
+\Sigma\lambda \cdot \rho_{\text{peak}}\bigl(1 - O(\varepsilon^2)\bigr) \;>\; |\Lambda| \cdot \rho_{\text{peak}}\bigl(1 - O(\varepsilon^2)\bigr).
+$$
+At leading order, the release condition reduces to the bare amplitude condition
+$$
+\Sigma\lambda \;>\; |\Lambda|.
+$$
+This says that anti-collapse operates if the total memory amplitude exceeds the cubic attraction amplitude, independent of dimension. This is the leading-order scalar (single-point) analysis; the numerical evidence shows something stronger.
+
+### The dimensional-rescaling gap
+
+The numerical observation in [`../results/06-dimensional-rescaling.md`](../results/06-dimensional-rescaling.md) is that the threshold scales as
+$$
+\frac{\Sigma\lambda_{\text{crit}}}{|\Lambda|} \;\sim\; \frac{1}{d},
+$$
+i.e., the critical memory amplitude DECREASES with dimension. The leading-order analysis above does not produce this behavior; it predicts a dimension-independent threshold $\Sigma\lambda \sim |\Lambda|$.
+
+The gap implies that the dimensional rescaling is a sub-leading effect not captured by the lag analysis at zeroth order in spatial structure. Two candidate sources:
+
+1. **Focal-region geometry.** The lag analysis treats $\rho$ as a scalar at the focal point; the actual focal region has spatial extent. In $d$ dimensions, the focal volume scales as $L^d$ where $L$ is the focal width, and the surface area scales as $L^{d-1}$. The "spread" of the focal region into surrounding bulk depends on $d$, and the memory potential averaged over the focal volume might inherit a $1/d$ factor from this geometry. A careful treatment requires the Townes-profile-like ansatz with $\rho(\mathbf{r}, t) = N L^{-d} f(\mathbf{r}/L)$ and integration of $V_{\text{mem}}$ over the focal volume rather than evaluation at the central point.
+
+2. **Critical-exponent dimensional dependence.** The 2D NLS is $L^2$-critical (collapse is logarithmic in time); the 3D NLS is supercritical (collapse is power-law). The scaling exponent $\alpha$ in $\rho_{\text{peak}}(t) \sim (t_* - t)^{-\alpha}$ depends on dimension. This dimensional dependence enters $\tau_{\text{fast}}$ and hence $\varepsilon$, but in a way that the leading-order analysis above absorbs into $\rho_{\text{peak}}$.
+
+The likely correct treatment combines both: the Townes-profile ansatz integrates the field over its spatial extent, with the $d$-dimensional volume element giving a $1/d$ factor in the appropriate averaging. This is the natural next step and is left open.
+
+### Connection to numerical evidence
+
+The numerical separation ratio between memoried and unmemoried runs is approximately $10^3$ in 2D ([`../results/01-anti-collapse-2d.md`](../results/01-anti-collapse-2d.md)) and approximately $10^5$ in 3D ([`../results/04-anti-collapse-3d.md`](../results/04-anti-collapse-3d.md)). The leading-order analysis above does not predict these specific magnitudes; the magnitude prediction requires the spatial-geometry treatment of the focal region (sketched above as the open step). The numerical evidence is consistent with the existence of the overshoot mechanism described here, but the quantitative match between leading-order analysis and numerics has not been established.
+
+### Status of this draft
+
+This sketch establishes:
+- The small parameter $\varepsilon = \nu_{\text{slow}} / (|\Lambda| \rho_{\text{peak}})$ as the natural expansion parameter.
+- The auxiliary-field lag at the focal peak is of order $\varepsilon^2 \rho_{\text{peak}}$ (not $\varepsilon$); the lag persists for a time $\sim 1/\nu$ after the focal peak.
+- At leading order in the scalar (single-point) analysis, the release condition is $\Sigma\lambda > |\Lambda|$, dimension-independent.
+
+This sketch does not establish:
+- The dimensional rescaling $\Sigma\lambda_{\text{crit}} / |\Lambda| \sim 1/d$. This requires the spatial-geometry treatment of the focal region (Townes-profile or Gaussian-ansatz volume averaging) which is the natural next analytical step.
+- A closed-form expression for the separation ratio between memoried and unmemoried runs. This requires solving the full PDE in the overshoot window, not just analyzing the lag at the focal point.
+- A rigorous bound (as opposed to a perturbative leading-order estimate).
+
+### Suggested next analytical steps
+
+1. **Townes-profile volume average.** Write $\rho(\mathbf{r}, t) = N_T L(t)^{-d} f(\mathbf{r}/L(t))$. Solve the auxiliary-field equation for $y(\mathbf{r}, t)$ at the focal width $L(t)$. Average the memory potential $\sum_j \lambda_j y_j$ over the focal volume. Re-derive the release condition with the volume-averaging in place. Check whether the $1/d$ dimensional rescaling emerges.
+
+2. **Variational ansatz.** Parametrize the field as a Gaussian of width $\sigma(t)$ with auxiliary fields $y_j(t)$ at the focal point. Derive the coupled ODE system for $(\sigma, y_j)$. Linearize around the focal-peak fixed point. Identify the critical line in $(\Sigma\lambda, |\Lambda|, d)$ space at which the fixed point is no longer attracting.
+
+3. **Multiple-scale analysis.** Separate the field-evolution timescale (rapid, of order $1/|\Lambda \rho_{\text{peak}}|$) from the memory-equilibration timescale (slow, of order $1/\nu$). Apply the method of multiple scales to derive an effective slow equation for the focal density's slow envelope. The resulting equation should be amenable to fixed-point and linear-stability analysis.
+
+The Townes-profile volume average is the most direct path to the dimensional-rescaling result and is the recommended first attempt.
+
 ## Connections to existing repo content
 
 - [`../principles/02-self-reference.md`](../principles/02-self-reference.md) section "A structural observation about the two parts": the qualitative argument is here; the open problem is to make it quantitative.
