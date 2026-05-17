@@ -101,10 +101,12 @@ def mnsm_2d_with_fdt(N: int, L: float, Lambda: float, Sigma_lambda: float,
     psi = (1.0 / (sigma_init * float(np.sqrt(2 * np.pi)))) * xp.exp(-(xs**2 + ys**2) / (2 * sigma_init**2))
     psi = psi.astype(xp.complex64)
 
+    # Canonical kinetic propagator: H_complex = k^2/2 - i gamma_0
     k_axis = 2 * xp.pi * xp.fft.fftfreq(N, d=L / N)
     kx, ky = xp.meshgrid(k_axis, k_axis, indexing="ij")
-    kinetic_phase = -1j * 0.5 * (kx ** 2 + ky ** 2)
-    propagator = xp.exp(kinetic_phase * dt)
+    H_kin = 0.5 * (kx ** 2 + ky ** 2)
+    H_complex = H_kin.astype(xp.complex64) - 1j * gamma_0
+    propagator = xp.exp(-1j * H_complex * dt).astype(xp.complex64)
 
     lambda_fast = Sigma_lambda * 0.75
     lambda_slow = Sigma_lambda * 0.25
@@ -115,7 +117,6 @@ def mnsm_2d_with_fdt(N: int, L: float, Lambda: float, Sigma_lambda: float,
     accum_fast = 1.0 - decay_fast
     accum_slow = 1.0 - decay_slow
 
-    dissipation_factor = float(np.exp(-gamma_0 * dt))
     noise_amp = float(np.sqrt(2.0 * gamma_0 * T_bath * dt))
 
     def step_strang(psi, y_fast, y_slow):
@@ -130,9 +131,6 @@ def mnsm_2d_with_fdt(N: int, L: float, Lambda: float, Sigma_lambda: float,
         psi = psi * xp.exp(-1j * V_total * dt / 2)
         y_fast = decay_fast * y_fast + accum_fast * rho
         y_slow = decay_slow * y_slow + accum_slow * rho
-        # P3 dissipation + noise
-        if gamma_0 > 0:
-            psi = psi * dissipation_factor
         if noise_amp > 0:
             xi_re = xp.asarray(rng.standard_normal(psi.shape).astype(np.float32))
             xi_im = xp.asarray(rng.standard_normal(psi.shape).astype(np.float32))
@@ -207,9 +205,10 @@ def main():
     btw_sizes = btw_result["sizes"]
     btw_fit = fit_power_law_exponent(btw_sizes, x_min=4)
 
-    # MNSM with multiple gamma_0 values to compare across P3 strengths
+    # MNSM with multiple gamma_0 values to compare across P3 strengths.
+    # Rule A: gamma_0 sweep starts at 0.01 (small positive), not 0.0 (isolated regime is invalid).
     mnsm_results = []
-    for gamma_0 in [0.0, 0.05, 0.2]:
+    for gamma_0 in [0.01, 0.05, 0.2]:
         mr = mnsm_2d_with_fdt(N=64, L=10.0, Lambda=-8.0, Sigma_lambda=2.0,
                                gamma_0=gamma_0, T_bath=0.05, seed=42)
         mr_fit = fit_power_law_exponent(mr["sizes"], x_min=0.001)

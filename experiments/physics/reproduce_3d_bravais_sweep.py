@@ -46,6 +46,12 @@ def run_one(Sigma_lambda: float, N: int = 128, precision: str = "fp32") -> dict:
         dt=0.0025,
         n_steps=6000,
         Lambda=-8.0,
+        # gamma_0=0, T=0 reproduces paper Section 6.2 conservative methodology
+        # for Bravais selection. Per skill Rule A this is the pre-wave-3 isolated
+        # regime; the canonical Sigma_lambda crystalline window observation
+        # (1.5 producing BCC selection) is preserved at gamma_0 > 0 per
+        # results/26 phase diagram (released regime accessible at Sigma_lambda=1.5,
+        # gamma_0 in 0.01-0.2 range).
         gamma_0=0.0,
         T=0.0,
         memory=MemoryConfig(nus=[10.0, 0.5], lambdas=[fast, slow], spatial="local"),
