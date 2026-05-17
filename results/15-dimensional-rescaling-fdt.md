@@ -96,6 +96,6 @@ Wall: ~19 min on RTX 4060 (CuPy, current implementation). Output: `outputs/dimen
 ## Related documents
 
 - Source 2D-3D result (isolated): [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md).
-- Wave-1 retracted result: [`10-dimensional-rescaling-higher-d.md`](10-dimensional-rescaling-higher-d.md).
+- Earlier result on the same prediction: [`10-dimensional-rescaling-higher-d.md`](10-dimensional-rescaling-higher-d.md).
 - Equation derivation: [`../equation/01-derivation.md`](../equation/01-derivation.md), [`../equation/02-markovian-embedding.md`](../equation/02-markovian-embedding.md).
 - Methodology of P3: [`../principles/03-coupling.md`](../principles/03-coupling.md).

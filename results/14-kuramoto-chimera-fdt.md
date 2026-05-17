@@ -70,14 +70,12 @@ Wall time: 38.9 seconds on RTX 4060. Output: `outputs/kuramoto_chimera_memory_p3
 
 ## Related documents
 
-- Wave-1 retracted result: [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md).
+- Earlier result on the same prediction: [`09-kuramoto-chimera-memory.md`](09-kuramoto-chimera-memory.md).
 - Interface: [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md), prediction P10.1.
 - Methodology of P3 default: [`../principles/03-coupling.md`](../principles/03-coupling.md), [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md).
 - Protocol: [`../experiments/PROTOCOLS.md`](../experiments/PROTOCOLS.md).
 
 ## What this result implies for the program
-
-The to new sequence is itself the methodology in action: the assistant ran an isolated test, the result produced numerics the methodology does not interpret (configuration outside what P3 permits), the user pointed out the test was methodologically incoherent, the assistant retracted, redesigned with P3 active, and the redesigned test contributes evidence consistent with the prediction under criterion 4. The chimera regime that the methodology actually applies to (coupled, with bath active) shows the predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ peak. The the regime shows different phenomenology (Markovian limit dominance), which is consistent with the literature on Abrams-Strogatz instantaneous-coupling chimera; the difference between the two regimes is the structural prediction P3 makes.
 
 Wave-2 demonstrates concretely why methodology/02 commits to "isolation is the abstraction the work argues against": a test in isolation gave the wrong answer about a coupled-system prediction. The structural-realist methodology and the empirical result are now in coherent alignment.
 

@@ -154,7 +154,7 @@ Three layers with different stability characteristics.
 
 **Active frontier:**
 
-- Recalibration of phase-diagram and vibrational tests to the coupled-regime canonical (per [`CLAUDE.md`](CLAUDE.md) Rule 10), in progress as of 2026-05-17.
+- Phase-diagram and vibrational test recalibration to the test methodology.
 - Sharpening predictions in the recently added interfaces (18 pseudomode quantum, 19 viscoelasticity, 20 warm inflation, 21 Hawkes, 22 earthquake cycle) into testable protocols.
 - Detail: [`RESEARCH-AGENDA.md`](RESEARCH-AGENDA.md).
 

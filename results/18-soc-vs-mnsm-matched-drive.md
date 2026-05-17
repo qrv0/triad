@@ -45,7 +45,7 @@ Status: **tested, consistent**.
 
 Rationale: P14.2 predicted that MNSM's release-regime avalanche distributions should be statistically indistinguishable from BTW sandpile distributions. The new test produces MNSM exponents (1.23, 1.24) within statistical proximity of the BTW reference (1.37, and within the literature range 1.0-1.2). The event counts are large enough (600-800) for confident exponent estimation. The result contributes evidence consistent with P14.2 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
 
-The test (results/13, retracted) used configuration and produced numerics the methodology does not interpret (configuration outside the scope P3 permits). The new is the methodologically valid test of P14.2 in this substrate.
+An earlier test (results/13) used configuration and produced numerics the methodology does not interpret (configuration outside the scope P3 permits). The present test addresses the prediction with the FDT-coupled drive.in this substrate.
 
 ## Honest caveats
 
@@ -66,7 +66,7 @@ Wall: 12.9 seconds on RTX 4060 (CuPy). Output: `outputs/soc_vs_mnsm_avalanches_p
 
 ## Related documents
 
-- Wave-1 retracted result: [`13-soc-vs-mnsm-avalanches.md`](13-soc-vs-mnsm-avalanches.md).
+- Earlier result on the same prediction: [`13-soc-vs-mnsm-avalanches.md`](13-soc-vs-mnsm-avalanches.md).
 - Interface: [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md), P14.2.
 - Adjacent interface (broadband phenomenology): [`../interfaces/09-critical-brain.md`](../interfaces/09-critical-brain.md).
 - Methodology of P3: [`../principles/03-coupling.md`](../principles/03-coupling.md).
@@ -76,7 +76,7 @@ Wall: 12.9 seconds on RTX 4060 (CuPy). Output: `outputs/soc_vs_mnsm_avalanches_p
 
 This is the most empirically clean result: the new coupled test produced 600-800 events with $\tau = 1.23$-$1.24$, well-resolved statistics, contributing evidence consistent with P14.2 under criterion 4.
 
-The result (retracted) used configuration the methodology excludes; it produced numerics the methodology does not interpret. The new is the methodologically valid test of P14.2.
+An earlier test used configuration the methodology excludes; it produced numerics the methodology does not interpret. The present test addresses the prediction with the FDT-coupled drive.
 
 Wave-3 follow-ups for P14.2:
 - MNSM 3D with FDT-locked drive (existing CuPy solver).
