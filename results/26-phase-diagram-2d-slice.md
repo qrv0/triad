@@ -152,19 +152,42 @@ both the lower-$\Sigma\lambda$ regime (where the focal field is weaker and
 thermal noise easily moves it into intermediate) and the higher-$\Sigma\lambda$
 regime (where strong memory sustains released against thermal load).
 
+## Multi-seed extension (2026-05-17)
+
+Script: [`../experiments/physics/test_phase_diagram_2d_slice_multiseed.py`](../experiments/physics/test_phase_diagram_2d_slice_multiseed.py). 4 seeds per grid point (seeds derived deterministically from base seed 42, 43, 44, 45 plus the grid-point seed offset). Wall time 950 seconds on RTX 4060. Output: `outputs/phase_diagram_2d_slice_multiseed/summary.json`.
+
+**Regime stability: all 20 grid points are stable across all 4 seeds.** Every grid point yields the same regime classification for all 4 seeds; the regime map is fully seed-reproducible. Stability counts: stable 20, boundary 0, ambiguous 0.
+
+Quantitative variance per grid point (selected):
+
+| $\Sigma\lambda$ | $\gamma_0$ | Regime | peak_growth (mean ± std) | final_ratio (mean ± std) | Relative std |
+|---|---|---|---|---|---|
+| 0.5 | 0.01 | released | 5.209 ± 0.002 | 0.00155 ± 0.00006 | 0.04% |
+| 1.5 | 0.01 | released | 5.030 ± 0.008 | 0.00156 ± 0.00016 | 0.15% |
+| 1.5 | 0.05 | intermediate | 4.923 ± 0.007 | 0.00382 ± 0.00014 | 0.13% |
+| 2.0 | 0.20 | released | 5.067 ± 0.012 | 0.00758 ± 0.00061 | 0.24% |
+| 4.0 | 0.01 | released | 5.821 ± 0.001 | 0.00254 ± 0.00024 | 0.02% |
+| 4.0 | 1.00 | dispersive | 1.885 ± 0.066 | 0.00836 ± 0.00037 | 3.5% |
+
+The peak_growth_ratio relative variance across all 20 grid points ranges from 0.02% (Σλ=4, γ₀=0.01) to 3.5% (Σλ=4, γ₀=1.0 dispersive corner where the focal-growth phase is shortest and most variance-sensitive). The effect (the regime structure across the grid) exceeds the seed-to-seed variance by one to two orders of magnitude at every grid point.
+
+Multi-seed regime map (identical to single-seed regime map by construction since all points are stable):
+
+| $\Sigma\lambda \setminus \gamma_0$ | 0.01 | 0.05 | 0.2 | 1.0 |
+|---|---|---|---|---|
+| 0.5 | released | released | intermediate | intermediate |
+| 1.0 | released | released | intermediate | intermediate |
+| 1.5 | released | intermediate | intermediate | intermediate |
+| 2.0 | released | released | released | intermediate |
+| 4.0 | released | released | released | dispersive |
+
 ## Status assignment
 
-Status: **partial** with respect to the full phase-diagram open problem;
-**informative** with respect to the regime structure in this 2D slice.
+Status: **tested_consistent** with respect to the regime-structure reproducibility under criterion 4 (promoted from `partial` by the 2026-05-17 multi-seed extension); **partial** with respect to the full phase-diagram open problem (the slice does not exhaust the higher-dimensional parameter space).
 
-The result contributes evidence under criterion 4 (cross-domain coherence)
-for the regime structure of the equation in the canonical 3D anti-collapse
-configuration. The 20-point grid is too coarse to identify regime boundaries
-precisely (denser sweeps would refine the released-intermediate boundary),
-and a 2D slice of a higher-dimensional phase space ($\Sigma\lambda \times
-\gamma_0 \times T_{\text{bath}} \times \nu_{\text{fast/slow}} \times
-\sigma_{\text{init}}$) does not exhaust the open problem. Further slices are
-needed.
+Rule 9 application: effect (the regime classification across 20 grid points) exceeds test-bed variance (regime stable in all 20 grid points across 4 seeds; quantitative variance < 3.5% of mean for peak_growth_ratio at every grid point). The regime structure documented in the single-seed run is therefore reproducible, not a seed artifact.
+
+The result contributes evidence under criterion 4 (cross-domain coherence) for the regime structure of the equation in the canonical 3D anti-collapse configuration. The 20-point grid is too coarse to identify regime boundaries precisely (denser sweeps would refine the released-intermediate boundary), and a 2D slice of a higher-dimensional phase space ($\Sigma\lambda \times \gamma_0 \times T_{\text{bath}} \times \nu_{\text{fast/slow}} \times \sigma_{\text{init}}$) does not exhaust the open problem. Further slices are needed for the full phase diagram.
 
 ## Honest caveats
 
