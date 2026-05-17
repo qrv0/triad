@@ -162,7 +162,7 @@ dynamics, gene-regulation and circadian rhythms, ecosystem dynamics, and
 the further substrates documented there) are first-class content. They are
 not commentary or speculation. Especially
 [`interfaces/05-archaeoacoustic-resonance.md`](interfaces/05-archaeoacoustic-resonance.md)
-is the most calibration-sensitive of the seventeen and the one most likely to
+is the most calibration-sensitive of the cross-domain interfaces and the one most likely to
 be dismissed by a mainstream reader on "respectability" grounds. The
 repository is structured so that the archaeoacoustic correspondence is
 treated with the same evidentiary care as the BAO correspondence and the

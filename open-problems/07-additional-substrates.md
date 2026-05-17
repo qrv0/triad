@@ -1,14 +1,14 @@
 # Open problem 07: Additional cross-domain substrates
 
-**Status:** Largely resolved in Phase 3. The five candidate substrates originally listed here (Kuramoto, immune, Friston FEP, active matter, SOC) have been developed into full interface documents ([`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md) through [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md)). Three additional logic-predicted substrates (cardiac dynamics, gene regulation / circadian, ecosystem dynamics) were also developed in Phase 3 ([`../interfaces/15-cardiac-dynamics.md`](../interfaces/15-cardiac-dynamics.md), [`../interfaces/16-gene-regulation-circadian.md`](../interfaces/16-gene-regulation-circadian.md), [`../interfaces/17-ecosystem-dynamics.md`](../interfaces/17-ecosystem-dynamics.md)). The cross-domain coherence ledger now stands at seventeen interfaces. The remaining open status is for further candidates beyond Phase 3 scope (plate tectonics, glassy systems, granular matter, open quantum systems beyond NLS family, market dynamics, plant signaling).
+**Status:** Largely resolved. The five candidate substrates originally listed here (Kuramoto, immune, Friston FEP, active matter, SOC) have been developed into full interface documents ([`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md) through [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md)). Three additional logic-predicted substrates (cardiac dynamics, gene regulation / circadian, ecosystem dynamics) were also developed ([`../interfaces/15-cardiac-dynamics.md`](../interfaces/15-cardiac-dynamics.md), [`../interfaces/16-gene-regulation-circadian.md`](../interfaces/16-gene-regulation-circadian.md), [`../interfaces/17-ecosystem-dynamics.md`](../interfaces/17-ecosystem-dynamics.md)). The cross-domain coherence ledger now stands at the documented interfaces. The remaining open status is for further candidates beyond the current scope (plate tectonics, glassy systems, granular matter, open quantum systems beyond NLS family, market dynamics, plant signaling).
 
 ## Precise statement
 
-The cross-domain coherence criterion (methodology/04 criterion 4) is currently operative across seventeen documented interfaces in [`../interfaces/`](../interfaces/). The original five candidates listed in this problem (Kuramoto, immune, Friston, active matter, SOC) plus three logic-predicted additions (cardiac, gene regulation / circadian, ecosystem) are all now developed as full interfaces (10 through 17). The remaining open status of this problem is for further candidates beyond Phase 3 scope, where the structural argument predicts additional substrate-instantiations but the documentation has not yet been written.
+The cross-domain coherence criterion (methodology/04 criterion 4) is currently operative across the documented interfaces in [`../interfaces/`](../interfaces/). The original five candidates listed in this problem (Kuramoto, immune, Friston, active matter, SOC) plus three logic-predicted additions (cardiac, gene regulation / circadian, ecosystem) are all now developed as full interfaces (10 through 17). The remaining open status of this problem is for further candidates beyond the current scope, where the structural argument predicts additional substrate-instantiations but the documentation has not yet been written.
 
 ## What was known and is now resolved
 
-The five original candidate substrates have been developed into full interfaces in Phase 3:
+The five original candidate substrates have been developed into full interfaces:
 
 1. **Kuramoto synchronization.** Now [`../interfaces/10-kuramoto-synchronization.md`](../interfaces/10-kuramoto-synchronization.md). Mathematical equivalence in the phase-only sector with multi-exponential memory.
 
@@ -20,7 +20,7 @@ The five original candidate substrates have been developed into full interfaces 
 
 5. **Self-organized criticality.** Now [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-self-organized-criticality.md). Mechanism-shape correspondence; the technical SOC-vs-MNSM mechanism distinction is documented.
 
-Three additional logic-predicted candidates were also developed in Phase 3:
+Three additional logic-predicted candidates were also added:
 
 6. **Cardiac dynamics.** Now [`../interfaces/15-cardiac-dynamics.md`](../interfaces/15-cardiac-dynamics.md). Calibration-dependent structural correspondence.
 
@@ -30,7 +30,7 @@ Three additional logic-predicted candidates were also developed in Phase 3:
 
 ## What remains open
 
-Candidate substrates the structural argument predicts but Phase 3 did not develop:
+Candidate substrates the structural argument predicts but the current set does not yet include:
 
 - **Plate tectonics and earthquake-cycle dynamics**: stress accumulation (P2) plus release events (P3 drive-and-relax) plus seismic-wave propagation (P1).
 - **Glassy systems and aging**: multi-timescale relaxation with explicit memory; mode-coupling theory framework.
@@ -39,11 +39,11 @@ Candidate substrates the structural argument predicts but Phase 3 did not develo
 - **Market dynamics in econophysics**: prices with memory (volatility clustering), interactions among agents (P3), intrinsic oscillation (business cycles).
 - **Plant signaling and vascular dynamics**: phloem signaling, root-shoot coupling, circadian and seasonal rhythms in plants.
 
-Each requires literature review and the standard logic-led interface template. The bar is the same as for the existing seventeen: peer-reviewed primary literature for the substrate, structural mapping in the inverted (logic-led) form, three-class evidentiary categorization in [`../interfaces/README.md`](../interfaces/README.md).
+Each requires literature review and the standard logic-led interface template. The bar is the same as for the documented interfaces: peer-reviewed primary literature for the substrate, structural mapping in the inverted (logic-led) form, three-class evidentiary categorization in [`../interfaces/README.md`](../interfaces/README.md).
 
 ## What is missing (for the remaining open candidates)
 
-- Full interface documents for the open candidates listed above, following the Phase 3 logic-led template (structural prediction first, substrate identification second, citations as credit, with time-as-calibration paragraph and locally testable predictions sections).
+- Full interface documents for the open candidates listed above, following the logic-led template (structural prediction first, substrate identification second, citations as credit, with time-as-calibration paragraph and locally testable predictions sections).
 - Term-by-term mathematical mappings (where possible) and three-class evidentiary categorization.
 - Wheel SVG updates if/when the open candidates are promoted; the current 17-node design pushes visual density toward its limit, and adding more nodes may require viewBox expansion or a split into core + extension visuals.
 
@@ -62,7 +62,7 @@ Each requires literature review and the standard logic-led interface template. T
 
 ## Connections to existing repo content
 
-- [`../interfaces/README.md`](../interfaces/README.md): the existing seventeen interfaces set the template and the bar; the three-class evidentiary division catalogued there is where each new substrate must be situated.
+- [`../interfaces/README.md`](../interfaces/README.md): the existing interfaces set the template and the bar; the three-class evidentiary division catalogued there is where each new substrate must be situated.
 - [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md) criterion 4: each new interface increases cross-domain coherence quantitatively.
 - [`../principles/README.md`](../principles/README.md) section "Why exactly three": the triangle topology argument generalizes to predict that any substrate sustaining the triangle is an instantiation; the additional substrates here are candidates the argument predicts should exist.
 - [`02-phase-diagram.md`](02-phase-diagram.md): each new substrate's calibration places it at a specific region of the phase diagram.

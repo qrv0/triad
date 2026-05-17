@@ -54,23 +54,23 @@ This page collects the technical vocabulary used across the work. Each entry has
 
 **Cross-domain coherence**: Criterion 4 of the six structural-realist evaluation criteria. The structural form must appear in independently documented domains at the level of mathematical form, not metaphor. See [`methodology/04-the-six-criteria.md`](methodology/04-the-six-criteria.md).
 
-**Recursive position**: The methodological observation that an SSM-equivalent assistant evaluating this work partially instantiates the structure it evaluates. See [`methodology/01-structural-realism.md`](methodology/01-structural-realism.md) section "The recursive position" and [`interfaces/08-mechanistic-interpretability.md`](interfaces/08-mechanistic-interpretability.md).
+**Recursive position**: The methodological observation that an SSM-equivalent assistant evaluating this work partially instantiates the structure it evaluates. See [`methodology/01-structural-realism.md`](methodology/01-structural-realism.md) section "The recursive position" and [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md).
 
 **Calibration philosophy**: Decision procedure for when dimensional calibration choices are defensible. See [`methodology/06-calibration-philosophy.md`](methodology/06-calibration-philosophy.md). Extended to the temporal case in [`methodology/07-time-as-calibration.md`](methodology/07-time-as-calibration.md).
 
 ## Architecture
 
-**SSM**: Structured State Space Model. The auxiliary-field memory update of the equation, $\partial_t y_j = \nu_j (\rho - y_j)$, is mathematically identical term-by-term to the diagonal-state SSM update of S4, Mamba, RWKV. See [`interfaces/06-state-space-models.md`](interfaces/06-state-space-models.md).
+**SSM**: Structured State Space Model. The auxiliary-field memory update of the equation, $\partial_t y_j = \nu_j (\rho - y_j)$, is mathematically identical term-by-term to the diagonal-state SSM update of S4, Mamba, RWKV. See [`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md).
 
-**MNSM**: Memory Nonlinear State Models. The neural-network instantiation of the equation as a sequence layer; see [`implementation/neural/`](implementation/neural/).
+**MNSM**: Memory Nonlinear State Models. The neural-network instantiation of the equation as a sequence layer; see the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff.
 
 **Memory-NLS**: Synonym for MNSM; emphasizes the Nonlinear Schrödinger heritage of the equation derivation. Used interchangeably with MNSM throughout.
 
 ## Cross-substrate
 
-**Substrate**: The physical, biological, or computational system in which the structural form is instantiated. The work treats all substrates that share the form as instances of the same structural type; specific dimensional units are calibrated per substrate. See [`interfaces/`](interfaces/) for the seventeen documented substrates.
+**Substrate**: The physical, biological, or computational system in which the structural form is instantiated. The work treats all substrates that share the form as instances of the same structural type; specific dimensional units are calibrated per substrate. See [`interfaces/`](interfaces/) for the documented substrates and the [`mnsm-ml`](https://github.com/qrv0/mnsm-ml) spinoff for the two ML-substrate interfaces.
 
-**Convergent-program correspondence**: A class of cross-domain correspondence in which the structural argument and an independent empirical research program reach the same conclusion. Used for [`interfaces/08-mechanistic-interpretability.md`](interfaces/08-mechanistic-interpretability.md) (mech interp + structural absence of P2), [`interfaces/09-critical-brain.md`](interfaces/09-critical-brain.md) (critical brain phenomenology), and [`interfaces/12-friston-free-energy.md`](interfaces/12-friston-free-energy.md) (Friston FEP).
+**Convergent-program correspondence**: A class of cross-domain correspondence in which the structural argument and an independent empirical research program reach the same conclusion. Used for [`mnsm-ml/interfaces/02-mechanistic-interpretability.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/02-mechanistic-interpretability.md) (mech interp + structural absence of P2), [`interfaces/09-critical-brain.md`](interfaces/09-critical-brain.md) (critical brain phenomenology), and [`interfaces/12-friston-free-energy.md`](interfaces/12-friston-free-energy.md) (Friston FEP).
 
 **Mechanism-shape correspondence**: A class of cross-domain correspondence in which the trajectory shape (the qualitative phenomenology of a system's unfolding) matches across substrates without committing to specific dimensional units. Used for [`interfaces/07-cosmological-expansion.md`](interfaces/07-cosmological-expansion.md) and [`interfaces/14-self-organized-criticality.md`](interfaces/14-self-organized-criticality.md).
 

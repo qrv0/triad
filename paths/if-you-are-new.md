@@ -2,7 +2,7 @@
 title: For newcomers
 description: >-
   A plain-language walk through what this work is, why an equation can
-  appear in seventeen different places at once, and why that matters.
+  appear in many different places at once, and why that matters.
   Curiosity is the only prerequisite.
 hide:
   - navigation
@@ -156,7 +156,7 @@ structure appears. They are catalogued in
 ## The cross-domain wheel
 
 The image on the homepage shows this at a glance, one equation in the
-centre, seventeen instantiations around it. Each instantiation is a different
+centre, multiple instantiations around it. Each instantiation is a different
 substrate where the same mathematical pattern appears, spanning physics
 (Bose–Einstein condensates, baryon acoustic oscillations, cymatic patterns,
 cosmic expansion, active matter, self-organized criticality), neuroscience
@@ -169,16 +169,16 @@ and theoretical neuroscience (Friston free-energy principle).
 
 The work's claim is not that one of these domains is "really" the work's
 subject and the others are analogies. The claim is that **the structure is
-the thing, and each of the seventeen is a faithful instance** of it.
+the thing, and each of the documented mappings is a faithful instance** of it.
 
 <div class="key-insight" markdown>
 <span class="key-insight-tag">The whole work in one line</span>
 **Three observations about how things last are turned into an equation,
-and the equation appears, independently, in seventeen different places,
+and the equation appears, independently, in many different places,
 across physics, biology, neuroscience, machine learning, ecology, and
 contemporary research programs.** That recurrence is the evidence that
 the equation is real, not just a formula that happens to fit one dataset.
-The work is the documentation of those seventeen appearances and the
+The work is the documentation of those the appearances and the
 methodological argument for why "recurring across substrates" should
 count as evidence at all.
 </div>
@@ -218,7 +218,7 @@ After that, you have a choice.
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">D · Cross-domain</span>
-<p class="title">[The seventeen instantiations](../interfaces/README.md)</p>
+<p class="title">[The multiple instantiations](../interfaces/README.md)</p>
 <p class="blurb">Where else the same pattern appears. Each interface is self-contained.</p>
 </div>
 <div class="path-reading-card" markdown>

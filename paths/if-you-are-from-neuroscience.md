@@ -185,7 +185,7 @@ working on stress-related disorders, dissociative phenomena, and acute
 psychological breakdown.
 
 The optimization-collapse experiment
-([`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md))
+([`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md))
 compared two 70M-parameter neural sequence models, one with the multi-
 timescale memory hierarchy that the equation requires, one without, under
 identical training conditions on enwik8. The model **without** the
@@ -304,7 +304,7 @@ left as an open question.
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">06 · Cross-substrate</span>
-<p class="title">[Optimization-collapse experiment](../results/08-optimization-collapse-empirical.md)</p>
+<p class="title">[Optimization-collapse experiment](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)</p>
 <p class="blurb">Cross-substrate analogue of memory-hierarchy failure under sustained pressure. The mental-breakdown structural parallel.</p>
 </div>
 <div class="path-reading-card" markdown>

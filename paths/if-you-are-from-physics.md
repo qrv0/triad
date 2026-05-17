@@ -186,7 +186,7 @@ been observed to operate in a categorically different substrate: gradient
 flow on a high-dimensional non-convex loss landscape of a 70M-parameter
 neural sequence model trained on enwik8.
 
-In a controlled comparison ([`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md)),
+In a controlled comparison ([`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)),
 the model with explicit multi-timescale memory hierarchy (Memory-NLS layer)
 descended monotonically through 50 000 training steps to a stable plateau.
 The matched-shape attention-only baseline (Transformer) reached a lower
@@ -224,7 +224,7 @@ correspondences is the **exact mathematical equivalence** between the
 auxiliary-field memory equation and the diagonal-state structured state
 space model used in modern sequence-modeling architectures (S4, Mamba,
 RWKV), same equation, derived twice by communities that did not coordinate.
-Detail: [`../interfaces/06-state-space-models.md`](../interfaces/06-state-space-models.md).
+Detail: [`mnsm-ml/interfaces/01-state-space-models.md`](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md).
 
 **The temporal–spatial asymmetry.** The memory kernel can be non-local in
 time (standard) or also non-local in space (Gaussian/exponential smoothing).
@@ -287,7 +287,7 @@ The order that minimizes back-and-forth for a physics reader:
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">07 · Cross-substrate</span>
-<p class="title">[Optimization-collapse experiment](../results/08-optimization-collapse-empirical.md)</p>
+<p class="title">[Optimization-collapse experiment](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)</p>
 <p class="blurb">The anti-collapse mechanism manifesting in 70M-parameter neural training. Empirical instance of the structural-realist prediction.</p>
 </div>
 <div class="path-reading-card" markdown>
@@ -297,7 +297,7 @@ The order that minimizes back-and-forth for a physics reader:
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">09 · Interface</span>
-<p class="title">[SSM equivalence](../interfaces/06-state-space-models.md)</p>
+<p class="title">[SSM equivalence](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)</p>
 <p class="blurb">Exact mathematical equivalence with structured state space models in modern ML. Same equation, two derivations.</p>
 </div>
 <div class="path-reading-card" markdown>

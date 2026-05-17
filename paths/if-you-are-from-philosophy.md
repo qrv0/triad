@@ -105,7 +105,7 @@ The work treats the **cross-domain co-occurrence** of a specific mathematical
 structure as the principal evidence for the structural-realist claim about
 that structure.
 
-The seventeen cross-domain interfaces in
+The cross-domain interfaces in
 [`../interfaces/`](../interfaces/README.md) are presented as **independent
 instances** of the same mathematical form, drawn from physically,
 biologically, and computationally distinct domains:
@@ -136,7 +136,7 @@ dependent structural correspondence** (the form is the same but specific
 numerical values require a choice of dimensional units), and **mechanism-
 shape or convergent-program correspondence** (the trajectory or
 phenomenology matches between independent substrates without committing
-to a specific calibration). It **does not treat all seventeen as equally
+to a specific calibration). It **does not treat all of them as equally
 weighty evidence**; the discussion of the three-class division and the
 per-mapping evidentiary weight is in [`../interfaces/README.md`](../interfaces/README.md)
 and the individual interface documents.
@@ -215,7 +215,7 @@ across substrates that were not coordinated** to share it.
 
 <div class="path-callout" markdown>
 The optimization-collapse experiment documented in
-[`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md)
+[`mnsm-ml/results/01-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)
 is one such empirical instance: the anti-collapse mechanism **derived from
 the equation in 3D NLS field dynamics** manifests in a **categorically
 different substrate** (gradient descent in 70M-parameter neural network),
@@ -280,11 +280,11 @@ taking the observation seriously rather than ignoring it.
 <div class="path-reading-card" markdown>
 <span class="step">05 · Evidence</span>
 <p class="title">[Cross-domain interfaces](../interfaces/README.md)</p>
-<p class="blurb">The seventeen independent instances of the structure, divided into three evidentiary classes (mathematical equivalence, calibration-dependent structural correspondence, mechanism-shape and convergent-program correspondence).</p>
+<p class="blurb">The independent instances of the structure, divided into three evidentiary classes (mathematical equivalence, calibration-dependent structural correspondence, mechanism-shape and convergent-program correspondence).</p>
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">06 · Strongest evidence</span>
-<p class="title">[SSM equivalence](../interfaces/06-state-space-models.md)</p>
+<p class="title">[SSM equivalence](https://github.com/qrv0/mnsm-ml/blob/main/interfaces/01-state-space-models.md)</p>
 <p class="blurb">The mathematically exact correspondence with machine-learning SSMs. The clean case, no calibration.</p>
 </div>
 <div class="path-reading-card" markdown>
@@ -294,7 +294,7 @@ taking the observation seriously rather than ignoring it.
 </div>
 <div class="path-reading-card" markdown>
 <span class="step">08 · Empirical instance</span>
-<p class="title">[Optimization-collapse experiment](../results/08-optimization-collapse-empirical.md)</p>
+<p class="title">[Optimization-collapse experiment](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md)</p>
 <p class="blurb">A worked instance of cross-substrate confirmation. Same structure, two substrates, no design coordination.</p>
 </div>
 <div class="path-reading-card" markdown>
