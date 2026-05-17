@@ -1,0 +1,21 @@
+{
+  "prediction": "P21.1 (interface 21 Hawkes intensity auxiliary equivalence)",
+  "hawkes_params": {
+    "mu": 1.0,
+    "alpha": 0.6,
+    "beta": 2.0,
+    "t_max": 2000.0
+  },
+  "n_events": 4983,
+  "n_grid_points": 10001,
+  "max_relative_error_intensity": 2.950587918081373e-16,
+  "threshold": 0.001,
+  "passes_threshold": true,
+  "mean_intensity_empirical": 2.491752838177026,
+  "mean_intensity_theoretical": 2.5,
+  "event_rate_empirical": 2.4915,
+  "event_rate_theoretical": 2.5,
+  "wall_time_s": 0.2627730369567871,
+  "backend": "numpy",
+  "seed": 42
+}

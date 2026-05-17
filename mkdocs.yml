@@ -212,6 +212,10 @@ plugins:
             'Cardiac Dynamics': Dinâmica Cardíaca
             'Gene Regulation and Circadian': Regulação Gênica e Circadiano
             'Ecosystem Dynamics': Dinâmica de Ecossistemas
+            'Pseudomode Quantum Embedding': Embedding Quântico Pseudomodo
+            'Viscoelasticity (Prony)': Viscoelasticidade (Prony)
+            'Warm Inflation': Inflação Morna
+            'Hawkes Intensity Processes': Processos de Intensidade Hawkes
             Methodology: Metodologia
             'Structural Realism': Realismo Estrutural
             'Limits of Falsification': Limites da Falsificação
@@ -220,6 +224,7 @@ plugins:
             'Implications for AGI': Implicações para AGI
             'Calibration Philosophy': Filosofia de Calibração
             'Time as Calibration': Tempo como Calibração
+            'Mori-Zwanzig Foundation': Fundamento de Mori-Zwanzig
             'Open Problems': Problemas em Aberto
             'Research Agenda': Agenda de Pesquisa
             Implementation: Implementação
@@ -288,6 +293,10 @@ plugins:
             'Cardiac Dynamics': Dinámica Cardíaca
             'Gene Regulation and Circadian': Regulación Génica y Circadiano
             'Ecosystem Dynamics': Dinámica de Ecosistemas
+            'Pseudomode Quantum Embedding': Embedding Cuántico Pseudomodo
+            'Viscoelasticity (Prony)': Viscoelasticidad (Prony)
+            'Warm Inflation': Inflación Cálida
+            'Hawkes Intensity Processes': Procesos de Intensidad Hawkes
             Methodology: Metodología
             'Structural Realism': Realismo Estructural
             'Limits of Falsification': Límites de la Falsación
@@ -296,6 +305,7 @@ plugins:
             'Implications for AGI': Implicaciones para AGI
             'Calibration Philosophy': Filosofía de Calibración
             'Time as Calibration': Tiempo como Calibración
+            'Mori-Zwanzig Foundation': Fundamento de Mori-Zwanzig
             'Open Problems': Problemas Abiertos
             'Research Agenda': Agenda de Investigación
             Implementation: Implementación
@@ -418,6 +428,10 @@ nav:
       - 'Wave-2 FDT-Locked Noise (P3)': results/16-fdt-locked-noise-empirical-p3.md
       - 'Wave-2 Cubic SSM SimSiam FDT': results/17-cubic-ssm-simsiam-fdt.md
       - 'Wave-2 SOC vs MNSM Matched Drive': results/18-soc-vs-mnsm-matched-drive.md
+      - 'Pseudomode Auxiliary Equivalence': results/19-pseudomode-auxiliary-equivalence.md
+      - 'Prony Viscoelastic Reproduction': results/20-prony-viscoelastic-reproduction.md
+      - 'Hawkes Intensity Auxiliary': results/21-hawkes-intensity-auxiliary.md
+      - 'Warm Inflation Langevin': results/22-warm-inflation-langevin.md
 
   - Cross-Domain Interfaces:
       - 'Overview': interfaces/README.md
@@ -428,6 +442,8 @@ nav:
           - 'Baryon Acoustic Oscillations': interfaces/02-baryon-acoustic.md
           - 'Chladni Cymatics': interfaces/03-chladni-cymatics.md
           - 'Cosmological Expansion': interfaces/07-cosmological-expansion.md
+          - 'Pseudomode Quantum Embedding': interfaces/18-pseudomode-quantum.md
+          - 'Warm Inflation': interfaces/20-warm-inflation.md
       - 'Neural and brain':
           - 'Gamma-Frequency Entrainment': interfaces/04-gamma-entrainment.md
           - 'Mechanistic Interpretability': interfaces/08-mechanistic-interpretability.md
@@ -437,6 +453,7 @@ nav:
           - 'Friston Free-Energy Principle': interfaces/12-friston-free-energy.md
           - 'Active Matter': interfaces/13-active-matter.md
           - 'Self-Organized Criticality': interfaces/14-self-organized-criticality.md
+          - 'Hawkes Intensity Processes': interfaces/21-hawkes-intensity.md
       - 'Biological':
           - 'Immune Affinity Maturation': interfaces/11-immune-affinity-maturation.md
           - 'Cardiac Dynamics': interfaces/15-cardiac-dynamics.md
@@ -445,6 +462,7 @@ nav:
       - 'Engineering and archaeology':
           - 'Archaeoacoustic Resonance': interfaces/05-archaeoacoustic-resonance.md
           - 'State Space Models': interfaces/06-state-space-models.md
+          - 'Viscoelasticity (Prony)': interfaces/19-viscoelasticity-prony.md
 
   - Methodology:
       - 'Overview': methodology/README.md
@@ -455,6 +473,7 @@ nav:
       - 'Implications for AGI': methodology/05-implications-for-agi.md
       - 'Calibration Philosophy': methodology/06-calibration-philosophy.md
       - 'Time as Calibration': methodology/07-time-as-calibration.md
+      - 'Mori-Zwanzig Foundation': methodology/08-mori-zwanzig-foundation.md
 
   - Open Problems:
       - 'Overview': open-problems/README.md
