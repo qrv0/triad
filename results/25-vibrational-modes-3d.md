@@ -181,7 +181,7 @@ Status: **tested_consistent** at the cascade-structure-reproducibility level
 (promoted from `partial` by the 2026-05-17 multi-seed extension); **partial**
 at the Hypogeum whole-tone-scale match level.
 
-Rule 9 application: effect (cascade structure) exceeds test-bed variance
+Statistical-power note: effect (cascade structure) exceeds test-bed variance
 (seed-to-seed std 0.4% to 2.2% per bin) by two orders of magnitude. The
 cascade structure 0.125 / 0.225 / 0.325 / 0.425 / 0.525 cycles per unit time
 is therefore reproducible structural prediction of the equation's 3D

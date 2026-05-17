@@ -73,7 +73,7 @@ The dimensional rescaling Sigma_lambda_crit/|Lambda| versus d is a Convention-A-
 
 Status: **tested_consistent** with respect to the cross-convention question: the regime structure of the equation at L=20 depends on the initial-state convention; the conventions are not interchangeable at fixed L. **partial / informative** with respect to the broader convention-audit question: the Convention A at L=10 and the Convention B at L=10 versions have not been run here, leaving the L-dependence of the convention behavior partially characterized.
 
-Rule 9 application: the effect (Convention A 20/20 dispersive vs Convention B 11+ released at d=3) exceeds any test-bed variance by orders of magnitude. The convention dependence at L=20 is a deterministic property of the initial state, not a stochastic seed effect; single-seed runs are sufficient to document it.
+Statistical-power note: the effect (Convention A 20/20 dispersive vs Convention B 11+ released at d=3) exceeds any test-bed variance by orders of magnitude. The convention dependence at L=20 is a deterministic property of the initial state, not a stochastic seed effect; single-seed runs are sufficient to document it.
 
 ## Honest caveats
 

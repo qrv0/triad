@@ -175,7 +175,7 @@ Multi-seed regime map (identical to single-seed regime map by construction since
 
 Status: **tested_consistent** with respect to the regime-structure reproducibility under criterion 4 (promoted from `partial` by the 2026-05-17 multi-seed extension); **partial** with respect to the full phase-diagram open problem (the slice does not exhaust the higher-dimensional parameter space).
 
-Rule 9 application: effect (the regime classification across 20 grid points) exceeds test-bed variance (regime stable in all 20 grid points across 4 seeds; quantitative variance < 3.5% of mean for peak_growth_ratio at every grid point). The regime structure documented in the single-seed run is therefore reproducible, not a seed artifact.
+Statistical-power note: effect (the regime classification across 20 grid points) exceeds test-bed variance (regime stable in all 20 grid points across 4 seeds; quantitative variance < 3.5% of mean for peak_growth_ratio at every grid point). The regime structure documented in the single-seed run is therefore reproducible, not a seed artifact.
 
 The result contributes evidence under criterion 4 (cross-domain coherence) for the regime structure of the equation in the canonical 3D anti-collapse configuration. The 20-point grid is too coarse to identify regime boundaries precisely (denser sweeps would refine the released-intermediate boundary), and a 2D slice of a higher-dimensional phase space ($\Sigma\lambda \times \gamma_0 \times T_{\text{bath}} \times \nu_{\text{fast/slow}} \times \sigma_{\text{init}}$) does not exhaust the open problem. Further slices are needed for the full phase diagram.
 

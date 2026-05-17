@@ -103,7 +103,7 @@ Status: **tested_consistent** with respect to the convention-robustness question
 
 The 1/d formula in results/06 is structurally informative as a fit across multi-convention data, not as a within-convention scaling.
 
-Rule 9 application: the convention effect is deterministic in this regime (Convention A 100% non-released at both L and at native parameter regime, Convention B released-dominant at both L); single-seed runs are sufficient to document it. The variance question is closed at this scale because the convention effect dominates by orders of magnitude.
+Statistical-power note: the convention effect is deterministic in this regime (Convention A 100% non-released at both L and at native parameter regime, Convention B released-dominant at both L); single-seed runs are sufficient to document it. The variance question is closed at this scale because the convention effect dominates by orders of magnitude.
 
 ## Honest caveats
 
