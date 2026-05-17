@@ -142,7 +142,7 @@ The structural claim of this interface (the equation's two principal vibrational
   - How to test: comparison of frequency-ratio measurements across chambers of significantly different size; correlate ratio with chamber dimensions.
   - What would constitute confirmation: ratio remains within tight bounds of 0.6:1.0 across chamber size variation.
   - What would constitute evidence inconsistent with this calibration: ratio varies systematically with chamber dimensions, indicating a substrate-specific (rather than structural) origin.
-  - Status: untested. Existing measurements at multiple sites show ratios consistent with 0.6:1.0 but the systematic ratio-vs-size study has not been performed.
+  - Status: **partial** (see [`../results/23-hypogeum-spectrum-audit.md`](../results/23-hypogeum-spectrum-audit.md)). The Wolfe-Swanson-Till 2020 high-resolution Hypogeum spectrum has nine prominent low-frequency peaks (37.2 to 92.5 Hz) forming a whole-tone scale with constant consecutive ratio $\approx 1.122$, not the two-mode 0.6:1.0 split the equation's 2D vibrational analysis predicts. Several non-consecutive pair ratios in the Hypogeum spectrum cluster near 0.6 (37.2/64.3 = 0.578; 41.0/72.7 = 0.564; 57.1/92.5 = 0.617; four-to-five whole-tone intervals). Cross-chamber invariance not testable because Jahn 1996 reports only single dominant peak per chamber; WST 2020 methodology applied only to the Hypogeum to date. A 3D vibrational analysis of the equation is flagged as analytical work for [`../open-problems/01-analytical-anti-collapse.md`](../open-problems/01-analytical-anti-collapse.md) to clarify whether the multi-mode whole-tone-scale richness is predicted by the equation or a substrate-specific 3D-cavity effect.
 
 ## References
 
