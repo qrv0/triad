@@ -1,0 +1,902 @@
+{
+  "prediction_tested": "Phase diagram 2D slice multi-seed extension of results/26",
+  "config": {
+    "N": 48,
+    "L": 20.0,
+    "Lambda": -8.0,
+    "T_bath": 0.001,
+    "n_steps": 2000,
+    "dt": 0.0025,
+    "nu_fast": 10.0,
+    "nu_slow": 0.5,
+    "sigma_init": 0.5,
+    "normalized": true
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45
+  ],
+  "n_seeds": 4,
+  "sigma_lambda_values": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "gamma_0_values": [
+    0.01,
+    0.05,
+    0.2,
+    1.0
+  ],
+  "aggregated_grid": [
+    {
+      "Sigma_lambda": 0.5,
+      "gamma_0": 0.01,
+      "seeds_used": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.208500074859585,
+        5.211657023840599,
+        5.205446067303701,
+        5.2090863693911515
+      ],
+      "per_seed_final_ratio": [
+        0.0015683698765974168,
+        0.001638447377790256,
+        0.0014952028949464173,
+        0.0014814139986036427
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.208672383848759,
+      "peak_growth_std": 0.0022089742385814387,
+      "final_ratio_mean": 0.0015458585369844333,
+      "final_ratio_std": 6.284613442832795e-05,
+      "max_peak_mean": 7.483254216022948,
+      "max_peak_std": 0.003173614035547754,
+      "final_peak_mean": 0.0022209214866602983,
+      "final_peak_std": 9.02904935775638e-05,
+      "final_norm_mean": 1.669756898355386,
+      "final_norm_std": 0.0034330236858200604
+    },
+    {
+      "Sigma_lambda": 0.5,
+      "gamma_0": 0.05,
+      "seeds_used": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.1179104607275905,
+        5.077445224439615,
+        5.106948198740463,
+        5.105422450480188
+      ],
+      "per_seed_final_ratio": [
+        0.003882182409320092,
+        0.004454754818857473,
+        0.003463196812600894,
+        0.0041089007641636555
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.101931583596964,
+      "peak_growth_std": 0.01493535133695144,
+      "final_ratio_mean": 0.003977258701235529,
+      "final_ratio_std": 0.000360080304136105,
+      "max_peak_mean": 7.329900638634829,
+      "max_peak_std": 0.021457489091959665,
+      "final_peak_mean": 0.0057140929109929075,
+      "final_peak_std": 0.0005173242345571131,
+      "final_norm_mean": 3.757495424525339,
+      "final_norm_std": 0.00900898563532846
+    },
+    {
+      "Sigma_lambda": 0.5,
+      "gamma_0": 0.2,
+      "seeds_used": [
+        67,
+        68,
+        69,
+        70
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        4.689469852758652,
+        4.711580556150167,
+        4.794078106101366,
+        4.70426726129147
+      ],
+      "per_seed_final_ratio": [
+        0.008248256683359764,
+        0.007639949604611357,
+        0.00761202379203529,
+        0.007237132417334765
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 4.724848944075414,
+      "peak_growth_std": 0.04075540688537225,
+      "final_ratio_mean": 0.007684340624335294,
+      "final_ratio_std": 0.0003623523109145141,
+      "max_peak_mean": 6.788149297018747,
+      "max_peak_std": 0.058552937855411415,
+      "final_peak_mean": 0.011040025199650414,
+      "final_peak_std": 0.0005205884068932511,
+      "final_norm_mean": 7.063599214118399,
+      "final_norm_std": 0.011313515224278049
+    },
+    {
+      "Sigma_lambda": 0.5,
+      "gamma_0": 1.0,
+      "seeds_used": [
+        147,
+        148,
+        149,
+        150
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        3.5090715678200697,
+        3.553184787765243,
+        3.503067171517106,
+        3.3991523942747204
+      ],
+      "per_seed_final_ratio": [
+        0.008905697953214853,
+        0.008922959258816148,
+        0.00904350176194242,
+        0.008028682587671723
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 3.4911189803442846,
+      "peak_growth_std": 0.05651343219422282,
+      "final_ratio_mean": 0.008725210390411287,
+      "final_ratio_std": 0.0004056293728462442,
+      "max_peak_mean": 5.015660211094912,
+      "max_peak_std": 0.08119235547251963,
+      "final_peak_mean": 0.012535433720537944,
+      "final_peak_std": 0.0005827641845754718,
+      "final_norm_mean": 8.028136694073067,
+      "final_norm_std": 0.030271171891137434
+    },
+    {
+      "Sigma_lambda": 1.0,
+      "gamma_0": 0.01,
+      "seeds_used": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.114804427584136,
+        5.129341577524492,
+        5.128712354392747,
+        5.126201660370448
+      ],
+      "per_seed_final_ratio": [
+        0.0016501671125292601,
+        0.001240060376063303,
+        0.0016964964039052493,
+        0.0013521868583616003
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.124765004967956,
+      "peak_growth_std": 0.005869490276234113,
+      "final_ratio_mean": 0.0014847276877148533,
+      "final_ratio_std": 0.00019342011094783762,
+      "max_peak_mean": 7.3627052161065345,
+      "max_peak_std": 0.00843264552244312,
+      "final_peak_mean": 0.0021330953283201903,
+      "final_peak_std": 0.0002778849875838265,
+      "final_norm_mean": 1.6657936926035914,
+      "final_norm_std": 0.006009740058943261
+    },
+    {
+      "Sigma_lambda": 1.0,
+      "gamma_0": 0.05,
+      "seeds_used": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.054271966903197,
+        5.016545979748201,
+        5.0017144994648275,
+        5.038767705610442
+      ],
+      "per_seed_final_ratio": [
+        0.0036926324155122222,
+        0.003950254646998277,
+        0.0037442855381731826,
+        0.003652005611099891
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.027825037931667,
+      "peak_growth_std": 0.02017522862626075,
+      "final_ratio_mean": 0.0037597945529458934,
+      "final_ratio_std": 0.000114722257708131,
+      "max_peak_mean": 7.223432410376833,
+      "max_peak_std": 0.028985575123681332,
+      "final_peak_mean": 0.00540166406452363,
+      "final_peak_std": 0.00016482046775068767,
+      "final_norm_mean": 3.753375982730301,
+      "final_norm_std": 0.015509428482569226
+    },
+    {
+      "Sigma_lambda": 1.0,
+      "gamma_0": 0.2,
+      "seeds_used": [
+        72,
+        73,
+        74,
+        75
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        4.6798988633828635,
+        4.670672064490184,
+        4.738902711353867,
+        4.628033954746636
+      ],
+      "per_seed_final_ratio": [
+        0.007048032987640598,
+        0.0073839078881575565,
+        0.00712175039253826,
+        0.007426472917320284
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 4.679376898493388,
+      "peak_growth_std": 0.03954575467623579,
+      "final_ratio_mean": 0.007245041046414175,
+      "final_ratio_std": 0.00016295266496068437,
+      "max_peak_mean": 6.722820005457228,
+      "max_peak_std": 0.05681504106965641,
+      "final_peak_mean": 0.010408887324907327,
+      "final_peak_std": 0.00023411267348286786,
+      "final_norm_mean": 7.063604075822504,
+      "final_norm_std": 0.019285374219009624
+    },
+    {
+      "Sigma_lambda": 1.0,
+      "gamma_0": 1.0,
+      "seeds_used": [
+        152,
+        153,
+        154,
+        155
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        3.4406754693238657,
+        3.3978233977465933,
+        3.4511940894816053,
+        3.422384513006974
+      ],
+      "per_seed_final_ratio": [
+        0.008721406259458157,
+        0.00966290081412665,
+        0.007777143555824107,
+        0.009208109545760863
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 3.4280193673897594,
+      "peak_growth_std": 0.020253350505576785,
+      "final_ratio_mean": 0.008842390043792444,
+      "final_ratio_std": 0.0006993525281564339,
+      "max_peak_mean": 4.925005547128033,
+      "max_peak_std": 0.029097812146798546,
+      "final_peak_mean": 0.012703784707233849,
+      "final_peak_std": 0.001004753681771378,
+      "final_norm_mean": 8.020868519747221,
+      "final_norm_std": 0.011536964200490748
+    },
+    {
+      "Sigma_lambda": 1.5,
+      "gamma_0": 0.01,
+      "seeds_used": [
+        58,
+        59,
+        60,
+        61
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.026715175425568,
+        5.0193481447044235,
+        5.037722704651712,
+        5.0365471104037
+      ],
+      "per_seed_final_ratio": [
+        0.0014153921955028543,
+        0.0014430902978129646,
+        0.0015737742511309867,
+        0.001812668990172847
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.030083283796351,
+      "peak_growth_std": 0.007528764353058951,
+      "final_ratio_mean": 0.0015612314336549131,
+      "final_ratio_std": 0.00015700682983611414,
+      "max_peak_mean": 7.226676812528158,
+      "max_peak_std": 0.010816510126682256,
+      "final_peak_mean": 0.002243007593319372,
+      "final_peak_std": 0.0002255703439822285,
+      "final_norm_mean": 1.6654224231567687,
+      "final_norm_std": 0.004319436118441731
+    },
+    {
+      "Sigma_lambda": 1.5,
+      "gamma_0": 0.05,
+      "seeds_used": [
+        62,
+        63,
+        64,
+        65
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        4.9253384363870145,
+        4.918270313234693,
+        4.933163614576903,
+        4.916621029613595
+      ],
+      "per_seed_final_ratio": [
+        0.003595346832781163,
+        0.003941631943362672,
+        0.0038170671467712396,
+        0.003927910117190544
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 4.923348348453051,
+      "peak_growth_std": 0.006544905643199099,
+      "final_ratio_mean": 0.003820489010026405,
+      "final_ratio_std": 0.00013866832162082808,
+      "max_peak_mean": 7.073331661202958,
+      "max_peak_std": 0.009403008893362487,
+      "final_peak_mean": 0.005488863262009218,
+      "final_peak_std": 0.00019922356906446943,
+      "final_norm_mean": 3.755418720480876,
+      "final_norm_std": 0.010961291025953375
+    },
+    {
+      "Sigma_lambda": 1.5,
+      "gamma_0": 0.2,
+      "seeds_used": [
+        77,
+        78,
+        79,
+        80
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        4.884781883517884,
+        4.9025420985626695,
+        4.821112222937337,
+        4.910568343888875
+      ],
+      "per_seed_final_ratio": [
+        0.009803500517355446,
+        0.00789262817057254,
+        0.007396815522323549,
+        0.008534003549306937
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 4.879751137226692,
+      "peak_growth_std": 0.03511751280471881,
+      "final_ratio_mean": 0.008406736939889617,
+      "final_ratio_std": 0.0009015811635059678,
+      "max_peak_mean": 7.010695927819507,
+      "max_peak_std": 0.050453024568608146,
+      "final_peak_mean": 0.012077885689930831,
+      "final_peak_std": 0.0012952937995896056,
+      "final_norm_mean": 7.038345488004976,
+      "final_norm_std": 0.021678636733499124
+    },
+    {
+      "Sigma_lambda": 1.5,
+      "gamma_0": 1.0,
+      "seeds_used": [
+        157,
+        158,
+        159,
+        160
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        3.4062083660640403,
+        3.417416604645042,
+        3.427686646399129,
+        3.385623820623604
+      ],
+      "per_seed_final_ratio": [
+        0.009568616882091456,
+        0.008029559284481685,
+        0.008080736370650063,
+        0.008782546086389264
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 3.4092338594329537,
+      "peak_growth_std": 0.015604888727009028,
+      "final_ratio_mean": 0.008615364655903117,
+      "final_ratio_std": 0.0006256266406594354,
+      "max_peak_mean": 4.898016571577602,
+      "max_peak_std": 0.022419407624687686,
+      "final_peak_mean": 0.01237761931116574,
+      "final_peak_std": 0.0008988323417860282,
+      "final_norm_mean": 8.036058060912872,
+      "final_norm_std": 0.02282337006803333
+    },
+    {
+      "Sigma_lambda": 2.0,
+      "gamma_0": 0.01,
+      "seeds_used": [
+        63,
+        64,
+        65,
+        66
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.031377965318936,
+        5.0317324152115255,
+        5.028488483512584,
+        5.023515749880468
+      ],
+      "per_seed_final_ratio": [
+        0.0018216243950260802,
+        0.0019119573901203238,
+        0.002000511961345051,
+        0.0017414771657638444
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.028778653480878,
+      "peak_growth_std": 0.00328874912811152,
+      "final_ratio_mean": 0.0018688927280638248,
+      "final_ratio_std": 9.701444288347687e-05,
+      "max_peak_mean": 7.224802461524843,
+      "max_peak_std": 0.004724917208211446,
+      "final_peak_mean": 0.0026850218934760957,
+      "final_peak_std": 0.00013937980453023935,
+      "final_norm_mean": 1.6663818916415503,
+      "final_norm_std": 0.0017036646028395352
+    },
+    {
+      "Sigma_lambda": 2.0,
+      "gamma_0": 0.05,
+      "seeds_used": [
+        67,
+        68,
+        69,
+        70
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.060199871216011,
+        5.043970117111661,
+        5.030665864716004,
+        5.061570557369111
+      ],
+      "per_seed_final_ratio": [
+        0.004213975651730826,
+        0.0038910879115700795,
+        0.0037718656988469713,
+        0.004378412850364828
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.049101602603197,
+      "peak_growth_std": 0.0126969974201752,
+      "final_ratio_mean": 0.004063835528128176,
+      "final_ratio_std": 0.0002432021117393927,
+      "max_peak_mean": 7.254000265397705,
+      "max_peak_std": 0.0182416655288175,
+      "final_peak_mean": 0.005838477083601508,
+      "final_peak_std": 0.00034940635423007997,
+      "final_norm_mean": 3.758571236379029,
+      "final_norm_std": 0.009444429793454083
+    },
+    {
+      "Sigma_lambda": 2.0,
+      "gamma_0": 0.2,
+      "seeds_used": [
+        82,
+        83,
+        84,
+        85
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.0720030775618685,
+        5.070655228488052,
+        5.046649644511495,
+        5.07759536635864
+      ],
+      "per_seed_final_ratio": [
+        0.007406909097853735,
+        0.008551304596502933,
+        0.006867680380437424,
+        0.007505037545905743
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.066725829230014,
+      "peak_growth_std": 0.011879494504479086,
+      "final_ratio_mean": 0.007582732905174959,
+      "final_ratio_std": 0.0006095862971000002,
+      "max_peak_mean": 7.27932083818286,
+      "max_peak_std": 0.017067166215045303,
+      "final_peak_mean": 0.010894046275127384,
+      "final_peak_std": 0.0008757873199989402,
+      "final_norm_mean": 7.055962106368038,
+      "final_norm_std": 0.010847680546779466
+    },
+    {
+      "Sigma_lambda": 2.0,
+      "gamma_0": 1.0,
+      "seeds_used": [
+        162,
+        163,
+        164,
+        165
+      ],
+      "per_seed_regime": [
+        "intermediate",
+        "intermediate",
+        "intermediate",
+        "intermediate"
+      ],
+      "per_seed_peak_growth": [
+        3.200765274347857,
+        3.029025788513315,
+        3.1551789487217348,
+        3.2942263603013986
+      ],
+      "per_seed_final_ratio": [
+        0.009020155136595924,
+        0.00783221667385465,
+        0.008099014606251051,
+        0.008765746506939941
+      ],
+      "regime_counts": {
+        "intermediate": 4
+      },
+      "majority_regime": "intermediate",
+      "stability": "stable",
+      "peak_growth_mean": 3.1697990929710764,
+      "peak_growth_std": 0.09548811589692757,
+      "final_ratio_mean": 0.00842928323091039,
+      "final_ratio_std": 0.0004816386049295048,
+      "max_peak_mean": 4.554022729472224,
+      "max_peak_std": 0.13718694385185584,
+      "final_peak_mean": 0.012110277749730954,
+      "final_peak_std": 0.0006919659858266834,
+      "final_norm_mean": 8.01592246184109,
+      "final_norm_std": 0.011255328801897616
+    },
+    {
+      "Sigma_lambda": 4.0,
+      "gamma_0": 0.01,
+      "seeds_used": [
+        83,
+        84,
+        85,
+        86
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.820196986082738,
+        5.820165091940492,
+        5.82283463329413,
+        5.820453877860573
+      ],
+      "per_seed_final_ratio": [
+        0.00238701935590299,
+        0.0029430542669252988,
+        0.0023438746782931856,
+        0.0024869048029076937
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.820912647294483,
+      "peak_growth_std": 0.001115292512483478,
+      "final_ratio_mean": 0.002540213276007292,
+      "final_ratio_std": 0.000238295971103834,
+      "max_peak_mean": 8.362854466339297,
+      "max_peak_std": 0.0016023310319960664,
+      "final_peak_mean": 0.003649502273597207,
+      "final_peak_std": 0.00034235774474001293,
+      "final_norm_mean": 1.6665947886253147,
+      "final_norm_std": 0.0025145682141597355
+    },
+    {
+      "Sigma_lambda": 4.0,
+      "gamma_0": 0.05,
+      "seeds_used": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.743533800535045,
+        5.738984559982228,
+        5.740249042971367,
+        5.723771774855137
+      ],
+      "per_seed_final_ratio": [
+        0.0038565850951857157,
+        0.004173909404074426,
+        0.003885919534200508,
+        0.0044891566757118756
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.736634794585944,
+      "peak_growth_std": 0.007609825038888448,
+      "final_ratio_mean": 0.004101392677293131,
+      "final_ratio_std": 0.00025591943155232373,
+      "max_peak_mean": 8.241773209903558,
+      "max_peak_std": 0.010932969307503471,
+      "final_peak_mean": 0.005892435112465436,
+      "final_peak_std": 0.00036767721676344374,
+      "final_norm_mean": 3.7503319923297367,
+      "final_norm_std": 0.0075576047447287594
+    },
+    {
+      "Sigma_lambda": 4.0,
+      "gamma_0": 0.2,
+      "seeds_used": [
+        102,
+        103,
+        104,
+        105
+      ],
+      "per_seed_regime": [
+        "released",
+        "released",
+        "released",
+        "released"
+      ],
+      "per_seed_peak_growth": [
+        5.313394531124488,
+        5.3533253625231,
+        5.201623188651658,
+        5.337864561537372
+      ],
+      "per_seed_final_ratio": [
+        0.00690067125130265,
+        0.008001850244716441,
+        0.007568401169824599,
+        0.006829006530929578
+      ],
+      "regime_counts": {
+        "released": 4
+      },
+      "majority_regime": "released",
+      "stability": "stable",
+      "peak_growth_mean": 5.301551910959155,
+      "peak_growth_std": 0.05942452371127805,
+      "final_ratio_mean": 0.007324982299193317,
+      "final_ratio_std": 0.00048565285707050695,
+      "max_peak_mean": 7.616693423101184,
+      "max_peak_std": 0.08537469528252215,
+      "final_peak_mean": 0.010523738226021527,
+      "final_peak_std": 0.0006977332268901614,
+      "final_norm_mean": 7.043972693004985,
+      "final_norm_std": 0.016281723270338177
+    },
+    {
+      "Sigma_lambda": 4.0,
+      "gamma_0": 1.0,
+      "seeds_used": [
+        182,
+        183,
+        184,
+        185
+      ],
+      "per_seed_regime": [
+        "dispersive",
+        "dispersive",
+        "dispersive",
+        "dispersive"
+      ],
+      "per_seed_peak_growth": [
+        1.9032955498151984,
+        1.8694381284557795,
+        1.7929356889564818,
+        1.9758223436431575
+      ],
+      "per_seed_final_ratio": [
+        0.007736504801078326,
+        0.008594490701394312,
+        0.008410980617843745,
+        0.008679838935128265
+      ],
+      "regime_counts": {
+        "dispersive": 4
+      },
+      "majority_regime": "dispersive",
+      "stability": "stable",
+      "peak_growth_mean": 1.8853729277176543,
+      "peak_growth_std": 0.06576640130306337,
+      "final_ratio_mean": 0.00835545376386116,
+      "final_ratio_std": 0.0003703192699841471,
+      "max_peak_mean": 2.708698852680294,
+      "max_peak_std": 0.09448601554397476,
+      "final_peak_mean": 0.012004207597905698,
+      "final_peak_std": 0.000532034467550009,
+      "final_norm_mean": 8.028502697324745,
+      "final_norm_std": 0.011049620428960934
+    }
+  ],
+  "stability_counts": {
+    "stable": 20
+  },
+  "wall_time_total_s": 949.7605748176575,
+  "backend": "cupy"
+}
