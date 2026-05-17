@@ -50,11 +50,19 @@ def to_cpu(arr):
     return arr
 
 
-def fft_kinetic_phase(N: int, L: float, d: int, hbar: float = 1.0, mass: float = 1.0):
+def fft_kinetic_propagator(N: int, L: float, dt: float, gamma_0: float, d: int,
+                           hbar: float = 1.0, mass: float = 1.0):
+    """Canonical kinetic propagator U_k with dissipation folded in.
+
+    Matches implementation/physics/solver_3d.py build_kinetic_propagator:
+    H_complex = (hbar^2/2m) k^2 - i gamma_0, U_k = exp(-i H_complex dt).
+    """
     k_axis = 2 * xp.pi * xp.fft.fftfreq(N, d=L / N)
     grids = xp.meshgrid(*[k_axis] * d, indexing="ij")
     k_squared = sum(g ** 2 for g in grids)
-    return -1j * (hbar ** 2 / (2 * mass)) * k_squared
+    H_kin = (hbar ** 2 / (2 * mass)) * k_squared
+    H_complex = H_kin.astype(xp.complex64) - 1j * gamma_0
+    return xp.exp(-1j * H_complex * dt).astype(xp.complex64)
 
 
 def initial_gaussian(N: int, L: float, d: int, sigma_init: float):
@@ -74,8 +82,7 @@ def run_anti_collapse_p3(d: int, N: int, L: float, Lambda: float, Sigma_lambda: 
     """nD anti-collapse with full P1+P2+P3 triangle active (identical to high_d test)."""
     rng = np.random.default_rng(seed)
     psi = initial_gaussian(N, L, d, sigma_init)
-    kinetic_phase = fft_kinetic_phase(N, L, d)
-    propagator_full = xp.exp(kinetic_phase * dt)
+    propagator_full = fft_kinetic_propagator(N, L, dt, gamma_0, d)
 
     if Sigma_lambda > 0:
         lambda_fast = Sigma_lambda * 0.75
@@ -90,7 +97,6 @@ def run_anti_collapse_p3(d: int, N: int, L: float, Lambda: float, Sigma_lambda: 
     else:
         memory_active = False
 
-    dissipation_factor = float(np.exp(-gamma_0 * dt))
     noise_amp = float(np.sqrt(2.0 * gamma_0 * T_bath * dt))
 
     initial_norm = float(xp.sum(xp.abs(psi) ** 2) * (L / N) ** d)
@@ -116,8 +122,6 @@ def run_anti_collapse_p3(d: int, N: int, L: float, Lambda: float, Sigma_lambda: 
             y_fast = decay_fast * y_fast + accum_fast * rho
             y_slow = decay_slow * y_slow + accum_slow * rho
 
-        if gamma_0 > 0:
-            psi = psi * dissipation_factor
 
         if noise_amp > 0:
             shape = psi.shape

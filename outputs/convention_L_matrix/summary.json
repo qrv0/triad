@@ -42,13 +42,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.125943290018433,
-          "final_peak": 0.026816055010219386,
-          "final_norm": 0.46281130927727127,
-          "peak_growth_ratio": 1.1319216783182233,
-          "final_ratio": 0.026958439436629535,
+          "max_peak": 1.1259254217147827,
+          "final_peak": 0.026796061545610428,
+          "final_norm": 0.46257251501083374,
+          "peak_growth_ratio": 1.1319037151397615,
+          "final_ratio": 0.02693833981330375,
           "regime": "dispersive",
-          "wall_time": 1.6033568382263184
+          "wall_time": 1.373591423034668
         },
         {
           "convention": "A",
@@ -60,13 +60,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1208278716902562,
-          "final_peak": 0.0265016429996833,
-          "final_norm": 0.3449125478840849,
-          "peak_growth_ratio": 1.1267790988023094,
-          "final_ratio": 0.026642358001796713,
+          "max_peak": 1.1207739114761353,
+          "final_peak": 0.026487138122320175,
+          "final_norm": 0.3447090685367584,
+          "peak_growth_ratio": 1.1267248520772108,
+          "final_ratio": 0.02662777610830863,
           "regime": "dispersive",
-          "wall_time": 1.417008638381958
+          "wall_time": 1.2956976890563965
         },
         {
           "convention": "A",
@@ -78,13 +78,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1007939316203967,
-          "final_peak": 0.015250434400227632,
-          "final_norm": 0.15503163038362464,
-          "peak_growth_ratio": 1.1066387851042447,
-          "final_ratio": 0.015331409187673232,
+          "max_peak": 1.1006168127059937,
+          "final_peak": 0.015249008312821388,
+          "final_norm": 0.1549772173166275,
+          "peak_growth_ratio": 1.1064607257466996,
+          "final_ratio": 0.015329975528212214,
           "regime": "dispersive",
-          "wall_time": 1.4290311336517334
+          "wall_time": 1.3405966758728027
         },
         {
           "convention": "A",
@@ -96,13 +96,13 @@
           "gamma_0": 1.0,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 0.995789771115494,
-          "final_peak": 0.010002262314941508,
-          "final_norm": 0.10011325701580348,
-          "peak_growth_ratio": 1.0010770870660073,
-          "final_ratio": 0.01005537103589148,
+          "max_peak": 0.9957900643348694,
+          "final_peak": 0.01000150851905346,
+          "final_norm": 0.10010489821434021,
+          "peak_growth_ratio": 1.001077381842281,
+          "final_ratio": 0.010054613237595354,
           "regime": "dispersive",
-          "wall_time": 1.4875197410583496
+          "wall_time": 1.3870246410369873
         },
         {
           "convention": "A",
@@ -114,13 +114,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1254576012177486,
-          "final_peak": 0.02718532652705158,
-          "final_norm": 0.4617705776102996,
-          "peak_growth_ratio": 1.1314334106698571,
-          "final_ratio": 0.027329671663681547,
+          "max_peak": 1.1254401206970215,
+          "final_peak": 0.027174172922968864,
+          "final_norm": 0.46153274178504944,
+          "peak_growth_ratio": 1.131415837333318,
+          "final_ratio": 0.027318458837632027,
           "regime": "dispersive",
-          "wall_time": 1.4541709423065186
+          "wall_time": 1.3430988788604736
         },
         {
           "convention": "A",
@@ -132,13 +132,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.121692019834197,
-          "final_peak": 0.02381768271661006,
-          "final_norm": 0.34186692383869277,
-          "peak_growth_ratio": 1.1276478352884862,
-          "final_ratio": 0.02394414677296477,
+          "max_peak": 1.1216375827789307,
+          "final_peak": 0.023801831528544426,
+          "final_norm": 0.3416646420955658,
+          "peak_growth_ratio": 1.1275931091903728,
+          "final_ratio": 0.02392821142030745,
           "regime": "dispersive",
-          "wall_time": 1.4664170742034912
+          "wall_time": 1.3004510402679443
         },
         {
           "convention": "A",
@@ -150,13 +150,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1060204645160143,
-          "final_peak": 0.014836978687852564,
-          "final_norm": 0.15271425809580857,
-          "peak_growth_ratio": 1.111893069169383,
-          "final_ratio": 0.014915758161541904,
+          "max_peak": 1.1058428287506104,
+          "final_peak": 0.014830246567726135,
+          "final_norm": 0.1526603400707245,
+          "peak_growth_ratio": 1.111714490216528,
+          "final_ratio": 0.01490899029607328,
           "regime": "dispersive",
-          "wall_time": 1.4187092781066895
+          "wall_time": 1.2952322959899902
         },
         {
           "convention": "A",
@@ -169,12 +169,12 @@
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
           "max_peak": 0.9947183728218079,
-          "final_peak": 0.009899650454630702,
-          "final_norm": 0.1006822074243645,
+          "final_peak": 0.009898755699396133,
+          "final_norm": 0.10067380219697952,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.009952214340374015,
+          "final_ratio": 0.009951314834283633,
           "regime": "dispersive",
-          "wall_time": 1.4895992279052734
+          "wall_time": 1.3029718399047852
         },
         {
           "convention": "A",
@@ -186,13 +186,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.123501035660129,
-          "final_peak": 0.02667171621477751,
-          "final_norm": 0.4615000264911425,
-          "peak_growth_ratio": 1.129466456393071,
-          "final_ratio": 0.026813334249688615,
+          "max_peak": 1.1234838962554932,
+          "final_peak": 0.02665415033698082,
+          "final_norm": 0.4612586498260498,
+          "peak_growth_ratio": 1.1294492259838376,
+          "final_ratio": 0.026795675102862102,
           "regime": "dispersive",
-          "wall_time": 1.4853451251983643
+          "wall_time": 1.4071946144104004
         },
         {
           "convention": "A",
@@ -204,13 +204,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1111076314665151,
-          "final_peak": 0.027464943045611808,
-          "final_norm": 0.3415441407723739,
-          "peak_growth_ratio": 1.1170072473021035,
-          "final_ratio": 0.027610772853928003,
+          "max_peak": 1.1110554933547974,
+          "final_peak": 0.027444005012512207,
+          "final_norm": 0.34134024381637573,
+          "peak_growth_ratio": 1.1169548323541723,
+          "final_ratio": 0.027589723646763764,
           "regime": "dispersive",
-          "wall_time": 1.4068708419799805
+          "wall_time": 1.3985660076141357
         },
         {
           "convention": "A",
@@ -222,13 +222,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0915952204617596,
-          "final_peak": 0.01859339294188915,
-          "final_norm": 0.1538454513792541,
-          "peak_growth_ratio": 1.097391231816833,
-          "final_ratio": 0.018692117738957195,
+          "max_peak": 1.0914239883422852,
+          "final_peak": 0.018591761589050293,
+          "final_norm": 0.15379108488559723,
+          "peak_growth_ratio": 1.09721909051116,
+          "final_ratio": 0.018690477724171674,
           "regime": "dispersive",
-          "wall_time": 1.4011857509613037
+          "wall_time": 1.2973382472991943
         },
         {
           "convention": "A",
@@ -241,12 +241,12 @@
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
           "max_peak": 0.9947183728218079,
-          "final_peak": 0.010654154673599736,
-          "final_norm": 0.10117020877798157,
+          "final_peak": 0.010653321631252766,
+          "final_norm": 0.10116172581911087,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.010710724728423512,
+          "final_ratio": 0.01070988726289585,
           "regime": "dispersive",
-          "wall_time": 1.441838264465332
+          "wall_time": 1.3047542572021484
         },
         {
           "convention": "A",
@@ -258,13 +258,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1163060616423632,
-          "final_peak": 0.027210058484546423,
-          "final_norm": 0.4624374130253659,
-          "peak_growth_ratio": 1.1222332794312793,
-          "final_ratio": 0.02735453493973091,
+          "max_peak": 1.1162885427474976,
+          "final_peak": 0.02720262110233307,
+          "final_norm": 0.4621943533420563,
+          "peak_growth_ratio": 1.1222156675168475,
+          "final_ratio": 0.027347058067465794,
           "regime": "dispersive",
-          "wall_time": 1.5008950233459473
+          "wall_time": 1.2983613014221191
         },
         {
           "convention": "A",
@@ -276,13 +276,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1065842777186579,
-          "final_peak": 0.023032994422734685,
-          "final_norm": 0.34220861844520667,
-          "peak_growth_ratio": 1.1124598760345703,
-          "final_ratio": 0.023155292042505358,
+          "max_peak": 1.1065325736999512,
+          "final_peak": 0.023025060072541237,
+          "final_norm": 0.3420027494430542,
+          "peak_growth_ratio": 1.112407897484541,
+          "final_ratio": 0.023147315563523733,
           "regime": "dispersive",
-          "wall_time": 1.4665923118591309
+          "wall_time": 1.2538297176361084
         },
         {
           "convention": "A",
@@ -294,13 +294,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.078947616288966,
-          "final_peak": 0.013855704137244088,
-          "final_norm": 0.15342469012904789,
-          "peak_growth_ratio": 1.0846764730284586,
-          "final_ratio": 0.013929273366026562,
+          "max_peak": 1.0787789821624756,
+          "final_peak": 0.0138575229793787,
+          "final_norm": 0.15336927771568298,
+          "peak_growth_ratio": 1.0845069435102574,
+          "final_ratio": 0.013931101865614292,
           "regime": "dispersive",
-          "wall_time": 1.4654576778411865
+          "wall_time": 1.3377695083618164
         },
         {
           "convention": "A",
@@ -313,12 +313,12 @@
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
           "max_peak": 0.9947183728218079,
-          "final_peak": 0.012512512580551301,
-          "final_norm": 0.10078682940542745,
+          "final_peak": 0.012511415407061577,
+          "final_norm": 0.10077808797359467,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.012578949904238646,
+          "final_ratio": 0.012577846905118793,
           "regime": "dispersive",
-          "wall_time": 1.3882603645324707
+          "wall_time": 1.3978264331817627
         },
         {
           "convention": "A",
@@ -330,13 +330,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.114636560329037,
-          "final_peak": 0.026261167096898175,
-          "final_norm": 0.4606589447592926,
-          "peak_growth_ratio": 1.120554913615445,
-          "final_ratio": 0.026400605251113176,
+          "max_peak": 1.1146197319030762,
+          "final_peak": 0.02624255232512951,
+          "final_norm": 0.4604116678237915,
+          "peak_growth_ratio": 1.120537995836081,
+          "final_ratio": 0.02638189164103291,
           "regime": "dispersive",
-          "wall_time": 1.3420295715332031
+          "wall_time": 1.3295304775238037
         },
         {
           "convention": "A",
@@ -348,13 +348,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1056552037270149,
-          "final_peak": 0.02777122555649319,
-          "final_norm": 0.3419493181835787,
-          "peak_growth_ratio": 1.1115258689658083,
-          "final_ratio": 0.027918681624138533,
+          "max_peak": 1.1056052446365356,
+          "final_peak": 0.027764197438955307,
+          "final_norm": 0.3417402505874634,
+          "peak_growth_ratio": 1.1114756446090013,
+          "final_ratio": 0.027911616189609616,
           "regime": "dispersive",
-          "wall_time": 1.4489202499389648
+          "wall_time": 1.361950159072876
         },
         {
           "convention": "A",
@@ -366,13 +366,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0855896687359659,
-          "final_peak": 0.01631787713329379,
-          "final_norm": 0.15307999292527646,
-          "peak_growth_ratio": 1.0913537925879213,
-          "final_ratio": 0.016404519690335455,
+          "max_peak": 1.0854272842407227,
+          "final_peak": 0.016310924664139748,
+          "final_norm": 0.15302392840385437,
+          "peak_growth_ratio": 1.0911905458844522,
+          "final_ratio": 0.016397530305858398,
           "regime": "dispersive",
-          "wall_time": 1.449064016342163
+          "wall_time": 1.3883779048919678
         },
         {
           "convention": "A",
@@ -385,12 +385,12 @@
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
           "max_peak": 0.9947183728218079,
-          "final_peak": 0.011746867075559886,
-          "final_norm": 0.09983148369424595,
+          "final_peak": 0.011746282689273357,
+          "final_norm": 0.09982310235500336,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.011809239073604805,
+          "final_ratio": 0.01180865158441943,
           "regime": "dispersive",
-          "wall_time": 1.3779895305633545
+          "wall_time": 1.3499066829681396
         }
       ],
       "regime_counts": {
@@ -426,13 +426,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.1335181834525416,
-          "final_peak": 0.0058551457359222875,
-          "final_norm": 0.41462948679013156,
-          "peak_growth_ratio": 1.1425580116617018,
-          "final_ratio": 0.005901840630071333,
+          "max_peak": 1.133506417274475,
+          "final_peak": 0.005851747002452612,
+          "final_norm": 0.4144705533981323,
+          "peak_growth_ratio": 1.1425461516481503,
+          "final_ratio": 0.005898414791640182,
           "regime": "dispersive",
-          "wall_time": 4.7760419845581055
+          "wall_time": 4.636934280395508
         },
         {
           "convention": "A",
@@ -444,13 +444,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.1278008918405382,
-          "final_peak": 0.008236045925127531,
-          "final_norm": 0.6071424996710106,
-          "peak_growth_ratio": 1.1367951245447045,
-          "final_ratio": 0.008301728541756702,
+          "max_peak": 1.1277416944503784,
+          "final_peak": 0.008234335109591484,
+          "final_norm": 0.6069125533103943,
+          "peak_growth_ratio": 1.1367354550542774,
+          "final_ratio": 0.008300004082435518,
           "regime": "dispersive",
-          "wall_time": 4.8074400424957275
+          "wall_time": 4.66498875617981
         },
         {
           "convention": "A",
@@ -462,13 +462,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.09811859731693,
-          "final_peak": 0.013981269524068514,
-          "final_norm": 0.916042724549376,
-          "peak_growth_ratio": 1.1068761131803222,
-          "final_ratio": 0.01409277040379731,
+          "max_peak": 1.0978952646255493,
+          "final_peak": 0.013979271054267883,
+          "final_norm": 0.9158604741096497,
+          "peak_growth_ratio": 1.10665099940665,
+          "final_ratio": 0.014090755996163532,
           "regime": "dispersive",
-          "wall_time": 4.843013525009155
+          "wall_time": 4.640611410140991
         },
         {
           "convention": "A",
@@ -481,12 +481,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.011349799966256242,
-          "final_norm": 1.0017529958667235,
+          "final_peak": 0.011348267085850239,
+          "final_norm": 1.001678705215454,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.0114403148282153,
+          "final_ratio": 0.011438769723060072,
           "regime": "dispersive",
-          "wall_time": 4.620943546295166
+          "wall_time": 4.767798900604248
         },
         {
           "convention": "A",
@@ -498,13 +498,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.1295139403171337,
-          "final_peak": 0.005396992943745763,
-          "final_norm": 0.41445808218123054,
-          "peak_growth_ratio": 1.1385218346141783,
-          "final_ratio": 0.005440034061012105,
+          "max_peak": 1.1295031309127808,
+          "final_peak": 0.00539518054574728,
+          "final_norm": 0.41429829597473145,
+          "peak_growth_ratio": 1.1385109390046284,
+          "final_ratio": 0.005438207209106493,
           "regime": "dispersive",
-          "wall_time": 4.591233015060425
+          "wall_time": 4.512387275695801
         },
         {
           "convention": "A",
@@ -516,13 +516,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.1258269805647632,
-          "final_peak": 0.008358377344130854,
-          "final_norm": 0.6075571756137813,
-          "peak_growth_ratio": 1.134805471290465,
-          "final_ratio": 0.008425035556060141,
+          "max_peak": 1.125767469406128,
+          "final_peak": 0.008354337885975838,
+          "final_norm": 0.6073246002197266,
+          "peak_growth_ratio": 1.1347454855292531,
+          "final_ratio": 0.008420963883152584,
           "regime": "dispersive",
-          "wall_time": 4.619412899017334
+          "wall_time": 4.669867992401123
         },
         {
           "convention": "A",
@@ -534,13 +534,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.0883333517259342,
-          "final_peak": 0.010351963904414644,
-          "final_norm": 0.9084296905025938,
-          "peak_growth_ratio": 1.097012830077076,
-          "final_ratio": 0.010434521005561716,
+          "max_peak": 1.0881133079528809,
+          "final_peak": 0.010350296273827553,
+          "final_norm": 0.9082489609718323,
+          "peak_growth_ratio": 1.096791031450915,
+          "final_ratio": 0.010432840075590245,
           "regime": "dispersive",
-          "wall_time": 4.716877698898315
+          "wall_time": 4.588791370391846
         },
         {
           "convention": "A",
@@ -553,12 +553,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.011441643103939149,
-          "final_norm": 1.002385936532616,
+          "final_peak": 0.011440971866250038,
+          "final_norm": 1.0023117065429688,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.011532890416598128,
+          "final_ratio": 0.011532213825776192,
           "regime": "dispersive",
-          "wall_time": 4.7488744258880615
+          "wall_time": 4.680661201477051
         },
         {
           "convention": "A",
@@ -570,13 +570,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.1262192137805274,
-          "final_peak": 0.005932441912860732,
-          "final_norm": 0.41570926017617055,
-          "peak_growth_ratio": 1.1352008325732865,
-          "final_ratio": 0.005979753245432159,
+          "max_peak": 1.1262078285217285,
+          "final_peak": 0.00593078276142478,
+          "final_norm": 0.415548175573349,
+          "peak_growth_ratio": 1.1351893565168407,
+          "final_ratio": 0.005978080862233212,
           "regime": "dispersive",
-          "wall_time": 4.741299867630005
+          "wall_time": 4.542900562286377
         },
         {
           "convention": "A",
@@ -588,13 +588,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.118365596428952,
-          "final_peak": 0.008244475578505033,
-          "final_norm": 0.6076229923499015,
-          "peak_growth_ratio": 1.1272845824799385,
-          "final_ratio": 0.0083102254217738,
+          "max_peak": 1.118308663368225,
+          "final_peak": 0.00824061967432499,
+          "final_norm": 0.6073909401893616,
+          "peak_growth_ratio": 1.1272271953770128,
+          "final_ratio": 0.008306338766687519,
           "regime": "dispersive",
-          "wall_time": 4.651082277297974
+          "wall_time": 4.633850812911987
         },
         {
           "convention": "A",
@@ -606,13 +606,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.080131307705546,
-          "final_peak": 0.011692049220613643,
-          "final_norm": 0.9138388402052285,
-          "peak_growth_ratio": 1.08874537460587,
-          "final_ratio": 0.011785293526625095,
+          "max_peak": 1.0799200534820557,
+          "final_peak": 0.011690144427120686,
+          "final_norm": 0.9136572480201721,
+          "peak_growth_ratio": 1.08853243562609,
+          "final_ratio": 0.011783373542369252,
           "regime": "dispersive",
-          "wall_time": 4.715019702911377
+          "wall_time": 4.564117670059204
         },
         {
           "convention": "A",
@@ -625,12 +625,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.0103952953209887,
-          "final_norm": 0.9997280390705419,
+          "final_peak": 0.01039484329521656,
+          "final_norm": 0.9996534585952759,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.010478197990974108,
+          "final_ratio": 0.010477742360288183,
           "regime": "dispersive",
-          "wall_time": 4.73390531539917
+          "wall_time": 4.51006817817688
         },
         {
           "convention": "A",
@@ -642,13 +642,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.1203628315845486,
-          "final_peak": 0.006462827308498703,
-          "final_norm": 0.4147286793400032,
-          "peak_growth_ratio": 1.1292977456223672,
-          "final_ratio": 0.006514368474284284,
+          "max_peak": 1.1203523874282837,
+          "final_peak": 0.006459241267293692,
+          "final_norm": 0.41456761956214905,
+          "peak_growth_ratio": 1.1292872181737652,
+          "final_ratio": 0.006510753834335187,
           "regime": "dispersive",
-          "wall_time": 4.6942665576934814
+          "wall_time": 4.573164701461792
         },
         {
           "convention": "A",
@@ -660,13 +660,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.1111617042134962,
-          "final_peak": 0.008316183690934547,
-          "final_norm": 0.6098420834804215,
-          "peak_growth_ratio": 1.1200232390925335,
-          "final_ratio": 0.008382505407709209,
+          "max_peak": 1.111107587814331,
+          "final_peak": 0.008313803933560848,
+          "final_norm": 0.609609842300415,
+          "peak_growth_ratio": 1.119968691114097,
+          "final_ratio": 0.008380106671727004,
           "regime": "dispersive",
-          "wall_time": 4.517292737960815
+          "wall_time": 4.526979446411133
         },
         {
           "convention": "A",
@@ -678,13 +678,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.0995551525767557,
-          "final_peak": 0.010249029244503608,
-          "final_norm": 0.9166012435837945,
-          "peak_growth_ratio": 1.1083241249945741,
-          "final_ratio": 0.010330765439858476,
+          "max_peak": 1.0993452072143555,
+          "final_peak": 0.010247606784105301,
+          "final_norm": 0.916418731212616,
+          "peak_growth_ratio": 1.1081125053140755,
+          "final_ratio": 0.01032933163531252,
           "regime": "dispersive",
-          "wall_time": 4.7656896114349365
+          "wall_time": 4.590383291244507
         },
         {
           "convention": "A",
@@ -697,12 +697,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.014818793690966305,
-          "final_norm": 0.998879827072773,
+          "final_peak": 0.014817629009485245,
+          "final_norm": 0.9988057613372803,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.014936973841217888,
+          "final_ratio": 0.014935799871380752,
           "regime": "dispersive",
-          "wall_time": 4.734546184539795
+          "wall_time": 4.6167943477630615
         },
         {
           "convention": "A",
@@ -714,13 +714,13 @@
           "gamma_0": 0.01,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.0981617821046608,
-          "final_peak": 0.005245649850456328,
-          "final_norm": 0.41370308654884014,
-          "peak_growth_ratio": 1.1069196423675236,
-          "final_ratio": 0.005287484003790418,
+          "max_peak": 1.0981525182724,
+          "final_peak": 0.005243868567049503,
+          "final_norm": 0.41353991627693176,
+          "peak_growth_ratio": 1.1069103046560311,
+          "final_ratio": 0.0052856885146159,
           "regime": "dispersive",
-          "wall_time": 4.714427471160889
+          "wall_time": 4.5664448738098145
         },
         {
           "convention": "A",
@@ -732,13 +732,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.095312251075789,
-          "final_peak": 0.008293064800668458,
-          "final_norm": 0.607588381065774,
-          "peak_growth_ratio": 1.1040473862766687,
-          "final_ratio": 0.008359202143871135,
+          "max_peak": 1.0952621698379517,
+          "final_peak": 0.00828935019671917,
+          "final_norm": 0.6073548197746277,
+          "peak_growth_ratio": 1.1039969056400454,
+          "final_ratio": 0.00835545791588753,
           "regime": "dispersive",
-          "wall_time": 4.656090974807739
+          "wall_time": 4.640843152999878
         },
         {
           "convention": "A",
@@ -750,13 +750,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.067420351455928,
-          "final_peak": 0.011783327394662453,
-          "final_norm": 0.9181229631944542,
-          "peak_growth_ratio": 1.0759330482480804,
-          "final_ratio": 0.011877299645778529,
+          "max_peak": 1.0672366619110107,
+          "final_peak": 0.01178064290434122,
+          "final_norm": 0.9179405570030212,
+          "peak_growth_ratio": 1.0757478937756888,
+          "final_ratio": 0.01187459374659797,
           "regime": "dispersive",
-          "wall_time": 4.69433331489563
+          "wall_time": 4.558187484741211
         },
         {
           "convention": "A",
@@ -769,12 +769,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.011904730222184417,
-          "final_norm": 1.0009956758382457,
+          "final_peak": 0.011904147453606129,
+          "final_norm": 1.0009217262268066,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.011999670663066592,
+          "final_ratio": 0.01199908324689825,
           "regime": "dispersive",
-          "wall_time": 4.618369817733765
+          "wall_time": 4.557641506195068
         }
       ],
       "regime_counts": {
@@ -810,13 +810,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 101.35806782682292,
-          "final_peak": 0.04512932859597997,
-          "final_norm": 0.9146003018212294,
-          "peak_growth_ratio": 79.60643607489591,
-          "final_ratio": 0.03544448990599372,
+          "max_peak": 101.44673919677734,
+          "final_peak": 0.23613685369491577,
+          "final_norm": 0.914203405380249,
+          "peak_growth_ratio": 79.67607840229319,
+          "final_ratio": 0.18546144132018214,
           "regime": "released",
-          "wall_time": 1.3295700550079346
+          "wall_time": 1.294187068939209
         },
         {
           "convention": "B",
@@ -828,13 +828,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 103.09942018962349,
-          "final_peak": 0.04023407168707915,
-          "final_norm": 0.6493762002680983,
-          "peak_growth_ratio": 80.97409094959221,
-          "final_ratio": 0.03159976432524938,
+          "max_peak": 103.2919921875,
+          "final_peak": 0.06383582204580307,
+          "final_norm": 0.6487962603569031,
+          "peak_growth_ratio": 81.12533663498712,
+          "final_ratio": 0.05013653472223002,
           "regime": "released",
-          "wall_time": 1.3661203384399414
+          "wall_time": 1.3371376991271973
         },
         {
           "convention": "B",
@@ -846,13 +846,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 22.38237683394738,
-          "final_peak": 0.021374017615729917,
-          "final_norm": 0.22305442501150477,
-          "peak_growth_ratio": 17.579076721156092,
-          "final_ratio": 0.016787113285322744,
+          "max_peak": 23.306459426879883,
+          "final_peak": 0.02142387442290783,
+          "final_norm": 0.22295880317687988,
+          "peak_growth_ratio": 18.304849453800255,
+          "final_ratio": 0.016826270728026643,
           "regime": "released",
-          "wall_time": 1.3754887580871582
+          "wall_time": 1.313000202178955
         },
         {
           "convention": "B",
@@ -864,13 +864,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 1.7722137972906729,
-          "final_peak": 0.009988584639768153,
-          "final_norm": 0.10012311274469557,
-          "peak_growth_ratio": 1.3918933873730952,
-          "final_ratio": 0.007845015612994593,
+          "max_peak": 1.7631747722625732,
+          "final_peak": 0.009986902587115765,
+          "final_norm": 0.10011489689350128,
+          "peak_growth_ratio": 1.3847941540954027,
+          "final_ratio": 0.007843694532001061,
           "regime": "dispersive",
-          "wall_time": 1.4007270336151123
+          "wall_time": 1.3893771171569824
         },
         {
           "convention": "B",
@@ -882,13 +882,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 90.70294602662142,
-          "final_peak": 0.3499650548446045,
-          "final_norm": 0.9140593389499241,
-          "peak_growth_ratio": 71.2379234281552,
-          "final_ratio": 0.2748618966823068,
+          "max_peak": 100.48760986328125,
+          "final_peak": 0.05032661557197571,
+          "final_norm": 0.9140387177467346,
+          "peak_growth_ratio": 78.92278002544401,
+          "final_ratio": 0.039526429334085345,
           "regime": "released",
-          "wall_time": 1.3074169158935547
+          "wall_time": 1.3144915103912354
         },
         {
           "convention": "B",
@@ -900,13 +900,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 92.06019558678997,
-          "final_peak": 0.048637554273707195,
-          "final_norm": 0.6448359195193024,
-          "peak_growth_ratio": 72.30390468318309,
-          "final_ratio": 0.038199843763246255,
+          "max_peak": 93.00721740722656,
+          "final_peak": 0.04861592501401901,
+          "final_norm": 0.6443078517913818,
+          "peak_growth_ratio": 73.04769384201872,
+          "final_ratio": 0.03818285618331669,
           "regime": "released",
-          "wall_time": 1.2992684841156006
+          "wall_time": 1.3113291263580322
         },
         {
           "convention": "B",
@@ -918,13 +918,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 36.31468059298803,
-          "final_peak": 0.02699685115859838,
-          "final_norm": 0.21988206727155155,
-          "peak_growth_ratio": 28.521481922339245,
-          "final_ratio": 0.021203276187667302,
+          "max_peak": 39.14448547363281,
+          "final_peak": 0.026759939268231392,
+          "final_norm": 0.21983613073825836,
+          "peak_growth_ratio": 30.744005359944303,
+          "final_ratio": 0.021017206034000743,
           "regime": "released",
-          "wall_time": 1.3255479335784912
+          "wall_time": 1.353943109512329
         },
         {
           "convention": "B",
@@ -936,13 +936,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 1.7974755616664564,
-          "final_peak": 0.009941934778775738,
-          "final_norm": 0.10068303502928856,
-          "peak_growth_ratio": 1.4117339296608173,
-          "final_ratio": 0.007808376899800686,
+          "max_peak": 1.7881841659545898,
+          "final_peak": 0.009940903633832932,
+          "final_norm": 0.10067478567361832,
+          "peak_growth_ratio": 1.4044364849221607,
+          "final_ratio": 0.0078075670404995625,
           "regime": "dispersive",
-          "wall_time": 1.3306307792663574
+          "wall_time": 1.2541015148162842
         },
         {
           "convention": "B",
@@ -954,13 +954,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 112.33552124592593,
-          "final_peak": 0.06795571662148785,
-          "final_norm": 0.9133152754965703,
-          "peak_growth_ratio": 88.22810736963731,
-          "final_ratio": 0.0533722921829476,
+          "max_peak": 112.39752960205078,
+          "final_peak": 0.0678638219833374,
+          "final_norm": 0.9128467440605164,
+          "peak_growth_ratio": 88.27680861605803,
+          "final_ratio": 0.053300118306763934,
           "regime": "released",
-          "wall_time": 1.3622949123382568
+          "wall_time": 1.294179916381836
         },
         {
           "convention": "B",
@@ -972,13 +972,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 39.6912974580775,
-          "final_peak": 0.04307229088518995,
-          "final_norm": 0.646579994401589,
-          "peak_growth_ratio": 31.173470465366957,
-          "final_ratio": 0.033828896351986354,
+          "max_peak": 39.326515197753906,
+          "final_peak": 0.05095482990145683,
+          "final_norm": 0.645607054233551,
+          "peak_growth_ratio": 30.886971163334866,
+          "final_ratio": 0.040019827688389194,
           "regime": "released",
-          "wall_time": 1.364476203918457
+          "wall_time": 1.2673721313476562
         },
         {
           "convention": "B",
@@ -990,13 +990,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 36.79538098255306,
-          "final_peak": 0.03481306454947578,
-          "final_norm": 0.22131005159909287,
-          "peak_growth_ratio": 28.89902310533089,
-          "final_ratio": 0.027342115502478764,
+          "max_peak": 35.12672805786133,
+          "final_peak": 0.03491385653614998,
+          "final_norm": 0.22121043503284454,
+          "peak_growth_ratio": 27.588466232762848,
+          "final_ratio": 0.027421277339479744,
           "regime": "released",
-          "wall_time": 1.3737311363220215
+          "wall_time": 1.267716646194458
         },
         {
           "convention": "B",
@@ -1008,13 +1008,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 1.7550331242452737,
-          "final_peak": 0.010548520955564043,
-          "final_norm": 0.10118919238135222,
-          "peak_growth_ratio": 1.3783997190363126,
-          "final_ratio": 0.008284788543607051,
+          "max_peak": 1.7466200590133667,
+          "final_peak": 0.010548540391027927,
+          "final_norm": 0.10118083655834198,
+          "peak_growth_ratio": 1.3717921134067141,
+          "final_ratio": 0.008284803808183878,
           "regime": "dispersive",
-          "wall_time": 1.4319109916687012
+          "wall_time": 1.2880454063415527
         },
         {
           "convention": "B",
@@ -1026,13 +1026,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 26.42992979288909,
-          "final_peak": 0.08015623209229053,
-          "final_norm": 0.9154290969004393,
-          "peak_growth_ratio": 20.758017211973943,
-          "final_ratio": 0.06295455411563027,
+          "max_peak": 26.380420684814453,
+          "final_peak": 0.08021953701972961,
+          "final_norm": 0.9148918390274048,
+          "peak_growth_ratio": 20.719132851492617,
+          "final_ratio": 0.06300427368672563,
           "regime": "released",
-          "wall_time": 1.4221844673156738
+          "wall_time": 1.3289930820465088
         },
         {
           "convention": "B",
@@ -1044,13 +1044,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 16.389606761562217,
-          "final_peak": 0.06887939601521487,
-          "final_norm": 0.646035450722565,
-          "peak_growth_ratio": 12.872366363437227,
-          "final_ratio": 0.054097748243693164,
+          "max_peak": 16.326318740844727,
+          "final_peak": 0.06895998120307922,
+          "final_norm": 0.6455848813056946,
+          "peak_growth_ratio": 12.822660070849237,
+          "final_ratio": 0.0541610396988664,
           "regime": "released",
-          "wall_time": 1.393986463546753
+          "wall_time": 1.3109302520751953
         },
         {
           "convention": "B",
@@ -1062,13 +1062,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 41.41092096939543,
-          "final_peak": 0.04267710457463474,
-          "final_norm": 0.22073097544734327,
-          "peak_growth_ratio": 32.5240595409254,
-          "final_ratio": 0.03351851776601491,
+          "max_peak": 38.093284606933594,
+          "final_peak": 0.04075475409626961,
+          "final_norm": 0.22067339718341827,
+          "peak_growth_ratio": 29.918394173869373,
+          "final_ratio": 0.03200870731135052,
           "regime": "released",
-          "wall_time": 1.3739840984344482
+          "wall_time": 1.3061368465423584
         },
         {
           "convention": "B",
@@ -1080,13 +1080,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 1.6694416764331732,
-          "final_peak": 0.012667238299665932,
-          "final_norm": 0.10081807650240411,
-          "peak_growth_ratio": 1.3111763567041368,
-          "final_ratio": 0.009948825165755307,
+          "max_peak": 1.6618703603744507,
+          "final_peak": 0.012665930204093456,
+          "final_norm": 0.10080916434526443,
+          "peak_growth_ratio": 1.305229859293972,
+          "final_ratio": 0.00994779778994988,
           "regime": "dispersive",
-          "wall_time": 1.4258153438568115
+          "wall_time": 1.292384386062622
         },
         {
           "convention": "B",
@@ -1098,13 +1098,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 27.184687649458255,
-          "final_peak": 0.0804462702978554,
-          "final_norm": 0.9123571896778081,
-          "peak_growth_ratio": 21.350802614746765,
-          "final_ratio": 0.06318234957745798,
+          "max_peak": 27.095457077026367,
+          "final_peak": 0.08056136965751648,
+          "final_norm": 0.9117429852485657,
+          "peak_growth_ratio": 21.280721090774133,
+          "final_ratio": 0.06327274839832715,
           "regime": "released",
-          "wall_time": 1.426011562347412
+          "wall_time": 1.3305459022521973
         },
         {
           "convention": "B",
@@ -1116,13 +1116,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 29.624060785895676,
-          "final_peak": 0.07609343499629755,
-          "final_norm": 0.6460646680280386,
-          "peak_growth_ratio": 23.266681693858754,
-          "final_ratio": 0.05976364090820773,
+          "max_peak": 31.43019676208496,
+          "final_peak": 0.07629873603582382,
+          "final_norm": 0.645562469959259,
+          "peak_growth_ratio": 24.685217496817625,
+          "final_ratio": 0.059924883959003465,
           "regime": "released",
-          "wall_time": 1.3353970050811768
+          "wall_time": 1.287994384765625
         },
         {
           "convention": "B",
@@ -1134,13 +1134,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 3.9397954321792654,
-          "final_peak": 0.018441172052716403,
-          "final_norm": 0.22276682181835897,
-          "peak_growth_ratio": 3.0943079317159916,
-          "final_ratio": 0.014483661889342284,
+          "max_peak": 3.9209160804748535,
+          "final_peak": 0.018414605408906937,
+          "final_norm": 0.2227039933204651,
+          "peak_growth_ratio": 3.0794801243513072,
+          "final_ratio": 0.014462796497198501,
           "regime": "intermediate",
-          "wall_time": 1.3582825660705566
+          "wall_time": 1.3721468448638916
         },
         {
           "convention": "B",
@@ -1152,13 +1152,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.2732396125793457,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 1.6193547866737754,
-          "final_peak": 0.01166260792812215,
-          "final_norm": 0.09987543691138069,
-          "peak_growth_ratio": 1.2718382075729366,
-          "final_ratio": 0.009159790359095005,
+          "max_peak": 1.6155261993408203,
+          "final_peak": 0.011662226170301437,
+          "final_norm": 0.099867083132267,
+          "peak_growth_ratio": 1.2688312422734522,
+          "final_ratio": 0.00915949052721973,
           "regime": "dispersive",
-          "wall_time": 1.4137053489685059
+          "wall_time": 1.2981767654418945
         }
       ],
       "regime_counts": {
@@ -1196,13 +1196,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 33.474107672985056,
-          "final_peak": 0.007717050827814896,
-          "final_norm": 1.001231717872022,
-          "peak_growth_ratio": 23.299352824869985,
-          "final_ratio": 0.005371384108614249,
+          "max_peak": 33.47034454345703,
+          "final_peak": 0.0077205863781273365,
+          "final_norm": 1.001003384590149,
+          "peak_growth_ratio": 23.296733532267602,
+          "final_ratio": 0.005373844996742004,
           "regime": "released",
-          "wall_time": 4.63652491569519
+          "wall_time": 4.596583604812622
         },
         {
           "convention": "B",
@@ -1214,13 +1214,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 32.338485372789606,
-          "final_peak": 0.011106148654969106,
-          "final_norm": 0.9980839009783168,
-          "peak_growth_ratio": 22.50891309436156,
-          "final_ratio": 0.007730335295731124,
+          "max_peak": 32.36605453491211,
+          "final_peak": 0.011162099428474903,
+          "final_norm": 0.9977477788925171,
+          "peak_growth_ratio": 22.528102362725438,
+          "final_ratio": 0.007769279330489906,
           "regime": "released",
-          "wall_time": 4.80760383605957
+          "wall_time": 4.578796863555908
         },
         {
           "convention": "B",
@@ -1232,13 +1232,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 29.772086322833577,
-          "final_peak": 0.011723724834930824,
-          "final_norm": 1.003886402700234,
-          "peak_growth_ratio": 20.72259402236449,
-          "final_ratio": 0.008160193664286712,
+          "max_peak": 29.611370086669922,
+          "final_peak": 0.011722010560333729,
+          "final_norm": 1.0036816596984863,
+          "peak_growth_ratio": 20.61072892568608,
+          "final_ratio": 0.00815900045880782,
           "regime": "released",
-          "wall_time": 4.693474769592285
+          "wall_time": 4.6239235401153564
         },
         {
           "convention": "B",
@@ -1250,13 +1250,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 3.8507290093233983,
-          "final_peak": 0.011393277813031299,
-          "final_norm": 1.0017844858687133,
-          "peak_growth_ratio": 2.680265436727239,
-          "final_ratio": 0.007930188974441667,
+          "max_peak": 3.6940317153930664,
+          "final_peak": 0.011391962878406048,
+          "final_norm": 1.001708984375,
+          "peak_growth_ratio": 2.5711976887934647,
+          "final_ratio": 0.007929273725973369,
           "regime": "intermediate",
-          "wall_time": 4.71758770942688
+          "wall_time": 4.520076036453247
         },
         {
           "convention": "B",
@@ -1268,13 +1268,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 33.768098869507384,
-          "final_peak": 0.01619508942692955,
-          "final_norm": 1.0010057605391864,
-          "peak_growth_ratio": 23.50398276398879,
-          "final_ratio": 0.011272446939425888,
+          "max_peak": 33.76986312866211,
+          "final_peak": 0.01619722880423069,
+          "final_norm": 1.0007390975952148,
+          "peak_growth_ratio": 23.505210760771323,
+          "final_ratio": 0.01127393603383437,
           "regime": "released",
-          "wall_time": 4.669966697692871
+          "wall_time": 4.589806079864502
         },
         {
           "convention": "B",
@@ -1286,13 +1286,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 33.277857403558116,
-          "final_peak": 0.013224031214595746,
-          "final_norm": 0.9994844562696,
-          "peak_growth_ratio": 23.162754582609914,
-          "final_ratio": 0.00920446848190724,
+          "max_peak": 33.2643928527832,
+          "final_peak": 0.0129727553576231,
+          "final_norm": 0.9991101026535034,
+          "peak_growth_ratio": 23.153382702642332,
+          "final_ratio": 0.009029570172289203,
           "regime": "released",
-          "wall_time": 4.708036184310913
+          "wall_time": 4.544522762298584
         },
         {
           "convention": "B",
@@ -1304,13 +1304,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 24.557987505876618,
-          "final_peak": 0.011786207730720784,
-          "final_norm": 0.9960363978154488,
-          "peak_growth_ratio": 17.09336724246557,
-          "final_ratio": 0.008203684324254468,
+          "max_peak": 24.355144500732422,
+          "final_peak": 0.011772728525102139,
+          "final_norm": 0.9958387613296509,
+          "peak_growth_ratio": 16.952180185559325,
+          "final_ratio": 0.008194302243914169,
           "regime": "released",
-          "wall_time": 4.864556312561035
+          "wall_time": 4.604009628295898
         },
         {
           "convention": "B",
@@ -1322,13 +1322,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 3.229488850333219,
-          "final_peak": 0.011394294778922535,
-          "final_norm": 1.0024054684252786,
-          "peak_growth_ratio": 2.24785678838642,
-          "final_ratio": 0.007930896824441501,
+          "max_peak": 3.184648036956787,
+          "final_peak": 0.011394532397389412,
+          "final_norm": 1.0023306608200073,
+          "peak_growth_ratio": 2.2166457418659835,
+          "final_ratio": 0.00793106221664707,
           "regime": "intermediate",
-          "wall_time": 4.725831747055054
+          "wall_time": 4.565168380737305
         },
         {
           "convention": "B",
@@ -1340,13 +1340,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 31.814835936874793,
-          "final_peak": 0.020740631297043875,
-          "final_norm": 1.001148836528796,
-          "peak_growth_ratio": 22.144431594716693,
-          "final_ratio": 0.014436330644606327,
+          "max_peak": 31.807710647583008,
+          "final_peak": 0.02073029614984989,
+          "final_norm": 1.0008655786514282,
+          "peak_growth_ratio": 22.13947210092494,
+          "final_ratio": 0.01442913695797181,
           "regime": "released",
-          "wall_time": 4.5167272090911865
+          "wall_time": 4.593456506729126
         },
         {
           "convention": "B",
@@ -1358,13 +1358,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 29.09190628873847,
-          "final_peak": 0.01362650026185409,
-          "final_norm": 0.996300949596848,
-          "peak_growth_ratio": 20.249160801869603,
-          "final_ratio": 0.009484603457416363,
+          "max_peak": 29.04391860961914,
+          "final_peak": 0.01362663134932518,
+          "final_norm": 0.9959397912025452,
+          "peak_growth_ratio": 20.21575940763467,
+          "final_ratio": 0.00948469469967649,
           "regime": "released",
-          "wall_time": 4.638997316360474
+          "wall_time": 4.588081121444702
         },
         {
           "convention": "B",
@@ -1376,13 +1376,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 18.0129730980862,
-          "final_peak": 0.012580367128138918,
-          "final_norm": 1.0017634379957936,
-          "peak_growth_ratio": 12.537768586312723,
-          "final_ratio": 0.008756451859699909,
+          "max_peak": 17.84946632385254,
+          "final_peak": 0.012599866837263107,
+          "final_norm": 1.0015596151351929,
+          "peak_growth_ratio": 12.423961160604975,
+          "final_ratio": 0.008770024457580792,
           "regime": "released",
-          "wall_time": 4.772448301315308
+          "wall_time": 4.638737678527832
         },
         {
           "convention": "B",
@@ -1394,13 +1394,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 2.7405098252725564,
-          "final_peak": 0.01038713945287964,
-          "final_norm": 0.9997188164333823,
-          "peak_growth_ratio": 1.9075073176806228,
-          "final_ratio": 0.00722987538063888,
+          "max_peak": 2.7103042602539062,
+          "final_peak": 0.010386116802692413,
+          "final_norm": 0.9996444582939148,
+          "peak_growth_ratio": 1.8864830046946175,
+          "final_ratio": 0.007229163574135735,
           "regime": "dispersive",
-          "wall_time": 4.790195465087891
+          "wall_time": 4.660359859466553
         },
         {
           "convention": "B",
@@ -1412,13 +1412,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 25.365652080220784,
-          "final_peak": 0.018640131897625024,
-          "final_norm": 1.001294918675653,
-          "peak_growth_ratio": 17.655534935347195,
-          "final_ratio": 0.012974296851395343,
+          "max_peak": 25.354827880859375,
+          "final_peak": 0.018625706434249878,
+          "final_norm": 1.0009843111038208,
+          "peak_growth_ratio": 17.648000848331883,
+          "final_ratio": 0.012964256136819072,
           "regime": "released",
-          "wall_time": 4.880468368530273
+          "wall_time": 4.604849100112915
         },
         {
           "convention": "B",
@@ -1430,13 +1430,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 21.871573713395385,
-          "final_peak": 0.013773557387820217,
-          "final_norm": 1.0026228544085727,
-          "peak_growth_ratio": 15.223512983881962,
-          "final_ratio": 0.009586961252783716,
+          "max_peak": 21.821348190307617,
+          "final_peak": 0.013755354098975658,
+          "final_norm": 1.002250075340271,
+          "peak_growth_ratio": 15.188553958396723,
+          "final_ratio": 0.009574291016626692,
           "regime": "released",
-          "wall_time": 4.708858489990234
+          "wall_time": 4.647777557373047
         },
         {
           "convention": "B",
@@ -1448,13 +1448,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 12.215343756901307,
-          "final_peak": 0.011168213122101488,
-          "final_norm": 1.0062019989003241,
-          "peak_growth_ratio": 8.502380611591558,
-          "final_ratio": 0.007773534712179555,
+          "max_peak": 12.117416381835938,
+          "final_peak": 0.011129617691040039,
+          "final_norm": 1.0059987306594849,
+          "peak_growth_ratio": 8.43421913929329,
+          "final_ratio": 0.007746670708080818,
           "regime": "released",
-          "wall_time": 4.601384878158569
+          "wall_time": 4.590500116348267
         },
         {
           "convention": "B",
@@ -1466,13 +1466,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 2.493681187277476,
-          "final_peak": 0.014788845679016187,
-          "final_norm": 0.9988473695792724,
-          "peak_growth_ratio": 1.7357044549990663,
-          "final_ratio": 0.010293643574135786,
+          "max_peak": 2.4704113006591797,
+          "final_peak": 0.014787665568292141,
+          "final_norm": 0.9987732172012329,
+          "peak_growth_ratio": 1.719507658842138,
+          "final_ratio": 0.01029282216863633,
           "regime": "dispersive",
-          "wall_time": 4.62685489654541
+          "wall_time": 4.59179162979126
         },
         {
           "convention": "B",
@@ -1484,13 +1484,13 @@
           "gamma_0": 0.01,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 30.422036111291042,
-          "final_peak": 0.010800328746654353,
-          "final_norm": 1.0010153712742325,
-          "peak_growth_ratio": 21.174985751149585,
-          "final_ratio": 0.00751747208771661,
+          "max_peak": 30.44281768798828,
+          "final_peak": 0.010791345499455929,
+          "final_norm": 1.0006555318832397,
+          "peak_growth_ratio": 21.18945058147326,
+          "final_ratio": 0.007511219378965302,
           "regime": "released",
-          "wall_time": 4.705496549606323
+          "wall_time": 4.604468107223511
         },
         {
           "convention": "B",
@@ -1502,13 +1502,13 @@
           "gamma_0": 0.05,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 34.87967367359557,
-          "final_peak": 0.012508668488299774,
-          "final_norm": 1.00121966519436,
-          "peak_growth_ratio": 24.277684450220384,
-          "final_ratio": 0.0087065466636303,
+          "max_peak": 34.85538864135742,
+          "final_peak": 0.012495426461100578,
+          "final_norm": 1.0008244514465332,
+          "peak_growth_ratio": 24.260781071047216,
+          "final_ratio": 0.0086973296692045,
           "regime": "released",
-          "wall_time": 4.651651382446289
+          "wall_time": 4.598123550415039
         },
         {
           "convention": "B",
@@ -1520,13 +1520,13 @@
           "gamma_0": 0.2,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 22.293801090983106,
-          "final_peak": 0.012407196202615475,
-          "final_norm": 1.0039367509563355,
-          "peak_growth_ratio": 15.51740056824542,
-          "final_ratio": 0.008635917788046784,
+          "max_peak": 20.151123046875,
+          "final_peak": 0.012415754608809948,
+          "final_norm": 1.0036460161209106,
+          "peak_growth_ratio": 14.026008707184195,
+          "final_ratio": 0.008641874790022508,
           "regime": "released",
-          "wall_time": 4.7567524909973145
+          "wall_time": 4.586592674255371
         },
         {
           "convention": "B",
@@ -1538,13 +1538,13 @@
           "gamma_0": 1.0,
           "initial_peak": 1.4366968870162964,
           "initial_norm": 1.0000001192092896,
-          "max_peak": 2.275318529454005,
-          "final_peak": 0.011950174682411718,
-          "final_norm": 1.0010108061849659,
-          "peak_growth_ratio": 1.5837150828518474,
-          "final_ratio": 0.008317812052359635,
+          "max_peak": 2.2665929794311523,
+          "final_peak": 0.011949324980378151,
+          "final_norm": 1.00093674659729,
+          "peak_growth_ratio": 1.5776417419114535,
+          "final_ratio": 0.008317220624869781,
           "regime": "dispersive",
-          "wall_time": 4.602048873901367
+          "wall_time": 4.573810815811157
         }
       ],
       "regime_counts": {
@@ -1556,6 +1556,6 @@
       "initial_norm": 1.0000001192092896
     }
   },
-  "wall_time_total_s": 244.98691821098328,
+  "wall_time_total_s": 237.37445068359375,
   "backend": "cupy"
 }

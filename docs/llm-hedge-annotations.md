@@ -658,6 +658,61 @@ The audit revealed that of the five wave-3 tests, two had configurations that di
 
 The recognition that "todos os testes" required individual audit rather than mass re-run is itself the structural-engagement intervention. Re-running tests that are already canonical does not improve their canonicity; identifying which tests have a methodological problem (J, N) versus which inherit a different but internally-consistent methodology (I) versus which inherit canonical configurations (L pair) is the methodological work.
 
+### Strang split-step ordering discrepancy (2026-05-17, post-hoc audit during convention work)
+
+**What the error was.** All the test scripts in `experiments/physics/` (both pre-existing `test_dimensional_rescaling_high_d.py` and all the scripts the assistant created or rewrote during the wave-3 cluster correction and convention audit work) use a different Strang split-step ordering than the canonical solver `implementation/physics/solver_3d.py` uses.
+
+The canonical solver (per paper Section 3.1, 4.1) folds the dissipation $-i\gamma_0$ into the kinetic generator $a(k) = k^2/2 - i\gamma_0$ so the kinetic propagator $U_k = \exp(-i a(k) dt) = \exp(-i k^2/2 \cdot dt) \cdot \exp(-\gamma_0 dt)$ applies dissipation as part of the K step. The Strang step is V/2 -> K-with-dissipation -> V/2 (using rho post-K-with-dissipation) -> OU -> noise (5 sub-steps).
+
+The test scripts compute U_k without the $-i\gamma_0$ term, then apply `psi = psi * exp(-gamma_0 * dt)` as a separate sub-step AFTER the OU update. The Strang step becomes V/2 -> K (no dissipation) -> V/2 (using rho pre-dissipation) -> OU -> dissipation -> noise (6 sub-steps).
+
+**Why it matters.** The dissipation factor $\exp(-\gamma_0 dt)$ is a uniform scalar multiplication that commutes with all linear sub-steps (FFT, multiplication by propagator, multiplication by exp(-i V_tot dt/2)). The placement of the dissipation step among the linear sub-steps is therefore mathematically irrelevant. BUT the OU update is non-linear in psi: it uses rho = |psi|^2. The placement of dissipation RELATIVE TO the OU update matters.
+
+In canonical: OU uses rho_after_K_with_dissipation, which is exp(-2 gamma_0 dt) times the rho_pre_dissipation.
+
+In the test scripts: OU uses rho_after_K_no_dissipation, which is rho_pre_dissipation.
+
+Per step at gamma_0=0.01, dt=0.0025: the rho fed to OU differs by exp(-5e-5) ~ 1 - 5e-5. Per step at gamma_0=1.0: differs by exp(-5e-3) ~ 0.995. The cumulative effect on y_j tracking rho is small for small gamma_0 and substantial at gamma_0=1.0.
+
+**Rule violated.** Rule 8 (canonical protocol before touching a test) in the spirit; the test scripts were created (or rewritten) without comparing the Strang sub-step structure against `implementation/physics/solver_3d.py`. The pattern was inherited from the pre-existing `test_dimensional_rescaling_high_d.py` which itself does not match canonical. The wave-3 cluster correction rewrote `test_vibrational_3d.py` and `test_phase_diagram_2d_slice.py` and the convention audit work created 6 more scripts, all using the inherited off-canonical pattern.
+
+**Scripts affected.** All NLS-equation scripts in `experiments/physics/` that used the off-canonical pattern. The authorship distinction (pre-existing vs assistant-created) is not relevant to the correction because the assistant is the only contributor working in this repo with the user; the assistant's responsibility includes the pre-existing scripts that share the same equation-implementation flaw.
+
+- `test_vibrational_3d.py`, `test_phase_diagram_2d_slice.py` (wave-3 rewrites)
+- `test_phase_diagram_d2_slice.py`, `test_phase_diagram_d4_slice.py` (wave-3 / d=2 d=4 extensions)
+- `test_vibrational_3d_multiseed.py`, `test_phase_diagram_2d_slice_multiseed.py`, `test_phase_diagram_d2_slice_multiseed.py` (multi-seed wrappers; inherit the parent script's solver via import)
+- `test_phase_diagram_d2_convention_A.py`, `test_phase_diagram_d3_convention_A.py`, `test_convention_L_matrix.py`, `test_convention_A_native_regime.py` (convention audit new scripts)
+- `test_dimensional_rescaling_d6.py`, `test_dimensional_rescaling_high_d.py` (pre-existing dimensional rescaling series scripts)
+- `test_soc_vs_mnsm_avalanches.py` (pre-existing SOC comparison script)
+
+Not affected: `test_kuramoto_chimera_memory.py` (different equation, no kinetic propagator pattern); the neural-network scripts in `experiments/neural/` (different solver).
+
+**Correction made (2026-05-17).** ALL scripts in `experiments/physics/` that use the off-canonical Strang pattern are fixed to use the canonical Strang split-step ordering: U_k built with $H_{\text{complex}} = k^2/2 - i\gamma_0$, no separate dissipation sub-step. The tests are re-run with the corrected ordering. Result documents are updated with the corrected numerical values.
+
+**Sub-hedge cleanup (2026-05-17, prompted by user).** The first version of this entry stated "pre-existing scripts not created by the assistant during this work are NOT modified by this pass; the discrepancy in those scripts is a separate methodological item flagged here for future work." That framing was itself a hedge: it deferred work to "a separate methodological item" / "future work" as if someone else would do it. The user pointed out that the user is the only person working in this repo with the assistant; "future work" is the assistant's future work. The "pre-existing" framing used the script's authorship as protection against responsibility for fixing it. The corrected framing is: ALL the off-canonical scripts are fixed in this pass, regardless of who originally wrote them, because there is no separate "future work" agent that will do it otherwise.
+
+### Foundational gamma_0=0 issue (2026-05-17, post-hoc audit)
+
+**What the error is.** The paper Section 6.1 documents the canonical 3D anti-collapse setup explicitly as "$\Gamma = 0$, $T = 0$" (line 215 of paper/manuscript.md). Section 6.2 (Bravais selection) and Section 6.3 (vibrational structure) follow the same conservative methodology. The canonical reproducer scripts `reproduce_3d_anti_collapse.py` and `reproduce_3d_bravais_sweep.py` hardcode `gamma_0=0.0, T=0.0` to match the paper's documented setup. Foundational results [`../results/04-anti-collapse-3d.md`](../results/04-anti-collapse-3d.md), [`../results/05-bravais-selection.md`](../results/05-bravais-selection.md), [`../results/03-vibrational-modes.md`](../results/03-vibrational-modes.md) all document `gamma_0=0, T=0` as the methodology.
+
+Per the structural-research-mode skill's Rule A, designing a test with `gamma_0=0` or `T=0` is invalid because it contradicts P3 (perfect dynamical isolation does not occur) before any experiment runs. The Rule A retroactively flags the paper's Section 6 canonical methodology and the foundational results derived from it.
+
+**Rule violated.** A. The configuration `gamma_0 = 0, T = 0` is used as the canonical foundation for 3D anti-collapse, Bravais selection, and 3D vibrational structure. This is the conservative regime that the structural-research-mode skill explicitly rejects.
+
+**Why this was not caught earlier.** The skill `structural-research-mode` and the corresponding rules were written after the paper Section 6 was drafted. The wave-1 retractions (catalogued earlier in this document) caught tests that USED `gamma_0=0` to make structural claims about coupling or thermalization; those retractions did not retroactively flag the foundational anti-collapse / Bravais / vibrational claims at `gamma_0=0` because those claims are not directly about coupling. The audit prompted by the user during the convention work on 2026-05-17 surfaced the issue: the canonical methodology IS in the conservative regime, and Rule A applies.
+
+**Correction made (2026-05-17, this pass).** The reproducer scripts `reproduce_3d_anti_collapse.py` and `reproduce_3d_bravais_sweep.py` have been annotated with comments noting that `gamma_0=0, T=0` reproduces the paper's pre-wave-3 conservative methodology, and that Rule-A-compliant verification of the same anti-collapse phenomenology is in [`../experiments/physics/test_phase_diagram_2d_slice.py`](../experiments/physics/test_phase_diagram_2d_slice.py) + [`../results/26-phase-diagram-2d-slice.md`](../results/26-phase-diagram-2d-slice.md), which sweeps `gamma_0` from 0.01 to 1.0 at the canonical 3D configuration and confirms released-dominant regime structure.
+
+`test_soc_vs_mnsm_avalanches.py` line 210 had a `gamma_0` sweep starting at 0.0 (an explicit Rule A violation in a NEW test). The sweep is corrected to start at 0.01.
+
+**What this leaves open.** The foundational result documents (results/03, 04, 05) and the paper Section 6 still describe the `gamma_0=0, T=0` configuration as the methodology that produced the documented anti-collapse phenomenology. A full retroactive correction would require re-running the foundational tests at `gamma_0>0` and updating the result docs + paper with the new numerical values. The Rule-A-compliant verification in results/26 demonstrates the anti-collapse phenomenology is preserved at `gamma_0>0` for the d=3 case, so the structural claim survives; what is not done in this pass is the substitution of the original `gamma_0=0` numerical values with the `gamma_0>0` numerical values in the foundational result docs and the paper.
+
+**Why this is documented rather than fixed in this pass.** The foundational results have been cited extensively in the literature this repository documents (interface cross-references, paper text, downstream results). Re-running and re-numbering all of them is a substantial body of work that affects the paper's Section 6 directly. The honest minimum is to flag the issue here, fix the operational scripts (the SOC sweep) to comply with Rule A going forward, and rely on the Rule-A-compliant verification in results/26 for the structural claim. A complete retroactive correction is flagged as the next-priority methodological item; the user has the authority to direct whether to undertake it now or sequence it later.
+
+**Why the error propagated.** The wave-3 cluster correction script rewrites (test_vibrational_3d.py and test_phase_diagram_2d_slice.py) used `test_dimensional_rescaling_high_d.py` as a reference template for the Strang loop. The convention-audit scripts then used the wave-3 rewrites as templates. The pattern was inherited four generations deep without comparing against `solver_3d.py`. Rule 8 (canonical protocol) was added to CLAUDE.md as a result of the wave-3 cluster but applied only to the configuration choice (sigma_init, Lambda, Sigma_lambda), not to the Strang sub-step structure. The structural lesson: "canonical protocol" check must include the SOLVER implementation, not just the parameter choice.
+
+**Robustness of qualitative findings.** The qualitative findings of all the rerun results (released-dominant phase diagram, vibrational cascade structure, convention dependence of focal-collapse accessibility, L-robustness of Convention B) are robust to the ordering correction because the dissipation effect on the OU update is small for the dominant region of the parameter space (gamma_0 <= 0.2). The specific numerical values (peak_growth, final_ratio) shift slightly under the correction, particularly at high gamma_0 = 1.0 grid points; the regime classifications generally do not change. Specific updates are documented in the affected result documents.
+
 ## How to use this catalog
 
 For a contributor (human or AI) about to add new content to this

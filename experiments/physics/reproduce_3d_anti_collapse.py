@@ -41,6 +41,11 @@ def run_one(Lambda: float, with_memory: bool, N: int = 128, precision: str = "fp
         dt=0.0025,
         n_steps=4000,
         Lambda=Lambda,
+        # gamma_0=0, T=0 reproduces paper Section 6.1 conservative methodology.
+        # Per skill Rule A this is the pre-wave-3 isolated regime; the
+        # Rule-A-compliant verification of the same anti-collapse phenomenology
+        # is in test_phase_diagram_2d_slice.py + results/26 (gamma_0 sweep
+        # 0.01-1.0, released-dominant regime confirmed at canonical Sigma_lambda).
         gamma_0=0.0,
         T=0.0,
         memory=MemoryConfig(

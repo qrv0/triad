@@ -20,13 +20,13 @@
     "normalized": true
   },
   "results": {
-    "wall_time_s": 106.24587965011597,
+    "wall_time_s": 32.565181255340576,
     "initial_norm": 1.0000001192092896,
     "initial_peak": 1.4366968870162964,
-    "warmup_norm": 0.9807438169832645,
-    "warmup_peak": 0.001085115269113547,
-    "final_norm": 0.949118683805717,
-    "final_peak": 0.0011375096565240791,
+    "warmup_norm": 0.9800251722335815,
+    "warmup_peak": 0.0010841902112588286,
+    "final_norm": 0.947236180305481,
+    "final_peak": 0.0011358321644365788,
     "dominant_freq_stats": {
       "range": [
         0.1,

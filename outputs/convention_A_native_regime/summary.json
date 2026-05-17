@@ -27,13 +27,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0318543905123756,
-          "final_peak": 0.3476905136496714,
-          "final_norm": 3.293788551368178,
-          "peak_growth_ratio": 1.0373331977223066,
-          "final_ratio": 0.3495366358453259,
+          "max_peak": 1.0317392349243164,
+          "final_peak": 0.34733080863952637,
+          "final_norm": 3.291456460952759,
+          "peak_growth_ratio": 1.037217430695975,
+          "final_ratio": 0.34917502091996305,
           "regime": "dispersive",
-          "wall_time": 2.899474859237671
+          "wall_time": 2.518360137939453
         },
         {
           "d": 2,
@@ -41,13 +41,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0707055141617545,
-          "final_peak": 0.5003185820754716,
-          "final_norm": 4.890734449703736,
-          "peak_growth_ratio": 1.0763906080515906,
-          "final_ratio": 0.502975109081551,
+          "max_peak": 1.0703524351119995,
+          "final_peak": 0.49968087673187256,
+          "final_norm": 4.889254093170166,
+          "peak_growth_ratio": 1.0760356542682867,
+          "final_ratio": 0.5023340177324588,
           "regime": "stable",
-          "wall_time": 2.7945268154144287
+          "wall_time": 2.4671146869659424
         },
         {
           "d": 2,
@@ -55,13 +55,13 @@
           "gamma_0": 1.0,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.030634538643909,
-          "final_peak": 0.5158644213839174,
-          "final_norm": 5.0311984802343845,
-          "peak_growth_ratio": 1.036106868841896,
-          "final_ratio": 0.5186034916802813,
+          "max_peak": 1.030635952949524,
+          "final_peak": 0.5161539316177368,
+          "final_norm": 5.0307841300964355,
+          "peak_growth_ratio": 1.0361082906570083,
+          "final_ratio": 0.5188945391181587,
           "regime": "stable",
-          "wall_time": 2.783869504928589
+          "wall_time": 2.5238142013549805
         },
         {
           "d": 2,
@@ -69,13 +69,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.1024007576245698,
-          "final_peak": 0.32247883797520627,
-          "final_norm": 3.298046885921152,
-          "peak_growth_ratio": 1.1082541428256618,
-          "final_ratio": 0.3241910944706905,
+          "max_peak": 1.102274775505066,
+          "final_peak": 0.32214298844337463,
+          "final_norm": 3.2957277297973633,
+          "peak_growth_ratio": 1.1081274917825665,
+          "final_ratio": 0.3238534616883796,
           "regime": "dispersive",
-          "wall_time": 2.703453779220581
+          "wall_time": 2.6188156604766846
         },
         {
           "d": 2,
@@ -83,13 +83,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0719182105237677,
-          "final_peak": 0.44286038102303354,
-          "final_norm": 4.916589538055521,
-          "peak_growth_ratio": 1.0776097434321636,
-          "final_ratio": 0.44521182389215486,
+          "max_peak": 1.0715820789337158,
+          "final_peak": 0.4422987997531891,
+          "final_norm": 4.9150848388671875,
+          "peak_growth_ratio": 1.0772718270939963,
+          "final_ratio": 0.444647260810595,
           "regime": "dispersive",
-          "wall_time": 2.804973840713501
+          "wall_time": 2.5361151695251465
         },
         {
           "d": 2,
@@ -97,13 +97,13 @@
           "gamma_0": 1.0,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0223213524394728,
-          "final_peak": 0.4936062681535342,
-          "final_norm": 5.010569845742861,
-          "peak_growth_ratio": 1.027749542354748,
-          "final_ratio": 0.4962271549818433,
+          "max_peak": 1.0212563276290894,
+          "final_peak": 0.49370479583740234,
+          "final_norm": 5.0101423263549805,
+          "peak_growth_ratio": 1.0266788626131422,
+          "final_ratio": 0.49632620581528536,
           "regime": "dispersive",
-          "wall_time": 2.763026475906372
+          "wall_time": 2.5803661346435547
         },
         {
           "d": 2,
@@ -111,13 +111,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0823506901666617,
-          "final_peak": 0.31644958606332413,
-          "final_norm": 3.3066292531443637,
-          "peak_growth_ratio": 1.0880976161084261,
-          "final_ratio": 0.31812982921550237,
+          "max_peak": 1.0822405815124512,
+          "final_peak": 0.3162955045700073,
+          "final_norm": 3.304299831390381,
+          "peak_growth_ratio": 1.0879869228135006,
+          "final_ratio": 0.3179749296001673,
           "regime": "dispersive",
-          "wall_time": 2.7757205963134766
+          "wall_time": 2.503035545349121
         },
         {
           "d": 2,
@@ -125,13 +125,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0686128811505127,
-          "final_peak": 0.4600889920220478,
-          "final_norm": 4.915091712945649,
-          "peak_growth_ratio": 1.074286863847786,
-          "final_ratio": 0.4625319131452972,
+          "max_peak": 1.0682644844055176,
+          "final_peak": 0.4599432945251465,
+          "final_norm": 4.913506507873535,
+          "peak_growth_ratio": 1.0739366172307392,
+          "final_ratio": 0.46238544204263926,
           "regime": "dispersive",
-          "wall_time": 2.8129217624664307
+          "wall_time": 2.5113754272460938
         },
         {
           "d": 2,
@@ -139,13 +139,13 @@
           "gamma_0": 1.0,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.037396762918692,
-          "final_peak": 0.5415893266785867,
-          "final_norm": 4.964962024485999,
-          "peak_growth_ratio": 1.0429049983019962,
-          "final_ratio": 0.5444649877554901,
+          "max_peak": 1.0366348028182983,
+          "final_peak": 0.5411994457244873,
+          "final_norm": 4.964541912078857,
+          "peak_growth_ratio": 1.0421389924442457,
+          "final_ratio": 0.544073036661842,
           "regime": "stable",
-          "wall_time": 2.727015972137451
+          "wall_time": 2.594505786895752
         },
         {
           "d": 2,
@@ -153,13 +153,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.042516249232937,
-          "final_peak": 0.3583148317618493,
-          "final_norm": 3.348771349358886,
-          "peak_growth_ratio": 1.0480516674036455,
-          "final_ratio": 0.3602173655900063,
+          "max_peak": 1.0424151420593262,
+          "final_peak": 0.35811835527420044,
+          "final_norm": 3.346409320831299,
+          "peak_growth_ratio": 1.0479500233842194,
+          "final_ratio": 0.36001984587687225,
           "regime": "dispersive",
-          "wall_time": 2.6608669757843018
+          "wall_time": 2.598935842514038
         },
         {
           "d": 2,
@@ -167,13 +167,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0643229740342226,
-          "final_peak": 0.499389196865516,
-          "final_norm": 4.93439935199515,
-          "peak_growth_ratio": 1.0699741787366017,
-          "final_ratio": 0.5020407891420094,
+          "max_peak": 1.0639907121658325,
+          "final_peak": 0.4995120167732239,
+          "final_norm": 4.932743072509766,
+          "peak_growth_ratio": 1.0696401526670443,
+          "final_ratio": 0.5021642611830048,
           "regime": "stable",
-          "wall_time": 2.718073606491089
+          "wall_time": 2.5212502479553223
         },
         {
           "d": 2,
@@ -181,13 +181,13 @@
           "gamma_0": 1.0,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0181943029992837,
-          "final_peak": 0.5178249108596389,
-          "final_norm": 5.047235357788208,
-          "peak_growth_ratio": 1.0236005796403254,
-          "final_ratio": 0.520574390709883,
+          "max_peak": 1.0181938409805298,
+          "final_peak": 0.5177311897277832,
+          "final_norm": 5.046773910522461,
+          "peak_growth_ratio": 1.0236001151684038,
+          "final_ratio": 0.5204801719496627,
           "regime": "stable",
-          "wall_time": 2.7405285835266113
+          "wall_time": 2.5252764225006104
         },
         {
           "d": 2,
@@ -195,13 +195,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0212419691299375,
-          "final_peak": 0.2655882600285553,
-          "final_norm": 3.3198366335796523,
-          "peak_growth_ratio": 1.0266644278750856,
-          "final_ratio": 0.2669984462789573,
+          "max_peak": 1.021146535873413,
+          "final_peak": 0.265542596578598,
+          "final_norm": 3.3175487518310547,
+          "peak_growth_ratio": 1.0265684878993782,
+          "final_ratio": 0.2669525403711095,
           "regime": "dispersive",
-          "wall_time": 2.8006412982940674
+          "wall_time": 2.5587222576141357
         },
         {
           "d": 2,
@@ -209,13 +209,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
-          "max_peak": 1.0553369644169515,
-          "final_peak": 0.47908153396181496,
-          "final_norm": 4.8547716895005895,
-          "peak_growth_ratio": 1.0609404563657363,
-          "final_ratio": 0.4816252992319433,
+          "max_peak": 1.0550490617752075,
+          "final_peak": 0.4788505434989929,
+          "final_norm": 4.853264331817627,
+          "peak_growth_ratio": 1.060651025055719,
+          "final_ratio": 0.4813930822857872,
           "regime": "dispersive",
-          "wall_time": 2.714428186416626
+          "wall_time": 2.444700002670288
         },
         {
           "d": 2,
@@ -224,12 +224,12 @@
           "initial_peak": 0.9947183728218079,
           "initial_norm": 0.5,
           "max_peak": 0.9947183728218079,
-          "final_peak": 0.731949843141804,
-          "final_norm": 5.002036293554854,
+          "final_peak": 0.7319256067276001,
+          "final_norm": 5.0015740394592285,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.7358362559097159,
+          "final_ratio": 0.7358118908081293,
           "regime": "stable",
-          "wall_time": 2.8762097358703613
+          "wall_time": 2.6382689476013184
         }
       ],
       "regime_counts": {
@@ -251,12 +251,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.35681397052724234,
-          "final_norm": 31.682909363877354,
+          "final_peak": 0.35663896799087524,
+          "final_norm": 31.664554595947266,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.35965956845701713,
+          "final_ratio": 0.35948317027222726,
           "regime": "dispersive",
-          "wall_time": 9.592150926589966
+          "wall_time": 8.80990195274353
         },
         {
           "d": 3,
@@ -265,12 +265,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.5821291488876866,
-          "final_norm": 48.84869189007052,
+          "final_peak": 0.5820938944816589,
+          "final_norm": 48.83589172363281,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.5867716394787603,
+          "final_ratio": 0.5867361039182009,
           "regime": "stable",
-          "wall_time": 9.182960987091064
+          "wall_time": 8.979040622711182
         },
         {
           "d": 3,
@@ -279,12 +279,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.5985071802646958,
-          "final_norm": 50.42397152244767,
+          "final_peak": 0.5982174277305603,
+          "final_norm": 50.420013427734375,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.6032802859550364,
+          "final_ratio": 0.6029882226391506,
           "regime": "stable",
-          "wall_time": 9.15214991569519
+          "wall_time": 8.922723531723022
         },
         {
           "d": 3,
@@ -292,13 +292,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.0027098304352386,
-          "final_peak": 0.3395522876135896,
-          "final_norm": 31.81106488634144,
-          "peak_growth_ratio": 1.0107064596407465,
-          "final_ratio": 0.3422602233069588,
+          "max_peak": 1.0027097463607788,
+          "final_peak": 0.33925285935401917,
+          "final_norm": 31.792625427246094,
+          "peak_growth_ratio": 1.0107063748957912,
+          "final_ratio": 0.3419584071015513,
           "regime": "dispersive",
-          "wall_time": 9.15218448638916
+          "wall_time": 9.0424165725708
         },
         {
           "d": 3,
@@ -307,12 +307,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.5952362070382169,
-          "final_norm": 49.19008340529983,
+          "final_peak": 0.5949322581291199,
+          "final_norm": 49.17717742919922,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.5999832266573538,
+          "final_ratio": 0.5996768537501571,
           "regime": "stable",
-          "wall_time": 9.123378276824951
+          "wall_time": 8.985244750976562
         },
         {
           "d": 3,
@@ -321,12 +321,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.5960370552155168,
-          "final_norm": 50.057400984644424,
+          "final_peak": 0.5961119532585144,
+          "final_norm": 50.05339431762695,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.6007904616134897,
+          "final_ratio": 0.6008659569697478,
           "regime": "stable",
-          "wall_time": 9.1891028881073
+          "wall_time": 9.065202713012695
         },
         {
           "d": 3,
@@ -334,13 +334,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 0.9932706279879704,
-          "final_peak": 0.3473976597747122,
-          "final_norm": 31.743508218228467,
-          "peak_growth_ratio": 1.0011919793816173,
-          "final_ratio": 0.35016816245430965,
+          "max_peak": 0.9932706356048584,
+          "final_peak": 0.3472268581390381,
+          "final_norm": 31.725116729736328,
+          "peak_growth_ratio": 1.0011919870592503,
+          "final_ratio": 0.3499959986724725,
           "regime": "dispersive",
-          "wall_time": 9.221545457839966
+          "wall_time": 9.025390863418579
         },
         {
           "d": 3,
@@ -349,12 +349,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.6929330592174523,
-          "final_norm": 48.98175652700683,
+          "final_peak": 0.6924740076065063,
+          "final_norm": 48.96892166137695,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.6984592130164979,
+          "final_ratio": 0.6979965004605733,
           "regime": "stable",
-          "wall_time": 9.154625177383423
+          "wall_time": 9.077496767044067
         },
         {
           "d": 3,
@@ -362,13 +362,13 @@
           "gamma_0": 1.0,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.0169621629975565,
-          "final_peak": 0.5904103387564175,
-          "final_norm": 49.922217128711864,
-          "peak_growth_ratio": 1.0250724548154724,
-          "final_ratio": 0.5951188719878948,
+          "max_peak": 1.0169624090194702,
+          "final_peak": 0.5902570486068726,
+          "final_norm": 49.91840362548828,
+          "peak_growth_ratio": 1.0250727027994153,
+          "final_ratio": 0.5949643593466084,
           "regime": "stable",
-          "wall_time": 9.101569890975952
+          "wall_time": 9.380552053451538
         },
         {
           "d": 3,
@@ -377,12 +377,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.3351056852985666,
-          "final_norm": 31.74795170854388,
+          "final_peak": 0.33495306968688965,
+          "final_norm": 31.72968864440918,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.3377781592572861,
+          "final_ratio": 0.33762432653331953,
           "regime": "dispersive",
-          "wall_time": 9.343910455703735
+          "wall_time": 9.112873792648315
         },
         {
           "d": 3,
@@ -390,13 +390,13 @@
           "gamma_0": 0.2,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 1.0012569787603232,
-          "final_peak": 0.6834275482268358,
-          "final_norm": 49.24330234602827,
-          "peak_growth_ratio": 1.0092420214471969,
-          "final_ratio": 0.6888778954021768,
+          "max_peak": 1.0012571811676025,
+          "final_peak": 0.6831220388412476,
+          "final_norm": 49.230438232421875,
+          "peak_growth_ratio": 1.009242225468678,
+          "final_ratio": 0.6885699495736604,
           "regime": "stable",
-          "wall_time": 9.320082664489746
+          "wall_time": 8.95121955871582
         },
         {
           "d": 3,
@@ -405,12 +405,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.5673959790801192,
-          "final_norm": 49.51763881206866,
+          "final_peak": 0.5671608448028564,
+          "final_norm": 49.51392364501953,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.5719209723729747,
+          "final_ratio": 0.5716839628955577,
           "regime": "stable",
-          "wall_time": 9.468429803848267
+          "wall_time": 9.280338525772095
         },
         {
           "d": 3,
@@ -418,13 +418,13 @@
           "gamma_0": 0.05,
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
-          "max_peak": 0.9996771042870681,
-          "final_peak": 0.381900031725842,
-          "final_norm": 31.838972590937544,
-          "peak_growth_ratio": 1.0076495474461717,
-          "final_ratio": 0.3849456914517047,
+          "max_peak": 0.9996771812438965,
+          "final_peak": 0.38164710998535156,
+          "final_norm": 31.820816040039062,
+          "peak_growth_ratio": 1.0076496250167324,
+          "final_ratio": 0.38469075265571595,
           "regime": "dispersive",
-          "wall_time": 9.162156343460083
+          "wall_time": 8.975309610366821
         },
         {
           "d": 3,
@@ -433,12 +433,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.7206943075199748,
-          "final_norm": 49.25183246902633,
+          "final_peak": 0.7206282019615173,
+          "final_norm": 49.23927688598633,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.7264418577811065,
+          "final_ratio": 0.7263752250296134,
           "regime": "stable",
-          "wall_time": 9.141658782958984
+          "wall_time": 9.053410768508911
         },
         {
           "d": 3,
@@ -447,12 +447,12 @@
           "initial_peak": 0.9920880794525146,
           "initial_norm": 0.35355344414711,
           "max_peak": 0.9920880794525146,
-          "final_peak": 0.5925922575442945,
-          "final_norm": 50.31454442325109,
+          "final_peak": 0.5925817489624023,
+          "final_norm": 50.31084442138672,
           "peak_growth_ratio": 1.0,
-          "final_ratio": 0.5973181916179433,
+          "final_ratio": 0.5973075992299187,
           "regime": "stable",
-          "wall_time": 9.11223554611206
+          "wall_time": 9.019156694412231
         }
       ],
       "regime_counts": {
@@ -463,6 +463,6 @@
       "initial_norm": 0.35355344414711
     }
   },
-  "wall_time_total_s": 180.52668857574463,
+  "wall_time_total_s": 174.24351406097412,
   "backend": "cupy"
 }
