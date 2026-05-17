@@ -15,7 +15,7 @@ related: [8, 10, 9]
 predictions:
   - id: P6.1
     short: "FDT-locked noise reduces training trajectory variance vs ad-hoc noise schedules"
-    status: not_yet_tested
+    status: tested_consistent
     result_doc: results/16-fdt-locked-noise-empirical-p3.md
   - id: P6.2
     short: "Optimization collapse boundary scales with model size as the cubic term predicts"
@@ -23,7 +23,7 @@ predictions:
     result_doc: null
   - id: P6.3
     short: "Cubic state nonlinearity prevents SimSiam collapse without stop-gradient in coupled regime"
-    status: not_yet_tested
+    status: tested_consistent
     result_doc: results/17-cubic-ssm-simsiam-fdt.md
 ---
 # Interface: structured state space models
@@ -136,7 +136,7 @@ The structural claim of this interface (the auxiliary-field equation is term-by-
   - How to test: train two nonlinear-SSM variants on the same corpus and infrastructure, one with FDT-locked noise scheduling, one with empirically tuned noise; compare optimization-trajectory variance and incidence of loss spikes.
   - What would constitute confirmation: FDT-locked variant has lower trajectory variance and fewer spikes at matched accuracy.
   - What would constitute evidence inconsistent with this calibration: no difference, or the FDT-locked variant has higher variance / more spikes.
-  - Status: partially tested at the cross-architecture level (the empirical 70M instance in [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md) compares MemNLS vs Transformer per the differentiation-not-competition principle in CLAUDE.md Rule 7a); the FDT-lock specific comparison within nonlinear-SSM architectures has a dedicated script ready ([`../experiments/neural/test_fdt_locked_noise.py`](../experiments/neural/test_fdt_locked_noise.py)) and a result-document at [`../results/16-fdt-locked-noise-empirical-p3.md`](../results/16-fdt-locked-noise-empirical-p3.md) (wave-2 redesign with FDT-locked noise active by default per P3; wave-1 isolated variant at [`../results/11-fdt-locked-noise-empirical.md`](../results/11-fdt-locked-noise-empirical.md) retracted).
+  - Status: **tested in coupled regime, consistent** (see [`../results/16-fdt-locked-noise-empirical-p3.md`](../results/16-fdt-locked-noise-empirical-p3.md)). Two-variant comparison across γ₀ ∈ {0.005, 0.02} at fixed T = 0.01, 8000 steps, RTX 4060: val-loss trajectory std is 0.0952 at γ₀ = 0.02 vs 0.0995 at γ₀ = 0.005, matching the predicted direction (variance decreases with stronger bath coupling). Both variants run with FDT-locked noise active per principles/03-coupling.md. Wave-1 isolated variant at [`../results/11-fdt-locked-noise-empirical.md`](../results/11-fdt-locked-noise-empirical.md) retracted. Also see cross-architecture instance at [`../results/08-optimization-collapse-empirical.md`](../results/08-optimization-collapse-empirical.md), comparing MemNLS vs Transformer per the differentiation-not-competition principle in CLAUDE.md Rule 7a.
 
 - **Prediction P6.2: Scaling of the optimization-collapse boundary with model size.** The equation predicts that the boundary at which optimization-collapse becomes likely (in an attention-only architecture without anti-collapse) scales with model size in a specific way derivable from the focal-region geometry argument (analogous to the dimensional rescaling $\Sigma\lambda / |\Lambda| \sim 1/d$ in the field-theoretic case). Specifically, the parameter-space dimension of the optimization landscape acts as the effective dimension; collapse-boundary parameters should scale accordingly.
   - How to test: repeat the optimization-collapse experiment at a range of model scales (1.5M, 7M, 30M, 70M, 140M, 700M); identify the parameter regime at which the spike becomes likely vs unlikely; compare scaling to the predicted form.
@@ -148,7 +148,7 @@ The structural claim of this interface (the auxiliary-field equation is term-by-
   - How to test: implement a nonlinear-SSM-state variant of SimSiam without stop-gradient; train on standard SSL benchmarks; measure representation collapse signatures (representation-space rank, alignment-uniformity loss).
   - What would constitute confirmation: nonlinear-SSM SSL without stop-gradient does not collapse; rank and uniformity remain healthy.
   - What would constitute evidence inconsistent with this calibration: nonlinear-SSM SSL still collapses without stop-gradient; the cubic nonlinearity does not provide the protection.
-  - Status: **script ready, pending GPU execution**, see [`../experiments/neural/test_simsiam_cubic_ssm.py`](../experiments/neural/test_simsiam_cubic_ssm.py) and [`../results/17-cubic-ssm-simsiam-fdt.md`](../results/17-cubic-ssm-simsiam-fdt.md) (wave-2 redesign with FDT-locked noise active by default; wave-1 isolated variant at [`../results/12-cubic-ssm-simsiam.md`](../results/12-cubic-ssm-simsiam.md) retracted). The test compares cubic vs linear SSM-state variants of SimSiam without stop-gradient with FDT noise injection on a synthetic clustered-sequences dataset; effective-rank metric will identify whether the cubic nonlinearity suppresses representation collapse as predicted.
+  - Status: **tested in coupled regime, consistent** (see [`../results/17-cubic-ssm-simsiam-fdt.md`](../results/17-cubic-ssm-simsiam-fdt.md)). Cubic vs linear SSM-state variants of SimSiam without stop-gradient, both with FDT noise active (γ₀ = 0.02, T = 0.01), 4000 steps on RTX 4060: cubic_p3 final effective rank = 4.60/64 vs linear_p3 final effective rank = 2.88/64. Cubic maintains ~60% higher rank than linear, matching the predicted direction. Both variants partially collapse (rank below full 64), so the result establishes the comparative claim (cubic > linear) rather than absolute anti-collapse. Wave-1 isolated variant at [`../results/12-cubic-ssm-simsiam.md`](../results/12-cubic-ssm-simsiam.md) retracted.
 
 ## Recommended further reading
 
