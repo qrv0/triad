@@ -23,8 +23,8 @@ predictions:
     result_doc: null
   - id: P5.3
     short: "Ratio of the two principal frequencies stays in the predicted band across chambers"
-    status: not_yet_tested
-    result_doc: null
+    status: partial
+    result_doc: results/23-hypogeum-spectrum-audit.md
 ---
 # Interface: low-frequency acoustic resonance in megalithic chambers
 
