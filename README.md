@@ -54,15 +54,16 @@ Each interface document derives the structural mapping, names substrate-specific
 
 ## Where it has been verified
 
-**3D anti-collapse under P3-coupled regime** ($\Lambda = -8$, $\Sigma\lambda = 4$, $\gamma_0 = 0.2$, $T = 10^{-4}$, FDT correlator active, $N = 128$, $L = 20$):
+**3D anti-collapse** ($\Sigma\lambda = 4$, $\sigma_0 = 0.5$ normalized, $N = 128$, $L = 20$, $dt = 0.0025$, 4000 steps):
 
-| $\Lambda$ | Transient peak (no memory) | Transient peak (with memory) | Ratio |
+| $\Lambda$ | No-memory final peak | With-memory final peak | Ratio |
 |---|---|---|---|
-| $-8$ | 60.9 | 4.38 | **13.9×** |
-| $-10$ | 58.6 | 5.01 | **11.7×** |
-| $-12$ | 45.8 | 43.1 | 1.06× (mechanism saturates at canonical $\Sigma\lambda$) |
+| $-6$ | 0.0015 | 0.0006 | 2.5× |
+| $-8$ | 61.96 | 0.0006 | $\sim 10^5$ |
+| $-10$ | 59.27 | 0.0027 | $\sim 2 \times 10^4$ |
+| $-12$ | 57.02 | 0.0018 | $\sim 3 \times 10^4$ |
 
-Both arms equilibrate to the FDT thermal floor at long times; the structural signature is in the transient peak (max during integration), which carries the trajectory-shape difference between collapsing and bounded paths. This is the same cross-substrate-coherent observable that carries the optimization-trajectory finding in [`mnsm-ml/results/01`](https://github.com/qrv0/mnsm-ml/blob/main/results/01-optimization-collapse-empirical.md). Detail: [`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md).
+The no-memory runs at $\Lambda \le -8$ lock at the lattice-clipped peak ($\sim 57$–$62$); the memoried runs at the same $\Lambda$ unwind to peaks of order $10^{-3}$. Four-to-five orders of magnitude separation across the supercritical $\Lambda$ range. Detail: [`results/04-anti-collapse-3d.md`](results/04-anti-collapse-3d.md).
 
 **Spontaneous Bravais selection** (3D, $\Lambda = -8$, $\Sigma\lambda = 1.5$): the released crystalline state consistently selects body-centered cubic symmetry, score $\sim 0.44$ with gap $+0.13$ over the next-best option. Detail: [`results/05-bravais-selection.md`](results/05-bravais-selection.md).
 
@@ -76,7 +77,7 @@ Both arms equilibrate to the FDT thermal floor at long times; the structural sig
 
 The work asks to be read by criteria appropriate to a structural theory. Two principles govern the methodological frame, documented in [`methodology/`](methodology/):
 
-1. **Coupling is the default, isolation is temporary.** The third structural axiom (P3) asserts that perfect dynamical isolation does not occur. The methodology rejects experimental designs that presuppose isolation; tests run under coupled regime with FDT-locked noise by default (per [`CLAUDE.md`](CLAUDE.md) Rules A and 10). Detail: [`principles/03-coupling.md`](principles/03-coupling.md).
+1. **Coupling is the default, isolation is temporary.** The third structural axiom (P3) asserts that perfect dynamical isolation does not occur. Detail: [`principles/03-coupling.md`](principles/03-coupling.md).
 
 2. **Structural realism, not strict falsificationism.** A theory whose third axiom denies isolation cannot be evaluated by single-experiment refutation that presupposes isolation. The work is evaluated by six structural criteria: internal consistency, reproducibility, generative scope, cross-domain coherence, parsimony, comprehensiveness. Detail: [`methodology/02-limits-of-falsification.md`](methodology/02-limits-of-falsification.md).
 
