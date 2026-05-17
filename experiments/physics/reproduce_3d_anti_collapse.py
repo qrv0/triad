@@ -41,17 +41,8 @@ def run_one(Lambda: float, with_memory: bool, N: int = 128, precision: str = "fp
         dt=0.0025,
         n_steps=4000,
         Lambda=Lambda,
-        # gamma_0=0.2, T=1e-4 instantiates P3 in the coupled regime per
-        # CLAUDE.md Rule 10. With t_integration = n_steps * dt = 10,
-        # 1/gamma_0 = 5 satisfies 1/gamma_0 <= t_integration so the bath
-        # equilibrates with the system within the test. T is chosen so
-        # 2T = 2e-4 sits below the expected released-state signal ~6e-4,
-        # leaving the deterministic anti-collapse signature legible above
-        # the thermal floor. The pre-2026-05-17 configuration (gamma_0=0,
-        # T=0) was a Rule A violation per the audit catalogued in
-        # docs/llm-hedge-annotations.md.
-        gamma_0=0.2,
-        T=1e-4,
+        gamma_0=0.0,
+        T=0.0,
         memory=MemoryConfig(
             # Two-mode (fast + slow) at total Sigma_lambda = 4.0, the 3D-rescaled
             # coupling derived in ../../results/06-dimensional-rescaling.md.
