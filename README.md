@@ -2,9 +2,13 @@
 
 <img src="assets/triad-mark.svg" alt="triad: three principles forming a triangle" width="320">
 
-# triad
+# Triad
 
 **One equation. Three principles. Twenty-two substrates.**
+
+$$
+i\hbar\, \partial_t \Psi = \left[\,-\frac{\hbar^2}{2m} D^2 + V_{\text{ext}} + \Lambda |\Psi|^2 + V_{\text{mem}} + \alpha (-\Delta)^{\sigma/2} - i\Gamma\,\right]\Psi + \eta
+$$
 
 *The minimal equation for persistent entities — state, self-action / memory, and coupling / dissipation.*
 
