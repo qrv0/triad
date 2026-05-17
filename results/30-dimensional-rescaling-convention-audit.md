@@ -86,7 +86,7 @@ This audit is a **methodological consolidation**, not a new result. It does not 
 
 The audit does suggest two productive next steps:
 
-1. **Convention A multi-seed extension at d=2 and d=3.** The current Convention B phase diagrams have multi-seed extension (results/26 tested_consistent); the older Convention A 2D and 3D references (paper anti-collapse demonstrations) are single-seed. A multi-seed extension within Convention A would close the same Rule 9 question for that series.
+1. **Convention A multi-seed extension at d=2 and d=3.** The current Convention B phase diagrams have multi-seed extension (results/26 tested_consistent); the older Convention A 2D and 3D references (paper anti-collapse demonstrations) are single-seed. A multi-seed extension within Convention A would close the same statistical-power question for that series.
 
 2. **Cross-convention amplitude tabulation.** Listing all existing results in terms of $|\Psi(0)|^2$, max peak, and the cubic-kinetic balance ratio would enable direct comparison across conventions and make the "regime" of each result explicit in a convention-independent way.
 

@@ -46,7 +46,7 @@ The intensity equivalence at machine precision verifies the Errais-Giesecke-Gold
 
 ## Status assignment
 
-Status: **tested in coupled regime, consistent**.
+Status: **tested, consistent**.
 
 Rationale: the Markov representation of exponential-kernel Hawkes intensity is identical to the auxiliary-field equation in mathematical structure, verified numerically at machine precision. The statistical properties of the simulated process match theoretical predictions within stochastic uncertainty for the event count. The result contributes evidence consistent with P21.1 under criterion 4 (cross-domain coherence) and criterion 2 (reproducibility).
 

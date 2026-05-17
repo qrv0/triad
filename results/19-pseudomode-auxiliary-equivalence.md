@@ -38,7 +38,7 @@ The agreement between $y_{\text{ode}}$ (auxiliary ODE) and $y_{\text{conv}}$ (di
 
 ## Status assignment
 
-Status: **tested in coupled regime, consistent**.
+Status: **tested, consistent**.
 
 Rationale: across three forcing protocols and five decay rates spanning two orders of magnitude, the auxiliary-field ODE reproduces the convolution-form memory integral to within $1.36 \times 10^{-4}$ relative error (well below the $10^{-3}$ threshold). The equivalence is mathematically exact for the exponential kernel; the numerical test confirms the structural identity. The result contributes evidence consistent with P18.1 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
 

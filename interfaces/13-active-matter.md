@@ -22,7 +22,7 @@ predictions:
     status: not_yet_tested
     result_doc: null
   - id: P13.3
-    short: "Motility-induced phase separation shows broadband-absorption response in coupled regime"
+    short: "Motility-induced phase separation shows broadband-absorption response"
     status: not_yet_tested
     result_doc: null
 ---
@@ -97,7 +97,7 @@ It does establish that the equation's structural form recurs at the level of act
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (active matter substrates instantiate the same triangle as the present equation) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
+The structural claim of this interface (active matter substrates instantiate the same triangle as the present equation) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P13.1: Spontaneous symmetry selection in active crystals follows the BCC-selection pattern.** The structural prediction is that dense active suspensions with sufficient interaction memory should spontaneously select a specific Bravais symmetry in three dimensions, analogous to the BCC selection documented for the present equation ([`../results/05-bravais-selection.md`](../results/05-bravais-selection.md)). The selection should be substrate-independent at the structural level; the specific lattice (BCC, FCC, HCP) should depend on the substrate's particular alignment-memory structure.
   - How to test: 3D dense active-suspension simulations or experiments with controllable interaction memory; characterize the spontaneously selected crystalline order across substrates.

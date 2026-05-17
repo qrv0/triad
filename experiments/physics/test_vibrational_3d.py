@@ -22,7 +22,7 @@ Canonical config (this version):
 - Memory: nu1=10, lambda1=1.125; nu2=0.5, lambda2=0.375 (total Sigma_lambda=1.5,
   the crystalline window from paper Section 6.2 Bravais sweep, with 75/25 split
   matching the 3D convention from results/04)
-- gamma_0=0.01, T_bath=0.0001 (small positive per Rule A in
+- gamma_0=0.01, T_bath=0.0001 (small positive in
   ~/.claude/skills/structural-research-mode/SKILL.md, kept tiny to minimize
   thermal contamination of the vibrational spectrum; the spectrum will have a
   thermal background but the crystalline modes should dominate)

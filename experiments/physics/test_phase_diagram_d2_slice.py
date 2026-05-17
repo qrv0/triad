@@ -26,7 +26,7 @@ Configuration:
 - Sigma_lambda swept: {0.05, 0.1, 0.5, 1.0, 2.0} (d=2 critical ratio per
   results/06 is ~0.05 so this sweep covers below threshold and into the
   released regime)
-- gamma_0 swept: {0.01, 0.05, 0.2, 1.0} (all positive per Rule A)
+- gamma_0 swept: {0.01, 0.05, 0.2, 1.0}
 - 75/25 memory split with nu_fast=10, nu_slow=0.5
 
 Regime classification same as the d=3 canonical script.

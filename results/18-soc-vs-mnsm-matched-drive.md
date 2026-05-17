@@ -6,7 +6,7 @@ Interface: [`../interfaces/14-self-organized-criticality.md`](../interfaces/14-s
 
 Predicted observable: the equation's release-regime avalanche-size distributions, with appropriate FDT-coupled drive, should be statistically indistinguishable from BTW sandpile distributions at matching substrate parameters.
 
-Wave 1 ([`13-soc-vs-mnsm-avalanches.md`](13-soc-vs-mnsm-avalanches.md)) was retracted because the MNSM portion was in isolated regime with ad-hoc perturbations. Wave 2 makes the MNSM drive explicitly FDT-coupled.
+Wave 1 ([`13-soc-vs-mnsm-avalanches.md`](13-soc-vs-mnsm-avalanches.md)) was retracted because the MNSM portion was in the regime with ad-hoc perturbations. Wave 2 makes the MNSM drive explicitly FDT-coupled.
 
 ## Method
 
@@ -14,7 +14,7 @@ The script [`../experiments/physics/test_soc_vs_mnsm_avalanches.py`](../experime
 
 **BTW sandpile (reference)**: 2D grid $64 \times 64$, threshold = 4, dissipative boundary, 15,000 grain drives. Avalanche size = count of topplings per drive event. (Standard SOC reference.)
 
-**MNSM 2D with FDT-locked drive (wave-2 redesigned)**: $N = 64$, $L = 10$, $\Lambda = -8$, $\Sigma\lambda = 2$, $T_{\text{bath}} = 0.05$. Two values of $\gamma_0$ in the coupled regime (per principles/03-coupling.md Rule A): 0.05 (weak P3), 0.2 (moderate P3). Stochastic forcing applied continuously every step per the FDT correlator (replacing the wave-1 ad-hoc periodic perturbations).
+**MNSM 2D with FDT-locked drive (wave-2 redesigned)**: $N = 64$, $L = 10$, $\Lambda = -8$, $\Sigma\lambda = 2$, $T_{\text{bath}} = 0.05$. Two values of $\gamma_0$ (per principles/03-coupling.md): 0.05 (weak P3), 0.2 (moderate P3). Stochastic forcing applied continuously every step per the FDT correlator (replacing the wave-1 ad-hoc periodic perturbations).
 
 Avalanche detection (MNSM): excursions of peak density above threshold (median peak × 1.05); size = time-integrated excursion. Statistical analysis: Clauset-Shalizi-Newman MLE for the power-law exponent.
 
@@ -34,7 +34,7 @@ Reference (literature): BTW 2D critical exponent $\tau \in [1.0, 1.2]$ (Manna 19
 
 **Three key findings:**
 
-1. **MNSM avalanche exponents in the coupled regime ($\tau \approx 1.23$) fall squarely within the BTW literature range ($\tau \in [1.0, 1.2]$), close to our BTW reference ($\tau = 1.37$).** The statistical agreement is strong: across two MNSM coupling strengths (0.05 and 0.20), the exponents are 1.23 and 1.24, differing from each other by only 0.01 and from the BTW reference by ~0.13. With ~600-800 events per MNSM run, the Clauset-Shalizi-Newman point estimates are well-resolved.
+1. **MNSM avalanche exponents ($\tau \approx 1.23$) fall squarely within the BTW literature range ($\tau \in [1.0, 1.2]$), close to our BTW reference ($\tau = 1.37$).** The statistical agreement is strong: across two MNSM coupling strengths (0.05 and 0.20), the exponents are 1.23 and 1.24, differing from each other by only 0.01 and from the BTW reference by ~0.13. With ~600-800 events per MNSM run, the Clauset-Shalizi-Newman point estimates are well-resolved.
 
 2. **The exponent is robust to $\gamma_0$ within the coupled regime.** Going from $\gamma_0 = 0.05$ to $\gamma_0 = 0.2$ (a factor of 4 in coupling strength), the exponent moves from 1.230 to 1.240, while the event count grows from 616 to 791. This suggests the avalanche universality class is set by the equation's structural form, not by the specific coupling strength, exactly what the structural-realist reading expects.
 
@@ -42,11 +42,11 @@ Reference (literature): BTW 2D critical exponent $\tau \in [1.0, 1.2]$ (Manna 19
 
 ## Status assignment
 
-Status: **tested in coupled regime, consistent**.
+Status: **tested, consistent**.
 
-Rationale: P14.2 predicted that MNSM's release-regime avalanche distributions should be statistically indistinguishable from BTW sandpile distributions. The wave-2 test in the coupled regime produces MNSM exponents (1.23, 1.24) within statistical proximity of the BTW reference (1.37, and within the literature range 1.0-1.2). The event counts are large enough (600-800) for confident exponent estimation. The result contributes evidence consistent with P14.2 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
+Rationale: P14.2 predicted that MNSM's release-regime avalanche distributions should be statistically indistinguishable from BTW sandpile distributions. The wave-2 test produces MNSM exponents (1.23, 1.24) within statistical proximity of the BTW reference (1.37, and within the literature range 1.0-1.2). The event counts are large enough (600-800) for confident exponent estimation. The result contributes evidence consistent with P14.2 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
 
-The wave-1 test (results/13, retracted) used isolated configuration and produced numerics the methodology does not interpret (configuration outside the scope P3 permits). The wave-2 in the coupled regime is the methodologically valid test of P14.2 in this substrate.
+The wave-1 test (results/13, retracted) used configuration and produced numerics the methodology does not interpret (configuration outside the scope P3 permits). The wave-2 is the methodologically valid test of P14.2 in this substrate.
 
 ## Honest caveats
 
@@ -77,7 +77,7 @@ Wall: 12.9 seconds on RTX 4060 (CuPy). Output: `outputs/soc_vs_mnsm_avalanches_p
 
 This is the most empirically clean result of wave 2: the wave-2 coupled test produced 600-800 events with $\tau = 1.23$-$1.24$, well-resolved statistics, contributing evidence consistent with P14.2 under criterion 4.
 
-The wave-1 result (retracted) used isolated configuration the methodology excludes; it produced numerics the methodology does not interpret. The wave-2 in the coupled regime is the methodologically valid test of P14.2.
+The wave-1 result (retracted) used configuration the methodology excludes; it produced numerics the methodology does not interpret. The wave-2 is the methodologically valid test of P14.2.
 
 Wave-3 follow-ups for P14.2:
 - MNSM 3D with FDT-locked drive (existing CuPy solver).

@@ -14,7 +14,7 @@ hero_tier: A
 related: [13, 15, 12]
 predictions:
   - id: P10.1
-    short: "Chimera-state lifetime peaks at tau_mem / tau_sync ~ 1 in coupled regime"
+    short: "Chimera-state lifetime peaks at tau_mem / tau_sync ~ 1"
     status: tested_consistent
     result_doc: results/14-kuramoto-chimera-fdt.md
   - id: P10.2
@@ -91,13 +91,13 @@ It does establish that the equation's structural form recurs at the level of cou
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (memory-coupled oscillator ensembles instantiate the same triangle as the present equation in its phase-only sector) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
+The structural claim of this interface (memory-coupled oscillator ensembles instantiate the same triangle as the present equation in its phase-only sector) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are *local* predictions that can be tested by numerical or empirical methods (per principles/03-coupling.md). Inconsistent evidence would shift evidentiary weight against this interface's specific calibration under criterion 4 (cross-domain coherence), without bearing on the global structural claim.
 
 - **Prediction P10.1: Chimera-state stability scales with memory kernel timescale in a specific way.** The structural prediction is that chimera states in a memory-Kuramoto ensemble are stable when the slowest memory kernel timescale $\tau_{\text{mem}}$ is comparable to the synchronization timescale $\tau_{\text{sync}}$ of the synchronized cluster. Specifically, chimera states should be most stable in the parameter window where $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$, and should destabilize outside this window.
   - How to test: numerical simulation of memory-Kuramoto with adjustable $\tau_{\text{mem}}$; measure chimera lifetime as function of the ratio; compare to the predicted scaling.
   - What would constitute confirmation: chimera lifetime peaks near $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$.
   - What would constitute evidence inconsistent with this calibration: chimera lifetime is insensitive to the ratio, or peaks at a different value.
-  - Status: **tested (consistent in coupled regime)**, see [`../results/14-kuramoto-chimera-fdt.md`](../results/14-kuramoto-chimera-fdt.md). Wave-2 Memory-Kuramoto simulation with FDT-locked phase noise: 2D parameter sweep across $\gamma_0 \in \{0, 0.01, 0.05, 0.2, 1.0\}$ at $T_{\text{bath}}=0.1$ and $\tau_{\text{mem}} \in [0.1, 33]$. At $\gamma_0 = 0.2$ the chimera-lifetime peak is at $\tau_{\text{mem}} = 0.33$ (lifetime 0.988); at $\gamma_0 = 1.0$ peak shifts further to $\tau_{\text{mem}} = 1.0$ (lifetime 0.968). The predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ peak emerges once P3 is active. The wave-1 isolated test (results/09, retracted) gave a different answer because it tested the degenerate P1+P2 sub-system.
+  - Status: **tested (consistent)**, see [`../results/14-kuramoto-chimera-fdt.md`](../results/14-kuramoto-chimera-fdt.md). Wave-2 Memory-Kuramoto simulation with FDT-locked phase noise: 2D parameter sweep across $\gamma_0 \in \{0, 0.01, 0.05, 0.2, 1.0\}$ at $T_{\text{bath}}=0.1$ and $\tau_{\text{mem}} \in [0.1, 33]$. At $\gamma_0 = 0.2$ the chimera-lifetime peak is at $\tau_{\text{mem}} = 0.33$ (lifetime 0.988); at $\gamma_0 = 1.0$ peak shifts further to $\tau_{\text{mem}} = 1.0$ (lifetime 0.968). The predicted $\tau_{\text{mem}}/\tau_{\text{sync}} \sim 1$ peak emerges once P3 is active. The wave-1 isolated test (results/09, retracted) gave a different answer because it tested the degenerate P1+P2 sub-system.
 
 - **Prediction P10.2: Cardiac arrhythmia onset corresponds to the breakdown of the triangle.** Cardiac pacemaker cells form a coupled-oscillator system. The structural argument predicts that arrhythmia onset (loss of coherent rhythm) corresponds to one of three structural breakdowns: weakening of P3 (loss of autonomic coupling), loss of P2 (loss of the refractory-state memory that sets the firing pattern), or destabilization of P1 (intrinsic pacemaker failure). Each should produce a distinguishable arrhythmia signature.
   - How to test: classify documented arrhythmia types by which structural element fails; compare with the clinical taxonomy.

@@ -57,7 +57,7 @@ The 1/d formula predicts ratio $\sim 0.167$ at d=6 (i.e., $\Sigma\lambda_{\text{
 
 ## Status assignment
 
-Status: **tested in coupled regime, partial / null** with respect to the original 1/d formula prediction; **tested in coupled regime, structurally informative** with respect to the equation's regime structure at high dimension.
+Status: **tested, partial / null** with respect to the original 1/d formula prediction; **tested, structurally informative** with respect to the equation's regime structure at high dimension.
 
 The reading: at d=6 with N=8 and the parameters used, the equation is in a dispersive regime rather than a focal-collapse regime. The 2D-and-3D collapse phenomenology that motivated the 1/d formula has structurally weakened by d=6; the focal collapse is sufficiently slow that bath dissipation alone disperses the field. Adding memory does not strengthen the anti-collapse mechanism in this regime because there is no anti-collapse mechanism to strengthen; the field is not collapsing.
 

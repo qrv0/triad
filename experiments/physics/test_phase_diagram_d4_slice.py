@@ -27,7 +27,7 @@ Configuration:
 - T_bath=0.001 (matching canonical phase diagram)
 - Sigma_lambda swept: {0.5, 1.0, 2.0, 4.0, 8.0} (d=4 is more supercritical
   so the sweep extends further than the d=3 sweep)
-- gamma_0 swept: {0.01, 0.05, 0.2, 1.0} (all positive per Rule A)
+- gamma_0 swept: {0.01, 0.05, 0.2, 1.0}
 - 75/25 memory split with nu_fast=10, nu_slow=0.5
 
 Regime classification same as the d=3 canonical script.

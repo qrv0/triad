@@ -45,7 +45,7 @@ The 13.7% deviation from exact equipartition is within the expected stochastic u
 
 ## Status assignment
 
-Status: **tested in coupled regime, consistent**.
+Status: **tested, consistent**.
 
 Rationale: the warm-inflation Langevin SDE with FDT-locked noise produces approximate equipartition $\langle\pi^2\rangle \approx T$ within 15% ensemble uncertainty, and the cold-inflation limit ($\Upsilon = 0$) shows the expected absence of thermalization. The result contributes evidence consistent with P20.3 under criterion 4 (cross-domain coherence) and criterion 2 (reproducibility).
 

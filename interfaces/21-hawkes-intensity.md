@@ -102,7 +102,7 @@ It does establish that the equation's memory subsystem is mathematically identic
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (the Markovian representation of exponential-kernel Hawkes intensity is mathematically identical to the auxiliary-field equation of the present work) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are local predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md).
+The structural claim of this interface (the Markovian representation of exponential-kernel Hawkes intensity is mathematically identical to the auxiliary-field equation of the present work) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are local predictions that can be tested by numerical or empirical methods (per principles/03-coupling.md).
 
 - **Prediction P21.1: Simulated exponential-kernel Hawkes process intensity matches the auxiliary-field equation prediction term-by-term.** The structural prediction is that simulating an exponential-kernel Hawkes process via Ogata thinning and tracking the empirical intensity should match the SDE-integration trajectory $d\lambda_t = -\beta(\lambda_t - \mu)dt + \alpha\beta dN_t$ to within statistical precision, and both should match the auxiliary-field equation $\partial_t y = \beta(\rho - y)$ in the appropriate continuous-rate limit.
   - How to test: thinning-algorithm simulation of Hawkes process with $(\mu, \alpha, \beta)$ parameters; track intensity time series; compare with SDE integration and auxiliary-field equation.

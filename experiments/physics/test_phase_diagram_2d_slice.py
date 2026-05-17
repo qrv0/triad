@@ -17,12 +17,12 @@ Canonical config (this version):
 - sigma_init=0.5 with psi normalized to total norm = 1
 - Lambda=-8 (canonical supercritical)
 - Sigma_lambda swept: {0.5, 1.0, 1.5, 2.0, 4.0} (covers crystalline window
-  and into anti-collapse regime; 0 excluded per Rule A spirit since the test
+  and into anti-collapse regime; 0 excluded since the test
   is in the focal-collapse-with-memory regime)
-- gamma_0 swept: {0.01, 0.05, 0.2, 1.0} (all positive per Rule A; 0.01 is the
+- gamma_0 swept: {0.01, 0.05, 0.2, 1.0} (0.01 is the
   minimum permitted)
 - T_bath=0.001 (small to minimize thermal contamination of regime
-  classification; still positive per Rule A)
+  classification)
 - Memory: 75/25 split (lambda_fast = 0.75*Sigma_lambda, lambda_slow = 0.25*Sigma_lambda)
 - n_steps=2000 sufficient for regime classification
 

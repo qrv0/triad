@@ -24,7 +24,7 @@ Configuration (canonical):
 - sigma_init=0.5 with normalization $\psi \leftarrow \psi / \sqrt{\int |\psi|^2 d^3x}$
   (canonical normalized Gaussian). Initial peak $|\Psi|^2 = 1.437$.
 - $\Lambda = -8$ (canonical supercritical).
-- $T_{\text{bath}} = 0.001$ (small but positive per Rule A; minimizes thermal
+- $T_{\text{bath}} = 0.001$ (small but positive; minimizes thermal
   contamination of regime classification while maintaining FDT coupling).
 - Memory hierarchy 75/25 split: $\lambda_{\text{fast}} = 0.75 \Sigma\lambda$,
   $\lambda_{\text{slow}} = 0.25 \Sigma\lambda$, with $\nu_{\text{fast}} = 10$,
@@ -34,8 +34,8 @@ Sweep grid (20 points, 5 x 4):
 - $\Sigma\lambda \in \{0.5, 1.0, 1.5, 2.0, 4.0\}$ (covers crystalline window
   at 1.5 per paper Section 6.2 through anti-collapse regime at 4.0 per
   results/04; 0.5 and 1.0 are below crystalline, 2.0 is intermediate).
-- $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$ (Rule A respected: smallest value
-  is 0.01, not 0).
+- $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$ (smallest value
+  is 0.01).
 - Seeds vary per grid point: $42 + \lfloor 10 \Sigma\lambda \rfloor + \lfloor 100 \gamma_0 \rfloor$.
 
 Regime classification (per results/04 + paper Section 6.1 phenomenology):
@@ -192,7 +192,7 @@ The result contributes evidence under criterion 4 (cross-domain coherence) for t
   (peak_growth > 50 AND final_ratio > 10) is met by no point. Whether this
   is because the canonical 3D configuration with P3 active never reaches
   the collapse regime (the structural reading) or because a wider sweep
-  would find it (e.g., $\gamma_0 \to 0$ within Rule A, or very small
+  would find it (e.g., or very small
   $T_{\text{bath}}$) is a remaining question.
 - **Regime classifier thresholds are heuristic.** The cutoffs (peak_growth
   5 for released, 50 for collapse, etc.) are calibrated to paper Section

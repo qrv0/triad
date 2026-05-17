@@ -183,7 +183,7 @@ FRONTMATTER = {
              "scales with model size as the cubic term predicts",
              "status": "not_yet_tested", "result_doc": None},
             {"id": "P6.3", "short": "Cubic state nonlinearity prevents "
-             "SimSiam collapse without stop-gradient in coupled regime",
+             "SimSiam collapse without stop-gradient",
              "status": "not_yet_tested",
              "result_doc": "results/17-cubic-ssm-simsiam-fdt.md"},
         ],
@@ -293,7 +293,7 @@ FRONTMATTER = {
         "related": [13, 15, 12],
         "predictions": [
             {"id": "P10.1", "short": "Chimera-state lifetime peaks at "
-             "tau_mem / tau_sync ~ 1 in coupled regime",
+             "tau_mem / tau_sync ~ 1",
              "status": "tested_consistent",
              "result_doc": "results/14-kuramoto-chimera-fdt.md"},
             {"id": "P10.2", "short": "Cardiac arrhythmia onset "
@@ -384,7 +384,7 @@ FRONTMATTER = {
              "with predicted memory-coupling strength",
              "status": "not_yet_tested", "result_doc": None},
             {"id": "P13.3", "short": "Motility-induced phase separation "
-             "shows broadband-absorption response in coupled regime",
+             "shows broadband-absorption response",
              "status": "not_yet_tested", "result_doc": None},
         ],
     },

@@ -72,7 +72,7 @@ SEED = 42
 # (strong coupling); T fixed at 0.1. Noise amplitude is sqrt(2 gamma_0 T dt)
 # so gamma_0 controls both dissipation rate and noise amplitude jointly per
 # the FDT correlator. The sweep starts at gamma_0 = 0.01: the isolated regime
-# (gamma_0 = 0) is excluded per principles/03-coupling.md (Rule A in the
+# (gamma_0 = 0) is excluded per principles/03-coupling.md (P3 in
 # structural-research-mode skill); it is not a configuration the methodology
 # permits, even as a sweep endpoint.
 GAMMA_0_VALUES = [0.01, 0.05, 0.2, 1.0]         # P3 coupling strength

@@ -28,9 +28,9 @@ Configuration (canonical per paper Section 6.3 + results/04):
 - Memory hierarchy 75/25 split: $\nu_{\text{fast}} = 10.0$ with
   $\lambda_{\text{fast}} = 1.125$, $\nu_{\text{slow}} = 0.5$ with
   $\lambda_{\text{slow}} = 0.375$.
-- P3 active: $\gamma_0 = 0.01$ (minimum positive per Rule A spirit),
+- P3 active: $\gamma_0 = 0.01$,
   $T_{\text{bath}} = 0.0001$ (small to bound thermal contamination without
-  violating Rule A). FDT noise amplitude $\sqrt{2 \gamma_0 T_{\text{bath}} dt}
+  violating P3 by setting gamma_0=0). FDT noise amplitude $\sqrt{2 \gamma_0 T_{\text{bath}} dt}
   \approx 7.07 \times 10^{-5}$ per step per quadrature.
 
 Procedure: 2000-step warmup brings the system to the released-crystalline state;
@@ -193,7 +193,7 @@ the dimensional difference between the equation's 2D and 3D vibrational spectra
 (the dimensional refinement is structural; 3D differs from 2D as predicted
 by the focal-volume scaling argument). The multi-seed extension confirms the
 cascade structure is robust to seed; the dimensional difference is established
-under Rule 9 effect-size-exceeds-variance.
+under the effect-size-exceeds-variance criterion.
 
 The match against the Hypogeum's specific whole-tone-scale structure (Wolfe-Swanson-Till
 2020) remains **partial**: the 3D equation produces a cascade structure with

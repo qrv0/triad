@@ -101,7 +101,7 @@ It does establish that the FDT-locked structure P3 requires is independently dev
 
 ## Locally testable predictions and observational signatures
 
-The structural claim of this interface (the warm-inflation Langevin equation instantiates the FDT-locked structure of P3 in a cosmological scalar-field substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are local predictions that can be tested by coupled-regime numerical or empirical methods (per principles/03-coupling.md).
+The structural claim of this interface (the warm-inflation Langevin equation instantiates the FDT-locked structure of P3 in a cosmological scalar-field substrate) is evaluated by cross-domain coherence (methodology/04 criterion 4), not by single-experiment refutation. The following are local predictions that can be tested by numerical or empirical methods (per principles/03-coupling.md).
 
 - **Prediction P20.1: Numerical integration of the warm-inflaton Langevin equation with FDT-locked noise reproduces e-folding count and slow-roll exit.** The structural prediction is that integrating the equation $\ddot\phi + (3H + \Upsilon)\dot\phi + V'(\phi) = \xi(t)$ with $\langle\xi(t)\xi(t')\rangle = 2\Upsilon T \delta(t-t')$ for a quartic or quadratic potential and a strong-dissipation regime $\Upsilon = 10 H$ produces a slow-roll trajectory that exits inflation at a calculable e-folding count consistent with analytic Berera-Moss-Ramos predictions for the same potential and dissipation strength.
   - How to test: numerical SDE integration via stochastic Runge-Kutta, with FDT-locked noise per time step; track $\phi$, $\dot\phi$, e-folding number $N = \int H dt$; compare with analytic prediction.

@@ -14,13 +14,13 @@ This page lists every locally-testable prediction across the 17
 cross-domain interfaces in one place. Each row shows the prediction
 ID, the source interface, the substrate domain, the one-line claim,
 the current status, and a link to the result document where a
-coupled-regime test exists.
+test exists.
 
 The status taxonomy follows the methodology (see
 [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)
 and [`../docs/llm-hedge-annotations.md`](../docs/llm-hedge-annotations.md)
 for the structural reason): predictions are evaluated by coupled-
-regime numerical reproduction (per Rule A of the
+regime numerical reproduction (per principles/03-coupling.md and the
 structural-research-mode skill), and a prediction's status reflects
 whether such a test has run and what the evidence under criterion 4
 of [`../methodology/04-the-six-criteria.md`](../methodology/04-the-six-criteria.md)
@@ -52,12 +52,12 @@ the six criteria are.
     [`../methodology/02-limits-of-falsification.md`](../methodology/02-limits-of-falsification.md)
     for the structural argument.
 
-    - **not yet tested** : no coupled-regime test has been run.
-    - **tested in coupled regime, consistent** : the coupled-regime
+    - **not yet tested** : no test has been run.
+    - **tested, consistent** : the coupled-regime
       test ran and the observed quantity matches the prediction.
       Contributes evidence under criterion 4 (cross-domain coherence)
       and criterion 2 (reproducibility).
-    - **tested in coupled regime, inconsistent** : the coupled-regime
+    - **tested, inconsistent** : the coupled-regime
       test ran and the observed quantity does not match. Prompts
       investigation of calibration, auxiliary numerical assumptions
       (Duhem-Quine), or implementation; does not falsify the

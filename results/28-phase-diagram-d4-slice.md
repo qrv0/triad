@@ -41,7 +41,7 @@ Sweep grid (20 points, 5 x 4):
   supercritical so the sweep extends further than the d=3 sweep; covers
   the 1/d formula prediction at $\Sigma\lambda \sim 2$ and the factor-10
   formula prediction at $\Sigma\lambda \sim 40$ partially).
-- $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$ (Rule A respected: minimum 0.01).
+- $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$.
 - Seeds vary per grid point: $42 + \lfloor 10 \Sigma\lambda \rfloor + \lfloor 100 \gamma_0 \rfloor$.
 
 Regime classification (per [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md)

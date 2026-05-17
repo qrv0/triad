@@ -46,7 +46,7 @@ The auxiliary-variable ODE is the differential form of the exponential-kernel he
 
 ## Status assignment
 
-Status: **tested in coupled regime, consistent**.
+Status: **tested, consistent**.
 
 Rationale: the auxiliary-variable equation reproduces the hereditary-integral stress response across three structurally distinct strain protocols and a 3-term Prony series at polymer scale, to within 2.6e-4 relative error (below the 1e-3 threshold). The result contributes evidence consistent with P19.1 under criterion 4 (cross-domain coherence) and under criterion 2 (reproducibility).
 

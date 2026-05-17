@@ -103,7 +103,7 @@ pip install cupy-cuda12x  # or cupy-cuda11x for older CUDA
 # Validate the solver (~30 seconds on RTX 4060)
 python -m tests.test_conservation
 
-# Reproduce the headline 3D anti-collapse result under coupled regime (~4 minutes)
+# Reproduce the headline 3D anti-collapse result  (~4 minutes)
 python experiments/physics/reproduce_3d_anti_collapse.py
 ```
 
@@ -148,7 +148,7 @@ Three layers with different stability characteristics.
 - The three structural principles, the equation derivation, the Markovian embedding, the reductions to known equations.
 - The methodological frame: structural realism, six criteria, calibration philosophy, time-as-calibration, Mori-Zwanzig foundation, tautology-objection treatment.
 - Conservation diagnostics verified to machine precision.
-- 3D anti-collapse under P3-coupled regime, with transient-peak separation of $\sim 14\times$ at $\Lambda = -8$.
+- 3D anti-collapse, with transient-peak separation of $\sim 14\times$ at $\Lambda = -8$.
 - The cross-substrate empirical instance at 70M neural network parameters in [`mnsm-ml`](https://github.com/qrv0/mnsm-ml).
 - Twenty cross-domain interfaces here plus two in the ML spinoff, calibration-acknowledged.
 

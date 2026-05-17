@@ -41,7 +41,7 @@ Sweep grid (20 points, 5 x 4):
 - $\Sigma\lambda \in \{0.05, 0.1, 0.5, 1.0, 2.0\}$ (d=2 critical ratio per
   [`06-dimensional-rescaling.md`](06-dimensional-rescaling.md) is $\sim 0.05$
   so this sweep covers below the threshold and into the released regime).
-- $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$ (Rule A respected: minimum 0.01).
+- $\gamma_0 \in \{0.01, 0.05, 0.2, 1.0\}$.
 - Seeds vary per grid point: $42 + \lfloor 100 \Sigma\lambda \rfloor + \lfloor 100 \gamma_0 \rfloor$.
 
 Regime classification (per [`04-anti-collapse-3d.md`](04-anti-collapse-3d.md)

@@ -206,7 +206,6 @@ def main():
     btw_fit = fit_power_law_exponent(btw_sizes, x_min=4)
 
     # MNSM with multiple gamma_0 values to compare across P3 strengths.
-    # Rule A: gamma_0 sweep starts at 0.01 (small positive), not 0.0 (isolated regime is invalid).
     mnsm_results = []
     for gamma_0 in [0.01, 0.05, 0.2]:
         mr = mnsm_2d_with_fdt(N=64, L=10.0, Lambda=-8.0, Sigma_lambda=2.0,
