@@ -1,0 +1,58 @@
+# The limits of falsification
+
+## The Popperian criterion
+
+Strict Popperian falsificationism (Popper 1959) holds that a scientific theory must make predictions that can in principle be falsified by experiment, and that the appropriate test is to attempt such falsification. The criterion is methodologically powerful: it distinguishes scientific from non-scientific claims, it forces theories to be specific, and it provides a clear procedure for evaluation.
+
+The criterion has, however, well-documented limitations. This document articulates the two that are most consequential for the present work: the Duhem–Quine underdetermination of theory by experiment, and the structural tension between the falsification criterion and the content of P3.
+
+## The structural tension with P3
+
+This section is the load-bearing argument of the document. The argument is derived from the content of the work rather than from philosophical authority.
+
+P3 asserts that perfect dynamical isolation does not occur (see [`../principles/03-coupling.md`](../principles/03-coupling.md)). The standard Popperian falsification test requires the experimental isolation of variables: a single hypothesis is tested by setting up an experiment in which one variable is varied, all others held fixed, and a specific predicted outcome is checked.
+
+A theory whose third axiom is "isolation does not occur" cannot be evaluated by methodology that presupposes isolation. The methodology contradicts the content of the theory before any experiment is performed. This is not a stylistic point and not a defensive maneuver; it is the structural consequence of accepting P3 as content.
+
+The constructive consequence is that the work is evaluated by criteria appropriate to a theory whose content is anti-isolation. The criteria are documented in [`04-the-six-criteria.md`](04-the-six-criteria.md); the procedure for applying them is in [`03-how-to-evaluate-this.md`](03-how-to-evaluate-this.md). Locally-isolable predictions remain locally testable (the lab numerics in [`../experiments/physics/`](../experiments/physics/)); their numerics either reproduce (contributing evidence under criterion 2, reproducibility) or do not (prompting investigation of calibration, auxiliary numerical assumptions per Duhem-Quine, or implementation). Reproduction or non-reproduction contributes evidence under criteria 1 (consistency), 2 (reproducibility), 3 (generative scope), and 4 (cross-domain coherence); it does not constitute falsification in the Popperian sense.
+
+This applies to the present work as follows. The numerical experiments in [`../experiments/physics/`](../experiments/physics/) test specific quantitative predictions of the equation using coupled-regime configurations (gamma_0 > 0, T > 0, FDT-locked noise correlator), per P3. Each test contributes evidence under criteria 1, 2, and 3: the anti-collapse separation should be approximately five orders of magnitude in three dimensions; the numerics either reproduce that magnitude (criterion 2 evidence in favor) or do not (prompting investigation of which auxiliary assumption or calibration choice the inconsistent evidence implicates). The *global content* of the work, the structural claim that the equation captures the form of persistent extended entities in coupled environments, is evaluated by all six criteria in [`04-the-six-criteria.md`](04-the-six-criteria.md): internal consistency, reproducibility, generative scope, cross-domain coherence, parsimony, comprehensiveness.
+
+## The Duhem–Quine point
+
+The conclusion of the previous section, that strict single-experiment falsification is not the right evaluation methodology for a global structural claim, is reached independently in the philosophy of science literature via a different argument.
+
+Pierre Duhem (1906) observed that no scientific hypothesis is tested in isolation. Every experimental test invokes a network of auxiliary assumptions: assumptions about the instruments, about the theory of measurement, about the environmental conditions, about the statistical inferences used to interpret the data, and about the broader theoretical framework that gives the experiment its meaning. W. V. O. Quine (1951) extended this analysis: an apparent disconfirmation of a hypothesis never refutes the hypothesis alone; it places stress somewhere in the network of beliefs that the test invoked, and which proposition absorbs the stress is itself a choice. The conclusion these authors reach by examining the structure of testing in general is convergent with the conclusion the present work reaches by examining the content of P3 specifically. Cartwright (1983) reaches a closely related conclusion via her analysis of how phenomenological models in physics actually function: the laws of physics, she argues, are true in their models (which are isolated abstractions) but not in the world (which is not). The model isolates; the world re-couples.
+
+The Duhem–Quine analysis operates concretely on the present work in the auxiliary-assumption network of every numerical run: the floating-point precision of the GPU, the correctness of the cuFFT library, the validity of the Strang splitting at the chosen time step, the reasonableness of the lattice resolution, the appropriateness of the boundary conditions. A surprising numerical result could be attributed to any of these auxiliary assumptions before being attributed to the equation itself. Conversely, an expected numerical result confirms the equation only to the extent that the auxiliary assumptions are themselves trusted.
+
+This is not a defect of the work; it is the standard epistemic situation of any computational investigation. The work mitigates the Duhem–Quine pressure by validating the auxiliary assumptions explicitly: norm conservation in unitary regimes verifies the splitting and the precision; comparison to analytical solutions in dissipative regimes verifies the boundary conditions and the dissipation implementation; the FDT thermalization test verifies the noise correlator (see [`../tests/test_conservation.py`](../tests/test_conservation.py)). The auxiliary assumptions are tested as separately as the technology permits. The Duhem–Quine point is the general statement of why those separate validations are needed.
+
+## The self-referential failure of the falsificationist criterion
+
+A further point, raised originally by Popper's critics: the falsificationist criterion itself fails its own test. There is no observation that could disconfirm the proposition "only falsifiable claims are scientific." It is a methodological convention, not an empirical claim about reality. Treating it as the universal test of scientific status is a category error.
+
+This does not mean the criterion is wrong. It means the criterion is not in the same category as the empirical hypotheses it is used to evaluate. Foundational propositions in mathematics, conservation principles in physics, and structural-realist positions in metaphysics all fail the falsification criterion and are accepted because they pass other criteria, typically: they are internally consistent, productively generative, parsimonious, and consistent with the network of accepted theories that depends on them. The present work is accepted or rejected by the same standards.
+
+## The cost of not adopting strict falsification
+
+We have not adopted strict Popperian falsificationism as the methodological frame. There is a cost to this choice that we acknowledge.
+
+The cost is that the work does not produce a single decisive experiment whose outcome would refute it. A reader committed to strict falsificationism may therefore find the work unsatisfying: there is no "if this experiment fails the theory dies" moment. The reasons we have not provided such a moment are structural, P3 forbids it, and not stylistic.
+
+What the work provides instead is a body of locally-testable quantitative predictions (the anti-collapse separation magnitudes, the BCC selection, the dimensional rescaling) embedded in a larger structural claim evaluated by cross-domain coherence. The locally-testable predictions are evaluated by coupled-regime numerical reproduction: reproduction contributes evidence under criterion 2, non-reproduction prompts investigation of calibration / auxiliary assumptions / implementation under the Duhem-Quine point. The larger structural claim is evaluated by whether the same form appears in independently documented domains, which is the structural-realist test.
+
+## What this entails for engagement with the work
+
+A reader committed to strict falsificationism is invited to test the locally-testable predictions on their own terms. The reproduction scripts in [`../experiments/`](../experiments/) execute the relevant numerical tests in coupled-regime configurations. Non-reproduction implicates one of (a) the calibration, (b) the auxiliary numerical assumptions, or (c) the implementation; the reader can examine each. Reproduction contributes evidence under criterion 2 in [`04-the-six-criteria.md`](04-the-six-criteria.md).
+
+A reader committed to structural realism is invited to test the cross-domain coherence claim. The mappings in [`../interfaces/`](../interfaces/) are the principal evidence. The state space model equivalence is the strongest (mathematically exact); the archaeoacoustic correspondence is the weakest (calibration-dependent). The cumulative weight of the six mappings is the test.
+
+The work does not require its reader to adopt one or the other position. It does require the reader to recognize that the global content is evaluated structurally and that this is a deliberate methodological choice, not an evasion of accountability.
+
+## References
+
+- Cartwright, N. (1983). *How the Laws of Physics Lie*. Oxford University Press.
+- Duhem, P. (1906). *La Théorie Physique: son objet et sa structure*. Chevalier et Rivière, Paris.
+- Popper, K. (1959). *The Logic of Scientific Discovery*. Hutchinson, London.
+- Quine, W. V. O. (1951). Two dogmas of empiricism. *The Philosophical Review* **60**, 20.

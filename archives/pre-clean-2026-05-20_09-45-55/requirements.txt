@@ -1,0 +1,24 @@
+# Core numerical
+numpy>=1.24
+scipy>=1.10
+
+# GPU acceleration (install one matching your CUDA version)
+# cupy-cuda12x>=12.0   # for CUDA 12.x — recommended
+# cupy-cuda11x>=11.0   # for CUDA 11.x
+
+# Plotting and analysis
+matplotlib>=3.7
+h5py>=3.8
+tqdm>=4.65
+
+# Neural sequence layer — moved to https://github.com/qrv0/mnsm
+# torch>=2.0
+# einops>=0.7
+
+# Testing
+pytest>=7.4
+pytest-cov>=4.1
+
+# Notebooks (for playground/)
+# jupyterlab>=4.0
+# ipykernel>=6.0

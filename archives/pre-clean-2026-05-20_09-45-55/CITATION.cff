@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Triad: A Structural Field Equation of Persistent Extended Entities"
+abstract: >-
+  A structural field equation derived from three principles (P1 oscillation,
+  P2 self-reference, P3 coupling) about persistent extended entities. The
+  auxiliary-field memory structure is mathematically equivalent to the state
+  representation of S4, Mamba, and RWKV. The equation generates anti-collapse
+  via temporal memory lag, spontaneous emergence of discrete structure from
+  continuous substrate, and fluctuation-dissipation-locked stochastic
+  regularization, and it appears across twenty-two independently documented
+  physical, biological, and computational substrates.
+authors:
+  - alias: "qrv0"
+type: software
+version: "0.1.0"
+date-released: 2026-05-15
+license: MIT
+keywords:
+  - nonlinear-schrodinger
+  - state-space-models
+  - structural-realism
+  - sequence-modeling
+  - memory-augmented-dynamics
+  - anti-collapse
+  - bravais-selection
+  - fluctuation-dissipation
+  - cross-domain
+  - cosmological-expansion
+url: "https://github.com/qrv0/mnsm"
+repository-code: "https://github.com/qrv0/mnsm"
