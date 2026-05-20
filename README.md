@@ -107,8 +107,10 @@ Headline result from the rebuilt CUDA run:
 
 Rebuild files:
 
+- `implementation/physics/README.md`
 - `implementation/physics/balanced_solver_3d.py`
 - `experiments/physics/rebuild_equilibrium_hero.py`
+- `results/triad-equilibrium-hero.md`
 - `results/triad-equilibrium-hero-summary.json`
 
 The original Memory-NLS solver lineage and previous outputs remain preserved under `archives/pre-clean-2026-05-20_09-45-55/`.
