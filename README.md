@@ -10,8 +10,6 @@ $$
 i\hbar\, \partial_t \Psi = \left[ -\frac{\hbar^2}{2m}D^2 + V_{\text{ext}} + \Lambda|\Psi|^2 + V_{\text{mem}} + \alpha(-\Delta)^{\sigma/2} - i\Gamma \right]\Psi + \eta
 $$
 
-*Persistence is not stasis. Persistence is bounded equilibrium under change.*
-
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC_BY_4.0-lightgrey.svg)](LICENSE-docs)
 [![Archive preserved](https://img.shields.io/badge/archive-preserved-green.svg)](ARCHIVES.md)
@@ -28,7 +26,7 @@ $$
 
 ## The Object
 
-Triad is one equation, three inseparable operations, and a structural-realist ontology.
+Triad is one equation, three inseparable operations.
 
 It was not built by reducing one discipline into another. It was recognized by asking what any persistent extended entity must do to remain itself while changing:
 
@@ -105,16 +103,6 @@ Headline result from the rebuilt CUDA run:
 | Final peak separation, no-memory / memory | $\sim 2.8\times 10^4$ |
 | Final spatial-support gain, memory / no-memory | $\sim 6.2\times 10^4$ |
 
-Rebuild files:
-
-- `implementation/physics/README.md`
-- `implementation/physics/balanced_solver_3d.py`
-- `experiments/physics/rebuild_equilibrium_hero.py`
-- `results/triad-equilibrium-hero.md`
-- `results/triad-equilibrium-hero-summary.json`
-
-The original Memory-NLS solver lineage and previous outputs remain preserved under `archives/pre-clean-2026-05-20_09-45-55/`.
-
 ---
 
 ## The Three Principles
@@ -155,24 +143,6 @@ The principles are trinitarian in the structural sense: each principle only exis
 
 ---
 
-## Calibration, Not Analogy
-
-Triad does not begin from analogy between disciplines. It begins from the equation.
-
-The cross-domain ledger is a calibration map: each entry asks whether a persistent extended system requires the co-presence of oscillation, self-reference with memory, and open coupling to maintain bounded identity through change.
-
-Prior formalisms may recover partial shadows of the structure in local regimes. They are not the origin of Triad and do not exhaust it.
-
-A ledger entry should state:
-
-- where P1 appears;
-- where P2 appears;
-- where P3 appears;
-- whether anti-collapse or equilibrium behavior is present;
-- whether the interface is exact, calibrated, mechanism-form, speculative, or negative.
-
----
-
 ## How To Evaluate Triad
 
 Triad is not a separable-variable claim. P1, P2, and P3 are not independent modules that can be removed one at a time while preserving the object. Removing one operation produces a different object.
@@ -191,27 +161,9 @@ Triad now has three public branches of work:
 
 | Repository | Role |
 |---|---|
-| [`triad`](https://github.com/qrv0/triad) | equation, principles, ontology, methodology, and cross-substrate interfaces |
-| [`mnsm`](https://github.com/qrv0/mnsm) | anti-collapse in machine learning, including MNSM/Transformer structural comparison |
-| [`triad-agi`](https://github.com/qrv0/triad-agi) | experiments on AGI requirements derived from Triad |
-
-This repository is the formal and didactic center. It should remain readable before it becomes exhaustive.
-
----
-
-## Archive And Authorship
-
-The previous repository state is preserved intact in:
-
-- `archives/pre-clean-2026-05-20_09-45-55/`
-
-The archive is part of the public ledger. It contains the prior documentation, experiments, outputs, annotations, and repository structure. The clean root is being rebuilt from that archive by review, not by deletion.
-
-See:
-
-- `MANIFEST.md` for scope and rebuild rules.
-- `ARCHIVES.md` for archive policy.
-- `archives/llm-hedge-annotations.md` for the preserved hedge-annotation record.
+| [`triad`](https://github.com/qrv0/triad) |
+| [`mnsm`](https://github.com/qrv0/mnsm) |
+| [`triad-agi`](https://github.com/qrv0/triad-agi) |
 
 ---
 
