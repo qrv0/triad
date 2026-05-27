@@ -11,7 +11,7 @@ $$
 
 ```bibtex
 @misc{triad,
-  title  = {Triad: A Structural Field Equation of Persistent Extended Entities},
+  title  = {Triad},
   author = {qrv0},
   year   = {2026},
   url    = {https://github.com/qrv0/triad},
