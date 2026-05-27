@@ -20,5 +20,5 @@ $$
 ```
 
 <div align="center">
-<sub>Code:· Documentation: <a href="LICENSE-docs">CC BY 4.0</a></sub>
+<sub> Documentation: <a href="LICENSE-docs">CC BY 4.0</a></sub>
 </div>
